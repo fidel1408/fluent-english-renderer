@@ -9,7 +9,16 @@ const router: IRouter = Router();
 const WIDTH = 1280;
 const HEIGHT = 720;
 
-type BubblePosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";
+type CornerPosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";
+type LogoPosition = CornerPosition | "auto";
+type LogoVariant = "blue" | "black" | "white" | "auto";
+
+interface HeadBox {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
 
 interface SpeechBubble {
   number: number;
@@ -23,7 +32,8 @@ interface SpeechBubble {
   min_height?: number;
   tail_target_x?: number;
   tail_target_y?: number;
-  position?: BubblePosition;
+  avoid_head_box?: HeadBox;
+  position?: CornerPosition;
 }
 
 interface SlideRequest {
@@ -38,13 +48,14 @@ interface SlideRequest {
   background_image_mime_type?: string;
   background_image_url?: string;
   layout_type?: string;
-  logo_position?: string;
+  logo_position?: LogoPosition;
+  logo_variant?: LogoVariant;
   output_format?: string;
   aspect_ratio?: string;
   speech_bubbles?: SpeechBubble[];
 }
 
-interface BubbleBounds {
+interface Rect {
   x: number;
   y: number;
   w: number;
@@ -54,6 +65,12 @@ interface BubbleBounds {
 interface Point {
   x: number;
   y: number;
+}
+
+interface LogoSelection {
+  path: string;
+  variant: Exclude<LogoVariant, "auto">;
+  fallbackText: boolean;
 }
 
 function convertGDriveUrl(url: string): string {
@@ -90,7 +107,20 @@ function escapeXml(s: string): string {
 }
 
 function clamp(value: number, min: number, max: number): number {
+  if (max < min) return min;
   return Math.min(Math.max(value, min), max);
+}
+
+function rectsOverlap(a: Rect, b: Rect): boolean {
+  return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+}
+
+function toRect(box: HeadBox): Rect {
+  return { x: box.x, y: box.y, w: box.width, h: box.height };
+}
+
+function rectCenter(rect: Rect): Point {
+  return { x: rect.x + rect.w / 2, y: rect.y + rect.h / 2 };
 }
 
 function buildMainTitleSvg(words: string[], ipas: string[]): string {
@@ -140,11 +170,44 @@ function buildMainTitleSvg(words: string[], ipas: string[]): string {
   return parts.join("\n");
 }
 
+function nudgeRectAwayFromHead(rect: Rect, head: Rect, tailTarget?: Point): Rect {
+  if (!rectsOverlap(rect, head)) return rect;
+
+  const margin = 18;
+  const candidates: Rect[] = [
+    { ...rect, x: head.x - rect.w - margin },
+    { ...rect, x: head.x + head.w + margin },
+    { ...rect, y: head.y - rect.h - margin },
+    { ...rect, y: head.y + head.h + margin },
+  ].map((candidate) => ({
+    ...candidate,
+    x: clamp(candidate.x, 28, WIDTH - candidate.w - 28),
+    y: clamp(candidate.y, 128, HEIGHT - candidate.h - 28),
+  }));
+
+  const headCenter = rectCenter(head);
+  const target = tailTarget ?? headCenter;
+  const scored = candidates
+    .filter((candidate) => !rectsOverlap(candidate, head))
+    .map((candidate) => {
+      const center = rectCenter(candidate);
+      const distanceFromHead =
+        Math.abs(center.x - headCenter.x) + Math.abs(center.y - headCenter.y);
+      const tailDistance =
+        Math.abs(center.x - target.x) * 0.35 + Math.abs(center.y - target.y) * 0.35;
+      const movement = Math.abs(candidate.x - rect.x) + Math.abs(candidate.y - rect.y);
+      return { candidate, score: distanceFromHead - tailDistance - movement * 0.2 };
+    })
+    .sort((a, b) => b.score - a.score);
+
+  return scored[0]?.candidate ?? rect;
+}
+
 function resolveBubbleBounds(
   bubble: SpeechBubble,
   bubbleWidth: number,
   bubbleHeight: number
-): BubbleBounds {
+): Rect {
   const margin = 36;
   const position = bubble.position ?? "top-left";
   let x: number;
@@ -178,31 +241,71 @@ function resolveBubbleBounds(
     }
   }
 
-  return {
+  let bounds: Rect = {
     x: clamp(x, margin, WIDTH - bubbleWidth - margin),
-    y: clamp(y, margin, HEIGHT - bubbleHeight - margin),
+    y: clamp(y, 128, HEIGHT - bubbleHeight - margin),
     w: bubbleWidth,
     h: bubbleHeight,
   };
+
+  if (bubble.avoid_head_box) {
+    const tailTarget =
+      typeof bubble.tail_target_x === "number" && typeof bubble.tail_target_y === "number"
+        ? { x: bubble.tail_target_x, y: bubble.tail_target_y }
+        : undefined;
+    bounds = nudgeRectAwayFromHead(bounds, toRect(bubble.avoid_head_box), tailTarget);
+  }
+
+  return {
+    ...bounds,
+    x: clamp(bounds.x, margin, WIDTH - bounds.w - margin),
+    y: clamp(bounds.y, 128, HEIGHT - bounds.h - margin),
+  };
 }
 
-function getDefaultTailTarget(bounds: BubbleBounds, position?: BubblePosition): Point {
+function getDefaultTailTarget(bounds: Rect, position?: CornerPosition): Point {
   switch (position) {
     case "top-right":
-      return { x: bounds.x + bounds.w - 58, y: bounds.y + bounds.h + 74 };
+      return { x: bounds.x + bounds.w - 58, y: bounds.y + bounds.h + 58 };
     case "bottom-left":
-      return { x: bounds.x + 58, y: bounds.y - 74 };
+      return { x: bounds.x + 58, y: bounds.y - 58 };
     case "bottom-right":
-      return { x: bounds.x + bounds.w - 58, y: bounds.y - 74 };
+      return { x: bounds.x + bounds.w - 58, y: bounds.y - 58 };
     case "top-left":
     default:
-      return { x: bounds.x + 58, y: bounds.y + bounds.h + 74 };
+      return { x: bounds.x + 58, y: bounds.y + bounds.h + 58 };
   }
 }
 
-function buildDynamicTailPath(bounds: BubbleBounds, target: Point): string {
-  const tailHalfWidth = 16;
-  const cornerInset = 34;
+function keepTailOutsideHead(target: Point, bounds: Rect, head?: Rect): Point {
+  if (!head) return target;
+
+  const safeTarget = {
+    x: clamp(target.x, head.x, head.x + head.w),
+    y: clamp(target.y, head.y, head.y + Math.max(10, head.h * 0.35)),
+  };
+  const center = rectCenter(bounds);
+  const crossesHead =
+    Math.min(center.x, safeTarget.x) < head.x + head.w &&
+    Math.max(center.x, safeTarget.x) > head.x &&
+    Math.min(center.y, safeTarget.y) < head.y + head.h &&
+    Math.max(center.y, safeTarget.y) > head.y + head.h * 0.35;
+
+  if (!crossesHead) return safeTarget;
+
+  if (center.x < head.x) {
+    return { x: head.x + head.w * 0.2, y: head.y + Math.max(8, head.h * 0.2) };
+  }
+  if (center.x > head.x + head.w) {
+    return { x: head.x + head.w * 0.8, y: head.y + Math.max(8, head.h * 0.2) };
+  }
+
+  return { x: safeTarget.x, y: head.y };
+}
+
+function buildDynamicTailPath(bounds: Rect, target: Point): string {
+  const tailHalfWidth = 8;
+  const cornerInset = 36;
   const centerX = bounds.x + bounds.w / 2;
   const centerY = bounds.y + bounds.h / 2;
   const dx = target.x - centerX;
@@ -224,7 +327,7 @@ function buildDynamicTailPath(bounds: BubbleBounds, target: Point): string {
   return `M ${anchorX - tailHalfWidth} ${bounds.y + bounds.h} L ${anchorX + tailHalfWidth} ${bounds.y + bounds.h} L ${target.x} ${target.y} Z`;
 }
 
-function buildBubbleSvg(bubble: SpeechBubble): string {
+function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
   const words = bubble.words?.length ? bubble.words : bubble.text.split(/\s+/).filter(Boolean);
   const ipas = bubble.ipa ?? [];
   const highlights = bubble.highlight_words ?? [];
@@ -289,10 +392,12 @@ function buildBubbleSvg(bubble: SpeechBubble): string {
   const contentHeight = lines.length * rowHeight - rowGap;
   const bubbleHeight = Math.max(minBubbleHeight, Math.ceil(contentHeight + paddingY * 2));
   const bounds = resolveBubbleBounds(bubble, bubbleWidth, bubbleHeight);
-  const tailTarget =
+  const head = bubble.avoid_head_box ? toRect(bubble.avoid_head_box) : undefined;
+  const rawTailTarget =
     typeof bubble.tail_target_x === "number" && typeof bubble.tail_target_y === "number"
       ? { x: clamp(bubble.tail_target_x, 0, WIDTH), y: clamp(bubble.tail_target_y, 0, HEIGHT) }
       : getDefaultTailTarget(bounds, position);
+  const tailTarget = keepTailOutsideHead(rawTailTarget, bounds, head);
   const tailPath = buildDynamicTailPath(bounds, tailTarget);
   const textStartX = bounds.x + paddingX + numberColumnWidth;
   const textStartY = bounds.y + (bounds.h - contentHeight) / 2 + wordFontSize;
@@ -333,38 +438,107 @@ function buildBubbleSvg(bubble: SpeechBubble): string {
     });
   });
 
-  return `
-    <g filter="url(#bubbleShadow)">
-      <path d="${tailPath}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
-      <rect x="${bounds.x}" y="${bounds.y}" width="${bounds.w}" height="${bounds.h}" rx="${radius}" ry="${radius}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
-    </g>
-    <circle cx="${bounds.x + paddingX + 18}" cy="${bounds.y + bounds.h / 2}" r="18" fill="#1565C0"/>
-    <text x="${bounds.x + paddingX + 18}" y="${bounds.y + bounds.h / 2 + 6}" font-family="sans-serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle">${bubble.number}</text>
-    ${wordParts.join("\n")}
-  `;
+  return {
+    bounds,
+    svg: `
+      <g filter="url(#bubbleShadow)">
+        <path d="${tailPath}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.25"/>
+        <rect x="${bounds.x}" y="${bounds.y}" width="${bounds.w}" height="${bounds.h}" rx="${radius}" ry="${radius}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
+      </g>
+      <circle cx="${bounds.x + paddingX + 18}" cy="${bounds.y + bounds.h / 2}" r="18" fill="#1565C0"/>
+      <text x="${bounds.x + paddingX + 18}" y="${bounds.y + bounds.h / 2 + 6}" font-family="sans-serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle">${bubble.number}</text>
+      ${wordParts.join("\n")}
+    `,
+  };
 }
 
-function buildLogoSvg(): string {
-  const logoPath = path.join(process.cwd(), "fluent_english_logo.png");
-  const badgeX = 18;
-  const badgeY = 16;
-  const badgeW = 286;
-  const badgeH = 104;
+function resolveLogoVariant(requested: LogoVariant | undefined): Exclude<LogoVariant, "auto"> {
+  if (requested && requested !== "auto") return requested;
+  return "blue";
+}
 
-  if (fs.existsSync(logoPath)) {
-    const logoB64 = fs.readFileSync(logoPath).toString("base64");
+function selectLogo(variant: LogoVariant | undefined): LogoSelection {
+  const root = process.cwd();
+  const resolvedVariant = resolveLogoVariant(variant);
+  const preferredPath = path.join(root, `fluent_english_logo_${resolvedVariant}.png`);
+
+  if (fs.existsSync(preferredPath)) {
+    return { path: preferredPath, variant: resolvedVariant, fallbackText: false };
+  }
+
+  const fallbackPath = path.join(root, "fluent_english_logo.png");
+  if (fs.existsSync(fallbackPath)) {
+    return { path: fallbackPath, variant: resolvedVariant, fallbackText: false };
+  }
+
+  return { path: fallbackPath, variant: resolvedVariant, fallbackText: true };
+}
+
+function getLogoRect(position: CornerPosition): Rect {
+  const margin = 18;
+  const w = 286;
+  const h = 104;
+
+  switch (position) {
+    case "top-right":
+      return { x: WIDTH - w - margin, y: margin, w, h };
+    case "bottom-left":
+      return { x: margin, y: HEIGHT - h - margin, w, h };
+    case "bottom-right":
+      return { x: WIDTH - w - margin, y: HEIGHT - h - margin, w, h };
+    case "top-left":
+    default:
+      return { x: margin, y: margin, w, h };
+  }
+}
+
+function resolveLogoPosition(
+  requested: LogoPosition | undefined,
+  bubbleBounds: Rect[]
+): CornerPosition {
+  if (requested && requested !== "auto") return requested;
+
+  const titleSafeArea: Rect = { x: 300, y: 16, w: 680, h: 116 };
+  const candidates: CornerPosition[] = ["top-left", "top-right", "bottom-left", "bottom-right"];
+  const scored = candidates
+    .map((position) => {
+      const logoRect = getLogoRect(position);
+      const overlapPenalty = bubbleBounds.reduce(
+        (penalty, bubble) => penalty + (rectsOverlap(logoRect, bubble) ? 1000 : 0),
+        rectsOverlap(logoRect, titleSafeArea) ? 1000 : 0
+      );
+      const topPenalty = position.startsWith("top") ? 80 : 0;
+      return { position, score: -overlapPenalty - topPenalty };
+    })
+    .sort((a, b) => b.score - a.score);
+
+  return scored[0]?.position ?? "top-left";
+}
+
+function buildLogoSvg(
+  position: CornerPosition,
+  variant: LogoVariant | undefined
+): string {
+  const logo = selectLogo(variant);
+  const rect = getLogoRect(position);
+  const useDarkBadge = logo.variant === "white";
+  const badgeFill = useDarkBadge ? "rgba(0,25,55,0.58)" : "rgba(255,255,255,0.94)";
+  const textFill = logo.variant === "white" ? "white" : logo.variant === "black" ? "#111111" : "#1565C0";
+
+  if (!logo.fallbackText) {
+    const logoB64 = fs.readFileSync(logo.path).toString("base64");
     return `
       <g filter="url(#logoBadgeShadow)">
-        <rect x="${badgeX}" y="${badgeY}" width="${badgeW}" height="${badgeH}" rx="22" fill="rgba(255,255,255,0.94)" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-        <image href="data:image/png;base64,${logoB64}" x="${badgeX + 18}" y="${badgeY + 11}" width="250" height="82" preserveAspectRatio="xMidYMid meet"/>
+        <rect x="${rect.x}" y="${rect.y}" width="${rect.w}" height="${rect.h}" rx="22" fill="${badgeFill}" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
+        <image href="data:image/png;base64,${logoB64}" x="${rect.x + 18}" y="${rect.y + 11}" width="250" height="82" preserveAspectRatio="xMidYMid meet"/>
       </g>
     `;
   }
 
   return `
     <g filter="url(#logoBadgeShadow)">
-      <rect x="${badgeX}" y="${badgeY}" width="${badgeW}" height="${badgeH}" rx="22" fill="rgba(255,255,255,0.94)" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-      <text x="${badgeX + 26}" y="${badgeY + 64}" font-family="sans-serif" font-size="28" font-weight="bold" fill="#1565C0">Fluent English</text>
+      <rect x="${rect.x}" y="${rect.y}" width="${rect.w}" height="${rect.h}" rx="22" fill="${badgeFill}" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
+      <text x="${rect.x + 26}" y="${rect.y + 64}" font-family="sans-serif" font-size="28" font-weight="bold" fill="${textFill}">Fluent English</text>
     </g>
   `;
 }
@@ -372,7 +546,8 @@ function buildLogoSvg(): string {
 function buildOverlaySvg(body: SlideRequest): string {
   const titleWords = body.main_title_words ?? body.main_title.split(" ");
   const titleIPA = body.main_title_ipa ?? titleWords.map(() => "");
-  const bubblesSvg = (body.speech_bubbles ?? []).map((b) => buildBubbleSvg(b)).join("\n");
+  const bubbles = (body.speech_bubbles ?? []).map((b) => buildBubbleSvg(b));
+  const logoPosition = resolveLogoPosition(body.logo_position, bubbles.map((b) => b.bounds));
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${WIDTH}" height="${HEIGHT}">
@@ -394,9 +569,9 @@ function buildOverlaySvg(body: SlideRequest): string {
   </defs>
 
   <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#brightWash)"/>
-  ${buildLogoSvg()}
+  ${buildLogoSvg(logoPosition, body.logo_variant)}
   ${buildMainTitleSvg(titleWords, titleIPA)}
-  ${bubblesSvg}
+  ${bubbles.map((b) => b.svg).join("\n")}
 </svg>`;
 }
 

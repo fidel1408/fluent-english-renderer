@@ -117,6 +117,12 @@ function rectsOverlap(a: Rect, b: Rect): boolean {
   return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
 }
 
+function rectOverlapArea(a: Rect, b: Rect): number {
+  const xOverlap = Math.max(0, Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x));
+  const yOverlap = Math.max(0, Math.min(a.y + a.h, b.y + b.h) - Math.max(a.y, b.y));
+  return xOverlap * yOverlap;
+}
+
 function toRect(box: HeadBox): Rect {
   return { x: box.x, y: box.y, w: box.width, h: box.height };
 }
@@ -329,7 +335,7 @@ function keepTailOutsideHead(target: Point, bounds: Rect, head?: Rect): Point {
 }
 
 function buildDynamicTailPath(bounds: Rect, target: Point, side?: SpeakerSide): string {
-  const tailHalfWidth = 6;
+  const tailHalfWidth = 7;
   if (side) {
     const anchorX = side === "left" ? bounds.x + bounds.w - 38 : bounds.x + 38;
     const anchorY = bounds.y + bounds.h;
@@ -364,23 +370,23 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
   const highlights = bubble.highlight_words ?? [];
   const position = bubble.position ?? "top-left";
 
-  const paddingX = 28;
-  const paddingY = 24;
-  const numberColumnWidth = 56;
-  const radius = 20;
-  const wordFontSize = 24;
-  const ipaFontSize = 14;
+  const paddingX = 22;
+  const paddingY = 18;
+  const numberColumnWidth = 48;
+  const radius = 26;
+  const wordFontSize = 26;
+  const ipaFontSize = 13;
   const wordGap = 10;
-  const rowGap = 10;
-  const rowHeight = wordFontSize + 6 + ipaFontSize + rowGap;
-  const minBubbleWidth = 310;
-  const maxBubbleWidth = 540;
+  const rowGap = 7;
+  const rowHeight = wordFontSize + 5 + ipaFontSize + rowGap;
+  const minBubbleWidth = 250;
+  const maxBubbleWidth = 505;
   const requestedWidth =
     typeof bubble.width === "number" ? clamp(bubble.width, minBubbleWidth, maxBubbleWidth) : undefined;
-  const minBubbleHeight = typeof bubble.min_height === "number" ? Math.max(88, bubble.min_height) : 108;
+  const minBubbleHeight = typeof bubble.min_height === "number" ? Math.max(76, bubble.min_height) : 82;
 
-  const approxCharWidth = wordFontSize * 0.58;
-  const wordWidths = words.map((w) => w.length * approxCharWidth + 6);
+  const approxCharWidth = wordFontSize * 0.57;
+  const wordWidths = words.map((w) => w.length * approxCharWidth + 5);
 
   const wrapWords = (textMaxWidth: number): number[][] => {
     const lines: number[][] = [];
@@ -454,17 +460,17 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
 
       if (isHighlight) {
         wordParts.push(
-          `<rect x="${wx - 4}" y="${baseY - wordFontSize - 2}" width="${wordWidth + 8}" height="${wordFontSize + 7}" fill="rgba(255,220,0,0.88)" rx="5"/>`
+          `<rect x="${wx - 5}" y="${baseY - wordFontSize - 3}" width="${wordWidth + 10}" height="${wordFontSize + 8}" fill="rgba(255,224,36,0.9)" stroke="rgba(30,30,30,0.12)" stroke-width="1" rx="7"/>`
         );
       }
 
       wordParts.push(
-        `<text x="${wx}" y="${baseY}" font-family="sans-serif" font-size="${wordFontSize}" font-weight="${isHighlight ? "bold" : "600"}" fill="#101820" text-anchor="start">${escapeXml(word)}</text>`
+        `<text x="${wx}" y="${baseY}" font-family="Trebuchet MS, Arial Rounded MT Bold, Arial, sans-serif" font-size="${wordFontSize}" font-weight="${isHighlight ? "800" : "700"}" fill="#101010" text-anchor="start">${escapeXml(word)}</text>`
       );
 
       if (ipa) {
         wordParts.push(
-          `<text x="${wx}" y="${baseY + 6 + ipaFontSize}" font-family="Georgia, serif" font-size="${ipaFontSize}" fill="#4A5568" text-anchor="start">${escapeXml(ipa)}</text>`
+          `<text x="${wx}" y="${baseY + 5 + ipaFontSize}" font-family="Georgia, serif" font-size="${ipaFontSize}" fill="#3f4652" text-anchor="start">${escapeXml(ipa)}</text>`
         );
       }
 
@@ -476,11 +482,13 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
     bounds,
     svg: `
       <g filter="url(#bubbleShadow)">
-        <path d="${tailPath}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.25"/>
-        <rect x="${bounds.x}" y="${bounds.y}" width="${bounds.w}" height="${bounds.h}" rx="${radius}" ry="${radius}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
+        <path d="${tailPath}" fill="#ffffff" stroke="#111111" stroke-width="2.6" stroke-linejoin="round"/>
+        <rect x="${bounds.x}" y="${bounds.y}" width="${bounds.w}" height="${bounds.h}" rx="${radius}" ry="${radius}" fill="#ffffff" stroke="#111111" stroke-width="2.8"/>
+        <rect x="${bounds.x + 5}" y="${bounds.y + 5}" width="${bounds.w - 10}" height="${bounds.h - 10}" rx="${radius - 6}" ry="${radius - 6}" fill="none" stroke="rgba(255,255,255,0.82)" stroke-width="1.4"/>
       </g>
-      <circle cx="${bounds.x + paddingX + 18}" cy="${bounds.y + bounds.h / 2}" r="18" fill="#1565C0"/>
-      <text x="${bounds.x + paddingX + 18}" y="${bounds.y + bounds.h / 2 + 6}" font-family="sans-serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle">${bubble.number}</text>
+      <circle cx="${bounds.x + paddingX + 16}" cy="${bounds.y + bounds.h / 2}" r="18" fill="url(#badgeBlue)" stroke="#0B3F91" stroke-width="2"/>
+      <circle cx="${bounds.x + paddingX + 10}" cy="${bounds.y + bounds.h / 2 - 7}" r="5" fill="rgba(255,255,255,0.48)"/>
+      <text x="${bounds.x + paddingX + 16}" y="${bounds.y + bounds.h / 2 + 6}" font-family="Trebuchet MS, Arial, sans-serif" font-size="17" font-weight="800" fill="white" text-anchor="middle">${bubble.number}</text>
       ${wordParts.join("\n")}
     `,
   };
@@ -535,8 +543,8 @@ function selectLogo(variant: Exclude<LogoVariant, "auto">): LogoSelection {
 
 function getLogoRect(position: CornerPosition): Rect {
   const margin = 18;
-  const w = 260;
-  const h = 96;
+  const w = 280;
+  const h = 104;
 
   switch (position) {
     case "top-right":
@@ -557,21 +565,37 @@ function resolveLogoPosition(
 ): CornerPosition {
   if (requested && requested !== "auto") return requested;
 
-  const titleSafeArea: Rect = { x: 300, y: 16, w: 680, h: 116 };
+  const titleSafeArea: Rect = { x: 250, y: 8, w: 780, h: 132 };
+  const busyTopArea: Rect = { x: 0, y: 0, w: WIDTH, h: 300 };
+  const topHasBubbleClutter = bubbleBounds.some((bubble) => bubble.y < 300);
   const candidates: CornerPosition[] = ["top-left", "top-right", "bottom-left", "bottom-right"];
   const scored = candidates
     .map((position) => {
       const logoRect = getLogoRect(position);
-      const overlapPenalty = bubbleBounds.reduce(
-        (penalty, bubble) => penalty + (rectsOverlap(logoRect, bubble) ? 1000 : 0),
-        rectsOverlap(logoRect, titleSafeArea) ? 1000 : 0
-      );
-      const topPenalty = position.startsWith("top") ? 80 : 0;
-      return { position, score: -overlapPenalty - topPenalty };
+      const bubblePenalty = bubbleBounds.reduce((penalty, bubble) => {
+        const overlap = rectOverlapArea(logoRect, bubble);
+        const logoCenter = rectCenter(logoRect);
+        const bubbleCenter = rectCenter(bubble);
+        const distance =
+          Math.abs(logoCenter.x - bubbleCenter.x) + Math.abs(logoCenter.y - bubbleCenter.y);
+        const proximityPenalty = Math.max(0, 360 - distance) * 2;
+        return penalty + overlap * 16 + proximityPenalty;
+      }, 0);
+      const titlePenalty = rectOverlapArea(logoRect, titleSafeArea) * 20;
+      const busyTopPenalty = position.startsWith("top")
+        ? 900 + rectOverlapArea(logoRect, busyTopArea) * 2
+        : 0;
+      const roleplayTopPenalty = topHasBubbleClutter && position.startsWith("top") ? 1600 : 0;
+      const bottomPreference = position.startsWith("bottom") ? 260 : 0;
+
+      return {
+        position,
+        score: bottomPreference - bubblePenalty - titlePenalty - busyTopPenalty - roleplayTopPenalty,
+      };
     })
     .sort((a, b) => b.score - a.score);
 
-  return scored[0]?.position ?? "top-left";
+  return scored[0]?.position ?? "bottom-left";
 }
 
 async function buildLogoSvg(
@@ -603,9 +627,15 @@ async function buildLogoSvg(
 async function buildOverlaySvg(body: SlideRequest, bgSharp: Sharp): Promise<string> {
   const titleWords = body.main_title_words ?? body.main_title.split(" ");
   const titleIPA = body.main_title_ipa ?? titleWords.map(() => "");
-  const bubbles = (body.speech_bubbles ?? []).map((b) => buildBubbleSvg(b));
+  const isSceneSlide =
+    typeof body.slide_number === "number" && body.slide_number >= 2 && body.slide_number <= 9;
+  const bubbles = (isSceneSlide ? (body.speech_bubbles ?? []).slice(0, 2) : body.speech_bubbles ?? []).map((b) =>
+    buildBubbleSvg(b)
+  );
   const logoPosition = resolveLogoPosition(body.logo_position, bubbles.map((b) => b.bounds));
   const logoSvg = await buildLogoSvg(logoPosition, body.logo_variant, bgSharp);
+  const shouldRenderTitle =
+    typeof body.slide_number !== "number" || body.slide_number === 1 || body.slide_number === 10;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${WIDTH}" height="${HEIGHT}">
@@ -614,11 +644,16 @@ async function buildOverlaySvg(body: SlideRequest, bgSharp: Sharp): Promise<stri
       <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.48)"/>
     </filter>
     <filter id="bubbleShadow" x="-8%" y="-12%" width="124%" height="138%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="rgba(0,0,0,0.22)"/>
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="rgba(0,0,0,0.24)"/>
     </filter>
     <filter id="logoBadgeShadow" x="-8%" y="-14%" width="124%" height="138%">
       <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="rgba(0,0,0,0.20)"/>
     </filter>
+    <linearGradient id="badgeBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2B8CFF"/>
+      <stop offset="52%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#0B3F91"/>
+    </linearGradient>
     <linearGradient id="brightWash" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="rgba(255,255,255,0.16)"/>
       <stop offset="45%" stop-color="rgba(255,255,255,0.04)"/>
@@ -628,7 +663,7 @@ async function buildOverlaySvg(body: SlideRequest, bgSharp: Sharp): Promise<stri
 
   <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#brightWash)"/>
   ${logoSvg}
-  ${buildMainTitleSvg(titleWords, titleIPA)}
+  ${shouldRenderTitle ? buildMainTitleSvg(titleWords, titleIPA) : ""}
   ${bubbles.map((b) => b.svg).join("\n")}
 </svg>`;
 }

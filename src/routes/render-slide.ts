@@ -73,6 +73,8 @@ interface LogoSelection {
   fallbackText: boolean;
 }
 
+type SpeakerSide = "left" | "right";
+
 function convertGDriveUrl(url: string): string {
   const match = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
   if (match) {
@@ -121,6 +123,14 @@ function toRect(box: HeadBox): Rect {
 
 function rectCenter(rect: Rect): Point {
   return { x: rect.x + rect.w / 2, y: rect.y + rect.h / 2 };
+}
+
+function getSpeakerSide(head: Rect | undefined, bubble: SpeechBubble): SpeakerSide {
+  if (head) return rectCenter(head).x < WIDTH / 2 ? "left" : "right";
+  if (typeof bubble.tail_target_x === "number") {
+    return bubble.tail_target_x < WIDTH / 2 ? "left" : "right";
+  }
+  return bubble.position === "top-right" || bubble.position === "bottom-right" ? "right" : "left";
 }
 
 function buildMainTitleSvg(words: string[], ipas: string[]): string {
@@ -182,7 +192,7 @@ function nudgeRectAwayFromHead(rect: Rect, head: Rect, tailTarget?: Point): Rect
   ].map((candidate) => ({
     ...candidate,
     x: clamp(candidate.x, 28, WIDTH - candidate.w - 28),
-    y: clamp(candidate.y, 128, HEIGHT - candidate.h - 28),
+    y: clamp(candidate.y, 24, HEIGHT - candidate.h - 28),
   }));
 
   const headCenter = rectCenter(head);
@@ -241,25 +251,43 @@ function resolveBubbleBounds(
     }
   }
 
+  const head = bubble.avoid_head_box ? toRect(bubble.avoid_head_box) : undefined;
+  const side = getSpeakerSide(head, bubble);
   let bounds: Rect = {
     x: clamp(x, margin, WIDTH - bubbleWidth - margin),
-    y: clamp(y, 128, HEIGHT - bubbleHeight - margin),
+    y: clamp(y, head ? 24 : 128, HEIGHT - bubbleHeight - margin),
     w: bubbleWidth,
     h: bubbleHeight,
   };
 
-  if (bubble.avoid_head_box) {
+  if (head) {
+    const maxYAboveHead = head.y - bubbleHeight - 12;
+    bounds.y = clamp(Math.min(bounds.y, maxYAboveHead), 24, HEIGHT - bubbleHeight - margin);
+
+    if (side === "left") {
+      bounds.x = clamp(bounds.x, margin, Math.max(margin, WIDTH / 2 - bubbleWidth - 22));
+    } else {
+      bounds.x = clamp(bounds.x, Math.min(WIDTH - bubbleWidth - margin, WIDTH / 2 + 22), WIDTH - bubbleWidth - margin);
+    }
+
     const tailTarget =
       typeof bubble.tail_target_x === "number" && typeof bubble.tail_target_y === "number"
         ? { x: bubble.tail_target_x, y: bubble.tail_target_y }
         : undefined;
-    bounds = nudgeRectAwayFromHead(bounds, toRect(bubble.avoid_head_box), tailTarget);
+    bounds = nudgeRectAwayFromHead(bounds, head, tailTarget);
   }
 
   return {
     ...bounds,
     x: clamp(bounds.x, margin, WIDTH - bounds.w - margin),
-    y: clamp(bounds.y, 128, HEIGHT - bounds.h - margin),
+    y: clamp(bounds.y, head ? 24 : 128, HEIGHT - bounds.h - margin),
+  };
+}
+
+function getHeadTopTailTarget(head: Rect): Point {
+  return {
+    x: head.x + head.w / 2,
+    y: Math.max(0, head.y - 18),
   };
 }
 
@@ -280,10 +308,7 @@ function getDefaultTailTarget(bounds: Rect, position?: CornerPosition): Point {
 function keepTailOutsideHead(target: Point, bounds: Rect, head?: Rect): Point {
   if (!head) return target;
 
-  const safeTarget = {
-    x: clamp(target.x, head.x, head.x + head.w),
-    y: clamp(target.y, head.y, head.y + Math.max(10, head.h * 0.35)),
-  };
+  const safeTarget = getHeadTopTailTarget(head);
   const center = rectCenter(bounds);
   const crossesHead =
     Math.min(center.x, safeTarget.x) < head.x + head.w &&
@@ -303,8 +328,14 @@ function keepTailOutsideHead(target: Point, bounds: Rect, head?: Rect): Point {
   return { x: safeTarget.x, y: head.y };
 }
 
-function buildDynamicTailPath(bounds: Rect, target: Point): string {
-  const tailHalfWidth = 8;
+function buildDynamicTailPath(bounds: Rect, target: Point, side?: SpeakerSide): string {
+  const tailHalfWidth = 6;
+  if (side) {
+    const anchorX = side === "left" ? bounds.x + bounds.w - 38 : bounds.x + 38;
+    const anchorY = bounds.y + bounds.h;
+    return `M ${anchorX - tailHalfWidth} ${anchorY} L ${anchorX + tailHalfWidth} ${anchorY} L ${target.x} ${target.y} Z`;
+  }
+
   const cornerInset = 36;
   const centerX = bounds.x + bounds.w / 2;
   const centerY = bounds.y + bounds.h / 2;
@@ -393,12 +424,15 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
   const bubbleHeight = Math.max(minBubbleHeight, Math.ceil(contentHeight + paddingY * 2));
   const bounds = resolveBubbleBounds(bubble, bubbleWidth, bubbleHeight);
   const head = bubble.avoid_head_box ? toRect(bubble.avoid_head_box) : undefined;
+  const side = getSpeakerSide(head, bubble);
   const rawTailTarget =
-    typeof bubble.tail_target_x === "number" && typeof bubble.tail_target_y === "number"
+    head
+      ? getHeadTopTailTarget(head)
+      : typeof bubble.tail_target_x === "number" && typeof bubble.tail_target_y === "number"
       ? { x: clamp(bubble.tail_target_x, 0, WIDTH), y: clamp(bubble.tail_target_y, 0, HEIGHT) }
       : getDefaultTailTarget(bounds, position);
   const tailTarget = keepTailOutsideHead(rawTailTarget, bounds, head);
-  const tailPath = buildDynamicTailPath(bounds, tailTarget);
+  const tailPath = buildDynamicTailPath(bounds, tailTarget, head ? side : undefined);
   const textStartX = bounds.x + paddingX + numberColumnWidth;
   const textStartY = bounds.y + (bounds.h - contentHeight) / 2 + wordFontSize;
 
@@ -452,32 +486,57 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
   };
 }
 
-function resolveLogoVariant(requested: LogoVariant | undefined): Exclude<LogoVariant, "auto"> {
+async function sampleAverageLuminance(bgSharp: Sharp, rect: Rect): Promise<number | undefined> {
+  try {
+    const stats = await bgSharp
+      .clone()
+      .extract({
+        left: Math.round(rect.x),
+        top: Math.round(rect.y),
+        width: Math.round(rect.w),
+        height: Math.round(rect.h),
+      })
+      .stats();
+    const [r, g, b] = stats.channels;
+    return 0.2126 * r.mean + 0.7152 * g.mean + 0.0722 * b.mean;
+  } catch {
+    return undefined;
+  }
+}
+
+async function resolveLogoVariant(
+  requested: LogoVariant | undefined,
+  bgSharp: Sharp,
+  logoRect: Rect
+): Promise<Exclude<LogoVariant, "auto">> {
   if (requested && requested !== "auto") return requested;
+  const luminance = await sampleAverageLuminance(bgSharp, logoRect);
+  if (typeof luminance !== "number") return "blue";
+  if (luminance < 95) return "white";
+  if (luminance > 188) return "black";
   return "blue";
 }
 
-function selectLogo(variant: LogoVariant | undefined): LogoSelection {
+function selectLogo(variant: Exclude<LogoVariant, "auto">): LogoSelection {
   const root = process.cwd();
-  const resolvedVariant = resolveLogoVariant(variant);
-  const preferredPath = path.join(root, `fluent_english_logo_${resolvedVariant}.png`);
+  const preferredPath = path.join(root, `fluent_english_logo_${variant}.png`);
 
   if (fs.existsSync(preferredPath)) {
-    return { path: preferredPath, variant: resolvedVariant, fallbackText: false };
+    return { path: preferredPath, variant, fallbackText: false };
   }
 
   const fallbackPath = path.join(root, "fluent_english_logo.png");
   if (fs.existsSync(fallbackPath)) {
-    return { path: fallbackPath, variant: resolvedVariant, fallbackText: false };
+    return { path: fallbackPath, variant, fallbackText: false };
   }
 
-  return { path: fallbackPath, variant: resolvedVariant, fallbackText: true };
+  return { path: fallbackPath, variant, fallbackText: true };
 }
 
 function getLogoRect(position: CornerPosition): Rect {
   const margin = 18;
-  const w = 286;
-  const h = 104;
+  const w = 260;
+  const h = 96;
 
   switch (position) {
     case "top-right":
@@ -515,39 +574,38 @@ function resolveLogoPosition(
   return scored[0]?.position ?? "top-left";
 }
 
-function buildLogoSvg(
+async function buildLogoSvg(
   position: CornerPosition,
-  variant: LogoVariant | undefined
-): string {
-  const logo = selectLogo(variant);
+  variant: LogoVariant | undefined,
+  bgSharp: Sharp
+): Promise<string> {
   const rect = getLogoRect(position);
-  const useDarkBadge = logo.variant === "white";
-  const badgeFill = useDarkBadge ? "rgba(0,25,55,0.58)" : "rgba(255,255,255,0.94)";
+  const resolvedVariant = await resolveLogoVariant(variant, bgSharp, rect);
+  const logo = selectLogo(resolvedVariant);
   const textFill = logo.variant === "white" ? "white" : logo.variant === "black" ? "#111111" : "#1565C0";
 
   if (!logo.fallbackText) {
     const logoB64 = fs.readFileSync(logo.path).toString("base64");
     return `
       <g filter="url(#logoBadgeShadow)">
-        <rect x="${rect.x}" y="${rect.y}" width="${rect.w}" height="${rect.h}" rx="22" fill="${badgeFill}" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-        <image href="data:image/png;base64,${logoB64}" x="${rect.x + 18}" y="${rect.y + 11}" width="250" height="82" preserveAspectRatio="xMidYMid meet"/>
+        <image href="data:image/png;base64,${logoB64}" x="${rect.x}" y="${rect.y}" width="${rect.w}" height="${rect.h}" preserveAspectRatio="xMidYMid meet"/>
       </g>
     `;
   }
 
   return `
     <g filter="url(#logoBadgeShadow)">
-      <rect x="${rect.x}" y="${rect.y}" width="${rect.w}" height="${rect.h}" rx="22" fill="${badgeFill}" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-      <text x="${rect.x + 26}" y="${rect.y + 64}" font-family="sans-serif" font-size="28" font-weight="bold" fill="${textFill}">Fluent English</text>
+      <text x="${rect.x}" y="${rect.y + 50}" font-family="sans-serif" font-size="30" font-weight="bold" fill="${textFill}" stroke="${logo.variant === "white" ? "rgba(0,0,0,0.42)" : "rgba(255,255,255,0.55)"}" stroke-width="2" paint-order="stroke">Fluent English</text>
     </g>
   `;
 }
 
-function buildOverlaySvg(body: SlideRequest): string {
+async function buildOverlaySvg(body: SlideRequest, bgSharp: Sharp): Promise<string> {
   const titleWords = body.main_title_words ?? body.main_title.split(" ");
   const titleIPA = body.main_title_ipa ?? titleWords.map(() => "");
   const bubbles = (body.speech_bubbles ?? []).map((b) => buildBubbleSvg(b));
   const logoPosition = resolveLogoPosition(body.logo_position, bubbles.map((b) => b.bounds));
+  const logoSvg = await buildLogoSvg(logoPosition, body.logo_variant, bgSharp);
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${WIDTH}" height="${HEIGHT}">
@@ -569,7 +627,7 @@ function buildOverlaySvg(body: SlideRequest): string {
   </defs>
 
   <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#brightWash)"/>
-  ${buildLogoSvg(logoPosition, body.logo_variant)}
+  ${logoSvg}
   ${buildMainTitleSvg(titleWords, titleIPA)}
   ${bubbles.map((b) => b.svg).join("\n")}
 </svg>`;
@@ -613,7 +671,7 @@ router.post("/render-slide", async (req: Request, res: Response) => {
       });
     }
 
-    const overlaySvg = buildOverlaySvg(body);
+    const overlaySvg = await buildOverlaySvg(body, bgSharp);
     const overlayBuffer = Buffer.from(overlaySvg, "utf8");
 
     const pngBuffer = await bgSharp

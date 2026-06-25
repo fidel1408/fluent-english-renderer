@@ -122,10 +122,21 @@ function getBubbleBounds(position: string): {
   w: number;
   h: number;
 } {
-  const bw = 560;
-  const bh = 220;
-  const margin = 28;
-  const topY = 158;
+  return getBubbleBoundsForSize(position, 430, 132);
+}
+
+function getBubbleBoundsForSize(
+  position: string,
+  bw: number,
+  bh: number
+): {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+} {
+  const margin = 36;
+  const topY = 164;
   const bottomY = HEIGHT - bh - margin;
 
   switch (position) {
@@ -160,38 +171,69 @@ function buildBubbleTailPath(
 }
 
 function buildBubbleSvg(bubble: SpeechBubble): string {
-  const { x, y, w, h } = getBubbleBounds(bubble.position);
-  const padding = 18;
-  const radius = 16;
-  const tailPath = buildBubbleTailPath(x, y, w, h, bubble.position);
+  const paddingX = 26;
+  const paddingY = 24;
+  const numberColumnWidth = 52;
+  const radius = 18;
 
-  const wordFontSize = 15;
-  const ipaFontSize = 11;
-  const rowHeight = wordFontSize + 4 + ipaFontSize + 8;
-  const wordGap = 7;
-
-  const textStartX = x + padding + 36;
-  const textMaxWidth = w - padding * 2 - 36;
-  const textStartY = y + padding + 22;
+  const wordFontSize = 24;
+  const ipaFontSize = 14;
+  const rowGap = 10;
+  const rowHeight = wordFontSize + 6 + ipaFontSize + rowGap;
+  const wordGap = 10;
+  const minBubbleWidth = 300;
+  const maxBubbleWidth = 520;
 
   const approxCharWidth = wordFontSize * 0.58;
   const wordWidths = bubble.words.map((w) => w.length * approxCharWidth + 4);
 
-  const lines: number[][] = [];
-  let currentLine: number[] = [];
-  let currentWidth = 0;
-  bubble.words.forEach((_, i) => {
-    const needed = wordWidths[i] + (currentLine.length > 0 ? wordGap : 0);
-    if (currentWidth + needed > textMaxWidth && currentLine.length > 0) {
-      lines.push(currentLine);
-      currentLine = [i];
-      currentWidth = wordWidths[i];
-    } else {
-      currentLine.push(i);
-      currentWidth += needed;
-    }
-  });
-  if (currentLine.length > 0) lines.push(currentLine);
+  const wrapWords = (textMaxWidth: number): number[][] => {
+    const wrappedLines: number[][] = [];
+    let currentLine: number[] = [];
+    let currentWidth = 0;
+
+    bubble.words.forEach((_, i) => {
+      const needed = wordWidths[i] + (currentLine.length > 0 ? wordGap : 0);
+      if (currentWidth + needed > textMaxWidth && currentLine.length > 0) {
+        wrappedLines.push(currentLine);
+        currentLine = [i];
+        currentWidth = wordWidths[i];
+      } else {
+        currentLine.push(i);
+        currentWidth += needed;
+      }
+    });
+
+    if (currentLine.length > 0) wrappedLines.push(currentLine);
+    return wrappedLines;
+  };
+
+  const maxTextWidth = maxBubbleWidth - paddingX * 2 - numberColumnWidth;
+  const measuredLines = wrapWords(maxTextWidth);
+  const measuredLineWidths = measuredLines.map((lineIndices) =>
+    lineIndices.reduce(
+      (acc, idx, pos) => acc + wordWidths[idx] + (pos > 0 ? wordGap : 0),
+      0
+    )
+  );
+  const widestLine = Math.max(...measuredLineWidths, 0);
+  const bubbleWidth = Math.min(
+    maxBubbleWidth,
+    Math.max(minBubbleWidth, Math.ceil(widestLine + paddingX * 2 + numberColumnWidth))
+  );
+  const textMaxWidth = bubbleWidth - paddingX * 2 - numberColumnWidth;
+  const lines = wrapWords(textMaxWidth);
+  const contentHeight = lines.length * rowHeight - rowGap;
+  const bubbleHeight = Math.max(104, Math.ceil(contentHeight + paddingY * 2));
+  const { x, y, w, h } = getBubbleBoundsForSize(
+    bubble.position,
+    bubbleWidth,
+    bubbleHeight
+  );
+  const tailPath = buildBubbleTailPath(x, y, w, h, bubble.position);
+
+  const textStartX = x + paddingX + numberColumnWidth;
+  const textStartY = y + (h - contentHeight) / 2 + wordFontSize;
 
   const wordParts: string[] = [];
 
@@ -213,7 +255,7 @@ function buildBubbleSvg(bubble: SpeechBubble): string {
 
       if (isHighlight) {
         wordParts.push(
-          `<rect x="${wx - 2}" y="${baseY - wordFontSize}" width="${ww + 4}" height="${wordFontSize + 4}" fill="rgba(255,220,0,0.85)" rx="2"/>`
+          `<rect x="${wx - 4}" y="${baseY - wordFontSize - 2}" width="${ww + 8}" height="${wordFontSize + 6}" fill="rgba(255,220,0,0.85)" rx="4"/>`
         );
       }
 
@@ -233,11 +275,11 @@ function buildBubbleSvg(bubble: SpeechBubble): string {
 
   return `
     <g filter="url(#bubbleShadow)">
-      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${radius}" ry="${radius}" fill="rgba(255,255,255,0.96)" stroke="#cccccc" stroke-width="1.5"/>
-      <path d="${tailPath}" fill="rgba(255,255,255,0.96)"/>
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${radius}" ry="${radius}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.65)" stroke-width="1.5"/>
+      <path d="${tailPath}" fill="rgba(255,255,255,0.97)"/>
     </g>
-    <circle cx="${x + padding + 14}" cy="${y + padding + 10}" r="13" fill="#1565C0"/>
-    <text x="${x + padding + 14}" y="${y + padding + 15}" font-family="sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">${bubble.number}</text>
+    <circle cx="${x + paddingX + 17}" cy="${y + h / 2}" r="17" fill="#1565C0"/>
+    <text x="${x + paddingX + 17}" y="${y + h / 2 + 6}" font-family="sans-serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle">${bubble.number}</text>
     ${wordParts.join("\n")}
   `;
 }
@@ -255,9 +297,9 @@ function buildOverlaySvg(body: SlideRequest): string {
   let logoSvg: string;
   if (fs.existsSync(logoPath)) {
     const logoB64 = fs.readFileSync(logoPath).toString("base64");
-    logoSvg = `<image href="data:image/png;base64,${logoB64}" x="18" y="14" width="160" height="58"/>`;
+    logoSvg = `<image href="data:image/png;base64,${logoB64}" x="22" y="18" width="230" height="84"/>`;
   } else {
-    logoSvg = `<text x="18" y="42" font-family="sans-serif" font-size="18" font-weight="bold" fill="white" filter="url(#titleShadow)">Fluent English</text>`;
+    logoSvg = `<text x="22" y="62" font-family="sans-serif" font-size="28" font-weight="bold" fill="white" filter="url(#titleShadow)">Fluent English</text>`;
   }
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -266,8 +308,8 @@ function buildOverlaySvg(body: SlideRequest): string {
     <filter id="titleShadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.55)"/>
     </filter>
-    <filter id="bubbleShadow" x="-5%" y="-5%" width="115%" height="120%">
-      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.25)"/>
+    <filter id="bubbleShadow" x="-8%" y="-12%" width="124%" height="138%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="rgba(0,0,0,0.24)"/>
     </filter>
   </defs>
 

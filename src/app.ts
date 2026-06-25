@@ -1,32 +1,36 @@
-import express, { type Express } from "express";
+import express from "express";
 import cors from "cors";
 import pinoHttp from "pino-http";
-import router from "./routes";
+import routes from "./routes";
 import { logger } from "./lib/logger";
 
-const app: Express = express();
+export const app = express();
+
+app.use(cors());
 
 app.use(
-  pinoHttp({
-    logger,
-    serializers: {
-      req(req) {
-        return { method: req.method, url: req.url?.split("?")[0] };
-      },
-      res(res) {
-        return { statusCode: res.statusCode };
-      },
-    },
-  })
+express.json({
+limit: "25mb",
+})
 );
-app.use(cors());
-app.use(express.json({ limit: "25mb" }));
-app.use(express.urlencoded({ extended: true, limit: "25mb" }));app.use(express.urlencoded({ extended: true, limit: "25mb" }));
+
+app.use(
+express.urlencoded({
+extended: true,
+limit: "25mb",
+})
+);
+
+app.use(
+pinoHttp({
+logger,
+})
+);
 
 app.get("/", (_req, res) => {
-  res.send("Fluent English Renderer is running.");
+res.type("text/plain").send("Fluent English Renderer is running.");
 });
 
-app.use("/api", router);
+app.use("/api", routes);
 
 export default app;

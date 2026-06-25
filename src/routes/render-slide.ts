@@ -26,7 +26,9 @@ interface SlideRequest {
   main_title: string;
   main_title_words: string[];
   main_title_ipa: string[];
-  background_image_url: string;
+  background_image_base64?: string;
+  background_image_mime_type?: string;
+  background_image_url?: string;
   layout_type?: string;
   logo_position?: string;
   output_format?: string;
@@ -51,6 +53,11 @@ async function downloadImage(url: string): Promise<Buffer> {
     maxRedirects: 5,
   });
   return Buffer.from(response.data);
+}
+
+function decodeBase64Image(base64: string): Buffer {
+  const strippedBase64 = base64.replace(/^data:[^;]+;base64,/, "");
+  return Buffer.from(strippedBase64, "base64");
 }
 
 function escapeXml(s: string): string {
@@ -281,10 +288,10 @@ function buildOverlaySvg(body: SlideRequest): string {
 router.post("/render-slide", async (req: Request, res: Response) => {
   const body = req.body as SlideRequest;
 
-  if (!body.main_title || !body.background_image_url) {
-    res
-      .status(400)
-      .json({ error: "main_title and background_image_url are required" });
+  if (!body.main_title || (!body.background_image_base64 && !body.background_image_url)) {
+    res.status(400).json({
+      error: "main_title and either background_image_base64 or background_image_url are required",
+    });
     return;
   }
 
@@ -292,7 +299,10 @@ router.post("/render-slide", async (req: Request, res: Response) => {
     let bgSharp: Sharp;
 
     try {
-      const imgBuffer = await downloadImage(body.background_image_url);
+      const imgBuffer = body.background_image_base64
+        ? decodeBase64Image(body.background_image_base64)
+        : await downloadImage(body.background_image_url as string);
+
       bgSharp = sharp(imgBuffer).resize(WIDTH, HEIGHT, {
         fit: "cover",
         position: "center",

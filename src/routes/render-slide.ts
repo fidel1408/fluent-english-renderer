@@ -9,13 +9,21 @@ const router: IRouter = Router();
 const WIDTH = 1280;
 const HEIGHT = 720;
 
+type BubblePosition = "top-left" | "top-right" | "bottom-left" | "bottom-right";
+
 interface SpeechBubble {
   number: number;
   text: string;
   words: string[];
   ipa: string[];
   highlight_words: string[];
-  position: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+  x?: number;
+  y?: number;
+  width?: number;
+  min_height?: number;
+  tail_target_x?: number;
+  tail_target_y?: number;
+  position?: BubblePosition;
 }
 
 interface SlideRequest {
@@ -41,6 +49,11 @@ interface BubbleBounds {
   y: number;
   w: number;
   h: number;
+}
+
+interface Point {
+  x: number;
+  y: number;
 }
 
 function convertGDriveUrl(url: string): string {
@@ -74,6 +87,10 @@ function escapeXml(s: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
+}
+
+function clamp(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max);
 }
 
 function buildMainTitleSvg(words: string[], ipas: string[]): string {
@@ -123,40 +140,95 @@ function buildMainTitleSvg(words: string[], ipas: string[]): string {
   return parts.join("\n");
 }
 
-function getBubbleBounds(position: string, bubbleWidth: number, bubbleHeight: number): BubbleBounds {
+function resolveBubbleBounds(
+  bubble: SpeechBubble,
+  bubbleWidth: number,
+  bubbleHeight: number
+): BubbleBounds {
   const margin = 36;
-  const topY = 166;
-  const bottomY = HEIGHT - bubbleHeight - margin;
+  const position = bubble.position ?? "top-left";
+  let x: number;
+  let y: number;
 
+  if (typeof bubble.x === "number" && typeof bubble.y === "number") {
+    x = bubble.x;
+    y = bubble.y;
+  } else {
+    const topY = 166;
+    const bottomY = HEIGHT - bubbleHeight - margin;
+
+    switch (position) {
+      case "top-right":
+        x = WIDTH - bubbleWidth - margin;
+        y = topY;
+        break;
+      case "bottom-left":
+        x = margin;
+        y = bottomY;
+        break;
+      case "bottom-right":
+        x = WIDTH - bubbleWidth - margin;
+        y = bottomY;
+        break;
+      case "top-left":
+      default:
+        x = margin;
+        y = topY;
+        break;
+    }
+  }
+
+  return {
+    x: clamp(x, margin, WIDTH - bubbleWidth - margin),
+    y: clamp(y, margin, HEIGHT - bubbleHeight - margin),
+    w: bubbleWidth,
+    h: bubbleHeight,
+  };
+}
+
+function getDefaultTailTarget(bounds: BubbleBounds, position?: BubblePosition): Point {
   switch (position) {
-    case "top-left":
-      return { x: margin, y: topY, w: bubbleWidth, h: bubbleHeight };
     case "top-right":
-      return { x: WIDTH - bubbleWidth - margin, y: topY, w: bubbleWidth, h: bubbleHeight };
+      return { x: bounds.x + bounds.w - 58, y: bounds.y + bounds.h + 74 };
     case "bottom-left":
-      return { x: margin, y: bottomY, w: bubbleWidth, h: bubbleHeight };
+      return { x: bounds.x + 58, y: bounds.y - 74 };
     case "bottom-right":
-      return { x: WIDTH - bubbleWidth - margin, y: bottomY, w: bubbleWidth, h: bubbleHeight };
+      return { x: bounds.x + bounds.w - 58, y: bounds.y - 74 };
+    case "top-left":
     default:
-      return { x: margin, y: topY, w: bubbleWidth, h: bubbleHeight };
+      return { x: bounds.x + 58, y: bounds.y + bounds.h + 74 };
   }
 }
 
-function buildBubbleTailPath(bounds: BubbleBounds, position: string): string {
-  const tailSize = 15;
-  if (position === "top-left" || position === "top-right") {
-    const tx = position === "top-left" ? bounds.x + 48 : bounds.x + bounds.w - 48;
-    return `M ${tx - tailSize} ${bounds.y + bounds.h} L ${tx + tailSize} ${bounds.y + bounds.h} L ${tx} ${bounds.y + bounds.h + tailSize} Z`;
+function buildDynamicTailPath(bounds: BubbleBounds, target: Point): string {
+  const tailHalfWidth = 16;
+  const cornerInset = 34;
+  const centerX = bounds.x + bounds.w / 2;
+  const centerY = bounds.y + bounds.h / 2;
+  const dx = target.x - centerX;
+  const dy = target.y - centerY;
+
+  if (Math.abs(dx) > Math.abs(dy)) {
+    const anchorY = clamp(target.y, bounds.y + cornerInset, bounds.y + bounds.h - cornerInset);
+    if (dx < 0) {
+      return `M ${bounds.x} ${anchorY - tailHalfWidth} L ${bounds.x} ${anchorY + tailHalfWidth} L ${target.x} ${target.y} Z`;
+    }
+    return `M ${bounds.x + bounds.w} ${anchorY - tailHalfWidth} L ${bounds.x + bounds.w} ${anchorY + tailHalfWidth} L ${target.x} ${target.y} Z`;
   }
 
-  const tx = position === "bottom-left" ? bounds.x + 48 : bounds.x + bounds.w - 48;
-  return `M ${tx - tailSize} ${bounds.y} L ${tx + tailSize} ${bounds.y} L ${tx} ${bounds.y - tailSize} Z`;
+  const anchorX = clamp(target.x, bounds.x + cornerInset, bounds.x + bounds.w - cornerInset);
+  if (dy < 0) {
+    return `M ${anchorX - tailHalfWidth} ${bounds.y} L ${anchorX + tailHalfWidth} ${bounds.y} L ${target.x} ${target.y} Z`;
+  }
+
+  return `M ${anchorX - tailHalfWidth} ${bounds.y + bounds.h} L ${anchorX + tailHalfWidth} ${bounds.y + bounds.h} L ${target.x} ${target.y} Z`;
 }
 
 function buildBubbleSvg(bubble: SpeechBubble): string {
   const words = bubble.words?.length ? bubble.words : bubble.text.split(/\s+/).filter(Boolean);
   const ipas = bubble.ipa ?? [];
   const highlights = bubble.highlight_words ?? [];
+  const position = bubble.position ?? "top-left";
 
   const paddingX = 28;
   const paddingY = 24;
@@ -168,8 +240,10 @@ function buildBubbleSvg(bubble: SpeechBubble): string {
   const rowGap = 10;
   const rowHeight = wordFontSize + 6 + ipaFontSize + rowGap;
   const minBubbleWidth = 310;
-  const maxBubbleWidth = 520;
-  const minBubbleHeight = 108;
+  const maxBubbleWidth = 540;
+  const requestedWidth =
+    typeof bubble.width === "number" ? clamp(bubble.width, minBubbleWidth, maxBubbleWidth) : undefined;
+  const minBubbleHeight = typeof bubble.min_height === "number" ? Math.max(88, bubble.min_height) : 108;
 
   const approxCharWidth = wordFontSize * 0.58;
   const wordWidths = words.map((w) => w.length * approxCharWidth + 6);
@@ -204,16 +278,22 @@ function buildBubbleSvg(bubble: SpeechBubble): string {
     line.reduce((acc, idx, pos) => acc + wordWidths[idx] + (pos > 0 ? wordGap : 0), 0)
   );
   const widestLine = Math.max(...measuredLineWidths, 0);
-  const bubbleWidth = Math.min(
-    maxBubbleWidth,
-    Math.max(minBubbleWidth, Math.ceil(widestLine + paddingX * 2 + numberColumnWidth))
-  );
+  const bubbleWidth =
+    requestedWidth ??
+    Math.min(
+      maxBubbleWidth,
+      Math.max(minBubbleWidth, Math.ceil(widestLine + paddingX * 2 + numberColumnWidth))
+    );
   const textMaxWidth = bubbleWidth - paddingX * 2 - numberColumnWidth;
   const lines = wrapWords(textMaxWidth);
   const contentHeight = lines.length * rowHeight - rowGap;
   const bubbleHeight = Math.max(minBubbleHeight, Math.ceil(contentHeight + paddingY * 2));
-  const bounds = getBubbleBounds(bubble.position, bubbleWidth, bubbleHeight);
-  const tailPath = buildBubbleTailPath(bounds, bubble.position);
+  const bounds = resolveBubbleBounds(bubble, bubbleWidth, bubbleHeight);
+  const tailTarget =
+    typeof bubble.tail_target_x === "number" && typeof bubble.tail_target_y === "number"
+      ? { x: clamp(bubble.tail_target_x, 0, WIDTH), y: clamp(bubble.tail_target_y, 0, HEIGHT) }
+      : getDefaultTailTarget(bounds, position);
+  const tailPath = buildDynamicTailPath(bounds, tailTarget);
   const textStartX = bounds.x + paddingX + numberColumnWidth;
   const textStartY = bounds.y + (bounds.h - contentHeight) / 2 + wordFontSize;
 
@@ -255,8 +335,8 @@ function buildBubbleSvg(bubble: SpeechBubble): string {
 
   return `
     <g filter="url(#bubbleShadow)">
+      <path d="${tailPath}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
       <rect x="${bounds.x}" y="${bounds.y}" width="${bounds.w}" height="${bounds.h}" rx="${radius}" ry="${radius}" fill="rgba(255,255,255,0.97)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>
-      <path d="${tailPath}" fill="rgba(255,255,255,0.97)"/>
     </g>
     <circle cx="${bounds.x + paddingX + 18}" cy="${bounds.y + bounds.h / 2}" r="18" fill="#1565C0"/>
     <text x="${bounds.x + paddingX + 18}" y="${bounds.y + bounds.h / 2 + 6}" font-family="sans-serif" font-size="17" font-weight="bold" fill="white" text-anchor="middle">${bubble.number}</text>

@@ -301,18 +301,23 @@ function keepTailOutsideHead(target: Point, bounds: Rect, head: Rect | undefined
 }
 
 function buildDynamicTailPath(bounds: Rect, target: Point, side: SpeakerSide | undefined): string {
-  const tailHalfWidth = 7;
+  const tailHalfWidth = 9;
+  const curveLift = 12;
 
   if (side === "left") {
-    const anchorX = bounds.x + bounds.w - 38;
-    const anchorY = bounds.y + bounds.h - 1;
-    return `M ${anchorX - tailHalfWidth} ${anchorY} L ${anchorX + tailHalfWidth} ${anchorY} L ${target.x} ${target.y} Z`;
+    const anchorX = bounds.x + bounds.w - 44;
+    const anchorY = bounds.y + bounds.h - 2;
+    const controlX = (anchorX + target.x) / 2 + 8;
+    const controlY = (anchorY + target.y) / 2 - curveLift;
+    return `M ${anchorX - tailHalfWidth} ${anchorY} Q ${controlX - 8} ${controlY} ${target.x} ${target.y} Q ${controlX + 10} ${controlY + 4} ${anchorX + tailHalfWidth} ${anchorY} Z`;
   }
 
   if (side === "right") {
-    const anchorX = bounds.x + 38;
-    const anchorY = bounds.y + bounds.h - 1;
-    return `M ${anchorX - tailHalfWidth} ${anchorY} L ${anchorX + tailHalfWidth} ${anchorY} L ${target.x} ${target.y} Z`;
+    const anchorX = bounds.x + 44;
+    const anchorY = bounds.y + bounds.h - 2;
+    const controlX = (anchorX + target.x) / 2 - 8;
+    const controlY = (anchorY + target.y) / 2 - curveLift;
+    return `M ${anchorX - tailHalfWidth} ${anchorY} Q ${controlX - 10} ${controlY + 4} ${target.x} ${target.y} Q ${controlX + 8} ${controlY} ${anchorX + tailHalfWidth} ${anchorY} Z`;
   }
 
   const center = rectCenter(bounds);
@@ -335,6 +340,29 @@ function buildDynamicTailPath(bounds: Rect, target: Point, side: SpeakerSide | u
   return `M ${anchorX - tailHalfWidth} ${bounds.y + bounds.h} L ${anchorX + tailHalfWidth} ${bounds.y + bounds.h} L ${target.x} ${target.y} Z`;
 }
 
+function buildOrganicBubblePath(bounds: Rect): string {
+  const r = Math.min(48, Math.max(32, bounds.h * 0.46));
+  const x = bounds.x;
+  const y = bounds.y;
+  const w = bounds.w;
+  const h = bounds.h;
+  const topWave = Math.min(10, h * 0.08);
+  const sideWave = Math.min(8, w * 0.02);
+
+  return [
+    `M ${x + r} ${y + 2}`,
+    `C ${x + w * 0.34} ${y - topWave} ${x + w * 0.66} ${y - topWave} ${x + w - r} ${y + 2}`,
+    `C ${x + w - sideWave} ${y + 2} ${x + w - 2} ${y + r * 0.42} ${x + w - 3} ${y + r}`,
+    `L ${x + w - 3} ${y + h - r}`,
+    `C ${x + w - 2} ${y + h - r * 0.36} ${x + w - sideWave} ${y + h - 2} ${x + w - r} ${y + h - 2}`,
+    `C ${x + w * 0.66} ${y + h + topWave * 0.72} ${x + w * 0.34} ${y + h + topWave * 0.72} ${x + r} ${y + h - 2}`,
+    `C ${x + sideWave} ${y + h - 2} ${x + 2} ${y + h - r * 0.38} ${x + 3} ${y + h - r}`,
+    `L ${x + 3} ${y + r}`,
+    `C ${x + 2} ${y + r * 0.42} ${x + sideWave} ${y + 2} ${x + r} ${y + 2}`,
+    "Z",
+  ].join(" ");
+}
+
 function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
   const words = bubble.words?.length ? bubble.words : bubble.text.split(/\s+/).filter(Boolean);
   const ipas = bubble.ipa ?? [];
@@ -342,19 +370,19 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
   const highlightSet = new Set(highlights.map((word) => word.toLowerCase()));
   const position = bubble.position ?? (bubble.number === 2 ? "top-right" : "top-left");
 
-  const paddingX = 20;
-  const paddingY = 16;
-  const badgeColumnWidth = 46;
-  const wordFontSize = 27;
+  const paddingX = 22;
+  const paddingY = 17;
+  const badgeColumnWidth = 47;
+  const wordFontSize = 28;
   const ipaFontSize = 13;
   const wordGap = 10;
-  const rowGap = 6;
+  const rowGap = 5;
   const rowHeight = wordFontSize + 5 + ipaFontSize + rowGap;
-  const minBubbleWidth = 245;
-  const maxBubbleWidth = 500;
+  const minBubbleWidth = 238;
+  const maxBubbleWidth = 492;
   const minBubbleHeight = typeof bubble.min_height === "number" ? Math.max(76, bubble.min_height) : 80;
   const requestedWidth = typeof bubble.width === "number" ? clamp(bubble.width, minBubbleWidth, maxBubbleWidth) : undefined;
-  const wordWidths = words.map((word) => Math.max(28, word.length * wordFontSize * 0.58 + 6));
+  const wordWidths = words.map((word) => Math.max(28, word.length * wordFontSize * 0.57 + 6));
 
   const wrapWords = (textMaxWidth: number): number[][] => {
     const lines: number[][] = [];
@@ -404,6 +432,7 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
         : getDefaultTailTarget(bounds, position);
   const tailTarget = keepTailOutsideHead(rawTarget, bounds, head);
   const tailPath = buildDynamicTailPath(bounds, tailTarget, head ? side : undefined);
+  const bubblePath = buildOrganicBubblePath(bounds);
   const textStartX = bounds.x + paddingX + badgeColumnWidth;
   const textStartY = bounds.y + (bounds.h - contentHeight) / 2 + wordFontSize;
 
@@ -422,17 +451,17 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
 
       if (highlighted) {
         wordParts.push(
-          `<rect x="${x - 5}" y="${baselineY - wordFontSize - 3}" width="${wordWidth + 10}" height="${wordFontSize + 8}" rx="7" fill="rgba(255,224,38,0.92)" stroke="rgba(22,22,22,0.16)" stroke-width="1"/>`
+          `<rect x="${x - 5}" y="${baselineY - wordFontSize - 3}" width="${wordWidth + 10}" height="${wordFontSize + 8}" rx="10" fill="rgba(255,225,34,0.92)" stroke="rgba(20,20,20,0.18)" stroke-width="1"/>`
         );
       }
 
       wordParts.push(
-        `<text x="${x}" y="${baselineY}" font-family="Trebuchet MS, Arial Rounded MT Bold, Arial, sans-serif" font-size="${wordFontSize}" font-weight="${highlighted ? "800" : "750"}" fill="#101010">${escapeXml(word)}</text>`
+        `<text x="${x}" y="${baselineY}" font-family="Trebuchet MS, Arial Rounded MT Bold, Arial, sans-serif" font-size="${wordFontSize}" font-weight="${highlighted ? "800" : "700"}" fill="#0c0c0c" stroke="rgba(255,255,255,0.38)" stroke-width="0.35" paint-order="stroke">${escapeXml(word)}</text>`
       );
 
       if (ipa) {
         wordParts.push(
-          `<text x="${x}" y="${baselineY + ipaFontSize + 5}" font-family="Georgia, serif" font-size="${ipaFontSize}" fill="#3d4550">${escapeXml(ipa)}</text>`
+          `<text x="${x}" y="${baselineY + ipaFontSize + 5}" font-family="Arial, Helvetica, sans-serif" font-size="${ipaFontSize}" font-weight="600" fill="#38414d">${escapeXml(ipa)}</text>`
         );
       }
 
@@ -444,12 +473,12 @@ function buildBubbleSvg(bubble: SpeechBubble): { svg: string; bounds: Rect } {
     bounds,
     svg: `
       <g filter="url(#bubbleShadow)">
-        <path d="${tailPath}" fill="#ffffff" stroke="#101010" stroke-width="2.7" stroke-linejoin="round"/>
-        <rect x="${bounds.x}" y="${bounds.y}" width="${bounds.w}" height="${bounds.h}" rx="27" ry="27" fill="#ffffff" stroke="#101010" stroke-width="3"/>
-        <rect x="${bounds.x + 6}" y="${bounds.y + 6}" width="${bounds.w - 12}" height="${bounds.h - 12}" rx="21" ry="21" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.3"/>
+        <path d="${tailPath}" fill="#ffffff" stroke="#0b0b0b" stroke-width="3.1" stroke-linejoin="round"/>
+        <path d="${bubblePath}" fill="#ffffff" stroke="#0b0b0b" stroke-width="3.25" stroke-linejoin="round"/>
+        <path d="${bubblePath}" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.4" transform="translate(0 1) scale(0.988 0.982)" transform-origin="${bounds.x + bounds.w / 2} ${bounds.y + bounds.h / 2}"/>
       </g>
-      <circle cx="${bounds.x + paddingX + 16}" cy="${bounds.y + bounds.h / 2}" r="18" fill="url(#badgeBlue)" stroke="#0b3f91" stroke-width="2"/>
-      <circle cx="${bounds.x + paddingX + 10}" cy="${bounds.y + bounds.h / 2 - 7}" r="5" fill="rgba(255,255,255,0.48)"/>
+      <circle cx="${bounds.x + paddingX + 16}" cy="${bounds.y + bounds.h / 2}" r="17" fill="url(#badgeBlue)" stroke="#082f73" stroke-width="2.2"/>
+      <circle cx="${bounds.x + paddingX + 10}" cy="${bounds.y + bounds.h / 2 - 7}" r="4.8" fill="rgba(255,255,255,0.5)"/>
       <text x="${bounds.x + paddingX + 16}" y="${bounds.y + bounds.h / 2 + 6}" font-family="Trebuchet MS, Arial, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">${bubble.number}</text>
       ${wordParts.join("\n")}
     `,
@@ -615,8 +644,8 @@ async function buildOverlaySvg(body: SlideRequest, baseImage: Sharp): Promise<st
     <filter id="titleShadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.45)"/>
     </filter>
-    <filter id="bubbleShadow" x="-8%" y="-12%" width="124%" height="138%">
-      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="rgba(0,0,0,0.24)"/>
+    <filter id="bubbleShadow" x="-10%" y="-14%" width="128%" height="142%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="rgba(0,0,0,0.23)"/>
     </filter>
     <filter id="logoShadow" x="-8%" y="-12%" width="124%" height="136%">
       <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="rgba(0,0,0,0.22)"/>

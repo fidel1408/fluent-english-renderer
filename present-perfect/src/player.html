@@ -34,7 +34,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visi
 #marks .tick{position:absolute;top:5px;width:2px;height:26px;background:rgba(255,255,255,.45);transform:translateX(-1px)}
 #marks .star{position:absolute;top:-4px;transform:translateX(-50%);color:var(--ok);font-size:15px;font-style:normal}
 #chapters{display:flex;gap:6px;flex-wrap:wrap}
-.chap{padding:5px 11px;font-size:14px;border-radius:999px}
+.chap{padding:4px 10px;font-size:13px;border-radius:999px}.chap small{opacity:.7;font-size:11px;margin-left:3px}
 .chap[aria-current=true]{background:var(--accent);color:#102040;border-color:var(--accent);font-weight:700}
 label.ctl{display:flex;align-items:center;gap:6px;color:var(--mute);font-size:14px}
 input[type=range].mini{width:96px;accent-color:var(--accent)}
@@ -72,11 +72,12 @@ button[aria-pressed=true]{background:#2c5a98;border-color:#6aa8ff}
       <label class="ctl">Music <input id="vm" class="mini" type="range" min="0" max="1" step="0.05" aria-label="Music volume"></label>
       <button id="mute" type="button" aria-pressed="false">Mute</button>
       <button id="cc" type="button" aria-pressed="true">Captions</button>
-      <label class="ctl"><input id="autopause" type="checkbox"> Pause at practice questions (&#9733;)</label>
+      <label class="ctl">Class pauses <select id="autopause" aria-label="Automatic pauses for class practice"><option value="off">Off</option><option value="round" selected>At each activity (&#9733;)</option><option value="item">At every question</option></select></label>
+      <button id="prevAct" type="button" aria-label="Previous activity">&laquo; Activity</button><button id="nextAct" type="button" aria-label="Next activity">Activity &raquo;</button>
       <label class="ctl">Speed <select id="speed" aria-label="Playback speed"><option value="0.8">0.8&times;</option><option value="1" selected>1&times;</option><option value="1.2">1.2&times;</option></select></label>
       <label class="ctl">Frame rate <select id="fps" aria-label="Frame rate"><option value="30" selected>30 (light)</option><option value="60">60</option></select></label>
       <button id="full" type="button">Full screen</button>
-      <span class="hint">Space play/pause &middot; &larr;&rarr; 5 s &middot; [ ] chapter &middot; 1&ndash;3 answer &middot; C captions &middot; R replay</span>
+      <span class="hint">Space play/pause &middot; &larr;&rarr; 5 s &middot; [ ] chapter &middot; N P activity &middot; 1&ndash;3 answer &middot; C captions &middot; R replay</span>
     </div>
   </div>
   <details id="transcript"><summary>Transcript</summary><div id="transcriptBody"></div></details>

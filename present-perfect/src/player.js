@@ -12,6 +12,38 @@
   const fmt = s => { s = Math.max(0, s); return Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0'); };
   let narr, music;
 
+  /* A track of consecutive audio files ("parts"): the lesson is an hour long, so narration and music are cut at silent gaps.
+     Each part is fetched into a blob URL when needed (exact seeking), the next part is prefetched, and the clock decides when to switch. */
+  function makeSeq(parts, key, vol) {
+    const S = { i: -1, el: null, vol, muted: false, rate: 1, playing: false, tok: 0, cache: new Map(), els: [], failed: false };
+    const idxAt = t => { let k = 0; for (let j = 0; j < parts.length; j++) if (t >= parts[j].t0 - 1e-6) k = j; return k; };
+    const url = i => { let p = S.cache.get(i); if (!p) { const src = parts[i][key]; p = (location.protocol === 'file:' ? Promise.reject(new Error('file')) : fetch(src)).then(r => { if (!r.ok) throw new Error('http'); return r.blob(); }).then(b => URL.createObjectURL(b)).catch(() => src); S.cache.set(i, p); } return p; };
+    const getEl = i => {
+      let el = S.els[i]; if (el) return el;
+      el = new Audio(); el.preload = 'auto'; el.volume = S.vol; el.muted = S.muted; el.playbackRate = S.rate; S.els[i] = el;
+      el.addEventListener('error', () => { if (!S.failed) { S.failed = true; if (S.onError) S.onError(); } });
+      url(i).then(u => { el.src = u; }); return el;
+    };
+    const ready = el => new Promise(res => { if (el.readyState >= 1) return res(); const f = () => { el.removeEventListener('loadedmetadata', f); el.removeEventListener('error', f); res(); }; el.addEventListener('loadedmetadata', f); el.addEventListener('error', f); setTimeout(res, 8000); });
+    const prefetch = i => { if (i >= 0 && i < parts.length) getEl(i); };
+    const prune = k => { S.cache.forEach((p, j) => { if (Math.abs(j - k) > 1) { p.then(u => { if (u.startsWith('blob:')) URL.revokeObjectURL(u); }); S.cache.delete(j); if (S.els[j]) { S.els[j].removeAttribute('src'); S.els[j].load(); S.els[j] = null; } } }); };
+    S.seek = t => {
+      const k = idxAt(t), tok = ++S.tok, el = getEl(k);
+      if (S.el && S.el !== el) S.el.pause();
+      S.i = k; S.el = el; prefetch(k + 1); prune(k);
+      ready(el).then(() => { if (tok !== S.tok) return; try { el.currentTime = Math.max(0, t - parts[k].t0); } catch (e) { /* not seekable yet */ } el.playbackRate = S.rate; if (S.playing) { const p = el.play(); if (p && p.catch) p.catch(() => { if (S.onBlocked) S.onBlocked(); }); } });
+    };
+    S.play = t => { S.playing = true; S.seek(t); };
+    S.pause = () => { S.playing = false; S.tok++; if (S.el) S.el.pause(); };
+    S.time = () => (S.el && !S.el.paused && S.el.readyState >= 2 && S.i >= 0) ? parts[S.i].t0 + S.el.currentTime : null;
+    S.tick = t => { if (!S.playing) return; if (idxAt(t) !== S.i) S.seek(t); else if (S.i + 1 < parts.length && t > parts[S.i].t1 - 25) prefetch(S.i + 1); };
+    S.setVol = v => { S.vol = v; S.els.forEach(e => { if (e) e.volume = v; }); };
+    S.setMuted = m => { S.muted = m; S.els.forEach(e => { if (e) e.muted = m; }); };
+    S.setRate = r => { S.rate = r; S.els.forEach(e => { if (e) e.playbackRate = r; }); };
+    S.first = () => ready(getEl(idxAt(0)));
+    return S;
+  }
+
   async function init() {
     const loaderMsg = $('loaderMsg');
     try {
@@ -19,17 +51,16 @@
     } catch (e) { loaderMsg.textContent = 'Could not start the lesson: ' + e.message; console.error(e); return; }
     if (window.__missingIPA && window.__missingIPA.size) console.warn('Missing IPA for:', [...window.__missingIPA].join(', '));
     P.dur = Eng.duration;
-    // audio (blob URLs from embedded base64 so seeking is exact and memory is not duplicated)
-    narr = new Audio(); music = new Audio(); narr.preload = music.preload = 'auto';
-    // embedded data: URLs and hosted files are both turned into blob URLs, so seeking is exact regardless of server range support
-    const toBlobUrl = async src => { try { const r = await fetch(src); return URL.createObjectURL(await r.blob()); } catch (e) { return src; } };
+    // audio: a lesson-length list of parts (each a narration file and a music file that start at part.t0)
+    const A = window.ASSETS, parts = A.parts || [{ t0: 0, t1: P.dur, n: A.narration, m: A.music }];
+    P.parts = parts;
+    narr = makeSeq(parts.map(x => ({ t0: x.t0, t1: x.t1, n: x.n })), 'n', store.get('vn', 1));
+    music = makeSeq(parts.map(x => ({ t0: x.t0, t1: x.t1, m: x.m })), 'm', store.get('vm', 0.55));
+    narr.onError = () => { P.audioOK = false; toast('Audio could not be loaded. The lesson will play silently.'); };
+    narr.onBlocked = () => { P.audioOK = false; };
     $('loaderMsg').textContent = 'Loading audio\u2026';
-    [narr.src, music.src] = await Promise.all([toBlobUrl(window.ASSETS.narration), toBlobUrl(window.ASSETS.music)]);
-    // if a host refuses blob: media, fall back to the original URL once
-    for (const [el, orig] of [[narr, window.ASSETS.narration], [music, window.ASSETS.music]]) el.addEventListener('error', () => { if (!el._fb && el.src.startsWith('blob:')) { el._fb = true; el.src = orig; } });
-    narr.volume = store.get('vn', 1); music.volume = store.get('vm', 0.55); music.loop = false;
-    narr.addEventListener('canplaythrough', () => { P.audioOK = true; }, { once: true });
-    narr.addEventListener('error', () => { P.audioOK = false; toast('Audio could not be loaded. The lesson will play silently.'); });
+    await Promise.race([narr.first(), new Promise(r => setTimeout(r, 6000))]);
+    P.audioOK = !narr.failed;
     buildUI();
     sizeCanvas();
     seek(0, true);
@@ -63,11 +94,12 @@
     const minGap = 1000 / P.fps - 2; if (now - P.lastDraw < minGap) return;   // frame cap: 30 fps by default
     const t0 = performance.now();
     let t = P.base.t + (now - P.base.perf) / 1000 * P.rate;
-    if (P.audioOK && !narr.paused) { const a = narr.currentTime; if (Math.abs(a - t) > 0.08) { t = a; P.base = { perf: now, t }; } }
-    if (music && !music.paused && Math.abs(music.currentTime - t) > 0.2) music.currentTime = t;
+    narr.tick(t); music.tick(t);
+    if (P.audioOK) { const a = narr.time(); if (a !== null && Math.abs(a - t) > 0.08) { t = a; P.base = { perf: now, t }; } }
+    { const m = music.time(); if (m !== null && Math.abs(m - t) > 0.25) music.seek(t); }
     const prev = P.t;
     // practice pause points (thinking time), only when playing forward through them
-    if (P.autoPause) for (const pp of Eng.pausePoints) if (prev < pp.t && t >= pp.t && P.ptDone !== pp.t) { P.ptDone = pp.t; P.t = pp.t; pause(); toast('Practice time. Discuss it, then press Play to hear the answer.', 6000); drawOnce(); return; }
+    if (P.apMode !== 'off') for (const pp of Eng.pausePoints) if (prev < pp.t && t >= pp.t && P.ptDone !== pp.t && (P.apMode === 'item' || pp.kind !== 'item')) { P.ptDone = pp.t; P.t = pp.t; pause(); toast('Class time. Discuss it, then press Play to continue.', 6000); drawOnce(); return; }
     if (t >= P.dur) { P.t = P.dur; pause(); drawOnce(); return; }
     { const gap = P.lastDraw ? now - P.lastDraw : 0; if (gap > 0 && gap < 500) P.dtEma = P.dtEma ? P.dtEma * 0.9 + gap * 0.1 : gap; }
     P.t = t; P.lastDraw = now;
@@ -77,9 +109,7 @@
   function play() {
     if (P.playing) return;
     if (P.t >= P.dur - 0.05) P.t = 0;
-    narr.currentTime = P.t; music.currentTime = P.t; narr.playbackRate = music.playbackRate = P.rate;
-    const pr = narr.play(); if (pr && pr.catch) pr.catch(() => { P.audioOK = false; });
-    const pm = music.play(); if (pm && pm.catch) pm.catch(() => {});
+    narr.setRate(P.rate); music.setRate(P.rate); narr.play(P.t); music.play(P.t);
     P.playing = true; P.base = { perf: performance.now(), t: P.t }; P.lastDraw = 0;
     $('btnPlay').setAttribute('aria-label', 'Pause'); $('btnPlay').dataset.state = 'playing'; hideToast();
     P.raf = requestAnimationFrame(frame);
@@ -89,12 +119,13 @@
     $('btnPlay').setAttribute('aria-label', 'Play'); $('btnPlay').dataset.state = 'paused';
   }
   function seek(t, silent) {
-    P.t = clamp(t, 0, P.dur); if (narr) { narr.currentTime = P.t; music.currentTime = P.t; }
+    P.t = clamp(t, 0, P.dur); if (narr) { narr.seek(P.t); music.seek(P.t); }
     P.base = { perf: performance.now(), t: P.t }; P.ptDone = -1;
     for (const pp of Eng.pausePoints) if (pp.t <= P.t) P.ptDone = pp.t;      // do not re-trigger points already passed
     drawOnce();
   }
   function replay() { pause(); seek(0); play(); }
+  P.audioState = () => { const f = q => ({ part: q.i, ct: q.el ? +q.el.currentTime.toFixed(2) : null, paused: q.el ? q.el.paused : null, rs: q.el ? q.el.readyState : null, err: q.el && q.el.error ? q.el.error.code : null }); return { narr: f(narr), music: f(music), ok: P.audioOK }; };
   P.play = play; P.pause = pause; P.seek = seek; P.replay = replay; P.draw = drawOnce;
 
   /* ------------------------------------------------------------ UI */
@@ -104,19 +135,20 @@
     const sc = $('scrub'); sc.max = dur; sc.step = 0.05;
     const marks = $('marks');
     Eng.chapterStart.forEach((s, i) => { const m = document.createElement('i'); m.className = 'tick'; m.style.left = (s / dur * 100) + '%'; m.title = TL.chapters[i].label; marks.appendChild(m); });
-    Eng.pausePoints.forEach(pp => { const m = document.createElement('b'); m.className = 'star'; m.style.left = (pp.t / dur * 100) + '%'; m.title = pp.label || 'Practice'; m.textContent = '★'; marks.appendChild(m); });
+    Eng.pausePoints.filter(pp => pp.kind !== 'item').forEach(pp => { const m = document.createElement('b'); m.className = 'star'; m.style.left = (pp.t / dur * 100) + '%'; m.title = pp.label || 'Practice'; m.textContent = '★'; marks.appendChild(m); });
     const chs = $('chapters');
-    TL.chapters.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'chap'; b.textContent = c.label; b.dataset.i = i; b.addEventListener('click', () => { seek(Eng.chapterStart[i]); if (!P.playing) play(); }); chs.appendChild(b); });
+    TL.chapters.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'chap'; b.innerHTML = ''; b.append(c.label + ' '); const sm = document.createElement('small'); sm.textContent = fmt(Eng.chapterStart[i]); b.append(sm); b.title = c.label + ' \u2013 starts at ' + fmt(Eng.chapterStart[i]); b.dataset.i = i; b.addEventListener('click', () => { seek(Eng.chapterStart[i]); if (!P.playing) play(); }); chs.appendChild(b); });
     sc.addEventListener('input', () => { const was = P.playing; if (was) pause(); seek(+sc.value); if (was) play(); });
     $('btnPlay').addEventListener('click', () => (P.playing ? pause() : play()));
     $('btnReplay').addEventListener('click', replay);
-    const vn = $('vn'), vm = $('vm'); vn.value = narr.volume; vm.value = music.volume;
-    vn.addEventListener('input', () => { narr.volume = +vn.value; store.set('vn', +vn.value); });
-    vm.addEventListener('input', () => { music.volume = +vm.value; store.set('vm', +vm.value); });
-    const mute = $('mute'); mute.addEventListener('click', () => { const m = !narr.muted; narr.muted = music.muted = m; mute.setAttribute('aria-pressed', m); mute.textContent = m ? 'Unmute' : 'Mute'; });
+    const vn = $('vn'), vm = $('vm'); vn.value = narr.vol; vm.value = music.vol;
+    vn.addEventListener('input', () => { narr.setVol(+vn.value); store.set('vn', +vn.value); });
+    vm.addEventListener('input', () => { music.setVol(+vm.value); store.set('vm', +vm.value); });
+    const mute = $('mute'); mute.addEventListener('click', () => { const m = !narr.muted; narr.setMuted(m); music.setMuted(m); mute.setAttribute('aria-pressed', m); mute.textContent = m ? 'Unmute' : 'Mute'; });
     const cc = $('cc'); Eng.captions = store.get('cc', true); cc.setAttribute('aria-pressed', Eng.captions); cc.addEventListener('click', () => { Eng.captions = !Eng.captions; cc.setAttribute('aria-pressed', Eng.captions); store.set('cc', Eng.captions); drawOnce(); });
-    const ap = $('autopause'); P.autoPause = store.get('ap', true); ap.checked = P.autoPause; ap.addEventListener('change', () => { P.autoPause = ap.checked; store.set('ap', ap.checked); });
-    const sp = $('speed'); P.rate = store.get('rate', 1); sp.value = String(P.rate); sp.addEventListener('change', () => { P.rate = +sp.value; store.set('rate', P.rate); narr.playbackRate = music.playbackRate = P.rate; P.base = { perf: performance.now(), t: P.t }; });
+    const ap = $('autopause'); P.apMode = store.get('apm', 'round'); if (!['off', 'round', 'item'].includes(P.apMode)) P.apMode = 'round'; ap.value = P.apMode; ap.addEventListener('change', () => { P.apMode = ap.value; store.set('apm', ap.value); });
+    $('prevAct').addEventListener('click', () => jumpActivity(-1)); $('nextAct').addEventListener('click', () => jumpActivity(1));
+    const sp = $('speed'); P.rate = store.get('rate', 1); sp.value = String(P.rate); sp.addEventListener('change', () => { P.rate = +sp.value; store.set('rate', P.rate); narr.setRate(P.rate); music.setRate(P.rate); P.base = { perf: performance.now(), t: P.t }; });
     const fp = $('fps'); P.fps = store.get('fps', 30); fp.value = String(P.fps); fp.addEventListener('change', () => { P.fps = +fp.value; store.set('fps', P.fps); });
     $('full').addEventListener('click', () => { if (document.fullscreenElement) document.exitFullscreen(); else { const r = document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); if (r && r.catch) r.catch(() => toast('Full screen is not available here. Use the browser full-screen shortcut (F11).')); } });
     // transcript for screen readers / teachers (plain text, no IPA)
@@ -139,11 +171,18 @@
     else if (k === 'ArrowRight') { seek(P.t + 5); }
     else if (k === 'ArrowLeft') { seek(P.t - 5); }
     else if (k === ']') { jumpChapter(1); } else if (k === '[') { jumpChapter(-1); }
+    else if (k === 'n' || k === 'N') jumpActivity(1); else if (k === 'p' || k === 'P') jumpActivity(-1);
     else if (k === 'c' || k === 'C') $('cc').click();
     else if (k === 'm' || k === 'M') $('mute').click();
     else if (k === 'f' || k === 'F') $('full').click();
     else if (k === 'r' || k === 'R') replay();
     else if (/^[1-4]$/.test(k)) { const h = Eng.hot[+k - 1]; if (h) { h.fn(); drawOnce(); } }
+  }
+  function jumpActivity(d) {
+    const G = Eng.groups; let tt = null;
+    if (d > 0) { const g = G.find(g => g.t0 > P.t + 0.6); tt = g ? g.t0 : null; }
+    else { for (const g of G) if (g.t0 < P.t - 2) tt = g.t0; if (tt === null) tt = 0; }
+    if (tt !== null) { const was = P.playing; if (was) pause(); seek(tt); if (was) play(); }
   }
   function curChapter() { let c = 0; Eng.chapterStart.forEach((s, i) => { if (P.t >= s - 0.01) c = i; }); return c; }
   function jumpChapter(d) { const c = curChapter(); let n = clamp(c + d, 0, Eng.chapterStart.length - 1); if (d < 0 && P.t - Eng.chapterStart[c] > 2) n = c; seek(Eng.chapterStart[n]); }

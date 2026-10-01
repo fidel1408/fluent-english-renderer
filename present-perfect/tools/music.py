@@ -7,7 +7,7 @@ Original background music + subtle sound effects, generated from scratch with nu
   * SFX: bubble pop for dialogue, soft whoosh at chapter changes, bell chime at answer reveals and at the end.
 Reads build/timeline.json + build/narration.wav, writes build/bed.wav (stereo 44.1 kHz).
 """
-import json
+import json, re
 from pathlib import Path
 import numpy as np
 import soundfile as sf
@@ -30,6 +30,13 @@ CHORDS = [  # (bass midi, chord tones)
     (41, [57, 60, 64, 69]),   # Fmaj7 (voiced low)
     (43, [59, 62, 64, 67]),   # G6
 ]
+# an hour of one four-chord loop would wear thin: three progressions alternate every 8 bars
+PROGS = [
+    CHORDS,
+    [(45, [60, 64, 67, 69]), (41, [57, 60, 64, 69]), (48, [60, 64, 67, 71]), (43, [59, 62, 64, 67])],      # Am7 Fmaj7 Cmaj7 G6
+    [(50, [57, 60, 65, 69]), (43, [59, 62, 65, 67]), (48, [60, 64, 67, 71]), (45, [60, 64, 67, 69])],      # Dm7 G7 Cmaj7 Am7
+]
+PATS = [[0, 2, 1, 3, 2, 1, 3, 2], [0, 1, 2, 3, 2, 1, 2, 3], [3, 1, 2, 0, 2, 1, 3, 1]]
 
 
 def env_ar(n, a, r, sr=SR):
@@ -113,8 +120,8 @@ def main():
     tl = json.loads((ROOT / "build" / "timeline.json").read_text())
     dur = tl["duration"] + 2.0
     n = int(dur * SR)
-    music = np.zeros((n, 2))
-    sfx = np.zeros((n, 2))
+    music = np.zeros((n, 2), dtype=np.float32)
+    sfx = np.zeros((n, 2), dtype=np.float32)
 
     # ---- hold windows (thinking time): arpeggio off, ticks on
     holds, thoughts = [], []
@@ -125,16 +132,18 @@ def main():
     nb = int(dur / BAR) + 2
     for b in range(nb):
         t0 = b * BAR
-        root, tones = CHORDS[b % 4]
+        sec = (b // 8) % 3
+        root, tones = PROGS[sec][b % 4]
         for k, m in enumerate(tones):
             add(music, t0, pad_note(mtof(m), BAR + 1.0), pan=(-0.5 + k * 0.33), gain=0.065)
         add(music, t0, bass_note(mtof(root), BAR * 0.92), pan=0.0, gain=0.11)
         # arpeggio, eighth notes
-        pat = [0, 2, 1, 3, 2, 1, 3, 2]
+        pat = PATS[(b // 16) % 3]
         for e in range(8):
             ts = t0 + e * BEAT / 2
             if any(h0 - 0.2 <= ts <= h1 + 0.2 for h0, h1 in holds): continue
             if e % 2 == 1 and (b % 2 == 0) and e in (3, 7): continue            # a little breathing room
+            if (b // 8) % 5 == 4: continue                                       # every fifth 8-bar section: pad only
             m = tones[pat[e] % 4] + 12
             vel = 0.5 + 0.35 * ((e % 4) == 0) + rng.random() * 0.1
             add(music, ts, kalimba(mtof(m)), pan=(-0.35 if e % 2 else 0.35), gain=0.075 * vel)
@@ -148,14 +157,16 @@ def main():
             if l["kind"] == "thought": add(sfx, l["t0"] - 0.02, sfx_bloop(), gain=0.09)
             if l["kind"] == "hold":
                 k = 0; x = l["t0"] + 0.5
+                if l["t1"] - l["t0"] > 20: x = l["t1"] - 10.5          # pair work: silence while students talk, ticks only for the last 10 s
                 while x < l["t1"] - 0.2:
                     add(sfx, x, sfx_tick(k), gain=0.06); x += 1.0; k += 1
+            if re.fullmatch(r".+_\d+a", l["id"]) and l["kind"] != "ex": add(sfx, l["t0"] - 0.05, sfx_chime(), gain=0.08)
         if b.get("check"):
             ans = b["lines"][-1]; add(sfx, ans["t0"] - 0.05, sfx_chime(), gain=0.12)
         if b["id"] == "speak":
             add(sfx, b["lines"][-1]["t0"] - 0.05, sfx_chime(), gain=0.14)
     # ---- ducking from narration energy
-    nar, nsr = sf.read(ROOT / "build" / "narration.wav")
+    nar, nsr = sf.read(ROOT / "build" / "narration.wav", dtype="float32")
     nar = resample_poly(nar, SR, nsr) if nsr != SR else nar
     hop = int(0.01 * SR)
     m = len(nar) // hop
@@ -168,9 +179,16 @@ def main():
         cur += (act[i] - cur) * (a_att if act[i] > cur else a_rel)
         g[i] = cur
     gain = 1.0 - 0.72 * g                    # ~ -11 dB under speech
-    gain_full = np.interp(np.arange(n) / SR, np.arange(m) * 0.01, gain)
-    music *= gain_full[:, None]
-    sfx *= (1.0 - 0.35 * np.interp(np.arange(n) / SR, np.arange(m) * 0.01, g))[:, None]
+    gain_full = np.interp(np.arange(n) / SR, np.arange(m) * 0.01, gain).astype(np.float32)
+    # long holds (pair work, class sharing): the music sits far back so students can hear each other
+    quiet = np.ones(n, dtype=np.float32)
+    for h0, h1 in holds:
+        if h1 - h0 > 20:
+            i0, i1 = max(0, int((h0 - 1) * SR)), min(n, int((h1 + 1) * SR)); tl = np.arange(i0, i1) / SR
+            quiet[i0:i1] *= (1 - 0.7 * np.clip(np.minimum((tl - h0) / 1.5, (h1 - tl) / 1.5), 0, 1)).astype(np.float32)
+    gain_full = gain_full * quiet
+    music *= gain_full[:, None].astype(np.float32)
+    sfx *= (1.0 - 0.35 * np.interp(np.arange(n) / SR, np.arange(m) * 0.01, g))[:, None].astype(np.float32)
     # music tone: gentle lowpass so it never fights consonants
     sos = butter(2, 5200, "low", fs=SR, output="sos")
     music = sosfilt(sos, music, axis=0)

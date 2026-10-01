@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 M = Path(sys.argv[1])
 asr = sherpa_onnx.OfflineRecognizer.from_whisper(encoder=str(M / "small.en-encoder.int8.onnx"), decoder=str(M / "small.en-decoder.int8.onnx"), tokens=str(M / "small.en-tokens.txt"), language="en", task="transcribe", num_threads=4)
 
-NUM = {"2019": "twenty nineteen", "2021": "twenty twenty-one", "2022": "twenty twenty-two"}
+NUM = {"2020": "twenty twenty", "2019": "twenty nineteen", "2021": "twenty twenty-one", "2022": "twenty twenty-two"}
 def norm(s):
     s = s.lower().replace("’", "'").replace("-", " ")
     for k, v in NUM.items(): s = s.replace(k, v)

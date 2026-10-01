@@ -112,6 +112,7 @@
         { t: 'may', ph: 'mˈeɪ' }, { t: 'might', ph: 'mˈaɪt' }, { t: 'could', ph: 'kˈʊd' },
         { t: '“She {m:may} arrive early.”', cls: 'sm' }, { t: '“She {m:might} arrive early.”', cls: 'sm' }, { t: '“She {m:could} arrive early.”', cls: 'sm' },
         { t: '“Do you think she {m:might} come?”', cls: 'sm' },
+        { t: '“She {m:might} not come.”', cls: 'sm' }, { t: '“{m:Could} this be the right address?”', cls: 'sm' }, { t: '“What {m:could} happen next?”', cls: 'sm' },
       ],
     },
   });
@@ -137,6 +138,9 @@
           opts: [{ t: 'Entry is not allowed.', ok: true }, { t: 'Perhaps you will not enter.', ok: false, why: 'A guard at a door is giving a rule here.' }] },
         { ctx: { icon: 'phone', text: 'Maya checks her phone. No news.' }, q: '“She may not arrive today.” means:', okMsg: 'Yes!', expl: 'Here may not is about uncertainty, not permission.',
           opts: [{ t: 'Perhaps she will not arrive today.', ok: true }, { t: 'She is not allowed to arrive today.', ok: false, why: 'Nobody is giving a rule in this situation.' }] },
+        { q: '“Could I leave early?” is:', okMsg: 'Yes!', expl: 'The speaker is asking politely. This could is not a guess.', opts: [{ t: 'A polite question about permission.', ok: true }, { t: 'A guess about the future.', ok: false, why: 'The speaker is asking, not guessing.' }] },
+        { q: '“Could you check this?” is:', okMsg: 'Yes!', expl: 'It is a polite request. The speaker wants you to act.', opts: [{ t: 'A polite request.', ok: true }, { t: 'A guess about what you will do.', ok: false, why: 'The speaker is asking for help.' }] },
+        { q: '“When I was younger, I could swim well.” means:', okMsg: 'Yes!', expl: 'This could talks about general ability in the past. Could is not always about possibility.', opts: [{ t: 'I had the ability to swim well.', ok: true }, { t: 'Perhaps I will swim tomorrow.', ok: false, why: 'The sentence is about the past.' }] },
       ],
     },
   });
@@ -239,7 +243,7 @@
     cast: [['maya', P(400, 1, 'open', 'smile')], ['daniel', P(1540, -1, 'idle', 'smile')]],
     steps: [
       fx('note', { id: 'recap', title: 'What we fixed', x: 260, y: 160, w: 1400, size: 'sm', lines: ['{s:She} {m:might} {v:arrive}, not {n:arrives}.', '{s:He} {m:could} {v:help}, not {n:to} help.', '{m:Could} {s:she} {v:come}?, not {n:Does} she {m:could} come?', '{s:She} {m:might} {n:not} {v:come}, not {n:doesn’t} might come.'] }, 1),
-      nar('Here is what we fixed. After a modal, use the base verb. No s. No to. No do, does, or did. For a negative, put not after the modal. For a question, put the modal first.'),
+      nar('Here is what we fixed. After a modal, the verb stays in its base form. No s. No to. No do, does, or did. For a negative, put not after the modal. For a question, put the modal first.'),
     ],
   });
 })();

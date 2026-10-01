@@ -2,6 +2,17 @@
    NOTE: entered by the lesson author from knowledge of those conventions and cross-checked against espeak-ng output for typos.
    It was NOT verified against the Oxford site (that site was unreachable from the build environment). */
 FE.addIPA(`
+act ækt
+again əˈɡen
+asking ˈæskɪŋ
+general ˈdʒenrəl
+had hæd
+politely pəˈlaɪtli
+roles roʊlz
+speaker ˈspiːkər
+swap swɑːp
+talks tɔːks
+wants wɑːnts
 a ə
 ability əˈbɪləti
 able ˈeɪbl

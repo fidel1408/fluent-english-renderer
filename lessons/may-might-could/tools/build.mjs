@@ -14,7 +14,7 @@ const make = (embedAudio) => {
     if (f === '05-narration.js' && embedAudio) s = s.replace(/file:\s*'audio\/([\w]+)\.mp3'/g, (m, k) => `file:'data:audio/mpeg;base64,${b64('release/audio/' + k + '.mp3')}'`);
     return `<script>/* ${f} */\n${s.replace(/<\/script/gi, '<\\/script')}</script>`;
   }).join('\n');
-  let html = rd('src/index.html').replace('<link rel="stylesheet" href="css/style.css">', () => `<style>${css}</style>`).replaceAll('assets/fluent_english_logo_trimmed.png', () => logo).replace('<!--SCRIPTS-->', () => scripts);
+  let html = rd('src/index.html').replace('<link rel="stylesheet" href="css/style.css">', () => `<style>${css}</style>`).replace('<!--SCRIPTS-->', () => scripts).replaceAll('assets/fluent_english_logo_trimmed.png', () => logo);
   return html;
 };
 fs.mkdirSync(path.join(root, 'release'), { recursive: true });

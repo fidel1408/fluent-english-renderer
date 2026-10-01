@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const FE = window.FE, A = FE.Audio;
-  const L = (FE.L = { chapters: [], segs: [], store: {}, mission: { shelter: 'tent', food: 'main', guest: 'text' } });
+  const L = (FE.L = { chapters: [], segs: [], store: {}, mission: { shelter: 'tent', food: 'main', guest: 'text', picked: {} } });
   /* exact chapter allocations (seconds) */
   L.chapters = [
     { n: 1, t: 'Hook and diagnostic', s: 0, e: 300 }, { n: 2, t: 'Discover the core meaning', s: 300, e: 780 },
@@ -82,7 +82,7 @@
       A.quiet = true; FE.Tween.instant = true;
       const so = typeof seg.sceneOpts === 'function' ? seg.sceneOpts(L) : seg.sceneOpts || {};
       R.S.load(typeof seg.scene === 'function' ? seg.scene(L) : seg.scene, so);
-      (seg.cast || []).forEach(([id, o]) => R.S.add(id, o));
+      (seg.cast || []).forEach(([id, o]) => R.S.add(id, R.fixCast(seg, o)));
       if (seg.weather) R.S.setWeather(seg.weather[0], seg.weather[1], 0);
       if (seg.setup) seg.setup(R.X);
       R.t = 0;
@@ -101,6 +101,7 @@
     },
     enterGate(actT = 0, quiet) {
       const seg = R.seg(); R.gate = true; R.actT = actT; R.timesUp = false;
+      if (seg.act && FE.FX && FE.FX.clear) { FE.$$('#fx > .fxp').forEach((e) => e.remove()); }
       if (seg.act) {
         R.act = FE.ACT.mount(seg, R.X);
         if (seg.act.cam) R.S.camTo(Object.assign({ x: 0, y: 0, z: 1 }, seg.act.cam), quiet ? 0 : 1.2);
@@ -169,8 +170,8 @@
         R.t += dt; R.runEvents(R.t); R.sync();
         if (R.t >= c.film) {
           const tail = seg.hold != null ? seg.hold : 2;
-          if (seg.act && seg.actDur > 1.5) { R.runEvents(1e9); R.stopSpeech(); R.enterGate(0); }
-          else if (R.t >= c.film + tail) R.advance('film-end');
+          if (seg.act && seg.actDur > 1.5) { const over = R.t - c.film; R.runEvents(1e9); R.stopSpeech(); R.enterGate(Math.max(0, over)); }
+          else if (R.t >= c.film + tail) R.advance(R.t - c.film - tail);
         }
       } else {
         if (!R.actPaused) R.actT += dt;
@@ -178,11 +179,11 @@
         if (R.act && R.act.tick) R.act.tick(R.actT, total, dt);
         FE.UI.updateTimer(R, seg);
         if (R.actT >= total && !R.timesUp) { R.timesUp = true; A.sfx('bell'); FE.UI.onTimesUp(R); }
-        if (R.mode === 'demo' && R.actT >= total) R.advance('demo');
+        if (R.mode === 'demo' && R.actT >= total) R.advance(R.actT - total);
       }
       R.draw(dt);
     },
-    advance() { if (R.idx < L.segs.length - 1) R.load(R.idx + 1, 0); else { R.pause(); FE.UI.onEnd(); } },
+    advance(over = 0) { if (R.idx < L.segs.length - 1) R.load(R.idx + 1, Math.min(Math.max(over, 0), 5)); else { R.pause(); FE.UI.onEnd(); } },
     loop(now) {
       if (!R.playing) { R.rafId = 0; return; }
       const dt = Math.min(0.1, (now - R.last) / 1000); R.last = now;
@@ -216,19 +217,21 @@
     },
     nextSeg(d = 1) { R.load(FE.clamp(R.idx + d, 0, L.segs.length - 1), 0); },
     /* rebuild the current scene from mission state (visible consequence of a branch choice) */
+    /* presenter layout: behind the office desk the figures stand higher so the torso shows above it */
+    fixCast(seg, o) { const sc = typeof seg.scene === 'function' ? seg.scene(L) : seg.scene; return sc === 'office' && o.y > 960 ? Object.assign({}, o, { y: 905 }) : o; },
     rebuild() {
       const seg = R.seg(), keep = FE.$$('#fx > *');
       A.quiet = true; const wasI = FE.Tween.instant; FE.Tween.instant = true;
       const so = typeof seg.sceneOpts === 'function' ? seg.sceneOpts(L) : seg.sceneOpts || {};
       R.S.load(typeof seg.scene === 'function' ? seg.scene(L) : seg.scene, so);
       keep.forEach((e) => FE.$('#fx').appendChild(e));
-      (seg.cast || []).forEach(([id, o]) => R.S.add(id, o));
+      (seg.cast || []).forEach(([id, o]) => R.S.add(id, R.fixCast(seg, o)));
       if (seg.act && seg.act.cam) Object.assign(R.S.cam, seg.act.cam);
       FE.Tween.instant = wasI; A.quiet = false; FE.Tween.finish();
       if (!R.playing) R.draw(0);
     },
     replay() { const g = R.act; R.load(R.idx, 0); },
-    restart() { R.pause(); L.store = {}; R.started = false; R.load(0, 0); FE.UI.clearWall(); },
+    restart() { R.pause(); L.store = {}; L.mission = { shelter: 'tent', food: 'main', guest: 'text', picked: {} }; R.started = false; R.load(0, 0); FE.UI.clearWall(); },
     setMode(m) { R.mode = m; FE.UI.onMode(m); },
     /* activity timer controls (Class Mode) */
     timer: {

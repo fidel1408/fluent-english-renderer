@@ -41,7 +41,7 @@
   const ib = (label, id, icon, cls = '') => `<button class="btn ${cls}" data-do="${id}">${icon ? `<span class="bi">${icon}</span>` : ''}${U(label)}</button>`;
   const frame = (spec, body, foot, tag) => `<div class="ah"><span class="tag">${U(tag || spec.tag || 'Your turn')}</span>${spec.title ? `<span class="atl">${U(spec.title)}</span>` : ''}</div>${body}<div class="afoot">${foot}</div>`;
   const I = { hint: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M9 21h6M10 17h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>', eye: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>', check: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>', next: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>', play: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>', redo: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v5h5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>' };
-  const BOX = { x: 960, y: 150, w: 900 };
+  const BOX = { x: 960, y: 140, w: 900 };
 
   /* base class */
   class Base {
@@ -224,7 +224,7 @@
       this.el.innerHTML = frame(sp, `<div class="qq ub mid">${U(sp.q)}</div>${sp.facts ? `<ul class="facts">${sp.facts.map((f) => `<li class="ub sm">${U(f)}</li>`).join('')}</ul>` : ''}<div class="opts">${opts}</div>${out}${sup}`, ib('Language help', 'sup', I.hint), sp.tag || 'Team decision');
       void cur;
     }
-    pick(k) { const st = this.st, sp = this.spec, o = sp.opts[k]; st.pick = k; FE.L.mission[sp.key] = o.val; A.sfx('whoosh'); if (o.effect) o.effect(this.X); this.render(); }
+    pick(k) { const st = this.st, sp = this.spec, o = sp.opts[k]; st.pick = k; FE.L.mission[sp.key] = o.val; (FE.L.mission.picked = FE.L.mission.picked || {})[sp.key] = true; A.sfx('whoosh'); if (o.effect) o.effect(this.X); this.render(); }
     onClick(t) { if (t.dataset.opt != null) this.pick(+t.dataset.opt); else if (t.dataset.do === 'sup') { this.st.sup = !this.st.sup; this.render(); } }
     fastForward() { const st = this.st; if (st.pick != null) { /* apply persisted choice visually */ const o = this.spec.opts[st.pick]; if (o.effect) o.effect(this.X); } }
     tick(t, total) { if (this.R.mode === 'demo' && this.st.pick == null && t > total * 0.35) this.pick(0); }

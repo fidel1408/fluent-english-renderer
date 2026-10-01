@@ -10,7 +10,7 @@ const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
 const errs = [];
 p.on('console', (m) => { if (m.type() === 'error') errs.push('console: ' + m.text()); });
 p.on('pageerror', (e) => errs.push('pageerror: ' + e.message));
-await p.goto('file://' + path.join(root, 'release/index.html')); await p.waitForTimeout(800); console.log('LOAD ERRORS:', errs);
+await p.goto('file://' + path.join(root, 'release/index.html')); await p.waitForTimeout(800); console.log('LOAD ERRORS:', errs); await p.evaluate(() => { const v = document.getElementById('startVeil'); if (v) v.remove(); FE.R.started = true; FE.R.wall0 = performance.now(); });
 const info = await p.evaluate(() => { const total = FE.plan(); return { total, chapters: FE.L.chapters.map((c) => ({ n: c.n, len: c.e - c.s, rest: Math.round(c.rest), fits: c.fits })), segs: FE.L.segs.map((s) => ({ id: s.id, plan: s.plan, film: +s.filmDur.toFixed(1), act: +s.actDur.toFixed(1), hasAct: !!s.act })) }; });
 console.log('TOTAL PLAN', info.total); console.log(JSON.stringify(info.chapters));
 for (const [i, s] of info.segs.entries()) {

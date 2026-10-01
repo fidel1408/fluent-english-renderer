@@ -33,7 +33,7 @@
 
   const FACTS = (a, b) => [a, b];
   seg({
-    id: '5.2', ch: 5, title: 'Step one: weather and transport', scene: 'rooftop', sceneOpts: { wet: 0.5 }, hold: 1, w: 3,
+    id: '5.2', ch: 5, title: 'Step one: weather and transport', scene: mScene, sceneOpts: (L) => (L.mission.picked && L.mission.picked.shelter ? mOpts(L) : { wet: 0.5 }), hold: 1, w: 3,
     cast: [['maya', P(640, 1, 'think', 'curious', 0.7, 1020)], ['priya', P(960, -1, 'clasp', 'unsure', 0.7, 1020)]],
     steps: [nar('Step one. The weather and the transport. Read the facts. Then choose where the party will be.')],
     act: {
@@ -130,7 +130,7 @@
   });
 
   seg({
-    id: '6.2', ch: 6, title: 'Revise your predictions', scene: mScene, sceneOpts: mOpts, hold: 1, w: 3, amb: 'rain',
+    id: '6.2', ch: 6, title: 'Revise your predictions', scene: mScene, sceneOpts: mOpts, hold: 1, w: 2, amb: 'rain',
     cast: [['maya', P(640, 1, 'think', 'worried', 0.7, 1020)], ['daniel', P(960, -1, 'phoneR', 'worried', 0.7, 1020)]],
     setup: (X) => X.S.setWeather(0.85, 0.7, 0),
     steps: [nar('Change at least one prediction. Explain your reason. Because the evidence changed, what might happen now?')],
@@ -159,13 +159,13 @@
 
   const rpModel = ['Tom: “Hi. {m:Could} my flight be late?”', 'Lena: “It {m:might} leave at nine. I do not know yet.”', 'Tom: “Do you think I {m:might} miss my meeting?”', 'Lena: “You {m:may} miss the start. I {m:could} check another flight.”', 'Tom: “Yes, please. What {m:could} happen next?”', 'Lena: “The new flight {m:may} leave at ten. I will tell you soon.”'];
   seg({
-    id: '6.4', ch: 6, title: 'Roleplay: you try', scene: 'airport', hold: 1, w: 1,
+    id: '6.4', ch: 6, title: 'Roleplay: you try', scene: 'airport', hold: 1, w: 3,
     cast: [['lena', { x: 380, y: 1020, s: 0.7, flip: 1, pose: 'tablet', face: 'neutral' }], ['tom', { x: 700, y: 1020, s: 0.7, flip: -1, pose: 'phoneChest', face: 'worried' }]],
     steps: [nar('Choose roles. Traveler or gate agent. Try the conversation. The sample answers stay hidden until you ask.')],
     act: {
       type: 'task', tag: 'Roleplay', title: 'At the gate', box: { x: 880, y: 140, w: 1000 }, cam: { x: 330, z: 1 },
       roles: [{ r: '[A|eɪ] · Traveler', t: 'Goal: find out what {m:could} happen. Decide: wait, or change flights.' }, { r: '[B|biː] · Gate agent', t: 'Goal: you do not know yet. Explain the possibilities honestly.' }],
-      steps: ['Start: “Hi …”', 'Ask about the flight. Use {m:could}, {m:may}, or {m:might}.', 'Agree on what to do next.'],
+      steps: ['Start: “Hi …”', 'Ask about the flight. Use {m:could}, {m:may}, or {m:might}.', 'Agree on what to do next.', 'Swap roles and try again.'],
       support: ['{m:Could} my flight …?', 'Do you think it {m:might} …?', 'It {m:might} …', 'It {m:may} not …'],
       hints: ['Traveler: use questions. Agent: use possibility sentences.'],
       model: rpModel,

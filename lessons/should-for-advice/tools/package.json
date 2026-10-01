@@ -1,0 +1,3 @@
+{ "name": "should-for-advice-tools", "private": true, "type": "module",
+  "description": "Dev/QA tooling for the Should for Advice lesson (not needed to play the lesson).",
+  "devDependencies": { "playwright-core": "^1.49.0" } }

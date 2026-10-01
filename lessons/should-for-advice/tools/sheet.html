@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#2a3140">
+<svg id="s" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
+<script src="../src/js/00-core.js"></script><script src="../src/js/10-characters.js"></script>
+<script>
+const s=document.getElementById('s');
+const keys=['maya','daniel','priya','marcus','hana','theo'];
+const poses=[['rest','rest','neutral'],['talk','rest2','smile'],['palm','palm','worry'],['chin','rest','think'],['point','rest2','confident'],['wave','rest','grin']];
+window.A=[];
+keys.forEach((k,i)=>{const a=new FE.Actor(k,{x:170+i*315,y:330,scale:0.62}); s.appendChild(a.el); const p=poses[i]; a.setArms(p[0],p[1],true); a.expr(p[2],true); a.set({facing:(i%2?-0.5:0.5)},true); window.A.push(a);});
+keys.forEach((k,i)=>{const a=new FE.Actor(k,{x:170+i*315,y:820,scale:1.0}); s.appendChild(a.el); const p=poses[(i+3)%6]; a.setArms(p[0],p[1],true); a.expr('smile',true); a.set({mouth:0.5},true); window.A.push(a);});
+</script>

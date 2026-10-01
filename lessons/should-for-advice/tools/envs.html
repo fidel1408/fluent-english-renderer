@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#000">
+<svg width="0" height="0" style="position:absolute"><defs id="gd"></defs></svg>
+<div id="w"></div>
+<script src="../src/js/00-core.js"></script><script src="../src/js/10-characters.js"></script><script src="../src/js/11-environments.js"></script>
+<script>
+document.getElementById('gd').innerHTML=FE.SHARED_DEFS;
+const q=new URLSearchParams(location.search); const env=q.get('e')||'office';
+const E=FE.ENV[env]();
+const svg=(inner)=>`<svg style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080">${inner}</svg>`;
+const w=document.getElementById('w'); w.innerHTML=svg(E.back)+'<svg id="mid" style="position:absolute;left:0;top:0" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>'+svg(E.front);
+const mid=document.getElementById('mid');
+const pairs={office:['maya','daniel'],cafe:['marcus','hana'],apartment:['theo','priya'],cowork:['daniel','priya'],station:['priya','marcus']}[env];
+const a=new FE.Actor(pairs[0],{x:620,y:640,scale:1.25}), b=new FE.Actor(pairs[1],{x:1180,y:650,scale:1.25});
+mid.append(a.el,b.el); a.setArms('talk','desk',true); a.expr('smile',true); a.set({facing:.5,mouth:.4},true); b.setArms('desk','desk',true); b.set({facing:-.5},true);b.expr('listen',true);
+</script>

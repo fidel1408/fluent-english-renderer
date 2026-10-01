@@ -1,0 +1,435 @@
+{
+ "date": "2026-10-01T22:55:29.543Z",
+ "results": [
+  {
+   "name": "title is exactly \"Should for Advice\"",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "start card shows IPA under each title word",
+   "ok": true,
+   "info": "/ʃʊd/ /fɔːr/ /ædˈvaɪs/"
+  },
+  {
+   "name": "control bar visible before start",
+   "ok": true,
+   "info": "bar height 56"
+  },
+  {
+   "name": "logo asset is the supplied logo (aspect preserved)",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "after start the bar is hidden by default",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "hidden bar releases its layout space (viewport reaches window bottom)",
+   "ok": true,
+   "info": "viewport 844→900, bottom 900"
+  },
+  {
+   "name": "hidden bar takes no space (height 0 / not rendered)",
+   "ok": true,
+   "info": "bar h 0"
+  },
+  {
+   "name": "stage keeps 16:9 when bar hidden",
+   "ok": true,
+   "info": "1.7778"
+  },
+  {
+   "name": "stage fully inside viewport (no cropping)",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "Show-controls button is visible and ≥44px",
+   "ok": true,
+   "info": "48x48"
+  },
+  {
+   "name": "Show button sits in a safe corner (bottom-right)",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "Show button is keyboard focusable",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "H key shows the bar",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "shown bar is compact (<=60px) and viewport shrinks by exactly the bar height",
+   "ok": true,
+   "info": "bar 56, viewport 900→844"
+  },
+  {
+   "name": "stage still 16:9 and inside viewport with bar shown",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "hide/show during playback does not pause or restart anything",
+   "ok": true,
+   "info": "T 2.2→3.2 token 3→3"
+  },
+  {
+   "name": "Hide controls button collapses the bar",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "Show button click restores the bar",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "hide/show while paused keeps it paused",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "hidden state survives chapter change",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "visible state survives chapter change",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "resize keeps hidden state and 16:9",
+   "ok": true,
+   "info": "1280x720"
+  },
+  {
+   "name": "narrow window letterboxes (no stretch, no crop)",
+   "ok": true,
+   "info": "1000x563"
+  },
+  {
+   "name": "fullscreen keeps hidden state",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "H works in fullscreen",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "hidden state survives leaving fullscreen",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "H is ignored while typing in a text field",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "form checker flags each genuine learner error and accepts correct forms",
+   "ok": true,
+   "info": "[false,false,false,false,false,true,true,true,true,true,false]"
+  },
+  {
+   "name": "CLASS mode: every segment visited, lesson reaches 60:00, gates hold until Continue",
+   "ok": true,
+   "info": "segments 54/54, gates 28"
+  },
+  {
+   "name": "CLASS gate holds the clock (no auto-advance) at end of an activity",
+   "ok": true,
+   "info": "{\"gate\":true,\"held\":true,\"atEnd\":true,\"seg\":\"5.1\"}"
+  },
+  {
+   "name": "DEMO mode: deterministic 60:00 with no gates",
+   "ok": true,
+   "info": "T=3600.0, ticks×0.5=3600"
+  },
+  {
+   "name": "planned chapters total exactly 3600 s",
+   "ok": true,
+   "info": "[]"
+  },
+  {
+   "name": "chapter allocations 5/8/8/8/10/15/6 minutes",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "every segment narration fits inside its planned duration",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "timer restart returns to the start of the response interval",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "\"more time\" extends an activity beyond its planned end before the gate",
+   "ok": true,
+   "info": "{\"mid\":57,\"gate\":true,\"T\":1860,\"end\":1860,\"seg\":\"5.2\"}"
+  },
+  {
+   "name": "skip jumps to the next segment",
+   "ok": true,
+   "info": "5.4"
+  },
+  {
+   "name": "single-answer question: wrong option marked wrong, right option accepted with explanation",
+   "ok": true,
+   "info": "{\"wrongMarked\":true,\"rightMarked\":true,\"fbHasText\":true}"
+  },
+  {
+   "name": "identify-all-reasonable task accepts the three reasonable ideas and leaves unhelpful ones unmarked",
+   "ok": true,
+   "info": "{\"allOk\":true,\"badDim\":true,\"fb\":\"feedback good\"}"
+  },
+  {
+   "name": "selecting an unhelpful idea is not marked correct",
+   "ok": true,
+   "info": "{\"fb\":\"feedback note\",\"bad\":true}"
+  },
+  {
+   "name": "sentence builder rejects \"asks\" with a specific explanation and accepts the correct order",
+   "ok": true,
+   "info": "{\"wrong\":true,\"right\":true}"
+  },
+  {
+   "name": "repair task: sentence stays marked incorrect until the right repair is chosen, then becomes correct",
+   "ok": true,
+   "info": "She should call him."
+  },
+  {
+   "name": "mission: different first choices produce different scene states and different outcome narration",
+   "ok": true,
+   "info": "[\"true,false,false\",\"false,true,false\",\"false,false,true\"]"
+  },
+  {
+   "name": "mission: revised advice changes the final state (complementary steps = \"good\", repeated step = \"same\")",
+   "ok": true,
+   "info": "[\"good\",\"same\",\"same\",\"good\",\"good\"]"
+  },
+  {
+   "name": "mission: the character's mood follows the state (two steps = relief, one = think)",
+   "ok": true,
+   "info": "[\"relief\",\"think\"]"
+  },
+  {
+   "name": "bar: Play starts the lesson clock",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: Pause stops it",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: forward 5 s",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: back 5 s",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: next chapter",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: previous chapter at a chapter start goes to the previous chapter start",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: replay restarts the current example",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: hint shows the optional hint card",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: answer reveal marks the correct option",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: more time adds a minute",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: skip moves on",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: restart timer",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: mode toggle switches CLASS/DEMO",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: sound popover opens",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: narration, music and effects have separate volume controls",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: mute narration",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: teacher notes panel",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: restart asks for confirmation first",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: cancelling keeps the lesson where it is",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "bar: confirming restarts at 00:00 and reopens the start card",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "reduced-motion: bar has no transition",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "no errors during the control click-through",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "every displayed English word is a word-over-IPA unit with non-empty IPA",
+   "ok": true,
+   "info": "7791 units checked; bad: []"
+  },
+  {
+   "name": "no English words displayed outside word-over-IPA units (stage content)",
+   "ok": true,
+   "info": "[]"
+  },
+  {
+   "name": "no missing lexicon entries",
+   "ok": true,
+   "info": "[]"
+  },
+  {
+   "name": "every \"+\" shown has /plʌs/ beneath",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "no console/page errors during tests",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "DOM size stays bounded over the full simulated hour",
+   "ok": true,
+   "info": "max nodes 1798, last {\"T\":3600,\"nodes\":1616,\"actors\":2,\"hooks\":0,\"heap\":15}"
+  }
+ ],
+ "memorySamples": [
+  {
+   "T": 400,
+   "nodes": 1679,
+   "actors": 2,
+   "hooks": 3,
+   "heap": 15
+  },
+  {
+   "T": 800,
+   "nodes": 1481,
+   "actors": 1,
+   "hooks": 0,
+   "heap": 15
+  },
+  {
+   "T": 1200,
+   "nodes": 1332,
+   "actors": 1,
+   "hooks": 0,
+   "heap": 15
+  },
+  {
+   "T": 1600,
+   "nodes": 1378,
+   "actors": 1,
+   "hooks": 0,
+   "heap": 15
+  },
+  {
+   "T": 2000,
+   "nodes": 1272,
+   "actors": 1,
+   "hooks": 0,
+   "heap": 15
+  },
+  {
+   "T": 2400,
+   "nodes": 1344,
+   "actors": 3,
+   "hooks": 0,
+   "heap": 15
+  },
+  {
+   "T": 2800,
+   "nodes": 1798,
+   "actors": 2,
+   "hooks": 0,
+   "heap": 15
+  },
+  {
+   "T": 3200,
+   "nodes": 1478,
+   "actors": 1,
+   "hooks": 0,
+   "heap": 15
+  },
+  {
+   "T": 3600,
+   "nodes": 1616,
+   "actors": 2,
+   "hooks": 0,
+   "heap": 15
+  }
+ ]
+}

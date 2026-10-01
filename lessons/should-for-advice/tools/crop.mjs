@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const [,, target, out, x, y, w, h, scale='2', js=''] = process.argv;
+const b = await chromium.launch({ executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args:['--no-sandbox'] });
+const p = await b.newPage({ viewport:{ width:1920, height:1080 }, deviceScaleFactor:+scale });
+p.on('pageerror', e => console.log('[pageerror]', e.message));
+await p.goto('file://'+process.cwd()+'/'+target); await p.waitForTimeout(400);
+if (js) await p.evaluate(js);
+await p.waitForTimeout(300);
+await p.screenshot({ path: out, clip:{ x:+x, y:+y, width:+w, height:+h } });
+await b.close();

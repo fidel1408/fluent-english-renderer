@@ -1,0 +1,5548 @@
+{
+ "clips": [
+  {
+   "id": "10948327",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice eight. Daniel has a meeting in ten minutes, but his slides are not ready. Choose all the reasonable recommendations. We are checking usefulness.",
+   "who": "narr"
+  },
+  {
+   "id": "22860136",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Let us build advice. We need three pieces.",
+   "who": "narr"
+  },
+  {
+   "id": "67098503",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.",
+   "who": "narr"
+  },
+  {
+   "id": "73190828",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Exit check, part three. Your friend has too many emails and feels stressed. Give your own recommendation, and explain why.",
+   "who": "narr"
+  },
+  {
+   "id": "f84184a1",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Meet Maya. Tomorrow morning, she has an important presentation.",
+   "who": "narr"
+  },
+  {
+   "id": "623cdf6c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Tonight, she has three small problems.",
+   "who": "narr"
+  },
+  {
+   "id": "07db3594",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "First, her outline is not finished.",
+   "who": "narr"
+  },
+  {
+   "id": "3c7d3100",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Second, her phone keeps buzzing with notifications.",
+   "who": "narr"
+  },
+  {
+   "id": "4f2b18b7",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Third, she is not sure where the meeting will be.",
+   "who": "narr"
+  },
+  {
+   "id": "95ad7c06",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "These problems are manageable. But Maya feels stuck.",
+   "who": "narr"
+  },
+  {
+   "id": "a90994a2",
+   "voice": "af_bella",
+   "sp": 1,
+   "spoken": "Hmm. What should I do?",
+   "who": "maya"
+  },
+  {
+   "id": "7e80b595",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "This question is the key to our class. When we need help, we ask: What should I do?",
+   "who": "narr"
+  },
+  {
+   "id": "f1e1fdf1",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now take a moment. Tell a partner about a small problem you have this week.",
+   "who": "narr"
+  },
+  {
+   "id": "f0ba982c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Thank you. In this class, you will practice natural English for exactly this.",
+   "who": "narr"
+  },
+  {
+   "id": "34f26543",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Problem one. Maya has not finished her outline. What can she do? Think for a moment.",
+   "who": "narr"
+  },
+  {
+   "id": "3d7a043b",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Here are some ideas. Which one would you try first?",
+   "who": "narr"
+  },
+  {
+   "id": "52ef54da",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Problem two. Her phone keeps buzzing. It is hard to focus. What can Maya do?",
+   "who": "narr"
+  },
+  {
+   "id": "b4babbf2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Here are some ideas. Which one is realistic for you?",
+   "who": "narr"
+  },
+  {
+   "id": "46ee5d49",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Problem three. Maya is not sure where the meeting will be. What can she do?",
+   "who": "narr"
+  },
+  {
+   "id": "25735c7e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Here are some ideas. Do you have another one?",
+   "who": "narr"
+  },
+  {
+   "id": "ea2fc739",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Today you will learn three things.",
+   "who": "narr"
+  },
+  {
+   "id": "c41668af",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "First, you can ask for advice.",
+   "who": "narr"
+  },
+  {
+   "id": "bc32d2c2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Second, you can give a useful recommendation.",
+   "who": "narr"
+  },
+  {
+   "id": "e0bb090c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Third, you can explain a reason.",
+   "who": "narr"
+  },
+  {
+   "id": "cbe979a2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now watch Maya and her coworker Daniel.",
+   "who": "narr"
+  },
+  {
+   "id": "5de0fe12",
+   "voice": "af_bella",
+   "sp": 1,
+   "spoken": "What should I do?",
+   "who": "maya"
+  },
+  {
+   "id": "d97d09c3",
+   "voice": "am_michael",
+   "sp": 1,
+   "spoken": "I think you should finish the outline first, because it is the biggest problem.",
+   "who": "daniel"
+  },
+  {
+   "id": "c81a804b",
+   "voice": "af_bella",
+   "sp": 1,
+   "spoken": "That is a good idea. Thanks for the advice.",
+   "who": "maya"
+  },
+  {
+   "id": "32c64804",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Ask. Recommend. Explain why. Let us begin.",
+   "who": "narr"
+  },
+  {
+   "id": "02f33d75",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Turn to a partner. Say the three goals: ask, recommend, explain.",
+   "who": "narr"
+  },
+  {
+   "id": "9916ad5e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Well done.",
+   "who": "narr"
+  },
+  {
+   "id": "d5be7b5e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Scene one. A coworking space. Daniel has six tasks, and only one afternoon.",
+   "who": "narr"
+  },
+  {
+   "id": "319ce61c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "He feels overwhelmed. He asks his coworker Priya for help.",
+   "who": "narr"
+  },
+  {
+   "id": "8c3510e5",
+   "voice": "am_michael",
+   "sp": 1,
+   "spoken": "I have so many tasks! What should I do?",
+   "who": "daniel"
+  },
+  {
+   "id": "56bfd312",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "What could Priya say? Think of one idea.",
+   "who": "narr"
+  },
+  {
+   "id": "1534611e",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "I think you should start with the most urgent task.",
+   "who": "priya"
+  },
+  {
+   "id": "0bd6fc04",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Watch the action. Daniel finds the urgent task and puts it first.",
+   "who": "narr"
+  },
+  {
+   "id": "0e4daa43",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Why does this advice fit? Daniel has too many choices. Priya recommends one clear, useful next step.",
+   "who": "narr"
+  },
+  {
+   "id": "7ace826f",
+   "voice": "am_michael",
+   "sp": 1,
+   "spoken": "That is a good idea. Thanks for the advice.",
+   "who": "daniel"
+  },
+  {
+   "id": "853a98a8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now your turn. What else could Priya recommend?",
+   "who": "narr"
+  },
+  {
+   "id": "fadf27a0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "For example: You should ask a coworker to help with one task. Or: You should make a short list. Many ideas can work.",
+   "who": "narr"
+  },
+  {
+   "id": "f8c378c9",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Repeat after me: You should start with the most urgent task.",
+   "who": "narr"
+  },
+  {
+   "id": "6ef9ceb0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Good. Now tell your partner a problem, and give one recommendation.",
+   "who": "narr"
+  },
+  {
+   "id": "89ac441b",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Thank you.",
+   "who": "narr"
+  },
+  {
+   "id": "c3d637c4",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Scene two. A train station. Priya has an early train tomorrow, and she does not want to be late.",
+   "who": "narr"
+  },
+  {
+   "id": "04b67715",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "My train leaves early tomorrow. What should I do?",
+   "who": "priya"
+  },
+  {
+   "id": "a7c24769",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Her friend Marcus sees two paths. Look at the paths. Which path is more useful?",
+   "who": "narr"
+  },
+  {
+   "id": "5f0d3f8a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Think about the road, the weather, and the time.",
+   "who": "narr"
+  },
+  {
+   "id": "4aa2a229",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "I think you should leave an hour earlier. The road may be busy.",
+   "who": "marcus"
+  },
+  {
+   "id": "433db9fa",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The useful path becomes clear. The other path fades.",
+   "who": "narr"
+  },
+  {
+   "id": "35b0e0be",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Why does this fit? Priya wants to avoid stress. A little extra time is a simple, useful action.",
+   "who": "narr"
+  },
+  {
+   "id": "52c12e8c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "But notice: the result is only possible. Maybe the road is quiet. Maybe not. Advice gives a good next step, not a promise.",
+   "who": "narr"
+  },
+  {
+   "id": "de83471c",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "Good idea. Thanks for the advice.",
+   "who": "priya"
+  },
+  {
+   "id": "b10564b3",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Give Priya another reason to leave earlier.",
+   "who": "narr"
+  },
+  {
+   "id": "673cc226",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "For example: because the station may be crowded.",
+   "who": "narr"
+  },
+  {
+   "id": "e1692ff7",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Share your reason with a partner.",
+   "who": "narr"
+  },
+  {
+   "id": "a2212efb",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Scene three. An apartment. Hana has early meetings. Her roommate Theo practices music late at night.",
+   "who": "narr"
+  },
+  {
+   "id": "0c3ebd64",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "The music is loud at night, and I start work early. What should I do?",
+   "who": "hana"
+  },
+  {
+   "id": "ca104681",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Her friend Marcus is visiting. Should she say nothing? Should she be angry? Think about a polite option.",
+   "who": "narr"
+  },
+  {
+   "id": "5ad2cdf8",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "I think you should talk to him calmly. Tell him what you need.",
+   "who": "marcus"
+  },
+  {
+   "id": "ad1a7127",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Watch the action. Hana talks with Theo, and the music changes.",
+   "who": "narr"
+  },
+  {
+   "id": "2e3cade3",
+   "voice": "am_liam",
+   "sp": 1,
+   "spoken": "Oh, sorry! I can use headphones after ten.",
+   "who": "theo"
+  },
+  {
+   "id": "0c0d971a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Why does this fit? A calm talk respects both people. It gives Theo a chance to help.",
+   "who": "narr"
+  },
+  {
+   "id": "f96b08b8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Again, there is no guarantee. Theo might forget tomorrow. Advice is a useful next step, and context matters.",
+   "who": "narr"
+  },
+  {
+   "id": "641a3756",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. What else can Hana say to Theo? Share one polite sentence with a partner.",
+   "who": "narr"
+  },
+  {
+   "id": "675a0efe",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Good. Polite advice helps people listen.",
+   "who": "narr"
+  },
+  {
+   "id": "8347e5c7",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Let us compare advice with a rule.",
+   "who": "narr"
+  },
+  {
+   "id": "02951c05",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "You must wear a badge in this building.",
+   "who": "priya"
+  },
+  {
+   "id": "e2861621",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "This is a rule. There is no choice.",
+   "who": "narr"
+  },
+  {
+   "id": "f589ccdc",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "You should arrive early tomorrow.",
+   "who": "priya"
+  },
+  {
+   "id": "5bdf81c9",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "This is advice. It is a useful idea, and you can think about it.",
+   "who": "narr"
+  },
+  {
+   "id": "d90cdcc4",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Context also changes how strong advice sounds. The same sentence from a close friend feels gentle. From a manager, it can feel stronger.",
+   "who": "narr"
+  },
+  {
+   "id": "2433d562",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "So listen to the person, the place, and the situation.",
+   "who": "narr"
+  },
+  {
+   "id": "63cb6ccb",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Quick check. Is each sentence a rule, or is it advice?",
+   "who": "narr"
+  },
+  {
+   "id": "b9212c70",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "A problem can have more than one good answer. Daniel will be late for a meeting.",
+   "who": "narr"
+  },
+  {
+   "id": "cb56a4dc",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Three ideas are reasonable. One idea is not useful.",
+   "who": "narr"
+  },
+  {
+   "id": "3d04b3b0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Good advice depends on the person, the place, and the time.",
+   "who": "narr"
+  },
+  {
+   "id": "69a9d372",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Give a fifth idea. Start with: You should.",
+   "who": "narr"
+  },
+  {
+   "id": "e7b244d2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "One more thing. Look at this sentence.",
+   "who": "narr"
+  },
+  {
+   "id": "395b9ca1",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "The train should arrive soon.",
+   "who": "priya"
+  },
+  {
+   "id": "2904dcd7",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Here, should means we expect something. Nobody is giving advice. It is not the meaning we study today.",
+   "who": "narr"
+  },
+  {
+   "id": "12cf0b9c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "In this class, should means a useful recommendation.",
+   "who": "narr"
+  },
+  {
+   "id": "712d7e81",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Which sentence gives advice?",
+   "who": "narr"
+  },
+  {
+   "id": "e671aec1",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "First, a subject. Who is the advice for? You, she, we, they.",
+   "who": "narr"
+  },
+  {
+   "id": "97142b7c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Second, the advice word: should.",
+   "who": "narr"
+  },
+  {
+   "id": "a7a217dc",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Third, the base verb. This is the simple verb: check, call, ask, save.",
+   "who": "narr"
+  },
+  {
+   "id": "0bd26999",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Add the rest of the idea, and you have advice.",
+   "who": "narr"
+  },
+  {
+   "id": "364d57ad",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Subject, plus should, plus base verb.",
+   "who": "narr"
+  },
+  {
+   "id": "bebcf19d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Say it with me: You should check the address.",
+   "who": "narr"
+  },
+  {
+   "id": "0fdd912a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Make your own sentence: a subject, should, and a base verb.",
+   "who": "narr"
+  },
+  {
+   "id": "4569dbb6",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "For example: We should leave earlier. Share it with a partner.",
+   "who": "narr"
+  },
+  {
+   "id": "508fb574",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now watch the word should. Change the subject, and look.",
+   "who": "narr"
+  },
+  {
+   "id": "47232b24",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "I should call.",
+   "who": "narr"
+  },
+  {
+   "id": "f17cfc84",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You should call.",
+   "who": "narr"
+  },
+  {
+   "id": "e6295740",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "He should call.",
+   "who": "narr"
+  },
+  {
+   "id": "a20e8073",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "She should call.",
+   "who": "narr"
+  },
+  {
+   "id": "93cc1465",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "We should call.",
+   "who": "narr"
+  },
+  {
+   "id": "c10e5287",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "They should call.",
+   "who": "narr"
+  },
+  {
+   "id": "5accb48d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Should stays the same. The verb stays the same too. No s, no ending.",
+   "who": "narr"
+  },
+  {
+   "id": "d5fdca22",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Tap a subject and try it yourself.",
+   "who": "narr"
+  },
+  {
+   "id": "ec0f45ee",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Say each sentence aloud with a partner. Change the subject each time.",
+   "who": "narr"
+  },
+  {
+   "id": "5929305a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Many learners add extra words. Let us remove them.",
+   "who": "narr"
+  },
+  {
+   "id": "e2616cc7",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "First, no s. After should, use the base verb. Not calls.",
+   "who": "narr"
+  },
+  {
+   "id": "a62f3755",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Second, no to. After should, do not say to.",
+   "who": "narr"
+  },
+  {
+   "id": "6231271e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Third, no does or doesn't. Should already works as the helper. The negative is shouldn't.",
+   "who": "narr"
+  },
+  {
+   "id": "ea51edd9",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "So remember four things. Base verb. No s. No to. No do, does, or did.",
+   "who": "narr"
+  },
+  {
+   "id": "320609ef",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Fix this sentence aloud: She should goes home.",
+   "who": "narr"
+  },
+  {
+   "id": "0870d929",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The answer: She should go home. Base verb, no s.",
+   "who": "narr"
+  },
+  {
+   "id": "0dd74b17",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The verb be also works. Keep be after should.",
+   "who": "narr"
+  },
+  {
+   "id": "3fde6212",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "You should be on time.",
+   "who": "priya"
+  },
+  {
+   "id": "66368e3f",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Not: you should are. Not: you should is. Just be.",
+   "who": "narr"
+  },
+  {
+   "id": "4ca06563",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "You shouldn't be rude.",
+   "who": "priya"
+  },
+  {
+   "id": "4171a2f5",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Good advice can be positive or negative.",
+   "who": "narr"
+  },
+  {
+   "id": "b9649644",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Make a sentence with be. What should a good coworker be?",
+   "who": "narr"
+  },
+  {
+   "id": "fd33ab1d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Match each advice sentence to the best situation. Tap an advice sentence, then tap a scene.",
+   "who": "narr"
+  },
+  {
+   "id": "97fc9d89",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Daniel has an important file open. His laptop battery is low.",
+   "who": "narr"
+  },
+  {
+   "id": "2448125b",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "You should save your work.",
+   "who": "marcus"
+  },
+  {
+   "id": "1877c032",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "That is positive advice. Save is a useful action.",
+   "who": "narr"
+  },
+  {
+   "id": "fc10817b",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "And you shouldn't close the file yet.",
+   "who": "marcus"
+  },
+  {
+   "id": "bdec9d3a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "That is negative advice. It recommends against one action. Closing the file now is not a helpful path.",
+   "who": "narr"
+  },
+  {
+   "id": "dfc979f3",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The full form is should not. The short form is shouldn't. Both are correct. In speech, we usually say shouldn't.",
+   "who": "narr"
+  },
+  {
+   "id": "cae9eacf",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Shouldn't is not a strict rule like mustn't. It means: this is not a good idea.",
+   "who": "narr"
+  },
+  {
+   "id": "6a80a6af",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Tell a partner one thing you should do, and one thing you shouldn't do, before an important meeting.",
+   "who": "narr"
+  },
+  {
+   "id": "410947af",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Build each sentence. Tap the words in order. Watch for extra words.",
+   "who": "narr"
+  },
+  {
+   "id": "83b05e31",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Do not make a negative just by adding n't. Ask: does it make sense?",
+   "who": "narr"
+  },
+  {
+   "id": "1ff8bce3",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "If the address might be wrong, you should check it. You shouldn't check it? That does not help.",
+   "who": "narr"
+  },
+  {
+   "id": "b07b30e2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "But if a message from your manager arrives, you shouldn't ignore it. That makes sense.",
+   "who": "narr"
+  },
+  {
+   "id": "cba226e0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Choose the action first. Then decide: is it useful, or is it not useful?",
+   "who": "narr"
+  },
+  {
+   "id": "e23e725f",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Say one meaningful negative sentence.",
+   "who": "narr"
+  },
+  {
+   "id": "47f07fa4",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now we ask for advice. Priya's sister is waiting for an answer, and Priya is not sure what to do.",
+   "who": "narr"
+  },
+  {
+   "id": "efa3aacd",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Look at the statement: I should call her.",
+   "who": "narr"
+  },
+  {
+   "id": "fca691cd",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "To make a direct question, move should in front of the subject.",
+   "who": "narr"
+  },
+  {
+   "id": "92f22901",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Should, then the subject, then the base verb. No do. No does. No did.",
+   "who": "narr"
+  },
+  {
+   "id": "65fd1107",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "Should I call her?",
+   "who": "priya"
+  },
+  {
+   "id": "11f4cccc",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "That is a natural question. Listen for should at the start.",
+   "who": "narr"
+  },
+  {
+   "id": "1af1bf40",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your turn. Ask me a question with should. For example: Should I send the email?",
+   "who": "narr"
+  },
+  {
+   "id": "5e31f598",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "We can add a question word at the start: what, when, who, or where.",
+   "who": "narr"
+  },
+  {
+   "id": "099f7ff1",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Question word, plus should, plus subject, plus base verb.",
+   "who": "narr"
+  },
+  {
+   "id": "83d466b1",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "A useful question when you do not know the next step.",
+   "who": "narr"
+  },
+  {
+   "id": "f7a7f61c",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "When should we leave?",
+   "who": "hana"
+  },
+  {
+   "id": "bf30a362",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "This asks about time.",
+   "who": "narr"
+  },
+  {
+   "id": "3c26d018",
+   "voice": "am_michael",
+   "sp": 1,
+   "spoken": "Who should I ask?",
+   "who": "daniel"
+  },
+  {
+   "id": "fa045306",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "This asks about a person. Where should we meet? This asks about a place.",
+   "who": "narr"
+  },
+  {
+   "id": "58e18711",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Pair practice. Ask your partner a question with what, when, or who.",
+   "who": "narr"
+  },
+  {
+   "id": "4a11560a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "A café. Hana is giving a short talk on Monday. She asks Marcus for advice.",
+   "who": "narr"
+  },
+  {
+   "id": "674eaf1c",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "I am giving a short talk on Monday. What should I do?",
+   "who": "hana"
+  },
+  {
+   "id": "65f7b6b2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "What would Marcus say? Think.",
+   "who": "narr"
+  },
+  {
+   "id": "2f383d57",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "Have you practiced out loud?",
+   "who": "marcus"
+  },
+  {
+   "id": "1e99d536",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "Not yet. Should I practice with my slides?",
+   "who": "hana"
+  },
+  {
+   "id": "e0f3b6d2",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "Yes, you should. And you should time yourself.",
+   "who": "marcus"
+  },
+  {
+   "id": "ae77fe18",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "When should I start?",
+   "who": "hana"
+  },
+  {
+   "id": "d7ca2034",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "I think you should start tonight. Then you can change things tomorrow.",
+   "who": "marcus"
+  },
+  {
+   "id": "8dfcc546",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "That is a good idea. Thanks for the advice.",
+   "who": "hana"
+  },
+  {
+   "id": "490d55b7",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Notice the turns: a question, a short answer, a reason. Tap any line to hear it again.",
+   "who": "narr"
+  },
+  {
+   "id": "54fa2c9a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now role-play the first three lines with a partner.",
+   "who": "narr"
+  },
+  {
+   "id": "40b1e52a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Short answers repeat should. The pronoun matches the speaker.",
+   "who": "narr"
+  },
+  {
+   "id": "db37681d",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "Yes, you should.",
+   "who": "marcus"
+  },
+  {
+   "id": "ee4a476d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "I changes to you. And do not forget the comma. Or the negative:",
+   "who": "narr"
+  },
+  {
+   "id": "4edbab2c",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "No, you shouldn't.",
+   "who": "marcus"
+  },
+  {
+   "id": "0a8e0e1c",
+   "voice": "af_sarah",
+   "sp": 1,
+   "spoken": "Should we leave now?",
+   "who": "priya"
+  },
+  {
+   "id": "7cff4300",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "Yes, we should.",
+   "who": "marcus"
+  },
+  {
+   "id": "dc12f074",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "We stays we. A helpful answer can add a reason or an alternative:",
+   "who": "narr"
+  },
+  {
+   "id": "b9631d8a",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "No, you shouldn't. You should check first.",
+   "who": "marcus"
+  },
+  {
+   "id": "7e4dbaa6",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Short answer, then reason. That is helpful advice.",
+   "who": "narr"
+  },
+  {
+   "id": "6e311409",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Pair practice. Ask, answer, and add a reason.",
+   "who": "narr"
+  },
+  {
+   "id": "bd2c1d54",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Listen to the word should. The letter l is silent.",
+   "who": "narr"
+  },
+  {
+   "id": "56eebb1a",
+   "voice": "af_heart",
+   "sp": 0.8,
+   "spoken": "should",
+   "who": "narr"
+  },
+  {
+   "id": "5cc9e2fb",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "In a strong form, it sounds like this. Use it when you stress the word, or when it comes at the end.",
+   "who": "narr"
+  },
+  {
+   "id": "9d62b41d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Yes, you should.",
+   "who": "narr"
+  },
+  {
+   "id": "8d626a42",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "In connected speech, the word is often shorter and weaker.",
+   "who": "narr"
+  },
+  {
+   "id": "974304fe",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "PH:juː ʃəd kˈɔːl hɜː.",
+   "who": "narr"
+  },
+  {
+   "id": "035eedc9",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You do not have to use the weak form every time. The strong form is always clear and correct.",
+   "who": "narr"
+  },
+  {
+   "id": "3587620f",
+   "voice": "af_heart",
+   "sp": 0.8,
+   "spoken": "shouldn't",
+   "who": "narr"
+  },
+  {
+   "id": "62f08fd6",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Shouldn't has two syllables. The last t is very light.",
+   "who": "narr"
+  },
+  {
+   "id": "585d76f0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now you try. Say should, strong. Then say: You should call her.",
+   "who": "narr"
+  },
+  {
+   "id": "731dc819",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Listen and repeat. First at natural speed, then slowly.",
+   "who": "narr"
+  },
+  {
+   "id": "d23bc169",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You should call her.",
+   "who": "narr"
+  },
+  {
+   "id": "acbbeb0f",
+   "voice": "af_heart",
+   "sp": 0.7,
+   "spoken": "You should call her.",
+   "who": "narr"
+  },
+  {
+   "id": "23d1d31c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Should I call her?",
+   "who": "narr"
+  },
+  {
+   "id": "6e633a66",
+   "voice": "af_heart",
+   "sp": 0.7,
+   "spoken": "Should I call her?",
+   "who": "narr"
+  },
+  {
+   "id": "fc4d7b1c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "What should I do?",
+   "who": "narr"
+  },
+  {
+   "id": "125a7efa",
+   "voice": "af_heart",
+   "sp": 0.7,
+   "spoken": "What should I do?",
+   "who": "narr"
+  },
+  {
+   "id": "a0e6c69b",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You shouldn't ignore the message.",
+   "who": "narr"
+  },
+  {
+   "id": "5f692279",
+   "voice": "af_heart",
+   "sp": 0.7,
+   "spoken": "You shouldn't ignore the message.",
+   "who": "narr"
+  },
+  {
+   "id": "722b1309",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You can soften advice with: I think you should.",
+   "who": "narr"
+  },
+  {
+   "id": "6c6829da",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "I think you should ask for help.",
+   "who": "marcus"
+  },
+  {
+   "id": "fb852e72",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "To recommend against something, say: I don't think you should.",
+   "who": "narr"
+  },
+  {
+   "id": "c36fc0e6",
+   "voice": "am_eric",
+   "sp": 1,
+   "spoken": "I don't think you should send it yet.",
+   "who": "marcus"
+  },
+  {
+   "id": "cbdd1ea0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You can also say: You shouldn't send it yet. Both are natural. The I don't think form often sounds softer.",
+   "who": "narr"
+  },
+  {
+   "id": "303ee3bd",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "How can you respond? You can accept the advice, or you can say you are not sure.",
+   "who": "narr"
+  },
+  {
+   "id": "eb2e8ea3",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "That is a good idea.",
+   "who": "hana"
+  },
+  {
+   "id": "28ad6e9e",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "Thanks for the advice.",
+   "who": "hana"
+  },
+  {
+   "id": "a577013e",
+   "voice": "af_sky",
+   "sp": 1,
+   "spoken": "I am not sure that will work.",
+   "who": "hana"
+  },
+  {
+   "id": "be66b663",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Pair practice. Give advice with I think you should, and respond.",
+   "who": "narr"
+  },
+  {
+   "id": "9509fe4a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice one. Match each advice to its problem. We are checking meaning.",
+   "who": "narr"
+  },
+  {
+   "id": "a0f260a5",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice two. Build the sentence. Some tiles are traps. We are checking grammar.",
+   "who": "narr"
+  },
+  {
+   "id": "a85962db",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice three. Read the situation. Choose should or shouldn't.",
+   "who": "narr"
+  },
+  {
+   "id": "839484e3",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice four. These sentences are incorrect. Find the mistake and repair it. We are checking grammar.",
+   "who": "narr"
+  },
+  {
+   "id": "ed353dec",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice five. Build the question. Remember: should goes before the subject.",
+   "who": "narr"
+  },
+  {
+   "id": "d5d3a750",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice six. Choose the short answer that matches the question.",
+   "who": "narr"
+  },
+  {
+   "id": "93d65d6e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Practice seven. Add a useful reason. A reason starts with because.",
+   "who": "narr"
+  },
+  {
+   "id": "432665d3",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Two different questions. Is the sentence grammatical? And is the advice useful in this situation?",
+   "who": "narr"
+  },
+  {
+   "id": "99c25d4b",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You should ignore the meeting: the grammar is correct, but the advice is not helpful.",
+   "who": "narr"
+  },
+  {
+   "id": "58206f11",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You should to call her: the idea may be fine, but the grammar needs repair.",
+   "who": "narr"
+  },
+  {
+   "id": "72dd3bcc",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Scenario one. The big presentation. Maya presents tomorrow morning.",
+   "who": "narr"
+  },
+  {
+   "id": "a27937a2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Problem one: the outline is not finished. Problem two: the phone keeps buzzing. Problem three: she is not sure about the room.",
+   "who": "narr"
+  },
+  {
+   "id": "769234ca",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Which problem would you solve first?",
+   "who": "narr"
+  },
+  {
+   "id": "7a6793ac",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Scenario two. A group trip. Priya, Marcus, and Hana want to take an early train on Saturday.",
+   "who": "narr"
+  },
+  {
+   "id": "4bf3f318",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Problem one: nobody has bought the tickets. Problem two: the train leaves very early. Problem three: the friends live far apart.",
+   "who": "narr"
+  },
+  {
+   "id": "b8d3d86f",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Scenario three. A shared apartment. Hana has early meetings. Her roommate Theo practices music in the evening.",
+   "who": "narr"
+  },
+  {
+   "id": "36c4032c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Problem one: the music is loud late at night. Problem two: Hana needs sleep before work. Problem three: they have no clear agreement.",
+   "who": "narr"
+  },
+  {
+   "id": "ecf892a8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Choose the problem to solve first in each scenario. There is no single correct answer. Be ready to explain why.",
+   "who": "narr"
+  },
+  {
+   "id": "80c09b68",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Round one. Maya's presentation. Partner A, you are Maya: ask for advice. Partner B, you are the advisor: give a recommendation and a reason. Then choose the path your pair picked.",
+   "who": "narr"
+  },
+  {
+   "id": "07249eca",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Maya finishes the outline. She feels calmer, but the phone still buzzes, and the room is still a question.",
+   "who": "narr"
+  },
+  {
+   "id": "85eb2f2f",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The phone is quiet. Maya can think clearly, but the outline still needs work, and the room is still a question.",
+   "who": "narr"
+  },
+  {
+   "id": "63b109e8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Maya checks the invitation and finds the building. She knows where to go, but the outline is still unfinished.",
+   "who": "narr"
+  },
+  {
+   "id": "f8995ecd",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Round two. The group trip. Switch roles. Partner B asks for advice. Partner A gives a recommendation and a reason. Then choose the path your pair picked.",
+   "who": "narr"
+  },
+  {
+   "id": "580bcf6d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The tickets are bought. Everyone can board, but the meeting time and the plan are still unclear.",
+   "who": "narr"
+  },
+  {
+   "id": "f70ba51a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The friends agree to arrive early. There is time to adapt, but the tickets are still not bought.",
+   "who": "narr"
+  },
+  {
+   "id": "83a6b9c9",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.",
+   "who": "narr"
+  },
+  {
+   "id": "c84e3330",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Round three. The shared apartment. Switch roles again. Partner A asks for advice. Partner B gives a recommendation and a reason. Then choose the path your pair picked.",
+   "who": "narr"
+  },
+  {
+   "id": "ccb3a032",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Hana talks with Theo calmly. He listens, and they understand each other better, though they have no agreement yet.",
+   "who": "narr"
+  },
+  {
+   "id": "5493dc7e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Hana leaves a friendly note. Theo reads it, but he cannot answer right away, so the situation stays unclear.",
+   "who": "narr"
+  },
+  {
+   "id": "aa69a25a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Hana wears headphones and sleeps better tonight. The problem is not discussed, so it might return tomorrow.",
+   "who": "narr"
+  },
+  {
+   "id": "523b7e5c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "New information! The manager moved the meeting thirty minutes earlier, and the room has changed.",
+   "who": "narr"
+  },
+  {
+   "id": "dbf801f8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Does your advice still work? Listen to Maya's needs, and revise your recommendation.",
+   "who": "narr"
+  },
+  {
+   "id": "53db254d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Daniel checks the room for her. That might save time, and Maya can keep working.",
+   "who": "narr"
+  },
+  {
+   "id": "83506ac8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Maya shortens the presentation. The outline is ready, and the shorter version fits the new time.",
+   "who": "narr"
+  },
+  {
+   "id": "a3a7b3e5",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Maya turns off her phone and works faster. She is focused, though other questions remain.",
+   "who": "narr"
+  },
+  {
+   "id": "ba2c09b6",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your two steps work together. Maya feels prepared. Nothing is guaranteed, but she has a clear plan.",
+   "who": "narr"
+  },
+  {
+   "id": "fa97a2c8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.",
+   "who": "narr"
+  },
+  {
+   "id": "105b431e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "New information! The train is delayed by forty minutes, and Marcus is still at home.",
+   "who": "narr"
+  },
+  {
+   "id": "86045a50",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Does your advice still work? Listen to the group's needs, and revise your recommendation.",
+   "who": "narr"
+  },
+  {
+   "id": "123fa169",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Hana sends a message. Marcus sees it and leaves a little later. That might reduce stress for everyone.",
+   "who": "narr"
+  },
+  {
+   "id": "c9480938",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Priya and Hana wait at a café near the station. The delay feels shorter, though Marcus still needs to know.",
+   "who": "narr"
+  },
+  {
+   "id": "8ac1b833",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.",
+   "who": "narr"
+  },
+  {
+   "id": "e9fb78f6",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your two steps cover different problems. The group has a clearer plan for the delay. Delays can still surprise us, so stay flexible.",
+   "who": "narr"
+  },
+  {
+   "id": "05072bb9",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "New information! Theo has a concert on Saturday. He needs to practice every evening this week.",
+   "who": "narr"
+  },
+  {
+   "id": "86b09096",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Does your advice still work? Listen to both people's needs, and revise your recommendation.",
+   "who": "narr"
+  },
+  {
+   "id": "f7d2ee4d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "They agree: music until ten, and headphones after that. Both people have a plan.",
+   "who": "narr"
+  },
+  {
+   "id": "b3ee336f",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Over coffee, Theo explains the concert, and Hana explains her mornings. They understand each other better.",
+   "who": "narr"
+  },
+  {
+   "id": "6da8989b",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Theo practices earlier in the evening. Hana can rest, though they still need a clear agreement.",
+   "who": "narr"
+  },
+  {
+   "id": "7b99bf2d",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your steps cover different needs. Hana and Theo can work out a clearer plan. It still depends on both people, so keep talking.",
+   "who": "narr"
+  },
+  {
+   "id": "7a2f9863",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Your steps were similar. Some things improved, but one need is still open. Another step might help.",
+   "who": "narr"
+  },
+  {
+   "id": "5102649a",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Share your recommendations with another pair. Which path did you choose? What was your reason? Compare your ideas, and listen for different good answers.",
+   "who": "narr"
+  },
+  {
+   "id": "d0463bb8",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Look at what happened. Each choice changed the situation, and new information changed it again.",
+   "who": "narr"
+  },
+  {
+   "id": "1490f934",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Good advisers listen to the person's needs. They give a reason. And they revise their advice when the facts change.",
+   "who": "narr"
+  },
+  {
+   "id": "d405d026",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Notice also: no path was a guarantee. Advice helps, but the result can still be uncertain.",
+   "who": "narr"
+  },
+  {
+   "id": "09319c25",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Now let us bring our ideas together.",
+   "who": "narr"
+  },
+  {
+   "id": "317aa9d7",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Turn to a partner. What new information changed your advice? Say it in one sentence.",
+   "who": "narr"
+  },
+  {
+   "id": "cb313a54",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Let us connect everything.",
+   "who": "narr"
+  },
+  {
+   "id": "114ea9df",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Advice is a recommendation. It is a useful idea, not a guarantee, and not automatically a rule.",
+   "who": "narr"
+  },
+  {
+   "id": "e7a939ee",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "For affirmative advice: subject, should, base verb.",
+   "who": "narr"
+  },
+  {
+   "id": "14d5aa9e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "For negative advice: subject, shouldn't, base verb. It recommends against an action.",
+   "who": "narr"
+  },
+  {
+   "id": "a7c8560b",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "In a direct question, the modal moves before the subject. No do, no does, no did.",
+   "who": "narr"
+  },
+  {
+   "id": "b448f3c0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Short answers match the speaker and the subject: Yes, you should. No, we shouldn't.",
+   "who": "narr"
+  },
+  {
+   "id": "8c70e606",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "And helpful advice considers the person's situation, and often includes a reason.",
+   "who": "narr"
+  },
+  {
+   "id": "f70f39d4",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Ask. Recommend. Explain why.",
+   "who": "narr"
+  },
+  {
+   "id": "ba1f3465",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Choose one box. Say a new example sentence for it.",
+   "who": "narr"
+  },
+  {
+   "id": "410aa33e",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Feedback time. Think about the roleplays. Teacher, share one good example you heard, and one thing to improve. Use the checklist if it helps.",
+   "who": "narr"
+  },
+  {
+   "id": "d955b7b2",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Exit check, part one. This sentence is incorrect. Choose the repair.",
+   "who": "narr"
+  },
+  {
+   "id": "77f7d1e0",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Exit check, part two. Ask for advice in a new situation. Say it aloud or type it in chat. Many questions are possible.",
+   "who": "narr"
+  },
+  {
+   "id": "9e6bb048",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Here is the feedback. Part one has one correct repair. Parts two and three can have many good answers. Check form, and check usefulness.",
+   "who": "narr"
+  },
+  {
+   "id": "197265c6",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Well done. You can ask for advice, give a recommendation, and explain why.",
+   "who": "narr"
+  },
+  {
+   "id": "1dafd99c",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "Say one sentence you will use this week.",
+   "who": "narr"
+  }
+ ],
+ "segs": [
+  {
+   "id": "1.1",
+   "ch": 1,
+   "title": "Maya has a big day",
+   "start": 0,
+   "dur": 70,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Meet Maya. Tomorrow morning, she has an important presentation.",
+     "spoken": "Meet Maya. Tomorrow morning, she has an important presentation.",
+     "id": "f84184a1",
+     "start": 2.1500000000000004,
+     "end": 6.182
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Tonight, she has three small problems.",
+     "spoken": "Tonight, she has three small problems.",
+     "id": "623cdf6c",
+     "start": 6.682,
+     "end": 8.794
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "First, her outline is not finished.",
+     "spoken": "First, her outline is not finished.",
+     "id": "07db3594",
+     "start": 9.694,
+     "end": 11.926000000000002
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Second, her phone keeps buzzing with notifications.",
+     "spoken": "Second, her phone keeps buzzing with notifications.",
+     "id": "3c7d3100",
+     "start": 14.126000000000001,
+     "end": 17.198
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Third, she is not sure where the meeting will be.",
+     "spoken": "Third, she is not sure where the meeting will be.",
+     "id": "4f2b18b7",
+     "start": 19.598,
+     "end": 22.022
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "These problems are manageable. But Maya feels stuck.",
+     "spoken": "These problems are manageable. But Maya feels stuck.",
+     "id": "95ad7c06",
+     "start": 23.822,
+     "end": 27.038
+    },
+    {
+     "k": "m1",
+     "who": "maya",
+     "voice": "af_bella",
+     "sp": 1,
+     "text": "Hmm. What should I do?",
+     "spoken": "Hmm. What should I do?",
+     "id": "a90994a2",
+     "start": 28.138,
+     "end": 29.674000000000003
+    },
+    {
+     "k": "n7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "This question is the key to our class. When we need help, we ask: What should I do?",
+     "spoken": "This question is the key to our class. When we need help, we ask: What should I do?",
+     "id": "7e80b595",
+     "start": 30.574,
+     "end": 35.254000000000005
+    },
+    {
+     "k": "n8",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now take a moment. Tell a partner about a small problem you have this week.",
+     "spoken": "Now take a moment. Tell a partner about a small problem you have this week.",
+     "id": "f1e1fdf1",
+     "start": 36.654,
+     "end": 41.04600000000001
+    },
+    {
+     "k": "n9",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Thank you. In this class, you will practice natural English for exactly this.",
+     "spoken": "Thank you. In this class, you will practice natural English for exactly this.",
+     "id": "f0ba982c",
+     "start": 59.54600000000001,
+     "end": 64.034
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "1.2",
+   "ch": 1,
+   "title": "Problem one: the unfinished outline",
+   "start": 70,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "p",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Problem one. Maya has not finished her outline. What can she do? Think for a moment.",
+     "spoken": "Problem one. Maya has not finished her outline. What can she do? Think for a moment.",
+     "id": "34f26543",
+     "start": 0.9500000000000001,
+     "end": 6.062
+    }
+   ],
+   "clips": [
+    {
+     "k": "rv",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Here are some ideas. Which one would you try first?",
+     "spoken": "Here are some ideas. Which one would you try first?",
+     "id": "3d7a043b"
+    }
+   ]
+  },
+  {
+   "id": "1.3",
+   "ch": 1,
+   "title": "Problem two: the notifications",
+   "start": 125,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "p",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Problem two. Her phone keeps buzzing. It is hard to focus. What can Maya do?",
+     "spoken": "Problem two. Her phone keeps buzzing. It is hard to focus. What can Maya do?",
+     "id": "52ef54da",
+     "start": 0.9500000000000001,
+     "end": 5.942
+    }
+   ],
+   "clips": [
+    {
+     "k": "rv",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Here are some ideas. Which one is realistic for you?",
+     "spoken": "Here are some ideas. Which one is realistic for you?",
+     "id": "b4babbf2"
+    }
+   ]
+  },
+  {
+   "id": "1.4",
+   "ch": 1,
+   "title": "Problem three: the meeting place",
+   "start": 180,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "p",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Problem three. Maya is not sure where the meeting will be. What can she do?",
+     "spoken": "Problem three. Maya is not sure where the meeting will be. What can she do?",
+     "id": "46ee5d49",
+     "start": 0.9500000000000001,
+     "end": 5.3180000000000005
+    }
+   ],
+   "clips": [
+    {
+     "k": "rv",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Here are some ideas. Do you have another one?",
+     "spoken": "Here are some ideas. Do you have another one?",
+     "id": "25735c7e"
+    }
+   ]
+  },
+  {
+   "id": "1.5",
+   "ch": 1,
+   "title": "Our goal today",
+   "start": 235,
+   "dur": 65,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "g0",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Today you will learn three things.",
+     "spoken": "Today you will learn three things.",
+     "id": "ea2fc739",
+     "start": 0.9500000000000001,
+     "end": 2.774
+    },
+    {
+     "k": "g1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "First, you can ask for advice.",
+     "spoken": "First, you can ask for advice.",
+     "id": "c41668af",
+     "start": 3.474,
+     "end": 5.418
+    },
+    {
+     "k": "g2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Second, you can give a useful recommendation.",
+     "spoken": "Second, you can give a useful recommendation.",
+     "id": "bc32d2c2",
+     "start": 6.418,
+     "end": 9.298
+    },
+    {
+     "k": "g3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Third, you can explain a reason.",
+     "spoken": "Third, you can explain a reason.",
+     "id": "e0bb090c",
+     "start": 10.298,
+     "end": 12.242
+    },
+    {
+     "k": "g4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now watch Maya and her coworker Daniel.",
+     "spoken": "Now watch Maya and her coworker Daniel.",
+     "id": "cbe979a2",
+     "start": 13.442,
+     "end": 16.058
+    },
+    {
+     "k": "d1",
+     "who": "maya",
+     "voice": "af_bella",
+     "sp": 1,
+     "text": "What should I do?",
+     "spoken": "What should I do?",
+     "id": "5de0fe12",
+     "start": 17.258,
+     "end": 18.338
+    },
+    {
+     "k": "d2",
+     "who": "daniel",
+     "voice": "am_michael",
+     "sp": 1,
+     "text": "I think you should finish the outline first, because it is the biggest problem.",
+     "spoken": "I think you should finish the outline first, because it is the biggest problem.",
+     "id": "d97d09c3",
+     "start": 19.038,
+     "end": 23.742
+    },
+    {
+     "k": "d3",
+     "who": "maya",
+     "voice": "af_bella",
+     "sp": 1,
+     "text": "That is a good idea. Thanks for the advice.",
+     "spoken": "That is a good idea. Thanks for the advice.",
+     "id": "c81a804b",
+     "start": 24.442,
+     "end": 27.082
+    },
+    {
+     "k": "g5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Ask. Recommend. Explain why. Let us begin.",
+     "spoken": "Ask. Recommend. Explain why. Let us begin.",
+     "id": "32c64804",
+     "start": 28.082,
+     "end": 31.106
+    },
+    {
+     "k": "g6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Turn to a partner. Say the three goals: ask, recommend, explain.",
+     "spoken": "Turn to a partner. Say the three goals: ask, recommend, explain.",
+     "id": "02f33d75",
+     "start": 32.106,
+     "end": 36.234
+    },
+    {
+     "k": "g7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Well done.",
+     "spoken": "Well done.",
+     "id": "9916ad5e",
+     "start": 53.234,
+     "end": 54.17
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "2.1",
+   "ch": 2,
+   "title": "Scene one: too many tasks",
+   "start": 300,
+   "dur": 110,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Scene one. A coworking space. Daniel has six tasks, and only one afternoon.",
+     "spoken": "Scene one. A coworking space. Daniel has six tasks, and only one afternoon.",
+     "id": "d5be7b5e",
+     "start": 1.55,
+     "end": 6.662
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "He feels overwhelmed. He asks his coworker Priya for help.",
+     "spoken": "He feels overwhelmed. He asks his coworker Priya for help.",
+     "id": "319ce61c",
+     "start": 7.062,
+     "end": 10.686
+    },
+    {
+     "k": "d1",
+     "who": "daniel",
+     "voice": "am_michael",
+     "sp": 1,
+     "text": "I have so many tasks! What should I do?",
+     "spoken": "I have so many tasks! What should I do?",
+     "id": "8c3510e5",
+     "start": 11.686,
+     "end": 14.35
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "What could Priya say? Think of one idea.",
+     "spoken": "What could Priya say? Think of one idea.",
+     "id": "56bfd312",
+     "start": 15.15,
+     "end": 17.622
+    },
+    {
+     "k": "p1",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "I think you should start with the most urgent task.",
+     "spoken": "I think you should start with the most urgent task.",
+     "id": "1534611e",
+     "start": 27.122,
+     "end": 29.738
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Watch the action. Daniel finds the urgent task and puts it first.",
+     "spoken": "Watch the action. Daniel finds the urgent task and puts it first.",
+     "id": "0bd6fc04",
+     "start": 30.538,
+     "end": 34.834
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Why does this advice fit? Daniel has too many choices. Priya recommends one clear, useful next step.",
+     "spoken": "Why does this advice fit? Daniel has too many choices. Priya recommends one clear, useful next step.",
+     "id": "0e4daa43",
+     "start": 41.334,
+     "end": 47.838
+    },
+    {
+     "k": "d2",
+     "who": "daniel",
+     "voice": "am_michael",
+     "sp": 1,
+     "text": "That is a good idea. Thanks for the advice.",
+     "spoken": "That is a good idea. Thanks for the advice.",
+     "id": "7ace826f",
+     "start": 48.538000000000004,
+     "end": 51.394000000000005
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now your turn. What else could Priya recommend?",
+     "spoken": "Now your turn. What else could Priya recommend?",
+     "id": "853a98a8",
+     "start": 52.394000000000005,
+     "end": 55.178000000000004
+    },
+    {
+     "k": "n7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "For example: You should ask a coworker to help with one task. Or: You should make a short list. Many ideas can work.",
+     "spoken": "For example: You should ask a coworker to help with one task. Or: You should make a short list. Many ideas can work.",
+     "id": "fadf27a0",
+     "start": 63.178000000000004,
+     "end": 70.498
+    },
+    {
+     "k": "n8",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Repeat after me: You should start with the most urgent task.",
+     "spoken": "Repeat after me: You should start with the most urgent task.",
+     "id": "f8c378c9",
+     "start": 71.498,
+     "end": 75.074
+    },
+    {
+     "k": "n9",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Good. Now tell your partner a problem, and give one recommendation.",
+     "spoken": "Good. Now tell your partner a problem, and give one recommendation.",
+     "id": "6ef9ceb0",
+     "start": 87.074,
+     "end": 91.106
+    },
+    {
+     "k": "n10",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Thank you.",
+     "spoken": "Thank you.",
+     "id": "89ac441b",
+     "start": 104.106,
+     "end": 104.994
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "2.2",
+   "ch": 2,
+   "title": "Scene two: do not be late",
+   "start": 410,
+   "dur": 110,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Scene two. A train station. Priya has an early train tomorrow, and she does not want to be late.",
+     "spoken": "Scene two. A train station. Priya has an early train tomorrow, and she does not want to be late.",
+     "id": "c3d637c4",
+     "start": 1.55,
+     "end": 7.502
+    },
+    {
+     "k": "p1",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "My train leaves early tomorrow. What should I do?",
+     "spoken": "My train leaves early tomorrow. What should I do?",
+     "id": "04b67715",
+     "start": 8.501999999999999,
+     "end": 11.43
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Her friend Marcus sees two paths. Look at the paths. Which path is more useful?",
+     "spoken": "Her friend Marcus sees two paths. Look at the paths. Which path is more useful?",
+     "id": "a7c24769",
+     "start": 12.23,
+     "end": 17.15
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Think about the road, the weather, and the time.",
+     "spoken": "Think about the road, the weather, and the time.",
+     "id": "5f0d3f8a",
+     "start": 18.15,
+     "end": 20.502
+    },
+    {
+     "k": "m1",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "I think you should leave an hour earlier. The road may be busy.",
+     "spoken": "I think you should leave an hour earlier. The road may be busy.",
+     "id": "4aa2a229",
+     "start": 28.002,
+     "end": 31.146
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The useful path becomes clear. The other path fades.",
+     "spoken": "The useful path becomes clear. The other path fades.",
+     "id": "433db9fa",
+     "start": 32.146,
+     "end": 35.338
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Why does this fit? Priya wants to avoid stress. A little extra time is a simple, useful action.",
+     "spoken": "Why does this fit? Priya wants to avoid stress. A little extra time is a simple, useful action.",
+     "id": "35b0e0be",
+     "start": 42.338,
+     "end": 48.65
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "But notice: the result is only possible. Maybe the road is quiet. Maybe not. Advice gives a good next step, not a promise.",
+     "spoken": "But notice: the result is only possible. Maybe the road is quiet. Maybe not. Advice gives a good next step, not a promise.",
+     "id": "52c12e8c",
+     "start": 50.15,
+     "end": 58.022
+    },
+    {
+     "k": "p2",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "Good idea. Thanks for the advice.",
+     "spoken": "Good idea. Thanks for the advice.",
+     "id": "de83471c",
+     "start": 58.722,
+     "end": 60.882000000000005
+    },
+    {
+     "k": "n7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Give Priya another reason to leave earlier.",
+     "spoken": "Your turn. Give Priya another reason to leave earlier.",
+     "id": "b10564b3",
+     "start": 62.08200000000001,
+     "end": 65.418
+    },
+    {
+     "k": "n8",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "For example: because the station may be crowded.",
+     "spoken": "For example: because the station may be crowded.",
+     "id": "673cc226",
+     "start": 76.418,
+     "end": 79.274
+    },
+    {
+     "k": "n9",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Share your reason with a partner.",
+     "spoken": "Share your reason with a partner.",
+     "id": "e1692ff7",
+     "start": 80.274,
+     "end": 82.098
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "2.3",
+   "ch": 2,
+   "title": "Scene three: a polite talk",
+   "start": 520,
+   "dur": 110,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Scene three. An apartment. Hana has early meetings. Her roommate Theo practices music late at night.",
+     "spoken": "Scene three. An apartment. Hana has early meetings. Her roommate Theo practices music late at night.",
+     "id": "a2212efb",
+     "start": 1.55,
+     "end": 8.078
+    },
+    {
+     "k": "h1",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "The music is loud at night, and I start work early. What should I do?",
+     "spoken": "The music is loud at night, and I start work early. What should I do?",
+     "id": "0c3ebd64",
+     "start": 9.078,
+     "end": 12.87
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Her friend Marcus is visiting. Should she say nothing? Should she be angry? Think about a polite option.",
+     "spoken": "Her friend Marcus is visiting. Should she say nothing? Should she be angry? Think about a polite option.",
+     "id": "ca104681",
+     "start": 13.67,
+     "end": 19.646
+    },
+    {
+     "k": "m1",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "I think you should talk to him calmly. Tell him what you need.",
+     "spoken": "I think you should talk to him calmly. Tell him what you need.",
+     "id": "5ad2cdf8",
+     "start": 27.146,
+     "end": 30.146
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Watch the action. Hana talks with Theo, and the music changes.",
+     "spoken": "Watch the action. Hana talks with Theo, and the music changes.",
+     "id": "ad1a7127",
+     "start": 31.146,
+     "end": 35.25
+    },
+    {
+     "k": "t1",
+     "who": "theo",
+     "voice": "am_liam",
+     "sp": 1,
+     "text": "Oh, sorry! I can use headphones after ten.",
+     "spoken": "Oh, sorry! I can use headphones after ten.",
+     "id": "2e3cade3",
+     "start": 37.25,
+     "end": 39.842
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Why does this fit? A calm talk respects both people. It gives Theo a chance to help.",
+     "spoken": "Why does this fit? A calm talk respects both people. It gives Theo a chance to help.",
+     "id": "0c0d971a",
+     "start": 41.042,
+     "end": 46.322
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Again, there is no guarantee. Theo might forget tomorrow. Advice is a useful next step, and context matters.",
+     "spoken": "Again, there is no guarantee. Theo might forget tomorrow. Advice is a useful next step, and context matters.",
+     "id": "f96b08b8",
+     "start": 47.322,
+     "end": 54.57
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. What else can Hana say to Theo? Share one polite sentence with a partner.",
+     "spoken": "Your turn. What else can Hana say to Theo? Share one polite sentence with a partner.",
+     "id": "641a3756",
+     "start": 55.77,
+     "end": 60.834
+    },
+    {
+     "k": "n7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Good. Polite advice helps people listen.",
+     "spoken": "Good. Polite advice helps people listen.",
+     "id": "675a0efe",
+     "start": 78.834,
+     "end": 81.402
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "2.4",
+   "ch": 2,
+   "title": "Advice or rule?",
+   "start": 630,
+   "dur": 70,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Let us compare advice with a rule.",
+     "spoken": "Let us compare advice with a rule.",
+     "id": "8347e5c7",
+     "start": 1.35,
+     "end": 3.366
+    },
+    {
+     "k": "p1",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "You must wear a badge in this building.",
+     "spoken": "You must wear a badge in this building.",
+     "id": "02951c05",
+     "start": 4.166,
+     "end": 6.134
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "This is a rule. There is no choice.",
+     "spoken": "This is a rule. There is no choice.",
+     "id": "e2861621",
+     "start": 6.634,
+     "end": 8.89
+    },
+    {
+     "k": "p2",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "You should arrive early tomorrow.",
+     "spoken": "You should arrive early tomorrow.",
+     "id": "f589ccdc",
+     "start": 10.290000000000001,
+     "end": 12.042000000000002
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "This is advice. It is a useful idea, and you can think about it.",
+     "spoken": "This is advice. It is a useful idea, and you can think about it.",
+     "id": "5bdf81c9",
+     "start": 12.542000000000002,
+     "end": 16.526000000000003
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Context also changes how strong advice sounds. The same sentence from a close friend feels gentle. From a manager, it can feel stronger.",
+     "spoken": "Context also changes how strong advice sounds. The same sentence from a close friend feels gentle. From a manager, it can feel stronger.",
+     "id": "d90cdcc4",
+     "start": 17.726000000000003,
+     "end": 26.774
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "So listen to the person, the place, and the situation.",
+     "spoken": "So listen to the person, the place, and the situation.",
+     "id": "2433d562",
+     "start": 27.774,
+     "end": 31.23
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Quick check. Is each sentence a rule, or is it advice?",
+     "spoken": "Quick check. Is each sentence a rule, or is it advice?",
+     "id": "63cb6ccb",
+     "start": 32.63,
+     "end": 35.774
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "2.5",
+   "ch": 2,
+   "title": "Many good answers",
+   "start": 700,
+   "dur": 40,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "A problem can have more than one good answer. Daniel will be late for a meeting.",
+     "spoken": "A problem can have more than one good answer. Daniel will be late for a meeting.",
+     "id": "b9212c70",
+     "start": 1.15,
+     "end": 5.614000000000001
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Three ideas are reasonable. One idea is not useful.",
+     "spoken": "Three ideas are reasonable. One idea is not useful.",
+     "id": "cb56a4dc",
+     "start": 8.614,
+     "end": 12.238000000000001
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Good advice depends on the person, the place, and the time.",
+     "spoken": "Good advice depends on the person, the place, and the time.",
+     "id": "3d04b3b0",
+     "start": 15.238000000000001,
+     "end": 18.502000000000002
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Give a fifth idea. Start with: You should.",
+     "spoken": "Your turn. Give a fifth idea. Start with: You should.",
+     "id": "69a9d372",
+     "start": 19.502000000000002,
+     "end": 22.622000000000003
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "2.6",
+   "ch": 2,
+   "title": "A different meaning",
+   "start": 740,
+   "dur": 40,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "One more thing. Look at this sentence.",
+     "spoken": "One more thing. Look at this sentence.",
+     "id": "e7b244d2",
+     "start": 1.15,
+     "end": 3.382
+    },
+    {
+     "k": "p1",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "The train should arrive soon.",
+     "spoken": "The train should arrive soon.",
+     "id": "395b9ca1",
+     "start": 3.982,
+     "end": 5.614
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Here, should means we expect something. Nobody is giving advice. It is not the meaning we study today.",
+     "spoken": "Here, should means we expect something. Nobody is giving advice. It is not the meaning we study today.",
+     "id": "2904dcd7",
+     "start": 6.2139999999999995,
+     "end": 12.358
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "In this class, should means a useful recommendation.",
+     "spoken": "In this class, should means a useful recommendation.",
+     "id": "12cf0b9c",
+     "start": 13.558,
+     "end": 16.63
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Which sentence gives advice?",
+     "spoken": "Which sentence gives advice?",
+     "id": "712d7e81",
+     "start": 17.63,
+     "end": 19.406
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.1",
+   "ch": 3,
+   "title": "The advice pattern",
+   "start": 780,
+   "dur": 70,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Let us build advice. We need three pieces.",
+     "spoken": "Let us build advice. We need three pieces.",
+     "id": "22860136",
+     "start": 1.35,
+     "end": 4.109999999999999
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "First, a subject. Who is the advice for? You, she, we, they.",
+     "spoken": "First, a subject. Who is the advice for? You, she, we, they.",
+     "id": "e671aec1",
+     "start": 5.109999999999999,
+     "end": 8.661999999999999
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Second, the advice word: should.",
+     "spoken": "Second, the advice word: should.",
+     "id": "97142b7c",
+     "start": 10.861999999999998,
+     "end": 12.877999999999998
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Third, the base verb. This is the simple verb: check, call, ask, save.",
+     "spoken": "Third, the base verb. This is the simple verb: check, call, ask, save.",
+     "id": "a7a217dc",
+     "start": 15.078,
+     "end": 19.613999999999997
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Add the rest of the idea, and you have advice.",
+     "spoken": "Add the rest of the idea, and you have advice.",
+     "id": "0bd26999",
+     "start": 21.413999999999998,
+     "end": 24.221999999999998
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Subject, plus should, plus base verb.",
+     "spoken": "Subject, plus should, plus base verb.",
+     "id": "364d57ad",
+     "start": 25.822,
+     "end": 28.174
+    },
+    {
+     "k": "n7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Say it with me: You should check the address.",
+     "spoken": "Say it with me: You should check the address.",
+     "id": "bebcf19d",
+     "start": 29.573999999999998,
+     "end": 31.973999999999997
+    },
+    {
+     "k": "n8",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Make your own sentence: a subject, should, and a base verb.",
+     "spoken": "Your turn. Make your own sentence: a subject, should, and a base verb.",
+     "id": "0fdd912a",
+     "start": 32.974,
+     "end": 37.221999999999994
+    },
+    {
+     "k": "n9",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "For example: We should leave earlier. Share it with a partner.",
+     "spoken": "For example: We should leave earlier. Share it with a partner.",
+     "id": "4569dbb6",
+     "start": 50.221999999999994,
+     "end": 53.72599999999999
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.2",
+   "ch": 3,
+   "title": "Should never changes",
+   "start": 850,
+   "dur": 60,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now watch the word should. Change the subject, and look.",
+     "spoken": "Now watch the word should. Change the subject, and look.",
+     "id": "508fb574",
+     "start": 1.15,
+     "end": 4.390000000000001
+    },
+    {
+     "k": "s1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "I should call.",
+     "spoken": "I should call.",
+     "id": "47232b24",
+     "start": 5.290000000000001,
+     "end": 6.298000000000001
+    },
+    {
+     "k": "s2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You should call.",
+     "spoken": "You should call.",
+     "id": "f17cfc84",
+     "start": 7.098000000000001,
+     "end": 8.106000000000002
+    },
+    {
+     "k": "s3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "He should call.",
+     "spoken": "He should call.",
+     "id": "e6295740",
+     "start": 8.906000000000002,
+     "end": 9.914000000000001
+    },
+    {
+     "k": "s4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "She should call.",
+     "spoken": "She should call.",
+     "id": "a20e8073",
+     "start": 10.714000000000002,
+     "end": 11.746000000000002
+    },
+    {
+     "k": "s5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "We should call.",
+     "spoken": "We should call.",
+     "id": "93cc1465",
+     "start": 12.546000000000003,
+     "end": 13.554000000000002
+    },
+    {
+     "k": "s6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "They should call.",
+     "spoken": "They should call.",
+     "id": "c10e5287",
+     "start": 14.354000000000003,
+     "end": 15.386000000000003
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Should stays the same. The verb stays the same too. No s, no ending.",
+     "spoken": "Should stays the same. The verb stays the same too. No s, no ending.",
+     "id": "5accb48d",
+     "start": 16.386000000000003,
+     "end": 20.898000000000003
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Tap a subject and try it yourself.",
+     "spoken": "Tap a subject and try it yourself.",
+     "id": "d5fdca22",
+     "start": 21.698000000000004,
+     "end": 23.882000000000005
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Say each sentence aloud with a partner. Change the subject each time.",
+     "spoken": "Say each sentence aloud with a partner. Change the subject each time.",
+     "id": "ec0f45ee",
+     "start": 24.682000000000006,
+     "end": 29.098000000000006
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.3",
+   "ch": 3,
+   "title": "Three extra words to remove",
+   "start": 910,
+   "dur": 60,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Many learners add extra words. Let us remove them.",
+     "spoken": "Many learners add extra words. Let us remove them.",
+     "id": "5929305a",
+     "start": 1.15,
+     "end": 4.438
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "First, no s. After should, use the base verb. Not calls.",
+     "spoken": "First, no s. After should, use the base verb. Not calls.",
+     "id": "e2616cc7",
+     "start": 5.638,
+     "end": 9.382
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Second, no to. After should, do not say to.",
+     "spoken": "Second, no to. After should, do not say to.",
+     "id": "a62f3755",
+     "start": 12.382,
+     "end": 15.334
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Third, no does or doesn't. Should already works as the helper. The negative is shouldn't.",
+     "spoken": "Third, no does or doesn't. Should already works as the helper. The negative is shouldn't.",
+     "id": "6231271e",
+     "start": 18.334,
+     "end": 23.23
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "So remember four things. Base verb. No s. No to. No do, does, or did.",
+     "spoken": "So remember four things. Base verb. No s. No to. No do, does, or did.",
+     "id": "ea51edd9",
+     "start": 26.23,
+     "end": 31.27
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Fix this sentence aloud: She should goes home.",
+     "spoken": "Your turn. Fix this sentence aloud: She should goes home.",
+     "id": "320609ef",
+     "start": 32.269999999999996,
+     "end": 35.846
+    },
+    {
+     "k": "n7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The answer: She should go home. Base verb, no s.",
+     "spoken": "The answer: She should go home. Base verb, no s.",
+     "id": "0870d929",
+     "start": 44.846,
+     "end": 48.038
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.4",
+   "ch": 3,
+   "title": "Should with be",
+   "start": 970,
+   "dur": 40,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The verb be also works. Keep be after should.",
+     "spoken": "The verb be also works. Keep be after should.",
+     "id": "0dd74b17",
+     "start": 1.15,
+     "end": 4.054
+    },
+    {
+     "k": "p1",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "You should be on time.",
+     "spoken": "You should be on time.",
+     "id": "3fde6212",
+     "start": 5.054,
+     "end": 6.422000000000001
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Not: you should are. Not: you should is. Just be.",
+     "spoken": "Not: you should are. Not: you should is. Just be.",
+     "id": "66368e3f",
+     "start": 7.122000000000001,
+     "end": 10.122
+    },
+    {
+     "k": "p2",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "You shouldn't be rude.",
+     "spoken": "You shouldn't be rude.",
+     "id": "4ca06563",
+     "start": 11.122,
+     "end": 12.418
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Good advice can be positive or negative.",
+     "spoken": "Good advice can be positive or negative.",
+     "id": "4171a2f5",
+     "start": 13.418,
+     "end": 15.985999999999999
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Make a sentence with be. What should a good coworker be?",
+     "spoken": "Your turn. Make a sentence with be. What should a good coworker be?",
+     "id": "b9649644",
+     "start": 16.985999999999997,
+     "end": 20.897999999999996
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.5",
+   "ch": 3,
+   "title": "Match advice to a scene",
+   "start": 1010,
+   "dur": 70,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Match each advice sentence to the best situation. Tap an advice sentence, then tap a scene.",
+     "spoken": "Match each advice sentence to the best situation. Tap an advice sentence, then tap a scene.",
+     "id": "fd33ab1d",
+     "start": 1.15,
+     "end": 6.91
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.6",
+   "ch": 3,
+   "title": "Should and shouldn't",
+   "start": 1080,
+   "dur": 70,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Daniel has an important file open. His laptop battery is low.",
+     "spoken": "Daniel has an important file open. His laptop battery is low.",
+     "id": "97fc9d89",
+     "start": 1.35,
+     "end": 5.646000000000001
+    },
+    {
+     "k": "m1",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "You should save your work.",
+     "spoken": "You should save your work.",
+     "id": "2448125b",
+     "start": 6.646000000000001,
+     "end": 8.182
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "That is positive advice. Save is a useful action.",
+     "spoken": "That is positive advice. Save is a useful action.",
+     "id": "1877c032",
+     "start": 9.182,
+     "end": 12.662
+    },
+    {
+     "k": "m2",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "And you shouldn't close the file yet.",
+     "spoken": "And you shouldn't close the file yet.",
+     "id": "fc10817b",
+     "start": 14.062000000000001,
+     "end": 16.006
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "That is negative advice. It recommends against one action. Closing the file now is not a helpful path.",
+     "spoken": "That is negative advice. It recommends against one action. Closing the file now is not a helpful path.",
+     "id": "bdec9d3a",
+     "start": 17.206,
+     "end": 23.902
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The full form is should not. The short form is shouldn't. Both are correct. In speech, we usually say shouldn't.",
+     "spoken": "The full form is should not. The short form is shouldn't. Both are correct. In speech, we usually say shouldn't.",
+     "id": "dfc979f3",
+     "start": 25.302,
+     "end": 31.854
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Shouldn't is not a strict rule like mustn't. It means: this is not a good idea.",
+     "spoken": "Shouldn't is not a strict rule like mustn't. It means: this is not a good idea.",
+     "id": "cae9eacf",
+     "start": 32.854,
+     "end": 37.653999999999996
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Tell a partner one thing you should do, and one thing you shouldn't do, before an important meeting.",
+     "spoken": "Your turn. Tell a partner one thing you should do, and one thing you shouldn't do, before an important meeting.",
+     "id": "6a80a6af",
+     "start": 38.653999999999996,
+     "end": 44.821999999999996
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.7",
+   "ch": 3,
+   "title": "Build the sentence",
+   "start": 1150,
+   "dur": 70,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Build each sentence. Tap the words in order. Watch for extra words.",
+     "spoken": "Build each sentence. Tap the words in order. Watch for extra words.",
+     "id": "410947af",
+     "start": 1.15,
+     "end": 5.422000000000001
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "3.8",
+   "ch": 3,
+   "title": "Make the negative meaningful",
+   "start": 1220,
+   "dur": 40,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Do not make a negative just by adding n't. Ask: does it make sense?",
+     "spoken": "Do not make a negative just by adding n't. Ask: does it make sense?",
+     "id": "83b05e31",
+     "start": 1.15,
+     "end": 5.518000000000001
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "If the address might be wrong, you should check it. You shouldn't check it? That does not help.",
+     "spoken": "If the address might be wrong, you should check it. You shouldn't check it? That does not help.",
+     "id": "1ff8bce3",
+     "start": 6.518000000000001,
+     "end": 11.246
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "But if a message from your manager arrives, you shouldn't ignore it. That makes sense.",
+     "spoken": "But if a message from your manager arrives, you shouldn't ignore it. That makes sense.",
+     "id": "b07b30e2",
+     "start": 12.446,
+     "end": 17.246
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Choose the action first. Then decide: is it useful, or is it not useful?",
+     "spoken": "Choose the action first. Then decide: is it useful, or is it not useful?",
+     "id": "cba226e0",
+     "start": 18.246,
+     "end": 23.214
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Say one meaningful negative sentence.",
+     "spoken": "Your turn. Say one meaningful negative sentence.",
+     "id": "e23e725f",
+     "start": 24.214,
+     "end": 27.454
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "4.1",
+   "ch": 4,
+   "title": "Should moves to the front",
+   "start": 1260,
+   "dur": 60,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now we ask for advice. Priya's sister is waiting for an answer, and Priya is not sure what to do.",
+     "spoken": "Now we ask for advice. Priya's sister is waiting for an answer, and Priya is not sure what to do.",
+     "id": "47f07fa4",
+     "start": 1.35,
+     "end": 7.614000000000001
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Look at the statement: I should call her.",
+     "spoken": "Look at the statement: I should call her.",
+     "id": "efa3aacd",
+     "start": 8.614,
+     "end": 10.870000000000001
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "To make a direct question, move should in front of the subject.",
+     "spoken": "To make a direct question, move should in front of the subject.",
+     "id": "fca691cd",
+     "start": 13.870000000000001,
+     "end": 17.302
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Should, then the subject, then the base verb. No do. No does. No did.",
+     "spoken": "Should, then the subject, then the base verb. No do. No does. No did.",
+     "id": "92f22901",
+     "start": 21.302,
+     "end": 25.526
+    },
+    {
+     "k": "p1",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "Should I call her?",
+     "spoken": "Should I call her?",
+     "id": "65fd1107",
+     "start": 26.726,
+     "end": 27.878
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "That is a natural question. Listen for should at the start.",
+     "spoken": "That is a natural question. Listen for should at the start.",
+     "id": "11f4cccc",
+     "start": 28.678,
+     "end": 32.086
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your turn. Ask me a question with should. For example: Should I send the email?",
+     "spoken": "Your turn. Ask me a question with should. For example: Should I send the email?",
+     "id": "1af1bf40",
+     "start": 33.086,
+     "end": 37.91
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "4.2",
+   "ch": 4,
+   "title": "Add a question word",
+   "start": 1320,
+   "dur": 60,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "We can add a question word at the start: what, when, who, or where.",
+     "spoken": "We can add a question word at the start: what, when, who, or where.",
+     "id": "5e31f598",
+     "start": 1.35,
+     "end": 5.334
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Question word, plus should, plus subject, plus base verb.",
+     "spoken": "Question word, plus should, plus subject, plus base verb.",
+     "id": "099f7ff1",
+     "start": 6.334,
+     "end": 9.886
+    },
+    {
+     "k": "q1",
+     "who": "maya",
+     "voice": "af_bella",
+     "sp": 1,
+     "text": "What should I do?",
+     "spoken": "What should I do?",
+     "id": "5de0fe12",
+     "start": 11.286,
+     "end": 12.366
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "A useful question when you do not know the next step.",
+     "spoken": "A useful question when you do not know the next step.",
+     "id": "83d466b1",
+     "start": 12.966,
+     "end": 15.989999999999998
+    },
+    {
+     "k": "q2",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "When should we leave?",
+     "spoken": "When should we leave?",
+     "id": "f7a7f61c",
+     "start": 17.389999999999997,
+     "end": 18.877999999999997
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "This asks about time.",
+     "spoken": "This asks about time.",
+     "id": "bf30a362",
+     "start": 19.477999999999998,
+     "end": 20.918
+    },
+    {
+     "k": "q3",
+     "who": "daniel",
+     "voice": "am_michael",
+     "sp": 1,
+     "text": "Who should I ask?",
+     "spoken": "Who should I ask?",
+     "id": "3c26d018",
+     "start": 22.317999999999998,
+     "end": 23.566
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "This asks about a person. Where should we meet? This asks about a place.",
+     "spoken": "This asks about a person. Where should we meet? This asks about a place.",
+     "id": "fa045306",
+     "start": 24.166,
+     "end": 28.294
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Pair practice. Ask your partner a question with what, when, or who.",
+     "spoken": "Pair practice. Ask your partner a question with what, when, or who.",
+     "id": "58e18711",
+     "start": 29.294,
+     "end": 33.254
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "4.3",
+   "ch": 4,
+   "title": "A conversation in a café",
+   "start": 1380,
+   "dur": 90,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "A café. Hana is giving a short talk on Monday. She asks Marcus for advice.",
+     "spoken": "A café. Hana is giving a short talk on Monday. She asks Marcus for advice.",
+     "id": "4a11560a",
+     "start": 1.35,
+     "end": 6.366
+    },
+    {
+     "k": "h1",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "I am giving a short talk on Monday. What should I do?",
+     "spoken": "I am giving a short talk on Monday. What should I do?",
+     "id": "674eaf1c",
+     "start": 7.266,
+     "end": 10.458
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "What would Marcus say? Think.",
+     "spoken": "What would Marcus say? Think.",
+     "id": "65f7b6b2",
+     "start": 11.258000000000001,
+     "end": 13.058000000000002
+    },
+    {
+     "k": "m1",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "Have you practiced out loud?",
+     "spoken": "Have you practiced out loud?",
+     "id": "2f383d57",
+     "start": 18.558,
+     "end": 20.382
+    },
+    {
+     "k": "h2",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "Not yet. Should I practice with my slides?",
+     "spoken": "Not yet. Should I practice with my slides?",
+     "id": "1e99d536",
+     "start": 21.382,
+     "end": 24.118000000000002
+    },
+    {
+     "k": "m2",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "Yes, you should. And you should time yourself.",
+     "spoken": "Yes, you should. And you should time yourself.",
+     "id": "e0f3b6d2",
+     "start": 25.118000000000002,
+     "end": 27.422
+    },
+    {
+     "k": "h3",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "When should I start?",
+     "spoken": "When should I start?",
+     "id": "ae77fe18",
+     "start": 28.422,
+     "end": 29.91
+    },
+    {
+     "k": "m3",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "I think you should start tonight. Then you can change things tomorrow.",
+     "spoken": "I think you should start tonight. Then you can change things tomorrow.",
+     "id": "d7ca2034",
+     "start": 30.91,
+     "end": 34.246
+    },
+    {
+     "k": "h4",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "That is a good idea. Thanks for the advice.",
+     "spoken": "That is a good idea. Thanks for the advice.",
+     "id": "8dfcc546",
+     "start": 35.246,
+     "end": 38.006
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Notice the turns: a question, a short answer, a reason. Tap any line to hear it again.",
+     "spoken": "Notice the turns: a question, a short answer, a reason. Tap any line to hear it again.",
+     "id": "490d55b7",
+     "start": 39.206,
+     "end": 44.798
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now role-play the first three lines with a partner.",
+     "spoken": "Now role-play the first three lines with a partner.",
+     "id": "54fa2c9a",
+     "start": 45.798,
+     "end": 48.726
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "4.4",
+   "ch": 4,
+   "title": "Short answers",
+   "start": 1470,
+   "dur": 60,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Short answers repeat should. The pronoun matches the speaker.",
+     "spoken": "Short answers repeat should. The pronoun matches the speaker.",
+     "id": "40b1e52a",
+     "start": 1.35,
+     "end": 5.07
+    },
+    {
+     "k": "p1",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "Should I call her?",
+     "spoken": "Should I call her?",
+     "id": "65fd1107",
+     "start": 6.07,
+     "end": 7.222
+    },
+    {
+     "k": "m1",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "Yes, you should.",
+     "spoken": "Yes, you should.",
+     "id": "db37681d",
+     "start": 8.022,
+     "end": 9.294
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "I changes to you. And do not forget the comma. Or the negative:",
+     "spoken": "I changes to you. And do not forget the comma. Or the negative:",
+     "id": "ee4a476d",
+     "start": 10.094000000000001,
+     "end": 13.982000000000001
+    },
+    {
+     "k": "m2",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "No, you shouldn't.",
+     "spoken": "No, you shouldn't.",
+     "id": "4edbab2c",
+     "start": 14.782000000000002,
+     "end": 16.078000000000003
+    },
+    {
+     "k": "p2",
+     "who": "priya",
+     "voice": "af_sarah",
+     "sp": 1,
+     "text": "Should we leave now?",
+     "spoken": "Should we leave now?",
+     "id": "0a8e0e1c",
+     "start": 17.278000000000002,
+     "end": 18.526000000000003
+    },
+    {
+     "k": "m3",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "Yes, we should.",
+     "spoken": "Yes, we should.",
+     "id": "7cff4300",
+     "start": 19.326000000000004,
+     "end": 20.574000000000005
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "We stays we. A helpful answer can add a reason or an alternative:",
+     "spoken": "We stays we. A helpful answer can add a reason or an alternative:",
+     "id": "dc12f074",
+     "start": 21.374000000000006,
+     "end": 25.670000000000005
+    },
+    {
+     "k": "m4",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "No, you shouldn't. You should check first.",
+     "spoken": "No, you shouldn't. You should check first.",
+     "id": "b9631d8a",
+     "start": 26.470000000000006,
+     "end": 28.726000000000006
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Short answer, then reason. That is helpful advice.",
+     "spoken": "Short answer, then reason. That is helpful advice.",
+     "id": "7e4dbaa6",
+     "start": 29.526000000000007,
+     "end": 32.766000000000005
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Pair practice. Ask, answer, and add a reason.",
+     "spoken": "Pair practice. Ask, answer, and add a reason.",
+     "id": "6e311409",
+     "start": 33.766000000000005,
+     "end": 36.934000000000005
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "4.5",
+   "ch": 4,
+   "title": "The sound of should",
+   "start": 1530,
+   "dur": 70,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Listen to the word should. The letter l is silent.",
+     "spoken": "Listen to the word should. The letter l is silent.",
+     "id": "bd2c1d54",
+     "start": 1.35,
+     "end": 4.3740000000000006
+    },
+    {
+     "k": "w1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.8,
+     "text": "should",
+     "spoken": "should",
+     "id": "56eebb1a",
+     "start": 5.3740000000000006,
+     "end": 6.214
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "In a strong form, it sounds like this. Use it when you stress the word, or when it comes at the end.",
+     "spoken": "In a strong form, it sounds like this. Use it when you stress the word, or when it comes at the end.",
+     "id": "5cc9e2fb",
+     "start": 7.014,
+     "end": 12.725999999999999
+    },
+    {
+     "k": "w2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Yes, you should.",
+     "spoken": "Yes, you should.",
+     "id": "9d62b41d",
+     "start": 13.725999999999999,
+     "end": 14.902
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "In connected speech, the word is often shorter and weaker.",
+     "spoken": "In connected speech, the word is often shorter and weaker.",
+     "id": "8d626a42",
+     "start": 16.302,
+     "end": 19.71
+    },
+    {
+     "k": "w3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You should call her.",
+     "spoken": "PH:juː ʃəd kˈɔːl hɜː.",
+     "id": "974304fe",
+     "start": 20.71,
+     "end": 21.91
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You do not have to use the weak form every time. The strong form is always clear and correct.",
+     "spoken": "You do not have to use the weak form every time. The strong form is always clear and correct.",
+     "id": "035eedc9",
+     "start": 23.11,
+     "end": 28.774
+    },
+    {
+     "k": "w4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.8,
+     "text": "shouldn't",
+     "spoken": "shouldn't",
+     "id": "3587620f",
+     "start": 29.974,
+     "end": 30.934
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Shouldn't has two syllables. The last t is very light.",
+     "spoken": "Shouldn't has two syllables. The last t is very light.",
+     "id": "62f08fd6",
+     "start": 31.934,
+     "end": 35.078
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now you try. Say should, strong. Then say: You should call her.",
+     "spoken": "Now you try. Say should, strong. Then say: You should call her.",
+     "id": "585d76f0",
+     "start": 36.078,
+     "end": 39.798
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "4.6",
+   "ch": 4,
+   "title": "Listen and repeat",
+   "start": 1600,
+   "dur": 80,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Listen and repeat. First at natural speed, then slowly.",
+     "spoken": "Listen and repeat. First at natural speed, then slowly.",
+     "id": "731dc819",
+     "start": 1.15,
+     "end": 4.99
+    },
+    {
+     "k": "r1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You should call her.",
+     "spoken": "You should call her.",
+     "id": "d23bc169",
+     "start": 7.19,
+     "end": 8.342
+    },
+    {
+     "k": "s1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.7,
+     "text": "You should call her.",
+     "spoken": "You should call her.",
+     "id": "acbbeb0f",
+     "start": 12.142,
+     "end": 13.798
+    },
+    {
+     "k": "r2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Should I call her?",
+     "spoken": "Should I call her?",
+     "id": "23d1d31c",
+     "start": 17.598,
+     "end": 18.75
+    },
+    {
+     "k": "s2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.7,
+     "text": "Should I call her?",
+     "spoken": "Should I call her?",
+     "id": "6e633a66",
+     "start": 22.55,
+     "end": 24.134
+    },
+    {
+     "k": "r3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "What should I do?",
+     "spoken": "What should I do?",
+     "id": "fc4d7b1c",
+     "start": 27.934,
+     "end": 29.086000000000002
+    },
+    {
+     "k": "s3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.7,
+     "text": "What should I do?",
+     "spoken": "What should I do?",
+     "id": "125a7efa",
+     "start": 32.886,
+     "end": 34.518
+    },
+    {
+     "k": "r4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You shouldn't ignore the message.",
+     "spoken": "You shouldn't ignore the message.",
+     "id": "a0e6c69b",
+     "start": 38.318,
+     "end": 39.949999999999996
+    },
+    {
+     "k": "s4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.7,
+     "text": "You shouldn't ignore the message.",
+     "spoken": "You shouldn't ignore the message.",
+     "id": "5f692279",
+     "start": 43.74999999999999,
+     "end": 46.10199999999999
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "4.7",
+   "ch": 4,
+   "title": "Soften advice and respond",
+   "start": 1680,
+   "dur": 60,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You can soften advice with: I think you should.",
+     "spoken": "You can soften advice with: I think you should.",
+     "id": "722b1309",
+     "start": 1.35,
+     "end": 3.966
+    },
+    {
+     "k": "m1",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "I think you should ask for help.",
+     "spoken": "I think you should ask for help.",
+     "id": "6c6829da",
+     "start": 4.766,
+     "end": 6.542
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "To recommend against something, say: I don't think you should.",
+     "spoken": "To recommend against something, say: I don't think you should.",
+     "id": "fb852e72",
+     "start": 7.342,
+     "end": 10.437999999999999
+    },
+    {
+     "k": "m2",
+     "who": "marcus",
+     "voice": "am_eric",
+     "sp": 1,
+     "text": "I don't think you should send it yet.",
+     "spoken": "I don't think you should send it yet.",
+     "id": "c36fc0e6",
+     "start": 11.238,
+     "end": 13.158
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You can also say: You shouldn't send it yet. Both are natural. The I don't think form often sounds softer.",
+     "spoken": "You can also say: You shouldn't send it yet. Both are natural. The I don't think form often sounds softer.",
+     "id": "cbdd1ea0",
+     "start": 14.158,
+     "end": 20.47
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "How can you respond? You can accept the advice, or you can say you are not sure.",
+     "spoken": "How can you respond? You can accept the advice, or you can say you are not sure.",
+     "id": "303ee3bd",
+     "start": 21.669999999999998,
+     "end": 26.278
+    },
+    {
+     "k": "h1",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "That is a good idea.",
+     "spoken": "That is a good idea.",
+     "id": "eb2e8ea3",
+     "start": 27.078,
+     "end": 28.902
+    },
+    {
+     "k": "h2",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "Thanks for the advice.",
+     "spoken": "Thanks for the advice.",
+     "id": "28ad6e9e",
+     "start": 29.702,
+     "end": 31.238000000000003
+    },
+    {
+     "k": "h3",
+     "who": "hana",
+     "voice": "af_sky",
+     "sp": 1,
+     "text": "I am not sure that will work.",
+     "spoken": "I am not sure that will work.",
+     "id": "a577013e",
+     "start": 32.038000000000004,
+     "end": 33.934000000000005
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Pair practice. Give advice with I think you should, and respond.",
+     "spoken": "Pair practice. Give advice with I think you should, and respond.",
+     "id": "be66b663",
+     "start": 34.934000000000005,
+     "end": 38.798
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.1",
+   "ch": 5,
+   "title": "Match advice to a situation",
+   "start": 1740,
+   "dur": 60,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice one. Match each advice to its problem. We are checking meaning.",
+     "spoken": "Practice one. Match each advice to its problem. We are checking meaning.",
+     "id": "9509fe4a",
+     "start": 1.05,
+     "end": 5.394
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.2",
+   "ch": 5,
+   "title": "Build a correct sentence",
+   "start": 1800,
+   "dur": 60,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice two. Build the sentence. Some tiles are traps. We are checking grammar.",
+     "spoken": "Practice two. Build the sentence. Some tiles are traps. We are checking grammar.",
+     "id": "a0f260a5",
+     "start": 1.05,
+     "end": 5.898
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.3",
+   "ch": 5,
+   "title": "Should or shouldn't?",
+   "start": 1860,
+   "dur": 60,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice three. Read the situation. Choose should or shouldn't.",
+     "spoken": "Practice three. Read the situation. Choose should or shouldn't.",
+     "id": "a85962db",
+     "start": 1.05,
+     "end": 4.89
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.4",
+   "ch": 5,
+   "title": "Repair the mistake",
+   "start": 1920,
+   "dur": 150,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice four. These sentences are incorrect. Find the mistake and repair it. We are checking grammar.",
+     "spoken": "Practice four. These sentences are incorrect. Find the mistake and repair it. We are checking grammar.",
+     "id": "839484e3",
+     "start": 1.05,
+     "end": 7.314
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.5",
+   "ch": 5,
+   "title": "Build an advice question",
+   "start": 2070,
+   "dur": 60,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice five. Build the question. Remember: should goes before the subject.",
+     "spoken": "Practice five. Build the question. Remember: should goes before the subject.",
+     "id": "ed353dec",
+     "start": 1.05,
+     "end": 5.85
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.6",
+   "ch": 5,
+   "title": "Choose the short answer",
+   "start": 2130,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice six. Choose the short answer that matches the question.",
+     "spoken": "Practice six. Choose the short answer that matches the question.",
+     "id": "d5d3a750",
+     "start": 1.05,
+     "end": 4.818
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.7",
+   "ch": 5,
+   "title": "Add a useful reason",
+   "start": 2185,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice seven. Add a useful reason. A reason starts with because.",
+     "spoken": "Practice seven. Add a useful reason. A reason starts with because.",
+     "id": "93d65d6e",
+     "start": 1.05,
+     "end": 5.322
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.8",
+   "ch": 5,
+   "title": "Grammar and usefulness",
+   "start": 2240,
+   "dur": 30,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Two different questions. Is the sentence grammatical? And is the advice useful in this situation?",
+     "spoken": "Two different questions. Is the sentence grammatical? And is the advice useful in this situation?",
+     "id": "432665d3",
+     "start": 1,
+     "end": 6.904
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You should ignore the meeting: the grammar is correct, but the advice is not helpful.",
+     "spoken": "You should ignore the meeting: the grammar is correct, but the advice is not helpful.",
+     "id": "99c25d4b",
+     "start": 10.304,
+     "end": 15.128
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You should to call her: the idea may be fine, but the grammar needs repair.",
+     "spoken": "You should to call her: the idea may be fine, but the grammar needs repair.",
+     "id": "58206f11",
+     "start": 18.128,
+     "end": 22.496000000000002
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "5.9",
+   "ch": 5,
+   "title": "Find all the reasonable ideas",
+   "start": 2270,
+   "dur": 70,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Practice eight. Daniel has a meeting in ten minutes, but his slides are not ready. Choose all the reasonable recommendations. We are checking usefulness.",
+     "spoken": "Practice eight. Daniel has a meeting in ten minutes, but his slides are not ready. Choose all the reasonable recommendations. We are checking usefulness.",
+     "id": "10948327",
+     "start": 1.05,
+     "end": 10.458
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "6.1",
+   "ch": 6,
+   "title": "Scenario one: the big presentation",
+   "start": 2340,
+   "dur": 45,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "a1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Scenario one. The big presentation. Maya presents tomorrow morning.",
+     "spoken": "Scenario one. The big presentation. Maya presents tomorrow morning.",
+     "id": "72dd3bcc",
+     "start": 1.35,
+     "end": 5.838000000000001
+    },
+    {
+     "k": "a2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Problem one: the outline is not finished. Problem two: the phone keeps buzzing. Problem three: she is not sure about the room.",
+     "spoken": "Problem one: the outline is not finished. Problem two: the phone keeps buzzing. Problem three: she is not sure about the room.",
+     "id": "a27937a2",
+     "start": 6.538000000000001,
+     "end": 14.578
+    },
+    {
+     "k": "a3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Which problem would you solve first?",
+     "spoken": "Which problem would you solve first?",
+     "id": "769234ca",
+     "start": 15.378,
+     "end": 17.346
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "6.2",
+   "ch": 6,
+   "title": "Scenario two: the group trip",
+   "start": 2385,
+   "dur": 45,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "a1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Scenario two. A group trip. Priya, Marcus, and Hana want to take an early train on Saturday.",
+     "spoken": "Scenario two. A group trip. Priya, Marcus, and Hana want to take an early train on Saturday.",
+     "id": "7a6793ac",
+     "start": 1.35,
+     "end": 7.494
+    },
+    {
+     "k": "a2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Problem one: nobody has bought the tickets. Problem two: the train leaves very early. Problem three: the friends live far apart.",
+     "spoken": "Problem one: nobody has bought the tickets. Problem two: the train leaves very early. Problem three: the friends live far apart.",
+     "id": "4bf3f318",
+     "start": 8.193999999999999,
+     "end": 16.642
+    },
+    {
+     "k": "a3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Which problem would you solve first?",
+     "spoken": "Which problem would you solve first?",
+     "id": "769234ca",
+     "start": 17.442,
+     "end": 19.41
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "6.3",
+   "ch": 6,
+   "title": "Scenario three: the shared apartment",
+   "start": 2430,
+   "dur": 45,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "a1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Scenario three. A shared apartment. Hana has early meetings. Her roommate Theo practices music in the evening.",
+     "spoken": "Scenario three. A shared apartment. Hana has early meetings. Her roommate Theo practices music in the evening.",
+     "id": "b8d3d86f",
+     "start": 1.35,
+     "end": 8.646
+    },
+    {
+     "k": "a2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Problem one: the music is loud late at night. Problem two: Hana needs sleep before work. Problem three: they have no clear agreement.",
+     "spoken": "Problem one: the music is loud late at night. Problem two: Hana needs sleep before work. Problem three: they have no clear agreement.",
+     "id": "36c4032c",
+     "start": 9.346,
+     "end": 17.914
+    },
+    {
+     "k": "a3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Which problem would you solve first?",
+     "spoken": "Which problem would you solve first?",
+     "id": "769234ca",
+     "start": 18.714000000000002,
+     "end": 20.682000000000002
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "6.4",
+   "ch": 6,
+   "title": "Choose your priorities",
+   "start": 2475,
+   "dur": 45,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Choose the problem to solve first in each scenario. There is no single correct answer. Be ready to explain why.",
+     "spoken": "Choose the problem to solve first in each scenario. There is no single correct answer. Be ready to explain why.",
+     "id": "ecf892a8",
+     "start": 1.15,
+     "end": 8.374
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "6.5",
+   "ch": 6,
+   "title": "Pair round one",
+   "start": 2520,
+   "dur": 100,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "r1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Round one. Maya's presentation. Partner A, you are Maya: ask for advice. Partner B, you are the advisor: give a recommendation and a reason. Then choose the path your pair picked.",
+     "spoken": "Round one. Maya's presentation. Partner A, you are Maya: ask for advice. Partner B, you are the advisor: give a recommendation and a reason. Then choose the path your pair picked.",
+     "id": "80c09b68",
+     "start": 1.15,
+     "end": 13.294
+    }
+   ],
+   "clips": [
+    {
+     "k": "o1a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Maya finishes the outline. She feels calmer, but the phone still buzzes, and the room is still a question.",
+     "spoken": "Maya finishes the outline. She feels calmer, but the phone still buzzes, and the room is still a question.",
+     "id": "07249eca"
+    },
+    {
+     "k": "o1b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The phone is quiet. Maya can think clearly, but the outline still needs work, and the room is still a question.",
+     "spoken": "The phone is quiet. Maya can think clearly, but the outline still needs work, and the room is still a question.",
+     "id": "85eb2f2f"
+    },
+    {
+     "k": "o1c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Maya checks the invitation and finds the building. She knows where to go, but the outline is still unfinished.",
+     "spoken": "Maya checks the invitation and finds the building. She knows where to go, but the outline is still unfinished.",
+     "id": "63b109e8"
+    }
+   ]
+  },
+  {
+   "id": "6.6",
+   "ch": 6,
+   "title": "Pair round two",
+   "start": 2620,
+   "dur": 100,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "r2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Round two. The group trip. Switch roles. Partner B asks for advice. Partner A gives a recommendation and a reason. Then choose the path your pair picked.",
+     "spoken": "Round two. The group trip. Switch roles. Partner B asks for advice. Partner A gives a recommendation and a reason. Then choose the path your pair picked.",
+     "id": "f8995ecd",
+     "start": 1.15,
+     "end": 11.206
+    }
+   ],
+   "clips": [
+    {
+     "k": "o1a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The tickets are bought. Everyone can board, but the meeting time and the plan are still unclear.",
+     "spoken": "The tickets are bought. Everyone can board, but the meeting time and the plan are still unclear.",
+     "id": "580bcf6d"
+    },
+    {
+     "k": "o1b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The friends agree to arrive early. There is time to adapt, but the tickets are still not bought.",
+     "spoken": "The friends agree to arrive early. There is time to adapt, but the tickets are still not bought.",
+     "id": "f70ba51a"
+    },
+    {
+     "k": "o1c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.",
+     "spoken": "The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.",
+     "id": "83a6b9c9"
+    }
+   ]
+  },
+  {
+   "id": "6.7",
+   "ch": 6,
+   "title": "Pair round three",
+   "start": 2720,
+   "dur": 100,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "r3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Round three. The shared apartment. Switch roles again. Partner A asks for advice. Partner B gives a recommendation and a reason. Then choose the path your pair picked.",
+     "spoken": "Round three. The shared apartment. Switch roles again. Partner A asks for advice. Partner B gives a recommendation and a reason. Then choose the path your pair picked.",
+     "id": "c84e3330",
+     "start": 1.15,
+     "end": 11.758000000000001
+    }
+   ],
+   "clips": [
+    {
+     "k": "o1a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Hana talks with Theo calmly. He listens, and they understand each other better, though they have no agreement yet.",
+     "spoken": "Hana talks with Theo calmly. He listens, and they understand each other better, though they have no agreement yet.",
+     "id": "ccb3a032"
+    },
+    {
+     "k": "o1b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Hana leaves a friendly note. Theo reads it, but he cannot answer right away, so the situation stays unclear.",
+     "spoken": "Hana leaves a friendly note. Theo reads it, but he cannot answer right away, so the situation stays unclear.",
+     "id": "5493dc7e"
+    },
+    {
+     "k": "o1c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Hana wears headphones and sleeps better tonight. The problem is not discussed, so it might return tomorrow.",
+     "spoken": "Hana wears headphones and sleeps better tonight. The problem is not discussed, so it might return tomorrow.",
+     "id": "aa69a25a"
+    }
+   ]
+  },
+  {
+   "id": "6.8",
+   "ch": 6,
+   "title": "New information: the presentation",
+   "start": 2820,
+   "dur": 80,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "tw",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "New information! The manager moved the meeting thirty minutes earlier, and the room has changed.",
+     "spoken": "New information! The manager moved the meeting thirty minutes earlier, and the room has changed.",
+     "id": "523b7e5c",
+     "start": 11.05,
+     "end": 16.618000000000002
+    },
+    {
+     "k": "rv",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Does your advice still work? Listen to Maya's needs, and revise your recommendation.",
+     "spoken": "Does your advice still work? Listen to Maya's needs, and revise your recommendation.",
+     "id": "dbf801f8",
+     "start": 17.818,
+     "end": 22.882
+    }
+   ],
+   "clips": [
+    {
+     "k": "ro1a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Maya finishes the outline. She feels calmer, but the phone still buzzes, and the room is still a question.",
+     "spoken": "Maya finishes the outline. She feels calmer, but the phone still buzzes, and the room is still a question.",
+     "id": "07249eca"
+    },
+    {
+     "k": "ro1b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The phone is quiet. Maya can think clearly, but the outline still needs work, and the room is still a question.",
+     "spoken": "The phone is quiet. Maya can think clearly, but the outline still needs work, and the room is still a question.",
+     "id": "85eb2f2f"
+    },
+    {
+     "k": "ro1c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Maya checks the invitation and finds the building. She knows where to go, but the outline is still unfinished.",
+     "spoken": "Maya checks the invitation and finds the building. She knows where to go, but the outline is still unfinished.",
+     "id": "63b109e8"
+    },
+    {
+     "k": "o2a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Daniel checks the room for her. That might save time, and Maya can keep working.",
+     "spoken": "Daniel checks the room for her. That might save time, and Maya can keep working.",
+     "id": "53db254d"
+    },
+    {
+     "k": "o2b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Maya shortens the presentation. The outline is ready, and the shorter version fits the new time.",
+     "spoken": "Maya shortens the presentation. The outline is ready, and the shorter version fits the new time.",
+     "id": "83506ac8"
+    },
+    {
+     "k": "o2c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Maya turns off her phone and works faster. She is focused, though other questions remain.",
+     "spoken": "Maya turns off her phone and works faster. She is focused, though other questions remain.",
+     "id": "a3a7b3e5"
+    },
+    {
+     "k": "f1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your two steps work together. Maya feels prepared. Nothing is guaranteed, but she has a clear plan.",
+     "spoken": "Your two steps work together. Maya feels prepared. Nothing is guaranteed, but she has a clear plan.",
+     "id": "ba2c09b6"
+    },
+    {
+     "k": "f2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.",
+     "spoken": "You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.",
+     "id": "fa97a2c8"
+    }
+   ]
+  },
+  {
+   "id": "6.9",
+   "ch": 6,
+   "title": "New information: the group trip",
+   "start": 2900,
+   "dur": 80,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "tw",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "New information! The train is delayed by forty minutes, and Marcus is still at home.",
+     "spoken": "New information! The train is delayed by forty minutes, and Marcus is still at home.",
+     "id": "105b431e",
+     "start": 11.05,
+     "end": 16.138
+    },
+    {
+     "k": "rv",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Does your advice still work? Listen to the group's needs, and revise your recommendation.",
+     "spoken": "Does your advice still work? Listen to the group's needs, and revise your recommendation.",
+     "id": "86045a50",
+     "start": 17.338,
+     "end": 22.498
+    }
+   ],
+   "clips": [
+    {
+     "k": "ro1a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The tickets are bought. Everyone can board, but the meeting time and the plan are still unclear.",
+     "spoken": "The tickets are bought. Everyone can board, but the meeting time and the plan are still unclear.",
+     "id": "580bcf6d"
+    },
+    {
+     "k": "ro1b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The friends agree to arrive early. There is time to adapt, but the tickets are still not bought.",
+     "spoken": "The friends agree to arrive early. There is time to adapt, but the tickets are still not bought.",
+     "id": "f70ba51a"
+    },
+    {
+     "k": "ro1c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.",
+     "spoken": "The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.",
+     "id": "83a6b9c9"
+    },
+    {
+     "k": "o2a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Hana sends a message. Marcus sees it and leaves a little later. That might reduce stress for everyone.",
+     "spoken": "Hana sends a message. Marcus sees it and leaves a little later. That might reduce stress for everyone.",
+     "id": "123fa169"
+    },
+    {
+     "k": "o2b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Priya and Hana wait at a café near the station. The delay feels shorter, though Marcus still needs to know.",
+     "spoken": "Priya and Hana wait at a café near the station. The delay feels shorter, though Marcus still needs to know.",
+     "id": "c9480938"
+    },
+    {
+     "k": "o2c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.",
+     "spoken": "Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.",
+     "id": "8ac1b833"
+    },
+    {
+     "k": "f1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your two steps cover different problems. The group has a clearer plan for the delay. Delays can still surprise us, so stay flexible.",
+     "spoken": "Your two steps cover different problems. The group has a clearer plan for the delay. Delays can still surprise us, so stay flexible.",
+     "id": "e9fb78f6"
+    },
+    {
+     "k": "f2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.",
+     "spoken": "You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.",
+     "id": "67098503"
+    }
+   ]
+  },
+  {
+   "id": "6.10",
+   "ch": 6,
+   "title": "New information: the apartment",
+   "start": 2980,
+   "dur": 80,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "tw",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "New information! Theo has a concert on Saturday. He needs to practice every evening this week.",
+     "spoken": "New information! Theo has a concert on Saturday. He needs to practice every evening this week.",
+     "id": "05072bb9",
+     "start": 11.05,
+     "end": 16.93
+    },
+    {
+     "k": "rv",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Does your advice still work? Listen to both people's needs, and revise your recommendation.",
+     "spoken": "Does your advice still work? Listen to both people's needs, and revise your recommendation.",
+     "id": "86b09096",
+     "start": 18.13,
+     "end": 23.602
+    }
+   ],
+   "clips": [
+    {
+     "k": "ro1a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Hana talks with Theo calmly. He listens, and they understand each other better, though they have no agreement yet.",
+     "spoken": "Hana talks with Theo calmly. He listens, and they understand each other better, though they have no agreement yet.",
+     "id": "ccb3a032"
+    },
+    {
+     "k": "ro1b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Hana leaves a friendly note. Theo reads it, but he cannot answer right away, so the situation stays unclear.",
+     "spoken": "Hana leaves a friendly note. Theo reads it, but he cannot answer right away, so the situation stays unclear.",
+     "id": "5493dc7e"
+    },
+    {
+     "k": "ro1c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Hana wears headphones and sleeps better tonight. The problem is not discussed, so it might return tomorrow.",
+     "spoken": "Hana wears headphones and sleeps better tonight. The problem is not discussed, so it might return tomorrow.",
+     "id": "aa69a25a"
+    },
+    {
+     "k": "o2a",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "They agree: music until ten, and headphones after that. Both people have a plan.",
+     "spoken": "They agree: music until ten, and headphones after that. Both people have a plan.",
+     "id": "f7d2ee4d"
+    },
+    {
+     "k": "o2b",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Over coffee, Theo explains the concert, and Hana explains her mornings. They understand each other better.",
+     "spoken": "Over coffee, Theo explains the concert, and Hana explains her mornings. They understand each other better.",
+     "id": "b3ee336f"
+    },
+    {
+     "k": "o2c",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Theo practices earlier in the evening. Hana can rest, though they still need a clear agreement.",
+     "spoken": "Theo practices earlier in the evening. Hana can rest, though they still need a clear agreement.",
+     "id": "6da8989b"
+    },
+    {
+     "k": "f1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your steps cover different needs. Hana and Theo can work out a clearer plan. It still depends on both people, so keep talking.",
+     "spoken": "Your steps cover different needs. Hana and Theo can work out a clearer plan. It still depends on both people, so keep talking.",
+     "id": "7b99bf2d"
+    },
+    {
+     "k": "f2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Your steps were similar. Some things improved, but one need is still open. Another step might help.",
+     "spoken": "Your steps were similar. Some things improved, but one need is still open. Another step might help.",
+     "id": "7a2f9863"
+    }
+   ]
+  },
+  {
+   "id": "6.11",
+   "ch": 6,
+   "title": "Share and compare your reasons",
+   "start": 3060,
+   "dur": 120,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Share your recommendations with another pair. Which path did you choose? What was your reason? Compare your ideas, and listen for different good answers.",
+     "spoken": "Share your recommendations with another pair. Which path did you choose? What was your reason? Compare your ideas, and listen for different good answers.",
+     "id": "5102649a",
+     "start": 1.15,
+     "end": 9.814
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "6.12",
+   "ch": 6,
+   "title": "What the mission showed",
+   "start": 3180,
+   "dur": 60,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Look at what happened. Each choice changed the situation, and new information changed it again.",
+     "spoken": "Look at what happened. Each choice changed the situation, and new information changed it again.",
+     "id": "d0463bb8",
+     "start": 1.35,
+     "end": 6.99
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Good advisers listen to the person's needs. They give a reason. And they revise their advice when the facts change.",
+     "spoken": "Good advisers listen to the person's needs. They give a reason. And they revise their advice when the facts change.",
+     "id": "1490f934",
+     "start": 8.19,
+     "end": 15.006
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Notice also: no path was a guarantee. Advice helps, but the result can still be uncertain.",
+     "spoken": "Notice also: no path was a guarantee. Advice helps, but the result can still be uncertain.",
+     "id": "d405d026",
+     "start": 16.206,
+     "end": 22.158
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Now let us bring our ideas together.",
+     "spoken": "Now let us bring our ideas together.",
+     "id": "09319c25",
+     "start": 23.358,
+     "end": 25.614
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Turn to a partner. What new information changed your advice? Say it in one sentence.",
+     "spoken": "Turn to a partner. What new information changed your advice? Say it in one sentence.",
+     "id": "317aa9d7",
+     "start": 26.814,
+     "end": 31.926000000000002
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "7.1",
+   "ch": 7,
+   "title": "Everything connects",
+   "start": 3240,
+   "dur": 90,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Let us connect everything.",
+     "spoken": "Let us connect everything.",
+     "id": "cb313a54",
+     "start": 1.35,
+     "end": 2.958
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Advice is a recommendation. It is a useful idea, not a guarantee, and not automatically a rule.",
+     "spoken": "Advice is a recommendation. It is a useful idea, not a guarantee, and not automatically a rule.",
+     "id": "114ea9df",
+     "start": 3.858,
+     "end": 10.578
+    },
+    {
+     "k": "n3",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "For affirmative advice: subject, should, base verb.",
+     "spoken": "For affirmative advice: subject, should, base verb.",
+     "id": "e7a939ee",
+     "start": 13.978,
+     "end": 17.338
+    },
+    {
+     "k": "n4",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "For negative advice: subject, shouldn't, base verb. It recommends against an action.",
+     "spoken": "For negative advice: subject, shouldn't, base verb. It recommends against an action.",
+     "id": "14d5aa9e",
+     "start": 20.738,
+     "end": 26.018
+    },
+    {
+     "k": "n5",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "In a direct question, the modal moves before the subject. No do, no does, no did.",
+     "spoken": "In a direct question, the modal moves before the subject. No do, no does, no did.",
+     "id": "a7c8560b",
+     "start": 29.418,
+     "end": 34.986
+    },
+    {
+     "k": "n6",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Short answers match the speaker and the subject: Yes, you should. No, we shouldn't.",
+     "spoken": "Short answers match the speaker and the subject: Yes, you should. No, we shouldn't.",
+     "id": "b448f3c0",
+     "start": 38.385999999999996,
+     "end": 43.37799999999999
+    },
+    {
+     "k": "n7",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "And helpful advice considers the person's situation, and often includes a reason.",
+     "spoken": "And helpful advice considers the person's situation, and often includes a reason.",
+     "id": "8c70e606",
+     "start": 46.77799999999999,
+     "end": 51.81799999999999
+    },
+    {
+     "k": "n8",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Ask. Recommend. Explain why.",
+     "spoken": "Ask. Recommend. Explain why.",
+     "id": "f70f39d4",
+     "start": 54.31799999999999,
+     "end": 56.62199999999999
+    },
+    {
+     "k": "n9",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Choose one box. Say a new example sentence for it.",
+     "spoken": "Choose one box. Say a new example sentence for it.",
+     "id": "ba1f3465",
+     "start": 57.62199999999999,
+     "end": 60.861999999999995
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "7.2",
+   "ch": 7,
+   "title": "Roleplay feedback",
+   "start": 3330,
+   "dur": 60,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Feedback time. Think about the roleplays. Teacher, share one good example you heard, and one thing to improve. Use the checklist if it helps.",
+     "spoken": "Feedback time. Think about the roleplays. Teacher, share one good example you heard, and one thing to improve. Use the checklist if it helps.",
+     "id": "410aa33e",
+     "start": 1.15,
+     "end": 9.814
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "7.3",
+   "ch": 7,
+   "title": "Exit check one: repair",
+   "start": 3390,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Exit check, part one. This sentence is incorrect. Choose the repair.",
+     "spoken": "Exit check, part one. This sentence is incorrect. Choose the repair.",
+     "id": "d955b7b2",
+     "start": 1.05,
+     "end": 5.466
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "7.4",
+   "ch": 7,
+   "title": "Exit check two: ask",
+   "start": 3445,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Exit check, part two. Ask for advice in a new situation. Say it aloud or type it in chat. Many questions are possible.",
+     "spoken": "Exit check, part two. Ask for advice in a new situation. Say it aloud or type it in chat. Many questions are possible.",
+     "id": "77f7d1e0",
+     "start": 1.05,
+     "end": 9.402000000000001
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "7.5",
+   "ch": 7,
+   "title": "Exit check three: recommend",
+   "start": 3500,
+   "dur": 55,
+   "timer": true,
+   "gate": true,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Exit check, part three. Your friend has too many emails and feels stressed. Give your own recommendation, and explain why.",
+     "spoken": "Exit check, part three. Your friend has too many emails and feels stressed. Give your own recommendation, and explain why.",
+     "id": "73190828",
+     "start": 1.05,
+     "end": 8.538
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "7.6",
+   "ch": 7,
+   "title": "Feedback on the exit check",
+   "start": 3555,
+   "dur": 25,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Here is the feedback. Part one has one correct repair. Parts two and three can have many good answers. Check form, and check usefulness.",
+     "spoken": "Here is the feedback. Part one has one correct repair. Parts two and three can have many good answers. Check form, and check usefulness.",
+     "id": "9e6bb048",
+     "start": 1,
+     "end": 9.448
+    }
+   ],
+   "clips": []
+  },
+  {
+   "id": "7.7",
+   "ch": 7,
+   "title": "Well done",
+   "start": 3580,
+   "dur": 20,
+   "timer": false,
+   "gate": false,
+   "lines": [
+    {
+     "k": "n1",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Well done. You can ask for advice, give a recommendation, and explain why.",
+     "spoken": "Well done. You can ask for advice, give a recommendation, and explain why.",
+     "id": "197265c6",
+     "start": 1.35,
+     "end": 5.958
+    },
+    {
+     "k": "n2",
+     "who": "narr",
+     "voice": "af_heart",
+     "sp": 0.98,
+     "text": "Say one sentence you will use this week.",
+     "spoken": "Say one sentence you will use this week.",
+     "id": "1dafd99c",
+     "start": 7.458,
+     "end": 9.858
+    }
+   ],
+   "clips": []
+  }
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The problem: what should I do?",
+   "a": 0,
+   "b": 300
+  },
+  {
+   "n": 2,
+   "title": "Discover the meaning of advice",
+   "a": 300,
+   "b": 780
+  },
+  {
+   "n": 3,
+   "title": "Build affirmative and negative forms",
+   "a": 780,
+   "b": 1260
+  },
+  {
+   "n": 4,
+   "title": "Ask for advice and practice pronunciation",
+   "a": 1260,
+   "b": 1740
+  },
+  {
+   "n": 5,
+   "title": "Guided practice and common mistakes",
+   "a": 1740,
+   "b": 2340
+  },
+  {
+   "n": 6,
+   "title": "Interactive adult advice mission",
+   "a": 2340,
+   "b": 3240
+  },
+  {
+   "n": 7,
+   "title": "Review, roleplay feedback, and exit check",
+   "a": 3240,
+   "b": 3600
+  }
+ ]
+}

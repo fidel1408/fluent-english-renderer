@@ -1,0 +1,50 @@
+{
+ "date": "2026-10-01T22:56:22.777Z",
+ "results": [
+  {
+   "name": "narration clips begin in step with the planned timeline (≤0.35 s late)",
+   "ok": true,
+   "info": "started 9, drift s: 0.05,0.12,0.11,0.07,0.1,0.08,0.06,0.13,0.15"
+  },
+  {
+   "name": "only one narration clip plays at any moment (single audio channel)",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "audio element really plays (currentTime advanced)",
+   "ok": true,
+   "info": "max currentTime 4.62"
+  },
+  {
+   "name": "seeking / chapter jumps / replay never create extra audio elements or overlap",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "pause freezes narration; resume continues it",
+   "ok": true,
+   "info": "{\"pausedNow\":true,\"frozen\":true,\"resumed\":true,\"cur\":true}"
+  },
+  {
+   "name": "lip-sync level follows the audio envelope of the speaking character",
+   "ok": true,
+   "info": "{\"max\":1,\"min\":0,\"who\":\"daniel\"}"
+  },
+  {
+   "name": "animation frame time in a dialogue scene (headless software rendering)",
+   "ok": true,
+   "info": "median 16.7 ms, p95 16.8 ms"
+  },
+  {
+   "name": "rendering loop stops while paused",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "no page errors during real-time playback",
+   "ok": true,
+   "info": ""
+  }
+ ]
+}

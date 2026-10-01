@@ -189,3 +189,5 @@ textarea.free{width:100%;font:600 32px var(--sans);border:3px solid var(--line);
 #chip.flash{animation:chipflash 3s ease-in-out}
 @keyframes chipflash{0%,100%{box-shadow:0 8px 22px rgba(5,10,30,.35)}15%,70%{box-shadow:0 0 0 6px var(--gold),0 8px 22px rgba(5,10,30,.45);transform:scale(1.05);transform-origin:left center}}
 #cap{justify-content:center}
+
+.fxp.in.forkcard{transform:scale(var(--k,1));transform-origin:0 0}

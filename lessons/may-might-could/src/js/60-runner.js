@@ -101,7 +101,7 @@
     },
     enterGate(actT = 0, quiet) {
       const seg = R.seg(); R.gate = true; R.actT = actT; R.timesUp = false;
-      if (seg.act && FE.FX && FE.FX.clear) { FE.$$('#fx > .fxp').forEach((e) => e.remove()); }
+      if (seg.act && FE.FX && FE.FX.clear) { FE.FX.stepForward(R.X); FE.$$('#fx > .fxp').forEach((e) => e.remove()); }
       if (seg.act) {
         R.act = FE.ACT.mount(seg, R.X);
         if (seg.act.cam) R.S.camTo(Object.assign({ x: 0, y: 0, z: 1 }, seg.act.cam), quiet ? 0 : 1.2);

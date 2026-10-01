@@ -158,17 +158,8 @@
       this.body = el('g', { class: 'body' }); root.appendChild(this.body);
       // legs
       this.legBackG = el('g'); this.legFrontG = el('g');
-      const leg = (side) => {
-        const px = side * 21;
-        const pants = d.bottom, pg = this.grad(pants);
-        const g = el('g', { transform: `translate(${px},-262)` });
-        const thigh = el('g'); const shinG = el('g', { transform: 'translate(0,128)' });
-        thigh.innerHTML = `<path d="M-23,-6 C-26,40 -22,92 -17,128 L17,128 C22,92 26,40 23,-6Z" fill="${pg}"/><path d="M0,-4 L0,126" stroke="${FE.shade(pants, -0.08)}" stroke-width="1.5" opacity=".5"/><circle cx="0" cy="128" r="17" fill="${pg}"/>`;
-        shinG.innerHTML = `<path d="M-17,0 C-17,40 -14,90 -12.5,114 L12.5,114 C14,90 17,40 17,0Z" fill="${pg}"/>
-          <g transform="translate(0,116)"><path d="M-12,-4 L12,-4 L13,6 C20,8 27,12 27,20 L27,26 L-24,26 L-24,20 C-24,12 -16,8 -13,6Z" transform="translate(${side * 3},-10)" fill="${this.grad(d.shoes)}"/><rect x="-26" y="14" width="53" height="5" rx="2.5" fill="${FE.shade(d.shoes, -0.2)}" transform="translate(${side * 3},0)"/></g>`;
-        g.appendChild(thigh); thigh.appendChild(shinG);
-        return { g, thigh, shinG };
-      };
+      FE.Art.initBody(this);
+      const leg = (side) => FE.Art.leg(this, side);
       this.legL = leg(-1); this.legR = leg(1);
       this.body.appendChild(this.legL.g); this.body.appendChild(this.legR.g);
 
@@ -176,13 +167,12 @@
       this.upper = el('g', { class: 'upper' }); this.body.appendChild(this.upper);
       this.hairBack = el('g'); this.upper.appendChild(this.hairBack);
       // arms (back layer: behind torso) — we draw both arms in front for expressive crossing; torso first
-      this.torso = el('g'); this.upper.appendChild(this.torso);
-      this.torso.innerHTML = this.torsoSVG();
       this.neck = el('g', { transform: 'translate(0,-430)' });
       this.upper.appendChild(this.neck);
-      this.neck.innerHTML =
-        `<path d="M-17,-8 L-17,16 C-17,26 17,26 17,16 L17,-8Z" fill="${this.grad(skin)}"/><path d="M-17,-2 C-8,10 8,10 17,-2 L17,6 C8,18 -8,18 -17,6Z" fill="#000" opacity=".1"/>`;
-      this.armL = this.makeArm(-1); this.armR = this.makeArm(1);
+      FE.Art.neck(this);
+      this.torso = el('g'); this.upper.appendChild(this.torso);
+      this.torso.innerHTML = this.torsoSVG();
+      this.armL = FE.Art.arm(this, -1); this.armR = FE.Art.arm(this, 1);
       this.upper.appendChild(this.armL.g); this.upper.appendChild(this.armR.g);
       this.head = el('g', { class: 'head' }); this.upper.appendChild(this.head);
       this.buildHead();
@@ -204,6 +194,7 @@
       const outer = (col, wExtra = 0) =>
         `M${-17 - wExtra},-433 C${-30},-436 ${-sx + 10},-428 ${-sx},-408 C${-sx - 4},-392 ${-cw - 4},-372 ${-cw - 2},-352 C${-ww - 6},-320 ${-ww - 6},-290 ${-hw - 3},${hem}
          L${hw + 3},${hem} C${ww + 6},-290 ${ww + 6},-320 ${cw + 2},-352 C${cw + 4},-372 ${sx + 4},-392 ${sx},-408 C${sx - 10},-428 30,-436 ${17 + wExtra},-433Z`;
+      this._outer = outer();
       if (t.style === 'dress') {
         s += `<path d="M${-ww - 6},-300 C${-hw - 14},-220 ${-hw - 26},-170 ${-hw - 30},${hem} L${hw + 30},${hem} C${hw + 26},-170 ${hw + 14},-220 ${ww + 6},-300Z" fill="${this.grad(t.color)}"/>`;
       }
@@ -240,7 +231,7 @@
       if (d.badge) s += `<g transform="translate(-24,-330)"><path d="M0,-14 L0,-30" stroke="${d.badge}" stroke-width="3"/><rect x="-9" y="0" width="22" height="30" rx="3" fill="#fff" stroke="${d.badge}" stroke-width="2"/><circle cx="2" cy="10" r="5" fill="${d.badge}" opacity=".6"/><rect x="-5" y="19" width="14" height="3" rx="1.5" fill="${d.badge}" opacity=".5"/></g>`;
       if (d.necklace) s += `<path d="M-18,-432 C-10,-410 10,-410 18,-432" stroke="${d.necklace}" stroke-width="2.4" fill="none"/><circle cx="0" cy="-413" r="4" fill="${d.necklace}"/>`;
       if (d.scarf) s += `<path d="M-20,-436 C-6,-420 6,-420 20,-436 L26,-422 C10,-402 -10,-402 -26,-422Z" fill="${d.scarf}"/><path d="M6,-410 L22,-360 L10,-356 L0,-396Z" fill="${FE.shade(d.scarf, -0.08)}"/>`;
-      return s;
+      return s + FE.Art.torsoDetail(this);
     }
 
     makeArm(side) {
@@ -259,7 +250,8 @@
       return { g, up, fore, hp: fore.querySelector('.hp'), prop: fore.querySelector('.prop'), side };
     }
 
-    buildHead() {
+    buildHead() { FE.Art.head(this); }
+    buildHeadOld() {
       const d = this.def, u = this.uid, h = this.head;
       const skin = d.skin, skinS = FE.shade(skin, -0.1, 0.02);
       const hair = HAIR[d.hair.style](d.hair.color, d.hair.hi || FE.shade(d.hair.color, 0.22));
@@ -444,7 +436,7 @@
       arm(this.armL, P.LA, P.LB, P.LW, P.LU, P.LF, this.handL, this.propL, -1);
       arm(this.armR, RAx, RBx, P.RW + wv, P.RU, P.RF, this.handR, this.propR, 1);
       if (this._handsDirty) {
-        this.armL.hp.setAttribute('d', HANDS[this.handL] || HANDS.open); this.armR.hp.setAttribute('d', HANDS[this.handR] || HANDS.open);
+        FE.Art.setHand(this.armL, this.handL); FE.Art.setHand(this.armR, this.handR);
         this.armL.prop.innerHTML = this.propL ? PROPS[this.propL] : ''; this.armR.prop.innerHTML = this.propR ? PROPS[this.propR] : '';
         this._handsDirty = false;
       }
@@ -463,15 +455,8 @@
       this.lashEls.forEach((e) => e.setAttribute('transform', `translate(0,${(bl * 6.6).toFixed(2)})`));
       // brows
       const br_ = P.brow + talkBrow, ba = P.browA;
-      const bp = (sx) => {
-        const y0 = -19.5 - br_ * 4.5, tilt = ba * 4; // + = frown (inner down)
-        const xi = sx * 6, xo = sx * 27;
-        const yi = y0 + tilt + (ba < 0 ? ba * 2 : 0), yo = y0 - tilt * 0.9;
-        return `M${xi},${yi + 1.8} C${xi + sx * 6},${yi - 3} ${xo - sx * 8},${yo - 4} ${xo},${yo - 0.5} C${xo - sx * 8},${yo - 1} ${xi + sx * 7},${yi + 0.6} ${xi},${yi + 3.2}Z`;
-      };
-      this.browL.setAttribute('d', bp(-1)); this.browR.setAttribute('d', bp(1));
-      this.mouth(P.mo, P.sm, P.mw);
-      if (this.def.build === 'f') this.mouthG.setAttribute('opacity', 1);
+      FE.Art.brows(this, br_, ba);
+      FE.Art.mouth(this, P.mo, P.sm, P.mw);
     }
 
     mouth(o, sm, mw) {
@@ -560,7 +545,7 @@
               hair: { style: 'long', color: '#1b1412', hi: '#4a3a33' }, top: { style: 'blouse', color: '#14876b', sleeve: '#14876b', sleeveLen: 'short' },
               bottom: '#efe3cc', shoes: '#f0d9b0', necklace: '#f2f2f2', earring: '#f2c14e' },
     tom:    { id: 'tom', name: 'Tom', build: 'm', skin: '#eab99a', eye: '#3d6a8c', lip: '#a65d54', blush: '#e08a82', jaw: 1.06,
-              hair: { style: 'shortBeard', color: '#6a4a2e', hi: '#a07a52' }, top: { style: 'shirt', color: '#8aa6bf', sleeve: '#4c5f74', cuff: '#4c5f74' },
+              hair: { style: 'shortBeard', color: '#6a4a2e', hi: '#a07a52' }, top: { style: 'shirt', color: '#8aa6bf', sleeve: '#8aa6bf', cuff: '#6d8aa6' },
               bottom: '#3a4a63', shoes: '#4b3a2c', beard: '#6a4a2e', mustache: '#5b3e26' },
     lena:   { id: 'lena', name: 'Lena', build: 'f', skin: '#e2ae8c', eye: '#5a6f3c', lip: '#b13e4b', blush: '#e0707a', jaw: 0.9,
               hair: { style: 'bun', color: '#8e3b21', hi: '#c9703f' }, top: { style: 'blazer', color: '#1e3358', inner: '#f5f3ee', sleeve: '#1e3358', cuff: '#c8a24a' },
@@ -569,5 +554,6 @@
               hair: { style: 'sidePart', color: '#14110f', hi: '#3a3330' }, top: { style: 'blazer', color: '#3c4350', inner: '#e8b64a', sleeve: '#3c4350', cuff: null, tie: null },
               bottom: '#343a46', shoes: '#241c18', glasses: null },
   };
+  Char.HAIR = HAIR;
   FE.Char = Char;
 })();

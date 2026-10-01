@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#cfe3f0"><svg id="s" viewBox="0 0 1800 640" width="1800" height="640"></svg>
+<script src="js/00-util.js"></script><script src="js/10-rig.js"></script><script src="js/11-art.js"></script><script src="js/12-art-hair.js"></script><script src="js/13-art-body.js"></script>
+<script>
+const s=document.getElementById('s');const faces=['smile','neutral','surprised','worried','smile','grin'];
+['maya','daniel','priya','tom','lena','ken'].forEach((n,i)=>{const c=new FE.Char(FE.Char.CAST[n]);c.set({x:150+i*300,y:1420,s:2.5});c.pose('idle',0);c.face(faces[i],0);if(i==2){c.set({mo:.7})}FE.Tween.finish();c.render(0.016);s.appendChild(c.el);});
+s.setAttribute('viewBox','0 0 1800 640');
+</script>

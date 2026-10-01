@@ -142,7 +142,7 @@
       ['do', (X) => { FE.FX.clear(X, 'ask'); FE.Audio.sfx('rumble'); FE.Tween.to(X.S, { trainX: 120 }, 5, 'out'); }],
       wait(5),
       say('daniel', 'Look! It is here, and it is on time.', { face: 'relief', gest: 'pointR', to: 'maya' }),
-      fx('fork', { id: 'fork4', h: 330, w: 1250, x: 330, y: 160, evidence: { icon: 'stop', label: 'a signal problem' }, branches: [{ icon: 'clock', text: 'The train {m:could} {v:be} late.' }, { icon: 'train', text: 'The train {m:could} {v:be} on time.' }] }, 2),
+      fx('fork', { id: 'fork4', h: 330, w: 1450, x: 230, y: 160, evidence: { icon: 'stop', label: 'a signal problem' }, branches: [{ icon: 'clock', text: 'The train {m:could} {v:be} late.' }, { icon: 'train', text: 'The train {m:could} {v:be} on time.' }] }, 2),
       nar('This time the train was on time. But before it arrived, both futures were possible. That is what could does here. It looks ahead.'),
     ],
     act: {

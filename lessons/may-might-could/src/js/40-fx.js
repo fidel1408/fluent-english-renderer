@@ -50,6 +50,7 @@
   };
   FX.clear = (X, id) => {
     const fx = FE.$('#fx'); if (!fx) return;
+    if (!id || /^fork/.test(id)) FX.stepForward(X);
     (id ? FE.$$('#fx_' + id, fx) : FE.$$('.fxp', fx)).forEach((e) => { if (FE.Tween.instant) e.remove(); else { e.classList.remove('in'); setTimeout(() => e.remove(), 400); } });
   };
   FX.show = (X, id, delay = 0) => { const e = FE.$('#fx_' + id); if (e) setTimeout(() => e.classList.add('in'), FE.Tween.instant ? 0 : delay); };
@@ -66,11 +67,31 @@
       const cy = 30 + rowH * i + rowH / 2, cx = 520;
       const d = o.certain ? `M${x0 + 70},${y0} L${cx},${y0}` : `M${x0 + 70},${y0} C${x0 + 220},${y0} ${cx - 150},${cy} ${cx},${cy}`;
       svg += `<path class="br" d="${d}" fill="none" stroke="${b.tone === 'no' ? '#b84308' : '#1d4ed8'}" stroke-width="7" stroke-linecap="round" ${o.certain ? '' : 'stroke-dasharray="4 16"'} style="transition-delay:${0.5 + i * 0.4}s"/>`;
-      cards += `<div class="oc" style="top:${cy - rowH / 2 + 8}px;height:${rowH - 16}px;transition-delay:${1 + i * 0.4}s"><div class="oci">${FE.icon(b.icon, Math.min(110, rowH - 30))}</div><div class="ocs ${o.certain ? 'solid' : ''}">${FE.U(b.text)}</div></div>`;
+      cards += `<div class="oc" style="top:${cy - rowH / 2 + 8}px;height:${rowH - 16}px;transition-delay:${1 + i * 0.4}s"><div class="oci">${FE.icon(b.icon, Math.min(128, rowH - 20))}</div><div class="ocs ${o.certain ? 'solid' : ''}">${FE.U(b.text)}</div></div>`;
     });
-    const ev = o.evidence ? `<div class="evn"><div class="evi">${FE.icon(o.evidence.icon, 100)}</div>${o.evidence.label ? `<div class="evl">${FE.U(o.evidence.label)}</div>` : ''}</div>` : '';
+    const ev = o.evidence ? `<div class="evn"><div class="evi">${FE.icon(o.evidence.icon, 128)}</div>${o.evidence.label ? `<div class="evl">${FE.U(o.evidence.label)}</div>` : ''}</div>` : '';
     const html = `<div class="fork" style="height:${H}px;width:${W}px"><svg class="fsv" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${svg}</svg>${ev}<div class="ocs-wrap">${cards}</div>${o.certain ? '<div class="stamp">' + FE.icon('check', 70) + '</div>' : ''}</div>`;
-    return FX.panel(X, { id: o.id || 'fork', x: o.x != null ? o.x : 280, y: o.y != null ? o.y : 250, cls: 'forkcard', html, sfx: 'whoosh' });
+    const pn = FX.panel(X, { id: o.id || 'fork', x: o.x != null ? o.x : 280, y: o.y != null ? o.y : 250, cls: 'forkcard', html, sfx: 'whoosh' });
+    FX.stepBack(X, pn);
+    return pn;
+  };
+  /* the characters step back (smaller, feet fixed) so a card never covers a head; restored when the card goes */
+  const BACK = 0.8;
+  FX.stepBack = (X, pn) => {
+    const S = X && X.S; if (!S || !S.chars) return;
+    let minTop = 1e9;
+    Object.values(S.chars).forEach((c) => {
+      if (c._sBase == null) c._sBase = c.P.s;
+      const a = c.anchor(), top = S.toScreen(a.x, a.top).y, feet = S.toScreen(a.x, c.P.y).y;
+      minTop = Math.min(minTop, feet - (feet - top) * (BACK * c._sBase / c.P.s));
+      FE.Tween.to(c.P, { s: c._sBase * BACK }, 0.7, 'inOut');
+    });
+    const room = minTop - 16 - pn.offsetTop, k = Math.max(0.8, Math.min(1, room / pn.offsetHeight));
+    pn.style.setProperty('--k', k.toFixed(3));
+  };
+  FX.stepForward = (X) => {
+    const S = X && X.S; if (!S || !S.chars) return;
+    Object.values(S.chars).forEach((c) => { if (c._sBase != null) { FE.Tween.to(c.P, { s: c._sBase }, 0.6, 'inOut'); c._sBase = null; } });
   };
 
   /* ---------- modal trio ---------- */

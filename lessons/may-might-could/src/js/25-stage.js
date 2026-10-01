@@ -28,6 +28,7 @@
       ['back', 'mid', 'chars', 'front', 'fg'].forEach((n) => { this.layers[n] = el('g', { class: 'L-' + n }); this.world.appendChild(this.layers[n]); });
       const def = SCENES[name]; if (!def) throw new Error('scene ' + name);
       this.sc = def(this, opts) || {};
+      if (FE.Finish) FE.Finish.apply(this);
       d.light.style.background = this.sc.light || 'none';
       this.applyCam();
       return this;

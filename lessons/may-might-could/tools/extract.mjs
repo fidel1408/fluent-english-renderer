@@ -7,7 +7,7 @@ vm.createContext(sandbox);
 const run = (f) => vm.runInContext(fs.readFileSync(path.join(root, 'src/js', f), 'utf8'), sandbox, { filename: f });
 sandbox.window.FE = {};
 for (const f of ['00-util.js', '20-ipa.js', '50-audio.js', '60-runner.js']) run(f);
-for (const f of fs.readdirSync(path.join(root, 'src/js')).filter((x) => /^9[1-9]-/.test(x)).sort()) run(f);
+for (const f of fs.readdirSync(path.join(root, 'src/js')).filter((x) => /^9[1-8]-/.test(x)).sort()) run(f);
 const FE = sandbox.window.FE; const out = new Map();
 const add = (voice, text, ph, who) => { const key = FE.speechKey(voice, text, ph); if (!out.has(key)) out.set(key, { key, voice, who, text: FE.stripMarkup(text), ph: ph || null }); };
 for (const s of FE.L.segs) {

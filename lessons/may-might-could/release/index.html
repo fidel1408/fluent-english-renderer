@@ -34,7 +34,7 @@ button{font-family:inherit}
 .wu .p{font-family:var(--ipa);font-size:.52em;line-height:1.2;color:#4b5675;letter-spacing:.01em;margin-top:.04em}
 .wu .pn{position:absolute;top:0;font-style:normal;font-weight:600}
 .wu .pn.l{right:100%}.wu .pn.t{left:100%}
-.wu.pl{margin-left:.32em}.wu.pt{margin-right:.34em}
+
 .wu.hl .w{background:var(--gold);border-radius:.2em;box-shadow:0 0 0 .08em var(--gold)}
 .wu.hl .p{color:var(--ink)}
 .r-s .w{color:var(--subj)}.r-m .w{color:var(--modal)}.r-v .w{color:var(--verb)}.r-n .w{color:var(--neg)}.r-t .w{color:var(--cue)}.r-c .w{color:var(--cert)}
@@ -157,7 +157,7 @@ textarea.free{width:100%;font:600 32px var(--sans);border:3px solid var(--line);
 .stamp{position:absolute;right:16px;top:-26px}
 .trow,.ax-s .trow{display:flex;align-items:center;gap:20px;margin:10px 0;opacity:0;transform:translateX(-24px);transition:opacity .5s,transform .5s;background:#fff;border:3px solid var(--line);border-radius:20px;padding:6px 26px 4px}
 .fxp.in .trow{opacity:1;transform:none}
-.axis{position:relative;height:150px;margin:20px 20px 10px}.ax-line{position:absolute;left:0;right:0;top:78px;height:8px;border-radius:4px;background:linear-gradient(90deg,#1d4ed8,#be185d)}
+.axis{position:relative;height:190px;margin:20px 20px 10px}.ax-line{position:absolute;left:0;right:0;top:78px;height:8px;border-radius:4px;background:linear-gradient(90deg,#1d4ed8,#be185d)}
 .ax-now,.ax-later{position:absolute;top:0;--fs:36px}.ax-now{left:0}.ax-later{right:0}
 .ax-cue{position:absolute;top:96px;transform:translateX(-50%);opacity:0;transition:opacity .5s;white-space:nowrap}.fxp.in .ax-cue{opacity:1}.ax-cue .chip{--fs:26px;cursor:default;margin:0}
 .brow{position:relative;min-height:120px;margin:10px 0}.brow .chip{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s;--fs:46px;cursor:default}.fxp.in .brow .chip{opacity:1;transform:none}
@@ -946,7 +946,8 @@ window.NARR = {"kvnvotj":{"file":"audio/kvnvotj.mp3","dur":8.998,"rate":30,"env"
       const lead = t.lead ? `<i class="pn l">${esc(t.lead)}</i>` : '';
       const trail = t.trail ? `<i class="pn t">${esc(t.trail)}</i>` : '';
       const pad = (t.lead ? ' pl' : '') + (t.trail ? ' pt' : '');
-      return `<span class="wu${r}${pad}" data-i="${i}"><span class="w">${lead}${esc(t.word)}${trail}</span><span class="p">/${esc(ipa)}/</span></span>`;
+      const sty = (t.lead ? `margin-left:${(0.12 + 0.3 * t.lead.length).toFixed(2)}em;` : '') + (t.trail ? `margin-right:${(0.1 + 0.3 * t.trail.length).toFixed(2)}em;` : '');
+      return `<span class="wu${r}${pad}" data-i="${i}"${sty ? ` style="${sty}"` : ''}><span class="w">${lead}${esc(t.word)}${trail}</span><span class="p">/${esc(ipa)}/</span></span>`;
     }).join(' ');
   };
   /* convenience: a block of units */
@@ -1854,7 +1855,7 @@ your jɔːr
     L.back.appendChild(view);
     L.back.appendChild(el('g', {}, `<rect x="146" y="136" width="1628" height="588" rx="16" fill="none" stroke="#98a1ae" stroke-width="16"/>${[560, 960, 1360].map((x) => `<rect x="${x - 5}" y="150" width="10" height="560" fill="#98a1ae"/>`).join('')}<path d="M160,700 L1000,150" stroke="#fff" stroke-opacity=".08" stroke-width="140"/>`));
     // departure board (abstract bars only)
-    L.mid.appendChild(el('g', { transform: 'translate(660,24)' }, `<rect width="600" height="104" rx="10" fill="#10172b"/>${[0, 1, 2].map((i) => `<g transform="translate(24,${16 + i * 28})"><rect width="70" height="14" rx="3" fill="#f2b84b"/><rect x="90" width="180" height="14" rx="3" fill="#cfd8f0" opacity=".85"/><rect x="290" width="140" height="14" rx="3" fill="#cfd8f0" opacity=".6"/><circle cx="520" cy="7" r="8" fill="${['#58c288', '#f2b84b', '#e8685b'][i]}"/></g>`).join('')}`));
+    L.mid.appendChild(el('g', { transform: 'translate(840,26) scale(.82)' }, `<rect width="600" height="104" rx="10" fill="#10172b"/>${[0, 1, 2].map((i) => `<g transform="translate(24,${16 + i * 28})"><rect width="70" height="14" rx="3" fill="#f2b84b"/><rect x="90" width="180" height="14" rx="3" fill="#cfd8f0" opacity=".85"/><rect x="290" width="140" height="14" rx="3" fill="#cfd8f0" opacity=".6"/><circle cx="520" cy="7" r="8" fill="${['#58c288', '#f2b84b', '#e8685b'][i]}"/></g>`).join('')}`));
     L.mid.appendChild(el('g', {}, `<rect x="0" y="724" width="1920" height="356" fill="url(#af)"/>` + Array.from({ length: 16 }, (_, i) => `<line x1="${i * 140 - 100}" y1="724" x2="${(i * 140 - 100 - 960) * 2.2 + 960}" y2="1080" stroke="#8f96a2" stroke-opacity=".5" stroke-width="3"/>`).join('') + `<rect x="0" y="724" width="1920" height="10" fill="#8f96a2"/>`));
     // seat row + gate counter
     const seat = (x, y) => `<g transform="translate(${x},${y})"><rect x="0" y="-70" width="86" height="70" rx="12" fill="#2d4a7a"/><rect x="-8" y="-14" width="102" height="26" rx="10" fill="#243b66"/><rect x="40" y="12" width="8" height="50" fill="#555d6a"/></g>`;
@@ -2669,7 +2670,7 @@ your jɔːr
       const sp = this.spec, st = this.st;
       let fb = '';
       if (st.res) fb = st.res.length ? `<div class="fb no"><b>${U('Form check:')}</b>${st.res.map((r) => `<div class="ub sm">${U(r.msg)}</div>`).join('')}<div class="note" style="margin-top:6px">${U('This checker only looks for a few form patterns. Always check the meaning aloud.')}</div></div>` : `<div class="fb ok"><b>${U('No form problems found.')}</b> <span class="ub sm">${U('Now say it aloud. Does it match what you mean?')}</span><div class="note" style="margin-top:6px">${U('This checker only looks for a few form patterns. It cannot judge meaning.')}</div></div>`;
-      this.el.innerHTML = frame(sp, `<div class="qq ub mid">${U(sp.q)}</div>${sp.prompts ? `<ul class="facts">${sp.prompts.map((f) => `<li class="ub sm">${U(f)}</li>`).join('')}</ul>` : ''}<label class="sr" for="freeIn">sentence</label><textarea id="freeIn" class="free" rows="2" placeholder="Type a learner sentence here…" spellcheck="false">${st.txt || ''}</textarea>${fb}`, ib('Check form', 'check', I.check, 'gold') + ib('Show examples', 'ex', I.eye), sp.tag || 'Your sentence');
+      this.el.innerHTML = frame(sp, `<div class="qq ub mid">${U(sp.q)}</div>${sp.prompts ? `<ul class="facts">${sp.prompts.map((f) => `<li class="ub sm">${U(f)}</li>`).join('')}</ul>` : ''}<label class="sr" for="freeIn">sentence</label><textarea id="freeIn" class="free" rows="2" spellcheck="false">${st.txt || ''}</textarea>${fb}`, ib('Check form', 'check', I.check, 'gold') + ib('Show examples', 'ex', I.eye), sp.tag || 'Your sentence');
       const ta = this.el.querySelector('textarea'); ta.addEventListener('input', () => { st.txt = ta.value; });
       ta.addEventListener('keydown', (e) => e.stopPropagation());
       if (st.ex) this.el.querySelector('.afoot').insertAdjacentHTML('beforebegin', `<div class="fb">${sp.examples.map((s) => `<div class="ub sm">${U(s)}</div>`).join('')}</div>`);
@@ -2844,31 +2845,6 @@ your jɔːr
   };
   UI.capHL = (i) => { if (UI.capUnits) UI.capUnits.forEach((u, k) => u.classList.toggle('hl', k === i)); };
   UI.capHide = () => { const c = $('#cap'); if (c) { c.style.display = 'none'; c.innerHTML = ''; } UI.capUnits = null; };
-})();
-</script>
-<script>/* 90-main.js */
-/* 90-main: boot, start screen */
-(function () {
-  'use strict';
-  const FE = window.FE, { $ } = FE;
-  function boot() {
-    FE.UI.build();
-    const st = new FE.Stage({ scene: $('#scene'), light: $('#light'), fx: $('#fx'), bubbles: $('#bubbles') });
-    FE.R.init(st); FE.stage = st;
-    const total = FE.plan();
-    $('#vtitle').innerHTML = FE.U('{m:May}, {m:Might}, and {m:Could}');
-    $('#vtitle').style.cssText = '--fs:96px';
-    $('#vsub').innerHTML = FE.U('An adult English class');
-    $('#vsub').style.cssText = '--fs:40px';
-    $('#goClass').innerHTML = FE.U('Start Class Mode'); $('#goDemo').innerHTML = FE.U('Start Demo Mode');
-    $('#goClass').style.setProperty('--fs', '34px'); $('#goDemo').style.setProperty('--fs', '34px');
-    const go = (mode) => { $('#startVeil').remove(); FE.R.mode = mode; FE.R.load(0, 0); FE.R.setMode(mode); FE.R.play(); };
-    $('#goClass').onclick = () => go('class'); $('#goDemo').onclick = () => go('demo');
-    $('#goClass').focus();
-    FE.R.load(0, 0); // paint the first frame behind the veil
-    window.__total = total;
-  }
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(boot); else addEventListener('load', boot);
 })();
 </script>
 <script>/* 91-ch1-2.js */
@@ -3432,6 +3408,7 @@ your jɔːr
     steps: [
       nar('Here is the plan your class chose. Look at the scene, and look at the choices.'),
       ['do', (X) => FE.FX.panel(X, { id: 'planbox', x: 300, y: 160, w: 1320, html: `<h3>${FE.U('Our plan')}</h3>${['shelter', 'food', 'guest'].map((k) => `<div class="ub mid" style="display:block;margin:6px 0">${FE.U(T[k](FE.L))}</div>`).join('')}`, sfx: 'reveal' })],
+      ['wait', 5], ['do', (X) => FE.FX.clear(X, 'planbox')],
       say('maya', 'OK. What {m:could} go wrong?', { gest: 'open', face: 'curious', to: 'daniel' }),
       say('daniel', 'The weather {m:might} change.', { gest: 'pointUpL', face: 'unsure', to: 'maya' }),
       say('maya', 'And the food {m:could} be late.', { gest: 'think', face: 'unsure', to: 'daniel' }),
@@ -3564,6 +3541,31 @@ your jɔːr
       nar('Thank you for learning with Fluent English. Today you used may, might, and could to talk about what is possible. See you next time!'),
     ],
   });
+})();
+</script>
+<script>/* 99-main.js */
+/* 90-main: boot, start screen */
+(function () {
+  'use strict';
+  const FE = window.FE, { $ } = FE;
+  function boot() {
+    FE.UI.build();
+    const st = new FE.Stage({ scene: $('#scene'), light: $('#light'), fx: $('#fx'), bubbles: $('#bubbles') });
+    FE.R.init(st); FE.stage = st;
+    const total = FE.plan();
+    $('#vtitle').innerHTML = FE.U('{m:May}, {m:Might}, and {m:Could}');
+    $('#vtitle').style.cssText = '--fs:96px';
+    $('#vsub').innerHTML = FE.U('An adult English class');
+    $('#vsub').style.cssText = '--fs:40px';
+    $('#goClass').innerHTML = FE.U('Start Class Mode'); $('#goDemo').innerHTML = FE.U('Start Demo Mode');
+    $('#goClass').style.setProperty('--fs', '34px'); $('#goDemo').style.setProperty('--fs', '34px');
+    const go = (mode) => { $('#startVeil').remove(); FE.R.mode = mode; FE.R.load(0, 0); FE.R.setMode(mode); FE.R.play(); };
+    $('#goClass').onclick = () => go('class'); $('#goDemo').onclick = () => go('demo');
+    $('#goClass').focus();
+    FE.R.load(0, 0); // paint the first frame behind the veil
+    window.__total = total;
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(boot); else addEventListener('load', boot);
 })();
 </script>
 </body>

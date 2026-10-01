@@ -63,7 +63,8 @@
       const lead = t.lead ? `<i class="pn l">${esc(t.lead)}</i>` : '';
       const trail = t.trail ? `<i class="pn t">${esc(t.trail)}</i>` : '';
       const pad = (t.lead ? ' pl' : '') + (t.trail ? ' pt' : '');
-      return `<span class="wu${r}${pad}" data-i="${i}"><span class="w">${lead}${esc(t.word)}${trail}</span><span class="p">/${esc(ipa)}/</span></span>`;
+      const sty = (t.lead ? `margin-left:${(0.12 + 0.3 * t.lead.length).toFixed(2)}em;` : '') + (t.trail ? `margin-right:${(0.1 + 0.3 * t.trail.length).toFixed(2)}em;` : '');
+      return `<span class="wu${r}${pad}" data-i="${i}"${sty ? ` style="${sty}"` : ''}><span class="w">${lead}${esc(t.word)}${trail}</span><span class="p">/${esc(ipa)}/</span></span>`;
     }).join(' ');
   };
   /* convenience: a block of units */

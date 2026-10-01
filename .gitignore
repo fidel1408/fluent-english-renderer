@@ -2,3 +2,6 @@ node_modules/
 dist/
 *.log
 .env
+
+tools/.plan.json
+tools/.missing.json

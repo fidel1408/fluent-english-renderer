@@ -107,6 +107,7 @@
     steps: [
       nar('Here is the plan your class chose. Look at the scene, and look at the choices.'),
       ['do', (X) => FE.FX.panel(X, { id: 'planbox', x: 300, y: 160, w: 1320, html: `<h3>${FE.U('Our plan')}</h3>${['shelter', 'food', 'guest'].map((k) => `<div class="ub mid" style="display:block;margin:6px 0">${FE.U(T[k](FE.L))}</div>`).join('')}`, sfx: 'reveal' })],
+      ['wait', 5], ['do', (X) => FE.FX.clear(X, 'planbox')],
       say('maya', 'OK. What {m:could} go wrong?', { gest: 'open', face: 'curious', to: 'daniel' }),
       say('daniel', 'The weather {m:might} change.', { gest: 'pointUpL', face: 'unsure', to: 'maya' }),
       say('maya', 'And the food {m:could} be late.', { gest: 'think', face: 'unsure', to: 'daniel' }),

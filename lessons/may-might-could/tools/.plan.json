@@ -28,7 +28,7 @@
   {
    "n": 5,
    "len": 900,
-   "rest": 822,
+   "rest": 817,
    "fits": true
   },
   {
@@ -257,44 +257,44 @@
   },
   {
    "id": "5.2",
-   "plan": 161,
+   "plan": 160,
    "film": 5.9,
-   "act": 155.1,
+   "act": 154.1,
    "hasAct": true
   },
   {
    "id": "5.3",
-   "plan": 160,
+   "plan": 159,
    "film": 5.1,
-   "act": 154.9,
+   "act": 153.9,
    "hasAct": true
   },
   {
    "id": "5.4",
-   "plan": 109,
+   "plan": 108,
    "film": 5,
-   "act": 104,
+   "act": 103,
    "hasAct": true
   },
   {
    "id": "5.5",
-   "plan": 266,
+   "plan": 264,
    "film": 7.7,
-   "act": 258.3,
+   "act": 256.3,
    "hasAct": true
   },
   {
    "id": "5.6",
-   "plan": 164,
+   "plan": 163,
    "film": 8.5,
-   "act": 155.5,
+   "act": 154.5,
    "hasAct": true
   },
   {
    "id": "5.7",
-   "plan": 17,
-   "film": 15.6,
-   "act": 1.4,
+   "plan": 23,
+   "film": 20.6,
+   "act": 2.4,
    "hasAct": false
   },
   {

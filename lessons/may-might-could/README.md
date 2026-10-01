@@ -174,7 +174,7 @@ When a possibility card appears, the characters step back slightly so the card n
 ## The passive video
 
 `node tools/export-mp4.mjs --fps 8 --out export/file.mp4` renders Demo Mode frame by frame in headless Chromium and mixes every narration clip at its exact time.
-It ran on the build machine (not in your browser) in about 17 minutes. Because it is frame-stepped at 8 fps, mouth and gesture motion looks choppier than the live lesson,
+It ran on the build machine (not in your browser) in about 23 minutes; the output is 960×540. Because it is frame-stepped at 8 fps, mouth and gesture motion looks choppier than the live lesson,
 and it has no music, ambience, or sound effects. Checked: duration is exactly 3600.0 s, video and audio streams are present, and the on-screen plan clock matches the video time at 20:10, 40:00, and 59:51.
 I did not watch or listen to the whole video.
 

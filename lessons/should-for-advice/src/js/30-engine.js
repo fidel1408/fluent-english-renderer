@@ -97,6 +97,7 @@
     if (seg.revealAt != null) { S.at(seg.revealAt, () => { if (E.mode === 'demo') S.doReveal(); }); S.cues.sort((a, b) => a.t - b.t); S.cues.forEach((c) => { if (c.t <= off && !c.done) { c.done = true; c.fn(); } }); }
     E.visited[seg.id] = true;
     E.emit('seg', seg);
+    { const cur = seg.lines.find((l) => l.start <= off && off < l.end); if (cur) E.emit('line', cur); }
     if (off >= seg.dur) E.segmentEnd();
   };
 
@@ -126,7 +127,7 @@
     for (let i = 0; i < cues.length; i++) { const c = cues[i]; if (!c.done && c.t <= E.local) { c.done = true; try { c.fn(); } catch (e) { console.error('cue error', s.id, e); } } }
     // narration
     while (s.lines[E.lineIx] && s.lines[E.lineIx].start <= E.local) {
-      const ln = s.lines[E.lineIx++];
+      const ln = s.lines[E.lineIx++]; E.emit('line', ln);
       if (!FE.qa && E.playing) FE.audio.play(ln.id, Math.max(0, E.local - ln.start - 0.05), ln.who);
     }
     if (E.local >= s.dur && prev < s.dur) E.segmentEnd();

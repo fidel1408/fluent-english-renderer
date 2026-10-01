@@ -22,8 +22,13 @@ lessons/should-for-advice/dist/should-for-advice.html      ← open this (≈8 M
 * Hiding the bar never pauses, restarts or interrupts narration, animation, timers or activities. The visibility state is kept across chapter changes, window resizing and full screen.
 * While the bar is hidden, everything learners need stays **inside the lesson scene**: instructions, answer choices, the activity countdown (with pause, +1:00, hint and show-answer buttons), and the CLASS-mode “Continue” banner.
 
+### Captions and pronunciation switches
+* **CC** shows the narrator's current sentence as on-screen captions (off by default).
+* **IPA** shows or hides the pronunciation line under every word (on by default; the lesson is designed with IPA on).
+* Both live in the control bar and also in the bottom-left corner while the bar is hidden. Shortcuts: `C` and `I`.
+
 ### Keyboard shortcuts
-`H` hide/show bar · `Space` play/pause · `←` / `→` back/forward 5 s · `N` / `P` next/previous chapter · `R` replay current example · `F` full screen · `Esc` close panels.
+`H` hide/show bar · `C` captions · `I` IPA · `Space` play/pause · `←` / `→` back/forward 5 s · `N` / `P` next/previous chapter · `R` replay current example · `F` full screen · `Esc` close panels.
 
 ## Two modes (explained on the opening card)
 

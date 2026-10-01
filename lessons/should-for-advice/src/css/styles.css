@@ -240,3 +240,16 @@ button{font:inherit;color:inherit;cursor:pointer}
 .bubble.rp:hover .rpi,.bubble.rp:focus-visible .rpi{color:#e8604c}
 .paper .btn.ghost,.paper.card .btn.ghost{color:#121b33;border-color:#8a95b0;background:rgba(18,27,51,.07)}
 .paper .btn.ghost .u .p{color:#4f5d7d}
+
+body.no-ipa .u .p{display:none}
+body.no-ipa .u{margin-bottom:.02em}
+.tgl{flex:none;min-width:40px;height:40px;border-radius:11px;border:1px solid #34466f;background:#141f38;color:#e8eefc;font-weight:800;font-size:14px;padding:0 8px;letter-spacing:.03em}
+.tgl[aria-pressed="true"]{background:#ffb540;color:#2a1a00;border-color:#ffb540}
+.tgl:hover{border-color:#6f84b5}
+#quick{position:fixed;left:10px;bottom:10px;z-index:60;display:none;gap:6px}
+#app.bar-hidden #quick{display:flex}
+#quick .tgl{height:44px;min-width:48px;background:rgba(11,18,34,.72);border:2px solid rgba(255,255,255,.55);opacity:.6}
+#quick .tgl:hover,#quick .tgl:focus-visible,#quick .tgl[aria-pressed="true"]{opacity:1}
+#quick .tgl[aria-pressed="true"]{background:#ffb540;border-color:#ffb540}
+#cc{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);max-width:1560px;z-index:36;display:none;padding:8px 26px 12px;border-radius:22px;background:rgba(6,9,18,.9);border:1.5px solid rgba(255,255,255,.2);font-size:38px;text-align:center;pointer-events:none}
+#cc.on{display:block}

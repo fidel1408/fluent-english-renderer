@@ -1,5 +1,5 @@
 {
- "date": "2026-10-01T22:55:29.543Z",
+ "date": "2026-10-01T23:15:04.258Z",
  "results": [
   {
    "name": "title is exactly \"Should for Advice\"",
@@ -337,6 +337,46 @@
    "info": ""
   },
   {
+   "name": "CC and IPA switches stay reachable in the corner while the bar is hidden",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "captions are off by default",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "CC on: the current narration line appears as captions (with IPA units)",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "C key toggles captions off",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "IPA off hides every pronunciation line (words stay)",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "I key turns IPA back on",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "CC and IPA buttons are in the control bar too, with pressed state",
+   "ok": true,
+   "info": ""
+  },
+  {
+   "name": "no errors from CC/IPA switches",
+   "ok": true,
+   "info": ""
+  },
+  {
    "name": "every displayed English word is a word-over-IPA unit with non-empty IPA",
    "ok": true,
    "info": "7791 units checked; bad: []"
@@ -364,72 +404,72 @@
   {
    "name": "DOM size stays bounded over the full simulated hour",
    "ok": true,
-   "info": "max nodes 1798, last {\"T\":3600,\"nodes\":1616,\"actors\":2,\"hooks\":0,\"heap\":15}"
+   "info": "max nodes 1804, last {\"T\":3600,\"nodes\":1622,\"actors\":2,\"hooks\":0,\"heap\":16}"
   }
  ],
  "memorySamples": [
   {
    "T": 400,
-   "nodes": 1679,
+   "nodes": 1685,
    "actors": 2,
    "hooks": 3,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 800,
-   "nodes": 1481,
+   "nodes": 1487,
    "actors": 1,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 1200,
-   "nodes": 1332,
+   "nodes": 1338,
    "actors": 1,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 1600,
-   "nodes": 1378,
+   "nodes": 1384,
    "actors": 1,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 2000,
-   "nodes": 1272,
+   "nodes": 1278,
    "actors": 1,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 2400,
-   "nodes": 1344,
+   "nodes": 1350,
    "actors": 3,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 2800,
-   "nodes": 1798,
+   "nodes": 1804,
    "actors": 2,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 3200,
-   "nodes": 1478,
+   "nodes": 1484,
    "actors": 1,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   },
   {
    "T": 3600,
-   "nodes": 1616,
+   "nodes": 1622,
    "actors": 2,
    "hooks": 0,
-   "heap": 15
+   "heap": 16
   }
  ]
 }

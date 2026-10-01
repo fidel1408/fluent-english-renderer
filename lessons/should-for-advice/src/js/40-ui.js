@@ -102,14 +102,24 @@
     });
     app.appendChild(pop);
     UI.soundBtn = ib('vol', 'sound', () => { pop.classList.toggle('on'); const r = UI.soundBtn.getBoundingClientRect(); pop.style.left = Math.max(6, Math.min(innerWidth - 260, r.left - 100)) + 'px'; });
-    bar.append(UI.soundBtn, ib('notes', 'teacher notes', () => UI.toggleNotes()), UI.fsBtn = ib('full', 'full screen', () => UI.fullscreen()), ib('flag', 'restart lesson', () => UI.confirmRestart()));
+    UI.ccBtn = h('button', { class: 'tgl', type: 'button', text: 'CC', 'aria-pressed': 'false', onclick: () => UI.setCC(!UI.cc) }); withTip(UI.ccBtn, 'captions');
+    UI.ipaBtn = h('button', { class: 'tgl', type: 'button', text: 'IPA', 'aria-pressed': 'true', onclick: () => UI.setIPA(!UI.ipa) }); withTip(UI.ipaBtn, 'show pronunciation');
+    bar.append(UI.ccBtn, UI.ipaBtn, UI.soundBtn, ib('notes', 'teacher notes', () => UI.toggleNotes()), UI.fsBtn = ib('full', 'full screen', () => UI.fullscreen()), ib('flag', 'restart lesson', () => UI.confirmRestart()));
     const hb = h('button', { class: 'hidebtn', type: 'button', id: 'hideBtn', 'aria-expanded': 'true', 'aria-controls': 'bar', html: UI.svgIcon('down') + UB('hide controls'), onclick: () => UI.setBar(true, true) });
     hb.setAttribute('aria-label', 'Hide controls'); hb.dataset.tip = 'hide controls (H)'; bar.append(h('span', { style: { flex: '0 0 4px' } }), hb);
 
     const show = (UI.showBtn = h('button', { id: 'showBtn', type: 'button', 'aria-label': 'Show controls', 'aria-controls': 'bar', 'aria-expanded': 'false', html: UI.svgIcon('up'), onclick: () => UI.setBar(false, true) }));
     show.style.color = '#fff'; show.querySelector('svg').style.cssText = 'stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round';
     withTip(show, 'show controls (H)');
-    app.append(vp, bar, show, tip); root.appendChild(app);
+    // the same two switches stay reachable in the corner while the bar is hidden
+    const quick = h('div', { id: 'quick' });
+    UI.ccBtn2 = h('button', { class: 'tgl', type: 'button', text: 'CC', 'aria-pressed': 'false', onclick: () => UI.setCC(!UI.cc) }); withTip(UI.ccBtn2, 'captions');
+    UI.ipaBtn2 = h('button', { class: 'tgl', type: 'button', text: 'IPA', 'aria-pressed': 'true', onclick: () => UI.setIPA(!UI.ipa) }); withTip(UI.ipaBtn2, 'show pronunciation');
+    quick.append(UI.ccBtn2, UI.ipaBtn2);
+    stage.appendChild(h('div', { id: 'cc', 'aria-live': 'off' }));
+    app.append(vp, bar, show, quick, tip); root.appendChild(app);
+    try { UI.cc = localStorage.getItem('fe-should-cc') === '1'; UI.ipa = localStorage.getItem('fe-should-ipa') !== '0'; } catch (e) { UI.cc = false; UI.ipa = true; }
+    UI.setCC(UI.cc); UI.setIPA(UI.ipa);
     document.body.classList.toggle('reduced', FE.reduced());
 
     // fitting
@@ -144,6 +154,20 @@
     else (document.documentElement.requestFullscreen || (() => {})).call(document.documentElement).catch(() => {});
   };
 
+  UI.setCC = function (v) {
+    UI.cc = !!v; [UI.ccBtn, UI.ccBtn2].forEach((b) => b && b.setAttribute('aria-pressed', String(UI.cc)));
+    try { localStorage.setItem('fe-should-cc', UI.cc ? '1' : '0'); } catch (e) { /* ignore */ }
+    if (!UI.cc) $('#cc').classList.remove('on'); else if (UI.ccLine) UI.showCC(UI.ccLine);
+  };
+  UI.setIPA = function (v) {
+    UI.ipa = !!v; document.body.classList.toggle('no-ipa', !UI.ipa); [UI.ipaBtn, UI.ipaBtn2].forEach((b) => b && b.setAttribute('aria-pressed', String(UI.ipa)));
+    try { localStorage.setItem('fe-should-ipa', UI.ipa ? '1' : '0'); } catch (e) { /* ignore */ }
+  };
+  UI.showCC = function (ln) {
+    UI.ccLine = ln; UI.ccSeg = E.seg && E.seg.idx;
+    if (!UI.cc || ln.who !== 'narr') return;
+    const el = $('#cc'); el.innerHTML = UB(ln.text); el.classList.add('on');
+  };
   UI.hint = function () { if (E.scene && !E.scene.doHint()) UI.toast('no hint here'); };
   UI.reveal = function () { if (E.scene) { if (E.scene.revealFns.length) E.scene.doReveal(); else UI.toast('nothing to reveal'); } };
   UI.toast = function (label, ms) { const t = $('#toast'); t.innerHTML = UB(label); t.classList.add('on'); clearTimeout(UI._tt); UI._tt = setTimeout(() => t.classList.remove('on'), ms || 1800); };
@@ -237,14 +261,15 @@
   };
 
   UI.bindEngine = function () {
-    E.on('seg', () => { UI.renderSeg(); UI.renderClocks(); });
+    E.on('seg', () => { UI.ccLine = null; $('#cc').classList.remove('on'); UI.renderSeg(); UI.renderClocks(); });
+    E.on('line', (ln) => UI.showCC(ln));
     E.on('state', UI.renderState); E.on('mode', () => { UI.renderMode(); });
     E.on('gate', (on) => UI.renderGate(on));
     E.on('toast', (l) => { if (l === 'extend') UI.toast('One more minute'); });
     E.on('restarted', () => { UI.renderSeg(); });
     E.on('finish', () => UI.toast('The lesson is finished'));
     let last = 0;
-    E.on('tick', () => { const n = performance.now(); if (n - last > 200) { last = n; UI.renderClocks(); } });
+    E.on('tick', () => { const n = performance.now(); if (n - last > 200) { last = n; UI.renderClocks(); if (UI.ccLine && E.local > UI.ccLine.end + 0.6) $('#cc').classList.remove('on'); } });
     setInterval(() => { if (E.started) UI.renderClocks(); }, 1000);
   };
 
@@ -264,6 +289,8 @@
       else if (k === 'ArrowRight') { e.preventDefault(); E.seek(5); } else if (k === 'ArrowLeft') { e.preventDefault(); E.seek(-5); }
       else if (k === 'f' || k === 'F') UI.fullscreen(); else if (k === 'n' || k === 'N') E.chapterJump(1); else if (k === 'p' || k === 'P') E.chapterJump(-1);
       else if (k === 'r' || k === 'R') E.replay();
+      else if (k === 'c' || k === 'C') UI.setCC(!UI.cc);
+      else if (k === 'i' || k === 'I') UI.setIPA(!UI.ipa);
     });
     document.addEventListener('click', (e) => { const path = e.composedPath ? e.composedPath() : []; if (UI.pop && !path.includes(UI.pop) && !path.includes(UI.soundBtn)) UI.pop.classList.remove('on'); });
   };

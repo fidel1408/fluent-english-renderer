@@ -226,6 +226,31 @@ t('mission: the character\'s mood follows the state (two steps = relief, one = t
   await page2.close();
 }
 
+/* ---- CC / IPA switches ---- */
+{
+  const pg = await (await b.newContext({ viewport: { width: 1600, height: 900 } })).newPage(); const e3 = [];
+  pg.on('pageerror', (e) => e3.push(e.message));
+  await pg.goto('file://' + root + '/dist/should-for-advice.html'); await pg.waitForTimeout(400);
+  await pg.evaluate(() => { FE.qa = true; document.getElementById('startBtn').click(); FE.engine.setPlaying(false); });
+  const V = (f, a) => pg.evaluate(f, a);
+  t('CC and IPA switches stay reachable in the corner while the bar is hidden', await V(() => document.getElementById('app').classList.contains('bar-hidden') && getComputedStyle(document.getElementById('quick')).display === 'flex' && document.querySelectorAll('#quick .tgl').length === 2));
+  await V(() => FE.engine.goto(FE.segs.find((s) => s.id === '1.1').start + 10.5));
+  t('captions are off by default', await V(() => !document.getElementById('cc').classList.contains('on')));
+  await pg.click('#quick .tgl:nth-child(1)');
+  t('CC on: the current narration line appears as captions (with IPA units)', await V(() => { const c = document.getElementById('cc'); return c.classList.contains('on') && /First/.test([...c.querySelectorAll('.w')].map((w) => w.textContent).join(' ')) && c.querySelectorAll('.u .p').length > 3; }));
+  await pg.keyboard.press('c');
+  t('C key toggles captions off', await V(() => !document.getElementById('cc').classList.contains('on')));
+  await pg.keyboard.press('c');
+  await pg.click('#quick .tgl:nth-child(2)');
+  t('IPA off hides every pronunciation line (words stay)', await V(() => document.body.classList.contains('no-ipa') && [...document.querySelectorAll('.u .p')].every((p) => getComputedStyle(p).display === 'none') && document.querySelectorAll('.u .w').length > 5));
+  await pg.keyboard.press('i');
+  t('I key turns IPA back on', await V(() => !document.body.classList.contains('no-ipa') && [...document.querySelectorAll('.u .p')].some((p) => getComputedStyle(p).display !== 'none')));
+  await V(() => FE.ui.setBar(false, false));
+  t('CC and IPA buttons are in the control bar too, with pressed state', await V(() => { const bb = [...document.querySelectorAll('#bar .tgl')]; return bb.length === 2 && bb[0].getAttribute('aria-pressed') === 'true' && bb[1].getAttribute('aria-pressed') === 'true'; }));
+  t('no errors from CC/IPA switches', e3.length === 0, e3.join('|'));
+  await pg.close();
+}
+
 /* ---- IPA structure ---- */
 const ipa = {};
 await ev(() => { FE.qa = true; });

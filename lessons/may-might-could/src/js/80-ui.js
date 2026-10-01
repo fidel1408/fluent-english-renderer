@@ -169,7 +169,7 @@
 
   /* narrated caption (example sentences) with word highlighting */
   UI.cap = (it) => {
-    const c = $('#cap'); c.style.display = 'block'; c.classList.toggle('cc', !it.o.cap); UI.capItem = it;
+    const c = $('#cap'); c.style.display = 'flex'; c.classList.toggle('cc', !it.o.cap); UI.capItem = it;
     c.innerHTML = `<div class="card capc ${it.o.cap ? '' : 'dark'}"><span class="ub ${it.o.cap ? 'mid' : 'sm'}">${FE.U(it.text)}</span></div>`; UI.capUnits = FE.$$('.wu', c);
   };
   UI.capHL = (i) => { if (UI.capUnits) UI.capUnits.forEach((u, k) => u.classList.toggle('hl', k === i)); };

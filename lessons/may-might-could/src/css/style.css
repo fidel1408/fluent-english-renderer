@@ -185,3 +185,7 @@ textarea.free{width:100%;font:600 32px var(--sans);border:3px solid var(--line);
 .no-ipa .wu .p{display:none}
 #cap.cc .capc{background:rgba(14,26,51,.93);border-color:#3b4a78;color:#fff;--fs:30px;max-width:1560px;padding:10px 26px 6px}
 #cap.cc .capc .wu .w{color:#fff}#cap.cc .capc .wu .p{color:#c6d0ec}#cap.cc .capc .wu.hl .w{color:var(--ink)}
+
+#chip.flash{animation:chipflash 3s ease-in-out}
+@keyframes chipflash{0%,100%{box-shadow:0 8px 22px rgba(5,10,30,.35)}15%,70%{box-shadow:0 0 0 6px var(--gold),0 8px 22px rgba(5,10,30,.45);transform:scale(1.05);transform-origin:left center}}
+#cap{justify-content:center}

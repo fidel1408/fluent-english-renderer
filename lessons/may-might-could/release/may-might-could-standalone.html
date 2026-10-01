@@ -191,6 +191,10 @@ textarea.free{width:100%;font:600 32px var(--sans);border:3px solid var(--line);
 .no-ipa .wu .p{display:none}
 #cap.cc .capc{background:rgba(14,26,51,.93);border-color:#3b4a78;color:#fff;--fs:30px;max-width:1560px;padding:10px 26px 6px}
 #cap.cc .capc .wu .w{color:#fff}#cap.cc .capc .wu .p{color:#c6d0ec}#cap.cc .capc .wu.hl .w{color:var(--ink)}
+
+#chip.flash{animation:chipflash 3s ease-in-out}
+@keyframes chipflash{0%,100%{box-shadow:0 8px 22px rgba(5,10,30,.35)}15%,70%{box-shadow:0 0 0 6px var(--gold),0 8px 22px rgba(5,10,30,.45);transform:scale(1.05);transform-origin:left center}}
+#cap{justify-content:center}
 </style>
 </head>
 <body>
@@ -972,6 +976,102 @@ window.NARR = {"kvnvotj":{"file":"data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAA
    NOTE: entered by the lesson author from knowledge of those conventions and cross-checked against espeak-ng output for typos.
    It was NOT verified against the Oxford site (that site was unreachable from the build environment). */
 FE.addIPA(`
+afternoon ˌæftərˈnuːn
+airport ˈerpɔːrt
+any ˈeni
+asks æsks
+b biː
+becomes bɪˈkʌmz
+by baɪ
+carefully ˈkerfəli
+changes ˈtʃeɪndʒɪz
+checking ˈtʃekɪŋ
+choices ˈtʃɔɪsɪz
+chose tʃoʊz
+connect kəˈnekt
+conversation ˌkɑːnvərˈseɪʃn
+depends dɪˈpendz
+difference ˈdɪfrəns
+directly dəˈrektli
+end end
+engine ˈendʒɪn
+every ˈevri
+fluent ˈfluːənt
+follows ˈfɑːloʊz
+forty ˈfɔːrti
+four fɔːr
+friday ˈfraɪdeɪ
+futures ˈfjuːtʃərz
+get ɡet
+getting ˈɡetɪŋ
+hidden ˈhɪdn
+his hɪz
+idea aɪˈdiːə
+include ɪnˈkluːd
+interaction ˌɪntərˈækʃn
+its ɪts
+kind kaɪnd
+knows noʊz
+l el
+ladder ˈlædər
+learning ˈlɜːrnɪŋ
+least liːst
+let lets
+little ˈlɪtl
+looking ˈlʊkɪŋ
+matters ˈmætərz
+mistake mɪˈsteɪk
+negatives ˈneɡətɪvz
+nobody ˈnoʊbɑːdi
+notice ˈnoʊtɪs
+numbers ˈnʌmbərz
+o'clock əˈklɑːk
+original əˈrɪdʒənl
+picture ˈpɪktʃər
+predictions prɪˈdɪkʃnz
+put pʊt
+quick kwɪk
+read riːd
+ready ˈredi
+real ˈriːəl
+really ˈriːəli
+reason ˈriːzn
+repairs rɪˈperz
+replay ˌriːˈpleɪ
+rooftop ˈruːftɑːp
+s es
+schwa ʃwɑː
+second ˈsekənd
+secret ˈsiːkrət
+see siː
+short ʃɔːrt
+six sɪks
+sky skaɪ
+sometimes ˈsʌmtaɪmz
+somewhere ˈsʌmwer
+sounds saʊndz
+speak spiːk
+speaking ˈspiːkɪŋ
+station ˈsteɪʃn
+stays steɪz
+step step
+take teɪk
+task tæsk
+teams tiːmz
+tentative ˈtentətɪv
+test test
+thank θæŋk
+them ðem
+third θɜːrd
+turn tɜːrn
+until ənˈtɪl
+uses ˈjuːzɪz
+very ˈveri
+warning ˈwɔːrnɪŋ
+welcome ˈwelkəm
+were wɜːr
+would wʊd
+yours jɔːrz
 continue kənˈtɪnjuː
 act ækt
 again əˈɡen
@@ -2011,11 +2111,10 @@ your jɔːr
   };
 
   /* chapter banner (overlay only; no timeline time) */
+  /* a new chapter: the chapter chip glows briefly (nothing is drawn over the lesson, so captions and cards never collide) */
   FX.banner = (X, ch) => {
-    const b = h('div', { class: 'banner' }, `<div class="bn">${ch.n}</div><div class="bt">${FE.U(ch.t)}</div>`);
-    FE.$('#chrome').appendChild(b);
-    setTimeout(() => b.classList.add('out'), FE.Tween.instant ? 0 : 2600); setTimeout(() => b.remove(), FE.Tween.instant ? 0 : 3300);
-    if (FE.Tween.instant) b.remove();
+    const c = FE.$('#chip'); if (!c || FE.Tween.instant) return;
+    c.classList.remove('flash'); void c.offsetWidth; c.classList.add('flash'); setTimeout(() => c.classList.remove('flash'), 3000);
   };
 })();
 </script>
@@ -2882,7 +2981,7 @@ your jɔːr
 
   /* narrated caption (example sentences) with word highlighting */
   UI.cap = (it) => {
-    const c = $('#cap'); c.style.display = 'block'; c.classList.toggle('cc', !it.o.cap); UI.capItem = it;
+    const c = $('#cap'); c.style.display = 'flex'; c.classList.toggle('cc', !it.o.cap); UI.capItem = it;
     c.innerHTML = `<div class="card capc ${it.o.cap ? '' : 'dark'}"><span class="ub ${it.o.cap ? 'mid' : 'sm'}">${FE.U(it.text)}</span></div>`; UI.capUnits = FE.$$('.wu', c);
   };
   UI.capHL = (i) => { if (UI.capUnits) UI.capUnits.forEach((u, k) => u.classList.toggle('hl', k === i)); };

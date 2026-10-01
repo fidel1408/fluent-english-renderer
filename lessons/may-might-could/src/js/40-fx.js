@@ -125,10 +125,9 @@
   };
 
   /* chapter banner (overlay only; no timeline time) */
+  /* a new chapter: the chapter chip glows briefly (nothing is drawn over the lesson, so captions and cards never collide) */
   FX.banner = (X, ch) => {
-    const b = h('div', { class: 'banner' }, `<div class="bn">${ch.n}</div><div class="bt">${FE.U(ch.t)}</div>`);
-    FE.$('#chrome').appendChild(b);
-    setTimeout(() => b.classList.add('out'), FE.Tween.instant ? 0 : 2600); setTimeout(() => b.remove(), FE.Tween.instant ? 0 : 3300);
-    if (FE.Tween.instant) b.remove();
+    const c = FE.$('#chip'); if (!c || FE.Tween.instant) return;
+    c.classList.remove('flash'); void c.offsetWidth; c.classList.add('flash'); setTimeout(() => c.classList.remove('flash'), 3000);
   };
 })();

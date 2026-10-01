@@ -155,6 +155,15 @@ hints, and feedback), 5 pair/roleplay tasks, a sort, a sentence builder, a liste
 * Mouth movement follows each clip's real loudness. **Word highlighting is estimated** from pauses and word length inside each clip (not forced-aligned), so it can drift by a fraction of a second.
 * Music is a quiet code-generated pad that ducks under narration; it is silent during learner-speaking activities. Ambience (rain, wind) is generated, too.
 
+## How the art is made
+
+Everything on screen is drawn in code (SVG, CSS, JavaScript): no AI images, no stock art, no bitmaps except the Fluent English logo.
+Characters are articulated rigs with modelled faces (shaded skin, eyes with lids and lashes, brows, mouth shapes), strand-built hair, five-finger hands,
+tailored clothing with folds and seams, and shoes. The card illustrations (house, bus, guest, clock, train, plane, weather…) are a separate modelled icon set,
+and each scene has material detail (brick, boards, tiles, carpet), lighting, soft shadows, a vignette, light film grain and slow dust in the light.
+It is polished vector art, **not** hand-painted or 3D-rendered art; it cannot match those, and I do not claim it does.
+When a possibility card appears, the characters step back slightly so the card never covers a head.
+
 ## What is not in it (no false claims)
 
 * It does **not** use the microphone, does not hear or score learners' speech, and does not read Zoom chat. Learners answer aloud, in pairs, or in chat; the teacher clicks.
@@ -173,15 +182,16 @@ I did not watch or listen to the whole video.
 
 ```bash
 node tools/build.mjs --standalone      # builds release/index.html and the one-file version
-node tools/test.mjs                    # automated tests (Playwright + Chromium): 65 checks
+node tools/test.mjs                    # automated tests (Playwright + Chromium): 67 checks
 node tools/explore.mjs --shots DIR     # screenshots of every segment, plus a missing-IPA report
+node tools/segshots.mjs DIR 2.3:0.85   # one still of a chosen segment at a fraction of its film part
 # After editing narration or dialogue text:
 node tools/extract.mjs                 # lists every spoken line  -> tools/.lines.json
 python tools/tts.py --model kokoro-v1.0.onnx --voices voices-v1.0.bin   # needs: pip install kokoro-onnx soundfile numpy
 node tools/build.mjs --standalone
 ```
 
-Source: `src/js` (rig `10`, IPA `20-21`, stage `25`, scenes `30-31`, explainers `40-41`, audio `50`, runner `60`, activities `70`, UI `80`,
+Source: `src/js` (rig `10`, character art `11-13`, IPA `20-21`, stage `25`, scenes `30-31`, film finish `35`, explainers `40-41`, icons `42`, audio `50`, runner `60`, activities `70`, UI `80`,
 lesson content `91-93`, boot `99`). Fonts are embedded (Source Serif 4, Source Sans 3, Noto Sans subset for IPA glyphs).
 `assets/fluent_english_logo_trimmed.png` is the repository's `fluent_english_logo.png` with the white margin cropped, never stretched. The original logo files are unchanged.
 

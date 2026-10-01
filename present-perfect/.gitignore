@@ -7,3 +7,4 @@ build/timeline.js
 __pycache__/
 dev/out/
 *.log
+dist/*.mp4

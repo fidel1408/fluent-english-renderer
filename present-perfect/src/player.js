@@ -21,7 +21,12 @@
     P.dur = Eng.duration;
     // audio (blob URLs from embedded base64 so seeking is exact and memory is not duplicated)
     narr = new Audio(); music = new Audio(); narr.preload = music.preload = 'auto';
-    narr.src = window.ASSETS.narration; music.src = window.ASSETS.music;
+    // embedded data: URLs and hosted files are both turned into blob URLs, so seeking is exact regardless of server range support
+    const toBlobUrl = async src => { try { const r = await fetch(src); return URL.createObjectURL(await r.blob()); } catch (e) { return src; } };
+    $('loaderMsg').textContent = 'Loading audio\u2026';
+    [narr.src, music.src] = await Promise.all([toBlobUrl(window.ASSETS.narration), toBlobUrl(window.ASSETS.music)]);
+    // if a host refuses blob: media, fall back to the original URL once
+    for (const [el, orig] of [[narr, window.ASSETS.narration], [music, window.ASSETS.music]]) el.addEventListener('error', () => { if (!el._fb && el.src.startsWith('blob:')) { el._fb = true; el.src = orig; } });
     narr.volume = store.get('vn', 1); music.volume = store.get('vm', 0.55); music.loop = false;
     narr.addEventListener('canplaythrough', () => { P.audioOK = true; }, { once: true });
     narr.addEventListener('error', () => { P.audioOK = false; toast('Audio could not be loaded. The lesson will play silently.'); });
@@ -113,7 +118,7 @@
     const ap = $('autopause'); P.autoPause = store.get('ap', true); ap.checked = P.autoPause; ap.addEventListener('change', () => { P.autoPause = ap.checked; store.set('ap', ap.checked); });
     const sp = $('speed'); P.rate = store.get('rate', 1); sp.value = String(P.rate); sp.addEventListener('change', () => { P.rate = +sp.value; store.set('rate', P.rate); narr.playbackRate = music.playbackRate = P.rate; P.base = { perf: performance.now(), t: P.t }; });
     const fp = $('fps'); P.fps = store.get('fps', 30); fp.value = String(P.fps); fp.addEventListener('change', () => { P.fps = +fp.value; store.set('fps', P.fps); });
-    $('full').addEventListener('click', () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); });
+    $('full').addEventListener('click', () => { if (document.fullscreenElement) document.exitFullscreen(); else { const r = document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); if (r && r.catch) r.catch(() => toast('Full screen is not available here. Use the browser full-screen shortcut (F11).')); } });
     // transcript for screen readers / teachers (plain text, no IPA)
     const tr = $('transcriptBody'); let html = '';
     for (const b of TL.beats) for (const l of b.lines) if (l.text && l.kind !== 'hold') html += `<p><strong>${({ N: 'Teacher', D: 'Daniel', M: 'Maya', S: 'Sofia' })[l.who] || ''}${l.kind === 'thought' ? ' (thinking)' : ''}:</strong> ${l.text.replace(/</g, '&lt;')}</p>`;

@@ -1,6 +1,6 @@
 <!doctype html><meta charset="utf-8"><link rel="stylesheet" href="css/style.css">
 <body><div id="app"><div id="stage"><svg id="scene" viewBox="0 0 1920 1080"></svg><div id="light"></div><div id="fx"></div><div id="bubbles"></div></div></div>
-<script src="js/00-util.js"></script><script src="js/10-rig.js"></script><script src="js/20-ipa.js"></script><script src="js/25-stage.js"></script><script src="js/30-scenes-a.js"></script>
+<script src="js/00-util.js"></script><script src="js/10-rig.js"></script><script src="js/20-ipa.js"></script><script src="js/25-stage.js"></script><script src="js/30-scenes-a.js"></script><script src="js/31-scenes-b.js"></script>
 <script>
 FE.addIPA(`look lʊk
 at æt
@@ -20,7 +20,7 @@ not nɑːt`);
 const q=new URLSearchParams(location.search), sc=q.get('s')||'rooftop';
 const st=new FE.Stage({scene:document.getElementById('scene'),light:document.getElementById('light'),fx:document.getElementById('fx'),bubbles:document.getElementById('bubbles')});
 st.load(sc,{});
-const pos=sc==='rooftop'?[[520,'maya','tablet',1],[1020,'daniel','phoneR',-1],[1420,'priya','idle',-1]]:[[620,'maya','think',1],[1000,'daniel','pointR',-1]];
+const pos=sc==='airport'?[[560,'lena','clipboard',1],[1000,'tom','shrug',-1]]:sc==='rooftop'?[[520,'maya','tablet',1],[1020,'daniel','phoneR',-1],[1420,'priya','idle',-1]]:[[620,'maya','think',1],[1000,'daniel','pointR',-1]];
 pos.forEach(([x,id,p,f])=>st.add(id,{x,pose:p,flip:f,face:'curious'}));
 FE.Tween.finish(); st.tick(0.016);
 st.bubble('maya','Look at those clouds, Daniel.');

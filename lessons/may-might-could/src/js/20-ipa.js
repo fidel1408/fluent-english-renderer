@@ -21,17 +21,18 @@
 
   FE.tokens = (text) => {
     const out = [];
-    const re = /\{[a-z]+:[^}]+\}|\[[^\]|]+\|[^\]]+\]|\S+/g;
+    const re = /[“"‘'(]*\{[a-z]+:[^}]+\}[^\s{]*|[“"‘'(]*\[[^\]|]+\|[^\]]+\][^\s{]*|\S+/g;
     let m;
     while ((m = re.exec(text))) {
-      let tk = m[0], role = '', ov = null;
-      let mm;
-      if ((mm = /^\{([a-z]+):(.+)\}$/.exec(tk))) { role = mm[1]; tk = mm[2]; }
-      // trailing punctuation outside the braces, e.g. {m:may}.
-      if ((mm = /^\[([^\]|]+)\|([^\]]+)\]([^\w]*)$/.exec(tk))) { ov = mm[2]; tk = mm[1] + (mm[3] || ''); }
+      let tk = m[0], role = '', ov = null, pre = '', post = '', mm;
+      if ((mm = /^([“"‘'(]*)\{([a-z]+):([^}]+)\}(.*)$/.exec(tk))) {
+        pre = mm[1]; role = mm[2]; post = mm[4]; tk = mm[3];
+        if (tk.includes('|')) { const q = tk.split('|'); tk = q[0]; ov = q[1]; }
+        tk = pre + tk + post;
+      } else if ((mm = /^([“"‘'(]*)\[([^\]|]+)\|([^\]]+)\](.*)$/.exec(tk))) { ov = mm[3]; tk = mm[1] + mm[2] + mm[4]; }
       let lead = '', trail = '';
-      let ml = LEAD.exec(tk); if (ml) { lead = ml[0]; tk = tk.slice(lead.length); }
-      let mt = TRAIL.exec(tk); if (mt && tk.length > mt[0].length) { trail = mt[0]; tk = tk.slice(0, tk.length - trail.length); }
+      const ml = LEAD.exec(tk); if (ml) { lead = ml[0]; tk = tk.slice(lead.length); }
+      const mt = TRAIL.exec(tk); if (mt && tk.length > mt[0].length) { trail = mt[0]; tk = tk.slice(0, tk.length - trail.length); }
       out.push({ word: tk, lead, trail, role, ov });
     }
     return out;

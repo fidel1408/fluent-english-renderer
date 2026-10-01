@@ -64,7 +64,7 @@ Rebuild: `python tools/lesson_hour.py && python tools/tts_generate.py && python 
 * Every one of the 54 activities was rendered at its start, mid-question, reveal and last reveal and inspected by eye (layout defects found and fixed: overflowing rows, labels over text, hidden heads, bins over characters, tiny sentences).
 * Interaction (headless Chromium): option click sets the pick, bin click sets the pick, auto-pause *each activity / every question / off* stop (or do not stop) at the expected times; part switching at 9:22 and 18:37 plays the next narration and music part aligned to the clock (within 0.02 s); works from `file://` and over HTTP; next/previous activity.
 * Audio measured: music ≈ 6 dB lower while anyone speaks; long pair-work holds duck the music further and drop the tick sound until the last 10 s.
-* ASR round-trip of the generated narration lines with Whisper small.en: see `build/asr_report.md` / `docs/asr_report.md`.
+* ASR round-trip of the generated narration lines with Whisper small.en: Whisper small.en heard 5.7% of words differently (225/3,928; `docs/asr_report.md`). Most differences are isolated one-word drill lines (*eat, see, been* heard as *meat, C, Ben*) and number/hyphen formatting; please listen to the drill lines for *been, eaten, seen, have* to judge them.
 * **Not done:** no human listening; no verification against Oxford; no Safari/Firefox/real-GPU test; no test on an actual Zoom call; no MP4 (it was dropped; see git history for the earlier exporter).
 
 ## Known limits / judgement calls

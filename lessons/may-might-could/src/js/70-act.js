@@ -39,7 +39,8 @@
 
   /* ---------- frame helpers ---------- */
   const ib = (label, id, icon, cls = '') => `<button class="btn ${cls}" data-do="${id}">${icon ? `<span class="bi">${icon}</span>` : ''}${U(label)}</button>`;
-  const frame = (spec, body, foot, tag) => `<div class="ah"><span class="tag">${U(tag || spec.tag || 'Your turn')}</span>${spec.title ? `<span class="atl">${U(spec.title)}</span>` : ''}</div>${body}<div class="afoot">${foot}</div>`;
+  const CONT = () => `<button class="btn gold cont" data-do="continue" aria-label="Continue to the next part"><span class="bi">${I.next}</span>${U('Continue')}</button>`;
+  const frame = (spec, body, foot, tag) => `<div class="ah"><span class="tag">${U(tag || spec.tag || 'Your turn')}</span>${spec.title ? `<span class="atl">${U(spec.title)}</span>` : ''}</div>${body}<div class="afoot">${foot}${CONT()}</div>`;
   const I = { hint: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M9 21h6M10 17h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>', eye: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>', check: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 12l5 5L20 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>', next: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>', play: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 4l13 8-13 8z" fill="currentColor"/></svg>', redo: '<svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v5h5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>' };
   const BOX = { x: 960, y: 140, w: 900 };
 
@@ -52,7 +53,11 @@
       this.el = h('div', { class: 'card actp', id: 'fx_act', role: 'group', 'aria-label': 'activity' });
       this.el.style.cssText = `left:${b.x}px;top:${b.y}px;width:${b.w}px;${b.h ? 'height:' + b.h + 'px;' : ''}`;
       FE.$('#fx').appendChild(this.el);
-      this.el.addEventListener('click', (e) => { const t = e.target.closest('[data-do],[data-opt]'); if (t) this.onClick(t, e); });
+      this.el.addEventListener('click', (e) => {
+        const t = e.target.closest('[data-do],[data-opt]'); if (!t) return;
+        if (t.dataset.do === 'continue') { this.R.advance(0); return; } // teacher moves on when the class is ready
+        this.onClick(t, e);
+      });
       this.render();
       if (FE.Tween.instant) this.el.classList.add('in', 'noanim'); else requestAnimationFrame(() => this.el.classList.add('in'));
     }

@@ -35,6 +35,7 @@
           <div class="seg2" role="group" aria-label="Playback mode"><button id="mClass" class="on" title="Class Mode: pauses at each activity until you continue">CLASS</button><button id="mDemo" title="Demo Mode: runs the planned 60 minutes automatically, with planned answer reveals">DEMO</button></div>
           ${hb('bNext', ICONS.nextCh, 'Continue to next step  [N]', 'gold')}
           <div class="sp"></div>
+          <button class="hb txt" id="bCC" aria-pressed="false" data-tip="Captions: show the narration as text  [C]" aria-label="Captions on or off">CC</button><button class="hb txt" id="bIPA" aria-pressed="true" data-tip="Show or hide the IPA under each word  [I]" aria-label="IPA on or off">IPA</button>
           ${hb('bVoice', ICONS.voice, 'Narration on / off  [M]')}${hb('bSound', ICONS.sound, 'Sound settings')}${hb('bFull', ICONS.full, 'Fullscreen  [F]')}${hb('bRestart', ICONS.restart, 'Restart lesson')}
         </div>
       </div>
@@ -44,9 +45,22 @@
     // seek track segments: one block per chapter, proportional to the plan
     const tr = $('#seek .tr');
     L.chapters.forEach((c) => { tr.insertAdjacentHTML('beforeend', `<i style="flex:${c.e - c.s}" data-ch="${c.n}" title="Chapter ${c.n}"><b></b></i>`); });
-    UI.wire();
+    UI.wire(); UI.restorePrefs();
     UI.fit(); addEventListener('resize', UI.fit);
   };
+  const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage may be blocked */ } } };
+  UI.cc = false; UI.ipa = true;
+  UI.setCC = (on, quiet) => {
+    UI.cc = on; $('#bCC').setAttribute('aria-pressed', on); store.set('fe-cc', on ? '1' : '0');
+    const it = R.hlItem;
+    if (on && it && it.kind === 'nar') UI.cap(it); else if (!on) UI.capHide(false, null, true);
+    if (!quiet) UI.toast(on ? 'Captions on' : 'Captions off', 1400);
+  };
+  UI.setIPA = (on, quiet) => {
+    UI.ipa = on; $('#bIPA').setAttribute('aria-pressed', on); $('#stage').classList.toggle('no-ipa', !on); store.set('fe-ipa', on ? '1' : '0');
+    if (!quiet) UI.toast(on ? 'IPA shown' : 'IPA hidden', 1400);
+  };
+  UI.restorePrefs = () => { if (store.get('fe-cc') === '1') UI.setCC(true, true); if (store.get('fe-ipa') === '0') UI.setIPA(false, true); };
   UI.fit = () => { const s = Math.min(innerWidth / 1920, innerHeight / 1080); $('#stage').style.transform = `scale(${s})`; UI.scale = s; };
   UI.toast = (msg, ms = 2200) => { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(UI._tt); UI._tt = setTimeout(() => t.classList.remove('on'), ms); };
 
@@ -56,6 +70,8 @@
     $('#bPrevCh').onclick = () => R.chapter(-1); $('#bNextCh').onclick = () => R.chapter(1);
     $('#bReplay').onclick = () => R.replay(); $('#bNext').onclick = () => { R.nextSeg(1); };
     $('#bFull').onclick = () => UI.fullscreen();
+    $('#bCC').onclick = () => UI.setCC(!UI.cc);
+    $('#bIPA').onclick = () => UI.setIPA(!UI.ipa);
     $('#bVoice').onclick = () => { A.mute.narr = !A.mute.narr; $('#mN').checked = A.mute.narr; $('#bVoice').classList.toggle('on', A.mute.narr); A.applyVol(); UI.toast(A.mute.narr ? 'Narration muted' : 'Narration on'); };
     $('#bSound').onclick = () => $('#vol').classList.toggle('open');
     $('#bRestart').onclick = () => UI.confirm('Restart the lesson from 0:00?', 'Restart', () => R.restart());
@@ -85,6 +101,7 @@
       else if (k === 'PageDown') R.chapter(1); else if (k === 'PageUp') R.chapter(-1);
       else if (k === 'r' || k === 'R') R.replay(); else if (k === 'n' || k === 'N') R.nextSeg(1);
       else if (k === 'f' || k === 'F') UI.fullscreen(); else if (k === 'm' || k === 'M') $('#bVoice').click();
+      else if (k === 'c' || k === 'C') $('#bCC').click(); else if (k === 'i' || k === 'I') $('#bIPA').click();
       else if (k === 'Escape') { $('#vol').classList.remove('open'); }
     });
     // pronunciation card replay (teacher-controlled)
@@ -121,12 +138,13 @@
   UI.onPlay = (p) => { $('#bPlay').innerHTML = p ? ICONS.pause : ICONS.play; $('#bPlay').dataset.tip = p ? 'Pause  [Space]' : 'Play  [Space]'; };
   UI.onMode = (m) => {
     $('#mClass').classList.toggle('on', m === 'class'); $('#mDemo').classList.toggle('on', m === 'demo');
+    $('#stage').classList.toggle('mode-demo', m === 'demo');
     $('#modeTag').textContent = m === 'class' ? 'CLASS MODE · waits for you at each activity' : 'DEMO MODE · fixed 60-minute run';
     ['tbRestart', 'tbExtend', 'tbSkip'].forEach((id) => { $('#' + id).disabled = m === 'demo'; });
     $('#bNext').style.display = '';
   };
   UI.onEnd = () => UI.toast('End of the lesson. Well done!', 5000);
-  UI.onTimesUp = (r) => { UI.toast(r.mode === 'class' ? 'Time is up. Extend, or continue when ready.' : 'Time is up.', 4000); };
+  UI.onTimesUp = (r) => { const c = FE.$('#fx_act .cont'); if (c && r.mode === 'class') c.classList.add('pulse'); UI.toast(r.mode === 'class' ? 'Time is up. Extend, or continue when ready.' : 'Time is up.', 4000); };
   UI.clearWall = () => { };
   UI.updateTimer = (r, seg) => {
     if (!r.gate || !seg.act) { $('#timer').style.display = 'none'; return; }
@@ -151,9 +169,15 @@
 
   /* narrated caption (example sentences) with word highlighting */
   UI.cap = (it) => {
-    const c = $('#cap'); c.style.display = 'block';
-    c.innerHTML = `<div class="card capc"><span class="ub mid">${FE.U(it.text)}</span></div>`; UI.capUnits = FE.$$('.wu', c);
+    const c = $('#cap'); c.style.display = 'block'; c.classList.toggle('cc', !it.o.cap); UI.capItem = it;
+    c.innerHTML = `<div class="card capc ${it.o.cap ? '' : 'dark'}"><span class="ub ${it.o.cap ? 'mid' : 'sm'}">${FE.U(it.text)}</span></div>`; UI.capUnits = FE.$$('.wu', c);
   };
   UI.capHL = (i) => { if (UI.capUnits) UI.capUnits.forEach((u, k) => u.classList.toggle('hl', k === i)); };
-  UI.capHide = () => { const c = $('#cap'); if (c) { c.style.display = 'none'; c.innerHTML = ''; } UI.capUnits = null; };
+  /* hide the caption: only for the line that owns it (a new line may already have replaced it), or when forced */
+  UI.capHide = (force, it, keepExplicit) => {
+    const c = $('#cap'); if (!c) return;
+    if (!force && it && UI.capItem !== it) return;
+    if (keepExplicit && UI.capItem && UI.capItem.o.cap) return;
+    c.style.display = 'none'; c.innerHTML = ''; UI.capUnits = null; UI.capItem = null;
+  };
 })();

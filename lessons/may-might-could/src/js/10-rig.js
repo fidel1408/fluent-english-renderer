@@ -350,7 +350,7 @@
     hold(propL, propR) { this.propL = propL; this.propR = propR; this._handsDirty = true; return this; }
     pose(name, dur = 0.8, ease = 'inOut') {
       const p = Char.POSES[name]; if (!p) { console.warn('pose?', name); return this; }
-      const { hands, hold, ...rest } = p;
+      const { hands, hold, waving, ...rest } = p; this.waving = !!waving;
       const base = { LA: 6, LB: 8, LW: 0, LU: 1, LF: 1, RA: 6, RB: 8, RW: 0, RU: 1, RF: 1, lean: 0, shr: 0, headRot: 0, headY: 0, headX: 0 };
       this.to(Object.assign({}, base, rest), dur, ease);
       this.hands(hands ? hands[0] : 'open', hands ? hands[1] : 'open');
@@ -438,9 +438,11 @@
       };
       // speaking gesture beats on the active (screen-right) arm
       const beat = Math.sin(this.t * 3.1) * gest * 5;
-      const RAx = P.RA + (this.talk ? beat * 0.8 + gest * 6 : 0), RBx = P.RB + (this.talk ? Math.cos(this.t * 2.3) * gest * 10 + gest * 14 : 0);
+      const free = this.talk && !this.propR && !this.waving && P.RB > -20 && P.RB < 60; // speaking beats only on a free, relaxed arm; never move a held phone or a raised hand
+      const RAx = P.RA + (free ? beat * 0.8 + gest * 6 : 0), RBx = P.RB + (free ? Math.cos(this.t * 2.3) * gest * 10 + gest * 14 : 0);
+      const wv = this.waving ? Math.sin(this.t * 9) * 16 : 0;
       arm(this.armL, P.LA, P.LB, P.LW, P.LU, P.LF, this.handL, this.propL, -1);
-      arm(this.armR, RAx, RBx, P.RW, P.RU, P.RF, this.handR, this.propR, 1);
+      arm(this.armR, RAx, RBx, P.RW + wv, P.RU, P.RF, this.handR, this.propR, 1);
       if (this._handsDirty) {
         this.armL.hp.setAttribute('d', HANDS[this.handL] || HANDS.open); this.armR.hp.setAttribute('d', HANDS[this.handR] || HANDS.open);
         this.armL.prop.innerHTML = this.propL ? PROPS[this.propL] : ''; this.armR.prop.innerHTML = this.propR ? PROPS[this.propR] : '';
@@ -504,18 +506,18 @@
     clasp: { LA: 16, LB: 70, RA: 16, RB: 70, LU: 0.8, RU: 0.8, LF: 0.9, RF: 0.9, hands: ['fist', 'fist'] },
     think: { LA: 12, LB: 40, RA: 12, RB: 154, RU: 0.55, RF: 1, LU: 0.85, hands: ['fist', 'fist'], headRot: -3 },
     thinkLook: { LA: 18, LB: 70, RA: 6, RB: 150, RU: 0.52, hands: ['fist', 'fist'], headRot: 4, lean: -1 },
-    shrug: { LA: 14, LB: -92, RA: 14, RB: -92, shr: 9, hands: ['flat', 'flat'], headRot: 3 },
-    open: { LA: 16, LB: -64, RA: 16, RB: -64, hands: ['flat', 'flat'] },
-    openR: { LA: 8, LB: 10, RA: 18, RB: -66, hands: ['open', 'flat'] },
-    openL: { LA: 18, LB: -66, RA: 8, RB: 10, hands: ['flat', 'open'] },
+    shrug: { LA: 24, LB: -56, RA: 24, RB: -56, shr: 8, hands: ['flat', 'flat'], headRot: 3 },
+    open: { LA: 20, LB: -46, RA: 20, RB: -46, hands: ['flat', 'flat'] },
+    openR: { LA: 8, LB: 10, RA: 24, RB: -50, hands: ['open', 'flat'] },
+    openL: { LA: 24, LB: -50, RA: 8, RB: 10, hands: ['flat', 'open'] },
     pointUpR: { LA: 8, LB: 10, RA: 148, RB: 6, hands: ['open', 'point'] },
     pointUpL: { LA: 148, LB: 6, RA: 8, RB: 10, hands: ['point', 'open'] },
     pointR: { LA: 8, LB: 10, RA: 82, RB: 8, hands: ['open', 'point'] },
     pointL: { LA: 82, LB: 8, RA: 8, RB: 10, hands: ['point', 'open'] },
-    wave: { LA: 8, LB: 10, RA: 130, RB: 56, hands: ['open', 'open'] },
-    phoneR: { LA: 8, LB: 16, RA: 14, RB: 150, RU: 0.58, RF: 1, hands: ['open', 'fist'], hold: [null, 'phone'], headRot: -2 },
-    phoneChest: { LA: 8, LB: 16, RA: 20, RB: 100, RU: 0.8, hands: ['open', 'fist'], hold: [null, 'phone'] },
-    phoneL: { LA: 14, LB: 128, LU: 0.7, RA: 8, RB: 16, hands: ['fist', 'open'], hold: ['phone', null], headRot: 2 },
+    wave: { LA: 8, LB: 10, RA: 50, RB: -128, RU: 0.9, hands: ['open', 'flat'], waving: true },
+    phoneR: { LA: 8, LB: 16, RA: 38, RB: -158, RU: 0.52, RF: 1.08, hands: ['open', 'fist'], hold: [null, 'phone'], headRot: -3 },
+    phoneChest: { LA: 8, LB: 16, RA: 18, RB: 108, RU: 0.85, hands: ['open', 'fist'], hold: [null, 'phone'] },
+    phoneL: { LA: 38, LB: -158, LU: 0.52, LF: 1.08, RA: 8, RB: 16, hands: ['fist', 'open'], hold: ['phone', null], headRot: 3 },
     phoneBoth: { LA: 22, LB: 88, RA: 22, RB: 88, LU: 0.8, RU: 0.8, hands: ['fist', 'fist'], hold: [null, 'phone'] },
     clipboard: { LA: 22, LB: 112, LU: 0.8, RA: 9, RB: 14, hands: ['fist', 'open'], hold: ['clipboard', null] },
     tablet: { LA: 26, LB: 98, LU: 0.8, RA: 18, RB: 78, RU: 0.85, hands: ['fist', 'point'], hold: ['tablet', null] },
@@ -529,7 +531,7 @@
     reach: { LA: 8, LB: 10, RA: 54, RB: 30, hands: ['open', 'flat'] },
     count: { LA: 10, LB: 14, RA: 30, RB: 96, RU: 0.85, hands: ['open', 'pinch'] },
     deny: { LA: 12, LB: 14, RA: 40, RB: 100, hands: ['open', 'flat'] },
-    stop: { LA: 12, LB: 14, RA: 56, RB: 74, RU: 0.9, hands: ['open', 'flat'], headRot: 1 },
+    stop: { LA: 12, LB: 14, RA: 30, RB: -140, RU: 0.9, hands: ['open', 'flat'], headRot: 1 },
     bag: { LA: 8, LB: 10, RA: 10, RB: 12 },
   };
   Char.FACES = {

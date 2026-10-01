@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#cfe3f0"><svg id="s" viewBox="0 0 2160 1340" width="2160" height="1340"></svg>
+<script src="js/00-util.js"></script><script src="js/10-rig.js"></script>
+<script>
+const names=(new URLSearchParams(location.search).get('p')||'idle,phoneR,phoneChest,phoneBoth,pointR,pointL,pointUpR,shrug,open,openR,clasp,think,cross,tablet,coffee,clipboard,wave,stop').split(',');
+const s=document.getElementById('s');
+['daniel','priya'].forEach((cid,row)=>names.forEach((n,i)=>{const c=new FE.Char(FE.Char.CAST[cid]);const col=i%9, r2=Math.floor(i/9);c.set({x:130+col*240,y:310+(row*2+r2)*330,s:0.55});c.pose(n,0);c.face('smile',0);FE.Tween.finish();c.render(0.016);
+ s.appendChild(c.el);const t=document.createElementNS(FE.NS,'text');t.setAttribute('x',130+col*240);t.setAttribute('y',310+(row*2+r2)*330+30);t.setAttribute('text-anchor','middle');t.setAttribute('font-size','22');t.textContent=n;s.appendChild(t);}));
+</script>

@@ -2,6 +2,7 @@
    NOTE: entered by the lesson author from knowledge of those conventions and cross-checked against espeak-ng output for typos.
    It was NOT verified against the Oxford site (that site was unreachable from the build environment). */
 FE.addIPA(`
+continue kənˈtɪnjuː
 act ækt
 again əˈɡen
 asking ˈæskɪŋ

@@ -34,9 +34,11 @@ The top-right clock shows **Lesson plan** time (where you are in the 60:00 plan)
 ### Controls
 
 Play/pause · previous/next chapter · timeline seek (click or drag) · back/forward 5 s · replay this example · continue to next step ·
-Class/Demo switch · narration on/off · sound panel (separate narration / music-and-ambience / effects volume and mute) · fullscreen ·
+Class/Demo switch · **CC** (shows the narration as captions, word-over-IPA, with the spoken word highlighted; off by default) ·
+**IPA** (shows or hides the IPA under every word; on by default) · narration on/off · sound panel (separate narration / music-and-ambience / effects volume and mute) · fullscreen ·
 restart (with confirmation).
-Keyboard: `Space` play/pause, `←` `→` ±5 s, `PgUp` `PgDn` chapters, `R` replay, `N` next step, `M` narration, `F` fullscreen.
+Every activity has a gold **Continue** button in its panel (Class Mode); it pulses when the timer runs out. Demo Mode hides it because that mode advances itself.
+Keyboard: `Space` play/pause, `←` `→` ±5 s, `PgUp` `PgDn` chapters, `R` replay, `N` next step, `C` captions, `I` IPA, `M` narration, `F` fullscreen.
 
 ## The 60:00 plan (exact)
 
@@ -171,7 +173,7 @@ I did not watch or listen to the whole video.
 
 ```bash
 node tools/build.mjs --standalone      # builds release/index.html and the one-file version
-node tools/test.mjs                    # automated tests (Playwright + Chromium): 57 checks
+node tools/test.mjs                    # automated tests (Playwright + Chromium): 65 checks
 node tools/explore.mjs --shots DIR     # screenshots of every segment, plus a missing-IPA report
 # After editing narration or dialogue text:
 node tools/extract.mjs                 # lists every spoken line  -> tools/.lines.json

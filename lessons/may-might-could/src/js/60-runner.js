@@ -29,7 +29,7 @@
         add(t, (X) => X.R.speechStart(it));
         if (o.on) o.on.forEach(([off, fn]) => add(t + (off < 1 ? off * dur : off), fn));
         if (k === 'say') add(t + dur + (o.hold != null ? o.hold : 0.9), (X) => { if (!o.keep) X.R.speechEnd(it); });
-        else if (o.cap) add(t + dur + 0.6, (X) => X.R.capHide(it));
+        else add(t + dur + 0.6, (X) => X.R.capHide(it));
         t += dur + (o.gap != null ? o.gap : k === 'say' ? 0.3 : 0.4);
       } else if (k === 'do') add(t, st[1]);
       else if (k === 'wait') t += st[1];
@@ -124,14 +124,14 @@
           else if (it.o.to) { const o = S.char(it.o.to); if (o) c.look(o.P.x > c.P.x ? 0.8 : -0.8, 0, 0.3); }
           if (it.o.turn) c.turn(it.o.turn, 0.4);
         }
-      } else if (it.o.cap) FE.UI.cap(it);
+      } else if (it.o.cap || FE.UI.cc) FE.UI.cap(it);
     },
     speechEnd(it) {
       if (R.S.char(it.who) && R.curSpeech === it) R.S.char(it.who).stopTalk();
       if (it.rec) R.S.removeBubble(it.rec, FE.Tween.instant);
       if (R.curSpeech === it) R.curSpeech = null;
     },
-    capHide() { FE.UI.capHide(); },
+    capHide(it) { FE.UI.capHide(false, it); },
     stopSpeech() {
       A.stop();
       if (R.S) for (const id in R.S.chars) R.S.chars[id].stopTalk();
@@ -159,7 +159,7 @@
       if (it) {
         const w = FE.wordIndex(it, t - it.t0);
         if (it.kind === 'say' && it.rec) R.S.highlight(it.rec, w);
-        else if (it.o.cap) FE.UI.capHL(w);
+        else if (it.o.cap || FE.UI.cc) FE.UI.capHL(w);
       }
     },
     /* ---------- frame ---------- */

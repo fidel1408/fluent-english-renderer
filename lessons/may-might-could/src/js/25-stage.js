@@ -170,6 +170,11 @@
       const d = `M${ex + nx * bw + inx},${ey + ny * bw + iny} L${ex + nx * bw},${ey + ny * bw} Q${cx},${cy} ${tx},${ty} Q${cx2},${cy2} ${ex - nx * bw},${ey - ny * bw} L${ex - nx * bw + inx},${ey - ny * bw + iny}Z`;
       rec.tailS.setAttribute('d', d); rec.tailF.setAttribute('d', d);
     }
+    /* remove one bubble only (a later speaker's bubble must survive an earlier speaker's hide event) */
+    removeBubble(rec, instant) {
+      const i = this.bubbles.indexOf(rec); if (i >= 0) this.bubbles.splice(i, 1);
+      if (instant) rec.b.remove(); else { rec.b.classList.remove('on'); setTimeout(() => rec.b.remove(), 300); }
+    }
     hideBubbles(instant) {
       for (const r of this.bubbles) { if (instant) r.b.remove(); else { r.b.classList.remove('on'); const b = r.b; setTimeout(() => b.remove(), 300); } }
       this.bubbles = [];

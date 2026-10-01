@@ -127,8 +127,8 @@
       } else if (it.o.cap) FE.UI.cap(it);
     },
     speechEnd(it) {
-      if (R.S.char(it.who)) R.S.char(it.who).stopTalk();
-      R.S.hideBubbles(FE.Tween.instant);
+      if (R.S.char(it.who) && R.curSpeech === it) R.S.char(it.who).stopTalk();
+      if (it.rec) R.S.removeBubble(it.rec, FE.Tween.instant);
       if (R.curSpeech === it) R.curSpeech = null;
     },
     capHide() { FE.UI.capHide(); },

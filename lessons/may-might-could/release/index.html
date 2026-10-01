@@ -197,6 +197,14 @@ textarea.free{width:100%;font:600 32px var(--sans);border:3px solid var(--line);
 #cap{justify-content:center}
 
 .fxp.in.forkcard{transform:scale(var(--k,1));transform-origin:0 0}
+
+#hudTab{position:absolute;top:auto;left:auto;height:auto;width:auto;right:34px;bottom:150px;z-index:21;display:flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:8px 18px;background:rgba(14,26,51,.82);color:#fff;font:600 20px var(--sans);cursor:pointer;opacity:.85;transition:bottom .35s,opacity .3s,background .2s}
+#hudTab:hover,#hudTab:focus-visible{opacity:1;background:rgba(14,26,51,.96)}
+#hudTab .ar{font-size:18px}
+#stage.nohud #hudTab{bottom:14px;opacity:.5}#stage.nohud #hudTab:hover,#stage.nohud #hudTab:focus-visible{opacity:1}
+#stage.nohud #hud{transform:translateY(110%);opacity:0;pointer-events:none}
+#hud{transition:opacity .35s,transform .35s}
+#cap{transition:bottom .35s}#stage.nohud #cap{bottom:70px}#cap.cc .capc{max-width:1500px}
 </style>
 </head>
 <body>
@@ -3567,6 +3575,7 @@ your jɔːr
           ${hb('bVoice', ICONS.voice, 'Narration on / off  [M]')}${hb('bSound', ICONS.sound, 'Sound settings')}${hb('bFull', ICONS.full, 'Fullscreen  [F]')}${hb('bRestart', ICONS.restart, 'Restart lesson')}
         </div>
       </div>
+      <button id="hudTab" aria-pressed="false" aria-label="Hide or show the control bar" data-tip="Hide or show the control bar  [H]"><span class="ar">▾</span><span class="lb">Hide menu</span></button>
       <div id="vol"><label>Narration <input type="range" id="vN" min="0" max="1" step="0.05" value="1"><input type="checkbox" id="mN" title="mute narration" aria-label="mute narration"></label><label>Music &amp; ambience <input type="range" id="vM" min="0" max="1" step="0.05" value="0.35"><input type="checkbox" id="mM" aria-label="mute music"></label><label>Effects <input type="range" id="vF" min="0" max="1" step="0.05" value="0.7"><input type="checkbox" id="mF" aria-label="mute effects"></label><div style="font-size:14px;color:#9fb0d9;margin-top:6px">Checked = muted. Music is off during learner-speaking activities.</div></div>
       <div id="toast"></div>`);
     $('#bNext').innerHTML = ICONS.nextCh.replace('<path d="M18 5v14M5 5l10 7L5 19z"/>', '<path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>');
@@ -3588,7 +3597,12 @@ your jɔːr
     UI.ipa = on; $('#bIPA').setAttribute('aria-pressed', on); $('#stage').classList.toggle('no-ipa', !on); store.set('fe-ipa', on ? '1' : '0');
     if (!quiet) UI.toast(on ? 'IPA shown' : 'IPA hidden', 1400);
   };
-  UI.restorePrefs = () => { if (store.get('fe-cc') === '1') UI.setCC(true, true); if (store.get('fe-ipa') === '0') UI.setIPA(false, true); };
+  UI.setHud = (hidden, quiet) => {
+    UI.hudHidden = hidden; $('#stage').classList.toggle('nohud', hidden); const b = $('#hudTab');
+    b.setAttribute('aria-pressed', hidden); b.querySelector('.ar').textContent = hidden ? '▴' : '▾'; b.querySelector('.lb').textContent = hidden ? 'Show menu' : 'Hide menu';
+    store.set('fe-hud', hidden ? '0' : '1'); if (!quiet) UI.toast(hidden ? 'Menu hidden. Press H or use the tab at the bottom right to bring it back.' : 'Menu shown', hidden ? 2800 : 1400);
+  };
+  UI.restorePrefs = () => { if (store.get('fe-hud') === '0') UI.setHud(true, true); if (store.get('fe-cc') === '1') UI.setCC(true, true); if (store.get('fe-ipa') === '0') UI.setIPA(false, true); };
   UI.fit = () => { const s = Math.min(innerWidth / 1920, innerHeight / 1080); $('#stage').style.transform = `scale(${s})`; UI.scale = s; };
   UI.toast = (msg, ms = 2200) => { const t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(UI._tt); UI._tt = setTimeout(() => t.classList.remove('on'), ms); };
 
@@ -3600,6 +3614,7 @@ your jɔːr
     $('#bFull').onclick = () => UI.fullscreen();
     $('#bCC').onclick = () => UI.setCC(!UI.cc);
     $('#bIPA').onclick = () => UI.setIPA(!UI.ipa);
+    $('#hudTab').onclick = () => UI.setHud(!UI.hudHidden);
     $('#bVoice').onclick = () => { A.mute.narr = !A.mute.narr; $('#mN').checked = A.mute.narr; $('#bVoice').classList.toggle('on', A.mute.narr); A.applyVol(); UI.toast(A.mute.narr ? 'Narration muted' : 'Narration on'); };
     $('#bSound').onclick = () => $('#vol').classList.toggle('open');
     $('#bRestart').onclick = () => UI.confirm('Restart the lesson from 0:00?', 'Restart', () => R.restart());
@@ -3629,7 +3644,7 @@ your jɔːr
       else if (k === 'PageDown') R.chapter(1); else if (k === 'PageUp') R.chapter(-1);
       else if (k === 'r' || k === 'R') R.replay(); else if (k === 'n' || k === 'N') R.nextSeg(1);
       else if (k === 'f' || k === 'F') UI.fullscreen(); else if (k === 'm' || k === 'M') $('#bVoice').click();
-      else if (k === 'c' || k === 'C') $('#bCC').click(); else if (k === 'i' || k === 'I') $('#bIPA').click();
+      else if (k === 'h' || k === 'H') $('#hudTab').click(); else if (k === 'c' || k === 'C') $('#bCC').click(); else if (k === 'i' || k === 'I') $('#bIPA').click();
       else if (k === 'Escape') { $('#vol').classList.remove('open'); }
     });
     // pronunciation card replay (teacher-controlled)

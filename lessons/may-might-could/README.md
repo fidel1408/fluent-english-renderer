@@ -37,8 +37,9 @@ Play/pause · previous/next chapter · timeline seek (click or drag) · back/for
 Class/Demo switch · **CC** (shows the narration as captions, word-over-IPA, with the spoken word highlighted; off by default) ·
 **IPA** (shows or hides the IPA under every word; on by default) · narration on/off · sound panel (separate narration / music-and-ambience / effects volume and mute) · fullscreen ·
 restart (with confirmation).
+**Hide menu** (the small tab above the bar, bottom right) slides the whole control bar away to give the lesson the full screen; the tab stays, as a faint pill, to bring it back. `H` does the same; your choice is remembered.
 Every activity has a gold **Continue** button in its panel (Class Mode); it pulses when the timer runs out. Demo Mode hides it because that mode advances itself.
-Keyboard: `Space` play/pause, `←` `→` ±5 s, `PgUp` `PgDn` chapters, `R` replay, `N` next step, `C` captions, `I` IPA, `M` narration, `F` fullscreen.
+Keyboard: `Space` play/pause, `←` `→` ±5 s, `PgUp` `PgDn` chapters, `R` replay, `N` next step, `C` captions, `I` IPA, `H` hide/show the menu, `M` narration, `F` fullscreen.
 
 ## The 60:00 plan (exact)
 

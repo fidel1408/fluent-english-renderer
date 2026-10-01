@@ -1,0 +1,18 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#e9e1d3">
+<canvas id=c width=1920 height=1080></canvas>
+<script src="../src/util.js"></script><script src="../src/chars.js"></script>
+<script>
+const ctx=document.getElementById('c').getContext('2d');
+ctx.fillStyle='#efe6d6';ctx.fillRect(0,0,1920,1080);
+function P(o){const b=Object.assign({},POSE0,o);return b;}
+const D=P({yaw:-0.4,smile:0.5,open:0,armL:{x:-120,y:330,hand:'rest'},armR:{x:200,y:150,hand:'open'},brow:0.2});
+const M=P({yaw:0.2,smile:0.7,open:0.6,round:0,gx:0.3,armL:{x:-190,y:140,hand:'point'},armR:{x:120,y:330,hand:'rest'},brow:0.3,bt:0});
+const S=P({yaw:0,smile:0.2,open:0.9,round:0.4,brow:0.8,bt:0.6,lid:1.15,roll:0.05,armL:{x:-120,y:300,hand:'grip',item:'keys'},armR:{x:150,y:250,hand:'open'}});
+drawFigure(ctx,'D',D,360,360,1.05,false,0);
+drawFigure(ctx,'M',M,960,360,1.05,false,0);
+drawFigure(ctx,'S',S,1560,360,1.05,false,0);
+// close-ups of faces
+ctx.save();
+drawFigure(ctx,'D',P({smile:.8,open:.3,yaw:0}),360,980,2.2,false,0);
+ctx.restore();
+</script>

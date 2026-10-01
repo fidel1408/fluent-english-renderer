@@ -9,12 +9,13 @@
 :root{color-scheme:dark;--bg:#0c1525;--panel:#15233b;--panel2:#1c2e4d;--ink:#eaf0fb;--mute:#9fb2cf;--accent:#ffd166;--ok:#2fbf7a;--focus:#7fc6ff}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-#app{display:flex;flex-direction:column;height:100%}
+#app{display:flex;flex-direction:column;height:100%;position:relative}
+#mini{position:fixed;right:12px;bottom:12px;display:flex;gap:8px;z-index:5;opacity:.35;transition:opacity .2s}#mini:hover,#mini:focus-within{opacity:1}#mini button{background:rgba(12,21,37,.88);font-size:14px}
 #stageWrap{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:8px 10px 4px}
 #stage{position:relative;aspect-ratio:16/9;width:min(100%,calc((100vh - var(--ctl-h,190px)) * 16 / 9));max-width:100%;max-height:100%;margin:auto}
 #cv{width:100%;height:100%;display:block;border-radius:10px;background:#f4eedf;box-shadow:0 6px 30px rgba(0,0,0,.45)}
 #loader{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#0c1525;border-radius:10px;color:var(--mute);font-size:18px}
-#loader[hidden],#toast[hidden]{display:none}
+#loader[hidden],#toast[hidden],#mini[hidden]{display:none}
 #toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(10,20,40,.94);color:#fff;border:2px solid var(--accent);padding:10px 18px;border-radius:999px;font-size:17px;max-width:90%;text-align:center}
 #controls{background:var(--panel);border-top:1px solid #243a5e;padding:8px 14px 10px;display:flex;flex-direction:column;gap:8px}
 .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -55,6 +56,7 @@ button[aria-pressed=true]{background:#2c5a98;border-color:#6aa8ff}
     <div id="loader"><span id="loaderMsg">Preparing the lesson&hellip;</span></div>
     <div id="toast" role="status" hidden></div>
   </div></div>
+  <div id="bar">
   <div id="controls">
     <div class="row">
       <button id="btnPlay" class="round" type="button" aria-label="Play" data-state="paused">
@@ -77,10 +79,13 @@ button[aria-pressed=true]{background:#2c5a98;border-color:#6aa8ff}
       <label class="ctl">Speed <select id="speed" aria-label="Playback speed"><option value="0.8">0.8&times;</option><option value="1" selected>1&times;</option><option value="1.2">1.2&times;</option></select></label>
       <label class="ctl">Frame rate <select id="fps" aria-label="Frame rate"><option value="30" selected>30 (light)</option><option value="60">60</option></select></label>
       <button id="full" type="button">Full screen</button>
-      <span class="hint">Space play/pause &middot; &larr;&rarr; 5 s &middot; [ ] chapter &middot; N P activity &middot; 1&ndash;3 answer &middot; C captions &middot; R replay</span>
+      <button id="hideBar" type="button" aria-label="Hide the menu bar (H)">Hide menu</button>
+      <span class="hint">Space play/pause &middot; &larr;&rarr; 5 s &middot; [ ] chapter &middot; N P activity &middot; 1&ndash;3 answer &middot; C captions &middot; H hide menu &middot; R replay</span>
     </div>
   </div>
   <details id="transcript"><summary>Transcript</summary><div id="transcriptBody"></div></details>
+  </div>
+  <div id="mini" hidden><button id="miniPlay" type="button" aria-label="Play or pause">&#9654;&#10074;&#10074;</button><button id="showBar" type="button" aria-label="Show the menu bar">Show menu</button></div>
   <div id="live" class="sr" aria-live="polite"></div>
 </div>
 <script>/*DATA*/</script>

@@ -39,7 +39,7 @@ Pair work is 3–4 minutes each (about 14 minutes in total); class sharing about
 ## Controls
 Play/Pause · Replay · scrubber (ticks = chapters, ★ = start of a practice round) · 13 chapter buttons with start times · **« Activity / Activity »** (also **N / P**) · Voice and Music sliders · Mute · Captions (with IPA) · speed 0.8/1/1.2 · 30/60 fps · full screen · transcript.
 **Class pauses**: *At each activity* (default: stops before the first question of each round so you can set it up), *At every question*, or *Off*. While paused, press Play to continue. Click an option/bin on screen (or press 1–4) to show a student's answer; the reveal still follows the narration.
-Keys: Space, ←/→ 5 s, [ ] chapter, N P activity, 1–4 answer, C captions, M mute, F full screen, R replay.
+Keys: Space, ←/→ 5 s, [ ] chapter, N P activity, **H hide/show the menu bar** (or the Hide menu button; a small Play/Pause + Show menu pair stays in the corner), 1–4 answer, C captions, M mute, F full screen, R replay.
 
 ## How it is built
 ```

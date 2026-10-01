@@ -66,8 +66,9 @@
     seek(0, true);
     $('loader').hidden = true;
     $('btnPlay').focus({ preventScroll: true });
-    const fitCtl = () => document.documentElement.style.setProperty('--ctl-h', (document.getElementById('controls').offsetHeight + document.getElementById('transcript').offsetHeight + 16) + 'px');
+    const fitCtl = () => document.documentElement.style.setProperty('--ctl-h', $('bar').hidden ? '12px' : (document.getElementById('controls').offsetHeight + document.getElementById('transcript').offsetHeight + 16) + 'px');
     fitCtl(); new ResizeObserver(fitCtl).observe($('controls'));
+    P.fitCtl = fitCtl;
     new ResizeObserver(() => { sizeCanvas(); drawOnce(); }).observe(stage);
     document.addEventListener('visibilitychange', () => { if (document.hidden && P.playing) { pause(); toast('Paused because this tab is hidden.'); } });
   }
@@ -147,6 +148,9 @@
     const mute = $('mute'); mute.addEventListener('click', () => { const m = !narr.muted; narr.setMuted(m); music.setMuted(m); mute.setAttribute('aria-pressed', m); mute.textContent = m ? 'Unmute' : 'Mute'; });
     const cc = $('cc'); Eng.captions = store.get('cc', true); cc.setAttribute('aria-pressed', Eng.captions); cc.addEventListener('click', () => { Eng.captions = !Eng.captions; cc.setAttribute('aria-pressed', Eng.captions); store.set('cc', Eng.captions); drawOnce(); });
     const ap = $('autopause'); P.apMode = store.get('apm', 'round'); if (!['off', 'round', 'item'].includes(P.apMode)) P.apMode = 'round'; ap.value = P.apMode; ap.addEventListener('change', () => { P.apMode = ap.value; store.set('apm', ap.value); });
+    const setBar = hide => { $('bar').hidden = hide; $('mini').hidden = !hide; store.set('hide', hide); P.fitCtl && P.fitCtl(); sizeCanvas(); drawOnce(); };
+    $('hideBar').addEventListener('click', () => setBar(true)); $('showBar').addEventListener('click', () => setBar(false)); $('miniPlay').addEventListener('click', () => (P.playing ? pause() : play()));
+    P.setBar = setBar; if (store.get('hide', false)) setTimeout(() => setBar(true), 0);
     $('prevAct').addEventListener('click', () => jumpActivity(-1)); $('nextAct').addEventListener('click', () => jumpActivity(1));
     const sp = $('speed'); P.rate = store.get('rate', 1); sp.value = String(P.rate); sp.addEventListener('change', () => { P.rate = +sp.value; store.set('rate', P.rate); narr.setRate(P.rate); music.setRate(P.rate); P.base = { perf: performance.now(), t: P.t }; });
     const fp = $('fps'); P.fps = store.get('fps', 30); fp.value = String(P.fps); fp.addEventListener('change', () => { P.fps = +fp.value; store.set('fps', P.fps); });
@@ -175,6 +179,7 @@
     else if (k === 'c' || k === 'C') $('cc').click();
     else if (k === 'm' || k === 'M') $('mute').click();
     else if (k === 'f' || k === 'F') $('full').click();
+    else if (k === 'h' || k === 'H') P.setBar(!$('bar').hidden);
     else if (k === 'r' || k === 'R') replay();
     else if (/^[1-4]$/.test(k)) { const h = Eng.hot[+k - 1]; if (h) { h.fn(); drawOnce(); } }
   }

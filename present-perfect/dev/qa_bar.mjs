@@ -1,0 +1,10 @@
+import { chromium } from '/opt/node22/lib/node_modules/playwright/index.mjs';
+const b = await chromium.launch({ args: ['--no-sandbox', '--mute-audio'] });
+const p = await b.newPage({ viewport: { width: 1600, height: 900 } }); const errs = []; p.on('pageerror', e => errs.push(e.message));
+await p.goto(process.env.URL || 'http://127.0.0.1:8765/index.html'); await p.waitForFunction('document.getElementById("loader").hidden', null, { timeout: 60000 });
+const stageH = () => p.evaluate(() => Math.round(document.getElementById('stage').getBoundingClientRect().height));
+const h0 = await stageH(); await p.click('#hideBar'); await p.waitForTimeout(300); const h1 = await stageH();
+await p.screenshot({ path: 'dev/out/hidden.png' });
+await p.click('#showBar'); await p.waitForTimeout(300); const h2 = await stageH();
+await p.keyboard.press('h'); await p.waitForTimeout(200); const h3 = await stageH(); await p.keyboard.press('h'); await p.waitForTimeout(200); const h4 = await stageH();
+console.log({ shown: h0, hidden: h1, shownAgain: h2, keyH: h3, keyHAgain: h4, errs }); await b.close();

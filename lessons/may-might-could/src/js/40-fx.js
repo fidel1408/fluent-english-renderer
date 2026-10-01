@@ -45,10 +45,9 @@
     p.style.cssText = `left:${o.x}px;top:${o.y}px;${o.w ? 'width:' + o.w + 'px;' : ''}${o.style || ''}`;
     fx.appendChild(p);
     if (FE.Tween.instant) p.classList.add('in', 'noanim'); else requestAnimationFrame(() => requestAnimationFrame(() => p.classList.add('in')));
-    if (!FE.Tween.instant) X.R.A.sfx(o.sfx || 'pop');
+    if (!FE.Tween.instant) FE.Audio.sfx(o.sfx || 'pop');
     return p;
   };
-  FE.R.A = FE.Audio;
   FX.clear = (X, id) => {
     const fx = FE.$('#fx'); if (!fx) return;
     (id ? FE.$$('#fx_' + id, fx) : FE.$$('.fxp', fx)).forEach((e) => { if (FE.Tween.instant) e.remove(); else { e.classList.remove('in'); setTimeout(() => e.remove(), 400); } });

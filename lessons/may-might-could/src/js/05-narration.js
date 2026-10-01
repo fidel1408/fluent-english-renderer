@@ -1,0 +1,1 @@
+window.NARR = window.NARR || {};

@@ -33,7 +33,12 @@
       let lead = '', trail = '';
       const ml = LEAD.exec(tk); if (ml) { lead = ml[0]; tk = tk.slice(lead.length); }
       const mt = TRAIL.exec(tk); if (mt && tk.length > mt[0].length) { trail = mt[0]; tk = tk.slice(0, tk.length - trail.length); }
-      out.push({ word: tk, lead, trail, role, ov });
+      if (tk.includes(' ') && role) { // a chip such as {t:at home.} → one unit per word, same role
+        const parts = tk.split(' ');
+        parts.forEach((w, i) => out.push({ word: w, lead: i === 0 ? lead : '', trail: i === parts.length - 1 ? trail : '', role, ov: null }));
+        continue;
+      }
+      out.push({ word: tk, lead, trail, role, ov, punct: !/[A-Za-z0-9\u00C0-\u024F]/.test(tk) });
     }
     return out;
   };
@@ -44,14 +49,15 @@
     if (tk.ov) return tk.ov;
     const key = tk.word.toLowerCase().replace(/’/g, "'");
     let v = FE.IPA[key];
-    if (v == null) { FE.ipaMissing.add(key); v = '?'; }
+    if (v == null) { FE.ipaMissing.add(key); (FE.ipaCtx = FE.ipaCtx || {})[key] = FE.ipaCtx[key] || FE._ctx; v = '?'; }
     return v;
   };
 
   /* word-over-IPA units. opts: {cls, id} */
   FE.U = (text, opts = {}) => {
-    const toks = FE.tokens(text);
+    const toks = FE.tokens(text); FE._ctx = text;
     return toks.map((t, i) => {
+      if (t.punct) return `<span class="wu pun" data-i="${i}"><span class="w">${esc(t.lead + t.word + t.trail)}</span><span class="p">&nbsp;</span></span>`;
       const ipa = FE.ipaOf(t);
       const r = t.role ? ' r-' + t.role : '';
       const lead = t.lead ? `<i class="pn l">${esc(t.lead)}</i>` : '';

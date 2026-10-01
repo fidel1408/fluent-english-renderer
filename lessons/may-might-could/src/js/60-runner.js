@@ -81,7 +81,7 @@
       FE.UI.clearOverlays();
       A.quiet = true; FE.Tween.instant = true;
       const so = typeof seg.sceneOpts === 'function' ? seg.sceneOpts(L) : seg.sceneOpts || {};
-      R.S.load(seg.scene, so);
+      R.S.load(typeof seg.scene === 'function' ? seg.scene(L) : seg.scene, so);
       (seg.cast || []).forEach(([id, o]) => R.S.add(id, o));
       if (seg.weather) R.S.setWeather(seg.weather[0], seg.weather[1], 0);
       if (seg.setup) seg.setup(R.X);
@@ -103,7 +103,7 @@
       const seg = R.seg(); R.gate = true; R.actT = actT; R.timesUp = false;
       if (seg.act) {
         R.act = FE.ACT.mount(seg, R.X);
-        if (seg.act.cam) R.S.camTo(seg.act.cam, quiet ? 0 : 1.2);
+        if (seg.act.cam) R.S.camTo(Object.assign({ x: 0, y: 0, z: 1 }, seg.act.cam), quiet ? 0 : 1.2);
         A.setSilence(seg.act.silent !== false);
       } else A.setSilence(false);
       if (actT > 0 && R.act && R.act.fastForward) R.act.fastForward(actT);
@@ -215,6 +215,18 @@
       R.seekP(L.chapters[from - 1].s + 0.01);
     },
     nextSeg(d = 1) { R.load(FE.clamp(R.idx + d, 0, L.segs.length - 1), 0); },
+    /* rebuild the current scene from mission state (visible consequence of a branch choice) */
+    rebuild() {
+      const seg = R.seg(), keep = FE.$$('#fx > *');
+      A.quiet = true; const wasI = FE.Tween.instant; FE.Tween.instant = true;
+      const so = typeof seg.sceneOpts === 'function' ? seg.sceneOpts(L) : seg.sceneOpts || {};
+      R.S.load(typeof seg.scene === 'function' ? seg.scene(L) : seg.scene, so);
+      keep.forEach((e) => FE.$('#fx').appendChild(e));
+      (seg.cast || []).forEach(([id, o]) => R.S.add(id, o));
+      if (seg.act && seg.act.cam) Object.assign(R.S.cam, seg.act.cam);
+      FE.Tween.instant = wasI; A.quiet = false; FE.Tween.finish();
+      if (!R.playing) R.draw(0);
+    },
     replay() { const g = R.act; R.load(R.idx, 0); },
     restart() { R.pause(); L.store = {}; R.started = false; R.load(0, 0); FE.UI.clearWall(); },
     setMode(m) { R.mode = m; FE.UI.onMode(m); },

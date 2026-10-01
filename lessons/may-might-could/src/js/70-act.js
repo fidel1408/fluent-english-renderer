@@ -30,8 +30,8 @@
       if (w[j] === 'not') j++;
       const nx = w[j];
       if (nx === 'to') out.push({ k: 'to', msg: 'No “to” after may, might, or could: she might arrive, not she might to arrive.' });
-      else if (nx && S3[nx]) out.push({ k: 's', msg: S3[nx] === 'be' ? 'After a modal, use be: she might be late.' : `After a modal, use the base verb “${S3[nx]}”: no -s, no -ed, no -ing.` });
-      else if (nx && /(ing|ed)$/.test(nx) && BASE.includes(nx.replace(/(ing|ed)$/, '')) ) out.push({ k: 'ing', msg: 'After a modal, use the base verb (no -ing, no -ed).' });
+      else if (nx && S3[nx]) out.push({ k: 's', msg: S3[nx] === 'be' ? 'After a modal, use be: she might be late.' : `After a modal, use the base verb “${S3[nx]}”. Do not add an ending.` });
+      else if (nx && /(ing|ed)$/.test(nx) && BASE.includes(nx.replace(/(ing|ed)$/, '')) ) out.push({ k: 'ing', msg: 'After a modal, use the base verb. Do not add an ending.' });
       if (!nx) out.push({ k: 'short', msg: 'The sentence stops after the modal. Add a base verb, for example: might arrive.' });
       return out;
     },
@@ -133,7 +133,8 @@
   /* ---------- task: pair / group work with timer, optional support & model answers ---------- */
   class Task extends Base {
     render() {
-      const st = this.st, sp = this.spec;
+      const st = this.st, sp0 = this.spec, V = (x) => (typeof x === 'function' ? x(FE.L) : x);
+      const sp = Object.assign({}, sp0, { lead: V(sp0.lead), steps: V(sp0.steps), support: V(sp0.support), model: V(sp0.model), hints: V(sp0.hints) });
       const steps = (sp.steps || []).map((s, i) => `<li><span class="n">${i + 1}</span><span class="ub sm">${U(s)}</span></li>`).join('');
       const roles = sp.roles ? `<div class="roles">${sp.roles.map((r) => `<div class="role"><span class="tag">${U(r.r)}</span><div class="ub sm">${U(r.t)}</div></div>`).join('')}</div>` : '';
       const sup = st.sup && sp.support ? `<div class="fb"><b>${U('Language help')}</b>${sp.support.map((s) => `<div class="ub sm">${U(s)}</div>`).join('')}</div>` : '';

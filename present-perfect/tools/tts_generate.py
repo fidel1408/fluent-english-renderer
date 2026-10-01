@@ -42,16 +42,18 @@ ELEVEN_URL = "https://api.elevenlabs.io/v1"
 
 
 def eleven_key():
-    key = os.environ.get("ELEVENLABS_API_KEY")
-    if not key:
-        sys.exit("ELEVENLABS_API_KEY is not set (add it as an environment variable; never paste it into chat).")
-    return key
+    """Key from ELEVENLABS_API_KEY if set. When it is not set we assume the environment injects an
+    `xi-api-key` header for api.elevenlabs.io (Add credential -> allowed website), so no key is needed here."""
+    return os.environ.get("ELEVENLABS_API_KEY") or None
 
 
 def eleven_request(path, body=None, key=None, accept="application/json"):
     import urllib.request, urllib.error
-    req = urllib.request.Request(ELEVEN_URL + path, data=None if body is None else json.dumps(body).encode(),
-                                 headers={"xi-api-key": key or eleven_key(), "Content-Type": "application/json", "Accept": accept})
+    headers = {"Content-Type": "application/json", "Accept": accept}
+    k = key or eleven_key()
+    if k:
+        headers["xi-api-key"] = k
+    req = urllib.request.Request(ELEVEN_URL + path, data=None if body is None else json.dumps(body).encode(), headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
             return r.read()
@@ -250,6 +252,13 @@ def phrase_split(text):
             out.append(" ".join(words[:cut]))
             words = words[cut:]
         out.append(" ".join(words))
+    # merge fragments shorter than 3 words into their neighbour so captions are never single words
+    i = 0
+    while i < len(out):
+        if len(out[i].split()) < 3 and len(out) > 1:
+            if i + 1 < len(out): out[i + 1] = out[i] + " " + out[i + 1]; del out[i]; continue
+            else: out[i - 1] = out[i - 1] + " " + out[i]; del out[i]; break
+        i += 1
     return out
 
 

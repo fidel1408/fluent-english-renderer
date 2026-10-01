@@ -468,3 +468,16 @@ function drawScarf(ctx, c) {
   ctx.beginPath(); ctx.moveTo(14, 20); ctx.bezierCurveTo(30, 60, 24, 110, 30, 150); ctx.lineTo(4, 156); ctx.bezierCurveTo(4, 110, 6, 60, -2, 28); ctx.closePath(); ctx.fillStyle = lg(ctx, 0, 20, 30, 150, [[0, c.scarf], [1, shade(c.scarf, -0.3)]]); ctx.fill(); ctx.stroke();
   ctx.strokeStyle = rgba('#FFFFFF', 0.28); ctx.lineWidth = 3; for (let i = 0; i < 4; i++) { ctx.beginPath(); ctx.moveTo(8, 50 + i * 24); ctx.lineTo(28, 44 + i * 24); ctx.stroke(); }
 }
+
+/* expression presets: brow raise, inner-brow tilt, lid openness, smile, extra open mouth */
+const EXPR = {
+  neutral:   { brow: 0,    bt: 0,    lid: 1,    smile: 0.2,  mo: 0 },
+  happy:     { brow: 0.25, bt: 0,    lid: 0.95, smile: 0.85, mo: 0 },
+  warm:      { brow: 0.12, bt: 0.1,  lid: 0.97, smile: 0.55, mo: 0 },
+  worried:   { brow: 0.45, bt: 0.85, lid: 1.04, smile: -0.45, mo: 0 },
+  surprised: { brow: 1.0,  bt: 0.3,  lid: 1.2,  smile: 0.1,  mo: 0.45 },
+  thinking:  { brow: 0.35, bt: -0.2, lid: 0.9,  smile: 0.0,  mo: 0 },
+  proud:     { brow: 0.3,  bt: 0,    lid: 0.88, smile: 0.9,  mo: 0 },
+  curious:   { brow: 0.6,  bt: 0.2,  lid: 1.05, smile: 0.35, mo: 0 },
+  relieved:  { brow: 0.2,  bt: 0.5,  lid: 0.8,  smile: 0.7,  mo: 0 },
+};

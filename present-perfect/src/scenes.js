@@ -195,10 +195,12 @@ function sceneTravel() {
   // FG: low seat backs bottom + suitcase right
   f.fillStyle = 'rgba(20,40,60,.25)'; f.beginPath(); f.ellipse(960, 1030, 960, 60, 0, 0, TAU); f.fill();
   for (let i = 0; i < 6; i++) { const sx = 40 + i * 330; f.fillStyle = lg(f, 0, 930, 0, 1100, [[0, '#2E7DD7'], [1, '#1B4F94']]); f.beginPath(); rrect(f, sx, 940, 290, 200, 34); f.fill(); f.fillStyle = 'rgba(255,255,255,.14)'; f.beginPath(); rrect(f, sx + 18, 950, 254, 28, 14); f.fill(); }
-  f.save(); f.translate(1700, 960); f.fillStyle = lg(f, 0, 0, 150, 0, [[0, '#E36414'], [1, '#B84A0C']]); f.beginPath(); rrect(f, 0, -230, 170, 260, 24); f.fill(); f.strokeStyle = 'rgba(0,0,0,.18)'; f.lineWidth = 5; for (let i = 1; i < 4; i++) { f.beginPath(); f.moveTo(i * 42, -222); f.lineTo(i * 42, 22); f.stroke(); } f.fillStyle = '#3B2A1B'; f.fillRect(66, -270, 38, 44); f.restore();
   return { bg, fg, name: 'travel' };
 }
 
+function drawSuitcase(ctx, x, y) {
+  ctx.save(); ctx.translate(x, y); ctx.fillStyle = lg(ctx, 0, 0, 150, 0, [[0, '#E36414'], [1, '#B84A0C']]); ctx.beginPath(); rrect(ctx, 0, -230, 170, 260, 24); ctx.fill(); ctx.strokeStyle = 'rgba(0,0,0,.18)'; ctx.lineWidth = 5; for (let i = 1; i < 4; i++) { ctx.beginPath(); ctx.moveTo(i * 42, -222); ctx.lineTo(i * 42, 22); ctx.stroke(); } ctx.fillStyle = '#3B2A1B'; ctx.fillRect(66, -270, 38, 44); ctx.restore();
+}
 /* ------------------------------------------------------------------ STUDIO (grammar boards) */
 function sceneStudio() {
   const [bg, b] = mk(), [fg, f] = mk();

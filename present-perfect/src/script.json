@@ -33,7 +33,7 @@
     },
     {
       "id": "negq",
-      "label": "No and ?"
+      "label": "Negatives and questions"
     },
     {
       "id": "exp",
@@ -601,7 +601,7 @@
       ]
     },
     {
-      "id": "gone",
+      "id": "gone1",
       "ch": "notes",
       "lines": [
         {
@@ -615,7 +615,13 @@
           "kind": "dlg",
           "who": "M",
           "text": "She's gone to London."
-        },
+        }
+      ]
+    },
+    {
+      "id": "gone2",
+      "ch": "notes",
+      "lines": [
         {
           "id": "g3",
           "who": "N",
@@ -690,5 +696,41 @@
         }
       ]
     }
-  ]
+  ],
+  "elevenlabs": {
+    "_note": "Voice ids are ElevenLabs premade (default) voices, which the Free plan can use through the API. They are NOT yet verified: run `python tools/tts_generate.py --list-voices` and `--audition <id> ...`, then edit this block.",
+    "model": "eleven_multilingual_v2",
+    "voices": {
+      "N": "21m00Tcm4TlvDq8ikWAM",
+      "D": "nPczCjzI2devNBz1zQrb",
+      "M": "cgSgspJ2msm6clMCkdW9",
+      "S": "XrExE9yKIg1WjnnlVkGX"
+    },
+    "settings": {
+      "N": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      },
+      "D": {
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      },
+      "M": {
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      },
+      "S": {
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      }
+    }
+  }
 }

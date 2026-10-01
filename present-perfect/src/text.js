@@ -104,7 +104,10 @@ function drawFlow(ctx, L, F, x, y, o = {}) {
         ctx.fillStyle = o.hi[i]; ctx.beginPath(); rrect(ctx, mid - u.w / 2 - 6, by - L.size * 0.86 - 2, u.w + 12, L.lineH - 8, 12); ctx.fill();
       }
       ctx.font = L.wf; ctx.fillStyle = col; ctx.textAlign = 'center';
-      ctx.fillText(u.word, mid, by);
+      if (o.split && o.split[i]) { // [nChars, colorA, colorB] — two-colour word such as She|'s
+        const [k, ca, cb] = o.split[i], wa = measure(L.wf, u.word.slice(0, k)); ctx.textAlign = 'left';
+        ctx.fillStyle = ca; ctx.fillText(u.word.slice(0, k), mid - u.ww / 2, by); ctx.fillStyle = cb; ctx.fillText(u.word.slice(k), mid - u.ww / 2 + wa, by); ctx.textAlign = 'center';
+      } else ctx.fillText(u.word, mid, by);
       if (u.lead) { ctx.textAlign = 'right'; ctx.fillText(u.lead, mid - u.ww / 2, by); }
       if (u.trail) { ctx.textAlign = 'left'; ctx.fillText(u.trail, mid + u.ww / 2, by); }
       if (o.strike && o.strike.has(i)) { ctx.strokeStyle = o.strikeColor || '#D64550'; ctx.lineWidth = Math.max(3, L.size * 0.08); ctx.beginPath(); ctx.moveTo(mid - u.ww / 2 - 4, by - L.size * 0.3); ctx.lineTo(mid + u.ww / 2 + 4, by - L.size * 0.34); ctx.stroke(); }

@@ -1,0 +1,14 @@
+<!doctype html><meta charset=utf-8><title>dev</title>
+<style>
+@import url("../build/fonts_dev.css");
+body{margin:0;background:#111}canvas{display:block;width:100vw;height:56.25vw;max-height:100vh}
+</style>
+<body><canvas id=c width=1920 height=1080></canvas>
+<script src="../build/timeline.js"></script><script src="../build/ipa.js"></script>
+<script src="../src/util.js"></script><script src="../src/text.js"></script><script src="../src/chars.js"></script><script src="../src/scenes.js"></script><script src="../src/gfx.js"></script><script src="../src/engine.js"></script>
+<script src="../src/lesson1.js"></script><script src="../src/lesson2.js"></script><script src="../src/lesson3.js"></script>
+<script src="../src/boot.js"></script>
+<script>
+const q=new URLSearchParams(location.search);
+window.ready=boot(document.getElementById('c'),{logoBlue:'../assets/logo/fluent_english_logo_blue.png'}).then(E=>{window.renderAt=t=>E.draw(t);E.draw(+(q.get('t')||0));window.__done=true;}).catch(e=>{console.error('BOOT',e.stack||e);window.__err=String(e.stack||e)});
+</script>

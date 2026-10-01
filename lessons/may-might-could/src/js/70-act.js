@@ -151,8 +151,10 @@
   class Listen extends Base {
     render() {
       const sp = this.spec, st = this.st;
-      const rows = sp.items.map((it, i) => `<div class="lrow ${st.cur === i ? 'cur' : ''}"><button class="hb pl" data-do="play" data-i="${i}" aria-label="play">${I.play}</button><span class="ub ${it.cls || 'mid'}">${U(it.t)}</span></div>`).join('');
-      this.el.innerHTML = frame(sp, `${sp.lead ? `<div class="qq ub mid">${U(sp.lead)}</div>` : ''}<div class="lrows">${rows}</div><div class="note">${U('Listen. Then say it aloud together.')}</div>`, ib('Play all', 'all', I.play, 'gold') + ib('Stop', 'stop', I.redo), sp.tag || 'Listen and repeat');
+      const row = (it, i) => `<div class="lrow ${st.cur === i ? 'cur' : ''}"><button class="hb plbtn" data-do="play" data-i="${i}" aria-label="play">${I.play}</button><span class="ub ${it.cls === 'sm' ? 'xs' : it.cls || 'mid'}">${U(it.t)}</span></div>`;
+      const words = sp.items.map((it, i) => (it.cls ? '' : row(it, i))).join(''), sents = sp.items.map((it, i) => (it.cls ? row(it, i) : '')).join('');
+      const rows = `<div class="lwords">${words}</div>${sents}`;
+      this.el.innerHTML = frame(sp, `${sp.lead ? `<div class="qq ub mid">${U(sp.lead)}</div>` : ''}<div class="lrows">${rows}</div>`, ib('Play all', 'all', I.play, 'gold') + ib('Stop', 'stop', I.redo), sp.tag || 'Listen and repeat');
     }
     onClick(t) {
       const d = t.dataset.do;

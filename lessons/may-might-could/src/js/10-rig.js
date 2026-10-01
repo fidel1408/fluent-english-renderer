@@ -360,7 +360,7 @@
     }
     face(name, dur = 0.35) {
       const f = Char.FACES[name]; if (!f) return this;
-      this.to({ brow: 0, browA: 0, sm: 0.25, mw: 1, ...f }, dur, 'out'); return this;
+      this.to({ brow: 0, browA: 0, sm: 0.6, mw: 1, ...f }, dur, 'out'); return this;
     }
     look(x, y, dur = 0.25) { this.lookBase = { x, y }; this.to({ lookX: x, lookY: y }, dur, 'out'); return this; }
     turn(dir, dur = 0.45) {
@@ -457,8 +457,8 @@
       const lx = (P.lookX + this.sacc.x) * 3.4, ly = (P.lookY + this.sacc.y) * 2.4;
       this.irisEls.forEach((e) => e.setAttribute('transform', `translate(${lx.toFixed(2)},${ly.toFixed(2)})`));
       const lidY = -11 + bl * 15.5;
-      this.lidEls.forEach((e) => { e.setAttribute('y', (-14 + bl * 16).toFixed(2)); e.setAttribute('height', (16.5).toFixed(2)); });
-      this.lashEls.forEach((e) => e.setAttribute('transform', `translate(0,${(bl * 6.4).toFixed(2)})`));
+      this.lidEls.forEach((e) => { e.setAttribute('y', (-27 + bl * 14.4).toFixed(2)); e.setAttribute('height', '17'); });
+      this.lashEls.forEach((e) => e.setAttribute('transform', `translate(0,${(bl * 6.6).toFixed(2)})`));
       // brows
       const br_ = P.brow + talkBrow, ba = P.browA;
       const bp = (sx) => {
@@ -504,16 +504,16 @@
     clasp: { LA: 16, LB: 70, RA: 16, RB: 70, LU: 0.8, RU: 0.8, LF: 0.9, RF: 0.9, hands: ['fist', 'fist'] },
     think: { LA: 12, LB: 40, RA: 12, RB: 154, RU: 0.55, RF: 1, LU: 0.85, hands: ['fist', 'fist'], headRot: -3 },
     thinkLook: { LA: 18, LB: 70, RA: 6, RB: 150, RU: 0.52, hands: ['fist', 'fist'], headRot: 4, lean: -1 },
-    shrug: { LA: 36, LB: 62, RA: 36, RB: 62, shr: 9, hands: ['flat', 'flat'], headRot: 3 },
-    open: { LA: 28, LB: 66, RA: 28, RB: 66, hands: ['flat', 'flat'] },
-    openR: { LA: 8, LB: 10, RA: 34, RB: 74, hands: ['open', 'flat'] },
-    openL: { LA: 34, LB: 74, RA: 8, RB: 10, hands: ['flat', 'open'] },
+    shrug: { LA: 14, LB: -92, RA: 14, RB: -92, shr: 9, hands: ['flat', 'flat'], headRot: 3 },
+    open: { LA: 16, LB: -64, RA: 16, RB: -64, hands: ['flat', 'flat'] },
+    openR: { LA: 8, LB: 10, RA: 18, RB: -66, hands: ['open', 'flat'] },
+    openL: { LA: 18, LB: -66, RA: 8, RB: 10, hands: ['flat', 'open'] },
     pointUpR: { LA: 8, LB: 10, RA: 148, RB: 6, hands: ['open', 'point'] },
     pointUpL: { LA: 148, LB: 6, RA: 8, RB: 10, hands: ['point', 'open'] },
     pointR: { LA: 8, LB: 10, RA: 82, RB: 8, hands: ['open', 'point'] },
     pointL: { LA: 82, LB: 8, RA: 8, RB: 10, hands: ['point', 'open'] },
     wave: { LA: 8, LB: 10, RA: 130, RB: 56, hands: ['open', 'open'] },
-    phoneR: { LA: 8, LB: 16, RA: 14, RB: 128, RU: 0.7, RF: 1, hands: ['open', 'fist'], hold: [null, 'phone'], headRot: -2 },
+    phoneR: { LA: 8, LB: 16, RA: 14, RB: 150, RU: 0.58, RF: 1, hands: ['open', 'fist'], hold: [null, 'phone'], headRot: -2 },
     phoneChest: { LA: 8, LB: 16, RA: 20, RB: 100, RU: 0.8, hands: ['open', 'fist'], hold: [null, 'phone'] },
     phoneL: { LA: 14, LB: 128, LU: 0.7, RA: 8, RB: 16, hands: ['fist', 'open'], hold: ['phone', null], headRot: 2 },
     phoneBoth: { LA: 22, LB: 88, RA: 22, RB: 88, LU: 0.8, RU: 0.8, hands: ['fist', 'fist'], hold: [null, 'phone'] },
@@ -533,10 +533,10 @@
     bag: { LA: 8, LB: 10, RA: 10, RB: 12 },
   };
   Char.FACES = {
-    neutral: { sm: 0.25, brow: 0, browA: 0 },
+    neutral: { sm: 0.6, brow: 0.1, browA: 0 },
     smile: { sm: 0.85, brow: 0.2, browA: 0 },
     grin: { sm: 1.2, brow: 0.35, browA: 0 },
-    curious: { sm: 0.1, brow: 0.9, browA: -0.2 },
+    curious: { sm: 0.4, brow: 0.9, browA: -0.2 },
     worried: { sm: -0.3, brow: 0.4, browA: -0.9 },
     unsure: { sm: -0.15, brow: 0.5, browA: -0.5, mw: 0.9 },
     think: { sm: 0, brow: 0.6, browA: 0.2, mw: 0.85 },

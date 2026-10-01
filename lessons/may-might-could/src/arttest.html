@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><title>art test</title>
+<body style="margin:0;background:#cfe3f0"><svg id="s" viewBox="0 0 1920 1080" width="1920" height="1080"></svg>
+<script src="js/00-util.js"></script><script src="js/10-rig.js"></script>
+<script>
+const s=document.getElementById('s');const names=['maya','daniel','priya','tom','lena','ken'];
+const poses=['think','pointUpR','phoneR','shrug','clipboard','open'];
+names.forEach((n,i)=>{const c=new FE.Char(FE.Char.CAST[n]);c.set({x:170+i*315,y:960,s:0.85});c.pose(poses[i],0);c.face(i%2?'smile':'curious',0);FE.Tween.finish();c.render(0.016);s.appendChild(c.el);});
+window.ready=true;
+</script>

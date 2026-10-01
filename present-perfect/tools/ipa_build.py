@@ -75,12 +75,12 @@ MANUAL = {
     "present": "ˈpreznt", "perfect": "ˈpɜːrfɪkt", "participle": "ˈpɑːrtɪsɪpl", "apostrophe": "əˈpɑːstrəfi", "paris": "ˈpærɪs", "london": "ˈlʌndən",
     "canada": "ˈkænədə", "sofia": "soʊˈfiə", "maya": "ˈmaɪə", "daniel": "ˈdænjəl", "fluent": "ˈfluənt", "english": "ˈɪŋɡlɪʃ",
     "oh": "oʊ", "no": "noʊ", "yes": "jes", "know": "noʊ", "known": "noʊn", "lived": "lɪvd", "live": "lɪv", "here": "hɪr", "there": "ðer", "where": "wer", "what": "wʌt", "how": "haʊ", "long": "lɔːŋ",
-    "1": "wʌn", "2": "tu", "3": "θri", "4": "fɔːr", "2019": "ˈtwenti naɪnˈtin", "2021": "ˈtwenti ˈtwenti wʌn", "2022": "ˈtwenti ˈtwenti tu",
+    "1": "wʌn", "2": "tu", "3": "θri", "4": "fɔːr", "2019": "ˈtwenti naɪnˈtin", "decided": "dɪˈsaɪdɪd", "imagine": "ɪˈmædʒən", "irregular": "ɪˈreɡjələr", "important": "ɪmˈpɔːrtənt", "nineteen": "naɪnˈtin", "outside": "ˌaʊtˈsaɪd", "expected": "ɪkˈspektɪd", "needed": "ˈnidɪd", "2020": "ˈtwenti ˈtwenti", "2021": "ˈtwenti ˈtwenti wʌn", "2022": "ˈtwenti ˈtwenti tu",
     "yesterday": "ˈjestərdeɪ", "today": "təˈdeɪ", "already": "ɔːlˈredi", "visited": "ˈvɪzɪtɪd", "report": "rɪˈpɔːrt", "meetings": "ˈmitɪŋz", "meeting": "ˈmitɪŋ",
     "years": "jɪrz", "year": "jɪr", "two": "tu", "five": "faɪv", "week": "wik", "summer": "ˈsʌmər", "last": "læst", "next": "nekst", "lesson": "ˈlesn", "grammar": "ˈɡræmər",
 }
 HIGH_RISK = set("a the to of and or in at is are am i you he she it we they her his my your have has had do does did not was were been be for since yet just so far".split()) | \
-    {"haven't", "hasn't", "don't", "doesn't", "didn't", "isn't", "eaten", "gone", "present", "perfect", "participle", "apostrophe", "canada", "sofia", "maya", "daniel", "2019", "2021", "2022", "already", "visited", "london", "paris"}
+    {"haven't", "hasn't", "don't", "doesn't", "didn't", "isn't", "eaten", "gone", "present", "perfect", "participle", "apostrophe", "canada", "sofia", "maya", "daniel", "2019", "2020", "2021", "2022", "already", "visited", "london", "paris"}
 
 
 def lookup(word):

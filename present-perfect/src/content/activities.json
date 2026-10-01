@@ -1,0 +1,3214 @@
+[
+ {
+  "id": "agenda",
+  "type": "info",
+  "beat": "agenda",
+  "ch": "welcome",
+  "title": "Today's class",
+  "rows": [
+   {
+    "text": "Talk about experiences",
+    "roles": null,
+    "tag": null,
+    "line": "agenda_r0",
+    "size": null
+   },
+   {
+    "text": "Say what has just happened",
+    "roles": null,
+    "tag": null,
+    "line": "agenda_r1",
+    "size": null
+   },
+   {
+    "text": "Say how long",
+    "roles": null,
+    "tag": null,
+    "line": "agenda_r2",
+    "size": null
+   },
+   {
+    "text": "Ask and answer questions",
+    "roles": null,
+    "tag": null,
+    "line": "agenda_r3",
+    "size": null
+   },
+   {
+    "text": "Choose the right tense",
+    "roles": null,
+    "tag": null,
+    "line": "agenda_r4",
+    "size": null
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ],
+  "scene": "studio"
+ },
+ {
+  "id": "meet",
+  "type": "skit",
+  "beat": "meet",
+  "ch": "welcome",
+  "scene": "studio",
+  "cast": [
+   "S",
+   "M",
+   "D"
+  ],
+  "layout": "trio"
+ },
+ {
+  "id": "warmup",
+  "type": "say",
+  "beat": "warmup",
+  "ch": "welcome",
+  "title": "Have you ever?",
+  "items": [
+   {
+    "prompt": "Have you ever eaten sushi?",
+    "answer": "Yes, I have. I ate it in Tokyo.",
+    "q": "warmup_0q",
+    "h": "warmup_0h",
+    "a": "warmup_0a",
+    "hint": null
+   },
+   {
+    "prompt": "Have you ever lost your phone?",
+    "answer": "No, I haven't. But I've lost my keys!",
+    "q": "warmup_1q",
+    "h": "warmup_1h",
+    "a": "warmup_1a",
+    "hint": null
+   },
+   {
+    "prompt": "Have you ever met a famous person?",
+    "answer": "Yes, I have. I met a singer last year.",
+    "q": "warmup_2q",
+    "h": "warmup_2h",
+    "a": "warmup_2a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "D",
+   "M"
+  ],
+  "label": "Your answer"
+ },
+ {
+  "id": "q_story",
+  "type": "choose",
+  "beat": "q_story",
+  "ch": "story",
+  "title": "Listen and choose",
+  "items": [
+   {
+    "stem": "Which sentence names a finished time?",
+    "options": [
+     "I lost my keys yesterday.",
+     "I've lost my keys."
+    ],
+    "correct": 0,
+    "why": "Yesterday is a finished time, so we use the simple past.",
+    "q": "q_story_0q",
+    "h": "q_story_0h",
+    "a": "q_story_0a"
+   },
+   {
+    "stem": "Which sentence focuses on the result now?",
+    "options": [
+     "I lost my keys yesterday.",
+     "I've lost my keys."
+    ],
+    "correct": 1,
+    "why": "I've lost my keys connects the past to now. In this situation, the keys are missing now.",
+    "q": "q_story_1q",
+    "h": "q_story_1h",
+    "a": "q_story_1a"
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ]
+ },
+ {
+  "id": "rep_story",
+  "type": "choral",
+  "beat": "rep_story",
+  "ch": "story",
+  "title": "Repeat after me",
+  "items": [
+   {
+    "text": "I lost my keys yesterday.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     null,
+     "time"
+    ],
+    "who": "M",
+    "m": "rep_story_m0",
+    "h": "rep_story_h0"
+   },
+   {
+    "text": "I've lost my keys.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     null
+    ],
+    "who": "D",
+    "m": "rep_story_m1",
+    "h": "rep_story_h1"
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ]
+ },
+ {
+  "id": "drill_hh",
+  "type": "say",
+  "beat": "drill_hh",
+  "ch": "form",
+  "title": "Have or has?",
+  "items": [
+   {
+    "prompt": "I",
+    "answer": "have",
+    "q": "drill_hh_0q",
+    "h": "drill_hh_0h",
+    "a": "drill_hh_0a",
+    "hint": null
+   },
+   {
+    "prompt": "you",
+    "answer": "have",
+    "q": "drill_hh_1q",
+    "h": "drill_hh_1h",
+    "a": "drill_hh_1a",
+    "hint": null
+   },
+   {
+    "prompt": "he",
+    "answer": "has",
+    "q": "drill_hh_2q",
+    "h": "drill_hh_2h",
+    "a": "drill_hh_2a",
+    "hint": null
+   },
+   {
+    "prompt": "she",
+    "answer": "has",
+    "q": "drill_hh_3q",
+    "h": "drill_hh_3h",
+    "a": "drill_hh_3a",
+    "hint": null
+   },
+   {
+    "prompt": "it",
+    "answer": "has",
+    "q": "drill_hh_4q",
+    "h": "drill_hh_4h",
+    "a": "drill_hh_4a",
+    "hint": null
+   },
+   {
+    "prompt": "we",
+    "answer": "have",
+    "q": "drill_hh_5q",
+    "h": "drill_hh_5h",
+    "a": "drill_hh_5a",
+    "hint": null
+   },
+   {
+    "prompt": "they",
+    "answer": "have",
+    "q": "drill_hh_6q",
+    "h": "drill_hh_6h",
+    "a": "drill_hh_6a",
+    "hint": null
+   },
+   {
+    "prompt": "Maya",
+    "answer": "has",
+    "q": "drill_hh_7q",
+    "h": "drill_hh_7h",
+    "a": "drill_hh_7a",
+    "hint": null
+   },
+   {
+    "prompt": "my friends",
+    "answer": "have",
+    "q": "drill_hh_8q",
+    "h": "drill_hh_8h",
+    "a": "drill_hh_8a",
+    "hint": null
+   },
+   {
+    "prompt": "my sister",
+    "answer": "has",
+    "q": "drill_hh_9q",
+    "h": "drill_hh_9h",
+    "a": "drill_hh_9a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "rep_form",
+  "type": "choral",
+  "beat": "rep_form",
+  "ch": "form",
+  "title": "Repeat after me",
+  "items": [
+   {
+    "text": "I have finished my homework.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     null,
+     null
+    ],
+    "who": "S",
+    "m": "rep_form_m0",
+    "h": "rep_form_h0"
+   },
+   {
+    "text": "You have worked hard.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     null
+    ],
+    "who": "D",
+    "m": "rep_form_m1",
+    "h": "rep_form_h1"
+   },
+   {
+    "text": "He has eaten lunch.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     null
+    ],
+    "who": "D",
+    "m": "rep_form_m2",
+    "h": "rep_form_h2"
+   },
+   {
+    "text": "She has seen that movie.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     null,
+     null
+    ],
+    "who": "M",
+    "m": "rep_form_m3",
+    "h": "rep_form_h3"
+   },
+   {
+    "text": "We have been to Mexico.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     null,
+     null
+    ],
+    "who": "S",
+    "m": "rep_form_m4",
+    "h": "rep_form_h4"
+   },
+   {
+    "text": "They have bought a new car.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     null,
+     null,
+     null
+    ],
+    "who": "M",
+    "m": "rep_form_m5",
+    "h": "rep_form_h5"
+   }
+  ],
+  "cast": [
+   "S",
+   "D",
+   "M"
+  ]
+ },
+ {
+  "id": "q_form",
+  "type": "choose",
+  "beat": "q_form",
+  "ch": "form",
+  "title": "Choose the answer",
+  "items": [
+   {
+    "before": "My brother",
+    "after": "visited Spain.",
+    "options": [
+     "have",
+     "has",
+     "does"
+    ],
+    "correct": 1,
+    "why": "My brother is he, so we use has.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     null
+    ],
+    "q": "q_form_0q",
+    "h": "q_form_0h",
+    "a": "q_form_0a"
+   },
+   {
+    "before": "Maya and Daniel",
+    "after": "finished.",
+    "options": [
+     "have",
+     "has",
+     "does"
+    ],
+    "correct": 0,
+    "why": "Maya and Daniel is they, so we use have.",
+    "roles": [
+     "subj",
+     "subj",
+     "subj",
+     "part"
+    ],
+    "q": "q_form_1q",
+    "h": "q_form_1h",
+    "a": "q_form_1a"
+   },
+   {
+    "before": "I've",
+    "after": "that song before.",
+    "options": [
+     "heard",
+     "hear",
+     "hearing"
+    ],
+    "correct": 0,
+    "why": "After have, we need the past participle: heard.",
+    "q": "q_form_2q",
+    "h": "q_form_2h",
+    "a": "q_form_2a"
+   },
+   {
+    "before": "She has",
+    "after": "her keys.",
+    "options": [
+     "lost",
+     "lose",
+     "losing"
+    ],
+    "correct": 0,
+    "why": "Has plus the past participle: lost.",
+    "q": "q_form_3q",
+    "h": "q_form_3h",
+    "a": "q_form_3a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "ed_sounds",
+  "type": "table",
+  "beat": "ed_sounds",
+  "ch": "participles",
+  "title": "Regular verbs",
+  "cols": [
+   "sound",
+   "examples"
+  ],
+  "rows": [
+   {
+    "label": "/t/",
+    "cells": [
+     "worked",
+     "watched",
+     "helped",
+     "cooked"
+    ],
+    "line": "ed_sounds_r0",
+    "hold": "ed_sounds_h0"
+   },
+   {
+    "label": "/d/",
+    "cells": [
+     "played",
+     "lived",
+     "cleaned",
+     "opened"
+    ],
+    "line": "ed_sounds_r1",
+    "hold": "ed_sounds_h1"
+   },
+   {
+    "label": "/ɪd/",
+    "cells": [
+     "wanted",
+     "needed",
+     "visited",
+     "decided"
+    ],
+    "line": "ed_sounds_r2",
+    "hold": "ed_sounds_h2"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "emph": -1
+ },
+ {
+  "id": "irr_en",
+  "type": "table",
+  "beat": "irr_en",
+  "ch": "participles",
+  "title": "Irregular verbs: group one",
+  "cols": [
+   "base form",
+   "simple past",
+   "past participle"
+  ],
+  "rows": [
+   {
+    "label": null,
+    "cells": [
+     "eat",
+     "ate",
+     "eaten"
+    ],
+    "line": "irr_en_r0",
+    "hold": "irr_en_h0"
+   },
+   {
+    "label": null,
+    "cells": [
+     "see",
+     "saw",
+     "seen"
+    ],
+    "line": "irr_en_r1",
+    "hold": "irr_en_h1"
+   },
+   {
+    "label": null,
+    "cells": [
+     "give",
+     "gave",
+     "given"
+    ],
+    "line": "irr_en_r2",
+    "hold": "irr_en_h2"
+   },
+   {
+    "label": null,
+    "cells": [
+     "take",
+     "took",
+     "taken"
+    ],
+    "line": "irr_en_r3",
+    "hold": "irr_en_h3"
+   },
+   {
+    "label": null,
+    "cells": [
+     "write",
+     "wrote",
+     "written"
+    ],
+    "line": "irr_en_r4",
+    "hold": "irr_en_h4"
+   },
+   {
+    "label": null,
+    "cells": [
+     "break",
+     "broke",
+     "broken"
+    ],
+    "line": "irr_en_r5",
+    "hold": "irr_en_h5"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "emph": -1
+ },
+ {
+  "id": "say_en",
+  "type": "say",
+  "beat": "say_en",
+  "ch": "participles",
+  "title": "Say the participle",
+  "items": [
+   {
+    "prompt": "eat",
+    "answer": "eaten",
+    "q": "say_en_0q",
+    "h": "say_en_0h",
+    "a": "say_en_0a",
+    "hint": null
+   },
+   {
+    "prompt": "see",
+    "answer": "seen",
+    "q": "say_en_1q",
+    "h": "say_en_1h",
+    "a": "say_en_1a",
+    "hint": null
+   },
+   {
+    "prompt": "give",
+    "answer": "given",
+    "q": "say_en_2q",
+    "h": "say_en_2h",
+    "a": "say_en_2a",
+    "hint": null
+   },
+   {
+    "prompt": "take",
+    "answer": "taken",
+    "q": "say_en_3q",
+    "h": "say_en_3h",
+    "a": "say_en_3a",
+    "hint": null
+   },
+   {
+    "prompt": "write",
+    "answer": "written",
+    "q": "say_en_4q",
+    "h": "say_en_4h",
+    "a": "say_en_4a",
+    "hint": null
+   },
+   {
+    "prompt": "break",
+    "answer": "broken",
+    "q": "say_en_5q",
+    "h": "say_en_5h",
+    "a": "say_en_5a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "irr_common",
+  "type": "table",
+  "beat": "irr_common",
+  "ch": "participles",
+  "title": "Irregular verbs: group two",
+  "cols": [
+   "base form",
+   "simple past",
+   "past participle"
+  ],
+  "rows": [
+   {
+    "label": null,
+    "cells": [
+     "go",
+     "went",
+     "gone"
+    ],
+    "line": "irr_common_r0",
+    "hold": "irr_common_h0"
+   },
+   {
+    "label": null,
+    "cells": [
+     "do",
+     "did",
+     "done"
+    ],
+    "line": "irr_common_r1",
+    "hold": "irr_common_h1"
+   },
+   {
+    "label": null,
+    "cells": [
+     "be",
+     "was, were",
+     "been"
+    ],
+    "line": "irr_common_r2",
+    "hold": "irr_common_h2"
+   },
+   {
+    "label": null,
+    "cells": [
+     "have",
+     "had",
+     "had"
+    ],
+    "line": "irr_common_r3",
+    "hold": "irr_common_h3"
+   },
+   {
+    "label": null,
+    "cells": [
+     "make",
+     "made",
+     "made"
+    ],
+    "line": "irr_common_r4",
+    "hold": "irr_common_h4"
+   },
+   {
+    "label": null,
+    "cells": [
+     "say",
+     "said",
+     "said"
+    ],
+    "line": "irr_common_r5",
+    "hold": "irr_common_h5"
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ],
+  "emph": -1
+ },
+ {
+  "id": "say_common",
+  "type": "say",
+  "beat": "say_common",
+  "ch": "participles",
+  "title": "Say the participle",
+  "items": [
+   {
+    "prompt": "go",
+    "answer": "gone",
+    "q": "say_common_0q",
+    "h": "say_common_0h",
+    "a": "say_common_0a",
+    "hint": null
+   },
+   {
+    "prompt": "do",
+    "answer": "done",
+    "q": "say_common_1q",
+    "h": "say_common_1h",
+    "a": "say_common_1a",
+    "hint": null
+   },
+   {
+    "prompt": "be",
+    "answer": "been",
+    "q": "say_common_2q",
+    "h": "say_common_2h",
+    "a": "say_common_2a",
+    "hint": null
+   },
+   {
+    "prompt": "have",
+    "answer": "had",
+    "q": "say_common_3q",
+    "h": "say_common_3h",
+    "a": "say_common_3a",
+    "hint": null
+   },
+   {
+    "prompt": "make",
+    "answer": "made",
+    "q": "say_common_4q",
+    "h": "say_common_4h",
+    "a": "say_common_4a",
+    "hint": null
+   },
+   {
+    "prompt": "say",
+    "answer": "said",
+    "q": "say_common_5q",
+    "h": "say_common_5h",
+    "a": "say_common_5a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "irr_same",
+  "type": "table",
+  "beat": "irr_same",
+  "ch": "participles",
+  "title": "Irregular verbs: group three",
+  "cols": [
+   "base form",
+   "simple past",
+   "past participle"
+  ],
+  "rows": [
+   {
+    "label": null,
+    "cells": [
+     "buy",
+     "bought",
+     "bought"
+    ],
+    "line": "irr_same_r0",
+    "hold": "irr_same_h0"
+   },
+   {
+    "label": null,
+    "cells": [
+     "bring",
+     "brought",
+     "brought"
+    ],
+    "line": "irr_same_r1",
+    "hold": "irr_same_h1"
+   },
+   {
+    "label": null,
+    "cells": [
+     "find",
+     "found",
+     "found"
+    ],
+    "line": "irr_same_r2",
+    "hold": "irr_same_h2"
+   },
+   {
+    "label": null,
+    "cells": [
+     "lose",
+     "lost",
+     "lost"
+    ],
+    "line": "irr_same_r3",
+    "hold": "irr_same_h3"
+   },
+   {
+    "label": null,
+    "cells": [
+     "leave",
+     "left",
+     "left"
+    ],
+    "line": "irr_same_r4",
+    "hold": "irr_same_h4"
+   },
+   {
+    "label": null,
+    "cells": [
+     "meet",
+     "met",
+     "met"
+    ],
+    "line": "irr_same_r5",
+    "hold": "irr_same_h5"
+   }
+  ],
+  "cast": [
+   "S",
+   "M"
+  ],
+  "emph": -1
+ },
+ {
+  "id": "say_same",
+  "type": "say",
+  "beat": "say_same",
+  "ch": "participles",
+  "title": "Say the participle",
+  "items": [
+   {
+    "prompt": "buy",
+    "answer": "bought",
+    "q": "say_same_0q",
+    "h": "say_same_0h",
+    "a": "say_same_0a",
+    "hint": null
+   },
+   {
+    "prompt": "bring",
+    "answer": "brought",
+    "q": "say_same_1q",
+    "h": "say_same_1h",
+    "a": "say_same_1a",
+    "hint": null
+   },
+   {
+    "prompt": "find",
+    "answer": "found",
+    "q": "say_same_2q",
+    "h": "say_same_2h",
+    "a": "say_same_2a",
+    "hint": null
+   },
+   {
+    "prompt": "lose",
+    "answer": "lost",
+    "q": "say_same_3q",
+    "h": "say_same_3h",
+    "a": "say_same_3a",
+    "hint": null
+   },
+   {
+    "prompt": "leave",
+    "answer": "left",
+    "q": "say_same_4q",
+    "h": "say_same_4h",
+    "a": "say_same_4a",
+    "hint": null
+   },
+   {
+    "prompt": "meet",
+    "answer": "met",
+    "q": "say_same_5q",
+    "h": "say_same_5h",
+    "a": "say_same_5a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "S",
+   "M"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "irr_nochange",
+  "type": "table",
+  "beat": "irr_nochange",
+  "ch": "participles",
+  "title": "Irregular verbs: group four",
+  "cols": [
+   "base form",
+   "simple past",
+   "past participle"
+  ],
+  "rows": [
+   {
+    "label": null,
+    "cells": [
+     "put",
+     "put",
+     "put"
+    ],
+    "line": "irr_nochange_r0",
+    "hold": "irr_nochange_h0"
+   },
+   {
+    "label": null,
+    "cells": [
+     "cut",
+     "cut",
+     "cut"
+    ],
+    "line": "irr_nochange_r1",
+    "hold": "irr_nochange_h1"
+   },
+   {
+    "label": null,
+    "cells": [
+     "read",
+     "{read|red}",
+     "{read|red}"
+    ],
+    "line": "irr_nochange_r2",
+    "hold": "irr_nochange_h2"
+   },
+   {
+    "label": null,
+    "cells": [
+     "run",
+     "ran",
+     "run"
+    ],
+    "line": "irr_nochange_r3",
+    "hold": "irr_nochange_h3"
+   },
+   {
+    "label": null,
+    "cells": [
+     "come",
+     "came",
+     "come"
+    ],
+    "line": "irr_nochange_r4",
+    "hold": "irr_nochange_h4"
+   },
+   {
+    "label": null,
+    "cells": [
+     "hit",
+     "hit",
+     "hit"
+    ],
+    "line": "irr_nochange_r5",
+    "hold": "irr_nochange_h5"
+   }
+  ],
+  "cast": [
+   "D",
+   "M"
+  ],
+  "emph": -1
+ },
+ {
+  "id": "say_nochange",
+  "type": "say",
+  "beat": "say_nochange",
+  "ch": "participles",
+  "title": "Say the participle",
+  "items": [
+   {
+    "prompt": "put",
+    "answer": "put",
+    "q": "say_nochange_0q",
+    "h": "say_nochange_0h",
+    "a": "say_nochange_0a",
+    "hint": null
+   },
+   {
+    "prompt": "cut",
+    "answer": "cut",
+    "q": "say_nochange_1q",
+    "h": "say_nochange_1h",
+    "a": "say_nochange_1a",
+    "hint": null
+   },
+   {
+    "prompt": "read",
+    "answer": "{read|red}",
+    "q": "say_nochange_2q",
+    "h": "say_nochange_2h",
+    "a": "say_nochange_2a",
+    "hint": null
+   },
+   {
+    "prompt": "run",
+    "answer": "run",
+    "q": "say_nochange_3q",
+    "h": "say_nochange_3h",
+    "a": "say_nochange_3a",
+    "hint": null
+   },
+   {
+    "prompt": "come",
+    "answer": "come",
+    "q": "say_nochange_4q",
+    "h": "say_nochange_4h",
+    "a": "say_nochange_4a",
+    "hint": null
+   },
+   {
+    "prompt": "hit",
+    "answer": "hit",
+    "q": "say_nochange_5q",
+    "h": "say_nochange_5h",
+    "a": "say_nochange_5a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "D",
+   "M"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "q_part",
+  "type": "choose",
+  "beat": "q_part",
+  "ch": "participles",
+  "title": "Choose the participle",
+  "items": [
+   {
+    "before": "She has",
+    "after": "a letter.",
+    "options": [
+     "wrote",
+     "written",
+     "write"
+    ],
+    "correct": 1,
+    "why": "Written is the past participle of write.",
+    "q": "q_part_0q",
+    "h": "q_part_0h",
+    "a": "q_part_0a"
+   },
+   {
+    "before": "We've",
+    "after": "to the park.",
+    "options": [
+     "went",
+     "gone",
+     "go"
+    ],
+    "correct": 1,
+    "why": "Gone is the past participle of go.",
+    "q": "q_part_1q",
+    "h": "q_part_1h",
+    "a": "q_part_1a"
+   },
+   {
+    "before": "He has",
+    "after": "his homework.",
+    "options": [
+     "did",
+     "done",
+     "do"
+    ],
+    "correct": 1,
+    "why": "Done is the past participle of do.",
+    "q": "q_part_2q",
+    "h": "q_part_2h",
+    "a": "q_part_2a"
+   },
+   {
+    "before": "They've",
+    "after": "a new house.",
+    "options": [
+     "bought",
+     "buy",
+     "buying"
+    ],
+    "correct": 0,
+    "why": "Bought is the past participle of buy.",
+    "q": "q_part_3q",
+    "h": "q_part_3h",
+    "a": "q_part_3a"
+   },
+   {
+    "before": "I've",
+    "after": "Maria twice.",
+    "options": [
+     "met",
+     "meet",
+     "meeting"
+    ],
+    "correct": 0,
+    "why": "Met is the past participle of meet.",
+    "q": "q_part_4q",
+    "h": "q_part_4h",
+    "a": "q_part_4a"
+   },
+   {
+    "before": "Have you",
+    "after": "that movie?",
+    "options": [
+     "saw",
+     "seen",
+     "see"
+    ],
+    "correct": 1,
+    "why": "Seen is the past participle of see.",
+    "q": "q_part_5q",
+    "h": "q_part_5h",
+    "a": "q_part_5a"
+   },
+   {
+    "before": "She has",
+    "after": "the window.",
+    "options": [
+     "broke",
+     "broken",
+     "break"
+    ],
+    "correct": 1,
+    "why": "Broken is the past participle of break.",
+    "q": "q_part_6q",
+    "h": "q_part_6h",
+    "a": "q_part_6a"
+   },
+   {
+    "before": "I have",
+    "after": "to Italy three times.",
+    "options": [
+     "been",
+     "was",
+     "be"
+    ],
+    "correct": 0,
+    "why": "Been is the past participle of be.",
+    "q": "q_part_7q",
+    "h": "q_part_7h",
+    "a": "q_part_7a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "contractions",
+  "type": "table",
+  "beat": "contractions",
+  "ch": "negq",
+  "title": "Short forms",
+  "cols": [
+   "full form",
+   "short form"
+  ],
+  "rows": [
+   {
+    "label": null,
+    "cells": [
+     "I have",
+     "I've"
+    ],
+    "line": "contractions_r0",
+    "hold": "contractions_h0"
+   },
+   {
+    "label": null,
+    "cells": [
+     "you have",
+     "you've"
+    ],
+    "line": "contractions_r1",
+    "hold": "contractions_h1"
+   },
+   {
+    "label": null,
+    "cells": [
+     "we have",
+     "we've"
+    ],
+    "line": "contractions_r2",
+    "hold": "contractions_h2"
+   },
+   {
+    "label": null,
+    "cells": [
+     "they have",
+     "they've"
+    ],
+    "line": "contractions_r3",
+    "hold": "contractions_h3"
+   },
+   {
+    "label": null,
+    "cells": [
+     "he has",
+     "he's"
+    ],
+    "line": "contractions_r4",
+    "hold": "contractions_h4"
+   },
+   {
+    "label": null,
+    "cells": [
+     "she has",
+     "she's"
+    ],
+    "line": "contractions_r5",
+    "hold": "contractions_h5"
+   },
+   {
+    "label": null,
+    "cells": [
+     "it has",
+     "it's"
+    ],
+    "line": "contractions_r6",
+    "hold": "contractions_h6"
+   }
+  ],
+  "cast": [
+   "M",
+   "S"
+  ],
+  "emph": 1
+ },
+ {
+  "id": "contract",
+  "type": "say",
+  "beat": "contract",
+  "ch": "negq",
+  "title": "Say the short form",
+  "items": [
+   {
+    "prompt": "She has finished.",
+    "answer": "She's finished.",
+    "q": "contract_0q",
+    "h": "contract_0h",
+    "a": "contract_0a",
+    "hint": null
+   },
+   {
+    "prompt": "I have eaten.",
+    "answer": "I've eaten.",
+    "q": "contract_1q",
+    "h": "contract_1h",
+    "a": "contract_1a",
+    "hint": null
+   },
+   {
+    "prompt": "They have arrived.",
+    "answer": "They've arrived.",
+    "q": "contract_2q",
+    "h": "contract_2h",
+    "a": "contract_2a",
+    "hint": null
+   },
+   {
+    "prompt": "He has gone.",
+    "answer": "He's gone.",
+    "q": "contract_3q",
+    "h": "contract_3h",
+    "a": "contract_3a",
+    "hint": null
+   },
+   {
+    "prompt": "We have started.",
+    "answer": "We've started.",
+    "q": "contract_4q",
+    "h": "contract_4h",
+    "a": "contract_4a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "M",
+   "S"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "make_neg",
+  "type": "say",
+  "beat": "make_neg",
+  "ch": "negq",
+  "title": "Make it negative",
+  "items": [
+   {
+    "prompt": "I have finished.",
+    "answer": "I haven't finished.",
+    "q": "make_neg_0q",
+    "h": "make_neg_0h",
+    "a": "make_neg_0a",
+    "hint": null
+   },
+   {
+    "prompt": "She has called.",
+    "answer": "She hasn't called.",
+    "q": "make_neg_1q",
+    "h": "make_neg_1h",
+    "a": "make_neg_1a",
+    "hint": null
+   },
+   {
+    "prompt": "They have arrived.",
+    "answer": "They haven't arrived.",
+    "q": "make_neg_2q",
+    "h": "make_neg_2h",
+    "a": "make_neg_2a",
+    "hint": null
+   },
+   {
+    "prompt": "He has eaten.",
+    "answer": "He hasn't eaten.",
+    "q": "make_neg_3q",
+    "h": "make_neg_3h",
+    "a": "make_neg_3a",
+    "hint": null
+   },
+   {
+    "prompt": "We have seen it.",
+    "answer": "We haven't seen it.",
+    "q": "make_neg_4q",
+    "h": "make_neg_4h",
+    "a": "make_neg_4a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "D",
+   "M"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "make_q",
+  "type": "say",
+  "beat": "make_q",
+  "ch": "negq",
+  "title": "Make a question",
+  "items": [
+   {
+    "prompt": "You have finished.",
+    "answer": "Have you finished?",
+    "q": "make_q_0q",
+    "h": "make_q_0h",
+    "a": "make_q_0a",
+    "hint": null
+   },
+   {
+    "prompt": "She has called.",
+    "answer": "Has she called?",
+    "q": "make_q_1q",
+    "h": "make_q_1h",
+    "a": "make_q_1a",
+    "hint": null
+   },
+   {
+    "prompt": "They have arrived.",
+    "answer": "Have they arrived?",
+    "q": "make_q_2q",
+    "h": "make_q_2h",
+    "a": "make_q_2a",
+    "hint": null
+   },
+   {
+    "prompt": "He has eaten.",
+    "answer": "Has he eaten?",
+    "q": "make_q_3q",
+    "h": "make_q_3h",
+    "a": "make_q_3a",
+    "hint": null
+   },
+   {
+    "prompt": "It has stopped.",
+    "answer": "Has it stopped?",
+    "q": "make_q_4q",
+    "h": "make_q_4h",
+    "a": "make_q_4a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "short_ans",
+  "type": "say",
+  "beat": "short_ans",
+  "ch": "negq",
+  "title": "Short answers",
+  "items": [
+   {
+    "prompt": "Have you eaten? Yes.",
+    "answer": "Yes, I have.",
+    "q": "short_ans_0q",
+    "h": "short_ans_0h",
+    "a": "short_ans_0a",
+    "hint": null
+   },
+   {
+    "prompt": "Has she called? No.",
+    "answer": "No, she hasn't.",
+    "q": "short_ans_1q",
+    "h": "short_ans_1h",
+    "a": "short_ans_1a",
+    "hint": null
+   },
+   {
+    "prompt": "Have they arrived? Yes.",
+    "answer": "Yes, they have.",
+    "q": "short_ans_2q",
+    "h": "short_ans_2h",
+    "a": "short_ans_2a",
+    "hint": null
+   },
+   {
+    "prompt": "Has he finished? No.",
+    "answer": "No, he hasn't.",
+    "q": "short_ans_3q",
+    "h": "short_ans_3h",
+    "a": "short_ans_3a",
+    "hint": null
+   },
+   {
+    "prompt": "Has it started? Yes.",
+    "answer": "Yes, it has.",
+    "q": "short_ans_4q",
+    "h": "short_ans_4h",
+    "a": "short_ans_4a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "rep_wh",
+  "type": "choral",
+  "beat": "rep_wh",
+  "ch": "negq",
+  "title": "Question words",
+  "items": [
+   {
+    "text": "What have you done?",
+    "roles": [
+     "wh",
+     "aux",
+     "subj",
+     "part"
+    ],
+    "who": "M",
+    "m": "rep_wh_m0",
+    "h": "rep_wh_h0"
+   },
+   {
+    "text": "Where have you been?",
+    "roles": [
+     "wh",
+     "aux",
+     "subj",
+     "part"
+    ],
+    "who": "D",
+    "m": "rep_wh_m1",
+    "h": "rep_wh_h1"
+   },
+   {
+    "text": "How long have you lived here?",
+    "roles": [
+     "wh",
+     "wh",
+     "aux",
+     "subj",
+     "part",
+     null
+    ],
+    "who": "S",
+    "m": "rep_wh_m2",
+    "h": "rep_wh_h2"
+   },
+   {
+    "text": "Who have you called?",
+    "roles": [
+     "wh",
+     "aux",
+     "subj",
+     "part"
+    ],
+    "who": "M",
+    "m": "rep_wh_m3",
+    "h": "rep_wh_h3"
+   }
+  ],
+  "cast": [
+   "M",
+   "D",
+   "S"
+  ]
+ },
+ {
+  "id": "q_negq",
+  "type": "choose",
+  "beat": "q_negq",
+  "ch": "negq",
+  "title": "Choose the answer",
+  "items": [
+   {
+    "before": "She",
+    "after": "finished yet.",
+    "options": [
+     "hasn't",
+     "haven't",
+     "doesn't"
+    ],
+    "correct": 0,
+    "why": "She is he, she, or it, so we use hasn't.",
+    "q": "q_negq_0q",
+    "h": "q_negq_0h",
+    "a": "q_negq_0a"
+   },
+   {
+    "before": "",
+    "after": "you ever visited Canada?",
+    "options": [
+     "Have",
+     "Has",
+     "Do"
+    ],
+    "correct": 0,
+    "why": "Have comes first, before the subject you.",
+    "q": "q_negq_1q",
+    "h": "q_negq_1h",
+    "a": "q_negq_1a"
+   },
+   {
+    "context": "Has he finished?",
+    "before": "Yes, he",
+    "after": ".",
+    "options": [
+     "has",
+     "does",
+     "is"
+    ],
+    "correct": 0,
+    "why": "A short answer repeats has.",
+    "q": "q_negq_2q",
+    "h": "q_negq_2h",
+    "a": "q_negq_2a"
+   },
+   {
+    "before": "How long",
+    "after": "they lived here?",
+    "options": [
+     "have",
+     "has",
+     "did"
+    ],
+    "correct": 0,
+    "why": "They uses have, and lived is the past participle.",
+    "q": "q_negq_3q",
+    "h": "q_negq_3h",
+    "a": "q_negq_3a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "pair_q",
+  "type": "pair",
+  "beat": "pair_q",
+  "ch": "negq",
+  "title": "Pair work",
+  "prompts": [
+   "Have you eaten breakfast today?",
+   "Have you finished your homework?",
+   "Has your phone rung today?",
+   "Have you studied English this week?",
+   "Have you called a friend today?",
+   "Have you seen a good movie lately?"
+  ],
+  "h1": "pair_q_h1",
+  "sw": "pair_q_sw",
+  "h2": "pair_q_h2",
+  "roles": [
+   "Ask",
+   "Answer"
+  ],
+  "cast": [
+   "M",
+   "S"
+  ],
+  "scene": "studio",
+  "minutes": 3.0,
+  "stem": null
+ },
+ {
+  "id": "exp_words",
+  "type": "info",
+  "beat": "exp_words",
+  "ch": "exp",
+  "title": "Useful words",
+  "rows": [
+   {
+    "text": "Have you ever visited Canada?",
+    "roles": [
+     "aux",
+     "subj",
+     "time",
+     "part",
+     null
+    ],
+    "tag": null,
+    "line": "exp_words_r0",
+    "size": null
+   },
+   {
+    "text": "I've never visited Canada.",
+    "roles": [
+     "subj",
+     "time",
+     "part",
+     null
+    ],
+    "tag": null,
+    "line": "exp_words_r1",
+    "size": null
+   },
+   {
+    "text": "I've visited Canada twice.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time"
+    ],
+    "tag": null,
+    "line": "exp_words_r2",
+    "size": null
+   },
+   {
+    "text": "I've been there before.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time"
+    ],
+    "tag": null,
+    "line": "exp_words_r3",
+    "size": null
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "scene": "studio"
+ },
+ {
+  "id": "rep_exp",
+  "type": "choral",
+  "beat": "rep_exp",
+  "ch": "exp",
+  "title": "Repeat after me",
+  "items": [
+   {
+    "text": "Have you ever visited Canada?",
+    "roles": [
+     "aux",
+     "subj",
+     "time",
+     "part",
+     null
+    ],
+    "who": "S",
+    "m": "rep_exp_m0",
+    "h": "rep_exp_h0"
+   },
+   {
+    "text": "I've never visited Canada.",
+    "roles": [
+     "subj",
+     "time",
+     "part",
+     null
+    ],
+    "who": "D",
+    "m": "rep_exp_m1",
+    "h": "rep_exp_h1"
+   },
+   {
+    "text": "I've visited Canada twice.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time"
+    ],
+    "who": "S",
+    "m": "rep_exp_m2",
+    "h": "rep_exp_h2"
+   },
+   {
+    "text": "I've been there before.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time"
+    ],
+    "who": "D",
+    "m": "rep_exp_m3",
+    "h": "rep_exp_h3"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "exp_drill",
+  "type": "say",
+  "beat": "exp_drill",
+  "ch": "exp",
+  "title": "Ask the question",
+  "items": [
+   {
+    "prompt": "eat sushi",
+    "answer": "Have you ever eaten sushi?",
+    "q": "exp_drill_0q",
+    "h": "exp_drill_0h",
+    "a": "exp_drill_0a",
+    "hint": null
+   },
+   {
+    "prompt": "see a whale",
+    "answer": "Have you ever seen a whale?",
+    "q": "exp_drill_1q",
+    "h": "exp_drill_1h",
+    "a": "exp_drill_1a",
+    "hint": null
+   },
+   {
+    "prompt": "ride a horse",
+    "answer": "Have you ever ridden a horse?",
+    "q": "exp_drill_2q",
+    "h": "exp_drill_2h",
+    "a": "exp_drill_2a",
+    "hint": null
+   },
+   {
+    "prompt": "meet a famous person",
+    "answer": "Have you ever met a famous person?",
+    "q": "exp_drill_3q",
+    "h": "exp_drill_3h",
+    "a": "exp_drill_3a",
+    "hint": null
+   },
+   {
+    "prompt": "lose your phone",
+    "answer": "Have you ever lost your phone?",
+    "q": "exp_drill_4q",
+    "h": "exp_drill_4h",
+    "a": "exp_drill_4a",
+    "hint": null
+   },
+   {
+    "prompt": "break a bone",
+    "answer": "Have you ever broken a bone?",
+    "q": "exp_drill_5q",
+    "h": "exp_drill_5h",
+    "a": "exp_drill_5a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "label": "Ask it"
+ },
+ {
+  "id": "q_exp",
+  "type": "choose",
+  "beat": "q_exp",
+  "ch": "exp",
+  "title": "Choose the answer",
+  "items": [
+   {
+    "before": "",
+    "after": "you ever eaten snails?",
+    "options": [
+     "Have",
+     "Has",
+     "Do"
+    ],
+    "correct": 0,
+    "why": "Have comes before you, and eaten is the past participle.",
+    "q": "q_exp_0q",
+    "h": "q_exp_0h",
+    "a": "q_exp_0a"
+   },
+   {
+    "context": "She doesn't know the city.",
+    "before": "Maya has",
+    "after": "been to Paris.",
+    "options": [
+     "never",
+     "ever",
+     "yet"
+    ],
+    "correct": 0,
+    "why": "Never means not at any time.",
+    "q": "q_exp_1q",
+    "h": "q_exp_1h",
+    "a": "q_exp_1a"
+   },
+   {
+    "context": "It was great both times.",
+    "before": "I've visited London",
+    "after": "",
+    "options": [
+     "twice",
+     "ever",
+     "never"
+    ],
+    "correct": 0,
+    "why": "Twice means two times.",
+    "q": "q_exp_2q",
+    "h": "q_exp_2h",
+    "a": "q_exp_2a"
+   },
+   {
+    "before": "",
+    "after": "she ever met a famous person?",
+    "options": [
+     "Has",
+     "Have",
+     "Is"
+    ],
+    "correct": 0,
+    "why": "She uses has.",
+    "q": "q_exp_3q",
+    "h": "q_exp_3h",
+    "a": "q_exp_3a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "pair_exp",
+  "type": "pair",
+  "beat": "pair_exp",
+  "ch": "exp",
+  "title": "Pair work",
+  "prompts": [
+   "visited another country",
+   "met a famous person",
+   "eaten something strange",
+   "lost something important",
+   "slept outside",
+   "sung in public",
+   "forgotten a friend's birthday",
+   "ridden a horse"
+  ],
+  "h1": "pair_exp_h1",
+  "sw": "pair_exp_sw",
+  "h2": "pair_exp_h2",
+  "roles": [
+   "Ask",
+   "Answer"
+  ],
+  "cast": [
+   "M",
+   "S"
+  ],
+  "scene": "studio",
+  "minutes": 4.0,
+  "stem": "Have you ever ...?"
+ },
+ {
+  "id": "share_exp",
+  "type": "timer",
+  "beat": "share_exp",
+  "ch": "exp",
+  "title": "Tell the class",
+  "prompt": "Ana has visited Brazil.",
+  "h": "share_exp_h",
+  "cast": [
+   "M",
+   "D"
+  ]
+ },
+ {
+  "id": "result_words",
+  "type": "info",
+  "beat": "result_words",
+  "ch": "result",
+  "title": "Just, already, yet",
+  "rows": [
+   {
+    "text": "I've just finished.",
+    "roles": [
+     "subj",
+     "time",
+     "part"
+    ],
+    "tag": null,
+    "line": "result_words_r0",
+    "size": null
+   },
+   {
+    "text": "She's already left.",
+    "roles": [
+     "subj",
+     "time",
+     "part"
+    ],
+    "tag": null,
+    "line": "result_words_r1",
+    "size": null
+   },
+   {
+    "text": "Have you eaten yet?",
+    "roles": [
+     "aux",
+     "subj",
+     "part",
+     "time"
+    ],
+    "tag": null,
+    "line": "result_words_r2",
+    "size": null
+   },
+   {
+    "text": "He hasn't called yet.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     "time"
+    ],
+    "tag": null,
+    "line": "result_words_r3",
+    "size": null
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ],
+  "scene": "studio"
+ },
+ {
+  "id": "rep_res",
+  "type": "choral",
+  "beat": "rep_res",
+  "ch": "result",
+  "title": "Repeat after me",
+  "items": [
+   {
+    "text": "I've just arrived.",
+    "roles": [
+     "subj",
+     "time",
+     "part"
+    ],
+    "who": "D",
+    "m": "rep_res_m0",
+    "h": "rep_res_h0"
+   },
+   {
+    "text": "She's already left.",
+    "roles": [
+     "subj",
+     "time",
+     "part"
+    ],
+    "who": "M",
+    "m": "rep_res_m1",
+    "h": "rep_res_h1"
+   },
+   {
+    "text": "Have you eaten yet?",
+    "roles": [
+     "aux",
+     "subj",
+     "part",
+     "time"
+    ],
+    "who": "S",
+    "m": "rep_res_m2",
+    "h": "rep_res_h2"
+   },
+   {
+    "text": "He hasn't called yet.",
+    "roles": [
+     "subj",
+     "aux",
+     "part",
+     "time"
+    ],
+    "who": "D",
+    "m": "rep_res_m3",
+    "h": "rep_res_h3"
+   }
+  ],
+  "cast": [
+   "D",
+   "M",
+   "S"
+  ]
+ },
+ {
+  "id": "skit_office",
+  "type": "skit",
+  "beat": "skit_office",
+  "ch": "result",
+  "scene": "office",
+  "cast": [
+   "M",
+   "D"
+  ],
+  "layout": "duo"
+ },
+ {
+  "id": "q_res",
+  "type": "choose",
+  "beat": "q_res",
+  "ch": "result",
+  "title": "Choose the answer",
+  "items": [
+   {
+    "context": "I did it two minutes ago.",
+    "before": "I've",
+    "after": "finished.",
+    "options": [
+     "just",
+     "yet",
+     "ever"
+    ],
+    "correct": 0,
+    "why": "Just means a very short time ago.",
+    "q": "q_res_0q",
+    "h": "q_res_0h",
+    "a": "q_res_0a"
+   },
+   {
+    "before": "Have you finished the report",
+    "after": "?",
+    "options": [
+     "yet",
+     "ever",
+     "never"
+    ],
+    "correct": 0,
+    "why": "Yet goes at the end of a question.",
+    "q": "q_res_1q",
+    "h": "q_res_1h",
+    "a": "q_res_1a"
+   },
+   {
+    "context": "Do you want some lunch?",
+    "before": "No, thanks. I've",
+    "after": "eaten.",
+    "options": [
+     "already",
+     "yet",
+     "ever"
+    ],
+    "correct": 0,
+    "why": "Already goes before the participle.",
+    "q": "q_res_2q",
+    "h": "q_res_2h",
+    "a": "q_res_2a"
+   },
+   {
+    "context": "We are still waiting.",
+    "before": "He hasn't called",
+    "after": "",
+    "options": [
+     "yet",
+     "already",
+     "just"
+    ],
+    "correct": 0,
+    "why": "In a negative sentence, yet goes at the end.",
+    "q": "q_res_3q",
+    "h": "q_res_3h",
+    "a": "q_res_3a"
+   },
+   {
+    "context": "You can't catch it.",
+    "before": "The train has",
+    "after": "left.",
+    "options": [
+     "just",
+     "yet",
+     "ever"
+    ],
+    "correct": 0,
+    "why": "Just means a very short time ago.",
+    "q": "q_res_4q",
+    "h": "q_res_4h",
+    "a": "q_res_4a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "result_say",
+  "type": "say",
+  "beat": "result_say",
+  "ch": "result",
+  "title": "What's the result?",
+  "items": [
+   {
+    "prompt": "Daniel can't open the door. Use: lose.",
+    "answer": "He's lost his keys.",
+    "q": "result_say_0q",
+    "h": "result_say_0h",
+    "a": "result_say_0a",
+    "hint": null
+   },
+   {
+    "prompt": "Maya's desk is clean. Use: finish.",
+    "answer": "She's finished her work.",
+    "q": "result_say_1q",
+    "h": "result_say_1h",
+    "a": "result_say_1a",
+    "hint": null
+   },
+   {
+    "prompt": "The plate is empty. Use: eat.",
+    "answer": "He's eaten everything.",
+    "q": "result_say_2q",
+    "h": "result_say_2h",
+    "a": "result_say_2a",
+    "hint": null
+   },
+   {
+    "prompt": "The suitcase is at the door. Use: pack.",
+    "answer": "She's packed her suitcase.",
+    "q": "result_say_3q",
+    "h": "result_say_3h",
+    "a": "result_say_3a",
+    "hint": null
+   },
+   {
+    "prompt": "The cake is on the table. Use: bake.",
+    "answer": "They've baked a cake.",
+    "q": "result_say_4q",
+    "h": "result_say_4h",
+    "a": "result_say_4a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "M",
+   "S"
+  ],
+  "label": "Say it"
+ },
+ {
+  "id": "sort_fs",
+  "type": "sort",
+  "beat": "sort_fs",
+  "ch": "still",
+  "title": "For or since?",
+  "bins": [
+   "for",
+   "since"
+  ],
+  "items": [
+   {
+    "text": "five years",
+    "bin": 0,
+    "q": "sort_fs_0q",
+    "h": "sort_fs_0h",
+    "a": "sort_fs_0a"
+   },
+   {
+    "text": "2019",
+    "bin": 1,
+    "q": "sort_fs_1q",
+    "h": "sort_fs_1h",
+    "a": "sort_fs_1a"
+   },
+   {
+    "text": "Monday",
+    "bin": 1,
+    "q": "sort_fs_2q",
+    "h": "sort_fs_2h",
+    "a": "sort_fs_2a"
+   },
+   {
+    "text": "three days",
+    "bin": 0,
+    "q": "sort_fs_3q",
+    "h": "sort_fs_3h",
+    "a": "sort_fs_3a"
+   },
+   {
+    "text": "last year",
+    "bin": 1,
+    "q": "sort_fs_4q",
+    "h": "sort_fs_4h",
+    "a": "sort_fs_4a"
+   },
+   {
+    "text": "a long time",
+    "bin": 0,
+    "q": "sort_fs_5q",
+    "h": "sort_fs_5h",
+    "a": "sort_fs_5a"
+   },
+   {
+    "text": "I was a child",
+    "bin": 1,
+    "q": "sort_fs_6q",
+    "h": "sort_fs_6h",
+    "a": "sort_fs_6a"
+   },
+   {
+    "text": "ten minutes",
+    "bin": 0,
+    "q": "sort_fs_7q",
+    "h": "sort_fs_7h",
+    "a": "sort_fs_7a"
+   },
+   {
+    "text": "yesterday",
+    "bin": 1,
+    "q": "sort_fs_8q",
+    "h": "sort_fs_8h",
+    "a": "sort_fs_8a"
+   },
+   {
+    "text": "two hours",
+    "bin": 0,
+    "q": "sort_fs_9q",
+    "h": "sort_fs_9h",
+    "a": "sort_fs_9a"
+   }
+  ],
+  "cast": [
+   "D",
+   "M"
+  ]
+ },
+ {
+  "id": "howlong",
+  "type": "info",
+  "beat": "howlong",
+  "ch": "still",
+  "title": "How long?",
+  "rows": [
+   {
+    "text": "How long have you lived here?",
+    "roles": [
+     "wh",
+     "wh",
+     "aux",
+     "subj",
+     "part",
+     null
+    ],
+    "tag": null,
+    "line": "howlong_r0",
+    "size": null
+   },
+   {
+    "text": "I've lived here for three years.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time",
+     "time",
+     "time"
+    ],
+    "tag": null,
+    "line": "howlong_r1",
+    "size": null
+   },
+   {
+    "text": "I've lived here since 2022.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time",
+     "time"
+    ],
+    "tag": null,
+    "line": "howlong_r2",
+    "size": null
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ],
+  "scene": "studio"
+ },
+ {
+  "id": "rep_still",
+  "type": "choral",
+  "beat": "rep_still",
+  "ch": "still",
+  "title": "Repeat after me",
+  "items": [
+   {
+    "text": "How long have you lived here?",
+    "roles": [
+     "wh",
+     "wh",
+     "aux",
+     "subj",
+     "part",
+     null
+    ],
+    "who": "M",
+    "m": "rep_still_m0",
+    "h": "rep_still_h0"
+   },
+   {
+    "text": "I've lived here for three years.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time",
+     "time",
+     "time"
+    ],
+    "who": "D",
+    "m": "rep_still_m1",
+    "h": "rep_still_h1"
+   },
+   {
+    "text": "I've lived here since 2022.",
+    "roles": [
+     "subj",
+     "part",
+     null,
+     "time",
+     "time"
+    ],
+    "who": "S",
+    "m": "rep_still_m2",
+    "h": "rep_still_h2"
+   }
+  ],
+  "cast": [
+   "M",
+   "D",
+   "S"
+  ]
+ },
+ {
+  "id": "for_since_say",
+  "type": "say",
+  "beat": "for_since_say",
+  "ch": "still",
+  "title": "For or since?",
+  "items": [
+   {
+    "prompt": "How long have you lived here? Five years.",
+    "answer": "I've lived here for five years.",
+    "q": "for_since_say_0q",
+    "h": "for_since_say_0h",
+    "a": "for_since_say_0a",
+    "hint": null
+   },
+   {
+    "prompt": "How long have you studied English? Since January.",
+    "answer": "I've studied English since January.",
+    "q": "for_since_say_1q",
+    "h": "for_since_say_1h",
+    "a": "for_since_say_1a",
+    "hint": null
+   },
+   {
+    "prompt": "How long has she worked here? Two months.",
+    "answer": "She has worked here for two months.",
+    "q": "for_since_say_2q",
+    "h": "for_since_say_2h",
+    "a": "for_since_say_2a",
+    "hint": null
+   },
+   {
+    "prompt": "How long have they been married? Since 2021.",
+    "answer": "They've been married since 2021.",
+    "q": "for_since_say_3q",
+    "h": "for_since_say_3h",
+    "a": "for_since_say_3a",
+    "hint": null
+   },
+   {
+    "prompt": "How long has he had that car? Ten years.",
+    "answer": "He has had that car for ten years.",
+    "q": "for_since_say_4q",
+    "h": "for_since_say_4h",
+    "a": "for_since_say_4a",
+    "hint": null
+   }
+  ],
+  "cast": [
+   "D",
+   "M"
+  ],
+  "label": "Answer it"
+ },
+ {
+  "id": "q_still",
+  "type": "choose",
+  "beat": "q_still",
+  "ch": "still",
+  "title": "Choose the answer",
+  "items": [
+   {
+    "before": "She has worked here",
+    "after": "six months.",
+    "options": [
+     "for",
+     "since",
+     "during"
+    ],
+    "correct": 0,
+    "why": "Six months is a length of time. Use for.",
+    "q": "q_still_0q",
+    "h": "q_still_0h",
+    "a": "q_still_0a"
+   },
+   {
+    "before": "We've known each other",
+    "after": "we were students.",
+    "options": [
+     "since",
+     "for",
+     "from"
+    ],
+    "correct": 0,
+    "why": "We were students is a starting point. Use since.",
+    "q": "q_still_1q",
+    "h": "q_still_1h",
+    "a": "q_still_1a"
+   },
+   {
+    "before": "How long",
+    "after": "you studied English?",
+    "options": [
+     "have",
+     "do",
+     "are"
+    ],
+    "correct": 0,
+    "why": "How long, have, you, and the past participle studied.",
+    "q": "q_still_2q",
+    "h": "q_still_2h",
+    "a": "q_still_2a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "pair_hl",
+  "type": "pair",
+  "beat": "pair_hl",
+  "ch": "still",
+  "title": "Pair work",
+  "prompts": [
+   "lived in your home",
+   "studied English",
+   "known your best friend",
+   "had your phone",
+   "worked or studied in your place",
+   "been in this class"
+  ],
+  "h1": "pair_hl_h1",
+  "sw": "pair_hl_sw",
+  "h2": "pair_hl_h2",
+  "roles": [
+   "Ask",
+   "Answer"
+  ],
+  "cast": [
+   "M",
+   "S"
+  ],
+  "scene": "studio",
+  "minutes": 3.0,
+  "stem": "How long have you ...?"
+ },
+ {
+  "id": "time_chart",
+  "type": "info",
+  "beat": "time_chart",
+  "ch": "period",
+  "title": "Time words",
+  "rows": [
+   {
+    "text": "ever, never, already, yet, just",
+    "roles": null,
+    "tag": null,
+    "line": "time_chart_r0",
+    "size": null
+   },
+   {
+    "text": "for and since, with a situation that continues",
+    "roles": null,
+    "tag": null,
+    "line": "time_chart_r1",
+    "size": null
+   },
+   {
+    "text": "yesterday, last week, in 2019, two days ago",
+    "roles": null,
+    "tag": null,
+    "line": "time_chart_r2",
+    "size": null
+   }
+  ],
+  "cast": [
+   "M",
+   "D"
+  ],
+  "scene": "studio"
+ },
+ {
+  "id": "skit_travel",
+  "type": "skit",
+  "beat": "skit_travel",
+  "ch": "period",
+  "scene": "travel",
+  "cast": [
+   "S",
+   "D"
+  ],
+  "layout": "duo"
+ },
+ {
+  "id": "q_period",
+  "type": "choose",
+  "beat": "q_period",
+  "ch": "period",
+  "title": "Present perfect or simple past?",
+  "items": [
+   {
+    "before": "I",
+    "after": "to Paris in 2019.",
+    "options": [
+     "went",
+     "have been",
+     "have gone"
+    ],
+    "correct": 0,
+    "why": "In twenty nineteen is a finished time. Use the simple past.",
+    "q": "q_period_0q",
+    "h": "q_period_0h",
+    "a": "q_period_0a"
+   },
+   {
+    "before": "She",
+    "after": "here since 2021.",
+    "options": [
+     "has lived",
+     "lived",
+     "is living"
+    ],
+    "correct": 0,
+    "why": "Since twenty twenty-one: the situation continues, so use the present perfect.",
+    "q": "q_period_1q",
+    "h": "q_period_1h",
+    "a": "q_period_1a"
+   },
+   {
+    "before": "We",
+    "after": "that movie last night.",
+    "options": [
+     "saw",
+     "have seen",
+     "are seeing"
+    ],
+    "correct": 0,
+    "why": "Last night is a finished time. Use the simple past.",
+    "q": "q_period_2q",
+    "h": "q_period_2h",
+    "a": "q_period_2a"
+   },
+   {
+    "before": "They",
+    "after": "married two years ago.",
+    "options": [
+     "got",
+     "have got",
+     "have gotten"
+    ],
+    "correct": 0,
+    "why": "Two years ago is a finished time. Use the simple past.",
+    "q": "q_period_3q",
+    "h": "q_period_3h",
+    "a": "q_period_3a"
+   },
+   {
+    "context": "He still works here.",
+    "before": "He",
+    "after": "here for five years.",
+    "options": [
+     "has worked",
+     "worked",
+     "was working"
+    ],
+    "correct": 0,
+    "why": "He still works here, so we use the present perfect.",
+    "q": "q_period_4q",
+    "h": "q_period_4h",
+    "a": "q_period_4a"
+   },
+   {
+    "before": "When",
+    "after": "you finish the report?",
+    "options": [
+     "did",
+     "have",
+     "has"
+    ],
+    "correct": 0,
+    "why": "With when, we ask about a finished time. Use did.",
+    "q": "q_period_5q",
+    "h": "q_period_5h",
+    "a": "q_period_5a"
+   }
+  ],
+  "cast": [
+   "D",
+   "M"
+  ]
+ },
+ {
+  "id": "q_gone",
+  "type": "choose",
+  "beat": "q_gone",
+  "ch": "notes",
+  "title": "Been or gone?",
+  "items": [
+   {
+    "context": "Where's Daniel? He'll be back soon.",
+    "before": "He's",
+    "after": "to the bank.",
+    "options": [
+     "gone",
+     "been"
+    ],
+    "correct": 0,
+    "why": "Gone means he is away now.",
+    "q": "q_gone_0q",
+    "h": "q_gone_0h",
+    "a": "q_gone_0a"
+   },
+   {
+    "context": "It's a beautiful city.",
+    "before": "I've",
+    "after": "to Rome twice.",
+    "options": [
+     "been",
+     "gone"
+    ],
+    "correct": 0,
+    "why": "Been means a visit, and then I came back.",
+    "q": "q_gone_1q",
+    "h": "q_gone_1h",
+    "a": "q_gone_1a"
+   },
+   {
+    "context": "Sofia isn't here.",
+    "before": "She's",
+    "after": "to London.",
+    "options": [
+     "gone",
+     "been"
+    ],
+    "correct": 0,
+    "why": "Gone means she is there now, on her trip.",
+    "q": "q_gone_2q",
+    "h": "q_gone_2h",
+    "a": "q_gone_2a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ },
+ {
+  "id": "fix1",
+  "type": "fix",
+  "beat": "fix1",
+  "ch": "mixed",
+  "title": "Find the mistake",
+  "items": [
+   {
+    "wrong": "I've seen her yesterday.",
+    "right": "I saw her yesterday.",
+    "strike": [
+     "I've",
+     "seen"
+    ],
+    "mark": [
+     "saw"
+    ],
+    "why": "Yesterday is a finished time. Use the simple past.",
+    "q": "fix1_0q",
+    "h": "fix1_0h",
+    "a": "fix1_0a"
+   },
+   {
+    "wrong": "He have finished.",
+    "right": "He has finished.",
+    "strike": [
+     "have"
+    ],
+    "mark": [
+     "has"
+    ],
+    "why": "He needs has.",
+    "q": "fix1_1q",
+    "h": "fix1_1h",
+    "a": "fix1_1a"
+   },
+   {
+    "wrong": "I've lived here since five years.",
+    "right": "I've lived here for five years.",
+    "strike": [
+     "since"
+    ],
+    "mark": [
+     "for"
+    ],
+    "why": "Five years is a length of time. Use for.",
+    "q": "fix1_2q",
+    "h": "fix1_2h",
+    "a": "fix1_2a"
+   },
+   {
+    "wrong": "They haven't call yet.",
+    "right": "They haven't called yet.",
+    "strike": [
+     "call"
+    ],
+    "mark": [
+     "called"
+    ],
+    "why": "After haven't, use the past participle.",
+    "q": "fix1_3q",
+    "h": "fix1_3h",
+    "a": "fix1_3a"
+   },
+   {
+    "wrong": "Have you eat lunch?",
+    "right": "Have you eaten lunch?",
+    "strike": [
+     "eat"
+    ],
+    "mark": [
+     "eaten"
+    ],
+    "why": "Eaten is the past participle.",
+    "q": "fix1_4q",
+    "h": "fix1_4h",
+    "a": "fix1_4a"
+   },
+   {
+    "wrong": "She's visited Paris last year.",
+    "right": "She visited Paris last year.",
+    "strike": [
+     "She's"
+    ],
+    "mark": [
+     "visited"
+    ],
+    "why": "Last year is a finished time. Use the simple past.",
+    "q": "fix1_5q",
+    "h": "fix1_5h",
+    "a": "fix1_5a"
+   },
+   {
+    "wrong": "Did you ever been to Japan?",
+    "right": "Have you ever been to Japan?",
+    "strike": [
+     "Did"
+    ],
+    "mark": [
+     "Have"
+    ],
+    "why": "Use have, plus the past participle.",
+    "q": "fix1_6q",
+    "h": "fix1_6h",
+    "a": "fix1_6a"
+   }
+  ],
+  "cast": [
+   "M",
+   "S"
+  ]
+ },
+ {
+  "id": "sort_tense",
+  "type": "sort",
+  "beat": "sort_tense",
+  "ch": "mixed",
+  "title": "Which tense?",
+  "bins": [
+   "present perfect",
+   "simple past"
+  ],
+  "items": [
+   {
+    "text": "I've just finished.",
+    "bin": 0,
+    "q": "sort_tense_0q",
+    "h": "sort_tense_0h",
+    "a": "sort_tense_0a"
+   },
+   {
+    "text": "We went there in 2019.",
+    "bin": 1,
+    "q": "sort_tense_1q",
+    "h": "sort_tense_1h",
+    "a": "sort_tense_1a"
+   },
+   {
+    "text": "She's never been to Asia.",
+    "bin": 0,
+    "q": "sort_tense_2q",
+    "h": "sort_tense_2h",
+    "a": "sort_tense_2a"
+   },
+   {
+    "text": "I finished at noon.",
+    "bin": 1,
+    "q": "sort_tense_3q",
+    "h": "sort_tense_3h",
+    "a": "sort_tense_3a"
+   },
+   {
+    "text": "Have you eaten yet?",
+    "bin": 0,
+    "q": "sort_tense_4q",
+    "h": "sort_tense_4h",
+    "a": "sort_tense_4a"
+   },
+   {
+    "text": "Did you call him yesterday?",
+    "bin": 1,
+    "q": "sort_tense_5q",
+    "h": "sort_tense_5h",
+    "a": "sort_tense_5a"
+   },
+   {
+    "text": "He's lived here since 2020.",
+    "bin": 0,
+    "q": "sort_tense_6q",
+    "h": "sort_tense_6h",
+    "a": "sort_tense_6a"
+   },
+   {
+    "text": "They arrived two hours ago.",
+    "bin": 1,
+    "q": "sort_tense_7q",
+    "h": "sort_tense_7h",
+    "a": "sort_tense_7a"
+   }
+  ],
+  "cast": [
+   "S",
+   "M"
+  ]
+ },
+ {
+  "id": "show",
+  "type": "choose",
+  "beat": "show",
+  "ch": "mixed",
+  "title": "Quiz show",
+  "items": [
+   {
+    "before": "We",
+    "after": "in this city since 2020.",
+    "options": [
+     "have lived",
+     "lived",
+     "live"
+    ],
+    "correct": 0,
+    "why": "Since twenty twenty means the situation continues. Use the present perfect.",
+    "q": "show_0q",
+    "h": "show_0h",
+    "a": "show_0a"
+   },
+   {
+    "before": "",
+    "after": "you ever been to London?",
+    "options": [
+     "Have",
+     "Did",
+     "Are"
+    ],
+    "correct": 0,
+    "why": "Have you ever been.",
+    "q": "show_1q",
+    "h": "show_1h",
+    "a": "show_1a"
+   },
+   {
+    "before": "Maya",
+    "after": "the report yet.",
+    "options": [
+     "hasn't finished",
+     "didn't finished",
+     "haven't finished"
+    ],
+    "correct": 0,
+    "why": "Maya is she. Hasn't finished.",
+    "q": "show_2q",
+    "h": "show_2h",
+    "a": "show_2a"
+   },
+   {
+    "before": "I",
+    "after": "breakfast at seven yesterday.",
+    "options": [
+     "had",
+     "have had",
+     "has had"
+    ],
+    "correct": 0,
+    "why": "Yesterday is a finished time. Use the simple past.",
+    "q": "show_3q",
+    "h": "show_3h",
+    "a": "show_3a"
+   },
+   {
+    "before": "She's",
+    "after": "to Rome three times.",
+    "options": [
+     "been",
+     "gone",
+     "went"
+    ],
+    "correct": 0,
+    "why": "Been, for a visit.",
+    "q": "show_4q",
+    "h": "show_4h",
+    "a": "show_4a"
+   },
+   {
+    "before": "I haven't seen him",
+    "after": "Monday.",
+    "options": [
+     "since",
+     "for",
+     "from"
+    ],
+    "correct": 0,
+    "why": "Monday is a starting point. Use since.",
+    "q": "show_5q",
+    "h": "show_5h",
+    "a": "show_5a"
+   },
+   {
+    "before": "We've",
+    "after": "eaten. We're full.",
+    "options": [
+     "already",
+     "yet",
+     "ever"
+    ],
+    "correct": 0,
+    "why": "Already goes before the participle.",
+    "q": "show_6q",
+    "h": "show_6h",
+    "a": "show_6a"
+   },
+   {
+    "before": "How long",
+    "after": "you known her?",
+    "options": [
+     "have",
+     "did",
+     "do"
+    ],
+    "correct": 0,
+    "why": "How long have you known her.",
+    "q": "show_7q",
+    "h": "show_7h",
+    "a": "show_7a"
+   },
+   {
+    "before": "I",
+    "after": "him last week.",
+    "options": [
+     "saw",
+     "have seen",
+     "has seen"
+    ],
+    "correct": 0,
+    "why": "Last week is a finished time. Use the simple past.",
+    "q": "show_8q",
+    "h": "show_8h",
+    "a": "show_8a"
+   },
+   {
+    "before": "She has",
+    "after": "in Canada for ten years.",
+    "options": [
+     "lived",
+     "live",
+     "living"
+    ],
+    "correct": 0,
+    "why": "Has plus the past participle.",
+    "q": "show_9q",
+    "h": "show_9h",
+    "a": "show_9a"
+   }
+  ],
+  "cast": [
+   "D",
+   "S"
+  ]
+ },
+ {
+  "id": "skit_final",
+  "type": "skit",
+  "beat": "skit_final",
+  "ch": "speaking",
+  "scene": "cafe",
+  "cast": [
+   "S",
+   "M"
+  ],
+  "layout": "duo"
+ },
+ {
+  "id": "pair_final",
+  "type": "pair",
+  "beat": "pair_final",
+  "ch": "speaking",
+  "title": "Role play",
+  "prompts": [
+   "Ask: Have you been away?",
+   "Say what you've just done.",
+   "Say what you've never done.",
+   "Ask: How long have you ...?",
+   "Say what you haven't done yet."
+  ],
+  "h1": "pair_final_h1",
+  "sw": "pair_final_sw",
+  "h2": "pair_final_h2",
+  "roles": [
+   "Friend one",
+   "Friend two"
+  ],
+  "cast": [
+   "M",
+   "S"
+  ],
+  "scene": "studio",
+  "minutes": 4.0,
+  "stem": null
+ },
+ {
+  "id": "share_final",
+  "type": "timer",
+  "beat": "share_final",
+  "ch": "speaking",
+  "title": "Tell the class",
+  "prompt": "I've just ... I've never ... I haven't ... yet.",
+  "h": "share_final_h",
+  "cast": [
+   "M",
+   "D"
+  ]
+ },
+ {
+  "id": "exit",
+  "type": "choose",
+  "beat": "exit",
+  "ch": "review",
+  "title": "Exit ticket",
+  "items": [
+   {
+    "before": "I",
+    "after": "never visited Canada.",
+    "options": [
+     "have",
+     "has",
+     "am"
+    ],
+    "correct": 0,
+    "why": "I have never visited. Experience.",
+    "q": "exit_0q",
+    "h": "exit_0h",
+    "a": "exit_0a"
+   },
+   {
+    "context": "Here is the report.",
+    "before": "I've",
+    "after": "finished.",
+    "options": [
+     "just",
+     "ever",
+     "since"
+    ],
+    "correct": 0,
+    "why": "Just means a very short time ago. Recent result.",
+    "q": "exit_1q",
+    "h": "exit_1h",
+    "a": "exit_1a"
+   },
+   {
+    "before": "She has lived here",
+    "after": "2021.",
+    "options": [
+     "since",
+     "for",
+     "ago"
+    ],
+    "correct": 0,
+    "why": "Since gives the starting point. Still true.",
+    "q": "exit_2q",
+    "h": "exit_2h",
+    "a": "exit_2a"
+   },
+   {
+    "before": "We",
+    "after": "to the beach last Sunday.",
+    "options": [
+     "went",
+     "have been",
+     "have gone"
+    ],
+    "correct": 0,
+    "why": "Last Sunday is a finished time. Simple past.",
+    "q": "exit_3q",
+    "h": "exit_3h",
+    "a": "exit_3a"
+   }
+  ],
+  "cast": [
+   "S",
+   "D"
+  ]
+ }
+]

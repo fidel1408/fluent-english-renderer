@@ -8,7 +8,7 @@ import base64, json, subprocess, shutil, re
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 B, SRC, DIST = ROOT / "build", ROOT / "src", ROOT / "dist"
-SOURCES = ["util.js", "text.js", "chars.js", "scenes.js", "gfx.js", "engine.js", "lesson1.js", "lesson2.js", "lesson3.js", "boot.js", "player.js"]
+SOURCES = ["util.js", "text.js", "chars.js", "scenes.js", "gfx.js", "engine.js", "lesson1.js", "lesson2.js", "lesson3.js", "@activities", "lesson4.js", "boot.js", "player.js"]
 
 def b64(p): return base64.b64encode(Path(p).read_bytes()).decode()
 def run(*a): subprocess.run(a, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

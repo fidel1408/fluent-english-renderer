@@ -1,736 +1,5703 @@
 {
-  "title": "Present Perfect",
-  "voices": {
-    "N": {
-      "name": "Teacher (narrator)",
-      "voice": "af_heart",
-      "speed": 0.9
-    },
-    "D": {
-      "name": "Daniel",
-      "voice": "am_michael",
-      "speed": 0.93
-    },
-    "M": {
-      "name": "Maya",
-      "voice": "af_bella",
-      "speed": 0.93
-    },
-    "S": {
-      "name": "Sofia",
-      "voice": "af_nicole",
-      "speed": 1.05
-    }
+ "title": "Present Perfect",
+ "voices": {
+  "N": {
+   "name": "Teacher (narrator)",
+   "voice": "af_heart",
+   "speed": 0.9
   },
-  "chapters": [
-    {
-      "id": "story",
-      "label": "Past and now"
-    },
-    {
-      "id": "form",
-      "label": "Form"
-    },
-    {
-      "id": "negq",
-      "label": "Negatives and questions"
-    },
-    {
-      "id": "exp",
-      "label": "Experience"
-    },
-    {
-      "id": "result",
-      "label": "Result"
-    },
-    {
-      "id": "still",
-      "label": "Still true"
-    },
-    {
-      "id": "period",
-      "label": "Today"
-    },
-    {
-      "id": "finished",
-      "label": "Past time"
-    },
-    {
-      "id": "notes",
-      "label": "Notes"
-    },
-    {
-      "id": "review",
-      "label": "Review"
-    }
-  ],
-  "beats": [
-    {
-      "id": "title",
-      "ch": "story",
-      "pre": 0.6,
-      "lines": [
-        {
-          "id": "t1",
-          "who": "N",
-          "text": "Welcome to Fluent English. Today, we're learning the present perfect.",
-          "nocap": true
-        }
-      ]
-    },
-    {
-      "id": "story1",
-      "ch": "story",
-      "lines": [
-        {
-          "id": "s1a",
-          "who": "N",
-          "text": "Daniel is at the office door. He's looking for his keys."
-        },
-        {
-          "id": "s1b",
-          "kind": "thought",
-          "who": "D",
-          "text": "Where are my keys?",
-          "hold": 2.0
-        },
-        {
-          "id": "s1c",
-          "kind": "dlg",
-          "who": "D",
-          "text": "Oh no! I've lost my keys!",
-          "say": "Oh no! [I've](/ˈaɪv/) lost my keys!"
-        }
-      ]
-    },
-    {
-      "id": "contrast",
-      "ch": "story",
-      "lines": [
-        {
-          "id": "c2",
-          "kind": "ex",
-          "who": "N",
-          "text": "I lost my keys yesterday.",
-          "say": "I lost my keys yesterday."
-        },
-        {
-          "id": "c3",
-          "who": "N",
-          "text": "We name a finished time: yesterday. This is the simple past."
-        },
-        {
-          "id": "c4",
-          "kind": "ex",
-          "who": "N",
-          "text": "I've lost my keys.",
-          "say": "[I've](/ˈaɪv/) lost my keys."
-        },
-        {
-          "id": "c5",
-          "who": "N",
-          "text": "Now the focus is the present result. In this situation, we understand that the keys are missing now."
-        },
-        {
-          "id": "c6",
-          "who": "N",
-          "text": "The present perfect connects the past to now."
-        }
-      ]
-    },
-    {
-      "id": "form1",
-      "ch": "form",
-      "lines": [
-        {
-          "id": "f1",
-          "who": "N",
-          "text": "The form is: subject, plus have or has, plus the past participle."
-        },
-        {
-          "id": "f2",
-          "kind": "ex",
-          "who": "N",
-          "text": "She has finished."
-        },
-        {
-          "id": "f3",
-          "who": "N",
-          "text": "I, you, we, and they use have. He, she, and it use has."
-        }
-      ]
-    },
-    {
-      "id": "form2",
-      "ch": "form",
-      "lines": [
-        {
-          "id": "f4",
-          "who": "N",
-          "text": "The past participle is the third verb form. It is not always the simple past."
-        },
-        {
-          "id": "f5",
-          "who": "N",
-          "text": "Work, worked, worked. See, saw, seen. Go, went, gone. Be, was, been. Eat, ate, eaten.",
-          "speed": 0.85
-        }
-      ]
-    },
-    {
-      "id": "form3",
-      "ch": "form",
-      "lines": [
-        {
-          "id": "f7",
-          "kind": "ex",
-          "who": "N",
-          "text": "I've finished. She's finished.",
-          "say": "[I've](/ˈaɪv/) finished. She's finished."
-        },
-        {
-          "id": "f8",
-          "who": "N",
-          "text": "Here, apostrophe s means has. It can also mean is, so check the next word."
-        }
-      ]
-    },
-    {
-      "id": "chk1",
-      "ch": "form",
-      "check": 1,
-      "lines": [
-        {
-          "id": "k1q",
-          "who": "N",
-          "text": "Quick check one. She, blank, finished the report. Have, has, or does?",
-          "nocap": true
-        },
-        {
-          "id": "k1h",
-          "kind": "hold",
-          "hold": 5.5
-        },
-        {
-          "id": "k1a",
-          "who": "N",
-          "text": "Has. She is third person singular: she has finished.",
-          "nocap": true
-        }
-      ]
-    },
-    {
-      "id": "neg",
-      "ch": "negq",
-      "lines": [
-        {
-          "id": "n1",
-          "who": "N",
-          "text": "For negatives, put not after have or has. Haven't. Hasn't."
-        },
-        {
-          "id": "n2",
-          "kind": "ex",
-          "who": "N",
-          "text": "I haven't finished. She hasn't finished."
-        }
-      ]
-    },
-    {
-      "id": "quest",
-      "ch": "negq",
-      "lines": [
-        {
-          "id": "q1",
-          "who": "N",
-          "text": "For questions, put have or has before the subject."
-        },
-        {
-          "id": "q2",
-          "kind": "ex",
-          "who": "N",
-          "text": "Have you finished? Has she finished?"
-        },
-        {
-          "id": "q3",
-          "who": "N",
-          "text": "We do not use do or does to make these questions."
-        }
-      ]
-    },
-    {
-      "id": "short",
-      "ch": "negq",
-      "lines": [
-        {
-          "id": "a1",
-          "kind": "dlg",
-          "who": "M",
-          "text": "Have you eaten lunch?"
-        },
-        {
-          "id": "a2",
-          "kind": "dlg",
-          "who": "D",
-          "text": "Yes, I have."
-        },
-        {
-          "id": "a3",
-          "kind": "dlg",
-          "who": "M",
-          "text": "Has Sofia called?"
-        },
-        {
-          "id": "a4",
-          "kind": "dlg",
-          "who": "D",
-          "text": "No, she hasn't."
-        }
-      ]
-    },
-    {
-      "id": "wh",
-      "ch": "negq",
-      "lines": [
-        {
-          "id": "w1",
-          "who": "N",
-          "text": "With question words, put have or has next, before the subject."
-        },
-        {
-          "id": "w2",
-          "kind": "ex",
-          "who": "N",
-          "text": "What have you done? How long have you lived here?"
-        }
-      ]
-    },
-    {
-      "id": "chk2",
-      "ch": "negq",
-      "check": 2,
-      "lines": [
-        {
-          "id": "k2q",
-          "who": "N",
-          "text": "Quick check two. Maya has already, blank, lunch. Ate, eaten, or eat?",
-          "nocap": true
-        },
-        {
-          "id": "k2h",
-          "kind": "hold",
-          "hold": 5.5
-        },
-        {
-          "id": "k2a",
-          "who": "N",
-          "text": "Eaten. After has, we need the past participle: has eaten.",
-          "nocap": true
-        }
-      ]
-    },
-    {
-      "id": "exp1",
-      "ch": "exp",
-      "lines": [
-        {
-          "id": "e1",
-          "who": "N",
-          "text": "Use one: experience up to now. We don't say when."
-        },
-        {
-          "id": "e2",
-          "kind": "dlg",
-          "who": "S",
-          "text": "Have you ever visited Canada?"
-        },
-        {
-          "id": "e3",
-          "kind": "dlg",
-          "who": "D",
-          "text": "Yes, I have. I visited Canada in 2022.",
-          "say": "Yes, I have. I visited Canada in twenty twenty-two."
-        }
-      ]
-    },
-    {
-      "id": "exp2",
-      "ch": "exp",
-      "lines": [
-        {
-          "id": "e4",
-          "who": "N",
-          "text": "First, the experience: present perfect. Then a finished time: simple past."
-        },
-        {
-          "id": "e5",
-          "who": "N",
-          "text": "Never means: not at any time, up to now."
-        },
-        {
-          "id": "e6",
-          "kind": "ex",
-          "who": "N",
-          "text": "I've never visited Canada.",
-          "say": "[I've](/ˈaɪv/) never visited Canada."
-        }
-      ]
-    },
-    {
-      "id": "res1",
-      "ch": "result",
-      "lines": [
-        {
-          "id": "r1",
-          "who": "N",
-          "text": "Use two: a recent action with a result now."
-        },
-        {
-          "id": "r2",
-          "kind": "dlg",
-          "who": "D",
-          "text": "Have you finished yet?"
-        },
-        {
-          "id": "r3",
-          "kind": "dlg",
-          "who": "M",
-          "text": "Yes! I've already finished the report.",
-          "say": "Yes! [I've](/ˈaɪv/) already finished the report."
-        }
-      ]
-    },
-    {
-      "id": "res2",
-      "ch": "result",
-      "lines": [
-        {
-          "id": "r4",
-          "who": "N",
-          "text": "The report is finished, and it is ready now."
-        },
-        {
-          "id": "r5",
-          "who": "N",
-          "text": "Already goes before the participle. Yet goes at the end."
-        },
-        {
-          "id": "r6",
-          "kind": "ex",
-          "who": "N",
-          "text": "I haven't finished yet."
-        }
-      ]
-    },
-    {
-      "id": "still1",
-      "ch": "still",
-      "lines": [
-        {
-          "id": "u1",
-          "who": "N",
-          "text": "Use three: a situation that began in the past and continues now."
-        },
-        {
-          "id": "u2",
-          "kind": "dlg",
-          "who": "D",
-          "text": "I've known her for five years.",
-          "say": "[I've](/ˈaɪv/) known her for five years."
-        },
-        {
-          "id": "u3",
-          "kind": "dlg",
-          "who": "S",
-          "text": "And she's lived here since 2021.",
-          "say": "And she's lived here since twenty twenty-one."
-        }
-      ]
-    },
-    {
-      "id": "still2",
-      "ch": "still",
-      "lines": [
-        {
-          "id": "u4",
-          "who": "N",
-          "text": "For introduces a length of time. Since introduces the starting point."
-        },
-        {
-          "id": "u5",
-          "who": "N",
-          "text": "Careful: for and since do not always mean present perfect. A finished situation uses the simple past."
-        },
-        {
-          "id": "u6",
-          "kind": "ex",
-          "who": "N",
-          "text": "She lived in Paris for two years."
-        }
-      ]
-    },
-    {
-      "id": "chk3",
-      "ch": "still",
-      "check": 3,
-      "lines": [
-        {
-          "id": "k3q",
-          "who": "N",
-          "text": "Quick check three. Daniel has worked here, blank, 2019. For, or since?",
-          "say": "Quick check three. Daniel has worked here, blank, twenty nineteen. For, or since?",
-          "nocap": true
-        },
-        {
-          "id": "k3h",
-          "kind": "hold",
-          "hold": 5.5
-        },
-        {
-          "id": "k3a",
-          "who": "N",
-          "text": "Since. 2019 is the starting point, not a length of time.",
-          "say": "Since. Twenty nineteen is the starting point, not a length of time.",
-          "nocap": true
-        }
-      ]
-    },
-    {
-      "id": "per1",
-      "ch": "period",
-      "lines": [
-        {
-          "id": "p1",
-          "who": "N",
-          "text": "Use four: a period that is not finished yet, like today, this week, or this year."
-        },
-        {
-          "id": "p2",
-          "kind": "dlg",
-          "who": "M",
-          "text": "I've had two meetings so far today.",
-          "say": "[I've](/ˈaɪv/) had two meetings so far today."
-        }
-      ]
-    },
-    {
-      "id": "per2",
-      "ch": "period",
-      "lines": [
-        {
-          "id": "p3",
-          "who": "N",
-          "text": "Today is not over, so we use the present perfect. Yesterday is finished, so we use the simple past."
-        },
-        {
-          "id": "p4",
-          "kind": "ex",
-          "who": "N",
-          "text": "I had two meetings yesterday."
-        },
-        {
-          "id": "p5",
-          "who": "N",
-          "text": "Advanced note: the speaker's view matters. If you see today as finished, the simple past is also possible."
-        }
-      ]
-    },
-    {
-      "id": "fin1",
-      "ch": "finished",
-      "lines": [
-        {
-          "id": "x1",
-          "who": "N",
-          "text": "Remember: with a finished time, like yesterday, last week, or in 2022, use the simple past.",
-          "say": "Remember: with a finished time, like yesterday, last week, or in twenty twenty-two, use the simple past."
-        },
-        {
-          "id": "x2",
-          "kind": "ex",
-          "who": "N",
-          "text": "I saw her yesterday."
-        },
-        {
-          "id": "x3",
-          "who": "N",
-          "text": "Not: I've seen her yesterday.",
-          "say": "Not: [I've](/ˈaɪv/) seen her yesterday."
-        }
-      ]
-    },
-    {
-      "id": "chk4",
-      "ch": "finished",
-      "check": 4,
-      "lines": [
-        {
-          "id": "k4q",
-          "who": "N",
-          "text": "Quick check four. Sofia's trip was last summer. We, blank, Canada last summer. Visited, or have visited?",
-          "nocap": true
-        },
-        {
-          "id": "k4h",
-          "kind": "hold",
-          "hold": 5.5
-        },
-        {
-          "id": "k4a",
-          "who": "N",
-          "text": "Visited. Last summer is a finished time, so we use the simple past.",
-          "nocap": true
-        }
-      ]
-    },
-    {
-      "id": "usn",
-      "ch": "notes",
-      "lines": [
-        {
-          "id": "m1",
-          "who": "N",
-          "text": "American English note: the simple past is also common with just, already, and yet. Both are normal."
-        },
-        {
-          "id": "m2",
-          "kind": "ex",
-          "who": "N",
-          "text": "I just ate. I already finished. Did you finish yet?"
-        }
-      ]
-    },
-    {
-      "id": "gone1",
-      "ch": "notes",
-      "lines": [
-        {
-          "id": "g1",
-          "kind": "dlg",
-          "who": "D",
-          "text": "Where's Sofia?"
-        },
-        {
-          "id": "g2",
-          "kind": "dlg",
-          "who": "M",
-          "text": "She's gone to London."
-        }
-      ]
-    },
-    {
-      "id": "gone2",
-      "ch": "notes",
-      "lines": [
-        {
-          "id": "g3",
-          "who": "N",
-          "text": "Gone: she is away, on her trip."
-        },
-        {
-          "id": "g4",
-          "kind": "ex",
-          "who": "N",
-          "text": "She's been to London."
-        },
-        {
-          "id": "g5",
-          "who": "N",
-          "text": "Been: she visited London at some time. This is an experience."
-        }
-      ]
-    },
-    {
-      "id": "cont",
-      "ch": "notes",
-      "lines": [
-        {
-          "id": "z1",
-          "who": "N",
-          "text": "One more related form is the present perfect continuous. It can also describe situations that continue, but it is a separate form, and it is not in this lesson."
-        }
-      ]
-    },
-    {
-      "id": "sum",
-      "ch": "review",
-      "lines": [
-        {
-          "id": "v1",
-          "who": "N",
-          "text": "Let's review. Subject, plus have or has, plus the past participle."
-        },
-        {
-          "id": "v2",
-          "who": "N",
-          "text": "Use it for experience, a recent result, a situation that continues, and an unfinished time."
-        },
-        {
-          "id": "v3",
-          "who": "N",
-          "text": "For a finished time, use the simple past."
-        }
-      ]
-    },
-    {
-      "id": "speak",
-      "ch": "review",
-      "lines": [
-        {
-          "id": "y1",
-          "who": "N",
-          "text": "Now it's your turn! Say three sentences. Something you've done today. A place you've never visited. Someone you've known for years.",
-          "say": "Now it's your turn! Say three sentences. Something [you've](/jˈuv/) done today. A place [you've](/jˈuv/) never visited. Someone [you've](/jˈuv/) known for years.",
-          "nocap": true
-        },
-        {
-          "id": "y2",
-          "kind": "hold",
-          "hold": 7.0
-        },
-        {
-          "id": "y3",
-          "who": "N",
-          "text": "Great work. See you in the next lesson!",
-          "nocap": true
-        }
-      ]
-    }
-  ],
-  "elevenlabs": {
-    "_note": "Voice ids are ElevenLabs premade (default) voices, which the Free plan can use through the API. They are NOT yet verified: run `python tools/tts_generate.py --list-voices` and `--audition <id> ...`, then edit this block.",
-    "model": "eleven_multilingual_v2",
-    "voices": {
-      "N": "21m00Tcm4TlvDq8ikWAM",
-      "D": "nPczCjzI2devNBz1zQrb",
-      "M": "cgSgspJ2msm6clMCkdW9",
-      "S": "XrExE9yKIg1WjnnlVkGX"
-    },
-    "settings": {
-      "N": {
-        "stability": 0.55,
-        "similarity_boost": 0.75,
-        "style": 0.0,
-        "use_speaker_boost": true
-      },
-      "D": {
-        "stability": 0.5,
-        "similarity_boost": 0.75,
-        "style": 0.0,
-        "use_speaker_boost": true
-      },
-      "M": {
-        "stability": 0.5,
-        "similarity_boost": 0.75,
-        "style": 0.0,
-        "use_speaker_boost": true
-      },
-      "S": {
-        "stability": 0.5,
-        "similarity_boost": 0.75,
-        "style": 0.0,
-        "use_speaker_boost": true
-      }
-    }
+  "D": {
+   "name": "Daniel",
+   "voice": "am_michael",
+   "speed": 0.93
+  },
+  "M": {
+   "name": "Maya",
+   "voice": "af_bella",
+   "speed": 0.93
+  },
+  "S": {
+   "name": "Sofia",
+   "voice": "af_nicole",
+   "speed": 1.05
   }
+ },
+ "elevenlabs": {
+  "_note": "Voice ids are ElevenLabs premade (default) voices, which the Free plan can use through the API. They are NOT yet verified: run `python tools/tts_generate.py --list-voices` and `--audition <id> ...`, then edit this block.",
+  "model": "eleven_multilingual_v2",
+  "voices": {
+   "N": "21m00Tcm4TlvDq8ikWAM",
+   "D": "nPczCjzI2devNBz1zQrb",
+   "M": "cgSgspJ2msm6clMCkdW9",
+   "S": "XrExE9yKIg1WjnnlVkGX"
+  },
+  "settings": {
+   "N": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+   },
+   "D": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+   },
+   "M": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+   },
+   "S": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true
+   }
+  }
+ },
+ "chapters": [
+  {
+   "id": "welcome",
+   "label": "Welcome"
+  },
+  {
+   "id": "story",
+   "label": "Past and now"
+  },
+  {
+   "id": "form",
+   "label": "Form"
+  },
+  {
+   "id": "participles",
+   "label": "Participles"
+  },
+  {
+   "id": "negq",
+   "label": "Negatives and questions"
+  },
+  {
+   "id": "exp",
+   "label": "Experience"
+  },
+  {
+   "id": "result",
+   "label": "Result"
+  },
+  {
+   "id": "still",
+   "label": "Still true"
+  },
+  {
+   "id": "period",
+   "label": "Time periods"
+  },
+  {
+   "id": "notes",
+   "label": "Notes"
+  },
+  {
+   "id": "mixed",
+   "label": "Mixed practice"
+  },
+  {
+   "id": "speaking",
+   "label": "Speaking"
+  },
+  {
+   "id": "review",
+   "label": "Review"
+  }
+ ],
+ "beats": [
+  {
+   "id": "title",
+   "ch": "welcome",
+   "pre": 0.6,
+   "lines": [
+    {
+     "id": "t1",
+     "who": "N",
+     "text": "Welcome to Fluent English. Today, we're learning the present perfect.",
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "agenda",
+   "ch": "welcome",
+   "lines": [
+    {
+     "id": "agenda_i",
+     "who": "N",
+     "text": "In this class, we will learn the present perfect together. We will listen, repeat, practice in pairs, and play some quick games."
+    },
+    {
+     "id": "agenda_r0",
+     "who": "N",
+     "text": "First, you will talk about experiences."
+    },
+    {
+     "id": "agenda_r1",
+     "who": "N",
+     "text": "Second, you will say what has just happened."
+    },
+    {
+     "id": "agenda_r2",
+     "who": "N",
+     "text": "Third, you will say how long something has continued."
+    },
+    {
+     "id": "agenda_r3",
+     "who": "N",
+     "text": "Fourth, you will ask and answer questions."
+    },
+    {
+     "id": "agenda_r4",
+     "who": "N",
+     "text": "And fifth, you will choose between the present perfect and the simple past."
+    },
+    {
+     "id": "agenda_o",
+     "who": "N",
+     "text": "Use the chat, raise your hand, or speak out loud. Mistakes are fine. They help us learn. Let's begin."
+    }
+   ]
+  },
+  {
+   "id": "meet",
+   "ch": "welcome",
+   "lines": [
+    {
+     "id": "meet_i",
+     "who": "N",
+     "text": "First, meet our three friends."
+    },
+    {
+     "id": "meet_s0",
+     "who": "M",
+     "text": "Hi, I'm Maya.",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "meet_s1",
+     "who": "D",
+     "text": "Hi, I'm Daniel.",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "meet_s2",
+     "who": "S",
+     "text": "And I'm Sofia. We will help you today.",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "meet_o",
+     "who": "N",
+     "text": "They will show you the grammar in real situations."
+    }
+   ]
+  },
+  {
+   "id": "warmup",
+   "ch": "welcome",
+   "lines": [
+    {
+     "id": "warmup_i",
+     "who": "N",
+     "text": "Warm up. Daniel and Maya will ask a question. Answer in your head, or in the chat: yes, I have, or no, I haven't."
+    },
+    {
+     "id": "warmup_0q",
+     "who": "D",
+     "text": "Have you ever eaten sushi?",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "warmup_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "warmup_0a",
+     "who": "M",
+     "text": "Yes, I have. I ate it in Tokyo.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "warmup_1q",
+     "who": "M",
+     "text": "Have you ever lost your phone?",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "warmup_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "warmup_1a",
+     "who": "D",
+     "text": "No, I haven't. But I've lost my keys!",
+     "kind": "ex",
+     "say": "No, I haven't. But [I've](/ˈaɪv/) lost my keys!",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "warmup_2q",
+     "who": "D",
+     "text": "Have you ever met a famous person?",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "warmup_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "warmup_2a",
+     "who": "M",
+     "text": "Yes, I have. I met a singer last year.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "warmup_o",
+     "who": "N",
+     "text": "Great. Today you will learn how to talk about experiences like these."
+    }
+   ]
+  },
+  {
+   "id": "story1",
+   "ch": "story",
+   "lines": [
+    {
+     "id": "s1a",
+     "who": "N",
+     "text": "Daniel is at the office door. He's looking for his keys."
+    },
+    {
+     "id": "s1b",
+     "kind": "thought",
+     "who": "D",
+     "text": "Where are my keys?",
+     "hold": 2.0
+    },
+    {
+     "id": "s1c",
+     "kind": "dlg",
+     "who": "D",
+     "text": "Oh no! I've lost my keys!",
+     "say": "Oh no! [I've](/ˈaɪv/) lost my keys!"
+    }
+   ]
+  },
+  {
+   "id": "contrast",
+   "ch": "story",
+   "lines": [
+    {
+     "id": "c2",
+     "kind": "ex",
+     "who": "N",
+     "text": "I lost my keys yesterday.",
+     "say": "I lost my keys yesterday."
+    },
+    {
+     "id": "c3",
+     "who": "N",
+     "text": "We name a finished time: yesterday. This is the simple past."
+    },
+    {
+     "id": "c4",
+     "kind": "ex",
+     "who": "N",
+     "text": "I've lost my keys.",
+     "say": "[I've](/ˈaɪv/) lost my keys."
+    },
+    {
+     "id": "c5",
+     "who": "N",
+     "text": "Now the focus is the present result. In this situation, we understand that the keys are missing now."
+    },
+    {
+     "id": "c6",
+     "who": "N",
+     "text": "The present perfect connects the past to now."
+    }
+   ]
+  },
+  {
+   "id": "q_story",
+   "ch": "story",
+   "lines": [
+    {
+     "id": "q_story_i",
+     "who": "N",
+     "text": "Let's check. Listen to the question, think, and choose."
+    },
+    {
+     "id": "q_story_0q",
+     "who": "N",
+     "text": "Which sentence names a finished time? One: I lost my keys yesterday.. Two: I've lost my keys..",
+     "say": "Which sentence names a finished time? One: I lost my keys yesterday.. Two: [I've](/ˈaɪv/) lost my keys..",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_story_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_story_0a",
+     "who": "N",
+     "text": "I lost my keys yesterday.. Yesterday is a finished time, so we use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_story_1q",
+     "who": "N",
+     "text": "Which sentence focuses on the result now? One: I lost my keys yesterday.. Two: I've lost my keys..",
+     "say": "Which sentence focuses on the result now? One: I lost my keys yesterday.. Two: [I've](/ˈaɪv/) lost my keys..",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_story_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_story_1a",
+     "who": "N",
+     "text": "I've lost my keys.. I've lost my keys connects the past to now. In this situation, the keys are missing now.",
+     "say": "[I've](/ˈaɪv/) lost my keys.. [I've](/ˈaɪv/) lost my keys connects the past to now. In this situation, the keys are missing now.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "rep_story",
+   "ch": "story",
+   "lines": [
+    {
+     "id": "rep_story_i",
+     "who": "N",
+     "text": "Now, repeat after me. First, the simple past. Then, the present perfect."
+    },
+    {
+     "id": "rep_story_m0",
+     "who": "M",
+     "text": "I lost my keys yesterday.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_story_h0",
+     "kind": "hold",
+     "hold": 5.75
+    },
+    {
+     "id": "rep_story_m1",
+     "who": "D",
+     "text": "I've lost my keys.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) lost my keys.",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_story_h1",
+     "kind": "hold",
+     "hold": 5.4
+    }
+   ]
+  },
+  {
+   "id": "form1",
+   "ch": "form",
+   "lines": [
+    {
+     "id": "f1",
+     "who": "N",
+     "text": "The form is: subject, plus have or has, plus the past participle."
+    },
+    {
+     "id": "f2",
+     "kind": "ex",
+     "who": "N",
+     "text": "She has finished."
+    },
+    {
+     "id": "f3",
+     "who": "N",
+     "text": "I, you, we, and they use have. He, she, and it use has."
+    }
+   ]
+  },
+  {
+   "id": "form2",
+   "ch": "form",
+   "lines": [
+    {
+     "id": "f4",
+     "who": "N",
+     "text": "The past participle is the third verb form. It is not always the simple past."
+    },
+    {
+     "id": "f5",
+     "who": "N",
+     "text": "Work, worked, worked. See, saw, seen. Go, went, gone. Be, was, been. Eat, ate, eaten.",
+     "speed": 0.85
+    }
+   ]
+  },
+  {
+   "id": "form3",
+   "ch": "form",
+   "lines": [
+    {
+     "id": "f7",
+     "kind": "ex",
+     "who": "N",
+     "text": "I've finished. She's finished.",
+     "say": "[I've](/ˈaɪv/) finished. She's finished."
+    },
+    {
+     "id": "f8",
+     "who": "N",
+     "text": "Here, apostrophe s means has. It can also mean is, so check the next word."
+    }
+   ]
+  },
+  {
+   "id": "chk1",
+   "ch": "form",
+   "check": 1,
+   "lines": [
+    {
+     "id": "k1q",
+     "who": "N",
+     "text": "Quick check one. She, blank, finished the report. Have, has, or does?",
+     "nocap": true
+    },
+    {
+     "id": "k1h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "k1a",
+     "who": "N",
+     "text": "Has. She is third person singular: she has finished.",
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "drill_hh",
+   "ch": "form",
+   "lines": [
+    {
+     "id": "drill_hh_i",
+     "who": "N",
+     "text": "Quick drill. I will say a subject. You say have or has. Ready?"
+    },
+    {
+     "id": "drill_hh_0q",
+     "who": "N",
+     "text": "I",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_0h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_0a",
+     "who": "N",
+     "text": "have",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_1q",
+     "who": "N",
+     "text": "you",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_1h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_1a",
+     "who": "N",
+     "text": "have",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_2q",
+     "who": "N",
+     "text": "he",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_2h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_2a",
+     "who": "N",
+     "text": "has",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_3q",
+     "who": "N",
+     "text": "she",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_3h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_3a",
+     "who": "N",
+     "text": "has",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_4q",
+     "who": "N",
+     "text": "it",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_4h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_4a",
+     "who": "N",
+     "text": "has",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_5q",
+     "who": "N",
+     "text": "we",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_5h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_5a",
+     "who": "N",
+     "text": "have",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_6q",
+     "who": "N",
+     "text": "they",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_6h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_6a",
+     "who": "N",
+     "text": "have",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_7q",
+     "who": "N",
+     "text": "Maya",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_7h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_7a",
+     "who": "N",
+     "text": "has",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_8q",
+     "who": "N",
+     "text": "my friends",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_8h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_8a",
+     "who": "N",
+     "text": "have",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_9q",
+     "who": "N",
+     "text": "my sister",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "drill_hh_9h",
+     "kind": "hold",
+     "hold": 2.3
+    },
+    {
+     "id": "drill_hh_9a",
+     "who": "N",
+     "text": "has",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "drill_hh_o",
+     "who": "N",
+     "text": "Well done. He, she, and it use has. Everyone else uses have."
+    }
+   ]
+  },
+  {
+   "id": "rep_form",
+   "ch": "form",
+   "lines": [
+    {
+     "id": "rep_form_i",
+     "who": "N",
+     "text": "Now, listen and repeat. Notice the three parts: subject, have or has, and the past participle."
+    },
+    {
+     "id": "rep_form_m0",
+     "who": "S",
+     "text": "I have finished my homework.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_form_h0",
+     "kind": "hold",
+     "hold": 5.75
+    },
+    {
+     "id": "rep_form_m1",
+     "who": "D",
+     "text": "You have worked hard.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_form_h1",
+     "kind": "hold",
+     "hold": 5.4
+    },
+    {
+     "id": "rep_form_m2",
+     "who": "D",
+     "text": "He has eaten lunch.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_form_h2",
+     "kind": "hold",
+     "hold": 5.4
+    },
+    {
+     "id": "rep_form_m3",
+     "who": "M",
+     "text": "She has seen that movie.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_form_h3",
+     "kind": "hold",
+     "hold": 5.75
+    },
+    {
+     "id": "rep_form_m4",
+     "who": "S",
+     "text": "We have been to Mexico.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_form_h4",
+     "kind": "hold",
+     "hold": 5.75
+    },
+    {
+     "id": "rep_form_m5",
+     "who": "M",
+     "text": "They have bought a new car.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_form_h5",
+     "kind": "hold",
+     "hold": 6.1
+    }
+   ]
+  },
+  {
+   "id": "q_form",
+   "ch": "form",
+   "lines": [
+    {
+     "id": "q_form_i",
+     "who": "N",
+     "text": "Four quick questions. Think first, then choose."
+    },
+    {
+     "id": "q_form_0q",
+     "who": "N",
+     "text": "Number one. My brother, blank, visited Spain. have, has, or does?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_form_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_form_0a",
+     "who": "N",
+     "text": "Has. My brother is he, so we use has.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_form_1q",
+     "who": "N",
+     "text": "Number two. Maya and Daniel, blank, finished. have, has, or does?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_form_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_form_1a",
+     "who": "N",
+     "text": "Have. Maya and Daniel is they, so we use have.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_form_2q",
+     "who": "N",
+     "text": "Number three. I've, blank, that song before. heard, hear, or hearing?",
+     "say": "Number three. [I've](/ˈaɪv/), blank, that song before. heard, hear, or hearing?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_form_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_form_2a",
+     "who": "N",
+     "text": "Heard. After have, we need the past participle: heard.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_form_3q",
+     "who": "N",
+     "text": "Number four. She has, blank, her keys. lost, lose, or losing?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_form_3h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_form_3a",
+     "who": "N",
+     "text": "Lost. Has plus the past participle: lost.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "ed_sounds",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "ed_sounds_i",
+     "who": "N",
+     "text": "Regular verbs add e d. But we say e d in three different ways. Listen and repeat."
+    },
+    {
+     "id": "ed_sounds_r0",
+     "who": "N",
+     "text": "Sound t. Worked. Watched. Helped. Cooked.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "ed_sounds_h0",
+     "kind": "hold",
+     "hold": 4.0
+    },
+    {
+     "id": "ed_sounds_r1",
+     "who": "N",
+     "text": "Sound d. Played. Lived. Cleaned. Opened.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "ed_sounds_h1",
+     "kind": "hold",
+     "hold": 4.0
+    },
+    {
+     "id": "ed_sounds_r2",
+     "who": "N",
+     "text": "Sound id. Wanted. Needed. Visited. Decided.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "ed_sounds_h2",
+     "kind": "hold",
+     "hold": 4.0
+    },
+    {
+     "id": "ed_sounds_o",
+     "who": "N",
+     "text": "After t or d, e d is an extra syllable. Everywhere else, it is just t or d."
+    }
+   ]
+  },
+  {
+   "id": "irr_en",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "irr_en_i",
+     "who": "N",
+     "text": "Now, irregular verbs. They do not add e d. Group one: many participles end in e n."
+    },
+    {
+     "id": "irr_en_r0",
+     "who": "N",
+     "text": "eat, ate, eaten.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_en_h0",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_en_r1",
+     "who": "N",
+     "text": "see, saw, seen.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_en_h1",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_en_r2",
+     "who": "N",
+     "text": "give, gave, given.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_en_h2",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_en_r3",
+     "who": "N",
+     "text": "take, took, taken.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_en_h3",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_en_r4",
+     "who": "N",
+     "text": "write, wrote, written.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_en_h4",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_en_r5",
+     "who": "N",
+     "text": "break, broke, broken.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_en_h5",
+     "kind": "hold",
+     "hold": 2.4
+    }
+   ]
+  },
+  {
+   "id": "say_en",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "say_en_i",
+     "who": "N",
+     "text": "Your turn. I say the base verb. You say the past participle."
+    },
+    {
+     "id": "say_en_0q",
+     "who": "N",
+     "text": "eat",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_en_0h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_en_0a",
+     "who": "N",
+     "text": "eaten",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_en_1q",
+     "who": "N",
+     "text": "see",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_en_1h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_en_1a",
+     "who": "N",
+     "text": "seen",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_en_2q",
+     "who": "N",
+     "text": "give",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_en_2h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_en_2a",
+     "who": "N",
+     "text": "given",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_en_3q",
+     "who": "N",
+     "text": "take",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_en_3h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_en_3a",
+     "who": "N",
+     "text": "taken",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_en_4q",
+     "who": "N",
+     "text": "write",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_en_4h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_en_4a",
+     "who": "N",
+     "text": "written",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_en_5q",
+     "who": "N",
+     "text": "break",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_en_5h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_en_5a",
+     "who": "N",
+     "text": "broken",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "irr_common",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "irr_common_i",
+     "who": "N",
+     "text": "Group two: very common verbs. Learn these first."
+    },
+    {
+     "id": "irr_common_r0",
+     "who": "N",
+     "text": "go, went, gone.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_common_h0",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_common_r1",
+     "who": "N",
+     "text": "do, did, done.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_common_h1",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_common_r2",
+     "who": "N",
+     "text": "be, was or were, been.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_common_h2",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_common_r3",
+     "who": "N",
+     "text": "have, had, had.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_common_h3",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_common_r4",
+     "who": "N",
+     "text": "make, made, made.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_common_h4",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_common_r5",
+     "who": "N",
+     "text": "say, said, said.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_common_h5",
+     "kind": "hold",
+     "hold": 2.4
+    }
+   ]
+  },
+  {
+   "id": "say_common",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "say_common_0q",
+     "who": "N",
+     "text": "go",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_common_0h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_common_0a",
+     "who": "N",
+     "text": "gone",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_common_1q",
+     "who": "N",
+     "text": "do",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_common_1h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_common_1a",
+     "who": "N",
+     "text": "done",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_common_2q",
+     "who": "N",
+     "text": "be",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_common_2h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_common_2a",
+     "who": "N",
+     "text": "been",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_common_3q",
+     "who": "N",
+     "text": "have",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_common_3h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_common_3a",
+     "who": "N",
+     "text": "had",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_common_4q",
+     "who": "N",
+     "text": "make",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_common_4h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_common_4a",
+     "who": "N",
+     "text": "made",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_common_5q",
+     "who": "N",
+     "text": "say",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_common_5h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_common_5a",
+     "who": "N",
+     "text": "said",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "irr_same",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "irr_same_i",
+     "who": "N",
+     "text": "Group three: the simple past and the past participle are the same."
+    },
+    {
+     "id": "irr_same_r0",
+     "who": "N",
+     "text": "buy, bought, bought.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_same_h0",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_same_r1",
+     "who": "N",
+     "text": "bring, brought, brought.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_same_h1",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_same_r2",
+     "who": "N",
+     "text": "find, found, found.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_same_h2",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_same_r3",
+     "who": "N",
+     "text": "lose, lost, lost.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_same_h3",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_same_r4",
+     "who": "N",
+     "text": "leave, left, left.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_same_h4",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_same_r5",
+     "who": "N",
+     "text": "meet, met, met.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_same_h5",
+     "kind": "hold",
+     "hold": 2.4
+    }
+   ]
+  },
+  {
+   "id": "say_same",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "say_same_0q",
+     "who": "N",
+     "text": "buy",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_same_0h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_same_0a",
+     "who": "N",
+     "text": "bought",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_same_1q",
+     "who": "N",
+     "text": "bring",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_same_1h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_same_1a",
+     "who": "N",
+     "text": "brought",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_same_2q",
+     "who": "N",
+     "text": "find",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_same_2h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_same_2a",
+     "who": "N",
+     "text": "found",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_same_3q",
+     "who": "N",
+     "text": "lose",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_same_3h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_same_3a",
+     "who": "N",
+     "text": "lost",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_same_4q",
+     "who": "N",
+     "text": "leave",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_same_4h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_same_4a",
+     "who": "N",
+     "text": "left",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_same_5q",
+     "who": "N",
+     "text": "meet",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_same_5h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_same_5a",
+     "who": "N",
+     "text": "met",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "irr_nochange",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "irr_nochange_i",
+     "who": "N",
+     "text": "Group four: some verbs do not change, or they change only a little."
+    },
+    {
+     "id": "irr_nochange_r0",
+     "who": "N",
+     "text": "put, put, put.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_nochange_h0",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_nochange_r1",
+     "who": "N",
+     "text": "cut, cut, cut.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_nochange_h1",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_nochange_r2",
+     "who": "N",
+     "text": "read, red, red. The spelling is the same, but the sound changes.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_nochange_h2",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "irr_nochange_r3",
+     "who": "N",
+     "text": "run, ran, run.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_nochange_h3",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_nochange_r4",
+     "who": "N",
+     "text": "come, came, come.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_nochange_h4",
+     "kind": "hold",
+     "hold": 2.4
+    },
+    {
+     "id": "irr_nochange_r5",
+     "who": "N",
+     "text": "hit, hit, hit.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "irr_nochange_h5",
+     "kind": "hold",
+     "hold": 2.4
+    }
+   ]
+  },
+  {
+   "id": "say_nochange",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "say_nochange_0q",
+     "who": "N",
+     "text": "put",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_nochange_0h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_nochange_0a",
+     "who": "N",
+     "text": "put",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_nochange_1q",
+     "who": "N",
+     "text": "cut",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_nochange_1h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_nochange_1a",
+     "who": "N",
+     "text": "cut",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_nochange_2q",
+     "who": "N",
+     "text": "read",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_nochange_2h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_nochange_2a",
+     "who": "N",
+     "text": "red",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_nochange_3q",
+     "who": "N",
+     "text": "run",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_nochange_3h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_nochange_3a",
+     "who": "N",
+     "text": "run",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_nochange_4q",
+     "who": "N",
+     "text": "come",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_nochange_4h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_nochange_4a",
+     "who": "N",
+     "text": "come",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "say_nochange_5q",
+     "who": "N",
+     "text": "hit",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "say_nochange_5h",
+     "kind": "hold",
+     "hold": 2.6
+    },
+    {
+     "id": "say_nochange_5a",
+     "who": "N",
+     "text": "hit",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "q_part",
+   "ch": "participles",
+   "lines": [
+    {
+     "id": "q_part_i",
+     "who": "N",
+     "text": "Participle quiz. Eight questions. Think first, then choose."
+    },
+    {
+     "id": "q_part_0q",
+     "who": "N",
+     "text": "Number one. She has, blank, a letter. wrote, written, or write?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_0h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_0a",
+     "who": "N",
+     "text": "Written. Written is the past participle of write.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_part_1q",
+     "who": "N",
+     "text": "Number two. We've, blank, to the park. went, gone, or go?",
+     "say": "Number two. [We've](/wˈiv/), blank, to the park. went, gone, or go?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_1h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_1a",
+     "who": "N",
+     "text": "Gone. Gone is the past participle of go.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_part_2q",
+     "who": "N",
+     "text": "Number three. He has, blank, his homework. did, done, or do?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_2h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_2a",
+     "who": "N",
+     "text": "Done. Done is the past participle of do.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_part_3q",
+     "who": "N",
+     "text": "Number four. They've, blank, a new house. bought, buy, or buying?",
+     "say": "Number four. [They've](/ðˈeɪv/), blank, a new house. bought, buy, or buying?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_3h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_3a",
+     "who": "N",
+     "text": "Bought. Bought is the past participle of buy.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_part_4q",
+     "who": "N",
+     "text": "Number five. I've, blank, Maria twice. met, meet, or meeting?",
+     "say": "Number five. [I've](/ˈaɪv/), blank, Maria twice. met, meet, or meeting?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_4h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_4a",
+     "who": "N",
+     "text": "Met. Met is the past participle of meet.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_part_5q",
+     "who": "N",
+     "text": "Number six. Have you, blank, that movie? saw, seen, or see?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_5h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_5a",
+     "who": "N",
+     "text": "Seen. Seen is the past participle of see.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_part_6q",
+     "who": "N",
+     "text": "Number seven. She has, blank, the window. broke, broken, or break?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_6h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_6a",
+     "who": "N",
+     "text": "Broken. Broken is the past participle of break.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_part_7q",
+     "who": "N",
+     "text": "Number eight. I have, blank, to Italy three times. been, was, or be?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_part_7h",
+     "kind": "hold",
+     "hold": 6.0
+    },
+    {
+     "id": "q_part_7a",
+     "who": "N",
+     "text": "Been. Been is the past participle of be.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "contractions",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "contractions_i",
+     "who": "N",
+     "text": "In speech, we usually use short forms. Listen and repeat."
+    },
+    {
+     "id": "contractions_r0",
+     "who": "N",
+     "text": "I have, I've.",
+     "kind": "ex",
+     "say": "I have, [I've](/ˈaɪv/).",
+     "speed": 0.85
+    },
+    {
+     "id": "contractions_h0",
+     "kind": "hold",
+     "hold": 2.0
+    },
+    {
+     "id": "contractions_r1",
+     "who": "N",
+     "text": "you have, you've.",
+     "kind": "ex",
+     "say": "you have, [you've](/jˈuv/).",
+     "speed": 0.85
+    },
+    {
+     "id": "contractions_h1",
+     "kind": "hold",
+     "hold": 2.0
+    },
+    {
+     "id": "contractions_r2",
+     "who": "N",
+     "text": "we have, we've.",
+     "kind": "ex",
+     "say": "we have, [we've](/wˈiv/).",
+     "speed": 0.85
+    },
+    {
+     "id": "contractions_h2",
+     "kind": "hold",
+     "hold": 2.0
+    },
+    {
+     "id": "contractions_r3",
+     "who": "N",
+     "text": "they have, they've.",
+     "kind": "ex",
+     "say": "they have, [they've](/ðˈeɪv/).",
+     "speed": 0.85
+    },
+    {
+     "id": "contractions_h3",
+     "kind": "hold",
+     "hold": 2.0
+    },
+    {
+     "id": "contractions_r4",
+     "who": "N",
+     "text": "he has, he's.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "contractions_h4",
+     "kind": "hold",
+     "hold": 2.0
+    },
+    {
+     "id": "contractions_r5",
+     "who": "N",
+     "text": "she has, she's.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "contractions_h5",
+     "kind": "hold",
+     "hold": 2.0
+    },
+    {
+     "id": "contractions_r6",
+     "who": "N",
+     "text": "it has, it's.",
+     "kind": "ex",
+     "speed": 0.85
+    },
+    {
+     "id": "contractions_h6",
+     "kind": "hold",
+     "hold": 2.0
+    },
+    {
+     "id": "contractions_o",
+     "who": "N",
+     "text": "Careful: apostrophe s can mean has or is. Check the next word."
+    }
+   ]
+  },
+  {
+   "id": "contract",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "contract_i",
+     "who": "N",
+     "text": "Now you say the short form."
+    },
+    {
+     "id": "contract_0q",
+     "who": "N",
+     "text": "She has finished.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "contract_0h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "contract_0a",
+     "who": "N",
+     "text": "She's finished.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "contract_1q",
+     "who": "N",
+     "text": "I have eaten.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "contract_1h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "contract_1a",
+     "who": "N",
+     "text": "I've eaten.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) eaten.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "contract_2q",
+     "who": "N",
+     "text": "They have arrived.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "contract_2h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "contract_2a",
+     "who": "N",
+     "text": "They've arrived.",
+     "kind": "ex",
+     "say": "[They've](/ðˈeɪv/) arrived.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "contract_3q",
+     "who": "N",
+     "text": "He has gone.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "contract_3h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "contract_3a",
+     "who": "N",
+     "text": "He's gone.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "contract_4q",
+     "who": "N",
+     "text": "We have started.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "contract_4h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "contract_4a",
+     "who": "N",
+     "text": "We've started.",
+     "kind": "ex",
+     "say": "[We've](/wˈiv/) started.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "neg",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "n1",
+     "who": "N",
+     "text": "For negatives, put not after have or has. Haven't. Hasn't."
+    },
+    {
+     "id": "n2",
+     "kind": "ex",
+     "who": "N",
+     "text": "I haven't finished. She hasn't finished."
+    }
+   ]
+  },
+  {
+   "id": "quest",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "q1",
+     "who": "N",
+     "text": "For questions, put have or has before the subject."
+    },
+    {
+     "id": "q2",
+     "kind": "ex",
+     "who": "N",
+     "text": "Have you finished? Has she finished?"
+    },
+    {
+     "id": "q3",
+     "who": "N",
+     "text": "We do not use do or does to make these questions."
+    }
+   ]
+  },
+  {
+   "id": "make_neg",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "make_neg_i",
+     "who": "N",
+     "text": "Make these sentences negative. Use haven't or hasn't."
+    },
+    {
+     "id": "make_neg_0q",
+     "who": "N",
+     "text": "I have finished.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_neg_0h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_neg_0a",
+     "who": "N",
+     "text": "I haven't finished.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_neg_1q",
+     "who": "N",
+     "text": "She has called.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_neg_1h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_neg_1a",
+     "who": "N",
+     "text": "She hasn't called.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_neg_2q",
+     "who": "N",
+     "text": "They have arrived.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_neg_2h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_neg_2a",
+     "who": "N",
+     "text": "They haven't arrived.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_neg_3q",
+     "who": "N",
+     "text": "He has eaten.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_neg_3h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_neg_3a",
+     "who": "N",
+     "text": "He hasn't eaten.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_neg_4q",
+     "who": "N",
+     "text": "We have seen it.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_neg_4h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_neg_4a",
+     "who": "N",
+     "text": "We haven't seen it.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "make_q",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "make_q_i",
+     "who": "N",
+     "text": "Now make questions. Put have or has first."
+    },
+    {
+     "id": "make_q_0q",
+     "who": "N",
+     "text": "You have finished.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_q_0h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_q_0a",
+     "who": "N",
+     "text": "Have you finished?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_q_1q",
+     "who": "N",
+     "text": "She has called.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_q_1h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_q_1a",
+     "who": "N",
+     "text": "Has she called?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_q_2q",
+     "who": "N",
+     "text": "They have arrived.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_q_2h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_q_2a",
+     "who": "N",
+     "text": "Have they arrived?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_q_3q",
+     "who": "N",
+     "text": "He has eaten.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_q_3h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_q_3a",
+     "who": "N",
+     "text": "Has he eaten?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "make_q_4q",
+     "who": "N",
+     "text": "It has stopped.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "make_q_4h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "make_q_4a",
+     "who": "N",
+     "text": "Has it stopped?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "short",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "a1",
+     "kind": "dlg",
+     "who": "M",
+     "text": "Have you eaten lunch?"
+    },
+    {
+     "id": "a2",
+     "kind": "dlg",
+     "who": "D",
+     "text": "Yes, I have."
+    },
+    {
+     "id": "a3",
+     "kind": "dlg",
+     "who": "M",
+     "text": "Has Sofia called?"
+    },
+    {
+     "id": "a4",
+     "kind": "dlg",
+     "who": "D",
+     "text": "No, she hasn't."
+    }
+   ]
+  },
+  {
+   "id": "short_ans",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "short_ans_i",
+     "who": "N",
+     "text": "Give the short answer. Yes or no, plus the subject, plus have or has."
+    },
+    {
+     "id": "short_ans_0q",
+     "who": "N",
+     "text": "Have you eaten? Yes.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "short_ans_0h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "short_ans_0a",
+     "who": "N",
+     "text": "Yes, I have.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "short_ans_1q",
+     "who": "N",
+     "text": "Has she called? No.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "short_ans_1h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "short_ans_1a",
+     "who": "N",
+     "text": "No, she hasn't.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "short_ans_2q",
+     "who": "N",
+     "text": "Have they arrived? Yes.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "short_ans_2h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "short_ans_2a",
+     "who": "N",
+     "text": "Yes, they have.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "short_ans_3q",
+     "who": "N",
+     "text": "Has he finished? No.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "short_ans_3h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "short_ans_3a",
+     "who": "N",
+     "text": "No, he hasn't.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "short_ans_4q",
+     "who": "N",
+     "text": "Has it started? Yes.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "short_ans_4h",
+     "kind": "hold",
+     "hold": 3.2
+    },
+    {
+     "id": "short_ans_4a",
+     "who": "N",
+     "text": "Yes, it has.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "wh",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "w1",
+     "who": "N",
+     "text": "With question words, put have or has next, before the subject."
+    },
+    {
+     "id": "w2",
+     "kind": "ex",
+     "who": "N",
+     "text": "What have you done? How long have you lived here?"
+    }
+   ]
+  },
+  {
+   "id": "rep_wh",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "rep_wh_i",
+     "who": "N",
+     "text": "Listen and repeat. Question word, then have or has, then the subject."
+    },
+    {
+     "id": "rep_wh_m0",
+     "who": "M",
+     "text": "What have you done?",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_wh_h0",
+     "kind": "hold",
+     "hold": 5.4
+    },
+    {
+     "id": "rep_wh_m1",
+     "who": "D",
+     "text": "Where have you been?",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_wh_h1",
+     "kind": "hold",
+     "hold": 5.4
+    },
+    {
+     "id": "rep_wh_m2",
+     "who": "S",
+     "text": "How long have you lived here?",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_wh_h2",
+     "kind": "hold",
+     "hold": 6.1
+    },
+    {
+     "id": "rep_wh_m3",
+     "who": "M",
+     "text": "Who have you called?",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_wh_h3",
+     "kind": "hold",
+     "hold": 5.4
+    }
+   ]
+  },
+  {
+   "id": "chk2",
+   "ch": "negq",
+   "check": 2,
+   "lines": [
+    {
+     "id": "k2q",
+     "who": "N",
+     "text": "Quick check two. Maya has already, blank, lunch. Ate, eaten, or eat?",
+     "nocap": true
+    },
+    {
+     "id": "k2h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "k2a",
+     "who": "N",
+     "text": "Eaten. After has, we need the past participle: has eaten.",
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "q_negq",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "q_negq_i",
+     "who": "N",
+     "text": "Four more questions about negatives and questions."
+    },
+    {
+     "id": "q_negq_0q",
+     "who": "N",
+     "text": "Number one. She, blank, finished yet. hasn't, haven't, or doesn't?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_negq_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_negq_0a",
+     "who": "N",
+     "text": "Hasn't. She is he, she, or it, so we use hasn't.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_negq_1q",
+     "who": "N",
+     "text": "Number two. blank, you ever visited Canada? Have, Has, or Do?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_negq_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_negq_1a",
+     "who": "N",
+     "text": "Have. Have comes first, before the subject you.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_negq_2q",
+     "who": "N",
+     "text": "Has he finished? Number three. Yes, he, blank, . has, does, or is?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_negq_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_negq_2a",
+     "who": "N",
+     "text": "Has. A short answer repeats has.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_negq_3q",
+     "who": "N",
+     "text": "Number four. How long, blank, they lived here? have, has, or did?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_negq_3h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_negq_3a",
+     "who": "N",
+     "text": "Have. They uses have, and lived is the past participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "pair_q",
+   "ch": "negq",
+   "lines": [
+    {
+     "id": "pair_q_i0",
+     "who": "N",
+     "text": "Pair work time. Work with a partner. Partner one asks the questions. Partner two answers with a short answer."
+    },
+    {
+     "id": "pair_q_i1",
+     "who": "N",
+     "text": "Then I will say, switch roles, and you change. You have three minutes. Start now."
+    },
+    {
+     "id": "pair_q_h1",
+     "kind": "hold",
+     "hold": 90.0
+    },
+    {
+     "id": "pair_q_sw",
+     "who": "N",
+     "text": "Switch roles!",
+     "kind": "ex",
+     "nocap": true,
+     "gap": 0.3
+    },
+    {
+     "id": "pair_q_h2",
+     "kind": "hold",
+     "hold": 90.0
+    },
+    {
+     "id": "pair_q_o0",
+     "who": "N",
+     "text": "Time's up. Great job. Let's come back together."
+    }
+   ]
+  },
+  {
+   "id": "exp1",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "e1",
+     "who": "N",
+     "text": "Use one: experience up to now. We don't say when."
+    },
+    {
+     "id": "e2",
+     "kind": "dlg",
+     "who": "S",
+     "text": "Have you ever visited Canada?"
+    },
+    {
+     "id": "e3",
+     "kind": "dlg",
+     "who": "D",
+     "text": "Yes, I have. I visited Canada in 2022.",
+     "say": "Yes, I have. I visited Canada in twenty twenty-two."
+    }
+   ]
+  },
+  {
+   "id": "exp2",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "e4",
+     "who": "N",
+     "text": "First, the experience: present perfect. Then a finished time: simple past."
+    },
+    {
+     "id": "e5",
+     "who": "N",
+     "text": "Never means: not at any time, up to now."
+    },
+    {
+     "id": "e6",
+     "kind": "ex",
+     "who": "N",
+     "text": "I've never visited Canada.",
+     "say": "[I've](/ˈaɪv/) never visited Canada."
+    }
+   ]
+  },
+  {
+   "id": "exp_words",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "exp_words_i",
+     "who": "N",
+     "text": "Four useful words for experience."
+    },
+    {
+     "id": "exp_words_r0",
+     "who": "N",
+     "text": "Ever means at any time in your life. We use it in questions."
+    },
+    {
+     "id": "exp_words_r1",
+     "who": "N",
+     "text": "Never means not at any time. We use it with a positive verb, not with not."
+    },
+    {
+     "id": "exp_words_r2",
+     "who": "N",
+     "text": "We can also say once, twice, or three times."
+    },
+    {
+     "id": "exp_words_r3",
+     "who": "N",
+     "text": "And before means, at some time in the past."
+    }
+   ]
+  },
+  {
+   "id": "rep_exp",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "rep_exp_i",
+     "who": "N",
+     "text": "Repeat after me."
+    },
+    {
+     "id": "rep_exp_m0",
+     "who": "S",
+     "text": "Have you ever visited Canada?",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_exp_h0",
+     "kind": "hold",
+     "hold": 5.75
+    },
+    {
+     "id": "rep_exp_m1",
+     "who": "D",
+     "text": "I've never visited Canada.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) never visited Canada.",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_exp_h1",
+     "kind": "hold",
+     "hold": 5.4
+    },
+    {
+     "id": "rep_exp_m2",
+     "who": "S",
+     "text": "I've visited Canada twice.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) visited Canada twice.",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_exp_h2",
+     "kind": "hold",
+     "hold": 5.4
+    },
+    {
+     "id": "rep_exp_m3",
+     "who": "D",
+     "text": "I've been there before.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) been there before.",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_exp_h3",
+     "kind": "hold",
+     "hold": 5.4
+    }
+   ]
+  },
+  {
+   "id": "exp_drill",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "exp_drill_i",
+     "who": "N",
+     "text": "Now you ask the question. I say an idea. You ask, have you ever, plus the past participle."
+    },
+    {
+     "id": "exp_drill_0q",
+     "who": "N",
+     "text": "Eat sushi.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "exp_drill_0h",
+     "kind": "hold",
+     "hold": 3.6
+    },
+    {
+     "id": "exp_drill_0a",
+     "who": "N",
+     "text": "Have you ever eaten sushi?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "exp_drill_1q",
+     "who": "N",
+     "text": "See a whale.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "exp_drill_1h",
+     "kind": "hold",
+     "hold": 3.6
+    },
+    {
+     "id": "exp_drill_1a",
+     "who": "N",
+     "text": "Have you ever seen a whale?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "exp_drill_2q",
+     "who": "N",
+     "text": "Ride a horse.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "exp_drill_2h",
+     "kind": "hold",
+     "hold": 3.6
+    },
+    {
+     "id": "exp_drill_2a",
+     "who": "N",
+     "text": "Have you ever ridden a horse?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "exp_drill_3q",
+     "who": "N",
+     "text": "Meet a famous person.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "exp_drill_3h",
+     "kind": "hold",
+     "hold": 3.6
+    },
+    {
+     "id": "exp_drill_3a",
+     "who": "N",
+     "text": "Have you ever met a famous person?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "exp_drill_4q",
+     "who": "N",
+     "text": "Lose your phone.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "exp_drill_4h",
+     "kind": "hold",
+     "hold": 3.6
+    },
+    {
+     "id": "exp_drill_4a",
+     "who": "N",
+     "text": "Have you ever lost your phone?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "exp_drill_5q",
+     "who": "N",
+     "text": "Break a bone.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "exp_drill_5h",
+     "kind": "hold",
+     "hold": 3.6
+    },
+    {
+     "id": "exp_drill_5a",
+     "who": "N",
+     "text": "Have you ever broken a bone?",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "q_exp",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "q_exp_i",
+     "who": "N",
+     "text": "Experience quiz. Four questions."
+    },
+    {
+     "id": "q_exp_0q",
+     "who": "N",
+     "text": "Number one. blank, you ever eaten snails? Have, Has, or Do?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_exp_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_exp_0a",
+     "who": "N",
+     "text": "Have. Have comes before you, and eaten is the past participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_exp_1q",
+     "who": "N",
+     "text": "She doesn't know the city. Number two. Maya has, blank, been to Paris. never, ever, or yet?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_exp_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_exp_1a",
+     "who": "N",
+     "text": "Never. Never means not at any time.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_exp_2q",
+     "who": "N",
+     "text": "It was great both times. Number three. I've visited London, blank. twice, ever, or never?",
+     "say": "It was great both times. Number three. [I've](/ˈaɪv/) visited London, blank. twice, ever, or never?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_exp_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_exp_2a",
+     "who": "N",
+     "text": "Twice. Twice means two times.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_exp_3q",
+     "who": "N",
+     "text": "Number four. blank, she ever met a famous person? Has, Have, or Is?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_exp_3h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_exp_3a",
+     "who": "N",
+     "text": "Has. She uses has.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "pair_exp",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "pair_exp_i0",
+     "who": "N",
+     "text": "Pair work. Ask your partner, have you ever, and one of these ideas. If the answer is yes, ask, when was that? The answer uses the simple past."
+    },
+    {
+     "id": "pair_exp_i1",
+     "who": "N",
+     "text": "Partner one asks first. After two minutes, I will say switch. You have four minutes."
+    },
+    {
+     "id": "pair_exp_h1",
+     "kind": "hold",
+     "hold": 120.0
+    },
+    {
+     "id": "pair_exp_sw",
+     "who": "N",
+     "text": "Switch roles!",
+     "kind": "ex",
+     "nocap": true,
+     "gap": 0.3
+    },
+    {
+     "id": "pair_exp_h2",
+     "kind": "hold",
+     "hold": 120.0
+    },
+    {
+     "id": "pair_exp_o0",
+     "who": "N",
+     "text": "Time's up. Well done."
+    }
+   ]
+  },
+  {
+   "id": "share_exp",
+   "ch": "exp",
+   "lines": [
+    {
+     "id": "share_exp_i0",
+     "who": "N",
+     "text": "Now, tell the class about your partner. Use has. For example: Ana has visited Brazil."
+    },
+    {
+     "id": "share_exp_i1",
+     "who": "N",
+     "text": "Volunteers, please. Speak now, or write in the chat."
+    },
+    {
+     "id": "share_exp_h",
+     "kind": "hold",
+     "hold": 60
+    }
+   ]
+  },
+  {
+   "id": "res1",
+   "ch": "result",
+   "lines": [
+    {
+     "id": "r1",
+     "who": "N",
+     "text": "Use two: a recent action with a result now."
+    },
+    {
+     "id": "r2",
+     "kind": "dlg",
+     "who": "D",
+     "text": "Have you finished yet?"
+    },
+    {
+     "id": "r3",
+     "kind": "dlg",
+     "who": "M",
+     "text": "Yes! I've already finished the report.",
+     "say": "Yes! [I've](/ˈaɪv/) already finished the report."
+    }
+   ]
+  },
+  {
+   "id": "res2",
+   "ch": "result",
+   "lines": [
+    {
+     "id": "r4",
+     "who": "N",
+     "text": "The report is finished, and it is ready now."
+    },
+    {
+     "id": "r5",
+     "who": "N",
+     "text": "Already goes before the participle. Yet goes at the end."
+    },
+    {
+     "id": "r6",
+     "kind": "ex",
+     "who": "N",
+     "text": "I haven't finished yet."
+    }
+   ]
+  },
+  {
+   "id": "result_words",
+   "ch": "result",
+   "lines": [
+    {
+     "id": "result_words_i",
+     "who": "N",
+     "text": "Three small words for recent results: just, already, and yet."
+    },
+    {
+     "id": "result_words_r0",
+     "who": "N",
+     "text": "Just means a very short time ago."
+    },
+    {
+     "id": "result_words_r1",
+     "who": "N",
+     "text": "Already means earlier than expected. It goes before the participle."
+    },
+    {
+     "id": "result_words_r2",
+     "who": "N",
+     "text": "Yet goes at the end of questions."
+    },
+    {
+     "id": "result_words_r3",
+     "who": "N",
+     "text": "And in negatives, yet means, until now."
+    }
+   ]
+  },
+  {
+   "id": "rep_res",
+   "ch": "result",
+   "lines": [
+    {
+     "id": "rep_res_i",
+     "who": "N",
+     "text": "Repeat after me."
+    },
+    {
+     "id": "rep_res_m0",
+     "who": "D",
+     "text": "I've just arrived.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) just arrived.",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_res_h0",
+     "kind": "hold",
+     "hold": 5.05
+    },
+    {
+     "id": "rep_res_m1",
+     "who": "M",
+     "text": "She's already left.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_res_h1",
+     "kind": "hold",
+     "hold": 5.05
+    },
+    {
+     "id": "rep_res_m2",
+     "who": "S",
+     "text": "Have you eaten yet?",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_res_h2",
+     "kind": "hold",
+     "hold": 5.4
+    },
+    {
+     "id": "rep_res_m3",
+     "who": "D",
+     "text": "He hasn't called yet.",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_res_h3",
+     "kind": "hold",
+     "hold": 5.4
+    }
+   ]
+  },
+  {
+   "id": "skit_office",
+   "ch": "result",
+   "lines": [
+    {
+     "id": "skit_office_i",
+     "who": "N",
+     "text": "Listen to Maya and Daniel at the office. Listen for yet, just, and already."
+    },
+    {
+     "id": "skit_office_s0",
+     "who": "M",
+     "text": "Daniel, have you finished the report yet?",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_office_s1",
+     "who": "D",
+     "text": "Not yet. I've just started the last page.",
+     "kind": "dlg",
+     "say": "Not yet. [I've](/ˈaɪv/) just started the last page.",
+     "nocap": true
+    },
+    {
+     "id": "skit_office_s2",
+     "who": "M",
+     "text": "Have you called the client?",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_office_s3",
+     "who": "D",
+     "text": "Yes, I have. I've already called him twice.",
+     "kind": "dlg",
+     "say": "Yes, I have. [I've](/ˈaɪv/) already called him twice.",
+     "nocap": true
+    },
+    {
+     "id": "skit_office_s4",
+     "who": "M",
+     "text": "Great! Then you haven't forgotten anything.",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_office_s5",
+     "who": "D",
+     "text": "I hope not!",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_office_o",
+     "who": "N",
+     "text": "Yet is in the question. Just and already go before the participle."
+    }
+   ]
+  },
+  {
+   "id": "q_res",
+   "ch": "result",
+   "lines": [
+    {
+     "id": "q_res_i",
+     "who": "N",
+     "text": "Result quiz. Five questions."
+    },
+    {
+     "id": "q_res_0q",
+     "who": "N",
+     "text": "I did it two minutes ago. Number one. I've, blank, finished. just, yet, or ever?",
+     "say": "I did it two minutes ago. Number one. [I've](/ˈaɪv/), blank, finished. just, yet, or ever?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_res_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_res_0a",
+     "who": "N",
+     "text": "Just. Just means a very short time ago.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_res_1q",
+     "who": "N",
+     "text": "Number two. Have you finished the report, blank, ? yet, ever, or never?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_res_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_res_1a",
+     "who": "N",
+     "text": "Yet. Yet goes at the end of a question.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_res_2q",
+     "who": "N",
+     "text": "Do you want some lunch? Number three. No, thanks. I've, blank, eaten. already, yet, or ever?",
+     "say": "Do you want some lunch? Number three. No, thanks. [I've](/ˈaɪv/), blank, eaten. already, yet, or ever?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_res_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_res_2a",
+     "who": "N",
+     "text": "Already. Already goes before the participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_res_3q",
+     "who": "N",
+     "text": "We are still waiting. Number four. He hasn't called, blank. yet, already, or just?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_res_3h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_res_3a",
+     "who": "N",
+     "text": "Yet. In a negative sentence, yet goes at the end.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_res_4q",
+     "who": "N",
+     "text": "You can't catch it. Number five. The train has, blank, left. just, yet, or ever?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_res_4h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_res_4a",
+     "who": "N",
+     "text": "Just. Just means a very short time ago.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "result_say",
+   "ch": "result",
+   "lines": [
+    {
+     "id": "result_say_i",
+     "who": "N",
+     "text": "Look at the situation. Say a sentence about the result. Use the present perfect."
+    },
+    {
+     "id": "result_say_0q",
+     "who": "N",
+     "text": "Daniel can't open the door. Use the verb lose.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "result_say_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "result_say_0a",
+     "who": "N",
+     "text": "He's lost his keys.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "result_say_1q",
+     "who": "N",
+     "text": "Maya's desk is clean. Use the verb finish.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "result_say_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "result_say_1a",
+     "who": "N",
+     "text": "She's finished her work.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "result_say_2q",
+     "who": "N",
+     "text": "The plate is empty. Use the verb eat.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "result_say_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "result_say_2a",
+     "who": "N",
+     "text": "He's eaten everything.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "result_say_3q",
+     "who": "N",
+     "text": "The suitcase is at the door. Use the verb pack.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "result_say_3h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "result_say_3a",
+     "who": "N",
+     "text": "She's packed her suitcase.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "result_say_4q",
+     "who": "N",
+     "text": "The cake is on the table. Use the verb bake.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "result_say_4h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "result_say_4a",
+     "who": "N",
+     "text": "They've baked a cake.",
+     "kind": "ex",
+     "say": "[They've](/ðˈeɪv/) baked a cake.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "still1",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "u1",
+     "who": "N",
+     "text": "Use three: a situation that began in the past and continues now."
+    },
+    {
+     "id": "u2",
+     "kind": "dlg",
+     "who": "D",
+     "text": "I've known her for five years.",
+     "say": "[I've](/ˈaɪv/) known her for five years."
+    },
+    {
+     "id": "u3",
+     "kind": "dlg",
+     "who": "S",
+     "text": "And she's lived here since 2021.",
+     "say": "And she's lived here since twenty twenty-one."
+    }
+   ]
+  },
+  {
+   "id": "still2",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "u4",
+     "who": "N",
+     "text": "For introduces a length of time. Since introduces the starting point."
+    },
+    {
+     "id": "u5",
+     "who": "N",
+     "text": "Careful: for and since do not always mean present perfect. A finished situation uses the simple past."
+    },
+    {
+     "id": "u6",
+     "kind": "ex",
+     "who": "N",
+     "text": "She lived in Paris for two years."
+    }
+   ]
+  },
+  {
+   "id": "chk3",
+   "ch": "still",
+   "check": 3,
+   "lines": [
+    {
+     "id": "k3q",
+     "who": "N",
+     "text": "Quick check three. Daniel has worked here, blank, 2019. For, or since?",
+     "say": "Quick check three. Daniel has worked here, blank, twenty nineteen. For, or since?",
+     "nocap": true
+    },
+    {
+     "id": "k3h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "k3a",
+     "who": "N",
+     "text": "Since. 2019 is the starting point, not a length of time.",
+     "say": "Since. Twenty nineteen is the starting point, not a length of time.",
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "sort_fs",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "sort_fs_i",
+     "who": "N",
+     "text": "Game time. For or since? I show a time expression. Is it a length of time, for, or a starting point, since?"
+    },
+    {
+     "id": "sort_fs_0q",
+     "who": "N",
+     "text": "five years",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_0h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_0a",
+     "who": "N",
+     "text": "For.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_1q",
+     "who": "N",
+     "text": "2019",
+     "say": "twenty nineteen",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_1h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_1a",
+     "who": "N",
+     "text": "Since.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_2q",
+     "who": "N",
+     "text": "Monday",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_2h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_2a",
+     "who": "N",
+     "text": "Since.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_3q",
+     "who": "N",
+     "text": "three days",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_3h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_3a",
+     "who": "N",
+     "text": "For.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_4q",
+     "who": "N",
+     "text": "last year",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_4h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_4a",
+     "who": "N",
+     "text": "Since.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_5q",
+     "who": "N",
+     "text": "a long time",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_5h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_5a",
+     "who": "N",
+     "text": "For.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_6q",
+     "who": "N",
+     "text": "I was a child",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_6h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_6a",
+     "who": "N",
+     "text": "Since.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_7q",
+     "who": "N",
+     "text": "ten minutes",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_7h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_7a",
+     "who": "N",
+     "text": "For.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_8q",
+     "who": "N",
+     "text": "yesterday",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_8h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_8a",
+     "who": "N",
+     "text": "Since.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_fs_9q",
+     "who": "N",
+     "text": "two hours",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_fs_9h",
+     "kind": "hold",
+     "hold": 2.8
+    },
+    {
+     "id": "sort_fs_9a",
+     "who": "N",
+     "text": "For.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "howlong",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "howlong_r0",
+     "who": "N",
+     "text": "To ask about a period up to now, we say, how long have you."
+    },
+    {
+     "id": "howlong_r1",
+     "who": "N",
+     "text": "Answer with for, and a length of time."
+    },
+    {
+     "id": "howlong_r2",
+     "who": "N",
+     "text": "Or answer with since, and a starting point."
+    }
+   ]
+  },
+  {
+   "id": "rep_still",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "rep_still_i",
+     "who": "N",
+     "text": "Repeat after me."
+    },
+    {
+     "id": "rep_still_m0",
+     "who": "M",
+     "text": "How long have you lived here?",
+     "kind": "ex",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_still_h0",
+     "kind": "hold",
+     "hold": 6.1
+    },
+    {
+     "id": "rep_still_m1",
+     "who": "D",
+     "text": "I've lived here for three years.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) lived here for three years.",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_still_h1",
+     "kind": "hold",
+     "hold": 6.1
+    },
+    {
+     "id": "rep_still_m2",
+     "who": "S",
+     "text": "I've lived here since 2022.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) lived here since twenty twenty-two.",
+     "nocap": true,
+     "speed": 0.88
+    },
+    {
+     "id": "rep_still_h2",
+     "kind": "hold",
+     "hold": 5.75
+    }
+   ]
+  },
+  {
+   "id": "for_since_say",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "for_since_say_i",
+     "who": "N",
+     "text": "Now you answer with a full sentence. Use for, or since."
+    },
+    {
+     "id": "for_since_say_0q",
+     "who": "N",
+     "text": "How long have you lived here? Five years.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "for_since_say_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "for_since_say_0a",
+     "who": "N",
+     "text": "I've lived here for five years.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) lived here for five years.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "for_since_say_1q",
+     "who": "N",
+     "text": "How long have you studied English? Since January.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "for_since_say_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "for_since_say_1a",
+     "who": "N",
+     "text": "I've studied English since January.",
+     "kind": "ex",
+     "say": "[I've](/ˈaɪv/) studied English since January.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "for_since_say_2q",
+     "who": "N",
+     "text": "How long has she worked here? Two months.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "for_since_say_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "for_since_say_2a",
+     "who": "N",
+     "text": "She has worked here for two months.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "for_since_say_3q",
+     "who": "N",
+     "text": "How long have they been married? Since 2021.",
+     "say": "How long have they been married? Since twenty twenty-one.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "for_since_say_3h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "for_since_say_3a",
+     "who": "N",
+     "text": "They've been married since 2021.",
+     "kind": "ex",
+     "say": "[They've](/ðˈeɪv/) been married since twenty twenty-one.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    },
+    {
+     "id": "for_since_say_4q",
+     "who": "N",
+     "text": "How long has he had that car? Ten years.",
+     "nocap": true,
+     "gap": 0.12
+    },
+    {
+     "id": "for_since_say_4h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "for_since_say_4a",
+     "who": "N",
+     "text": "He has had that car for ten years.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.6,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "q_still",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "q_still_i",
+     "who": "N",
+     "text": "Three quick questions."
+    },
+    {
+     "id": "q_still_0q",
+     "who": "N",
+     "text": "Number one. She has worked here, blank, six months. for, since, or during?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_still_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_still_0a",
+     "who": "N",
+     "text": "For. Six months is a length of time. Use for.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_still_1q",
+     "who": "N",
+     "text": "Number two. We've known each other, blank, we were students. since, for, or from?",
+     "say": "Number two. [We've](/wˈiv/) known each other, blank, we were students. since, for, or from?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_still_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_still_1a",
+     "who": "N",
+     "text": "Since. We were students is a starting point. Use since.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_still_2q",
+     "who": "N",
+     "text": "Number three. How long, blank, you studied English? have, do, or are?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_still_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_still_2a",
+     "who": "N",
+     "text": "Have. How long, have, you, and the past participle studied.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "pair_hl",
+   "ch": "still",
+   "lines": [
+    {
+     "id": "pair_hl_i0",
+     "who": "N",
+     "text": "Pair work. Ask, how long have you, and one of these ideas. Answer with for, or since."
+    },
+    {
+     "id": "pair_hl_i1",
+     "who": "N",
+     "text": "Partner one asks first. When I say switch, change roles. You have three minutes."
+    },
+    {
+     "id": "pair_hl_h1",
+     "kind": "hold",
+     "hold": 90.0
+    },
+    {
+     "id": "pair_hl_sw",
+     "who": "N",
+     "text": "Switch roles!",
+     "kind": "ex",
+     "nocap": true,
+     "gap": 0.3
+    },
+    {
+     "id": "pair_hl_h2",
+     "kind": "hold",
+     "hold": 90.0
+    },
+    {
+     "id": "pair_hl_o0",
+     "who": "N",
+     "text": "Time's up. Great speaking."
+    }
+   ]
+  },
+  {
+   "id": "per1",
+   "ch": "period",
+   "lines": [
+    {
+     "id": "p1",
+     "who": "N",
+     "text": "Use four: a period that is not finished yet, like today, this week, or this year."
+    },
+    {
+     "id": "p2",
+     "kind": "dlg",
+     "who": "M",
+     "text": "I've had two meetings so far today.",
+     "say": "[I've](/ˈaɪv/) had two meetings so far today."
+    }
+   ]
+  },
+  {
+   "id": "per2",
+   "ch": "period",
+   "lines": [
+    {
+     "id": "p3",
+     "who": "N",
+     "text": "Today is not over, so we use the present perfect. Yesterday is finished, so we use the simple past."
+    },
+    {
+     "id": "p4",
+     "kind": "ex",
+     "who": "N",
+     "text": "I had two meetings yesterday."
+    },
+    {
+     "id": "p5",
+     "who": "N",
+     "text": "Advanced note: the speaker's view matters. If you see today as finished, the simple past is also possible."
+    }
+   ]
+  },
+  {
+   "id": "fin1",
+   "ch": "period",
+   "lines": [
+    {
+     "id": "x1",
+     "who": "N",
+     "text": "Remember: with a finished time, like yesterday, last week, or in 2022, use the simple past.",
+     "say": "Remember: with a finished time, like yesterday, last week, or in twenty twenty-two, use the simple past."
+    },
+    {
+     "id": "x2",
+     "kind": "ex",
+     "who": "N",
+     "text": "I saw her yesterday."
+    },
+    {
+     "id": "x3",
+     "who": "N",
+     "text": "Not: I've seen her yesterday.",
+     "say": "Not: [I've](/ˈaɪv/) seen her yesterday."
+    }
+   ]
+  },
+  {
+   "id": "chk4",
+   "ch": "period",
+   "check": 4,
+   "lines": [
+    {
+     "id": "k4q",
+     "who": "N",
+     "text": "Quick check four. Sofia's trip was last summer. We, blank, Canada last summer. Visited, or have visited?",
+     "nocap": true
+    },
+    {
+     "id": "k4h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "k4a",
+     "who": "N",
+     "text": "Visited. Last summer is a finished time, so we use the simple past.",
+     "nocap": true
+    }
+   ]
+  },
+  {
+   "id": "time_chart",
+   "ch": "period",
+   "lines": [
+    {
+     "id": "time_chart_i",
+     "who": "N",
+     "text": "A quick map of time words."
+    },
+    {
+     "id": "time_chart_r0",
+     "who": "N",
+     "text": "Words like ever, never, already, yet, and just usually go with the present perfect."
+    },
+    {
+     "id": "time_chart_r1",
+     "who": "N",
+     "text": "So do for and since, when the situation continues now."
+    },
+    {
+     "id": "time_chart_r2",
+     "who": "N",
+     "text": "But words for a finished time, like yesterday, last week, in twenty nineteen, or two days ago, go with the simple past."
+    },
+    {
+     "id": "time_chart_o",
+     "who": "N",
+     "text": "Today, this week, and this year can go either way. The speaker's view matters."
+    }
+   ]
+  },
+  {
+   "id": "skit_travel",
+   "ch": "period",
+   "lines": [
+    {
+     "id": "skit_travel_i",
+     "who": "N",
+     "text": "Listen to Sofia and Daniel. Notice how the tense changes."
+    },
+    {
+     "id": "skit_travel_s0",
+     "who": "S",
+     "text": "I've visited Canada three times.",
+     "kind": "dlg",
+     "say": "[I've](/ˈaɪv/) visited Canada three times.",
+     "nocap": true
+    },
+    {
+     "id": "skit_travel_s1",
+     "who": "D",
+     "text": "Really? When did you first go?",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_travel_s2",
+     "who": "S",
+     "text": "I went there in 2019, and I loved it.",
+     "kind": "dlg",
+     "say": "I went there in twenty nineteen, and I loved it.",
+     "nocap": true
+    },
+    {
+     "id": "skit_travel_s3",
+     "who": "D",
+     "text": "Have you been back since then?",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_travel_s4",
+     "who": "S",
+     "text": "Yes. We went again last summer.",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_travel_o",
+     "who": "N",
+     "text": "First, the present perfect, for an experience. Then, the simple past, for the finished times."
+    }
+   ]
+  },
+  {
+   "id": "q_period",
+   "ch": "period",
+   "lines": [
+    {
+     "id": "q_period_i",
+     "who": "N",
+     "text": "Six questions. Look for the time words."
+    },
+    {
+     "id": "q_period_0q",
+     "who": "N",
+     "text": "Number one. I, blank, to Paris in 2019. went, have been, or have gone?",
+     "say": "Number one. I, blank, to Paris in twenty nineteen. went, have been, or have gone?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_period_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_period_0a",
+     "who": "N",
+     "text": "Went. In twenty nineteen is a finished time. Use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_period_1q",
+     "who": "N",
+     "text": "Number two. She, blank, here since 2021. has lived, lived, or is living?",
+     "say": "Number two. She, blank, here since twenty twenty-one. has lived, lived, or is living?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_period_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_period_1a",
+     "who": "N",
+     "text": "Has lived. Since twenty twenty-one: the situation continues, so use the present perfect.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_period_2q",
+     "who": "N",
+     "text": "Number three. We, blank, that movie last night. saw, have seen, or are seeing?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_period_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_period_2a",
+     "who": "N",
+     "text": "Saw. Last night is a finished time. Use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_period_3q",
+     "who": "N",
+     "text": "Number four. They, blank, married two years ago. got, have got, or have gotten?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_period_3h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_period_3a",
+     "who": "N",
+     "text": "Got. Two years ago is a finished time. Use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_period_4q",
+     "who": "N",
+     "text": "He still works here. Number five. He, blank, here for five years. has worked, worked, or was working?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_period_4h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_period_4a",
+     "who": "N",
+     "text": "Has worked. He still works here, so we use the present perfect.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_period_5q",
+     "who": "N",
+     "text": "Number six. When, blank, you finish the report? did, have, or has?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_period_5h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_period_5a",
+     "who": "N",
+     "text": "Did. With when, we ask about a finished time. Use did.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "usn",
+   "ch": "notes",
+   "lines": [
+    {
+     "id": "m1",
+     "who": "N",
+     "text": "American English note: the simple past is also common with just, already, and yet. Both are normal."
+    },
+    {
+     "id": "m2",
+     "kind": "ex",
+     "who": "N",
+     "text": "I just ate. I already finished. Did you finish yet?"
+    }
+   ]
+  },
+  {
+   "id": "gone1",
+   "ch": "notes",
+   "lines": [
+    {
+     "id": "g1",
+     "kind": "dlg",
+     "who": "D",
+     "text": "Where's Sofia?"
+    },
+    {
+     "id": "g2",
+     "kind": "dlg",
+     "who": "M",
+     "text": "She's gone to London."
+    }
+   ]
+  },
+  {
+   "id": "gone2",
+   "ch": "notes",
+   "lines": [
+    {
+     "id": "g3",
+     "who": "N",
+     "text": "Gone: she is away, on her trip."
+    },
+    {
+     "id": "g4",
+     "kind": "ex",
+     "who": "N",
+     "text": "She's been to London."
+    },
+    {
+     "id": "g5",
+     "who": "N",
+     "text": "Been: she visited London at some time. This is an experience."
+    }
+   ]
+  },
+  {
+   "id": "q_gone",
+   "ch": "notes",
+   "lines": [
+    {
+     "id": "q_gone_i",
+     "who": "N",
+     "text": "Three quick questions about been and gone."
+    },
+    {
+     "id": "q_gone_0q",
+     "who": "N",
+     "text": "Where's Daniel? He'll be back soon. Number one. He's, blank, to the bank. gone, or been?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_gone_0h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_gone_0a",
+     "who": "N",
+     "text": "Gone. Gone means he is away now.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_gone_1q",
+     "who": "N",
+     "text": "It's a beautiful city. Number two. I've, blank, to Rome twice. been, or gone?",
+     "say": "It's a beautiful city. Number two. [I've](/ˈaɪv/), blank, to Rome twice. been, or gone?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_gone_1h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_gone_1a",
+     "who": "N",
+     "text": "Been. Been means a visit, and then I came back.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "q_gone_2q",
+     "who": "N",
+     "text": "Sofia isn't here. Number three. She's, blank, to London. gone, or been?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "q_gone_2h",
+     "kind": "hold",
+     "hold": 5.0
+    },
+    {
+     "id": "q_gone_2a",
+     "who": "N",
+     "text": "Gone. Gone means she is there now, on her trip.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "cont",
+   "ch": "notes",
+   "lines": [
+    {
+     "id": "z1",
+     "who": "N",
+     "text": "One more related form is the present perfect continuous. It can also describe situations that continue, but it is a separate form, and it is not in this lesson."
+    }
+   ]
+  },
+  {
+   "id": "fix1",
+   "ch": "mixed",
+   "lines": [
+    {
+     "id": "fix1_i",
+     "who": "N",
+     "text": "Game time. I show a sentence with one mistake. Find it, and fix it."
+    },
+    {
+     "id": "fix1_0q",
+     "who": "N",
+     "text": "Find the mistake. I've seen her yesterday.",
+     "say": "Find the mistake. [I've](/ˈaɪv/) seen her yesterday.",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "fix1_0h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "fix1_0a",
+     "who": "N",
+     "text": "I saw her yesterday. Yesterday is a finished time. Use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "fix1_1q",
+     "who": "N",
+     "text": "Find the mistake. He have finished.",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "fix1_1h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "fix1_1a",
+     "who": "N",
+     "text": "He has finished. He needs has.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "fix1_2q",
+     "who": "N",
+     "text": "Find the mistake. I've lived here since five years.",
+     "say": "Find the mistake. [I've](/ˈaɪv/) lived here since five years.",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "fix1_2h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "fix1_2a",
+     "who": "N",
+     "text": "I've lived here for five years. Five years is a length of time. Use for.",
+     "say": "[I've](/ˈaɪv/) lived here for five years. Five years is a length of time. Use for.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "fix1_3q",
+     "who": "N",
+     "text": "Find the mistake. They haven't call yet.",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "fix1_3h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "fix1_3a",
+     "who": "N",
+     "text": "They haven't called yet. After haven't, use the past participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "fix1_4q",
+     "who": "N",
+     "text": "Find the mistake. Have you eat lunch?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "fix1_4h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "fix1_4a",
+     "who": "N",
+     "text": "Have you eaten lunch? Eaten is the past participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "fix1_5q",
+     "who": "N",
+     "text": "Find the mistake. She's visited Paris last year.",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "fix1_5h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "fix1_5a",
+     "who": "N",
+     "text": "She visited Paris last year. Last year is a finished time. Use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "fix1_6q",
+     "who": "N",
+     "text": "Find the mistake. Did you ever been to Japan?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "fix1_6h",
+     "kind": "hold",
+     "hold": 5.5
+    },
+    {
+     "id": "fix1_6a",
+     "who": "N",
+     "text": "Have you ever been to Japan? Use have, plus the past participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "sort_tense",
+   "ch": "mixed",
+   "lines": [
+    {
+     "id": "sort_tense_i",
+     "who": "N",
+     "text": "Another game. I say a sentence. Is it the present perfect, or the simple past?"
+    },
+    {
+     "id": "sort_tense_0q",
+     "who": "N",
+     "text": "I've just finished.",
+     "say": "[I've](/ˈaɪv/) just finished.",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_0h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_0a",
+     "who": "N",
+     "text": "Present perfect.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_tense_1q",
+     "who": "N",
+     "text": "We went there in 2019.",
+     "say": "We went there in twenty nineteen.",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_1h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_1a",
+     "who": "N",
+     "text": "Simple past.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_tense_2q",
+     "who": "N",
+     "text": "She's never been to Asia.",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_2h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_2a",
+     "who": "N",
+     "text": "Present perfect.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_tense_3q",
+     "who": "N",
+     "text": "I finished at noon.",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_3h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_3a",
+     "who": "N",
+     "text": "Simple past.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_tense_4q",
+     "who": "N",
+     "text": "Have you eaten yet?",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_4h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_4a",
+     "who": "N",
+     "text": "Present perfect.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_tense_5q",
+     "who": "N",
+     "text": "Did you call him yesterday?",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_5h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_5a",
+     "who": "N",
+     "text": "Simple past.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_tense_6q",
+     "who": "N",
+     "text": "He's lived here since 2020.",
+     "say": "He's lived here since twenty twenty.",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_6h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_6a",
+     "who": "N",
+     "text": "Present perfect.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    },
+    {
+     "id": "sort_tense_7q",
+     "who": "N",
+     "text": "They arrived two hours ago.",
+     "nocap": true,
+     "gap": 0.1
+    },
+    {
+     "id": "sort_tense_7h",
+     "kind": "hold",
+     "hold": 3.4
+    },
+    {
+     "id": "sort_tense_7a",
+     "who": "N",
+     "text": "Simple past.",
+     "kind": "ex",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.5,
+     "speed": 0.9
+    }
+   ]
+  },
+  {
+   "id": "show",
+   "ch": "mixed",
+   "lines": [
+    {
+     "id": "show_i",
+     "who": "N",
+     "text": "Quiz show! Ten questions. Think, answer in the chat, and see if you are right."
+    },
+    {
+     "id": "show_0q",
+     "who": "N",
+     "text": "Number one. We, blank, in this city since 2020. have lived, lived, or live?",
+     "say": "Number one. We, blank, in this city since twenty twenty. have lived, lived, or live?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_0h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_0a",
+     "who": "N",
+     "text": "Have lived. Since twenty twenty means the situation continues. Use the present perfect.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_1q",
+     "who": "N",
+     "text": "Number two. blank, you ever been to London? Have, Did, or Are?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_1h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_1a",
+     "who": "N",
+     "text": "Have. Have you ever been.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_2q",
+     "who": "N",
+     "text": "Number three. Maya, blank, the report yet. hasn't finished, didn't finished, or haven't finished?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_2h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_2a",
+     "who": "N",
+     "text": "Hasn't finished. Maya is she. Hasn't finished.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_3q",
+     "who": "N",
+     "text": "Number four. I, blank, breakfast at seven yesterday. had, have had, or has had?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_3h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_3a",
+     "who": "N",
+     "text": "Had. Yesterday is a finished time. Use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_4q",
+     "who": "N",
+     "text": "Number five. She's, blank, to Rome three times. been, gone, or went?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_4h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_4a",
+     "who": "N",
+     "text": "Been. Been, for a visit.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_5q",
+     "who": "N",
+     "text": "Number six. I haven't seen him, blank, Monday. since, for, or from?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_5h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_5a",
+     "who": "N",
+     "text": "Since. Monday is a starting point. Use since.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_6q",
+     "who": "N",
+     "text": "Number seven. We've, blank, eaten. We're full. already, yet, or ever?",
+     "say": "Number seven. [We've](/wˈiv/), blank, eaten. We're full. already, yet, or ever?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_6h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_6a",
+     "who": "N",
+     "text": "Already. Already goes before the participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_7q",
+     "who": "N",
+     "text": "Number eight. How long, blank, you known her? have, did, or do?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_7h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_7a",
+     "who": "N",
+     "text": "Have. How long have you known her.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_8q",
+     "who": "N",
+     "text": "Number nine. I, blank, him last week. saw, have seen, or has seen?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_8h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_8a",
+     "who": "N",
+     "text": "Saw. Last week is a finished time. Use the simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "show_9q",
+     "who": "N",
+     "text": "Number ten. She has, blank, in Canada for ten years. lived, live, or living?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "show_9h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "show_9a",
+     "who": "N",
+     "text": "Lived. Has plus the past participle.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "skit_final",
+   "ch": "speaking",
+   "lines": [
+    {
+     "id": "skit_final_i",
+     "who": "N",
+     "text": "Listen to Sofia and Maya. How many present perfect sentences can you hear?"
+    },
+    {
+     "id": "skit_final_s0",
+     "who": "S",
+     "text": "Maya! I haven't seen you for ages!",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_final_s1",
+     "who": "M",
+     "text": "Sofia! Have you been away?",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_final_s2",
+     "who": "S",
+     "text": "Yes, I have. I've just come back from Canada.",
+     "kind": "dlg",
+     "say": "Yes, I have. [I've](/ˈaɪv/) just come back from Canada.",
+     "nocap": true
+    },
+    {
+     "id": "skit_final_s3",
+     "who": "M",
+     "text": "Wow! Have you ever visited Canada before?",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_final_s4",
+     "who": "S",
+     "text": "No, I've never been there. It was my first time.",
+     "kind": "dlg",
+     "say": "No, [I've](/ˈaɪv/) never been there. It was my first time.",
+     "nocap": true
+    },
+    {
+     "id": "skit_final_s5",
+     "who": "M",
+     "text": "How long have you been back?",
+     "kind": "dlg",
+     "nocap": true
+    },
+    {
+     "id": "skit_final_s6",
+     "who": "S",
+     "text": "Since Monday. I've already unpacked, but I haven't called my family yet.",
+     "kind": "dlg",
+     "say": "Since Monday. [I've](/ˈaɪv/) already unpacked, but I haven't called my family yet.",
+     "nocap": true
+    },
+    {
+     "id": "skit_final_o",
+     "who": "N",
+     "text": "Did you hear ever, never, just, already, yet, for, and since? Our friends used them all."
+    }
+   ]
+  },
+  {
+   "id": "pair_final",
+   "ch": "speaking",
+   "lines": [
+    {
+     "id": "pair_final_i0",
+     "who": "N",
+     "text": "Role play time. Imagine you meet a friend after a long time. Use these ideas, and speak naturally."
+    },
+    {
+     "id": "pair_final_i1",
+     "who": "N",
+     "text": "You have four minutes. I will say switch in the middle. Start now."
+    },
+    {
+     "id": "pair_final_h1",
+     "kind": "hold",
+     "hold": 120.0
+    },
+    {
+     "id": "pair_final_sw",
+     "who": "N",
+     "text": "Switch roles!",
+     "kind": "ex",
+     "nocap": true,
+     "gap": 0.3
+    },
+    {
+     "id": "pair_final_h2",
+     "kind": "hold",
+     "hold": 120.0
+    },
+    {
+     "id": "pair_final_o0",
+     "who": "N",
+     "text": "Time's up. Wonderful. I heard great sentences."
+    }
+   ]
+  },
+  {
+   "id": "share_final",
+   "ch": "speaking",
+   "lines": [
+    {
+     "id": "share_final_i0",
+     "who": "N",
+     "text": "Now, a few volunteers. Tell the class one sentence about yourself with I've, and one sentence about your partner with has.",
+     "say": "Now, a few volunteers. Tell the class one sentence about yourself with [I've](/ˈaɪv/), and one sentence about your partner with has."
+    },
+    {
+     "id": "share_final_h",
+     "kind": "hold",
+     "hold": 75
+    }
+   ]
+  },
+  {
+   "id": "sum",
+   "ch": "review",
+   "lines": [
+    {
+     "id": "v1",
+     "who": "N",
+     "text": "Let's review. Subject, plus have or has, plus the past participle."
+    },
+    {
+     "id": "v2",
+     "who": "N",
+     "text": "Use it for experience, a recent result, a situation that continues, and an unfinished time."
+    },
+    {
+     "id": "v3",
+     "who": "N",
+     "text": "For a finished time, use the simple past."
+    }
+   ]
+  },
+  {
+   "id": "exit",
+   "ch": "review",
+   "lines": [
+    {
+     "id": "exit_i",
+     "who": "N",
+     "text": "Last activity: your exit ticket. Four questions, one for each use. Check what you remember."
+    },
+    {
+     "id": "exit_0q",
+     "who": "N",
+     "text": "Number one. I, blank, never visited Canada. have, has, or am?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "exit_0h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "exit_0a",
+     "who": "N",
+     "text": "Have. I have never visited. Experience.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "exit_1q",
+     "who": "N",
+     "text": "Here is the report. Number two. I've, blank, finished. just, ever, or since?",
+     "say": "Here is the report. Number two. [I've](/ˈaɪv/), blank, finished. just, ever, or since?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "exit_1h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "exit_1a",
+     "who": "N",
+     "text": "Just. Just means a very short time ago. Recent result.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "exit_2q",
+     "who": "N",
+     "text": "Number three. She has lived here, blank, 2021. since, for, or ago?",
+     "say": "Number three. She has lived here, blank, twenty twenty-one. since, for, or ago?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "exit_2h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "exit_2a",
+     "who": "N",
+     "text": "Since. Since gives the starting point. Still true.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    },
+    {
+     "id": "exit_3q",
+     "who": "N",
+     "text": "Number four. We, blank, to the beach last Sunday. went, have been, or have gone?",
+     "nocap": true,
+     "gap": 0.15
+    },
+    {
+     "id": "exit_3h",
+     "kind": "hold",
+     "hold": 7.0
+    },
+    {
+     "id": "exit_3a",
+     "who": "N",
+     "text": "Went. Last Sunday is a finished time. Simple past.",
+     "nocap": true,
+     "lead": 0.05,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "id": "speak",
+   "ch": "review",
+   "lines": [
+    {
+     "id": "y1",
+     "who": "N",
+     "text": "Now it's your turn! Say three sentences. Something you've done today. A place you've never visited. Someone you've known for years.",
+     "say": "Now it's your turn! Say three sentences. Something [you've](/jˈuv/) done today. A place [you've](/jˈuv/) never visited. Someone [you've](/jˈuv/) known for years.",
+     "nocap": true
+    },
+    {
+     "id": "y2",
+     "kind": "hold",
+     "hold": 40.0
+    },
+    {
+     "id": "y3",
+     "who": "N",
+     "text": "Great work. See you in the next lesson!",
+     "nocap": true
+    }
+   ]
+  }
+ ]
 }

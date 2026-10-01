@@ -1,0 +1,736 @@
+{
+  "title": "Present Perfect",
+  "voices": {
+    "N": {
+      "name": "Teacher (narrator)",
+      "voice": "af_heart",
+      "speed": 0.9
+    },
+    "D": {
+      "name": "Daniel",
+      "voice": "am_michael",
+      "speed": 0.93
+    },
+    "M": {
+      "name": "Maya",
+      "voice": "af_bella",
+      "speed": 0.93
+    },
+    "S": {
+      "name": "Sofia",
+      "voice": "af_nicole",
+      "speed": 1.05
+    }
+  },
+  "chapters": [
+    {
+      "id": "story",
+      "label": "Past and now"
+    },
+    {
+      "id": "form",
+      "label": "Form"
+    },
+    {
+      "id": "negq",
+      "label": "Negatives and questions"
+    },
+    {
+      "id": "exp",
+      "label": "Experience"
+    },
+    {
+      "id": "result",
+      "label": "Result"
+    },
+    {
+      "id": "still",
+      "label": "Still true"
+    },
+    {
+      "id": "period",
+      "label": "Today"
+    },
+    {
+      "id": "finished",
+      "label": "Past time"
+    },
+    {
+      "id": "notes",
+      "label": "Notes"
+    },
+    {
+      "id": "review",
+      "label": "Review"
+    }
+  ],
+  "beats": [
+    {
+      "id": "title",
+      "ch": "story",
+      "pre": 0.6,
+      "lines": [
+        {
+          "id": "t1",
+          "who": "N",
+          "text": "Welcome to Fluent English. Today, we're learning the present perfect.",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "id": "story1",
+      "ch": "story",
+      "lines": [
+        {
+          "id": "s1a",
+          "who": "N",
+          "text": "Daniel is at the office door. He's looking for his keys."
+        },
+        {
+          "id": "s1b",
+          "kind": "thought",
+          "who": "D",
+          "text": "Where are my keys?",
+          "hold": 2.0
+        },
+        {
+          "id": "s1c",
+          "kind": "dlg",
+          "who": "D",
+          "text": "Oh no! I've lost my keys!",
+          "say": "Oh no! [I've](/ˈaɪv/) lost my keys!"
+        }
+      ]
+    },
+    {
+      "id": "contrast",
+      "ch": "story",
+      "lines": [
+        {
+          "id": "c2",
+          "kind": "ex",
+          "who": "N",
+          "text": "I lost my keys yesterday.",
+          "say": "I lost my keys yesterday."
+        },
+        {
+          "id": "c3",
+          "who": "N",
+          "text": "We name a finished time: yesterday. This is the simple past."
+        },
+        {
+          "id": "c4",
+          "kind": "ex",
+          "who": "N",
+          "text": "I've lost my keys.",
+          "say": "[I've](/ˈaɪv/) lost my keys."
+        },
+        {
+          "id": "c5",
+          "who": "N",
+          "text": "Now the focus is the present result. In this situation, we understand that the keys are missing now."
+        },
+        {
+          "id": "c6",
+          "who": "N",
+          "text": "The present perfect connects the past to now."
+        }
+      ]
+    },
+    {
+      "id": "form1",
+      "ch": "form",
+      "lines": [
+        {
+          "id": "f1",
+          "who": "N",
+          "text": "The form is: subject, plus have or has, plus the past participle."
+        },
+        {
+          "id": "f2",
+          "kind": "ex",
+          "who": "N",
+          "text": "She has finished."
+        },
+        {
+          "id": "f3",
+          "who": "N",
+          "text": "I, you, we, and they use have. He, she, and it use has."
+        }
+      ]
+    },
+    {
+      "id": "form2",
+      "ch": "form",
+      "lines": [
+        {
+          "id": "f4",
+          "who": "N",
+          "text": "The past participle is the third verb form. It is not always the simple past."
+        },
+        {
+          "id": "f5",
+          "who": "N",
+          "text": "Work, worked, worked. See, saw, seen. Go, went, gone. Be, was, been. Eat, ate, eaten.",
+          "speed": 0.85
+        }
+      ]
+    },
+    {
+      "id": "form3",
+      "ch": "form",
+      "lines": [
+        {
+          "id": "f7",
+          "kind": "ex",
+          "who": "N",
+          "text": "I've finished. She's finished.",
+          "say": "[I've](/ˈaɪv/) finished. She's finished."
+        },
+        {
+          "id": "f8",
+          "who": "N",
+          "text": "Here, apostrophe s means has. It can also mean is, so check the next word."
+        }
+      ]
+    },
+    {
+      "id": "chk1",
+      "ch": "form",
+      "check": 1,
+      "lines": [
+        {
+          "id": "k1q",
+          "who": "N",
+          "text": "Quick check one. She, blank, finished the report. Have, has, or does?",
+          "nocap": true
+        },
+        {
+          "id": "k1h",
+          "kind": "hold",
+          "hold": 5.5
+        },
+        {
+          "id": "k1a",
+          "who": "N",
+          "text": "Has. She is third person singular: she has finished.",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "id": "neg",
+      "ch": "negq",
+      "lines": [
+        {
+          "id": "n1",
+          "who": "N",
+          "text": "For negatives, put not after have or has. Haven't. Hasn't."
+        },
+        {
+          "id": "n2",
+          "kind": "ex",
+          "who": "N",
+          "text": "I haven't finished. She hasn't finished."
+        }
+      ]
+    },
+    {
+      "id": "quest",
+      "ch": "negq",
+      "lines": [
+        {
+          "id": "q1",
+          "who": "N",
+          "text": "For questions, put have or has before the subject."
+        },
+        {
+          "id": "q2",
+          "kind": "ex",
+          "who": "N",
+          "text": "Have you finished? Has she finished?"
+        },
+        {
+          "id": "q3",
+          "who": "N",
+          "text": "We do not use do or does to make these questions."
+        }
+      ]
+    },
+    {
+      "id": "short",
+      "ch": "negq",
+      "lines": [
+        {
+          "id": "a1",
+          "kind": "dlg",
+          "who": "M",
+          "text": "Have you eaten lunch?"
+        },
+        {
+          "id": "a2",
+          "kind": "dlg",
+          "who": "D",
+          "text": "Yes, I have."
+        },
+        {
+          "id": "a3",
+          "kind": "dlg",
+          "who": "M",
+          "text": "Has Sofia called?"
+        },
+        {
+          "id": "a4",
+          "kind": "dlg",
+          "who": "D",
+          "text": "No, she hasn't."
+        }
+      ]
+    },
+    {
+      "id": "wh",
+      "ch": "negq",
+      "lines": [
+        {
+          "id": "w1",
+          "who": "N",
+          "text": "With question words, put have or has next, before the subject."
+        },
+        {
+          "id": "w2",
+          "kind": "ex",
+          "who": "N",
+          "text": "What have you done? How long have you lived here?"
+        }
+      ]
+    },
+    {
+      "id": "chk2",
+      "ch": "negq",
+      "check": 2,
+      "lines": [
+        {
+          "id": "k2q",
+          "who": "N",
+          "text": "Quick check two. Maya has already, blank, lunch. Ate, eaten, or eat?",
+          "nocap": true
+        },
+        {
+          "id": "k2h",
+          "kind": "hold",
+          "hold": 5.5
+        },
+        {
+          "id": "k2a",
+          "who": "N",
+          "text": "Eaten. After has, we need the past participle: has eaten.",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "id": "exp1",
+      "ch": "exp",
+      "lines": [
+        {
+          "id": "e1",
+          "who": "N",
+          "text": "Use one: experience up to now. We don't say when."
+        },
+        {
+          "id": "e2",
+          "kind": "dlg",
+          "who": "S",
+          "text": "Have you ever visited Canada?"
+        },
+        {
+          "id": "e3",
+          "kind": "dlg",
+          "who": "D",
+          "text": "Yes, I have. I visited Canada in 2022.",
+          "say": "Yes, I have. I visited Canada in twenty twenty-two."
+        }
+      ]
+    },
+    {
+      "id": "exp2",
+      "ch": "exp",
+      "lines": [
+        {
+          "id": "e4",
+          "who": "N",
+          "text": "First, the experience: present perfect. Then a finished time: simple past."
+        },
+        {
+          "id": "e5",
+          "who": "N",
+          "text": "Never means: not at any time, up to now."
+        },
+        {
+          "id": "e6",
+          "kind": "ex",
+          "who": "N",
+          "text": "I've never visited Canada.",
+          "say": "[I've](/ˈaɪv/) never visited Canada."
+        }
+      ]
+    },
+    {
+      "id": "res1",
+      "ch": "result",
+      "lines": [
+        {
+          "id": "r1",
+          "who": "N",
+          "text": "Use two: a recent action with a result now."
+        },
+        {
+          "id": "r2",
+          "kind": "dlg",
+          "who": "D",
+          "text": "Have you finished yet?"
+        },
+        {
+          "id": "r3",
+          "kind": "dlg",
+          "who": "M",
+          "text": "Yes! I've already finished the report.",
+          "say": "Yes! [I've](/ˈaɪv/) already finished the report."
+        }
+      ]
+    },
+    {
+      "id": "res2",
+      "ch": "result",
+      "lines": [
+        {
+          "id": "r4",
+          "who": "N",
+          "text": "The report is finished, and it is ready now."
+        },
+        {
+          "id": "r5",
+          "who": "N",
+          "text": "Already goes before the participle. Yet goes at the end."
+        },
+        {
+          "id": "r6",
+          "kind": "ex",
+          "who": "N",
+          "text": "I haven't finished yet."
+        }
+      ]
+    },
+    {
+      "id": "still1",
+      "ch": "still",
+      "lines": [
+        {
+          "id": "u1",
+          "who": "N",
+          "text": "Use three: a situation that began in the past and continues now."
+        },
+        {
+          "id": "u2",
+          "kind": "dlg",
+          "who": "D",
+          "text": "I've known her for five years.",
+          "say": "[I've](/ˈaɪv/) known her for five years."
+        },
+        {
+          "id": "u3",
+          "kind": "dlg",
+          "who": "S",
+          "text": "And she's lived here since 2021.",
+          "say": "And she's lived here since twenty twenty-one."
+        }
+      ]
+    },
+    {
+      "id": "still2",
+      "ch": "still",
+      "lines": [
+        {
+          "id": "u4",
+          "who": "N",
+          "text": "For introduces a length of time. Since introduces the starting point."
+        },
+        {
+          "id": "u5",
+          "who": "N",
+          "text": "Careful: for and since do not always mean present perfect. A finished situation uses the simple past."
+        },
+        {
+          "id": "u6",
+          "kind": "ex",
+          "who": "N",
+          "text": "She lived in Paris for two years."
+        }
+      ]
+    },
+    {
+      "id": "chk3",
+      "ch": "still",
+      "check": 3,
+      "lines": [
+        {
+          "id": "k3q",
+          "who": "N",
+          "text": "Quick check three. Daniel has worked here, blank, 2019. For, or since?",
+          "say": "Quick check three. Daniel has worked here, blank, twenty nineteen. For, or since?",
+          "nocap": true
+        },
+        {
+          "id": "k3h",
+          "kind": "hold",
+          "hold": 5.5
+        },
+        {
+          "id": "k3a",
+          "who": "N",
+          "text": "Since. 2019 is the starting point, not a length of time.",
+          "say": "Since. Twenty nineteen is the starting point, not a length of time.",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "id": "per1",
+      "ch": "period",
+      "lines": [
+        {
+          "id": "p1",
+          "who": "N",
+          "text": "Use four: a period that is not finished yet, like today, this week, or this year."
+        },
+        {
+          "id": "p2",
+          "kind": "dlg",
+          "who": "M",
+          "text": "I've had two meetings so far today.",
+          "say": "[I've](/ˈaɪv/) had two meetings so far today."
+        }
+      ]
+    },
+    {
+      "id": "per2",
+      "ch": "period",
+      "lines": [
+        {
+          "id": "p3",
+          "who": "N",
+          "text": "Today is not over, so we use the present perfect. Yesterday is finished, so we use the simple past."
+        },
+        {
+          "id": "p4",
+          "kind": "ex",
+          "who": "N",
+          "text": "I had two meetings yesterday."
+        },
+        {
+          "id": "p5",
+          "who": "N",
+          "text": "Advanced note: the speaker's view matters. If you see today as finished, the simple past is also possible."
+        }
+      ]
+    },
+    {
+      "id": "fin1",
+      "ch": "finished",
+      "lines": [
+        {
+          "id": "x1",
+          "who": "N",
+          "text": "Remember: with a finished time, like yesterday, last week, or in 2022, use the simple past.",
+          "say": "Remember: with a finished time, like yesterday, last week, or in twenty twenty-two, use the simple past."
+        },
+        {
+          "id": "x2",
+          "kind": "ex",
+          "who": "N",
+          "text": "I saw her yesterday."
+        },
+        {
+          "id": "x3",
+          "who": "N",
+          "text": "Not: I've seen her yesterday.",
+          "say": "Not: [I've](/ˈaɪv/) seen her yesterday."
+        }
+      ]
+    },
+    {
+      "id": "chk4",
+      "ch": "finished",
+      "check": 4,
+      "lines": [
+        {
+          "id": "k4q",
+          "who": "N",
+          "text": "Quick check four. Sofia's trip was last summer. We, blank, Canada last summer. Visited, or have visited?",
+          "nocap": true
+        },
+        {
+          "id": "k4h",
+          "kind": "hold",
+          "hold": 5.5
+        },
+        {
+          "id": "k4a",
+          "who": "N",
+          "text": "Visited. Last summer is a finished time, so we use the simple past.",
+          "nocap": true
+        }
+      ]
+    },
+    {
+      "id": "usn",
+      "ch": "notes",
+      "lines": [
+        {
+          "id": "m1",
+          "who": "N",
+          "text": "American English note: the simple past is also common with just, already, and yet. Both are normal."
+        },
+        {
+          "id": "m2",
+          "kind": "ex",
+          "who": "N",
+          "text": "I just ate. I already finished. Did you finish yet?"
+        }
+      ]
+    },
+    {
+      "id": "gone1",
+      "ch": "notes",
+      "lines": [
+        {
+          "id": "g1",
+          "kind": "dlg",
+          "who": "D",
+          "text": "Where's Sofia?"
+        },
+        {
+          "id": "g2",
+          "kind": "dlg",
+          "who": "M",
+          "text": "She's gone to London."
+        }
+      ]
+    },
+    {
+      "id": "gone2",
+      "ch": "notes",
+      "lines": [
+        {
+          "id": "g3",
+          "who": "N",
+          "text": "Gone: she is away, on her trip."
+        },
+        {
+          "id": "g4",
+          "kind": "ex",
+          "who": "N",
+          "text": "She's been to London."
+        },
+        {
+          "id": "g5",
+          "who": "N",
+          "text": "Been: she visited London at some time. This is an experience."
+        }
+      ]
+    },
+    {
+      "id": "cont",
+      "ch": "notes",
+      "lines": [
+        {
+          "id": "z1",
+          "who": "N",
+          "text": "One more related form is the present perfect continuous. It can also describe situations that continue, but it is a separate form, and it is not in this lesson."
+        }
+      ]
+    },
+    {
+      "id": "sum",
+      "ch": "review",
+      "lines": [
+        {
+          "id": "v1",
+          "who": "N",
+          "text": "Let's review. Subject, plus have or has, plus the past participle."
+        },
+        {
+          "id": "v2",
+          "who": "N",
+          "text": "Use it for experience, a recent result, a situation that continues, and an unfinished time."
+        },
+        {
+          "id": "v3",
+          "who": "N",
+          "text": "For a finished time, use the simple past."
+        }
+      ]
+    },
+    {
+      "id": "speak",
+      "ch": "review",
+      "lines": [
+        {
+          "id": "y1",
+          "who": "N",
+          "text": "Now it's your turn! Say three sentences. Something you've done today. A place you've never visited. Someone you've known for years.",
+          "say": "Now it's your turn! Say three sentences. Something [you've](/jˈuv/) done today. A place [you've](/jˈuv/) never visited. Someone [you've](/jˈuv/) known for years.",
+          "nocap": true
+        },
+        {
+          "id": "y2",
+          "kind": "hold",
+          "hold": 7.0
+        },
+        {
+          "id": "y3",
+          "who": "N",
+          "text": "Great work. See you in the next lesson!",
+          "nocap": true
+        }
+      ]
+    }
+  ],
+  "elevenlabs": {
+    "_note": "Voice ids are ElevenLabs premade (default) voices, which the Free plan can use through the API. They are NOT yet verified: run `python tools/tts_generate.py --list-voices` and `--audition <id> ...`, then edit this block.",
+    "model": "eleven_multilingual_v2",
+    "voices": {
+      "N": "21m00Tcm4TlvDq8ikWAM",
+      "D": "nPczCjzI2devNBz1zQrb",
+      "M": "cgSgspJ2msm6clMCkdW9",
+      "S": "XrExE9yKIg1WjnnlVkGX"
+    },
+    "settings": {
+      "N": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      },
+      "D": {
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      },
+      "M": {
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      },
+      "S": {
+        "stability": 0.5,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true
+      }
+    }
+  }
+}

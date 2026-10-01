@@ -324,7 +324,7 @@ def main():
         for ln in beat["lines"]:
             kind = ln.get("kind", "say")
             if kind == "ex":
-                cursor += EX_LEAD
+                cursor += ln.get("lead", EX_LEAD)
             rec = {"id": ln["id"], "kind": kind, "who": ln.get("who"), "text": ln.get("text", ""), "nocap": ln.get("nocap", False)}
             if kind in ("hold", "thought"):
                 rec["t0"] = round(cursor, 3)
@@ -340,22 +340,23 @@ def main():
                 rec["t1"] = round(cursor + dur, 3)
                 rec["dur"] = round(dur, 3)
                 rec["file"] = path.name
-                rec["open"], rec["round"] = mouth_envelope(x)
+                if ln["who"] != "N":
+                    rec["open"], rec["round"] = mouth_envelope(x)
                 if kind != "dlg":
                     rec["phrases"] = phrase_times(ln["text"], x, dur)
-                master_parts.append((int(round(cursor * SR)), x))
-                cursor += dur + GAP_AFTER.get(kind, 0.3)
+                master_parts.append((int(round(cursor * SR)), x.astype(np.float32)))
+                cursor += dur + ln.get("gap", GAP_AFTER.get(kind, 0.3))
             b["lines"].append(rec)
         b["t1"] = round(cursor, 3)
         cursor += BEAT_POST
         timeline["beats"].append(b)
-        print(f"{b['id']:10} {b['t0']:7.2f} -> {b['t1']:7.2f}  ({b['t1'] - b['t0']:5.1f}s)")
+        print(f"{b['id']:14} {b['t0']:8.1f} -> {b['t1']:8.1f}  ({b['t1'] - b['t0']:5.1f}s)", flush=True)
     total = cursor + 1.2
     timeline["duration"] = round(total, 3)
-    master = np.zeros(int(total * SR) + SR)
+    master = np.zeros(int(total * SR) + SR, dtype=np.float32)
     for s, x in master_parts:
-        master[s: s + len(x)] += x
-    sf.write(BUILD / "narration.wav", master.astype(np.float32), SR, subtype="PCM_16")
+        master[s: s + len(x)] += x.astype(np.float32)
+    sf.write(BUILD / "narration.wav", master, SR, subtype="PCM_16")
     (BUILD / "timeline.json").write_text(json.dumps(timeline, separators=(",", ":")))
     words = sum(len(re.findall(r"[A-Za-z']+", l.get("text", ""))) for bb in script["beats"] for l in bb["lines"] if l.get("kind") not in ("hold", "thought"))
     spoken = sum(r["dur"] for bb in timeline["beats"] for r in bb["lines"] if "file" in r)

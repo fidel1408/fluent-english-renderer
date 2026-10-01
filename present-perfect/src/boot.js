@@ -9,6 +9,7 @@ async function boot(canvas, srcs) {
   Eng.init(window.TIMELINE, GROUPS, { logoBlue });
   // build every caption block up front so missing IPA is discovered at load, not mid-playback
   for (const b of window.TIMELINE.beats) for (const l of b.lines) if (l.phrases) for (const p of l.phrases) capBlock(p.text);
+  for (const n of Object.keys(SCENE_BUILDERS)) getScene(n);      // build every scene up front so no frame hitches during playback
   Eng.setCanvas(canvas);
   return Eng;
 }

@@ -1,3 +1,9 @@
-build/
+build/audio/
+build/models/
+build/*.wav
+build/*.onnx
+build/fonts_dev.css
+build/timeline.js
 __pycache__/
-*.wav
+dev/out/
+*.log

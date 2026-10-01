@@ -159,9 +159,11 @@ function ring(ctx, x, y, r, prog, color, lw = 12) {
 function plus(ctx, x, y, r, color) { ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = r * 0.34; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x - r, y); ctx.lineTo(x + r, y); ctx.moveTo(x, y - r); ctx.lineTo(x, y + r); ctx.stroke(); ctx.restore(); }
 function nowFlag(ctx, x, y, h, o = {}) {
   const al = o.alpha === undefined ? 1 : o.alpha; ctx.save(); ctx.globalAlpha *= al;
-  ctx.strokeStyle = COL.navy; ctx.lineWidth = 6; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x, y - h); ctx.lineTo(x, y + 26); ctx.stroke();
+  ctx.strokeStyle = COL.navy; ctx.lineWidth = 6; ctx.lineCap = 'round'; ctx.beginPath();
+  if (o.below) { ctx.moveTo(x, y - 24); ctx.lineTo(x, y + h); } else { ctx.moveTo(x, y - h); ctx.lineTo(x, y + 26); }
+  ctx.stroke();
   ctx.fillStyle = COL.navy; ctx.beginPath(); ctx.arc(x, y, 13, 0, TAU); ctx.fill(); ctx.fillStyle = '#FFD166'; ctx.beginPath(); ctx.arc(x, y, 6, 0, TAU); ctx.fill();
-  if (o.label) { const lw = o.label.w + 36, lh = o.label.h + 14; ctx.fillStyle = COL.navy; ctx.beginPath(); rrect(ctx, x - lw / 2, y - h - lh + 4, lw, lh, 16); ctx.fill(); o.label.draw(ctx, x - o.label.w / 2, y - h - lh + 11, { color: '#FFFFFF', ipaColor: 'rgba(255,255,255,.82)' }); }
+  if (o.label) { const lw = o.label.w + 36, lh = o.label.h + 14, ly = o.below ? y + h - 6 : y - h - lh + 4; ctx.fillStyle = COL.navy; ctx.beginPath(); rrect(ctx, x - lw / 2, ly, lw, lh, 16); ctx.fill(); o.label.draw(ctx, x - o.label.w / 2, ly + 7, { color: '#FFFFFF', ipaColor: 'rgba(255,255,255,.82)' }); }
   ctx.restore();
 }
 

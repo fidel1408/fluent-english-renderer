@@ -71,7 +71,7 @@ group({
     D.set(th + 0.4, { yaw: 0.45 }, 0.5); D.set(th + 1.4, { yaw: -0.1 }, 0.5); D.face(th + 1.9, 'surprised', 0.35);
     // exclamation: hands up beside the head
     D.look(sp - 0.2, 'M', 0.25, 0.8);
-    D.arm('L', sp - 0.15, { x: -186, y: 105, hand: 'open' }, 0.4, E.back); D.arm('R', sp - 0.15, { x: 190, y: 110, hand: 'open' }, 0.4, E.back);
+    D.arm('L', sp - 0.15, { x: -176, y: -30, hand: 'open' }, 0.4, E.back); D.arm('R', sp - 0.15, { x: 176, y: -30, hand: 'open' }, 0.4, E.back);
     D.set(sp - 0.15, { shrug: 0.7, lean: -0.03 }, 0.4); D.face(sp + 0.2, 'worried', 0.5);
     D.arm('L', en('s1c', 0.9), { x: -120, y: 250, hand: 'rest' }, 0.7); D.arm('R', en('s1c', 0.9), { x: 124, y: 290, hand: 'rest' }, 0.7); D.set(en('s1c', 0.8), { shrug: 0, lean: 0 }, 0.7);
     M.face(sp + 0.3, 'worried', 0.5); M.set(sp + 0.2, { lean: -0.04 }, 0.5); M.look(sp + 1.5, 'D', 0.3);
@@ -107,7 +107,7 @@ group({
       hero(ctx, S.hL, lx + cw / 2 - S.hL.w / 2, cy + 96, S.rolesL, { hi: sweep(S.hL, 'c2', t) });
     }, 20);
     // timeline (past): axis
-    const ay = 565, ax0 = lx + 50, ax1 = lx + cw - 50, nowX = lx + 560;
+    const ay = 548, ax0 = lx + 50, ax1 = lx + cw - 50, nowX = lx + 560;
     appear(ctx, pr(t, at('c3', -0.1), at('c3', 0.6)), () => {
       axis(ctx, ax0, ax1, ay, 0.0); S.pastL.draw(ctx, ax0 - 6, ay + 26, { color: COL.grey, ipaColor: 'rgba(100,110,130,.8)', align: 'l' });
       nowFlag(ctx, nowX, ay, 120, { label: S.nowF });
@@ -116,7 +116,7 @@ group({
       ctx.save(); ctx.globalAlpha *= bp; ctx.fillStyle = COL.timeL; ctx.beginPath(); rrect(ctx, bx, ay - 74, bw, 74, 14); ctx.fill(); ctx.strokeStyle = COL.time; ctx.lineWidth = 4; ctx.setLineDash([10, 8]); ctx.stroke(); ctx.setLineDash([]); ctx.restore();
       ICON.keys(ctx, bx + bw / 2 - 20, ay - 118 + (1 - bp) * -20, 0.78, bp);
       const cp = pr(t, at('c3', 0.9), at('c3', 1.6)); appear(ctx, cp, () => { pill(ctx, bx + bw / 2 - (S.dated.w + 44) / 2, ay + 22, S.dated.w + 44, S.dated.h + 20, COL.time); S.dated.draw(ctx, bx + bw / 2 - S.dated.w / 2, ay + 32, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); });
-      const fp = pr(t, at('c3', 1.8), at('c3', 2.5)); appear(ctx, fp, () => { S.fin.draw(ctx, lx + cw / 2 - S.fin.w / 2 - 40, ay + 104, { color: COL.time, ipaColor: 'rgba(122,71,204,.8)' }); });
+      const fp = pr(t, at('c3', 1.8), at('c3', 2.5)); appear(ctx, fp, () => { S.fin.draw(ctx, lx + cw / 2 - S.fin.w / 2 - 40, ay + 124, { color: COL.time, ipaColor: 'rgba(122,71,204,.8)' }); });
     });
     // ---- right card: present perfect
     appear(ctx, pR, () => {
@@ -133,11 +133,11 @@ group({
       const ap = pr(t, at('c5', 0.3), at('c5', 1.7), E.io); arcArrow(ctx, [rx + 230, ay - 72], [nowR - 14, ay - 20], -120, COL.part, ap, 8);
       const hp = pr(t, at('c5', 1.5), at('c5', 2.3), E.back); ICON.hook(ctx, nowR + 135, ay - 78 + (1 - hp) * 20, 0.74, clamp(hp));
       appear(ctx, pr(t, at('c5', 2.2), at('c5', 2.9)), () => { pill(ctx, rx + cw / 2 - (S.res.w + 44) / 2, ay + 22, S.res.w + 44, S.res.h + 20, COL.part); S.res.draw(ctx, rx + cw / 2 - S.res.w / 2, ay + 32, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' });
-        S.miss.draw(ctx, rx + cw / 2 - S.miss.w / 2 - 20, ay + 104, { color: COL.not, ipaColor: 'rgba(201,53,69,.8)' }); });
+        S.miss.draw(ctx, rx + cw / 2 - S.miss.w / 2 - 20, ay + 124, { color: COL.not, ipaColor: 'rgba(201,53,69,.8)' }); });
     });
     // ---- bottom banner: past -> now
     const bp2 = pr(t, at('c6', 0.1), at('c6', 0.9), E.back);
-    if (bp2 > 0.01) { ctx.save(); ctx.globalAlpha = clamp(bp2); const w = S.past.w + S.now.w + 240, y = 842 + (1 - clamp(bp2)) * 20; banner(ctx, 960, y, w, 100, COL.navy);
+    if (bp2 > 0.01) { ctx.save(); ctx.globalAlpha = clamp(bp2); const w = S.past.w + S.now.w + 240, y = 832 + (1 - clamp(bp2)) * 20; banner(ctx, 960, y, w, S.past.h + 40, COL.navy);
       S.past.draw(ctx, 960 - w / 2 + 70, y - S.past.h / 2, { color: '#fff', ipaColor: 'rgba(255,255,255,.85)' });
       arcArrow(ctx, [960 - 40, y + 4], [960 + 44, y + 4], 0, COL.gold, pr(t, at('c6', 0.5), at('c6', 1.2)), 9);
       S.now.draw(ctx, 960 + w / 2 - 70 - S.now.w, y - S.now.h / 2, { color: '#fff', ipaColor: 'rgba(255,255,255,.85)' }); ctx.restore(); }
@@ -166,8 +166,8 @@ group({
     S.rows = rows.map(r => r.map(w => Tx(w, 52)));
     S.regT = Tx('regular', 30); S.irrT = Tx('irregular', 30);
     // contractions
-    S.cl = [Tx('I have finished.', 58), Tx('She has finished.', 58), Tx('She is tired.', 58)];
-    S.cr = [Tx("I've finished.", 62), Tx("She's finished.", 62), Tx("She's tired.", 62)];
+    S.cl = [Tx('I have finished.', 52), Tx('She has finished.', 52), Tx('She is tired.', 52)];
+    S.cr = [Tx("I've finished.", 56), Tx("She's finished.", 56), Tx("She's tired.", 56)];
     S.lab = [Tx('has', 40, { weight: 700 }), Tx('is', 40, { weight: 700 })];
     S.cTitle = Tx('short forms', 40);
     return S;
@@ -239,7 +239,7 @@ group({
     const cc = pr(t, at('f7', -0.3), at('f7', 0.2));
     if (cc > 0.01) {
       ctx.save(); ctx.globalAlpha *= clamp(cc);
-      const ys = [262, 452, 642], xl = 560, xr = 1330;
+      const ys = [236, 402, 626], xl = 560, xr = 1330;
       paper(ctx, 140, 196, 1640, 650, { color: COL.paper, r: 34 });
       ctx.restore();
       for (let r = 0; r < 3; r++) {
@@ -257,7 +257,7 @@ group({
           if (r >= 1) {
             const lb = r === 1 ? S.lab[0] : S.lab[1], col = r === 1 ? COL.aux : COL.grey, sp0 = (r === 1 ? at('f8', 0.25) : at('f8', 0.5 * du('f8') + 0.9)), bp = pr(t, sp0, sp0 + 0.6);
             const u = S.cr[r].unitBox(0); const bx = xr - S.cr[r].w / 2 + u.x; const w1 = u.w * 0.5;
-            if (bp > 0.01) { const px0 = bx + u.w * 0.75, py0 = ay + S.cr[r].h + 52; arcArrow(ctx, [px0, py0 - 2], [px0 + 4, ay + S.cr[r].h - 2], 0, col, bp, 6); appear(ctx, pr(t, sp0 + 0.3, sp0 + 0.8), () => { pill(ctx, bx + u.w * 0.75 - (lb.w + 44) / 2, ay + S.cr[r].h + 52, lb.w + 44, lb.h + 16, col); lb.draw(ctx, bx + u.w * 0.75 - lb.w / 2, ay + S.cr[r].h + 60, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); }); }
+            if (bp > 0.01) { const px0 = bx + u.w * 0.75, py0 = ay + S.cr[r].h + 16; arcArrow(ctx, [px0, py0 - 2], [px0 + 4, ay + S.cr[r].h - 2], 0, col, bp, 6); appear(ctx, pr(t, sp0 + 0.3, sp0 + 0.8), () => { pill(ctx, bx + u.w * 0.75 - (lb.w + 44) / 2, ay + S.cr[r].h + 16, lb.w + 44, lb.h + 16, col); lb.draw(ctx, bx + u.w * 0.75 - lb.w / 2, ay + S.cr[r].h + 24, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); }); }
           }
         }
       }

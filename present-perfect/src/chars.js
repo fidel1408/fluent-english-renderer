@@ -340,7 +340,7 @@ function drawItem(ctx, item, side) {
 function drawArm(ctx, c, P, side, arm, outfit) {
   const sx = side * (c.sw - 24), sy = 34 - P.shrug * 10;
   const L1 = 172, L2 = 160;
-  const r = ik(sx, sy, arm.x, arm.y, L1, L2, side < 0 ? 1 : -1);
+  const r = ik(sx, sy, arm.x, arm.y, L1, L2, (side < 0 ? 1 : -1) * (arm.y < 60 ? -1 : 1));   // raised hand: elbow drops
   const sleeve = c.top, w0 = 64, w1 = 52, w2 = 46;
   ctx.save();
   // upper arm + forearm sleeves

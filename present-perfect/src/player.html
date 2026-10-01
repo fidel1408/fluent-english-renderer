@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Present Perfect · Fluent English</title>
+<style>
+/*FONTS*/
+:root{--bg:#0c1525;--panel:#15233b;--panel2:#1c2e4d;--ink:#eaf0fb;--mute:#9fb2cf;--accent:#ffd166;--ok:#2fbf7a;--focus:#7fc6ff}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#app{display:flex;flex-direction:column;height:100%}
+#stageWrap{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:8px 10px 4px}
+#stage{position:relative;aspect-ratio:16/9;width:min(100%,calc((100vh - var(--ctl-h,190px)) * 16 / 9));max-width:100%;max-height:100%;margin:auto}
+#cv{width:100%;height:100%;display:block;border-radius:10px;background:#f4eedf;box-shadow:0 6px 30px rgba(0,0,0,.45)}
+#loader{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#0c1525;border-radius:10px;color:var(--mute);font-size:18px}
+#loader[hidden],#toast[hidden]{display:none}
+#toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(10,20,40,.94);color:#fff;border:2px solid var(--accent);padding:10px 18px;border-radius:999px;font-size:17px;max-width:90%;text-align:center}
+#controls{background:var(--panel);border-top:1px solid #243a5e;padding:8px 14px 10px;display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+button,select{font:inherit;color:var(--ink);background:var(--panel2);border:1px solid #33507f;border-radius:10px;padding:7px 12px;cursor:pointer}
+button:hover,select:hover{background:#25406a}
+button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.round{width:46px;height:46px;border-radius:50%;padding:0;display:grid;place-items:center;background:var(--accent);border-color:var(--accent);color:#102040}
+.round:hover{background:#ffe08f}
+.round svg{width:22px;height:22px;fill:currentColor}
+#btnPlay[data-state=playing] .i-play{display:none} #btnPlay:not([data-state=playing]) .i-pause{display:none}
+.time{font-variant-numeric:tabular-nums;color:var(--mute);min-width:44px;text-align:center}
+#scrubWrap{position:relative;flex:1;min-width:220px;height:36px;display:flex;align-items:center}
+#scrub{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--accent) var(--p,0%),#31496f var(--p,0%));margin:0;cursor:pointer}
+#scrub::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+#scrub::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid var(--accent)}
+#marks{position:absolute;left:11px;right:11px;top:0;bottom:0;pointer-events:none}
+#marks .tick{position:absolute;top:5px;width:2px;height:26px;background:rgba(255,255,255,.45);transform:translateX(-1px)}
+#marks .star{position:absolute;top:-4px;transform:translateX(-50%);color:var(--ok);font-size:15px;font-style:normal}
+#chapters{display:flex;gap:6px;flex-wrap:wrap}
+.chap{padding:5px 11px;font-size:14px;border-radius:999px}
+.chap[aria-current=true]{background:var(--accent);color:#102040;border-color:var(--accent);font-weight:700}
+label.ctl{display:flex;align-items:center;gap:6px;color:var(--mute);font-size:14px}
+input[type=range].mini{width:96px;accent-color:var(--accent)}
+button[aria-pressed=true]{background:#2c5a98;border-color:#6aa8ff}
+#transcript{margin:0 14px 8px;color:var(--mute);font-size:14px}
+#transcript summary{cursor:pointer;padding:4px 0}
+#transcriptBody{max-height:140px;overflow:auto;background:var(--panel);border-radius:8px;padding:6px 12px}
+#transcriptBody p{margin:4px 0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hint{color:var(--mute);font-size:13px}
+@media (max-width:760px){.round{width:40px;height:40px}.chap{font-size:13px}}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="stageWrap"><div id="stage">
+    <canvas id="cv" width="1920" height="1080" role="img" aria-label="Present perfect grammar lesson animation"></canvas>
+    <div id="loader"><span id="loaderMsg">Preparing the lesson&hellip;</span></div>
+    <div id="toast" role="status" hidden></div>
+  </div></div>
+  <div id="controls">
+    <div class="row">
+      <button id="btnPlay" class="round" type="button" aria-label="Play" data-state="paused">
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4.5v16H6zM13.5 4H18v16h-4.5z"/></svg>
+      </button>
+      <button id="btnReplay" class="round" type="button" aria-label="Replay from the start" style="background:var(--panel2);color:var(--ink);border-color:#33507f"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6.5 12 11V8a6 6 0 11-6 6H4a8 8 0 108-9z"/></svg></button>
+      <span id="time" class="time">0:00</span>
+      <div id="scrubWrap"><input id="scrub" type="range" min="0" max="100" step="0.05" value="0" aria-label="Lesson position"><div id="marks" aria-hidden="true"></div></div>
+      <span id="dur" class="time">0:00</span>
+    </div>
+    <div class="row"><nav id="chapters" aria-label="Chapters"></nav></div>
+    <div class="row">
+      <label class="ctl">Voice <input id="vn" class="mini" type="range" min="0" max="1" step="0.05" aria-label="Narration volume"></label>
+      <label class="ctl">Music <input id="vm" class="mini" type="range" min="0" max="1" step="0.05" aria-label="Music volume"></label>
+      <button id="mute" type="button" aria-pressed="false">Mute</button>
+      <button id="cc" type="button" aria-pressed="true">Captions</button>
+      <label class="ctl"><input id="autopause" type="checkbox"> Pause at practice questions (&#9733;)</label>
+      <label class="ctl">Speed <select id="speed" aria-label="Playback speed"><option value="0.8">0.8&times;</option><option value="1" selected>1&times;</option><option value="1.2">1.2&times;</option></select></label>
+      <label class="ctl">Frame rate <select id="fps" aria-label="Frame rate"><option value="30" selected>30 (light)</option><option value="60">60</option></select></label>
+      <button id="full" type="button">Full screen</button>
+      <span class="hint">Space play/pause &middot; &larr;&rarr; 5 s &middot; [ ] chapter &middot; 1&ndash;3 answer &middot; C captions &middot; R replay</span>
+    </div>
+  </div>
+  <details id="transcript"><summary>Transcript</summary><div id="transcriptBody"></div></details>
+  <div id="live" class="sr" aria-live="polite"></div>
+</div>
+<script>/*DATA*/</script>
+<script>/*SOURCES*/</script>
+</body>
+</html>

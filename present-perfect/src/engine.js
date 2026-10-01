@@ -70,7 +70,7 @@ const Eng = {
       face(t, name, dur = 0.4) { const e = EXPR[name]; if (!e) throw new Error('bad expr ' + name); const o = Object.assign({ brow: 0, bt: 0, lid: 1, smile: 0.2, mo: 0 }, e); for (const k in o) tr[k].add(t, o[k], dur, E.io); return api; },
       nod(t, n = 1, amp = 0.09) { for (let i = 0; i < n; i++) { tr.pitch.add(t + i * 0.42, amp, 0.18, E.out); tr.pitch.add(t + i * 0.42 + 0.18, 0, 0.24, E.io); } return api; },
       shake(t, n = 2, amp = 0.35) { for (let i = 0; i < n; i++) { tr.yaw.add(t + i * 0.5, amp * (i % 2 ? 1 : -1), 0.25, E.io); } return api; },
-      wave(t, t1, side = 'R') { const s = side === 'L' ? 'l' : 'r', sx = side === 'L' ? -1 : 1; let i = 0; for (let x = t; x < t1; x += 0.34, i++) { tr['a' + s + 'x'].add(x, sx * (170 + (i % 2 ? 32 : -22)), 0.3, E.io); tr['a' + s + 'y'].add(x, -40 + (i % 2) * 14, 0.3, E.io); } tr['a' + s + 'h'].add(t, 'open', 0.2); return api; },
+      wave(t, t1, side = 'R') { const s = side === 'L' ? 'l' : 'r', sx = side === 'L' ? -1 : 1; let i = 0; for (let x = t; x < t1; x += 0.34, i++) { tr['a' + s + 'x'].add(x, sx * (150 + (i % 2 ? 30 : -14)), 0.3, E.io); tr['a' + s + 'y'].add(x, -90 + (i % 2) * 18, 0.3, E.io); } tr['a' + s + 'h'].add(t, 'open', 0.2); return api; },
       gesture(t0, t1, side = 'R', kind = 'open') { self.gesture(g, id, t0, t1, side, kind); return api; },
     };
     return api;
@@ -201,9 +201,9 @@ const Eng = {
     for (const b of g.bubbles) {
       if (t < b.t0 || t > b.t1 + 0.3) continue;
       // fade when the same speaker's next bubble takes over
-      let end = b.t1; for (const o of g.bubbles) if (o.who === b.who && o.t0 > b.t0 && o !== b) end = Math.min(end, o.t0 + 0.12);
+      let end = b.t1; for (const o of g.bubbles) if (o.who === b.who && o.t0 > b.t0 && o !== b) end = Math.min(end, b.kind === 'thought' ? o.t0 - 0.32 : o.t0 + 0.12);
       if (t > end + 0.3) continue;
-      const pop = smooth(b.t0, b.t0 + 0.28, t), out = 1 - smooth(end, end + 0.28, t), a = pop * out; if (a <= 0.01) continue;
+      const pop = smooth(b.t0, b.t0 + 0.28, t), out = 1 - smooth(end, end + (b.kind === 'thought' ? 0.22 : 0.28), t), a = pop * out; if (a <= 0.01) continue;
       const hs = this.headScreen(g, b.who, t, cam), dx = b.cx - hs.x, dy = b.cy - hs.y, L = Math.hypot(dx, dy) || 1;
       const stop = hs.r * 1.02 + 16, tip = [hs.x + dx / L * stop, hs.y + dy / L * stop];
       const sc = lerp(0.55, 1, E.back(clamp((t - b.t0) / 0.3)));

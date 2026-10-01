@@ -92,7 +92,7 @@
           "kind": "thought",
           "who": "D",
           "text": "Where are my keys?",
-          "hold": 2.4
+          "hold": 2.0
         },
         {
           "id": "s1c",
@@ -129,7 +129,7 @@
         {
           "id": "c5",
           "who": "N",
-          "text": "Now the focus is the present result. Here, the keys are missing now."
+          "text": "Now the focus is the present result. In this situation, we understand that the keys are missing now."
         },
         {
           "id": "c6",
@@ -209,7 +209,7 @@
         {
           "id": "k1h",
           "kind": "hold",
-          "hold": 6.0
+          "hold": 5.5
         },
         {
           "id": "k1a",
@@ -319,7 +319,7 @@
         {
           "id": "k2h",
           "kind": "hold",
-          "hold": 6.0
+          "hold": 5.5
         },
         {
           "id": "k2a",
@@ -484,7 +484,7 @@
         {
           "id": "k3h",
           "kind": "hold",
-          "hold": 6.0
+          "hold": 5.5
         },
         {
           "id": "k3a",
@@ -573,7 +573,7 @@
         {
           "id": "k4h",
           "kind": "hold",
-          "hold": 6.0
+          "hold": 5.5
         },
         {
           "id": "k4a",
@@ -647,7 +647,7 @@
         {
           "id": "z1",
           "who": "N",
-          "text": "One more related form, the present perfect continuous, is a separate form. It is not in this lesson."
+          "text": "One more related form is the present perfect continuous. It can also describe situations that continue, but it is a separate form, and it is not in this lesson."
         }
       ]
     },

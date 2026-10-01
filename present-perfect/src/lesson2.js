@@ -43,7 +43,7 @@ group({
     K.M.nod(at('n1', 0.3)); K.D.nod(at('n2', 0.2)); K.M.face(at('q1'), 'curious', 0.5); K.D.nod(at('q2', 0.1)); K.M.nod(at('q2', 2.2)); K.D.face(at('q3'), 'thinking', 0.5); K.M.face(at('q3'), 'neutral', 0.4);
   },
   ui(ctx, S, t) {
-    const H = 140, y1 = 262, y2 = 470;
+    const H = 140, y1 = 290, y2 = 500;
     const R = (ys) => ys;
     const negP = pr(t, at('n1', -0.3), at('n1', 0.3)) * (1 - pr(t, at('q1', -0.7), at('q1', -0.25)));
     if (negP > 0.01) {
@@ -162,9 +162,9 @@ function checkGroup(d) {
       const k = d.context ? 0.86 : 1, z = Math.round(60 * k);
       S.k = k; S.title = Tx(d.title, 48, { serif: true, weight: 700 }); S.think = Tx('Think', 32);
       S.ctx = d.context ? Tx(d.context, 40, { maxW: 1100 }) : null;
-      S.before = Tx(d.before, z); S.after = Tx(d.after, z);
       S.opts = d.options.map(o => Tx(o, Math.round(58 * k), { weight: 700 }));
       S.slotW = Math.max(...S.opts.map(o => o.w)) + 70;
+      let zz = z; do { S.before = Tx(d.before, zz); S.after = Tx(d.after, zz); zz -= 2; } while (S.before.w + S.after.w + S.slotW + 60 > 1130 && zz > 36);
       S.why = Tx(d.why, Math.round(38 * k)); S.full = Tx(d.full, Math.round(50 * k), { maxW: 1100 });
       S.n = d.options.length; S.bw = S.n === 3 ? 360 : 450; S.bh = Math.round(150 * k); S.gap = 40;
       return S;
@@ -219,8 +219,8 @@ function checkGroup(d) {
       }
       // thinking ring
       if (t >= h.t0 - 0.05 && t < an.t0) {
-        const p = clamp((t - h.t0) / h.dur); ring(ctx, cardX + cardW - 80, cardY + 118, 38, 1 - p, COL.time, 11);
-        appear(ctx, pr(t, h.t0, h.t0 + 0.4), () => { pill(ctx, cardX + 40, cardY + 100, S.think.w + 56, S.think.h + 22, COL.time); S.think.draw(ctx, cardX + 68, cardY + 110, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); }, 8);
+        const p = clamp((t - h.t0) / h.dur); ring(ctx, cardX + cardW - 74, cardY + 64, 34, 1 - p, COL.time, 10);
+        appear(ctx, pr(t, h.t0, h.t0 + 0.4), () => { pill(ctx, cardX + 36, cardY + 34, S.think.w + 56, S.think.h + 22, COL.time); S.think.draw(ctx, cardX + 64, cardY + 44, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); }, 8);
       }
       // explanation
       if (revealed) {
@@ -269,7 +269,7 @@ group({
   pose(K, S, g) { for (const id of ['S', 'D']) { K[id].look(0.01, 'ui', 0.1); K[id].face(0.01, 'warm'); } K.S.nod(at('e4', 0.6)); K.D.nod(at('e4', 2.6)); K.S.face(at('e5'), 'thinking', 0.4); K.D.face(at('e6'), 'warm', 0.4); K.S.nod(at('e6', 0.8)); },
   ui(ctx, S, t, g) {
     useRibbon(S, ctx, t, g, S.rib);
-    const ax0 = 190, ax1 = 1740, ay = 610, nowX = 1500;
+    const ax0 = 470, ax1 = 1480, ay = 610, nowX = 1340;
     const pa = pr(t, at('e4', -0.1), at('e4', 0.6));
     const ph1 = pr(t, at('e4', 0.0), at('e4', 0.5)), ph2 = pr(t, at('e4', du('e4') * 0.55), at('e4', du('e4') * 0.55 + 0.6)), nv = pr(t, at('e5', -0.1), at('e5', 0.5));
     const fadeOld = 1 - nv;
@@ -280,9 +280,9 @@ group({
       ctx.save(); ctx.globalAlpha *= fadeOld;
       appear(ctx, ph1, () => {
         const w = S.s1.w + 90; tape(ctx, 960 - w / 2, 188, w, S.s1.h + 40, COL.partL, -0.004); hero(ctx, S.s1, 960 - S.s1.w / 2, 208, [], { hi: sweep(S.s1, 'e4', t, 0, 0.5) });
-        for (const [px, d0] of [[420, 0.1], [760, 0.3], [1100, 0.5]]) { const a = pr(t, at('e4', d0), at('e4', d0 + 0.5), E.back); ICON.pin(ctx, px, ay - 22 - (1 - clamp(a)) * 60, 0.9, clamp(a), COL.part); }
-        bracket(ctx, 260, nowX - 20, ay + 84, 30, COL.part, pr(t, at('e4', 0.6), at('e4', 1.6), E.io), false, 8);
-        appear(ctx, pr(t, at('e4', 1.4), at('e4', 2.0)), () => { pill(ctx, 760 - (S.up.w + 40) / 2, ay + 152, S.up.w + 40, S.up.h + 20, COL.part); S.up.draw(ctx, 760 - S.up.w / 2, ay + 162, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); });
+        for (const [px, d0] of [[620, 0.1], [860, 0.3], [1100, 0.5]]) { const a = pr(t, at('e4', d0), at('e4', d0 + 0.5), E.back); ICON.pin(ctx, px, ay - 22 - (1 - clamp(a)) * 60, 0.9, clamp(a), COL.part); }
+        bracket(ctx, 540, nowX - 20, ay + 84, 30, COL.part, pr(t, at('e4', 0.6), at('e4', 1.6), E.io), false, 8);
+        appear(ctx, pr(t, at('e4', 1.4), at('e4', 2.0)), () => { pill(ctx, 940 - (S.up.w + 40) / 2, ay + 152, S.up.w + 40, S.up.h + 20, COL.part); S.up.draw(ctx, 940 - S.up.w / 2, ay + 162, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); });
       });
       // simple past with a finished time
       appear(ctx, ph2, () => {
@@ -296,10 +296,10 @@ group({
       ctx.save(); ctx.globalAlpha *= nv;
       const w3 = S.s3.w + 90; tape(ctx, 960 - w3 / 2, 250, w3, S.s3.h + 40, COL.notL, -0.004);
       hero(ctx, S.s3, 960 - S.s3.w / 2, 270, ['subj', 'aux', 'part', 'part'].slice(0, 0), { color: (i) => i === 1 ? COL.not : COL.ink, hi: sweep(S.s3, 'e6', t) });
-      for (const px of [420, 760, 1100]) { ICON.pin(ctx, px, ay - 22, 0.9, 0.6, COL.grey); }
-      ctx.strokeStyle = COL.bad; ctx.lineWidth = 9; ctx.lineCap = 'round'; for (const px of [420, 760, 1100]) { ctx.beginPath(); ctx.moveTo(px - 24, ay - 82); ctx.lineTo(px + 24, ay - 34); ctx.moveTo(px + 24, ay - 82); ctx.lineTo(px - 24, ay - 34); ctx.stroke(); }
-      bracket(ctx, 260, nowX - 20, ay + 84, 30, COL.not, pr(t, at('e5', 0.2), at('e5', 1.2), E.io), false, 8);
-      appear(ctx, pr(t, at('e5', 0.9), at('e5', 1.5)), () => { pill(ctx, 760 - (S.nvB.w + 40) / 2, ay + 152, S.nvB.w + 40, S.nvB.h + 20, COL.not); S.nvB.draw(ctx, 760 - S.nvB.w / 2, ay + 162, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); });
+      for (const px of [620, 860, 1100]) { ICON.pin(ctx, px, ay - 22, 0.9, 0.6, COL.grey); }
+      ctx.strokeStyle = COL.bad; ctx.lineWidth = 9; ctx.lineCap = 'round'; for (const px of [620, 860, 1100]) { ctx.beginPath(); ctx.moveTo(px - 24, ay - 82); ctx.lineTo(px + 24, ay - 34); ctx.moveTo(px + 24, ay - 82); ctx.lineTo(px - 24, ay - 34); ctx.stroke(); }
+      bracket(ctx, 540, nowX - 20, ay + 84, 30, COL.not, pr(t, at('e5', 0.2), at('e5', 1.2), E.io), false, 8);
+      appear(ctx, pr(t, at('e5', 0.9), at('e5', 1.5)), () => { pill(ctx, 940 - (S.nvB.w + 40) / 2, ay + 152, S.nvB.w + 40, S.nvB.h + 20, COL.not); S.nvB.draw(ctx, 940 - S.nvB.w / 2, ay + 162, { color: '#fff', ipaColor: 'rgba(255,255,255,.9)' }); });
       ctx.restore();
       ctx.restore();
     }

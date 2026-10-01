@@ -18,6 +18,8 @@ No AI-generated images are used. The only bitmap is the authentic Fluent English
 Nothing is rendered ahead of time and nothing runs on a server. All animation is drawn live in **your** browser, using
 roughly one CPU core. The animation loop stops when the lesson is paused.
 
+| `export/may-might-could-demo-NON-INTERACTIVE.mp4` | A **passive, non-interactive** 60:00 video of Demo Mode (960×540, 8 fps, narration only, 20 MB). No clicks, timers, or answer controls work in a video. Use the HTML for teaching. |
+
 ## Two modes (clearly different)
 
 * **Class Mode** — plays each narrated scene, then **stops at the activity** and waits for you. A countdown shows the planned time.
@@ -157,6 +159,13 @@ hints, and feedback), 5 pair/roleplay tasks, a sort, a sentence builder, a liste
 * The "Your sentence" task is a small **rule-based form checker** (it spots things like *might arrives*, *could to*, *Does she may…*, *doesn't might*, *couldn't* for uncertainty).
   It cannot judge meaning and says so on screen. It is not an AI assessor.
 * The exit check and common-difficulty list contain no invented learner data.
+
+## The passive video
+
+`node tools/export-mp4.mjs --fps 8 --out export/file.mp4` renders Demo Mode frame by frame in headless Chromium and mixes every narration clip at its exact time.
+It ran on the build machine (not in your browser) in about 17 minutes. Because it is frame-stepped at 8 fps, mouth and gesture motion looks choppier than the live lesson,
+and it has no music, ambience, or sound effects. Checked: duration is exactly 3600.0 s, video and audio streams are present, and the on-screen plan clock matches the video time at 20:10, 40:00, and 59:51.
+I did not watch or listen to the whole video.
 
 ## Rebuild and test
 

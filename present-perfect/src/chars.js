@@ -5,7 +5,7 @@
 
 const CAST = {
   D: { id: 'D', name: 'Daniel', sw: 140, skin: '#E2B08A', hair: '#33201A', hairHi: '#6B4A37', eye: '#5B3D26', lips: '#BE6F62', brow: '#2C1A12', jaw: 1.06, eyeW: 15.5, male: true,
-       top: '#27456E', topHi: '#3A6296', collar: '#DCEAF7', style: 'short', glasses: true, stubble: true, outfit: 'sweater', lash: 0, cheek: 0.03 },
+       top: '#27456E', topHi: '#3A6296', collar: '#DCEAF7', style: 'short', glasses: true, stubble: false, beard: true, outfit: 'sweater', lash: 0, cheek: 0.03 },
   M: { id: 'M', name: 'Maya', sw: 120, skin: '#B67A58', hair: '#1F120D', hairHi: '#4A2E22', eye: '#3A2418', lips: '#A9453F', brow: '#1B0F0A', jaw: 0.90, eyeW: 18.5,
        top: '#17727A', topHi: '#2C9AA0', collar: '#FBF1DF', style: 'curls', glasses: false, stubble: false, outfit: 'blazer', lash: 1, cheek: 0.24, pendant: '#E9B949', earring: '#E9B949' },
   S: { id: 'S', name: 'Sofia', sw: 114, skin: '#DDA67F', hair: '#7E3517', hairHi: '#C2692F', eye: '#2F6E55', lips: '#CE4F57', brow: '#5A2610', jaw: 0.88, eyeW: 18.5,
@@ -408,6 +408,20 @@ function drawHead(ctx, c, P, sway) {
   for (const s of [-1, 1]) { ctx.beginPath(); ctx.ellipse(s * 46 + yawShift, 30, 18, 11, 0, 0, TAU); ctx.fill(); }
   ctx.fillStyle = lg(ctx, 0, 40, 0, 100, [[0, 'rgba(60,20,10,0)'], [1, 'rgba(60,20,10,.22)']]); ctx.fillRect(-90, 40, 180, 70);
   ctx.fillStyle = lg(ctx, 0, -98, 0, -52, [[0, 'rgba(40,15,8,.30)'], [1, 'rgba(40,15,8,0)']]); ctx.fillRect(-90, -100, 180, 50);
+  if (c.beard) {          // full short beard + moustache; the lips are drawn on top of a skin patch
+    ctx.fillStyle = lg(ctx, 0, 10, 0, 100, [[0, shade(c.hair, 0.05)], [0.6, c.hair], [1, shade(c.hair, -0.35)]]);
+    ctx.beginPath(); ctx.moveTo(-86, -2); ctx.bezierCurveTo(-84, 28, -66, 42, -46, 43); ctx.bezierCurveTo(-36, 45, -30, 40, -22, 41);
+    ctx.bezierCurveTo(-10, 36, 10, 36, 22, 41); ctx.bezierCurveTo(30, 40, 36, 45, 46, 43); ctx.bezierCurveTo(66, 42, 84, 28, 86, -2);
+    ctx.lineTo(88, 112); ctx.lineTo(-88, 112); ctx.closePath(); ctx.fill();
+    // skin around the mouth, then the moustache over the upper lip
+    ctx.fillStyle = lg(ctx, 0, 46, 0, 76, [[0, shade(c.skin, -0.12)], [1, shade(c.skin, -0.02)]]);
+    ctx.beginPath(); ctx.ellipse(0, 59, 29, 15, 0, 0, TAU); ctx.fill();
+    ctx.fillStyle = shade(c.hair, 0.04);
+    ctx.beginPath(); ctx.moveTo(-31, 43); ctx.bezierCurveTo(-16, 35, 16, 35, 31, 43); ctx.bezierCurveTo(30, 52, 22, 52, 12, 49); ctx.bezierCurveTo(4, 47, -4, 47, -12, 49); ctx.bezierCurveTo(-22, 52, -30, 52, -31, 43); ctx.fill();
+    ctx.strokeStyle = rgba(c.hairHi, 0.45); ctx.lineWidth = 1.6; ctx.lineCap = 'round'; const rb = rng(5);
+    for (let i = 0; i < 46; i++) { const x = (rb() - 0.5) * 150, y = 48 + rb() * 54; if (Math.abs(x) < 32 && y < 78) continue; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + (rb() - 0.5) * 5, y + 7 + rb() * 5); ctx.stroke(); }
+    ctx.fillStyle = 'rgba(0,0,0,.12)'; ctx.beginPath(); ctx.moveTo(-86, 70); ctx.bezierCurveTo(-60, 100, 60, 100, 86, 70); ctx.lineTo(90, 112); ctx.lineTo(-90, 112); ctx.fill();
+  }
   if (c.stubble) {
     ctx.fillStyle = lg(ctx, 0, 20, 0, 100, [[0, 'rgba(40,28,22,0)'], [0.4, 'rgba(40,28,22,.34)'], [1, 'rgba(40,28,22,.55)']]);
     ctx.beginPath(); ctx.moveTo(-82, 10); ctx.bezierCurveTo(-60, 30, -30, 38, 0, 38); ctx.bezierCurveTo(30, 38, 60, 30, 82, 10); ctx.lineTo(82, 110); ctx.lineTo(-82, 110); ctx.fill();

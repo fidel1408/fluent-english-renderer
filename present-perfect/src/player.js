@@ -137,8 +137,9 @@
     const marks = $('marks');
     Eng.chapterStart.forEach((s, i) => { const m = document.createElement('i'); m.className = 'tick'; m.style.left = (s / dur * 100) + '%'; m.title = TL.chapters[i].label; marks.appendChild(m); });
     Eng.pausePoints.filter(pp => pp.kind !== 'item').forEach(pp => { const m = document.createElement('b'); m.className = 'star'; m.style.left = (pp.t / dur * 100) + '%'; m.title = pp.label || 'Practice'; m.textContent = '★'; marks.appendChild(m); });
-    const chs = $('chapters');
-    TL.chapters.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'chap'; b.innerHTML = ''; b.append(c.label + ' '); const sm = document.createElement('small'); sm.textContent = fmt(Eng.chapterStart[i]); b.append(sm); b.title = c.label + ' \u2013 starts at ' + fmt(Eng.chapterStart[i]); b.dataset.i = i; b.addEventListener('click', () => { seek(Eng.chapterStart[i]); if (!P.playing) play(); }); chs.appendChild(b); });
+    const cs = $('chapSel');
+    TL.chapters.forEach((c, i) => { const o = document.createElement('option'); o.value = i; o.textContent = c.label + '  (' + fmt(Eng.chapterStart[i]) + ')'; cs.appendChild(o); });
+    cs.addEventListener('change', () => { seek(Eng.chapterStart[+cs.value]); if (!P.playing) play(); cs.blur(); });
     sc.addEventListener('input', () => { const was = P.playing; if (was) pause(); seek(+sc.value); if (was) play(); });
     $('btnPlay').addEventListener('click', () => (P.playing ? pause() : play()));
     $('btnReplay').addEventListener('click', replay);
@@ -194,7 +195,7 @@
   function updateUI() {
     const sc = $('scrub'); sc.value = P.t; sc.style.setProperty('--p', (P.t / P.dur * 100) + '%'); $('time').textContent = fmt(P.t);
     sc.setAttribute('aria-valuetext', fmt(P.t) + ' of ' + fmt(P.dur));
-    const c = curChapter(); document.querySelectorAll('.chap').forEach((b, i) => b.setAttribute('aria-current', i === c ? 'true' : 'false'));
+    const cs = $('chapSel'); if (cs && document.activeElement !== cs) cs.value = String(curChapter());
   }
   function announceChapter() { const c = curChapter(); if (c !== P.lastCh) { P.lastCh = c; live('Chapter: ' + Eng.TL.chapters[c].label); } }
   let toastTimer = 0;

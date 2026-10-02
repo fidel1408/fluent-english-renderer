@@ -18,8 +18,8 @@
   },
   "S": {
    "name": "Sofia",
-   "voice": "af_nicole",
-   "speed": 1.05
+   "voice": "af_sarah",
+   "speed": 0.95
   }
  },
  "elevenlabs": {

@@ -37,7 +37,7 @@ Minute-by-minute plan, instructions and **answer keys for every activity**: `doc
 Pair work is 3–4 minutes each (about 14 minutes in total); class sharing about 2 minutes; the rest is explanation, choral repetition, drills and quizzes. Quiz distractors are unambiguously wrong in context (time words such as *yesterday, last year, ago, in 2019* or *ever, never, already, yet, for, since* decide each item).
 
 ## Controls
-Play/Pause · Replay · scrubber (ticks = chapters, ★ = start of a practice round) · 13 chapter buttons with start times · **« Activity / Activity »** (also **N / P**) · Voice and Music sliders · Mute · Captions (with IPA) · speed 0.8/1/1.2 · 30/60 fps · full screen · transcript.
+Two rows: Play/Pause · Replay · scrubber (ticks = chapters, ★ = start of a practice round) · **« Activity / Activity »** (also **N / P**) · a chapter drop-down · Captions · Mute · **Settings** (voice and music volume, class pauses, speed, frame rate) · Full screen · Hide menu · transcript.
 **Class pauses**: *At each activity* (default: stops before the first question of each round so you can set it up), *At every question*, or *Off*. While paused, press Play to continue. Click an option/bin on screen (or press 1–4) to show a student's answer; the reveal still follows the narration.
 Keys: Space, ←/→ 5 s, [ ] chapter, N P activity, **H hide/show the menu bar** (or the Hide menu button; a small Play/Pause + Show menu pair stays in the corner), 1–4 answer, C captions, M mute, F full screen, R replay.
 

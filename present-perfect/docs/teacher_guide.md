@@ -11,10 +11,10 @@ Generated from the lesson data; times are positions in the video (m:ss). The cla
 ### 0:05  Today's class  *(info, 0:31)*
 Let the card build up. Ask: *Which one is new for you?*
 
-### 0:37  Dialogue: Sofia / Maya / Daniel  *(skit, 0:11)*
+### 0:37  Dialogue: Sofia / Maya / Daniel  *(skit, 0:10)*
 Listening: the characters speak in speech bubbles. Ask *How many present perfect sentences can you hear?*
 
-### 0:50  Have you ever?  *(say, 0:42)*
+### 0:49  Have you ever?  *(say, 0:42)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. Have you ever eaten sushi?  ->  **Yes, I have. I ate it in Tokyo.**
@@ -22,27 +22,27 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 3. Have you ever met a famous person?  ->  **Yes, I have. I met a singer last year.**
 
 
-## Past and now  ·  starts 1:34
+## Past and now  ·  starts 1:33
 
-- 1:34  *Explanation* (story1): Daniel is at the office door. He's looking for his keys. Where are my keys? Oh no! I've lost my keys!
-- 1:43  *Explanation* (contrast): I lost my keys yesterday. We name a finished time: yesterday. This is the simple past. I've lost my keys. Now the focus is the present result. In this situation, we understand that the keys are missing now. The present perfect con…
-### 2:02  Listen and choose  *(choose, 0:43)*
+- 1:33  *Explanation* (story1): Daniel is at the office door. He's looking for his keys. Where are my keys? Oh no! I've lost my keys!
+- 1:42  *Explanation* (contrast): I lost my keys yesterday. We name a finished time: yesterday. This is the simple past. I've lost my keys. Now the focus is the present result. In this situation, we understand that the keys are missing now. The present perfect con…
+### 2:01  Listen and choose  *(choose, 0:43)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. Which sentence names a finished time? -> **I lost my keys yesterday.**  — Yesterday is a finished time, so we use the simple past.
 2. Which sentence focuses on the result now? -> **I've lost my keys.**  — I've lost my keys connects the past to now. In this situation, the keys are missing now.
 
-### 2:46  Repeat after me  *(choral, 0:21)*
+### 2:45  Repeat after me  *(choral, 0:21)*
 Choral repetition: listen first, then everyone repeats together. Ask a few students to repeat alone afterwards.
 
 
-## Form  ·  starts 3:08
+## Form  ·  starts 3:07
 
-- 3:08  *Explanation* (form1): The form is: subject, plus have or has, plus the past participle. She has finished. I, you, we, and they use have. He, she, and it use has.
-- 3:19  *Explanation* (form2): The past participle is the third verb form. It is not always the simple past. Work, worked, worked. See, saw, seen. Go, went, gone. Be, was, been. Eat, ate, eaten.
-- 3:32  *Explanation* (form3): I've finished. She's finished. Here, apostrophe s means has. It can also mean is, so check the next word.
-- 3:41  *Quick check* (chk1): Quick check one. She, blank, finished the report. Have, has, or does? Has. She is third person singular: she has finished.
-### 3:55  Have or has?  *(say, 0:52)*
+- 3:07  *Explanation* (form1): The form is: subject, plus have or has, plus the past participle. She has finished. I, you, we, and they use have. He, she, and it use has.
+- 3:18  *Explanation* (form2): The past participle is the third verb form. It is not always the simple past. Work, worked, worked. See, saw, seen. Go, went, gone. Be, was, been. Eat, ate, eaten.
+- 3:31  *Explanation* (form3): I've finished. She's finished. Here, apostrophe s means has. It can also mean is, so check the next word.
+- 3:40  *Quick check* (chk1): Quick check one. She, blank, finished the report. Have, has, or does? Has. She is third person singular: she has finished.
+### 3:54  Have or has?  *(say, 0:52)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. I  ->  **have**
@@ -56,10 +56,10 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 9. my friends  ->  **have**
 10. my sister  ->  **has**
 
-### 4:48  Repeat after me  *(choral, 0:54)*
+### 4:47  Repeat after me  *(choral, 0:53)*
 Choral repetition: listen first, then everyone repeats together. Ask a few students to repeat alone afterwards.
 
-### 5:44  Choose the answer  *(choose, 0:54)*
+### 5:42  Choose the answer  *(choose, 0:54)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. My brother **has** visited Spain.  — My brother is he, so we use has.
@@ -68,16 +68,16 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 4. She has **lost** her keys.  — Has plus the past participle: lost.
 
 
-## Participles  ·  starts 6:39
+## Participles  ·  starts 6:37
 
-### 6:39  Regular verbs  *(table, 0:35)*
+### 6:37  Regular verbs  *(table, 0:35)*
 Students repeat each row after the voice (a short silent beat is left for the choral answer).
 
 - /t/ worked | watched | helped | cooked
 - /d/ played | lived | cleaned | opened
 - /ɪd/ wanted | needed | visited | decided
 
-### 7:16  Irregular verbs: group one  *(table, 0:33)*
+### 7:14  Irregular verbs: group one  *(table, 0:33)*
 Students repeat each row after the voice (a short silent beat is left for the choral answer).
 
 - eat | ate | eaten
@@ -87,7 +87,7 @@ Students repeat each row after the voice (a short silent beat is left for the ch
 - write | wrote | written
 - break | broke | broken
 
-### 7:50  Say the participle  *(say, 0:32)*
+### 7:49  Say the participle  *(say, 0:32)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. eat  ->  **eaten**
@@ -97,7 +97,7 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 5. write  ->  **written**
 6. break  ->  **broken**
 
-### 8:23  Irregular verbs: group two  *(table, 0:29)*
+### 8:21  Irregular verbs: group two  *(table, 0:29)*
 Students repeat each row after the voice (a short silent beat is left for the choral answer).
 
 - go | went | gone
@@ -107,7 +107,7 @@ Students repeat each row after the voice (a short silent beat is left for the ch
 - make | made | made
 - say | said | said
 
-### 8:53  Say the participle  *(say, 0:27)*
+### 8:52  Say the participle  *(say, 0:27)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. go  ->  **gone**
@@ -117,7 +117,7 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 5. make  ->  **made**
 6. say  ->  **said**
 
-### 9:22  Irregular verbs: group three  *(table, 0:31)*
+### 9:20  Irregular verbs: group three  *(table, 0:31)*
 Students repeat each row after the voice (a short silent beat is left for the choral answer).
 
 - buy | bought | bought
@@ -127,7 +127,7 @@ Students repeat each row after the voice (a short silent beat is left for the ch
 - leave | left | left
 - meet | met | met
 
-### 9:54  Say the participle  *(say, 0:27)*
+### 9:52  Say the participle  *(say, 0:27)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. buy  ->  **bought**
@@ -137,7 +137,7 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 5. leave  ->  **left**
 6. meet  ->  **met**
 
-### 10:23  Irregular verbs: group four  *(table, 0:34)*
+### 10:21  Irregular verbs: group four  *(table, 0:34)*
 Students repeat each row after the voice (a short silent beat is left for the choral answer).
 
 - put | put | put
@@ -147,7 +147,7 @@ Students repeat each row after the voice (a short silent beat is left for the ch
 - come | came | come
 - hit | hit | hit
 
-### 10:58  Say the participle  *(say, 0:27)*
+### 10:56  Say the participle  *(say, 0:27)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. put  ->  **put**
@@ -157,7 +157,7 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 5. come  ->  **come**
 6. hit  ->  **hit**
 
-### 11:26  Choose the participle  *(choose, 1:50)*
+### 11:24  Choose the participle  *(choose, 1:50)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. She has **written** a letter.  — Written is the past participle of write.
@@ -170,9 +170,9 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 8. I have **been** to Italy three times.  — Been is the past participle of be.
 
 
-## Negatives and questions  ·  starts 13:17
+## Negatives and questions  ·  starts 13:16
 
-### 13:17  Short forms  *(table, 0:35)*
+### 13:16  Short forms  *(table, 0:35)*
 Students repeat each row after the voice (a short silent beat is left for the choral answer).
 
 - I have | I've
@@ -183,7 +183,7 @@ Students repeat each row after the voice (a short silent beat is left for the ch
 - she has | she's
 - it has | it's
 
-### 13:54  Say the short form  *(say, 0:31)*
+### 13:53  Say the short form  *(say, 0:31)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. She has finished.  ->  **She's finished.**
@@ -192,9 +192,9 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 4. He has gone.  ->  **He's gone.**
 5. We have started.  ->  **We've started.**
 
-- 14:26  *Explanation* (neg): For negatives, put not after have or has. Haven't. Hasn't. I haven't finished. She hasn't finished.
-- 14:34  *Explanation* (quest): For questions, put have or has before the subject. Have you finished? Has she finished? We do not use do or does to make these questions.
-### 14:44  Make it negative  *(say, 0:35)*
+- 14:25  *Explanation* (neg): For negatives, put not after have or has. Haven't. Hasn't. I haven't finished. She hasn't finished.
+- 14:33  *Explanation* (quest): For questions, put have or has before the subject. Have you finished? Has she finished? We do not use do or does to make these questions.
+### 14:43  Make it negative  *(say, 0:35)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. I have finished.  ->  **I haven't finished.**
@@ -203,7 +203,7 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 4. He has eaten.  ->  **He hasn't eaten.**
 5. We have seen it.  ->  **We haven't seen it.**
 
-### 15:21  Make a question  *(say, 0:34)*
+### 15:19  Make a question  *(say, 0:34)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. You have finished.  ->  **Have you finished?**
@@ -212,8 +212,8 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 4. He has eaten.  ->  **Has he eaten?**
 5. It has stopped.  ->  **Has it stopped?**
 
-- 15:56  *Explanation* (short): Have you eaten lunch? Yes, I have. Has Sofia called? No, she hasn't.
-### 16:03  Short answers  *(say, 0:38)*
+- 15:54  *Explanation* (short): Have you eaten lunch? Yes, I have. Has Sofia called? No, she hasn't.
+### 16:01  Short answers  *(say, 0:38)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. Have you eaten? Yes.  ->  **Yes, I have.**
@@ -222,12 +222,12 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 4. Has he finished? No.  ->  **No, he hasn't.**
 5. Has it started? Yes.  ->  **Yes, it has.**
 
-- 16:42  *Explanation* (wh): With question words, put have or has next, before the subject. What have you done? How long have you lived here?
-### 16:50  Question words  *(choral, 0:35)*
+- 16:40  *Explanation* (wh): With question words, put have or has next, before the subject. What have you done? How long have you lived here?
+### 16:48  Question words  *(choral, 0:34)*
 Choral repetition: listen first, then everyone repeats together. Ask a few students to repeat alone afterwards.
 
-- 17:26  *Quick check* (chk2): Quick check two. Maya has already, blank, lunch. Ate, eaten, or eat? Eaten. After has, we need the past participle: has eaten.
-### 17:41  Choose the answer  *(choose, 0:54)*
+- 17:24  *Quick check* (chk2): Quick check two. Maya has already, blank, lunch. Ate, eaten, or eat? Eaten. After has, we need the past participle: has eaten.
+### 17:39  Choose the answer  *(choose, 0:54)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. She **hasn't** finished yet.  — She is he, she, or it, so we use hasn't.
@@ -235,23 +235,23 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 3. Has he finished? Yes, he **has** .  — A short answer repeats has.
 4. How long **have** they lived here?  — They uses have, and lived is the past participle.
 
-### 18:37  Pair work  *(pair, 3:17)*
+### 18:35  Pair work  *(pair, 3:17)*
 Pair work (breakout rooms or turn-and-talk). A countdown ring runs; the roles swap at half time with a *Switch roles!* banner.
 
 Prompts: Have you eaten breakfast today?; Have you finished your homework?; Has your phone rung today?; Have you studied English this week?; Have you called a friend today?; Have you seen a good movie lately?  (3.0 min total, roles: Ask / Answer)
 
 
-## Experience  ·  starts 21:55
+## Experience  ·  starts 21:53
 
-- 21:55  *Explanation* (exp1): Use one: experience up to now. We don't say when. Have you ever visited Canada? Yes, I have. I visited Canada in 2022.
-- 22:06  *Explanation* (exp2): First, the experience: present perfect. Then a finished time: simple past. Never means: not at any time, up to now. I've never visited Canada.
-### 22:18  Useful words  *(info, 0:17)*
+- 21:53  *Explanation* (exp1): Use one: experience up to now. We don't say when. Have you ever visited Canada? Yes, I have. I visited Canada in 2022.
+- 22:04  *Explanation* (exp2): First, the experience: present perfect. Then a finished time: simple past. Never means: not at any time, up to now. I've never visited Canada.
+### 22:15  Useful words  *(info, 0:17)*
 Let the card build up. Ask: *Which one is new for you?*
 
-### 22:36  Repeat after me  *(choral, 0:34)*
+### 22:34  Repeat after me  *(choral, 0:33)*
 Choral repetition: listen first, then everyone repeats together. Ask a few students to repeat alone afterwards.
 
-### 23:12  Ask the question  *(say, 0:48)*
+### 23:09  Ask the question  *(say, 0:48)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. eat sushi  ->  **Have you ever eaten sushi?**
@@ -261,7 +261,7 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 5. lose your phone  ->  **Have you ever lost your phone?**
 6. break a bone  ->  **Have you ever broken a bone?**
 
-### 24:01  Choose the answer  *(choose, 0:55)*
+### 23:58  Choose the answer  *(choose, 0:55)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. **Have** you ever eaten snails?  — Have comes before you, and eaten is the past participle.
@@ -269,31 +269,31 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 3. It was great both times. I've visited London **twice**  — Twice means two times.
 4. **Has** she ever met a famous person?  — She uses has.
 
-### 24:58  Pair work  *(pair, 4:18)*
+### 24:55  Pair work  *(pair, 4:18)*
 Pair work (breakout rooms or turn-and-talk). A countdown ring runs; the roles swap at half time with a *Switch roles!* banner.
 
 Prompts: visited another country; met a famous person; eaten something strange; lost something important; slept outside; sung in public; forgotten a friend's birthday; ridden a horse  (4.0 min total, roles: Ask / Answer)
 
-### 29:17  Tell the class  *(timer, 1:09)*
+### 29:14  Tell the class  *(timer, 1:09)*
 Whole-class sharing: nominate volunteers during the countdown.
 
 Model sentence: Ana has visited Brazil.
 
 
-## Result  ·  starts 30:28
+## Result  ·  starts 30:25
 
-- 30:28  *Explanation* (res1): Use two: a recent action with a result now. Have you finished yet? Yes! I've already finished the report.
-- 30:36  *Explanation* (res2): The report is finished, and it is ready now. Already goes before the participle. Yet goes at the end. I haven't finished yet.
-### 30:46  Just, already, yet  *(info, 0:16)*
+- 30:25  *Explanation* (res1): Use two: a recent action with a result now. Have you finished yet? Yes! I've already finished the report.
+- 30:33  *Explanation* (res2): The report is finished, and it is ready now. Already goes before the participle. Yet goes at the end. I haven't finished yet.
+### 30:43  Just, already, yet  *(info, 0:16)*
 Let the card build up. Ask: *Which one is new for you?*
 
-### 31:04  Repeat after me  *(choral, 0:30)*
+### 31:00  Repeat after me  *(choral, 0:30)*
 Choral repetition: listen first, then everyone repeats together. Ask a few students to repeat alone afterwards.
 
-### 31:35  Dialogue: Maya / Daniel  *(skit, 0:24)*
+### 31:32  Dialogue: Maya / Daniel  *(skit, 0:24)*
 Listening: the characters speak in speech bubbles. Ask *How many present perfect sentences can you hear?*
 
-### 32:01  Choose the answer  *(choose, 1:09)*
+### 31:57  Choose the answer  *(choose, 1:09)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. I did it two minutes ago. I've **just** finished.  — Just means a very short time ago.
@@ -302,7 +302,7 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 4. We are still waiting. He hasn't called **yet**  — In a negative sentence, yet goes at the end.
 5. You can't catch it. The train has **just** left.  — Just means a very short time ago.
 
-### 33:11  What's the result?  *(say, 0:55)*
+### 33:07  What's the result?  *(say, 0:55)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. Daniel can't open the door. Use: lose.  ->  **He's lost his keys.**
@@ -312,12 +312,12 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 5. The cake is on the table. Use: bake.  ->  **They've baked a cake.**
 
 
-## Still true  ·  starts 34:07
+## Still true  ·  starts 34:03
 
-- 34:07  *Explanation* (still1): Use three: a situation that began in the past and continues now. I've known her for five years. And she's lived here since 2021.
-- 34:18  *Explanation* (still2): For introduces a length of time. Since introduces the starting point. Careful: for and since do not always mean present perfect. A finished situation uses the simple past. She lived in Paris for two years.
-- 34:33  *Quick check* (chk3): Quick check three. Daniel has worked here, blank, 2019. For, or since? Since. 2019 is the starting point, not a length of time.
-### 34:49  For or since?  *(sort, 0:56)*
+- 34:03  *Explanation* (still1): Use three: a situation that began in the past and continues now. I've known her for five years. And she's lived here since 2021.
+- 34:14  *Explanation* (still2): For introduces a length of time. Since introduces the starting point. Careful: for and since do not always mean present perfect. A finished situation uses the simple past. She lived in Paris for two years.
+- 34:29  *Quick check* (chk3): Quick check three. Daniel has worked here, blank, 2019. For, or since? Since. 2019 is the starting point, not a length of time.
+### 34:44  For or since?  *(sort, 0:56)*
 Sorting game: the class says which bin the item belongs to (click a bin to show it), then the answer is revealed.
 
 1. five years  ->  **for**
@@ -331,13 +331,13 @@ Sorting game: the class says which bin the item belongs to (click a bin to show 
 9. yesterday  ->  **since**
 10. two hours  ->  **for**
 
-### 35:47  How long?  *(info, 0:09)*
+### 35:42  How long?  *(info, 0:09)*
 Let the card build up. Ask: *Which one is new for you?*
 
-### 35:57  Repeat after me  *(choral, 0:28)*
+### 35:52  Repeat after me  *(choral, 0:27)*
 Choral repetition: listen first, then everyone repeats together. Ask a few students to repeat alone afterwards.
 
-### 36:26  For or since?  *(say, 0:55)*
+### 36:20  For or since?  *(say, 0:55)*
 Whole-class drill: a prompt appears, the class answers out loud in the silent beat, then the answer is revealed.
 
 1. How long have you lived here? Five years.  ->  **I've lived here for five years.**
@@ -346,32 +346,32 @@ Whole-class drill: a prompt appears, the class answers out loud in the silent be
 4. How long have they been married? Since 2021.  ->  **They've been married since 2021.**
 5. How long has he had that car? Ten years.  ->  **He has had that car for ten years.**
 
-### 37:23  Choose the answer  *(choose, 0:41)*
+### 37:17  Choose the answer  *(choose, 0:41)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. She has worked here **for** six months.  — Six months is a length of time. Use for.
 2. We've known each other **since** we were students.  — We were students is a starting point. Use since.
 3. How long **have** you studied English?  — How long, have, you, and the past participle studied.
 
-### 38:06  Pair work  *(pair, 3:14)*
+### 38:00  Pair work  *(pair, 3:14)*
 Pair work (breakout rooms or turn-and-talk). A countdown ring runs; the roles swap at half time with a *Switch roles!* banner.
 
 Prompts: lived in your home; studied English; known your best friend; had your phone; worked or studied in your place; been in this class  (3.0 min total, roles: Ask / Answer)
 
 
-## Time periods  ·  starts 41:21
+## Time periods  ·  starts 41:15
 
-- 41:21  *Explanation* (per1): Use four: a period that is not finished yet, like today, this week, or this year. I've had two meetings so far today.
-- 41:30  *Explanation* (per2): Today is not over, so we use the present perfect. Yesterday is finished, so we use the simple past. I had two meetings yesterday. Advanced note: the speaker's view matters. If you see today as finished, the simple past is also pos…
-- 41:47  *Explanation* (fin1): Remember: with a finished time, like yesterday, last week, or in 2022, use the simple past. I saw her yesterday. Not: I've seen her yesterday.
-- 41:59  *Quick check* (chk4): Quick check four. Sofia's trip was last summer. We, blank, Canada last summer. Visited, or have visited? Visited. Last summer is a finished time, so we use the simple past.
-### 42:17  Time words  *(info, 0:24)*
+- 41:15  *Explanation* (per1): Use four: a period that is not finished yet, like today, this week, or this year. I've had two meetings so far today.
+- 41:24  *Explanation* (per2): Today is not over, so we use the present perfect. Yesterday is finished, so we use the simple past. I had two meetings yesterday. Advanced note: the speaker's view matters. If you see today as finished, the simple past is also pos…
+- 41:41  *Explanation* (fin1): Remember: with a finished time, like yesterday, last week, or in 2022, use the simple past. I saw her yesterday. Not: I've seen her yesterday.
+- 41:53  *Quick check* (chk4): Quick check four. Sofia's trip was last summer. We, blank, Canada last summer. Visited, or have visited? Visited. Last summer is a finished time, so we use the simple past.
+### 42:11  Time words  *(info, 0:24)*
 Let the card build up. Ask: *Which one is new for you?*
 
-### 42:42  Dialogue: Sofia / Daniel  *(skit, 0:24)*
+### 42:36  Dialogue: Sofia / Daniel  *(skit, 0:22)*
 Listening: the characters speak in speech bubbles. Ask *How many present perfect sentences can you hear?*
 
-### 43:07  Present perfect or simple past?  *(choose, 1:32)*
+### 42:59  Present perfect or simple past?  *(choose, 1:32)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. I **went** to Paris in 2019.  — In twenty nineteen is a finished time. Use the simple past.
@@ -382,23 +382,23 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 6. When **did** you finish the report?  — With when, we ask about a finished time. Use did.
 
 
-## Notes  ·  starts 44:40
+## Notes  ·  starts 44:32
 
-- 44:40  *Explanation* (usn): American English note: the simple past is also common with just, already, and yet. Both are normal. I just ate. I already finished. Did you finish yet?
-- 44:52  *Explanation* (gone1): Where's Sofia? She's gone to London.
-- 44:56  *Explanation* (gone2): Gone: she is away, on her trip. She's been to London. Been: she visited London at some time. This is an experience.
-### 45:05  Been or gone?  *(choose, 0:42)*
+- 44:32  *Explanation* (usn): American English note: the simple past is also common with just, already, and yet. Both are normal. I just ate. I already finished. Did you finish yet?
+- 44:44  *Explanation* (gone1): Where's Sofia? She's gone to London.
+- 44:48  *Explanation* (gone2): Gone: she is away, on her trip. She's been to London. Been: she visited London at some time. This is an experience.
+### 44:57  Been or gone?  *(choose, 0:42)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. Where's Daniel? He'll be back soon. He's **gone** to the bank.  — Gone means he is away now.
 2. It's a beautiful city. I've **been** to Rome twice.  — Been means a visit, and then I came back.
 3. Sofia isn't here. She's **gone** to London.  — Gone means she is there now, on her trip.
 
-- 45:49  *Explanation* (cont): One more related form is the present perfect continuous. It can also describe situations that continue, but it is a separate form, and it is not in this lesson.
+- 45:41  *Explanation* (cont): One more related form is the present perfect continuous. It can also describe situations that continue, but it is a separate form, and it is not in this lesson.
 
-## Mixed practice  ·  starts 46:01
+## Mixed practice  ·  starts 45:53
 
-### 46:01  Find the mistake  *(fix, 1:35)*
+### 45:53  Find the mistake  *(fix, 1:35)*
 Error correction: the class spots the mistake and says the corrected sentence.
 
 1. ~~I've seen her yesterday.~~  ->  **I saw her yesterday.**  — Yesterday is a finished time. Use the simple past.
@@ -409,7 +409,7 @@ Error correction: the class spots the mistake and says the corrected sentence.
 6. ~~She's visited Paris last year.~~  ->  **She visited Paris last year.**  — Last year is a finished time. Use the simple past.
 7. ~~Did you ever been to Japan?~~  ->  **Have you ever been to Japan?**  — Use have, plus the past participle.
 
-### 47:37  Which tense?  *(sort, 0:58)*
+### 47:29  Which tense?  *(sort, 0:58)*
 Sorting game: the class says which bin the item belongs to (click a bin to show it), then the answer is revealed.
 
 1. I've just finished.  ->  **present perfect**
@@ -421,7 +421,7 @@ Sorting game: the class says which bin the item belongs to (click a bin to show 
 7. He's lived here since 2020.  ->  **present perfect**
 8. They arrived two hours ago.  ->  **simple past**
 
-### 48:37  Quiz show  *(choose, 2:36)*
+### 48:29  Quiz show  *(choose, 2:36)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. We **have lived** in this city since 2020.  — Since twenty twenty means the situation continues. Use the present perfect.
@@ -436,26 +436,26 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 10. She has **lived** in Canada for ten years.  — Has plus the past participle.
 
 
-## Speaking  ·  starts 51:14
+## Speaking  ·  starts 51:06
 
-### 51:14  Dialogue: Sofia / Maya  *(skit, 0:35)*
+### 51:06  Dialogue: Sofia / Maya  *(skit, 0:30)*
 Listening: the characters speak in speech bubbles. Ask *How many present perfect sentences can you hear?*
 
-### 51:50  Role play  *(pair, 4:15)*
+### 51:38  Role play  *(pair, 4:15)*
 Pair work (breakout rooms or turn-and-talk). A countdown ring runs; the roles swap at half time with a *Switch roles!* banner.
 
 Prompts: Ask: Have you been away?; Say what you've just done.; Say what you've never done.; Ask: How long have you ...?; Say what you haven't done yet.  (4.0 min total, roles: Friend one / Friend two)
 
-### 56:07  Tell the class  *(timer, 1:23)*
+### 55:54  Tell the class  *(timer, 1:23)*
 Whole-class sharing: nominate volunteers during the countdown.
 
 Model sentence: I've just ... I've never ... I haven't ... yet.
 
 
-## Review  ·  starts 57:31
+## Review  ·  starts 57:18
 
-- 57:31  *Explanation* (sum): Let's review. Subject, plus have or has, plus the past participle. Use it for experience, a recent result, a situation that continues, and an unfinished time. For a finished time, use the simple past.
-### 57:46  Exit ticket  *(choose, 1:08)*
+- 57:18  *Explanation* (sum): Let's review. Subject, plus have or has, plus the past participle. Use it for experience, a recent result, a situation that continues, and an unfinished time. For a finished time, use the simple past.
+### 57:33  Exit ticket  *(choose, 1:08)*
 Quiz: the class thinks, answers in chat or by show of hands (or click an option on screen), then the answer and the reason are revealed.
 
 1. I **have** never visited Canada.  — I have never visited. Experience.
@@ -463,8 +463,8 @@ Quiz: the class thinks, answers in chat or by show of hands (or click an option 
 3. She has lived here **since** 2021.  — Since gives the starting point. Still true.
 4. We **went** to the beach last Sunday.  — Last Sunday is a finished time. Simple past.
 
-- 58:55  *Explanation* (speak): Now it's your turn! Say three sentences. Something you've done today. A place you've never visited. Someone you've known for years. Great work. See you in the next lesson!
+- 58:43  *Explanation* (speak): Now it's your turn! Say three sentences. Something you've done today. A place you've never visited. Someone you've known for years. Great work. See you in the next lesson!
 
 ## Timing summary
 
-Total 59:48. Pair work 15:06, class sharing 2:32. Everything else is explanation, whole-class drills and quizzes.
+Total 59:35. Pair work 15:06, class sharing 2:32. Everything else is explanation, whole-class drills and quizzes.

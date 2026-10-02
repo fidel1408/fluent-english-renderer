@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#F3E3C6">
+<canvas id="cv" width="2160" height="1500"></canvas>
+<script src="../src/config.js"></script><script src="../src/util.js"></script><script src="../src/art-person.js"></script>
+<script>
+const FE=window.FE,C=FE.C;
+const cv=document.getElementById('cv'),c=cv.getContext('2d');
+c.fillStyle='#F3E3C6';c.fillRect(0,0,2160,1500);
+function base(x,y,s){return {x,y,s,shirt:C.teal,shirtDark:C.deepTeal,shirtLight:'#8FD0C6',skin:C.skin,skinShade:C.skinShade,skinLight:C.skinLight,hair:C.hair,beard:true,pants:'#2C3A4A',mouth:{open:0,smile:.7},look:[0,0],blink:0,breathe:0}}
+const rest=(side)=>({W:[side*150,26+ (205+178)*0.985],f1:1,f2:1,pref:[side*.5,1],hand:{pose:'relaxed'}});
+const poses=[
+ ['rest',{armL:rest(-1),armR:rest(1)}],
+ ['present R',{armL:rest(-1),armR:{W:[330,-40],f1:.95,f2:.9,pref:[.1,1],hand:{pose:'present',roll:-.1,tS:-1}}}],
+ ['point R',{armL:rest(-1),armR:{W:[300,-60],f1:.95,f2:.95,hand:{pose:'point',tS:-1}}}],
+ ['present both',{armL:{W:[-250,210],f1:.9,f2:.8,pref:[-.3,1],hand:{pose:'open',tS:1,roll:.15}},armR:{W:[250,210],f1:.9,f2:.8,pref:[.3,1],hand:{pose:'open',tS:-1,roll:-.15}}}],
+];
+poses.forEach(([n,p],i)=>{const P=Object.assign(base(270+i*540,520,0.9),p);FE.drawPerson(c,P);c.fillStyle='#000';c.font='28px sans-serif';c.fillText(n,P.x-60,40)});
+// hands closeup row
+const names=['relaxed','open','present','point','wrap'];
+names.forEach((n,i)=>{ const P=Object.assign(base(0,0,1),{});
+ c.save();c.translate(160+i*420,1250);c.scale(3,3);
+ // draw hand alone using a person arm with hidden body? fake: use armR pose with big scale not accessible; replicate via drawPerson clipped
+ c.restore();
+});
+</script>

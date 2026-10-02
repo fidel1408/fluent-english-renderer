@@ -1,0 +1,75 @@
+{
+ "cues": [
+  {
+   "id": "v1",
+   "start": 1.2,
+   "end": 3.8949999999999996,
+   "voice_db": -23.3,
+   "bed_db": -35.6,
+   "margin_db": 12.3
+  },
+  {
+   "id": "v2",
+   "start": 4.7,
+   "end": 6.795,
+   "voice_db": -23.1,
+   "bed_db": -38.1,
+   "margin_db": 15.0
+  },
+  {
+   "id": "v3",
+   "start": 8.1,
+   "end": 10.257,
+   "voice_db": -22.9,
+   "bed_db": -34.3,
+   "margin_db": 11.4
+  },
+  {
+   "id": "v4",
+   "start": 12.55,
+   "end": 15.125,
+   "voice_db": -22.0,
+   "bed_db": -38.4,
+   "margin_db": 16.5
+  },
+  {
+   "id": "v5",
+   "start": 17.45,
+   "end": 20.528,
+   "voice_db": -23.1,
+   "bed_db": -34.6,
+   "margin_db": 11.5
+  },
+  {
+   "id": "v6",
+   "start": 24.6,
+   "end": 29.122,
+   "voice_db": -24.1,
+   "bed_db": -34.1,
+   "margin_db": 10.1
+  }
+ ],
+ "checks": {
+  "pause_narration_silent": true,
+  "sfx_clear_of_speech": true,
+  "peak_dbfs": 0.01,
+  "lufs": -16.2,
+  "true_peak": -2.92,
+  "margin_ge_10db": true,
+  "voice_rms_db": -25.6,
+  "music_rms_db": -22.7,
+  "ambience_rms_db": -31.9,
+  "sfx_rms_db": -34.4,
+  "clean_ending_db": -19.1,
+  "stem_regression": {
+   "lag_ms": 5.0,
+   "corr": 0.9976,
+   "voice": 2.425,
+   "music": 0.849,
+   "ambience": 2.008,
+   "sfx": 2.465,
+   "r2": 0.995,
+   "all_layers_present": true
+  }
+ }
+}

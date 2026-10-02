@@ -1,0 +1,14 @@
+{
+ "frames": 900,
+ "max_upper_arm_angle_deg": 62.8,
+ "at_t": 25.466666666666665,
+ "max_elbow_beyond_torso_units": 112.1,
+ "at_t_out": 11.7,
+ "min_forearm_len": 53.4,
+ "max_upper_arm_len": 180.4,
+ "risky_frames": 8,
+ "risky_ranges": [
+  "25.40",
+  "25.63"
+ ]
+}

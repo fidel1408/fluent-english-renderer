@@ -1,0 +1,15 @@
+{
+  "name": "fluent-english-cafe-video",
+  "private": true,
+  "description": "Pide tu café en inglés — 30 s vertical animated video (canvas + Web Audio), browser preview and MP4 exporter",
+  "scripts": {
+    "voices": "node tools/gen-voices.js",
+    "audio": "node tools/render-audio.js",
+    "export": "node tools/export.js",
+    "cover": "node tools/cover.js",
+    "docs": "node tools/make-docs.js",
+    "verify": "python3 tools/verify-audio.py && node tools/pose-check.js && node tools/test-preview.js",
+    "all": "npm run voices && npm run audio && npm run docs && npm run export && npm run cover && npm run verify"
+  },
+  "devDependencies": { "playwright": "^1.56.1" }
+}

@@ -1,0 +1,20 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const { chromium } = require('playwright');
+import fs from 'fs';
+const browser = await chromium.launch({ args: ['--no-sandbox'] });
+const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+page.on('pageerror', (e) => console.log('[pageerror]', e.message));
+await page.goto('http://127.0.0.1:8123/index.html?export=1');
+await page.evaluate(() => FE.exp.init());
+const url = await page.evaluate(() => {
+  const g = FE.exp.g; g.fillStyle = '#F6E6C3'; g.fillRect(0, 0, 1080, 1920);
+  const A = FE.Art;
+  A.hand(g, 270, 500, Math.PI + 0.3, -1, { curl: 0.5, spread: 0.2, fore: 0.6, scale: 2.4 });
+  A.hand(g, 800, 500, Math.PI - 0.3, 1, { curl: 0.5, spread: 0.2, fore: 0.8, scale: 2.4 });
+  A.hand(g, 270, 1200, 0, -1, { curl: 0.25, spread: 0.25, fore: 1, scale: 2.4 });
+  A.hand(g, 800, 1200, 0, 1, { curl: 0.6, spread: 0.15, fore: 1, scale: 2.4 });
+  return FE.exp.cv.toDataURL('image/png');
+});
+fs.writeFileSync('out/shots/hands.png', Buffer.from(url.split(',')[1], 'base64'));
+await browser.close();

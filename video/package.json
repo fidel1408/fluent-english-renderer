@@ -1,0 +1,11 @@
+{
+  "name": "fluent-english-tacos-video",
+  "private": true,
+  "version": "1.0.0",
+  "description": "30-second vertical lesson: ordering with I'll have",
+  "scripts": {
+    "preview": "npx http-server . -p 8123 -c-1",
+    "export": "node tools/export.mjs",
+    "test:preview": "node tools/preview-test.mjs"
+  }
+}

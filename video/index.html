@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluent English — I'll have two tacos, please (preview)</title>
+<style>
+  @font-face { font-family: "FEHead"; font-weight: 600; src: url(assets/fonts/fredoka-latin-600-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122; }
+  @font-face { font-family: "FEHead"; font-weight: 700; src: url(assets/fonts/fredoka-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122; }
+  @font-face { font-family: "FEBody"; font-weight: 700; src: url(assets/fonts/nunito-latin-700-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122; }
+  @font-face { font-family: "FEIPA"; font-weight: 400; src: url(assets/fonts/charis-regular.woff2) format("woff2"); }
+  :root { --teal:#0F4F55; --tealDark:#0A363B; --cream:#FFF3DA; --lime:#B5D335; --terra:#C65A3E; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#13262a; color:var(--cream); font:16px/1.45 "FEBody","Nunito","Segoe UI",system-ui,sans-serif; }
+  .wrap { display:flex; gap:28px; padding:12px; min-height:100vh; align-items:flex-start; justify-content:center; }
+  #stage { flex:0 0 auto; display:flex; justify-content:center; }
+  canvas { background:#000; border-radius:22px; box-shadow:0 14px 50px rgba(0,0,0,.55); max-width:100%; }
+  .panel { flex:1 1 380px; max-width:520px; padding:6px 4px; }
+  h1 { font:700 24px/1.2 "FEHead",sans-serif; margin:6px 0 2px; color:var(--lime); }
+  p.sub { margin:0 0 14px; color:#cfe0d6; font-size:14px; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0; }
+  button, select { font:700 16px "FEBody",system-ui,sans-serif; border-radius:14px; border:2px solid var(--lime); background:var(--teal); color:var(--cream); padding:10px 16px; min-height:44px; cursor:pointer; }
+  button:hover:not(:disabled) { background:#146069; }
+  button.primary { background:var(--lime); color:var(--tealDark); }
+  button:disabled { opacity:.45; cursor:default; }
+  button:focus-visible, select:focus-visible { outline:3px solid #fff; outline-offset:2px; }
+  select { width:100%; padding:8px 10px; font-weight:600; }
+  label { display:block; font-weight:700; font-size:13px; color:#cfe0d6; margin:12px 0 4px; }
+  .voicerow { display:flex; gap:8px; } .voicerow select { flex:1; min-width:0; } .voicerow button { flex:0 0 auto; padding:8px 12px; }
+  #status { margin:12px 0; padding:10px 12px; border-radius:12px; background:rgba(255,255,255,.07); font-size:14px; min-height:44px; }
+  #clock { float:right; opacity:.8; }
+  .seg { display:inline-flex; border:2px solid var(--lime); border-radius:14px; overflow:hidden; }
+  .seg button { border:0; border-radius:0; background:transparent; min-height:40px; padding:8px 12px; font-size:14px; }
+  .seg button[aria-checked="true"] { background:var(--lime); color:var(--tealDark); }
+  .note { font-size:13px; color:#b9cfc4; margin-top:14px; }
+  @media (max-width: 860px) { .wrap { flex-direction:column; align-items:center; } .panel { max-width:none; width:100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div id="stage"><canvas id="cv" width="1080" height="1920" aria-label="Animated preview, 9:16"></canvas></div>
+  <div class="panel">
+    <h1>I'll have two tacos, please.</h1>
+    <p class="sub">Fluent English · 9:16 short · speech, music and effects are generated in your browser</p>
+    <div class="row">
+      <button id="btnStart" class="primary">Start</button>
+      <button id="btnPause">Pause</button>
+      <button id="btnReplay">Replay</button>
+      <button id="btnMute" aria-pressed="false">Mute</button>
+    </div>
+    <div class="row">
+      <button id="btnCC">CC: Captions + IPA</button>
+      <span class="seg" role="radiogroup" aria-label="Caption mode">
+        <button role="radio" data-cc="0" aria-checked="false">Off</button>
+        <button role="radio" data-cc="1" aria-checked="false">Captions</button>
+        <button role="radio" data-cc="2" aria-checked="true">Captions + IPA</button>
+      </span>
+    </div>
+    <div id="status" role="status" aria-live="polite">Loading…</div>
+    <span id="clock">0.0 s</span>
+    <label for="voice_es">Spanish narrator voice</label>
+    <div class="voicerow"><select id="voice_es"></select><button id="test_es" type="button">Test</button></div>
+    <label for="voice_en">English example voice (American)</label>
+    <div class="voicerow"><select id="voice_en"></select><button id="test_en" type="button">Test</button></div>
+    <p class="note">
+      Voices come from your browser/OS speech engine, so quality varies by device (natural/neural voices sound best — try Edge, or Chrome with Google voices).
+      Scene changes follow the real end of each spoken line; the four-second silence is fixed.
+      CC and IPA settings are remembered. Space = start/pause.<br>
+      IPA = Oxford-style American English (see README for how it was checked).
+    </p>
+  </div>
+</div>
+<script src="src/config.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/speech.js"></script>
+<script src="src/art.js"></script>
+<script src="src/scenes.js"></script>
+<script src="src/player.js"></script>
+<script src="src/export-api.js"></script>
+</body>
+</html>

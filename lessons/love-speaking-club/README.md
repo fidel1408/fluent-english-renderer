@@ -5,7 +5,9 @@ operates it while students speak. It is a separate lesson in `lessons/love-speak
 
 ## Launch
 
-1. Open `lessons/love-speaking-club/index.html` in Chrome, Edge or Safari (double-click works; no server, no network, no install).
+**Easiest: open `love-speaking-club.html`** — one self-contained file (3.4 MB: code, fonts, logo, sound chart and all narration inlined). It also works inside editor/preview panes that do not load sibling files (which is why `index.html` alone shows an error there). Download it and double-click it for the best experience. Rebuild it after any edit with `python3 tools/build-single.py`.
+
+1. Or open `lessons/love-speaking-club/index.html` in Chrome, Edge or Safari (double-click works; no server, no network, no install).
 2. Click **Start the show** (this is what allows sound to start). Share the browser window (or the tab) in Zoom.
 3. **F** = full screen, **H** = hide/show the bottom controls, **→ / ←** next / back, **R** replay, **P** pause, **M** music.
 

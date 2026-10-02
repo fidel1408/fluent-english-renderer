@@ -370,19 +370,28 @@ $('#ccBtn').onclick = () => { ST.ccMode = (ST.ccMode + 1) % 3; try { localStorag
 $('#safeBtn').onclick = () => { ST.safe = !ST.safe; $('#safeBtn').classList.toggle('on', ST.safe); };
 paintCC(); $('#ccBtn').textContent = '⌨ ' + CC_NAMES[ST.ccMode];
 
+function roleNote(k) {
+  const v = Speech.sel[k], want = Speech.ROLE[k].gender, g = v ? Speech.gender(v) : '?';
+  let n = Speech.quality(v);
+  if (v && g === '?') n += ' Gender could not be detected from the name – listen with Test and pick a ' + (want === 'm' ? 'male' : 'female') + ' voice.';
+  else if (v && g !== want) n += ' ⚠ This is a ' + (g === 'm' ? 'male' : 'female') + ' voice but this role needs a ' + (want === 'm' ? 'male' : 'female') + ' one.';
+  return n;
+}
 function fillVoices() {
   ['es', 'en'].forEach(k => {
     const sel = $('#v_' + k); sel.innerHTML = '';
-    Speech.lists[k].forEach(v => { const o = document.createElement('option'); o.value = v.voiceURI; o.textContent = `${v.name} (${v.lang})`; if (Speech.sel[k] === v) o.selected = true; sel.appendChild(o); });
+    Speech.lists[k].forEach(v => { const o = document.createElement('option'); o.value = v.voiceURI; o.textContent = `${v.name} (${v.lang}) · ${({ m: 'male', f: 'female', '?': 'gender unknown' })[Speech.gender(v)]}`; if (Speech.sel[k] === v) o.selected = true; sel.appendChild(o); });
     if (!Speech.lists[k].length) { const o = document.createElement('option'); o.textContent = 'No voice installed'; sel.appendChild(o); }
-    $('#q_' + k).textContent = Speech.quality(Speech.sel[k]);
+    $('#q_' + k).textContent = roleNote(k);
   });
   $('#speechNote').style.display = Speech.supported ? 'none' : 'block';
 }
 ['es', 'en'].forEach(k => {
-  $('#v_' + k).onchange = e => { Speech.choose(k, e.target.value); $('#q_' + k).textContent = Speech.quality(Speech.sel[k]); };
+  $('#v_' + k).onchange = e => { Speech.choose(k, e.target.value); $('#q_' + k).textContent = roleNote(k); };
   $('#t_' + k).onclick = () => { if (ST.running) return; Aud.init(); Speech.cancel(); Speech.say(k, k === 'es' ? 'Estoy de acuerdo contigo.' : 'I agree with you.'); };
 });
+const spd = $('#speed'); spd.value = Speech.speed; $('#speedV').textContent = Speech.speed.toFixed(2) + '×';
+spd.oninput = () => { Speech.setSpeed(+spd.value); $('#speedV').textContent = (+spd.value).toFixed(2) + '×'; };
 Speech.onVoices = fillVoices; Speech.load(); fillVoices(); setTimeout(() => { Speech.load(); }, 600);
 
 // copy helpers

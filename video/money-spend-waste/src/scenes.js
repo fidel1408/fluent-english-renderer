@@ -2,7 +2,8 @@
 import { C, f, clamp, seg, smooth, easeOut, pop, poseAt, rad } from './util.js';
 import { man, REST_L, REST_R } from './man.js';
 import { coin, sparkle, apple, bag, basket, gadgetBox, iconBooks, iconFood, iconGame, iconTravel, bust } from './props.js';
-import { CLIPS, PAUSE } from './timeline.js';
+import { CLIPS, PAUSE, SCENES } from './timeline.js';
+const SC = (id) => SCENES.find(s => s.id === id).t0;
 
 const speaking = (t) => CLIPS.some(c => c.lang === 'en' && t >= c.start && t <= c.start + c.dur);
 const talk = (t, amt = 0.55) => { const w = Math.abs(Math.sin(t * 13.5)) * Math.abs(Math.sin(t * 5.3 + 1)); return amt * (0.25 + 0.75 * w); };
@@ -48,7 +49,7 @@ export function sceneHook(t, mode) {
 
 // ---------- 2. SPEND (groceries) ----------
 export function sceneSpend(t, mode) {
-  const lt = t - 3.7;
+  const lt = t - SC('spend');
   let crates = '';
   const produce = [[C.coral, '#E5343A'], ['#FF9A2E', '#D9731A'], ['#58B957', '#2F8A3D'], ['#F7E04B', '#C9AE1F']];
   for (let row = 0; row < 3; row++) {
@@ -90,7 +91,7 @@ export function sceneSpend(t, mode) {
 
 // ---------- 3. WASTE (unused gadget) ----------
 export function sceneWaste(t, mode) {
-  const lt = t - 10.3;
+  const lt = t - SC('waste');
   let shelf = '';
   const plants = [[160, C.emerald], [880, C.teal]];
   let books = '';
@@ -133,7 +134,7 @@ export function sceneWaste(t, mode) {
 
 // ---------- 4. SPEAK ----------
 export function sceneSpeak(t, mode) {
-  const lt = t - 17.0;
+  const lt = t - SC('speak');
   let rays = '';
   for (let i = 0; i < 14; i++) rays += `<path d="M540,860 L${f(540 + Math.cos(i * Math.PI / 7 + t * .06) * 1200)},${f(860 + Math.sin(i * Math.PI / 7 + t * .06) * 1200)} L${f(540 + Math.cos((i + .5) * Math.PI / 7 + t * .06) * 1200)},${f(860 + Math.sin((i + .5) * Math.PI / 7 + t * .06) * 1200)}Z" fill="#fff" opacity=".035"/>`;
   let conf = '';
@@ -172,7 +173,7 @@ export function sceneSpeak(t, mode) {
 
 // ---------- 5. CTA ----------
 export function sceneCta(t, mode, logoHref) {
-  const lt = t - 23.0;
+  const lt = t - SC('cta');
   const wave = (y, c, o, ph) => `<path d="M0,${y} q135,-40 270,0 t270,0 t270,0 t270,0 V1920 H0Z" fill="${c}" opacity="${o}" transform="translate(${f(Math.sin(t * .7 + ph) * 18)} 0)"/>`;
   const bg = bgRect('#FBF4E4', '#F1E6CC', 'g5') + wave(560, C.teal, .16, 0) + wave(640, C.emerald, .14, 1.4) +
     `<circle cx="940" cy="330" r="150" fill="${C.gold}" opacity=".16"/>`;

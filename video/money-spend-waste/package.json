@@ -7,7 +7,9 @@
     "preview": "npx http-server . -p 8765 -c-1",
     "render": "node scripts/render.mjs",
     "cover": "node scripts/cover.mjs",
-    "measure-audio": "node scripts/measure_audio.mjs"
+    "audio": "node scripts/render_audio.mjs",
+    "test-sound": "node scripts/test_sound.mjs",
+    "all": "bash scripts/finish_with_audio.sh"
   },
   "devDependencies": { "playwright": "^1.56.1" }
 }

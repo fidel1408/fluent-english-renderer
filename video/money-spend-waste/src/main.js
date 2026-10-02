@@ -2,6 +2,8 @@ import { C, f, seg, smooth, pop } from './util.js';
 import { SCENES, CLIPS, CAPTIONS, SENTENCES, HOOK_PHRASES, DURATION, applyTiming } from './timeline.js';
 import { sceneHook, sceneSpend, sceneWaste, sceneSpeak, sceneCta } from './scenes.js';
 import { sentenceCard, captionPill, ctaButton, measure } from './ui.js';
+import { renderStems, loadVoiceBuffers, mixdown, toWav, LAYERS, DEFAULT_GAINS, SR } from './soundtrack.js';
+import { Player } from './player.js';
 
 const params = new URLSearchParams(location.search);
 const EXPORT = params.has('export');
@@ -46,13 +48,13 @@ export function frameSVG(t, m = mode) {
     out += `<g opacity="${f(o)}" transform="translate(540 960) scale(${f(zoom)}) translate(-540 -960)">${fns[sc.id](t, m)}</g>`;
   });
   // ---- overlays: always-on teaching graphics ----
-  if (t < SCENES[0].t1 + 0.1) out += `<g opacity="${f(1 - smooth(seg(t, 3.45, 3.7)))}">${hookCards(t, m)}</g>`;
+  if (t < SCENES[0].t1 + 0.1) out += `<g opacity="${f(1 - smooth(seg(t, SCENES[0].t1 - 0.25, SCENES[0].t1)))}">${hookCards(t, m)}</g>`;
   if (t >= SENTENCES.speak.shown[0] - 0.1 && t < SCENES[3].t1 + .2) out += sentenceCard(SENTENCES.speak, t, Math.max(m, 1), { cy: 585, engPx: 58, maxW: 800 });
   out += sentenceCard(SENTENCES.spend, t, m, { cy: 400 });
   out += sentenceCard(SENTENCES.waste, t, m, { cy: 400 });
   const cap = CAPTIONS.find(c => t >= c.t0 && t <= c.t1);
-  if (cap) out += captionPill(cap.lines, t, cap, m, { cy: t < 3.7 ? 1500 : (cap.lines.length > 1 ? 1470 : 1450) });
-  if (t >= 23.9) out += ctaButton(t, 23.9);
+  if (cap) out += captionPill(cap.lines, t, cap, m, { cy: t < SCENES[0].t1 ? 1500 : (cap.lines.length > 1 ? 1470 : 1450) });
+  if (t >= SCENES[4].t0 + 0.9) out += ctaButton(t, SCENES[4].t0 + 0.9);
   out += '</g></svg>';
   return out;
 }
@@ -67,64 +69,54 @@ export function coverSVG() {
     <g transform="translate(540 1600)"><rect x="-215" y="-117" width="430" height="234" rx="32" fill="#fff"/><image href="${LOGO}" x="-200" y="-109" width="400" height="218" preserveAspectRatio="xMidYMid meet"/></g></g></svg>`;
 }
 
-// ---------- audio (preview only; real clips are optional and currently pending) ----------
-const audio = { clips: {}, available: 0 };
-async function loadAudio() {
-  let manifest = null;
-  try { manifest = await (await fetch('audio/manifest.json', { cache: 'no-store' })).json(); } catch (e) { /* none */ }
-  const map = manifest?.clips ?? {};
-  if (manifest?.timing) applyTiming(manifest.timing);   // measured durations from real audio (scripts/measure_audio.mjs)
-  for (const c of CLIPS) {
-    const file = map[c.id];
-    if (!file) continue;
-    try {
-      const r = await fetch(file, { method: 'HEAD' });
-      if (!r.ok) continue;
-      const a = new Audio(file); a.preload = 'auto';
-      audio.clips[c.id] = a; audio.available++;
-    } catch (e) { /* missing */ }
-  }
-  const badge = document.getElementById('audioBadge');
-  if (badge) {
-    badge.textContent = audio.available === CLIPS.length ? 'Voiceover: loaded' : `Voiceover PENDING (${audio.available}/${CLIPS.length} clips)`;
-    badge.className = audio.available === CLIPS.length ? 'ok' : 'pending';
-  }
-}
-function stopAll() { for (const a of Object.values(audio.clips)) { try { a.pause(); a.currentTime = 0; } catch (e) {} } started.clear(); }
-const started = new Set();
-function syncAudio(t, playing) {
-  if (!playing || muted) return;
-  for (const c of CLIPS) {
-    const a = audio.clips[c.id]; if (!a) continue;
-    if (!started.has(c.id) && t >= c.start && t < c.start + c.dur + 0.4) {
-      started.add(c.id);
-      try { a.currentTime = Math.max(0, t - c.start); a.play().catch(() => {}); } catch (e) {}
-    }
-  }
+// ---------- sound: stems are synthesised in code (src/soundtrack.js); narration is locally synthesised WAV (audio/*.wav) ----------
+const MIX_KEY = 'fluentEnglishMix';
+let gains = { ...DEFAULT_GAINS }, muted = false, stemsP = null, stems = null, player = null, voiceFound = 0;
+try { const m = JSON.parse(localStorage.getItem(MIX_KEY)); if (m) { gains = { ...gains, ...m.gains }; muted = !!m.muted; } } catch (e) { /* storage unavailable */ }
+const saveMix = () => { try { localStorage.setItem(MIX_KEY, JSON.stringify({ gains, muted })); } catch (e) {} };
+const setBadge = (txt, cls) => { const b = document.getElementById('audioBadge'); if (b) { b.textContent = txt; b.className = cls; } };
+
+function prepareSound() {
+  if (!stemsP) stemsP = (async () => {
+    setBadge('Preparing sound…', 'pending');
+    const voice = await loadVoiceBuffers(); voiceFound = Object.keys(voice).length;
+    stems = await renderStems(voice);
+    setBadge(voiceFound === CLIPS.length ? 'Sound ready (narration + music + ambience + effects)' : `Narration missing (${voiceFound}/${CLIPS.length} clips) — music/effects only`, voiceFound === CLIPS.length ? 'ok' : 'pending');
+    return stems;
+  })();
+  return stemsP;
 }
 
 // ---------- preview player ----------
-let T = 0, playing = false, last = 0, muted = false;
+let T = 0, playing = false, last = 0, anchor = null, started = false;
 function draw(t) { stage.innerHTML = frameSVG(t, mode); const r = document.getElementById('time'); if (r) { r.textContent = t.toFixed(1) + ' / ' + DURATION.toFixed(1) + ' s'; document.getElementById('scrub').value = t; } }
+function label() { const b = document.getElementById('play'); if (b) b.textContent = playing ? 'Pause' : (T >= DURATION ? 'Replay' : (started ? 'Resume' : 'Start')); const o = document.getElementById('startOverlay'); if (o) o.style.display = started ? 'none' : 'flex'; }
 function tick(now) {
   if (playing) {
-    T += (now - last) / 1000;
-    if (T >= DURATION) { T = DURATION; setPlaying(false); }
-    syncAudio(T, true);
+    if (player && player.running && anchor) T = Math.min(DURATION, anchor.T0 + (player.ctx.currentTime - anchor.ctxTime));   // visuals follow the audio clock
+    else T = Math.min(DURATION, T + (now - last) / 1000);
+    if (T >= DURATION) { stopPlayback(); label(); }
   }
   last = now; draw(T);
   requestAnimationFrame(tick);
 }
-function setPlaying(p) {
-  playing = p;
-  document.getElementById('play').textContent = p ? 'Pause' : (T >= DURATION ? 'Replay' : 'Play');
-  if (!p) for (const a of Object.values(audio.clips)) { try { a.pause(); } catch (e) {} }
-  else if (T >= DURATION) { T = 0; stopAll(); }
+function stopPlayback() { playing = false; anchor = null; if (player) player.stop(); }
+async function startAt(t) {
+  const st = await prepareSound();
+  if (!player) player = new Player(st, gains, muted);
+  await player.ensureRunning();
+  T = t; player.start(t); anchor = { T0: t, ctxTime: player.startedAtCtx }; playing = true; started = true; label();
+}
+async function toggle() {
+  if (playing) { stopPlayback(); label(); return; }
+  await startAt(T >= DURATION ? 0 : T);
 }
 function setMode(m) {
   mode = m; try { localStorage.setItem(MODE_KEY, String(m)); } catch (e) {}
   const b = document.getElementById('cc'); if (b) b.textContent = MODE_LABELS[m];
 }
+function applyGain(L, v) { gains[L] = v; if (player) player.setGain(L, v); saveMix(); }
+function applyMute(m) { muted = m; if (player) player.setMuted(m); saveMix(); const b = document.getElementById('mute'); if (b) b.textContent = m ? 'Unmute' : 'Mute'; }
 
 async function init() {
   await Promise.all([
@@ -133,26 +125,35 @@ async function init() {
   ]);
   await document.fonts.ready;
   try { const mf = await (await fetch('audio/manifest.json', { cache: 'no-store' })).json(); if (mf?.timing) applyTiming(mf.timing); } catch (e) { /* no manifest */ }
-  // preload logo so exported frames never miss it
-  await new Promise((res) => { const i = new Image(); i.onload = res; i.onerror = res; i.src = LOGO; });
+  await new Promise((res) => { const i = new Image(); i.onload = res; i.onerror = res; i.src = LOGO; });   // preload logo so exported frames never miss it
   window.__frame = (t, m = mode) => { stage.innerHTML = frameSVG(t, m); return new Promise(r => requestAnimationFrame(() => r(true))); };
   window.__duration = DURATION;
+  // Export hook: renders the 4 stems + the final mix with the SAME code as the preview and returns them as base64 WAV.
+  window.__renderAudio = async (g = DEFAULT_GAINS) => {
+    const voice = await loadVoiceBuffers(); const st = await renderStems(voice); const mix = await mixdown(st, g);
+    const b64 = (buf) => { const u = new Uint8Array(toWav(buf)); let s = ''; for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s); };
+    return { voiceClips: Object.keys(voice).length, mix: b64(mix), ...Object.fromEntries(LAYERS.map(L => [L, b64(st[L])])) };
+  };
   window.__ready = true;
   window.__cover = () => { stage.innerHTML = coverSVG(); return new Promise(r => requestAnimationFrame(() => r(true))); };
   if (params.has('cover')) { document.body.classList.add('export'); stage.innerHTML = coverSVG(); return; }
   if (EXPORT) { document.body.classList.add('export'); draw(0); return; }
-  await loadAudio();
-  setMode(mode);
+  // ---- interactive preview ----
+  setMode(mode); applyMute(muted);
+  for (const L of LAYERS) { const el = document.getElementById('vol_' + L); if (el) { el.value = Math.round(gains[L] * 100); el.oninput = () => applyGain(L, el.value / 100); } }
   const scrub = document.getElementById('scrub'); scrub.max = DURATION; scrub.step = 0.02;
-  scrub.oninput = () => { stopAll(); T = parseFloat(scrub.value); if (playing) { } draw(T); };
-  document.getElementById('play').onclick = () => { if (!playing) { if (T >= DURATION) { T = 0; } stopAll(); } setPlaying(!playing); if (playing) { for (const c of CLIPS) if (T > c.start + c.dur) started.add(c.id); } };
-  document.getElementById('restart').onclick = () => { stopAll(); T = 0; setPlaying(true); };
+  scrub.oninput = async () => { const t = parseFloat(scrub.value); T = t; if (playing) await startAt(t); else draw(t); };
+  document.getElementById('play').onclick = () => toggle();
+  document.getElementById('startOverlay').onclick = () => toggle();
+  document.getElementById('restart').onclick = () => startAt(0);
   document.getElementById('cc').onclick = () => setMode((mode + 1) % 3);
-  document.getElementById('mute').onclick = (e) => { muted = !muted; e.target.textContent = muted ? 'Unmute' : 'Mute'; if (muted) stopAll(); };
+  document.getElementById('mute').onclick = () => applyMute(!muted);
   document.getElementById('safe').onclick = () => document.body.classList.toggle('showsafe');
-  addEventListener('keydown', (e) => { if (e.code === 'Space') { e.preventDefault(); document.getElementById('play').click(); } if (e.key === 'c') document.getElementById('cc').click(); });
-  const fit = () => { const s = Math.min((innerHeight - 96) / 1920, innerWidth / 1080); document.getElementById('wrap').style.transform = `scale(${s})`; document.getElementById('holder').style.width = 1080 * s + 'px'; document.getElementById('holder').style.height = 1920 * s + 'px'; };
+  addEventListener('keydown', (e) => { if (e.code === 'Space') { e.preventDefault(); toggle(); } if (e.key === 'c') document.getElementById('cc').click(); if (e.key === 'm') document.getElementById('mute').click(); });
+  const fit = () => { const s = Math.min((innerHeight - 150) / 1920, innerWidth / 1080); document.getElementById('wrap').style.transform = `scale(${s})`; document.getElementById('holder').style.width = 1080 * s + 'px'; document.getElementById('holder').style.height = 1920 * s + 'px'; };
   addEventListener('resize', fit); fit();
+  window.__player = () => player;
+  label(); prepareSound();   // build the soundtrack in the background while the page is idle
   requestAnimationFrame((n) => { last = n; tick(n); });
 }
 init();

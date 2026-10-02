@@ -13,6 +13,8 @@
   #holder { margin-top: 8px; position: relative; flex: none; }
   #wrap { width: 1080px; height: 1920px; transform-origin: 0 0; position: absolute; left: 0; top: 0; background: #000; }
   #stage { width: 1080px; height: 1920px; }
+  #startOverlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(7,20,43,.45); cursor: pointer; z-index: 5; }
+  .bigplay { font: 900 84px Nunito, sans-serif; color: #fff; background: #0E9F6E; border: 8px solid #fff; border-radius: 999px; padding: 26px 70px; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
   #safe-overlay { display: none; position: absolute; inset: 0; pointer-events: none; }
   body.showsafe #safe-overlay { display: block; }
   #safe-overlay div { position: absolute; left: 0; width: 100%; background: rgba(255,0,80,.18); border: 2px dashed rgba(255,0,80,.7); font-size: 28px; padding: 6px 14px; box-sizing: border-box; }
@@ -20,12 +22,14 @@
   button { font: 800 15px Nunito, sans-serif; border: 0; border-radius: 999px; padding: 9px 16px; background: #0E9F6E; color: #fff; cursor: pointer; }
   button#cc { background: #F6B73C; color: #0B2347; }
   input[type=range] { width: 200px; }
+  #mixer { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; font-size: 13px; font-weight: 800; }
+  #mixer input { width: 90px; vertical-align: middle; }
   #time { font-variant-numeric: tabular-nums; font-size: 14px; min-width: 110px; }
   #audioBadge { font-size: 13px; padding: 5px 10px; border-radius: 999px; background: #FF6B57; color: #fff; font-weight: 800; }
   #audioBadge.ok { background: #0E9F6E; }
   /* export mode: nothing but the stage — no controls, no cursor */
   body.export { cursor: none; overflow: hidden; background: #000; }
-  body.export #bar, body.export #safe-overlay { display: none !important; }
+  body.export #bar, body.export #safe-overlay, body.export #startOverlay { display: none !important; }
   body.export #app { display: block; }
   body.export #holder { margin: 0; width: 1080px !important; height: 1920px !important; }
   body.export #wrap { transform: none !important; }
@@ -34,14 +38,19 @@
 <body>
 <div id="app">
   <div id="holder"><div id="wrap"><div id="stage"></div>
+    <div id="startOverlay" title="Start"><div class="bigplay">&#9654; Start</div></div>
     <div id="safe-overlay"><div style="top:0;height:250px">Platform top UI zone</div><div style="top:1580px;height:340px">Platform bottom UI zone</div></div></div></div>
   <div id="bar">
     <button id="play">Play</button><button id="restart">Restart</button>
-    <input id="scrub" type="range" min="0" max="28.8" step="0.02" value="0" aria-label="Timeline">
-    <span id="time">0.0 / 28.8 s</span>
+    <input id="scrub" type="range" min="0" max="28.9" step="0.02" value="0" aria-label="Timeline">
+    <span id="time">0.0 / 28.9 s</span>
     <button id="cc" title="Cycle: Off, Captions, Captions + IPA (key: C)">CC/IPA</button>
     <button id="mute">Mute</button><button id="safe">Safe zones</button>
-    <span id="audioBadge" class="pending">Voiceover PENDING</span>
+    <span id="audioBadge" class="pending">Sound not started</span>
+    <span id="mixer"><label>Voice <input id="vol_voice" type="range" min="0" max="100"></label>
+      <label>Music <input id="vol_music" type="range" min="0" max="100"></label>
+      <label>Ambience <input id="vol_ambience" type="range" min="0" max="100"></label>
+      <label>Effects <input id="vol_sfx" type="range" min="0" max="100"></label></span>
   </div>
 </div>
 <script type="module" src="src/main.js"></script>

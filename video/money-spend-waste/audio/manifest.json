@@ -1,1 +1,11 @@
-{"clips":{}}
+{
+  "clips": {
+    "es_hook": "audio/es_hook.wav",
+    "en_spend": "audio/en_spend.wav",
+    "es_spend": "audio/es_spend.wav",
+    "en_waste": "audio/en_waste.wav",
+    "es_waste": "audio/es_waste.wav",
+    "es_speak": "audio/es_speak.wav",
+    "es_cta": "audio/es_cta.wav"
+  }
+}

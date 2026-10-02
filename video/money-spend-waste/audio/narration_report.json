@@ -1,0 +1,51 @@
+{
+  "es_hook": {
+    "dur": 3.34,
+    "text": "¿Gastar dinero y desperdiciarlo se dicen igual en inglés?",
+    "asr": "gastar dinero y desperdiciarlo se dicen igual en inglés.",
+    "rms": 0.085,
+    "peak": 0.49
+  },
+  "en_spend": {
+    "dur": 1.82,
+    "text": "I spend money on groceries.",
+    "asr": "I spend money on groceries.",
+    "rms": 0.085,
+    "peak": 0.443
+  },
+  "es_spend": {
+    "dur": 4.09,
+    "text": "Spend es gastar. No significa que sea algo malo.",
+    "asr": "\"Spend\" es gastar, no significa que sea algo malo.",
+    "rms": 0.0843,
+    "peak": 0.546
+  },
+  "en_waste": {
+    "dur": 1.86,
+    "text": "I wasted money on this gadget.",
+    "asr": "I wasted money on this gadget.",
+    "rms": 0.085,
+    "peak": 0.49
+  },
+  "es_waste": {
+    "dur": 2.49,
+    "text": "Waste expresa que no valió la pena.",
+    "asr": "Waste expresa que no valió la pena.",
+    "rms": 0.0838,
+    "peak": 0.558
+  },
+  "es_speak": {
+    "dur": 2.71,
+    "text": "¿Y tú? Completa la frase en voz alta.",
+    "asr": "y tú, completa la frase en voz alta.",
+    "rms": 0.0805,
+    "peak": 0.46
+  },
+  "es_cta": {
+    "dur": 5.22,
+    "text": "Practica inglés con Fluent English. Escríbenos INGLÉS por mensaje.",
+    "asr": "Practica inglés con fluent English. Escríbenos inglés por mensaje.",
+    "rms": 0.0793,
+    "peak": 0.519
+  }
+}

@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# One command once the 7 clips exist in audio/ (recorded, or made with scripts/generate_voiceover.mjs):
-#   bash scripts/finish_with_audio.sh
-# measures real durations -> re-times captions -> mixes the voice track -> renders the 3 MP4 variants WITH sound.
+# Full soundtrack build + final videos, no external services:
+#   (optional) python3 voice/build_narration.py     # re-synthesise narration with local neural voices (see voice/README.md)
+#   node scripts/render_audio.mjs                   # music + ambience + effects (Web Audio) + narration -> audio/export/soundtrack.wav
+#   node scripts/render.mjs --audio ...             # muxes it into the three MP4 variants
 set -euo pipefail
 cd "$(dirname "$0")/.."
-node scripts/measure_audio.mjs --write
-node scripts/mix_audio.mjs
-for m in 2 1 0; do node scripts/render.mjs --mode "$m" --audio audio/voiceover_mix.wav --out "output/spend-or-waste_mode${m}_with-audio.mp4"; done
-echo "Done. Listen to output/*_with-audio.mp4 before approving."
+node scripts/render_audio.mjs "$@"
+python3 scripts/analyze_audio.py
+for m in 2 1 0; do node scripts/render.mjs --mode "$m" --audio audio/export/soundtrack.wav --out "output/spend-or-waste_mode${m}.mp4"; done
+python3 scripts/verify_video_audio.py output/spend-or-waste_mode2.mp4

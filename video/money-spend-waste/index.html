@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluent English — Spend or Waste?</title>
+<style>
+  @font-face { font-family: 'Nunito'; src: url('assets/fonts/Nunito.ttf'); font-weight: 200 1000; }
+  @font-face { font-family: 'Noto Sans'; src: url('assets/fonts/NotoSans.ttf'); font-weight: 100 900; }
+  :root { color-scheme: dark; }
+  html, body { margin: 0; background: #07142B; height: 100%; overflow: hidden; font-family: Nunito, system-ui, sans-serif; color: #FBF4E4; }
+  #app { display: flex; flex-direction: column; align-items: center; height: 100%; }
+  #holder { margin-top: 8px; position: relative; flex: none; }
+  #wrap { width: 1080px; height: 1920px; transform-origin: 0 0; position: absolute; left: 0; top: 0; background: #000; }
+  #stage { width: 1080px; height: 1920px; }
+  #safe-overlay { display: none; position: absolute; inset: 0; pointer-events: none; }
+  body.showsafe #safe-overlay { display: block; }
+  #safe-overlay div { position: absolute; left: 0; width: 100%; background: rgba(255,0,80,.18); border: 2px dashed rgba(255,0,80,.7); font-size: 28px; padding: 6px 14px; box-sizing: border-box; }
+  #bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: center; padding: 10px; }
+  button { font: 800 15px Nunito, sans-serif; border: 0; border-radius: 999px; padding: 9px 16px; background: #0E9F6E; color: #fff; cursor: pointer; }
+  button#cc { background: #F6B73C; color: #0B2347; }
+  input[type=range] { width: 200px; }
+  #time { font-variant-numeric: tabular-nums; font-size: 14px; min-width: 110px; }
+  #audioBadge { font-size: 13px; padding: 5px 10px; border-radius: 999px; background: #FF6B57; color: #fff; font-weight: 800; }
+  #audioBadge.ok { background: #0E9F6E; }
+  /* export mode: nothing but the stage — no controls, no cursor */
+  body.export { cursor: none; overflow: hidden; background: #000; }
+  body.export #bar, body.export #safe-overlay { display: none !important; }
+  body.export #app { display: block; }
+  body.export #holder { margin: 0; width: 1080px !important; height: 1920px !important; }
+  body.export #wrap { transform: none !important; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="holder"><div id="wrap"><div id="stage"></div>
+    <div id="safe-overlay"><div style="top:0;height:250px">Platform top UI zone</div><div style="top:1580px;height:340px">Platform bottom UI zone</div></div></div></div>
+  <div id="bar">
+    <button id="play">Play</button><button id="restart">Restart</button>
+    <input id="scrub" type="range" min="0" max="28.8" step="0.02" value="0" aria-label="Timeline">
+    <span id="time">0.0 / 28.8 s</span>
+    <button id="cc" title="Cycle: Off, Captions, Captions + IPA (key: C)">CC/IPA</button>
+    <button id="mute">Mute</button><button id="safe">Safe zones</button>
+    <span id="audioBadge" class="pending">Voiceover PENDING</span>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

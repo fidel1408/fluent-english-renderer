@@ -1,0 +1,13 @@
+{
+  "name": "fluent-english-money-spend-waste",
+  "private": true,
+  "type": "module",
+  "description": "Fluent English — MONEY: spend vs waste (9:16 animated video, HTML/SVG source + renderer)",
+  "scripts": {
+    "preview": "npx http-server . -p 8765 -c-1",
+    "render": "node scripts/render.mjs",
+    "cover": "node scripts/cover.mjs",
+    "measure-audio": "node scripts/measure_audio.mjs"
+  },
+  "devDependencies": { "playwright": "^1.56.1" }
+}

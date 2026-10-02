@@ -1,5 +1,8 @@
 # Fluent English Renderer
 
+> **New:** [`video/`](video/README.md) — a 30 s vertical (1080×1920) animated lesson, “How to say your age”, with
+> code‑generated music/SFX, browser‑speech voices, CC/IPA modes and an MP4 exporter. Open `video/index.html`.
+
 A Node.js/TypeScript API that renders Fluent English lesson slides as 1280×720 PNG images.
 
 ## Endpoints

@@ -330,5 +330,15 @@ const IPA = {
   "again": "əˈgen",
   "try": "traɪ",
   "first-attempt": "ˈfɜːrst əˈtempt",
-  "scores": "skɔːrz"
+  "scores": "skɔːrz",
+  "welcome": "ˈwelkəm",
+  "meet": "miːt",
+  "pictures": "ˈpɪktʃərz",
+  "mean": "miːn",
+  "things": "θɪŋz",
+  "using": "ˈjuːzɪŋ",
+  "note": "nəʊt",
+  "what": "wɑːt",
+  "heard": "hɜːrd",
+  "practice": "ˈpræktɪs"
 };

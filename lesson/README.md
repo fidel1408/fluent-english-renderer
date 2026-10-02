@@ -35,6 +35,7 @@ At zero the timer chimes softly and counts overtime; it never advances by itself
 
 ## IPA / CC
 **CC/IPA** cycles Off → Captions → Captions + IPA. IPA uses only the symbols on the Fluent English Sound Chart (American English). 
+Press **Sound Chart** in the header to view the chart (embedded image; "Play original video" plays `assets/Sound_Chart.mp4` if it sits next to the HTML).
 **Verification status:** Oxford Learner's Dictionaries could not be reached from the build environment, so word transcriptions were written from the chart's symbol set and are **not verified against Oxford**. Sentence lines are assembled word by word from citation forms (articles weak), not copied from Oxford. Incorrect models in Section 5 intentionally have no IPA. Spanish text has none.
 
 ## Tests actually run (`npm test`, 138 checks, headless Chromium, mocked speechSynthesis)

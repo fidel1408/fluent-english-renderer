@@ -444,6 +444,13 @@
     $('btnSet').onclick = () => $('dlgSet').showModal();
     $('btnMenu').onclick = openMenu;
     $('btnRes').onclick = openResults;
+    $('btnChart').onclick = () => $('dlgChart').showModal();
+    $('btnChartVid').onclick = () => {
+      const v = $('chartVid'); v.hidden = false; $('chartImg').hidden = true;
+      v.onerror = () => { v.hidden = true; $('chartImg').hidden = false; $('chartNote').hidden = false; };
+      v.src = 'assets/Sound_Chart.mp4'; v.play().catch(() => { });
+    };
+    $('dlgChart').addEventListener('close', () => { const v = $('chartVid'); v.pause(); v.hidden = true; $('chartImg').hidden = false; });
     $('btnKeys').onclick = () => $('dlgKeys').showModal();
     const fs = $('btnFull');
     if (!document.documentElement.requestFullscreen) fs.hidden = true;

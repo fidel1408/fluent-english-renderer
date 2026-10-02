@@ -321,3 +321,5 @@ label.chk{gap:.5rem}
 .doneText{display:flex;flex-direction:column;align-items:center;gap:.3rem}.doneText .tx{display:block}
 .rfam .shortf{display:flex;flex-direction:column;gap:.1rem;align-items:center}
 .deco{align-self:stretch;flex:1;min-height:6em;border:3px dashed var(--plum3);border-radius:40px 50px 44px 12px;display:grid;place-items:center;font-size:2.4em;color:var(--plum3)}
+
+.chartimg{width:100%;height:auto;border-radius:16px;display:block;background:#fff}

@@ -42,6 +42,7 @@
       <div id="timer" class="timer" role="timer" aria-label="Section timer"><span id="tsec">Section 1</span><b id="tleft">05:00</b><small id="tall"></small></div>
       <button id="btnCC" class="tbtn" aria-label="CC/IPA"><b>CC/IPA</b><span>Off</span></button>
       <button id="btnES" class="tbtn" aria-pressed="false"><b>Spanish</b><span>Help</span></button>
+      <button id="btnChart" class="tbtn"><b>Sound</b><span>Chart</span></button>
       <button id="btnSet" class="tbtn"><b>Settings</b><span>voice · sound</span></button>
       <button id="btnFull" class="tbtn" aria-pressed="false"><b>Full</b><span>screen</span></button>
     </div>
@@ -122,6 +123,12 @@
   <div class="row end"><button id="btnJson" class="btn ghost">Download JSON</button><button id="btnCsv" class="btn ghost">Download CSV</button><button class="btn" data-close="dlgRes">Close</button></div></div></dialog>
 
 <dialog id="dlgConfirm" aria-labelledby="cfTitle"><div class="dlg"><h3 id="cfTitle"></h3><p id="cfText"></p><div class="row end"><button id="cfNo" class="btn ghost">Cancel</button><button id="cfOk" class="btn danger">Confirm</button></div></div></dialog>
+
+<dialog id="dlgChart" aria-labelledby="chartTitle"><div class="dlg wide"><h3 id="chartTitle">Fluent English Sound Chart</h3>
+  <img id="chartImg" class="chartimg" alt="Sound chart: English vowel and consonant symbols with example pictures" src="{{CHART}}">
+  <video id="chartVid" class="chartimg" controls hidden preload="none"></video>
+  <p id="chartNote" class="small" hidden>The video file was not found next to this page. Keep assets/Sound_Chart.mp4 in the same folder as the lesson file.</p>
+  <div class="row end"><button id="btnChartVid" class="btn ghost">Play original video</button><button class="btn" data-close="dlgChart">Close</button></div></div></dialog>
 
 <dialog id="dlgKeys" aria-labelledby="keysTitle"><div class="dlg"><h3 id="keysTitle">Keyboard shortcuts</h3>
   <table class="rt"><tbody>

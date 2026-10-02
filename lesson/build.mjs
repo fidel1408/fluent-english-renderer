@@ -11,6 +11,7 @@ const out = read('src/template.html')
   .replace('{{CSS}}', () => read('src/style.css'))
   .replace('{{JS}}', () => js)
   .replace('{{LOGO_WHITE}}', () => b64('assets/logo-white.webp'))
+  .replace('{{CHART}}', () => b64('assets/sound-chart.webp'))
   .replace('{{LOGO_BLUE}}', () => b64('assets/logo-blue.webp'));
 const dest = path.join(here, 'fluent-english-be-negatives.html');
 fs.writeFileSync(dest, out);

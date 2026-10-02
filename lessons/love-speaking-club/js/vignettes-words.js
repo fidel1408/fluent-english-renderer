@@ -121,8 +121,8 @@
       m: { cast: 'maya', x: 1170, y: 650, s: 1.4, pose: { expr: 'tired', yaw: -.35, aL: [8, 12, 0, 'relaxed'], aR: [8, 12, 0, 'relaxed'] } } },
     script(st, F, tl, at, dur) {
       const { a, m } = F; const total = tl.total;
-      st.later(() => { fxAdd(st, lifestyleCard(500, 250, 'a')); a.pose({ aR: ik(a, 'R', 120, -30, 'open'), expr: 'smile' }, 600); }, 1700);
-      st.later(() => { fxAdd(st, lifestyleCard(1100, 250, 'm')); m.pose({ expr: 'tired', head: 5, aL: ik(m, 'L', -60, 40, 'relaxed') }, 700); }, 3400);
+      st.later(() => { fxAdd(st, lifestyleCard(500, 250, 'a')); a.pose({ aR: ik(a, 'R', 150, 30, 'open'), expr: 'smile' }, 600); }, 1700);
+      st.later(() => { fxAdd(st, lifestyleCard(1100, 250, 'm')); m.pose({ expr: 'tired', head: 5, aL: ik(m, 'L', -100, 50, 'relaxed') }, 700); }, 3400);
       st.later(() => { fxAdd(st, link(620, 980, 260)); a.pose({ expr: 'smile', head: -2 }, 500); m.pose({ expr: 'smile', head: 2 }, 500); }, 5600);
       st.later(() => { fxAdd(st, valIcon(700, 500, 'check') + valIcon(900, 500, 'home')); a.pose({ expr: 'delight', aR: [10, 20, 0, 'relaxed'] }, 600); m.pose({ expr: 'delight', aL: [10, 20, 0, 'relaxed'], head: 0 }, 600); }, Math.max(7600, total - 3600));
     },

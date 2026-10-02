@@ -68,14 +68,14 @@
   /* 2. supporting a goal: apartment, rehearsing a presentation */
   OPEN.push(() => {
     const st = new Art.Stage('apartment', { clipY: null }); const Pr = cast('priya'), Le = cast('leo');
-    put(st, Pr, 560, 660, 1.4, { expr: 'focused', yaw: .2, aL: ik(Pr, 'L', -60, 96, 'relaxed'), aR: ik(Pr, 'R', 80, 80, 'relaxed') });
+    put(st, Pr, 560, 660, 1.4, { expr: 'focused', yaw: .2, aL: ik(Pr, 'L', -50, 120, 'relaxed'), aR: ik(Pr, 'R', 80, 80, 'relaxed') });
     put(st, Le, 1080, 690, 1.4, { expr: 'listening', yaw: -.5, head: 3, aL: ik(Le, 'L', -40, 110, 'relaxed'), aR: [10, 40, 0, 'relaxed'] });
     Pr.attach('L', OBJ.cards(), 0, 0, 0);
     st.run = () => {
       st.later(() => Pr.startTalk(() => .35 + .5 * Math.abs(Math.sin(performance.now() / 130))), 300);
       st.later(() => Pr.pose({ aR: ik(Pr, 'R', 130, 70, 'open'), expr: 'focused', head: 2 }, 700), 700);
-      st.later(() => { Pr.stopTalk(); Pr.pose({ expr: 'sorry', aR: ik(Pr, 'R', 50, -70, 'relaxed'), head: 5, ey: .8 }, 700); }, 1900);
-      st.later(() => Le.pose({ expr: 'warm', lean: 4, aR: ik(Le, 'R', 150, 40, 'thumbs'), head: 3 }, 800), 2400);
+      st.later(() => { Pr.stopTalk(); Pr.pose({ expr: 'sorry', aR: ik(Pr, 'R', 70, 10, 'relaxed'), head: 5, ey: .8 }, 700); }, 1900);
+      st.later(() => Le.pose({ expr: 'warm', lean: 4, aR: ik(Le, 'R', 120, 70, 'thumbs'), head: 3 }, 800), 2400);
       st.later(() => Pr.pose({ expr: 'smile', aR: ik(Pr, 'R', 120, 60, 'open'), head: -2, ey: 0 }, 800), 3400);
       st.later(() => { Pr.startTalk(() => .3 + .5 * Math.abs(Math.sin(performance.now() / 140))); Le.pose({ aR: ik(Le, 'R', 70, 100, 'relaxed'), expr: 'proud' }, 600); }, 4000);
       st.later(() => Pr.stopTalk(), 5200);

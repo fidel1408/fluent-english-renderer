@@ -1076,7 +1076,7 @@ button.chip.sel .wu .p { color: var(--ivory) !important; }
         return [sh, e, { w: 0, f: 1 - sy }];
       };
       /* hands in front of the body: keep the elbow tucked by the ribs and foreshorten the forearm (it points toward the viewer) instead of flaring the elbow out */
-      const inFront = sg * (tx - px) < 10 && ty > py + 8;
+      const inFront = sg * (tx - px) < 30 && ty > py + 8;
       if (inFront && bend !== 'out') {
         const ab = (6 + Math.max(0, sg * (px - tx) - 40) * .05) * Math.PI / 180;
         const ux = -sg * Math.sin(ab), uy = Math.cos(ab);
@@ -1088,9 +1088,12 @@ button.chip.sel .wu .p { color: var(--ivory) !important; }
       const phi = Math.atan2(dy, dx), a = Math.acos(clamp((UA * UA + d * d - FA * FA) / (2 * UA * d), -1, 1));
       const cands = [phi + a, phi - a].map((ang) => ({ ang, ex: px + UA * Math.cos(ang), ey: py + UA * Math.sin(ang) }));
       let pick;
-      if (bend === 'up') pick = cands[0].ey < cands[1].ey ? cands[0] : cands[1];
-      else if (bend === 'out') pick = Math.abs(cands[0].ex) > Math.abs(cands[1].ex) ? cands[0] : cands[1];
-      else pick = cands[0].ey > cands[1].ey ? cands[0] : cands[1];   // default: elbow low, like a relaxed arm
+      if (bend === 'out') pick = Math.abs(cands[0].ex) > Math.abs(cands[1].ex) ? cands[0] : cands[1];
+      else {
+        /* natural elbow: low and tucked towards the ribs; penalise any flare beyond the shoulder line ("chicken wing") */
+        const score = (c) => c.ey * .35 - Math.max(0, sg * c.ex - (B.sx - 6)) * 2.2 + (bend === 'up' ? -c.ey : 0);
+        pick = score(cands[0]) >= score(cands[1]) ? cands[0] : cands[1];
+      }
       const ux = Math.cos(pick.ang), uy = Math.sin(pick.ang);
       const wx = px + d * Math.cos(phi), wy = py + d * Math.sin(phi);
       return toPose(ux, uy, wx - pick.ex, wy - pick.ey, 1);
@@ -3868,14 +3871,14 @@ window.AUDIO_MANIFEST = {
   /* 2. supporting a goal: apartment, rehearsing a presentation */
   OPEN.push(() => {
     const st = new Art.Stage('apartment', { clipY: null }); const Pr = cast('priya'), Le = cast('leo');
-    put(st, Pr, 560, 660, 1.4, { expr: 'focused', yaw: .2, aL: ik(Pr, 'L', -60, 96, 'relaxed'), aR: ik(Pr, 'R', 80, 80, 'relaxed') });
+    put(st, Pr, 560, 660, 1.4, { expr: 'focused', yaw: .2, aL: ik(Pr, 'L', -50, 120, 'relaxed'), aR: ik(Pr, 'R', 80, 80, 'relaxed') });
     put(st, Le, 1080, 690, 1.4, { expr: 'listening', yaw: -.5, head: 3, aL: ik(Le, 'L', -40, 110, 'relaxed'), aR: [10, 40, 0, 'relaxed'] });
     Pr.attach('L', OBJ.cards(), 0, 0, 0);
     st.run = () => {
       st.later(() => Pr.startTalk(() => .35 + .5 * Math.abs(Math.sin(performance.now() / 130))), 300);
       st.later(() => Pr.pose({ aR: ik(Pr, 'R', 130, 70, 'open'), expr: 'focused', head: 2 }, 700), 700);
-      st.later(() => { Pr.stopTalk(); Pr.pose({ expr: 'sorry', aR: ik(Pr, 'R', 50, -70, 'relaxed'), head: 5, ey: .8 }, 700); }, 1900);
-      st.later(() => Le.pose({ expr: 'warm', lean: 4, aR: ik(Le, 'R', 150, 40, 'thumbs'), head: 3 }, 800), 2400);
+      st.later(() => { Pr.stopTalk(); Pr.pose({ expr: 'sorry', aR: ik(Pr, 'R', 70, 10, 'relaxed'), head: 5, ey: .8 }, 700); }, 1900);
+      st.later(() => Le.pose({ expr: 'warm', lean: 4, aR: ik(Le, 'R', 120, 70, 'thumbs'), head: 3 }, 800), 2400);
       st.later(() => Pr.pose({ expr: 'smile', aR: ik(Pr, 'R', 120, 60, 'open'), head: -2, ey: 0 }, 800), 3400);
       st.later(() => { Pr.startTalk(() => .3 + .5 * Math.abs(Math.sin(performance.now() / 140))); Le.pose({ aR: ik(Le, 'R', 70, 100, 'relaxed'), expr: 'proud' }, 600); }, 4000);
       st.later(() => Pr.stopTalk(), 5200);
@@ -4049,8 +4052,8 @@ window.AUDIO_MANIFEST = {
       m: { cast: 'maya', x: 1170, y: 650, s: 1.4, pose: { expr: 'tired', yaw: -.35, aL: [8, 12, 0, 'relaxed'], aR: [8, 12, 0, 'relaxed'] } } },
     script(st, F, tl, at, dur) {
       const { a, m } = F; const total = tl.total;
-      st.later(() => { fxAdd(st, lifestyleCard(500, 250, 'a')); a.pose({ aR: ik(a, 'R', 120, -30, 'open'), expr: 'smile' }, 600); }, 1700);
-      st.later(() => { fxAdd(st, lifestyleCard(1100, 250, 'm')); m.pose({ expr: 'tired', head: 5, aL: ik(m, 'L', -60, 40, 'relaxed') }, 700); }, 3400);
+      st.later(() => { fxAdd(st, lifestyleCard(500, 250, 'a')); a.pose({ aR: ik(a, 'R', 150, 30, 'open'), expr: 'smile' }, 600); }, 1700);
+      st.later(() => { fxAdd(st, lifestyleCard(1100, 250, 'm')); m.pose({ expr: 'tired', head: 5, aL: ik(m, 'L', -100, 50, 'relaxed') }, 700); }, 3400);
       st.later(() => { fxAdd(st, link(620, 980, 260)); a.pose({ expr: 'smile', head: -2 }, 500); m.pose({ expr: 'smile', head: 2 }, 500); }, 5600);
       st.later(() => { fxAdd(st, valIcon(700, 500, 'check') + valIcon(900, 500, 'home')); a.pose({ expr: 'delight', aR: [10, 20, 0, 'relaxed'] }, 600); m.pose({ expr: 'delight', aL: [10, 20, 0, 'relaxed'], head: 0 }, 600); }, Math.max(7600, total - 3600));
     },

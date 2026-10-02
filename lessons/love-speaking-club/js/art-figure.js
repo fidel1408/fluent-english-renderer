@@ -647,7 +647,7 @@
         return [sh, e, { w: 0, f: 1 - sy }];
       };
       /* hands in front of the body: keep the elbow tucked by the ribs and foreshorten the forearm (it points toward the viewer) instead of flaring the elbow out */
-      const inFront = sg * (tx - px) < 10 && ty > py + 8;
+      const inFront = sg * (tx - px) < 30 && ty > py + 8;
       if (inFront && bend !== 'out') {
         const ab = (6 + Math.max(0, sg * (px - tx) - 40) * .05) * Math.PI / 180;
         const ux = -sg * Math.sin(ab), uy = Math.cos(ab);
@@ -659,9 +659,12 @@
       const phi = Math.atan2(dy, dx), a = Math.acos(clamp((UA * UA + d * d - FA * FA) / (2 * UA * d), -1, 1));
       const cands = [phi + a, phi - a].map((ang) => ({ ang, ex: px + UA * Math.cos(ang), ey: py + UA * Math.sin(ang) }));
       let pick;
-      if (bend === 'up') pick = cands[0].ey < cands[1].ey ? cands[0] : cands[1];
-      else if (bend === 'out') pick = Math.abs(cands[0].ex) > Math.abs(cands[1].ex) ? cands[0] : cands[1];
-      else pick = cands[0].ey > cands[1].ey ? cands[0] : cands[1];   // default: elbow low, like a relaxed arm
+      if (bend === 'out') pick = Math.abs(cands[0].ex) > Math.abs(cands[1].ex) ? cands[0] : cands[1];
+      else {
+        /* natural elbow: low and tucked towards the ribs; penalise any flare beyond the shoulder line ("chicken wing") */
+        const score = (c) => c.ey * .35 - Math.max(0, sg * c.ex - (B.sx - 6)) * 2.2 + (bend === 'up' ? -c.ey : 0);
+        pick = score(cands[0]) >= score(cands[1]) ? cands[0] : cands[1];
+      }
       const ux = Math.cos(pick.ang), uy = Math.sin(pick.ang);
       const wx = px + d * Math.cos(phi), wy = py + d * Math.sin(phi);
       return toPose(ux, uy, wx - pick.ex, wy - pick.ey, 1);

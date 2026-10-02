@@ -1,0 +1,120 @@
+/* ===== Activities 6-7 ===== */
+const beCls = (w) => ({ am: 'am', is: 'is', are: 'are' }[w.toLowerCase()] || '');
+
+/** Animated: be moves before the subject, question mark appears at the end. */
+function moveBeBeat(o) {
+  return {
+    title: o.title, talk: o.talk || 0, es: o.es, turn: o.turn,
+    render: () => cols(o.scene(), `<div class="card"><div class="row" id="mrow" style="min-height:5.5rem;gap:.6rem;flex-wrap:nowrap;overflow:hidden;padding:.3rem 0"><span class="chip" id="m1">${tx(o.from[0])}</span><span class="chip ${beCls(o.from[1])}" id="m2">${tx(o.from[1])}</span><span class="chip" id="m3">${tx(o.from[2])}</span></div><div class="pill" id="mlab">${tx('Statement')}</div></div>
+      <div class="card center"><b>${tx('be + subject + …?')}</b></div><div class="meaning fadein" id="mrule">${tx('We do not add do or does with be. We move *be* before the subject.')}</div>`),
+    seq: [
+      { t: o.sayFrom, rate: 0.9, pause: 500 },
+      { pre: async (A) => {
+        const r = A.root, m1 = $('#m1', r), m2 = $('#m2', r), row = $('#mrow', r);
+        const gap = parseFloat(getComputedStyle(row).columnGap) || 10, w1 = m1.offsetWidth, w2 = m2.offsetWidth;
+        m2.style.transition = m1.style.transition = 'transform .9s cubic-bezier(.3,.7,.2,1)';
+        m2.style.transform = `translateX(${-(w1 + gap)}px)`; m1.style.transform = `translateX(${w2 + gap}px)`; A.sfx('whoosh');
+        await A.wait(1000);
+        row.innerHTML = `<span class="chip ${beCls(o.from[1])}">${tx(o.to[0])}</span><span class="chip">${tx(o.to[1])}</span><span class="chip fly u" id="mq">${tx(o.to[2])}</span>`;
+        await A.wait(60); A.on('mq'); A.sfx('pop'); $('#mlab', r).innerHTML = tx('Question');
+      }, wait: 500 },
+      { t: o.sayTo, rate: 0.9, pre: (A) => A.on('mrule') },
+    ],
+  };
+}
+/** Rows table with fade-in rows and a Say button per row. */
+function sayTable(head, rows, sayOf) {
+  return `<table class="t"><tr>${head.map((h) => `<th>${tx(h)}</th>`).join('')}<th></th></tr>${rows.map((r, i) => `<tr class="fadein" id="rw${i}" style="display:table-row">${r.map((c) => `<td>${tx(c, { be: 1 })}</td>`).join('')}<td><button class="btn sm alt" data-row="${i}" aria-label="Say row ${i + 1}">Say</button></td></tr>`).join('')}</table>`;
+}
+const bindRows = (sayOf) => (A) => $$('[data-row]', A.root).forEach((b) => b.addEventListener('click', () => A.sayBg(sayOf(+b.dataset.row))));
+const askScene = () => SC({ alt: 'Maya asks Alex a question.', ppl: [['maya', 270, { poseR: 'present', gaze: 0.8 }], ['alex', 690, { gaze: -0.8 }]], tags: [NT('maya', 270), NT('alex', 690), TG('Maya is asking', null, 270, 110)] });
+
+const QROWS = [['Am I late?', 'Am I …?'], ['Are you ready?', 'Are you …?'], ['Is he a teacher?', 'Is he …?'], ['Is she happy?', 'Is she …?'], ['Is it a phone?', 'Is it …?'], ['Are we in class?', 'Are we …?'], ['Are they friends?', 'Are they …?']];
+const SA = [['Are you ready?', 'Yes, I am.', "No, I'm not."], ['Am I late?', 'Yes, you are.', "No, you aren't."], ['Is he a teacher?', 'Yes, he is.', "No, he isn't."], ['Is she happy?', 'Yes, she is.', "No, she isn't."], ['Is it a phone?', 'Yes, it is.', "No, it isn't."], ['Are we in class?', 'Yes, we are.', "No, we aren't."], ['Are they friends?', 'Yes, they are.', "No, they aren't."]];
+
+const QBUILD = [
+  { instr: 'Change to a question: You are a student.', target: ['Are', 'you', 'a', 'student?'], extra: ['Is', 'Am', 'You'], tips: { Is: 'With *you* we use *are*.', Am: '*Am* goes with *I*.', You: 'A question starts with *be*: Are…' }, explain: 'Move *are* before *you*: Are you a student?', full: 'Are you a student?', pic: () => SC({ alt: 'Maya asks Alex, who holds a notebook.', ppl: [['maya', 270, { poseR: 'present', gaze: 0.8 }], ['alex', 690, { gaze: -0.8, job: 'student', poseL: 'hold', held: { L: 'notebook' } }]], tags: [NT('maya', 270), NT('alex', 690), TG('Maya is asking', null, 270, 110)] }), es: 'You are a student → Are you a student?' },
+  { instr: 'Change to a question: She is a teacher.', target: ['Is', 'she', 'a', 'teacher?'], extra: ['Are', 'Does', 'He'], tips: { Are: 'With *she* we use *is*.', Does: 'With be we do not use do or does.', He: 'Maya uses she/her.' }, explain: 'Move *is* before *she*: Is she a teacher? We do not add does.', full: 'Is she a teacher?', pic: () => SC({ alt: 'Maya holds a book.', ppl: [['maya', 480, { s: 1, poseL: 'hold', held: { L: 'book' } }]], tags: [NT('maya', 480)] }), es: 'She is a teacher → Is she a teacher? Con be no usamos does.' },
+  { instr: 'Change to a question: They are friends.', target: ['Are', 'they', 'friends?'], extra: ['Is', 'Do', 'we'], tips: { Is: 'With *they* we use *are*.', Do: 'With be we do not use do or does.', we: 'Omar and Rosa are other people: *they*.' }, explain: 'Move *are* before *they*: Are they friends?', full: 'Are they friends?', pic: () => SC({ alt: 'Omar and Rosa in a cafe.', bg: 'cafe', ppl: [['omar', 330, { expr: 'happy', gaze: 0.5 }], ['rosa', 630, { expr: 'happy', gaze: -0.5 }]], tags: [NT('omar', 330), NT('rosa', 630)] }), es: 'They are friends → Are they friends?' },
+  { instr: 'Change to a question: It is a phone.', target: ['Is', 'it', 'a', 'phone?'], extra: ['Are', 'Does', 'they'], tips: { Are: 'One thing: *is*.', Does: 'With be we do not use do or does.', they: 'One phone: *it*.' }, explain: 'Move *is* before *it*: Is it a phone?', full: 'Is it a phone?', pic: () => SC({ alt: 'One phone on a table.', ppl: [], objs: [{ raw: Art.table(480, 400, 360) }, { type: 'phone', x: 480, y: 398, s: 2.2 }], tags: [TG('a phone', null, 480, 505, '', 'it')] }), es: 'It is a phone → Is it a phone?' },
+].map((it, i) => ({ title: `Make a question ${i + 1} of 4`, talk: 20, turn: 'Say the question first.', es: it.es, make: () => Comp.build(Object.assign({}, it, { pic: it.pic() }), i + 9), seq: [{ t: it.instr }] }));
+
+const QA = [
+  { t: 'Question and answer 1 of 4', scene: () => SC({ alt: 'Maya asks a question to the class.', ppl: [['maya', 480, { s: 1, poseR: 'present' }]], tags: [NT('maya', 480), TG('Maya is asking you', null, 480, 108)], bub: [BUB('bq', 480, 140, 'Are you ready?')] }), frame: 'Are you ready?', instr: 'The teacher asks one learner. Give a short answer.', sentence: "Yes, I am. / No, I'm not.", why: 'One learner answers about *I*. Use *am* in the positive answer.', ansSay: ['Yes, I am.', "No, I'm not."], es: 'Un estudiante responde sobre sí mismo: Yes, I am. / No, I’m not.' },
+  { t: 'Question and answer 2 of 4', scene: () => SC({ alt: 'Maya wears a white coat and stethoscope.', ppl: [['maya', 480, { s: 1, job: 'doctor', poseR: 'hip' }]], tags: [NT('maya', 480)] }), frame: 'Is Maya a doctor?', instr: 'Look at the picture. Answer with a short answer.', sentence: 'Yes, she is.', why: 'Maya is she/her. The picture shows a doctor.', ansSay: ['Yes, she is.'], es: 'Maya es doctora: Yes, she is.' },
+  { t: 'Question and answer 3 of 4', scene: () => SC({ alt: 'Omar and Rosa wear hard hats.', bg: 'office', ppl: [['omar', 330, { job: 'engineer', poseR: 'hip' }], ['rosa', 630, { job: 'engineer', poseL: 'hip' }]], tags: [NT('omar', 330), NT('rosa', 630)] }), frame: 'Are they students?', instr: 'Look at the picture. Answer with a short answer.', sentence: "No, they aren't. / No, they're not.", why: 'Both people are engineers, not students.', ansSay: ["No, they aren't."], es: 'Son ingenieros: No, they aren’t.' },
+  { t: 'Question and answer 4 of 4', scene: () => bagScene(), frame: 'Is it blue?', instr: 'Look at the picture. Answer with a short answer.', sentence: "No, it isn't. / No, it's not.", why: 'The bag is red.', ansSay: ["No, it isn't."], es: 'La bolsa es roja: No, it isn’t.' },
+].map((d) => promptBeat({ title: d.t, talk: 30, es: d.es, scene: d.scene, instr: d.instr, frame: d.frame, sentence: d.sentence, why: d.why, say: [{ t: d.instr }, { t: d.frame, rate: 0.9 }], ansSay: d.ansSay, turn: 'Teacher chooses who answers.' }));
+
+ACTS.push({
+  n: 6, title: 'Questions and Short Answers', spoken: 'Questions and short answers',
+  es: 'Preguntas con be: movemos be antes del sujeto. Respuestas cortas: Yes, I am. / No, I’m not.',
+  beats: [
+    moveBeBeat({ title: 'Make a question', talk: 0, es: 'You are ready → Are you ready? El verbo be pasa antes del sujeto y la pregunta termina con "?".', from: ['You', 'are', 'ready.'], to: ['Are', 'you', 'ready?'], sayFrom: 'You are ready.', sayTo: 'Are you ready?', scene: askScene }),
+    moveBeBeat({ title: 'Another question', talk: 5, es: 'She is a teacher → Is she a teacher? No usamos do/does con be.', turn: 'Say: Is she a teacher?', from: ['She', 'is', 'a teacher.'], to: ['Is', 'she', 'a teacher?'], sayFrom: 'She is a teacher.', sayTo: 'Is she a teacher?', scene: () => SC({ alt: 'Maya holds a book.', ppl: [['maya', 480, { s: 1, poseL: 'hold', held: { L: 'book' } }]], tags: [NT('maya', 480)] }) }),
+    { title: 'Seven question forms', talk: 10, es: 'Am I…? Are you…? Is he…? Is she…? Is it…? Are we…? Are they…? Repite.', turn: 'Repeat after the voice.',
+      render: () => `<div class="card">${sayTable(['Question starter', 'Example'], QROWS.map(([e, s]) => [s, e]))}</div>`,
+      seq: [{ t: 'Seven forms.' }, ...QROWS.map(([e], i) => ({ pre: (A) => { A.on('rw' + i); A.sfx('pop'); }, t: e, rate: 0.9, pause: 250 }))], bind: bindRows((i) => [QROWS[i][0]]) },
+    { title: 'Short answers', talk: 10, es: 'Respuestas cortas: Yes, I am. No, I’m not. Los negativos también pueden ser: No, he’s not.', turn: 'Repeat the answers.',
+      render: () => `<div class="card">${sayTable(['Question', 'Yes, …', 'No, …'], SA)}</div><div class="meaning">${tx("Other negative short forms are fine too: No, he's not. No, we're not.")}</div>`,
+      seq: [{ t: 'Short answers.' }, { pre: (A) => { A.on('rw0'); A.sfx('pop'); }, t: "Are you ready? Yes, I am. No, I'm not.", rate: 0.9 }, { pre: (A) => { A.on('rw2'); A.on('rw1'); A.on('rw3'); A.on('rw4'); A.on('rw5'); A.on('rw6'); A.sfx('pop'); }, t: "Is he a teacher? Yes, he is. No, he isn't.", rate: 0.9 }], bind: bindRows((i) => [{ t: SA[i][0] + ' ' + SA[i][1] + ' ' + SA[i][2], rate: 0.9 }]) },
+    { title: 'Yes, I am. — not Yes, I’m.', talk: 10, es: 'En una respuesta corta afirmativa no terminamos con una contracción: "Yes, I am." ✓; "Yes, I’m." ✗. En negativas sí: No, I’m not.', turn: 'Say: Yes, I am. No, I’m not.',
+      render: () => `<div class="cols even"><div class="card" style="border:3px solid var(--good)"><div class="big-sentence">${tx('Yes, I am.')} <span class="ok-mark">✓</span></div><div class="meaning" style="margin-top:.4rem">${tx('A full form ends the short answer.')}</div></div><div class="card" style="border:3px solid #c9644d"><div class="big-sentence">${tx("Yes, I'm.")} <span class="bad-mark">✗</span></div><div class="meaning" style="margin-top:.4rem;border-color:#c9644d">${tx('Not a complete short answer.')}</div></div></div>
+        <div class="card" style="border:3px solid var(--good)"><div class="big-sentence">${tx("No, I'm not.")} <span class="ok-mark">✓</span></div><div class="meaning" style="margin-top:.4rem">${tx('Negative short answers can use a contraction: not, isn’t, aren’t.')}</div></div>`,
+      seq: [{ t: 'Yes, I am. Good.', rate: 0.9 }, { t: "Yes, I'm. Not a complete short answer.", rate: 0.9 }, { t: "No, I'm not. Good.", rate: 0.9 }] },
+    { title: 'Who is “you”?', talk: 15, es: 'Si preguntan "Are you ready?" a una persona, responde "Yes, I am." Si preguntan a un grupo, responde "Yes, we are."',
+      render: () => `<div class="cols even"><div class="stack">${SC({ alt: 'Maya asks Alex.', s: 0.8, ppl: [['maya', 240, { id: 'mq1', poseR: 'present', gaze: 0.8 }], ['alex', 700, { id: 'aq1', gaze: -0.8 }]], tags: [NT('maya', 240), NT('alex', 700)], bub: [BUB('b1', 240, 150, 'Are you ready?')] })}<div class="card ans ans-box"><div class="mid-sentence">${tx('Yes, I am.')}</div><div class="small-note">${tx('One person answers about *I*.')}</div></div></div>
+        <div class="stack">${SC({ alt: 'Maya asks Alex and Omar.', s: 0.8, ppl: [['maya', 150, { id: 'mq2', poseR: 'present', gaze: 0.8 }], ['alex', 520, { id: 'aq2', gaze: -0.4 }], ['omar', 790, { id: 'oq2', gaze: -0.4 }]], tags: [NT('maya', 150), NT('alex', 520), NT('omar', 790)], bub: [BUB('b2', 150, 150, 'Are you ready?')] })}<div class="card ans ans-box"><div class="mid-sentence">${tx('Yes, we are.')}</div><div class="small-note">${tx('A group answers with *we*.')}</div></div></div></div>`,
+      seq: [{ t: 'Maya asks Alex: Are you ready? One person. Alex answers about I.', pre: (A) => { A.on('b1'); A.sfx('pop'); } }, { t: 'Maya asks Alex and Omar: Are you ready? Two people. They answer with we.', pre: (A) => { A.on('b2'); A.sfx('pop'); } }], turn: 'Say the answer for one person. Then for a group.', ansSay: ['Yes, I am. Yes, we are.'] },
+    ...QBUILD,
+    ...QA,
+    { title: 'Ask real questions', talk: 20, es: 'Haz preguntas reales a tus compañeros. Pueden contestar con datos inventados o decir "Pass".', turn: 'Ask a partner. Answer with a short answer.',
+      render: () => cols(SC({ alt: 'Daniel and Sofia talk.', bg: 'cafe', ppl: [['daniel', 330, { poseR: 'present', gaze: 0.5 }], ['sofia', 630, { gaze: -0.5, expr: 'happy' }]], tags: [NT('daniel', 330), NT('sofia', 630)] }),
+        `<div class="card"><b class="pill gold">${tx('Ask')}</b><div class="mid-sentence" style="margin-top:.4rem">${['Are you ready?', 'Are you a student?', 'Are you tired?', 'Are you at home?'].map((q) => `<div>${tx(q)}</div>`).join('')}</div></div>
+         <div class="card"><b class="pill green">${tx('Answer')}</b><div class="mid-sentence" style="margin-top:.4rem">${tx('Yes, I am.')}<br>${tx("No, I'm not.")}</div></div>
+         <div class="meaning">${tx('You can say “Pass.” or use invented information.')}</div>`),
+      seq: [{ t: 'Ask a real question. Answer with a short answer. You can pass or invent the answer.' }] },
+  ],
+});
+
+/* ================= ACTIVITY 7: Speaking lab ================= */
+const labA = [
+  { t: 'Round A · 1 of 4', sc: () => SC({ alt: 'Lena holds a notebook.', bg: 'cafe', ppl: [['lena', 480, { s: 1, job: 'student', poseL: 'hold', held: { L: 'notebook' }, expr: 'smile' }]], tags: [NT('lena', 480)] }), sentence: "She is a student. / She's a student.", starters: ['She is …', "She's …"], extra: "Say a second sentence: She isn't a …", es: 'Ronda A: elige un pronombre y describe la imagen: She is a student.' },
+  { t: 'Round A · 2 of 4', sc: () => SC({ alt: 'Omar is tired.', ppl: [['omar', 480, { s: 1, expr: 'tired' }]], tags: [NT('omar', 480)] }), sentence: "He is tired. / He's tired.", starters: ['He is …', "He's …"], extra: 'Say it with a contraction and add one more sentence about Omar.', es: 'Ronda A: Omar parece cansado: He is tired.' },
+  { t: 'Round A · 3 of 4', sc: () => SC({ alt: 'Three coffee cups on a table.', bg: 'cafe', ppl: [], objs: [{ raw: Art.table(480, 400, 420) }, { type: 'cup', x: 380, y: 398, s: 1.6 }, { type: 'cup', x: 480, y: 398, s: 1.6 }, { type: 'cup', x: 580, y: 398, s: 1.6 }], tags: [TG('three cups', null, 480, 505, '', 'grp')] }), sentence: "They are cups. / They're cups.", starters: ['They are …', "They're …"], extra: "Say a negative sentence: They aren't …", es: 'Tres tazas: They are cups.' },
+  { t: 'Round A · 4 of 4', sc: () => SC({ alt: 'Ken and Rosa. Ken speaks.', bg: 'cafe', ppl: [['ken', 360, { poseL: 'chest' }], ['rosa', 600, { expr: 'happy' }]], tags: [NT('ken', 360), NT('rosa', 600), TG('Ken is speaking', null, 360, 108)], rings: [RING('la4', 480, 330, 400, 340, 'coral')] }), sentence: "We are friends. / We're friends.", starters: ['We are …', "We're …"], extra: 'Ask a question about Ken and Rosa. Use Are they …?', es: 'Ken habla de Ken y Rosa: We are friends.' },
+];
+const labB = [
+  { t: 'Round B · 1 of 4', sc: () => SC({ alt: 'Omar holds a painter’s palette.', ppl: [['omar', 480, { s: 1, job: 'artist', poseR: 'holdHi', held: { R: 'palette' } }]], tags: [NT('omar', 480)] }), frame: 'He is an artist.', sentence: "He isn't an artist. / He's not an artist.", why: 'Matches the picture? No ✗. The picture shows an artist: He’s an artist.', bad: true, es: 'Cambia a negativo: He isn’t an artist. ¿Coincide con la imagen? No: es artista.' },
+  { t: 'Round B · 2 of 4', sc: () => SC({ alt: 'Daniel and Sofia smile.', bg: 'cafe', ppl: [['daniel', 330, { expr: 'happy', gaze: 0.5 }], ['sofia', 630, { expr: 'happy', gaze: -0.5 }]], tags: [NT('daniel', 330), NT('sofia', 630)] }), frame: 'They are tired.', sentence: "They aren't tired. / They're not tired.", why: 'Matches the picture? Yes ✓. They are smiling: They’re happy.', es: 'They aren’t tired: coincide con la imagen (están felices).' },
+  { t: 'Round B · 3 of 4', sc: () => SC({ alt: 'A laptop on a desk.', bg: 'office', ppl: [], objs: [{ raw: Art.table(480, 400, 360) }, { type: 'laptop', x: 480, y: 398, s: 2.2 }], tags: [TG('a laptop', null, 480, 505, '', 'it')] }), frame: 'It is a phone.', sentence: "It isn't a phone. / It's not a phone.", why: 'Matches the picture? Yes ✓. It’s a laptop.', es: 'It isn’t a phone: coincide (es una laptop).' },
+  { t: 'Round B · 4 of 4', sc: () => SC({ alt: 'Lena holds a notebook and speaks.', ppl: [['lena', 480, { s: 1, job: 'student', poseL: 'hold', held: { L: 'notebook' }, poseR: 'chest' }]], tags: [NT('lena', 480), TG('Lena is speaking', null, 480, 108)] }), frame: 'I am a doctor.', sentence: "I'm not a doctor.", why: 'Matches the picture? Yes ✓. Lena says: I’m a student.', es: 'Lena habla de sí misma: I’m not a doctor. Coincide con la imagen.' },
+];
+const labC = [
+  { t: 'Round C · 1 of 4', sc: () => SC({ alt: 'Ken holds a notebook.', ppl: [['ken', 480, { s: 1, job: 'student', poseL: 'hold', held: { L: 'notebook' } }]], tags: [NT('ken', 480)] }), frame: 'Ask: Is he a student?', sentence: 'Is he a student? / Yes, he is.', es: 'Pregunta: Is he a student? Respuesta corta: Yes, he is.' },
+  { t: 'Round C · 2 of 4', sc: () => SC({ alt: 'Lena and Rosa wear hard hats.', bg: 'office', ppl: [['lena', 330, { job: 'engineer', poseR: 'hip' }], ['rosa', 630, { job: 'engineer', poseL: 'hip' }]], tags: [NT('lena', 330), NT('rosa', 630)] }), frame: 'Ask: Are they engineers?', sentence: 'Are they engineers? / Yes, they are.', es: 'Pregunta: Are they engineers? Yes, they are.' },
+  { t: 'Round C · 3 of 4', sc: () => SC({ alt: 'A green apple.', bg: 'plain', ppl: [], objs: [{ type: 'apple', x: 480, y: 440, s: 3, o: { color: '#3fa856' } }], tags: [TG('a green apple', null, 480, 505, '', 'it')] }), frame: 'Ask: Is it red?', sentence: "Is it red? / No, it isn't.", es: 'Pregunta: Is it red? No, it isn’t.' },
+  { t: 'Round C · 4 of 4', sc: () => SC({ alt: 'Daniel and Sofia talk in a cafe.', bg: 'cafe', ppl: [['daniel', 330, { poseR: 'present', gaze: 0.5 }], ['sofia', 630, { gaze: -0.5 }]], tags: [NT('daniel', 330), NT('sofia', 630)] }), frame: 'Ask a partner: Are you tired?', sentence: "Are you tired? / Yes, I am. / No, I'm not.", es: 'Pregunta a un compañero: Are you tired? Responde con una respuesta corta (puede ser inventada).' },
+];
+const labBeats = [
+  ...labA.map((d) => promptBeat({ lab: 1, quiet: 1, title: d.t, talk: 25, es: d.es, scene: d.sc, instr: 'Choose a pronoun. Say a sentence about the picture.', starters: d.starters, extra: d.extra, sentence: d.sentence, say: [{ t: 'Choose a pronoun. Say a sentence about the picture.' }], turn: 'Teacher chooses who speaks.' })),
+  ...labB.map((d) => promptBeat({ lab: 1, quiet: 1, title: d.t, talk: 25, es: d.es, scene: d.sc, instr: 'Change the sentence to a negative. Does it match the picture?', frame: d.frame, starters: ['… isn’t …', '… aren’t …', 'I’m not …'], extra: 'Say the negative. Then give a true sentence about the picture.', sentence: d.sentence, why: d.why, bad: d.bad, say: [{ t: 'Change the sentence to a negative. Does it match the picture?' }], turn: 'Teacher chooses who speaks.' })),
+  ...labC.map((d) => promptBeat({ lab: 1, quiet: 1, title: d.t, talk: 25, es: d.es, scene: d.sc, instr: 'Ask a question. Another learner gives a short answer.', frame: d.frame, starters: ['Is …?', 'Are …?', 'Yes, … is/are.', 'No, … isn’t/aren’t.'], extra: 'Ask and answer without the starters. Then add one more sentence.', sentence: d.sentence, say: [{ t: 'Ask a question. Another learner gives a short answer.' }], turn: 'Teacher chooses who asks and who answers.' })),
+];
+ACTS.push({
+  n: 7, title: 'Speaking Lab: Build, Change, Ask', spoken: 'Speaking lab. Build, change, ask',
+  es: 'Laboratorio de conversación: tres rondas con menos ayuda cada vez. El profesor decide quién habla.',
+  beats: [
+    { title: 'How the lab works', talk: 0, quiet: true, es: 'Tres rondas: A) elige un pronombre y di una frase; B) cambia a negativo y di si coincide con la imagen; C) pregunta y responde con respuesta corta. Hay frases de apoyo y un botón de reto extra.',
+      render: () => `<div class="cols even" style="grid-template-columns:repeat(3,1fr)">${[['A', 'coral', 'Build', 'Choose a pronoun. Say a sentence about the picture.'], ['B', 'teal', 'Change', 'Make it negative. Does it match the picture?'], ['C', 'violet', 'Ask', 'Ask a question. Give a short answer.']].map(([l, c, h, t]) => `<div class="card fadein" id="rd${l}"><span class="pill ${c === 'teal' ? '' : c}">${tx(`Round ${l}`)}</span><h3 style="margin-top:.4rem">${tx(h)}</h3><div class="mid-sentence">${tx(t)}</div></div>`).join('')}</div>
+        <div class="cols even"><div class="card"><b class="pill gold">${tx('Support')}</b><div class="mid-sentence" style="margin-top:.3rem">${tx('Sentence starters help you begin.')}</div></div><div class="card"><b class="pill violet">${tx('Extra challenge')}</b><div class="mid-sentence" style="margin-top:.3rem">${tx('Remove the starters. Add one more sentence.')}</div></div></div>
+        <div class="meaning">${tx('The teacher chooses who speaks. The lesson does not listen to or score anyone.')}</div><div class="row"><button class="btn alt" id="chk0">Open participation checklist</button></div>`,
+      seq: [{ t: 'Three rounds. Each round has less help.' }, { pre: (A) => { A.on('rdA'); A.sfx('pop'); }, t: 'Round A. Build a sentence from a picture.' }, { pre: (A) => { A.on('rdB'); A.sfx('pop'); }, t: 'Round B. Change a sentence to a negative.' }, { pre: (A) => { A.on('rdC'); A.sfx('pop'); }, t: 'Round C. Ask a question and answer.' }, { t: 'The teacher chooses who speaks.' }],
+      bind: (A) => { $('#chk0', A.root).onclick = () => openChecklist('part'); } },
+    ...labBeats,
+    { title: 'Lab wrap-up', talk: 30, quiet: true, es: 'Anota la participación con etiquetas anónimas (L1, L2…). Es tu observación, no una puntuación automática.', turn: 'Optional: partners say one more sentence.',
+      render: () => `<div class="meaning">${tx('Use anonymous labels. This is your own record. Nothing is uploaded.')}</div><div id="chk-inline"></div><label for="pn" style="font-weight:700">Participation notes</label><textarea id="pn" rows="3" style="width:100%;padding:.5rem;border:1px solid var(--cream-3);border-radius:8px;font:inherit">${esc(S.notes)}</textarea>`,
+      seq: [{ t: 'Well done. Partners: say one more sentence each.' }],
+      bind: (A) => { renderChecklist('part', $('#chk-inline', A.root)); $('#pn', A.root).addEventListener('input', (e) => { S.notes = e.target.value; save(); }); } },
+  ],
+});

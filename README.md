@@ -177,3 +177,7 @@ If the file is missing, the renderer gracefully falls back to plain text "Fluent
 ## Google Drive background images
 
 Sharing links like `https://drive.google.com/file/d/FILE_ID/view` are automatically converted to direct download URLs. No manual conversion needed.
+
+## Interactive lesson (separate deliverable)
+
+`lesson/fluent-english-be-lesson.html` is a self-contained 60-minute teacher-led lesson (Subject Pronouns and Be, A1). See [`lesson/README.md`](lesson/README.md) for launch instructions, tests run, and limitations.

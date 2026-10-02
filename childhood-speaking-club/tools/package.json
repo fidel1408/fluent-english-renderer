@@ -1,0 +1,10 @@
+{
+  "name": "childhood-speaking-club-tools",
+  "private": true,
+  "type": "module",
+  "description": "Developer-only build and test tools. The lesson itself needs none of this.",
+  "devDependencies": {
+    "cmu-pronouncing-dictionary": "^3.0.0",
+    "playwright-core": "^1.49.0"
+  }
+}

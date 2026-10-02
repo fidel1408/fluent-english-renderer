@@ -1,0 +1,788 @@
+# word | part of speech | learner definition | example   (written for this lesson, American English)
+a | determiner | one; used before a singular noun | She has a kite.
+ability | noun | the power or skill to do something | She has the ability to explain ideas clearly.
+able | adjective | having the skill or chance to do something | I was able to ride a bike at six.
+about | preposition | on the subject of | Tell us about your favorite game.
+accuracy | noun | being correct and free from mistakes | Accuracy matters, but clear ideas matter too.
+across | preposition | from one side to the other | We ran across the yard.
+act | verb | to do something or behave in a certain way | The children act quickly when the bell rings.
+action | noun | something that you do | One action can change the whole game.
+active | adjective | busy and full of movement | Tag is an active game.
+activity | noun | something you do for fun or learning | Drawing is a quiet activity.
+actual | adjective | real, not imagined | The actual lesson may be longer than planned.
+adapt | verb | to change something so that it works in a new situation | We can adapt the game for a smaller space.
+add | verb | to put one more thing with others | Add one more detail to your story.
+adult | noun | a person who is fully grown | As an adult, she enjoys quiet evenings.
+adventure | noun | an exciting or unusual experience | The toy robot went on an adventure across the rug.
+adventurous | adjective | happy to try new or exciting things | He was an adventurous child who loved climbing trees.
+advice | noun | helpful ideas about what someone should do | She asked an adult for advice.
+affect | verb | to change or influence someone or something | A decision can affect many people.
+afraid | adjective | feeling fear | I was afraid to swim at first.
+after | preposition | later than something | We played after school.
+afternoon | noun | the part of the day between noon and evening | One afternoon, we built a kite.
+again | adverb | one more time | Let's play the game again.
+against | preposition | opposite to; in competition with | One team played against the other.
+age | noun | how old a person is | Your answer may change with age.
+agree | verb | to have the same opinion as someone | I agree with you.
+all | determiner | every one of; the whole amount | All of us took turns.
+almost | adverb | very nearly | We almost missed the bell.
+along | preposition | moving on a line or path | We walked along the river.
+aloud | adverb | in a voice that other people can hear | Read the sentence aloud.
+also | adverb | in addition; too | I also enjoyed drawing.
+alternative | noun | another choice | The alternative is an indoor game.
+always | adverb | every time | I always walked to school with a friend.
+american | adjective | from the United States | This lesson uses American English.
+an | determiner | one; used before a singular noun that starts with a vowel sound | We built an enormous fort.
+and | conjunction | used to join words or ideas | We played tag and hide-and-seek.
+animated | adjective | made with moving pictures | The lesson starts with an animated opening.
+anonymous | adjective | without a name | The marks are anonymous.
+another | determiner | one more; a different one | Is there another solution?
+answer | noun | what you say when someone asks a question | Give your answer and a reason.
+any | determiner | one or some; no matter which | Any idea is welcome.
+anyone | pronoun | any person | Anyone can be the scorekeeper.
+anything | pronoun | any thing | You can say anything you like.
+apology | noun | words that say you are sorry | He gave a short apology.
+apologize | verb | to say you are sorry | They decided to apologize to the owner.
+arrive | verb | to reach a place | The owner arrives at the table.
+arrow | noun | a sign that points in one direction | Follow the arrow to the next step.
+art | noun | drawing, painting, and other creative work | Art was my favorite class.
+art-and-sports | adjective | joining art activities with sports | We planned an art-and-sports relay.
+ask | verb | to say something to get an answer | Ask a follow-up question.
+assess | verb | to judge how good or how much something is | The lesson does not assess your speaking automatically.
+assessment | noun | a way of judging how well someone does something | This is a teacher's observation, not an automatic assessment.
+assign | verb | to give someone a job or role | The teacher assigns the roles aloud.
+at | preposition | in or near a place or time | We met at the park.
+audio | noun | sound that you can hear | Each word has audio.
+author | noun | the person who wrote something | The author chose these pronunciations.
+automatic | adjective | done by a machine without a person | There is no automatic scoring.
+automatically | adverb | done by a machine, without a person doing it | The timer can start automatically.
+available | adjective | ready to use | A backup plan is available.
+away | adverb | to another place; not here | The ball rolled away.
+back | adverb | to an earlier place or time | I look back on those summers.
+background | noun | the part of a picture behind the main subject | The background shows a schoolyard.
+backpack | noun | a bag that you carry on your back | The new child had a backpack.
+backup | noun | a second plan or thing in case the first one fails | We need an indoor backup.
+ball | noun | a round object used in games | We kicked the ball across the yard.
+bank | noun | a collection of useful words or items | Open the word bank for ideas.
+base | noun | the main or starting part | Use the base form of the verb.
+basic | adjective | simple and most important | Explain the basic rules.
+be | verb | to exist or to have a quality | I used to be shy.
+because | conjunction | for the reason that | I liked it because it was exciting.
+become | verb | to begin to be | She became more independent.
+bedtime | noun | the time when you go to bed | Bedtime was at eight.
+before | preposition | earlier than something | We finished before the rain.
+believe | verb | to think something is true | I believe it rained that day.
+below | preposition | lower than something | Look at the picture below.
+better | adjective | of a higher quality | Is cooperation better than competition?
+big | adjective | large | It was a big decision.
+bike | noun | a bicycle | I rode my bike to the library.
+blocks | noun | small pieces that you build with | We made towers with building blocks.
+board | noun | a flat piece used for a game | We played a board game.
+book | noun | pages with words and pictures, joined together | I borrowed a book from the library.
+borrow | verb | to take something and give it back later | They borrowed a model bridge.
+both | pronoun | the two of them | Both friends felt worried.
+box | noun | a container with straight sides | The memory box is on the table.
+break | verb | to damage something so that it comes apart | A small piece broke when they dropped it.
+bridge | noun | a structure that crosses over water or a road | The model bridge was made of wood.
+browser | noun | a program for using the internet | Use a modern browser.
+build | verb | to make something by putting parts together | We built a fort.
+building | noun | a place with walls and a roof | The school building is red.
+but | conjunction | used to show a different idea | It was fun, but it was tiring.
+button | noun | a small part you press | Press the button to start the timer.
+by | preposition | next to; done through | She sat by the window.
+c | noun | the third letter of the alphabet | C is the third letter.
+calm | adjective | quiet and relaxed | Drawing is a calm activity.
+can | modal verb | to be able to; to be allowed to | You can pass if you like.
+caption | noun | words shown on a screen that match what is said | The captions follow the speaker.
+card | noun | a small, flat piece of paper | Write the rules on one card.
+cardboard | noun | thick, stiff paper | We turned a cardboard box into a castle.
+care | noun | attention to avoid problems | Handle the model with care.
+careful | adjective | thinking about what you do to avoid mistakes | Be careful with borrowed things.
+carry | verb | to hold something and take it somewhere | They were carrying the bridge.
+castle | noun | a large old building with strong walls | The box became a castle.
+challenge | noun | something difficult that tests your skill | Try the longer challenge.
+change | verb | to become different, or to make something different | Many things change as we grow up.
+chapter | noun | a main part of a book or lesson | This is chapter four.
+character | noun | a person in a story | Maya is a character in this lesson.
+chart | noun | a table or picture that shows information | Use the sound chart to check symbols.
+check | verb | to look at something to make sure it is right | Check your answer.
+child | noun | a young person | Every child plays in a different way.
+childhood | noun | the period of someone's life when they are a child | Their childhood was very different from ours.
+choice | noun | the act of choosing; something you choose | Both choices are fine.
+choose | verb | to pick one thing from several | Choose a place on the scale.
+chores | noun | small regular jobs at home | Chores helped me become independent.
+circle | noun | a perfectly round shape | We sat in a circle.
+circumstances | noun | the facts and conditions around a situation | Circumstances can change your answer.
+claim | noun | a statement that something is true | This is a claim, not a fact.
+clarity | noun | being clear and easy to understand | Clarity is one part of the rubric.
+class | noun | a group of students who learn together | The class chose a plan.
+clear | adjective | easy to understand | Give a clear ending.
+click | verb | to press a mouse button | Click a choice to add one.
+close | verb | to shut | Close the box slowly.
+cloud | noun | a white or gray shape in the sky | A cloud covered the sun.
+club | noun | a group of people who meet for a shared interest | We joined a drama club.
+clubhouse | noun | a small house for club members | We built a secret clubhouse.
+coffee | noun | a hot drink | Let's meet for coffee.
+colors | noun | red, blue, yellow, and other shades | The colors were bright.
+combine | verb | to join two or more things | Combine art and sports in one game.
+come | verb | to move toward the speaker or arrive | Come and join us.
+comic | noun | a story told in pictures | I loved comic books.
+community | noun | the people who live in one area | The community held a games afternoon.
+compare | verb | to look at how things are alike and different | Compare childhood and adult life.
+completely | adverb | in every way | I completely forgot the rules.
+compromise | noun | an agreement where each side gives up something | Could we reach a compromise?
+computer | noun | a machine for storing and using information | Save the notes on this computer.
+confidence | noun | a feeling that you can do something well | Small tasks build confidence.
+connect | verb | to join or link | Many people connect games with childhood.
+constraint | noun | a limit on what you can do | Time is one constraint.
+context | noun | the situation in which something happens | The context matters.
+continue | verb | to keep going | Continue the conversation.
+controls | noun | buttons that you use to operate something | Hide the controls with H.
+convert | verb | to change into a different form | The symbols were converted to the chart symbols.
+cook | verb | to prepare food with heat | Now I can cook dinner by myself.
+cooperation | noun | working well together | Cooperation makes the job easier.
+copy | verb | to make something that is the same | Copy the sentence into your notes.
+core | adjective | most important | These are the core words.
+corner | noun | the place where two edges meet | The art corner has bright paint.
+correct | adjective | right; without mistakes | The correct answer is A.
+correction | noun | a change that fixes a mistake | The teacher offers a correction after your turn.
+could | modal verb | used to talk about possibility or a polite request | Could we compromise?
+count | verb | to find the total number | The teacher counts the choices.
+country | noun | a nation, such as Canada or Japan | Children in another country will play the game.
+course | noun | a series of lessons | The course lasts ten weeks.
+cousin | noun | the child of your aunt or uncle | My cousin played with us.
+crayons | noun | colored sticks for drawing | We drew with crayons.
+creative | adjective | able to make new ideas or things | Technology can help children be creative.
+creativity | noun | the ability to make new ideas or things | Creativity grows when we play.
+csv | noun | a simple file for tables of data | Export the marks as a CSV file.
+curious | adjective | wanting to learn or know more | Curious children ask many questions.
+cycle | noun | a set of steps that repeat | Follow the speaking cycle.
+damage | verb | to harm something so that it does not work well | They accidentally damaged the bridge.
+data | noun | facts and information | No student data is saved by default.
+day | noun | twenty-four hours; the time when it is light | It was a long day.
+decide | verb | to make a choice | The group had to decide quickly.
+decision | noun | a choice that you make | Fair decisions include everyone.
+default | noun | the setting that is used when you do not choose another | Saving is off by default.
+demo | noun | a short example that shows how something works | Demo Mode shows sample answers.
+depend | verb | to be decided by something else | It depends on the situation.
+describe | verb | to say what someone or something is like | Describe your favorite game.
+description | noun | words that say what something is like | Use a short description.
+design | verb | to plan how something will look or work | I'd like to design a new board game.
+detail | noun | one small fact about something | Add one more detail.
+develop | verb | to grow and change over time | Children develop new skills.
+dictionary | noun | a book or website that explains words | Use a dictionary to check the meaning.
+different | adjective | not the same | Everyone's childhood is different.
+difficult | adjective | not easy | Cooking was difficult at first.
+dilemma | noun | a hard choice between two or more options | Each dilemma has more than one good answer.
+dinner | noun | the main meal of the day, usually in the evening | We had dinner at six.
+disagree | verb | to have a different opinion | I partly disagree.
+discuss | verb | to talk about something with other people | Discuss what you would do.
+discussion | noun | a conversation about a topic | The discussion was lively.
+divide | verb | to split into parts | Divide the time between sports and art.
+dizzy | adjective | feeling that everything is spinning | Spinning makes me dizzy.
+do | verb | to carry out an action | What did you do after school?
+door | noun | the part you open to enter a room | The door was painted blue.
+dot | noun | a very small round mark | A faint dot means there is no transcription yet.
+double-click | verb | to press a mouse button two times quickly | Double-click any word for its meaning.
+down | adverb | toward a lower place | The ball rolled down the hill.
+drag | verb | to pull something along | Drag a card to a new place.
+drama | noun | acting and plays | I joined the drama club.
+draw | verb | to make a picture with a pencil or pen | I loved to draw on rainy days.
+drop | verb | to let something fall | They dropped the model by accident.
+during | preposition | at some point in a period of time | During summer vacations, we would play cards.
+e | noun | the fifth letter of the alphabet | E is a vowel.
+each | determiner | every one of two or more | Each round has a twist.
+early | adverb | before the usual or expected time | I woke up early.
+easily | adverb | without difficulty | She learned easily.
+effects | noun | results or changes caused by something | The effects of the rain were big.
+emerging | adjective | just beginning to appear or develop | Emerging means you are starting to use it.
+end | noun | the last part | Give your story a clear end.
+english | noun | the language spoken in the United States and many other countries | We practice English together.
+enjoy | verb | to like doing something | I enjoy drawing.
+enough | determiner | as much as you need | We don't have enough equipment.
+entry | noun | a single item in a dictionary | The entry shows the meaning.
+equipment | noun | the tools and things you need for an activity | We have very little equipment.
+even | adverb | used to add surprise | Even the quiet child had an idea.
+event | noun | something that happens, especially something planned | The school event lasts one hour.
+every | determiner | each one of a group | Every child can join in.
+everyone | pronoun | all people | Everyone gets a turn.
+everything | pronoun | all things | Everything changed that year.
+example | noun | something that shows what a general rule means | One example would be a game of tag.
+exception | noun | something that does not follow the usual rule | Give a reason, an example, or an exception.
+exciting | adjective | making you feel happy and interested | The game was exciting.
+exit | noun | a way out; the end of a lesson | The exit challenge is the last task.
+explain | verb | to make something clear | Explain your ranking.
+export | verb | to save information in a file that you can use elsewhere | Export the notes as a file.
+expression | noun | a word or phrase | "Take turns" is a useful expression.
+extend | verb | to make longer | Extra discussion may extend the lesson.
+extension | noun | an extra part that goes beyond the basic task | The extension uses would.
+f | noun | the sixth letter of the alphabet | F is for full screen.
+fact | noun | something that is true | A claim is not always a fact.
+faint | adjective | not strong; hard to see | A faint dot appears below the word.
+fair | adjective | treating everyone equally | A fair game gives everyone a turn.
+fairly | adverb | in a way that treats people equally | They shared the tasks fairly.
+fall | verb | to go down quickly | I laughed until I fell over.
+familiar | adjective | well known to you | The street felt familiar.
+favorite | adjective | liked best | What is your favorite childhood game?
+feedback | noun | comments about how well someone did something | The teacher gives feedback after your turn.
+feel | verb | to have an emotion or sense | How do you feel about it now?
+few | determiner | a small number of | A few friends joined us.
+fictional | adjective | not real; from a story | Use a fictional character if you like.
+film | noun | a movie | Would you rather read a book or watch a film?
+final | adjective | last | State your final answer.
+find | verb | to discover something | Someone you've never met will find it.
+fine | adjective | good enough; okay | Pass is fine.
+first | adverb | before anything else | First, we played tag.
+fit | verb | to be the right size or shape | Choose the card that fits your group.
+five | number | the number 5 | There are five choices on the scale.
+fix | verb | to repair | We'd like to fix it together.
+float | verb | to stay on top of water | A neighbor taught me to float.
+fluent | adjective | able to speak a language easily | Keep practicing to become fluent.
+fly | verb | to move through the air | Spinning felt like flying.
+follow-up | adjective | coming after something | Ask a follow-up question.
+for | preposition | intended to help or belong to | This card is for you.
+form | noun | a particular shape or type of something | Use the base form of the verb.
+four | number | the number 4 | I'll rank four qualities.
+free | adjective | not controlled; without cost | Children need free play.
+fresh | adjective | new and different | A fresh start helps.
+friday | noun | the day after Thursday | I went to the library every Friday.
+friend | noun | a person you know well and like | A childhood friend remembers your old games.
+friendship | noun | a relationship between friends | Friendship matters a lot.
+from | preposition | starting at a place or time | I borrowed it from a friend.
+full | adjective | holding as much as possible | The teams are full.
+fun | noun | enjoyment | We had a lot of fun.
+funny | adjective | making you laugh | It was a funny story.
+future | noun | the time after now | Will the future bring new games?
+game | noun | an activity with rules that people play for fun | We invented a game with a rope.
+gatherings | noun | meetings of people | Smaller gatherings feel calmer to me.
+general | adjective | not specific; true for most cases | A general example is fine.
+get | verb | to receive or become | We get along well.
+give | verb | to hand something to someone | Give a reason for your choice.
+go | verb | to move from one place to another | We go to the park after school.
+goal | noun | something you want to achieve | Your goal is to reconnect.
+good | adjective | of high quality; pleasant | That is a good idea.
+google | noun | the name of a large internet company | This lesson does not connect to Google Sheets.
+grade | verb | to give a score to someone's work | Nothing is graded automatically.
+great | adjective | very good | That's a great plan.
+group | noun | several people or things together | A group planned the event.
+grow | verb | to become bigger or older | Children grow quickly.
+h | noun | the eighth letter of the alphabet | Press H to hide the controls.
+half | noun | one of two equal parts | Half the time is for art.
+hands-free | adjective | working without needing you to touch it | Demo Mode is a hands-free preview.
+happen | verb | to take place | What happened next?
+hard | adjective | difficult | Sharing was hard at first.
+hardly | adverb | almost not | We hardly need any equipment.
+have | verb | to own or hold | We have a rope and two balls.
+he | pronoun | the male person already mentioned | He remembers his art teacher.
+hear | verb | to notice sound with your ears | Everyone can hear the voice.
+help | verb | to make something easier for someone | Chores help children become independent.
+helpful | adjective | useful | The starters are helpful.
+here | adverb | in this place | Please stay here.
+hide | verb | to put something where people cannot see it | One friend wanted to hide the damage.
+hide-and-seek | noun | a game in which some players hide and others look for them | We played hide-and-seek on my street.
+high | adjective | far above the ground; at a top level | Put friendship higher on the list.
+home | noun | the place where you live | I walked home after school.
+honest | adjective | telling the truth | An honest answer builds trust.
+hour | noun | sixty minutes | The event lasts one hour.
+how | adverb | in what way | How often did you go?
+hunt | noun | a search | We had a treasure hunt.
+i | pronoun | the person who is speaking | I used to be shy.
+idea | noun | a thought or plan | That's a good idea.
+if | conjunction | used to talk about a condition | If it rains, we move inside.
+ignore | verb | to pay no attention to | One person felt ignored.
+imagination | noun | the ability to form ideas or pictures in your mind | We used our imagination to turn the yard into a spaceship.
+imagine | verb | to form a picture in your mind | Imagine a rainy afternoon.
+important | adjective | having great value or meaning | Friends are important.
+in | preposition | inside a place or period of time | We played in the yard.
+include | verb | to make someone part of a group | Let's include the newcomer.
+incorrect | adjective | not right | The second sentence is incorrect.
+independence | noun | the ability to do things by yourself | Chores teach independence.
+independent | adjective | able to do things or make some decisions without help | I became more independent when I learned to prepare a simple snack.
+indoor | adjective | inside a building | We need an indoor backup.
+inside | adverb | in a building | If it rains, we move inside.
+instruction | noun | a statement that tells you how to do something | There are no spoken instructions.
+interaction | noun | talking and working with other people | Interaction is part of the rubric.
+interest | noun | something you like to do or learn about | My interests have changed.
+into | preposition | to the inside of | We turned the box into a castle.
+invent | verb | to create something new | They like to invent games.
+invite | verb | to ask someone to join | Invite the newcomer to play.
+it | pronoun | a thing that was already mentioned | It was a sunny day.
+item | noun | one thing in a list | Reveal the next item.
+job | noun | a task or work | Everyone had a job.
+join | verb | to become part of a group | Can I join in?
+jordan | name | a fictional character in this lesson | Jordan remembers outdoor games.
+json | noun | a file type for storing information as text | Export the data as a JSON file.
+judge | noun | a person who decides who wins | We took turns being the judge.
+judgment | noun | an opinion about whether something is good or bad | This task is a negotiation, not a judgment.
+just | adverb | only; very recently | The newcomer just moved here.
+keep | verb | to continue to have or do | Keep speaking.
+keyboard | noun | the keys that you press to type | Use the keyboard to move the card.
+kid | noun | a child | The kids next door played with us.
+kite | noun | a toy that flies on a long string | One afternoon, we built a kite.
+know | verb | to have information in your mind | I know the rules.
+lake | noun | a large area of water with land around it | I swam across the lake.
+language | noun | the words that people use to speak and write | English is a global language.
+last | adjective | final | This is the last task.
+later | adverb | after the present time | We met later in life.
+laugh | verb | to make a sound that shows you think something is funny | We would laugh until we fell over.
+learn | verb | to get new knowledge or skill | I learned to prepare a simple snack.
+learner | noun | a person who is studying something | Oxford Learner's Dictionaries help students.
+leave | verb | to go away from a place | They leave after the bell.
+left | adjective | remaining; not yet used | Only thirty minutes are left.
+length | noun | how long something is | The length of the timer can change.
+lesson | noun | a period of teaching | This lesson lasts sixty minutes.
+let | verb | to allow | Let everyone join in.
+library | noun | a place where you can borrow books | I rode my bike to the library.
+life | noun | the time between birth and death | Life changes as we grow up.
+like | verb | to enjoy | I like quiet games.
+limited | adjective | small in amount | Equipment is limited.
+line | noun | a long thin mark; a row | Read the first line.
+list | noun | a series of things written one below another | Put it at the top of the list.
+listen | verb | to pay attention to sound | Listen to your partner.
+little | adjective | small in size or amount | We had very little equipment.
+local | adjective | in this area; on this computer | Local save uses this browser only.
+long | adjective | measuring a great distance or time | It was a long walk home.
+look | verb | to turn your eyes toward something | Look at the picture.
+lose | verb | to fail to keep or win | We didn't want to lose the game.
+loud | adjective | making a lot of noise | I used to be loud, but now I'm quiet.
+love | verb | to like very much | I used to love the stage.
+lunch | noun | the meal in the middle of the day | We would play cards after lunch.
+majority | noun | more than half of a group | The majority decides in a vote.
+make | verb | to create | Make up a game with a rope.
+make-believe | noun | pretending and imagining | We played make-believe for hours.
+manage | verb | to deal with something successfully | Older children can manage more.
+many | determiner | a large number of | Many people agree.
+mark | noun | a sign or score that a teacher records | Add a participation mark.
+markers | noun | colored pens | We have paper and markers.
+match | verb | to be the same as | The captions match the voice.
+matter | verb | to be important | Cooperation matters.
+may | modal verb | used to talk about possibility | Extra discussion may extend the lesson.
+maya | name | a fictional guide in this lesson | Maya opens the memory box.
+maybe | adverb | perhaps | Maybe it was a rainy afternoon.
+me | pronoun | the person who is speaking, as an object | Tell me more.
+mean | verb | to have a particular meaning | What do you mean?
+meaning | noun | what a word or sentence says | Double-click to see the meaning.
+meaningful | adjective | important or full of meaning | Keep one meaningful object.
+meet | verb | to come together | Let's meet for coffee.
+memorable | adjective | easy to remember | What made it memorable?
+memory | noun | something that you remember | A favorite memory can start with a small object.
+message | noun | information that you send to someone | I'll send you a message.
+might | modal verb | used to say something is possible | That might work.
+min | noun | short for minute | The plan shows the minutes for each chapter.
+mind | noun | the part of you that thinks | Picture it in your mind.
+minute | noun | sixty seconds | The game lasted one minute.
+mixed | adjective | made of different kinds | The group has mixed interests.
+mix | verb | to combine different things | The relay mixes art and sports.
+mode | noun | a way of working | Class Mode waits for the teacher.
+model | noun | an example; a small copy | Listen to a short model conversation.
+month | noun | one of the twelve parts of a year | Let's meet next month.
+more | determiner | a larger amount | More children joined the game.
+most | adverb | to the greatest degree | What do you enjoy most?
+motion | noun | movement | Reduce motion if you prefer.
+move | verb | to change place | They moved to a new town.
+movement | noun | the act of moving | Playground games need movement.
+movie | noun | a film | Would you rather watch a movie?
+much | determiner | a large amount of | We don't have much equipment.
+music | noun | sounds that people sing or play | The music is soft and optional.
+must | modal verb | used when something is necessary | The organizers must agree.
+my | determiner | belonging to me | My friend lived nearby.
+myself | pronoun | me, and nobody else | I did it by myself.
+n | noun | the fourteenth letter of the alphabet | Press N to reveal the next item.
+name | noun | the word that people call you | Please do not write full names.
+narration | noun | a voice that tells or explains something | The narration stops while you speak.
+natural | adjective | normal and easy | Which question is natural?
+near | preposition | close to | I grew up near a river.
+nearby | adjective | close | A nearby friend joined us.
+need | verb | to require | We need a backup plan.
+negative | noun | a sentence that says something is not true | Practice questions and negatives.
+negotiate | verb | to talk until you reach an agreement | The organizers negotiate a plan.
+negotiation | noun | a discussion in which people try to agree | This is a negotiation task.
+neighbor | noun | a person who lives near you | A neighbor taught me to float.
+neighborhood | noun | an area of a town where people live | The neighborhood felt very big.
+neither | pronoun | not one and not the other | Neither memory has to be wrong.
+nervous | adjective | worried and a little afraid | I was nervous on stage.
+never | adverb | not at any time | I've never met that person.
+new | adjective | recently made or arrived | A new child walks over.
+newcomer | noun | a person who has just arrived | They included the newcomer.
+next | adjective | coming after this one | Reveal the next item.
+no | determiner | not any | There is no wrong answer.
+nobody | pronoun | no person | Nobody wants to stop the game.
+not | adverb | used to make a word mean the opposite | It is not a fact.
+note | noun | a short written message | The note said, "Meet me at the park."
+nothing | pronoun | not anything | Nothing is saved by default.
+notice | verb | to see or become aware of | They notice a small change.
+noun | noun | a word that names a person, place, or thing | "Game" is a noun.
+now | adverb | at this time | Now it makes me dizzy.
+number | noun | a word or sign that shows how many | Write a number.
+object | noun | a thing that you can see or touch | An ordinary object can hold a memory.
+observation | noun | something that you notice and record | These are teacher observations.
+of | preposition | belonging to; made from | A group of children played.
+offer | verb | to give someone a choice or help | The teacher offers a correction.
+often | adverb | many times | We often played cards.
+okay | adjective | acceptable | Pass is always okay.
+old | adjective | having lived or existed for a long time | We met at our old school.
+on | preposition | above and touching; about a subject | Look back on your school days.
+once | adverb | one time | We played once a week.
+one | number | the number 1 | One afternoon, we built a kite.
+open | verb | to make something not closed | Maya opens the memory box.
+opinion | noun | what you think about something | Your opinion is not right or wrong.
+opportunity | noun | a chance to do something | Technology offers new opportunities.
+opposite | noun | something completely different | Could the opposite also be true?
+optional | adjective | not required | Starters are optional.
+or | conjunction | used to show a choice | Choose a cart or a basket.
+order | noun | the way things are arranged one after another | Tell the story in order.
+ordinary | adjective | normal; not special | An ordinary object can remind us of a lot.
+organize | verb | to plan and arrange | Alex now organizes workshops.
+organizer | noun | a person who plans an event | The organizers want different things.
+original | adjective | not copied; new | The music is original.
+other | adjective | different or additional | The other friend wanted to explain.
+our | determiner | belonging to us | It was our favorite place.
+out | adverb | away from the inside | We played out in the yard.
+outdoor | adjective | outside a building | Jordan remembers outdoor games.
+outgoing | adjective | friendly and happy to meet people | Jordan used to be outgoing.
+outside | adverb | not in a building | We played outside after lunch.
+over | preposition | above; across; ended | The game was over.
+own | adjective | belonging to you | Rank them in your own order.
+owner | noun | the person that something belongs to | The owner asks about the bridge.
+oxford | name | a city in England; the name of a university | Oxford Learner's Dictionaries give word pronunciations.
+paper | noun | thin material for writing and drawing | We drew on paper.
+park | noun | a public area with grass and trees | Meet me at the park after school.
+part | noun | one piece of something | Which part do you remember?
+participation | noun | taking part in an activity | Marks recognize participation.
+partly | adverb | not completely | I partly agree.
+partner | noun | the person you work or talk with | Ask your partner a question.
+pass | verb | to choose not to answer | You can always pass.
+past | noun | the time before now | Talk about the past.
+patient | adjective | able to wait calmly | A patient teacher explained it again.
+pause | verb | to stop for a short time | Pause the timer.
+perfect | adjective | as good as possible | That's perfect.
+performance | noun | a show for an audience | I remember the school performances.
+perhaps | adverb | maybe | Perhaps a quick game of tag.
+period | noun | a length of time | Childhood is a period of life.
+person | noun | a human being | Each person has a turn.
+personal | adjective | private; about one person | Do not share personal details.
+pick | verb | to choose | Pick one quality.
+picture | noun | an image | Look at the picture.
+piece | noun | a part of something | A small piece broke.
+place | noun | a position or location | Choose a place on the scale.
+plan | noun | an idea of how to do something | Agree on a plan.
+planned | adjective | arranged in advance | The planned time is sixty minutes.
+play | verb | to take part in a game | We used to play outside.
+player | noun | a person who takes part in a game | The players said their teams were full.
+playful | adjective | liking to have fun | A playful child laughed a lot.
+playground | noun | an outdoor area where children play | We took turns on the playground swings.
+please | adverb | a polite word used to ask for something | Please do not write private details.
+point | noun | an idea or opinion in a discussion | I see your point.
+possible | adjective | able to happen | Several answers are possible.
+prefer | verb | to like one thing more than another | Jordan prefers smaller gatherings.
+preference | noun | a choice that you like better | A choice is a preference, not an answer.
+prepare | verb | to get ready | I learned to prepare a simple snack.
+preserve | verb | to keep safe for the future | I'd preserve one childhood story in a book.
+press | verb | to push a button | Press H to hide the controls.
+preview | noun | a short look at something before the whole thing | Demo Mode is a preview.
+previous | adjective | coming before | Go to the previous step.
+prioritize | verb | to treat something as most important | I would prioritize friendship.
+priority | noun | something that is most important | Our top priority is cooperation.
+private | adjective | not shared with others | Do not type private stories.
+problem | noun | something difficult that needs a solution | They had a problem with the bridge.
+produce | verb | to make | The dictionary produced the transcriptions.
+program | noun | a planned set of activities | They planned a childhood activity program.
+project | noun | a school task that takes time | They borrowed a model bridge for a school project.
+prompt | noun | a short question or phrase that helps you speak | Use these prompts, not a script.
+pronunciation | noun | the way a word is said | The pronunciation is shown below each word.
+put | verb | to place | Put friendship at the top.
+puzzle | noun | a game in which you fit pieces together | We did a puzzle on rainy days.
+quality | noun | a feature of a person or thing | Choose a quality for the program.
+question | noun | a sentence that asks for information | Ask one follow-up question.
+quick | adjective | fast | A quick game of tag was fun.
+quiet | adjective | making little or no noise | We liked quiet games.
+r | noun | the eighteenth letter of the alphabet | Press R to replay the step.
+race | noun | a competition to be the fastest | We ran a relay race.
+rain | noun | water that falls from clouds | The rain started at halftime.
+rainy | adjective | with a lot of rain | It was a rainy afternoon.
+rank | verb | to put things in order of importance | Rank the four qualities.
+rather | adverb | used to show a preference | I'd rather watch a movie.
+read | verb | to look at words and understand them | I like to read before bed.
+real | adjective | true; not imagined | A real or fictional story is fine.
+reason | noun | the cause or explanation for something | Give a reason.
+recess | noun | a break between classes at school | We played tag at recess.
+recipe | noun | instructions for cooking a dish | I cook dinner without a recipe.
+reconnect | verb | to start a relationship again | The goal is to reconnect.
+reconsider | verb | to think again about a decision | Would you reconsider your answer?
+reduce | verb | to make smaller | Reduce motion in the settings.
+referee | noun | a person who makes sure players follow the rules | The newcomer could be the referee.
+reflect | verb | to think carefully about something | Take a moment to reflect.
+reflection | noun | careful thought about what happened | The last task is a short reflection.
+relationship | noun | the way people are connected | Friendships are important relationships.
+relax | verb | to rest and feel calm | A plan helps me relax.
+relay | noun | a race in which teams take turns | We ran a relay race.
+relevant | adjective | connected to the topic | Use relevant vocabulary.
+remember | verb | to bring something back to mind | I remember the spring show.
+remind | verb | to help someone remember | An object can remind us of a place.
+remove | verb | to take away | Shift-click removes one.
+repair | verb | to fix | They tried to repair the bridge.
+repeat | verb | to do again | We would repeat the game each week.
+replay | verb | to play again | Press R to replay the step.
+reset | verb | to put back to the start | Reset the order.
+respond | verb | to answer | Respond to another view.
+response | noun | an answer | Give a short response.
+result | noun | what happens because of something | One possible result is shown here.
+return | verb | to give back | They returned it quickly.
+reuse | verb | to use again | Which expression will you reuse?
+reveal | verb | to show | Reveal the next item.
+revise | verb | to change after thinking again | Revise your response.
+revisit | verb | to go back to a place | I'd revisit a childhood place.
+ride | verb | to sit on and control a bike | I used to ride my bike to the library.
+right | adjective | correct | There is no right answer.
+risk | noun | the chance that something bad happens | A risk might be hurt feelings.
+river | noun | a large stream of water | I grew up near a river.
+role | noun | a part that a person plays | Take the role of Alex.
+role-play | noun | an activity in which people act out a situation | The role-play is about an old friend.
+roleplay | noun | an activity in which people act out a situation | Today we have two roleplays.
+room | noun | a space inside a building | We met in a quiet room.
+rope | noun | a thick, strong cord | We made up a game with a rope.
+round | noun | one part of a game | Each round has a twist.
+route | noun | the way from one place to another | I took the same route to school.
+routine | noun | things that you do regularly | My routine after school was simple.
+rubric | noun | a chart that shows how work is judged | The teacher can use the rubric.
+rug | noun | a small carpet | The toy robot walked across the rug.
+rule | noun | a statement about what you must or must not do | Explain one rule.
+run | verb | to move fast on foot | Not everyone likes to run.
+s | noun | the nineteenth letter of the alphabet | Press S for starters.
+sam | name | a fictional character in this lesson | Sam makes a sandwich.
+same | adjective | exactly alike | Some things stay the same.
+sample | noun | an example | This is a sample response.
+sandwich | noun | two slices of bread with food between them | Sam makes a sandwich without help.
+save | verb | to keep information for later | Save notes on this computer.
+say | verb | to speak words | Say your idea aloud.
+scale | noun | a line of choices from one end to the other | Choose a place on the scale.
+scenario | noun | an imagined situation | This scenario is fictional.
+scene | noun | a short part of a story | Watch the next scene.
+school | noun | a place where children learn | We walked to school.
+schoolmates | noun | people who go to the same school | They were schoolmates for two years.
+scorekeeper | noun | a person who records the points | Anyone can be the scorekeeper.
+screen | noun | the flat part of a computer that shows pictures | Share your screen.
+script | noun | the written words that people read or say | A prompt is not a script.
+second | noun | one sixtieth of a minute | The story lasts thirty seconds.
+secret | adjective | known to only a few people | We built a secret clubhouse.
+secure | adjective | strong and sure | Secure means you use it well.
+see | verb | to notice with your eyes | I see your point.
+send | verb | to make something go to someone | I'll send you a message.
+sentence | noun | a group of words with a complete idea | Say one sentence with used to.
+sequencing | noun | putting things in order | Use sequencing language.
+set | verb | to put in a place; to arrange | The group set the rules.
+setting | noun | a choice that controls how something works | Change the setting.
+seven | number | the number 7 | We played at seven.
+share | verb | to let others have or use something | You choose what to share.
+she | pronoun | the female person already mentioned | She grew up in a small town.
+sheet | noun | a flat piece of paper | Use a sheet of paper.
+shift | noun | a key on a keyboard that changes letters | Shift-click removes one.
+shift-click | verb | to click while holding the Shift key | Shift-click removes one.
+short | adjective | not long | Tell a short story.
+shortcut | noun | a quick way to do something | Learn a few keyboard shortcuts.
+should | modal verb | used to give advice | We should explain what happened.
+show | verb | to let someone see something | Show the next card.
+shy | adjective | nervous about meeting or talking to people | I used to be shy.
+simple | adjective | easy to understand | Use a simple sentence.
+simply | adverb | in an easy way | Explain the rule simply.
+situation | noun | the facts of a particular time or place | Each situation is fictional.
+sixty | number | the number 60 | The lesson plan has sixty minutes.
+small | adjective | little | A small piece broke.
+smile | noun | a happy look on your face | She remembers the day with a smile.
+snack | noun | a small amount of food between meals | I learned to prepare a simple snack.
+so | adverb | for that reason; very | So, what can an ordinary object remind us of?
+soft | adjective | gentle; not loud | The music is soft.
+solution | noun | an answer to a problem | Is there another solution?
+some | determiner | an amount or number of | Some children wanted art.
+someone | pronoun | a person that is not named | Someone you've never met will find it.
+something | pronoun | a thing that is not named | Something small can start a memory.
+sometimes | adverb | not always | Sometimes we met after lessons.
+sorry | adjective | feeling sad about something you did | I'm sorry. It broke when we dropped it.
+sound | noun | something that you hear | Use the sound chart.
+space | noun | an area that is empty or free | We needed more space.
+spaceship | noun | a vehicle that travels to space | We turned the yard into a spaceship.
+speak | verb | to say words aloud | Keep speaking.
+speed | noun | how fast something moves | Change the speaking speed in the settings.
+spin | verb | to turn around quickly | I loved spinning in circles.
+sport | noun | a game that needs physical skill | Some wanted a sports activity.
+spring | noun | the season after winter | The school put on a show every spring.
+stage | noun | a raised area where people perform | I used to love the stage.
+standard | adjective | usual; normal | The standard version lasts thirty seconds.
+start | verb | to begin | Start the timer.
+starter | noun | the first words of a sentence that help you begin | Use a sentence starter.
+state | noun | a condition; a situation | Use "used to" for a past state.
+station | noun | a place where an activity happens | Two short stations could work.
+stay | verb | to remain | Some things stay the same.
+step | noun | one part of a process | Go to the next step.
+still | adverb | up to now; even so | I still remember it.
+stop | verb | to end | They didn't want to stop the game.
+story | noun | a description of events | Tell a thirty-second story.
+stranger | noun | a person you do not know | Someone you've never met is a stranger.
+street | noun | a road in a town | We played hide-and-seek on my street.
+streetlights | noun | lights along a road | We played until the streetlights came on.
+stressful | adjective | causing worry | Too many chores can be stressful.
+strict | adjective | demanding that rules are followed | The teacher was strict but fair.
+strong | adjective | having great power | Teamwork makes a strong group.
+student | noun | a person who is learning | Each student has a turn.
+such | determiner | of that kind | Such games need little equipment.
+suggest | verb | to offer an idea | Suggest another solution.
+summer | noun | the warmest season | During summer vacations, we would play cards.
+sunshine | noun | light from the sun | Jordan remembers sunshine.
+support | verb | to give help or show reasons | Support your opinion with an example.
+sure | adjective | certain | I'm sure it rained.
+surprise | noun | something unexpected | The twist is a surprise.
+swim | verb | to move through water | I learned to swim.
+swing | noun | a seat that moves back and forth on ropes | We took turns on the swings.
+switch | verb | to change from one to another | Switch roles.
+symbol | noun | a sign that stands for a sound or idea | The chart shows each symbol.
+sync | noun | happening at the same time | The captions stay in sync with the voice.
+t | noun | the twentieth letter of the alphabet | Press T to start the timer.
+tab | noun | a small label that you click to see another page | Click a tab to change the page.
+table | noun | a piece of furniture with a flat top | The box is on the table.
+tag | noun | a chasing game | We played tag at recess.
+take | verb | to get hold of; to need | We took turns.
+talk | verb | to speak with someone | Talk with your partner.
+tally | noun | a count that the teacher records | The tally shows the class choices.
+tape | noun | a sticky strip | The photo has tape on the corners.
+task | noun | a piece of work to do | The exit challenge is a short speaking task.
+teach | verb | to help someone learn | A neighbor taught me to float.
+teacher-operated | adjective | controlled by the teacher | The rubric is teacher-operated.
+team | noun | a group that plays or works together | Two teams played a ball game.
+teamwork | noun | working well as a group | Teamwork helps the whole group.
+technical | adjective | connected to machines or computers | Technical pauses can extend the lesson.
+technology | noun | machines and computers | Technology gives children new tools.
+tell | verb | to say something to someone | Tell a short story.
+test | verb | to try something to see if it works | Test the voice.
+than | conjunction | used to compare things | Friendship matters more than winning.
+the | determiner | used before a noun that is already known | The game was exciting.
+their | determiner | belonging to them | Their childhood was different.
+them | pronoun | the people or things already mentioned | Include them in the game.
+theo | name | a fictional guide in this lesson | Theo reads the note.
+then | adverb | after that | At first, we built a kite. Then we flew it.
+there | adverb | in that place | There is a park near my home.
+these | determiner | the ones that are near | These are the core words.
+they | pronoun | the people or things already mentioned | They went to the same school.
+thing | noun | an object or idea | Many things have changed.
+think | verb | to use your mind | Think about your own order first.
+third | adjective | number three in order | The third claim is about friends.
+thirty | number | the number 30 | You have thirty seconds.
+thirty-second | adjective | lasting thirty seconds | Tell a thirty-second story.
+this | determiner | the one that is here | This is chapter one.
+those | determiner | the ones that are there | I look back on those summers.
+three | number | the number 3 | Choose three activities.
+time | noun | what a clock measures | Time is limited.
+timer | noun | a clock that counts down | Start the timer.
+tiny | adjective | very small | A tiny piece broke.
+to | preposition | in the direction of; used before a verb | We walked to school.
+today | adverb | on this day | Today you choose what to share.
+together | adverb | with each other | We built it together.
+too | adverb | also; more than needed | I'd love that, too.
+toolbox | noun | a set of useful tools | This is your language toolbox.
+top | noun | the highest part | Put friendship at the top.
+total | noun | the whole amount | The total time is sixty minutes.
+touch | verb | to put your hand on something | You can't touch anything.
+town | noun | a place with houses and shops, smaller than a city | She grew up in a small town.
+toy | noun | an object for children to play with | The small toy had many adventures.
+transcription | noun | symbols that show how a word sounds | The transcription is shown below the word.
+treasure | noun | valuable things, such as gold | We had a treasure hunt.
+treat | verb | to act toward someone in a certain way | Treat everyone fairly.
+treehouse | noun | a small house built in a tree | I'd rather have a treehouse.
+true | adjective | correct; real | Could the opposite also be true?
+trust | noun | belief that someone is honest and reliable | Honesty builds trust.
+try | verb | to attempt | Try the longer challenge.
+turn | noun | your chance to do something in a game | Everyone gets a turn.
+twenty | number | the number 20 | We play for twenty minutes.
+twist | noun | a surprising change | Here is a twist.
+two | number | the number 2 | Choose two words.
+type | verb | to write using a keyboard | Please do not type private stories.
+uneven | adjective | not equal | The teams were uneven for one round.
+unfair | adjective | not treating people equally | The numbers felt unfair.
+until | preposition | up to the time that | We played until the streetlights came on.
+unusual | adjective | not common | Treat unusual words with care.
+up | adverb | toward a higher place | Hands up if you agree.
+upset | adjective | unhappy or worried | The owner may be upset.
+us | pronoun | me and other people | An object can remind us of a place.
+use | verb | to do something with a tool or word | Use these expressions.
+useful | adjective | helpful | These are useful expressions.
+usually | adverb | most of the time | We usually walked home.
+vacation | noun | a holiday; time away from school or work | During summer vacations, we would play cards.
+valuable | adjective | important or worth a lot | All four qualities are valuable.
+verb | noun | a word for an action | "Play" is a verb.
+very | adverb | to a high degree | It was very exciting.
+view | noun | an opinion or way of seeing something | Respond to another view.
+visible | adjective | able to be seen | The cards are visible to everyone.
+vocabulary | noun | the words that you know | Use new vocabulary.
+voice | noun | the sound that you make when you speak | Test the voice.
+volume | noun | how loud a sound is | Change the volume.
+vote | verb | to choose by raising a hand or marking a paper | The group can vote.
+w | noun | the twenty-third letter of the alphabet | Press W for the word banks.
+wait | verb | to stay until something happens | The newcomer may have to wait.
+wake | verb | to stop sleeping | I used to wake up early.
+walk | verb | to move on foot | We walk home together.
+wall | noun | a side of a room or building | We threw a ball against the wall.
+want | verb | to wish for | Some want a sports activity.
+warm | adjective | pleasantly hot; friendly | Not every memory feels warm.
+warm-up | noun | an easy activity at the start | The warm-up has four questions.
+watch | verb | to look at something for a time | Watch a short scene.
+way | noun | a method; a path | There are many ways to solve it.
+we | pronoun | the speaker and other people | We played tag.
+weather | noun | the rain, wind, and sun at a place | The weather may change.
+week | noun | seven days | We met once a week.
+weekend | noun | Saturday and Sunday | Weekends are better with a plan.
+welcome | verb | to greet someone happily | Welcome to Speaking Club.
+well | adverb | in a good way | We get along well.
+what | pronoun | used to ask for information | What happened next?
+when | adverb | at what time | When I was seven, I learned to ride a bike.
+where | adverb | in what place | Where did you grow up?
+which | pronoun | used to ask about a choice | Which expression do you want to reuse?
+while | conjunction | during the time that | While carrying it, they dropped it.
+whisper | verb | to speak very quietly | One friend whispers, "Let's hide it."
+who | pronoun | used to ask about a person | Who did you usually play with?
+whole | adjective | complete | The whole class joined in.
+why | adverb | for what reason | Why did you choose it?
+will | modal verb | used to talk about the future | Someone will find it.
+with | preposition | together with; using | I played with my cousin.
+without | preposition | not having | Sam makes a sandwich without help.
+word | noun | a single unit of language | Double-click any word.
+work | verb | to be effective; to do a job | That might work.
+workshop | noun | a short class where people learn by doing | Alex now organizes workshops.
+would | modal verb | used for past habits and polite questions | We would play cards after lunch.
+wow | exclamation | a word that shows surprise | Wow! It's been years!
+wrap-up | noun | a short ending activity | The wrap-up asks which claim made you think.
+write | verb | to put words on paper | Write the rules on one card.
+wrong | adjective | not correct | Neither memory has to be wrong.
+yard | noun | the outdoor space next to a house | We turned the yard into a spaceship.
+year | noun | twelve months | It's been years!
+yes | exclamation | a word that shows agreement | Yes, that works.
+yet | adverb | up to now | There is no transcription yet.
+you | pronoun | the person being spoken to | You can always pass.
+young | adjective | not old | When I was young, I loved spinning.
+your | determiner | belonging to you | Say your idea aloud.
+zoom | noun | a program for video calls | Share your screen in Zoom.
+alex | name | a fictional character in this lesson | Alex now enjoys organizing activities.
+b | noun | the second letter of the alphabet | Choose A or B.
+someone's | pronoun | belonging to a person who is not named | Someone's idea can change the plan.
+that | pronoun | the thing that was mentioned or is far away | That is a good idea.
+ing | noun | the ending of a verb such as playing or running | Add -ing to the verb.
+grow up | phrasal verb | develop from being a child into being an adult | She grew up in a small town.
+look back on | phrasal verb | think about something from the past | When he looks back on school, he remembers his art teacher.
+used to | phrase | describes a past habit or a past state that is no longer true | I used to play outside.
+be used to | phrase | to be familiar with something now | I'm used to waking up early.
+get used to | phrase | to become familiar with something | I got used to the new school.
+take turns | phrase | to do something one after another, not at the same time | We took turns on the swings.
+get along | phrasal verb | to have a friendly relationship with someone | My cousin and I always got along.
+make up a game | phrase | to invent a new game | We made up a game with a rope.
+make up | phrasal verb | to invent | They made up a story about a spaceship.
+keep in touch | phrase | to stay in contact with someone | Would you like to keep in touch?
+join in | phrasal verb | to take part in an activity that has already started | Let's make sure everyone can join in.
+board game | noun | a game played on a flat board | We played a board game after lunch.
+building blocks | noun | small pieces that children stack to build things | We made towers with building blocks.
+school project | noun | a task that students do over time, often in a group | They borrowed a model bridge for a school project.
+childhood friend | noun | a friend from the time when you were a child | A childhood friend remembers your old games.
+in the end | phrase | finally, after everything | In the end, we swam across the lake.
+at first | phrase | at the beginning | At first, I was afraid to swim.
+after that | phrase | next; following that | After that, we played tag.
+i see your point | phrase | I understand your opinion | I see your point, but I think it depends.
+art teacher | noun | a teacher who teaches drawing and painting | When he looks back on school, he remembers his art teacher.
+relay race | noun | a race in which team members take turns running | We ran a relay race.
+story circle | noun | a group sitting in a circle to share stories | We ended the day with a story circle.

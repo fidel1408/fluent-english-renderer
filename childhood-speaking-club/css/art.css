@@ -1,0 +1,58 @@
+/* Art kit: faces, poses, idle motion for the code-drawn characters */
+.person .mouth > *{display:none}
+.face[data-m=smile] .m-smile,.face[data-m=grin] .m-grin,.face[data-m=laugh] .m-laugh,.face[data-m=o] .m-o,
+.face[data-m=flat] .m-flat,.face[data-m=think] .m-think,.face[data-m=worry] .m-worry{display:inline}
+.person.talking .mouth > *{display:none!important}
+.person.talking .mouth .m-talk{display:inline!important}
+.m-talk ellipse:first-child{animation:fe-talk .27s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+@keyframes fe-talk{from{transform:scaleY(.3)}to{transform:scaleY(1.1)}}
+
+.eye-happy{display:none}
+.face[data-e=happy] .eye-open{display:none}
+.face[data-e=happy] .eye-happy{display:inline}
+.face[data-e=wide] .eye-open ellipse{transform:scale(1.16);transform-box:fill-box;transform-origin:center}
+.eye-open{animation:fe-blink 5.2s infinite}
+.eyeR .eye-open{animation-delay:.02s}
+@keyframes fe-blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+.pupil{transition:transform .35s}
+.face[data-look=up] .pupil{transform:translate(2px,-5px)}
+.face[data-look=down] .pupil{transform:translate(0,5px)}
+.face[data-look=left] .pupil{transform:translate(-5px,0)}
+.face[data-look=right] .pupil{transform:translate(5px,0)}
+
+.brow{transition:transform .35s;transform-box:fill-box;transform-origin:center}
+.face[data-b=up] .brow{transform:translateY(-9px)}
+.face[data-b=soft] .brow{transform:translateY(-3px)}
+.face[data-b=curious] .browL{transform:translateY(-10px) rotate(-6deg)}
+.face[data-b=curious] .browR{transform:translateY(2px) rotate(5deg)}
+.face[data-b=worry] .browL{transform:translateY(-2px) rotate(-15deg)}
+.face[data-b=worry] .browR{transform:translateY(-2px) rotate(15deg)}
+
+.ua,.fa{transition:transform .8s cubic-bezier(.4,.1,.2,1)}
+.idle{animation:fe-breathe 4.2s ease-in-out infinite}
+@keyframes fe-breathe{50%{transform:scale(1,1.009)}}
+.person.talking .head{animation:fe-nod .62s ease-in-out infinite alternate}
+@keyframes fe-nod{from{transform:rotate(-1.6deg) translateY(0)}to{transform:rotate(1.6deg) translateY(-2px)}}
+.person.wave-R .armR .fa{animation:fe-wave .55s ease-in-out infinite alternate}
+@keyframes fe-wave{from{transform:rotate(-34deg)}to{transform:rotate(8deg)}}
+.person .head{transition:transform .5s}
+
+/* generic ambient helpers used by scenes */
+.drift{animation:fe-drift 60s linear infinite}
+@keyframes fe-drift{from{transform:translateX(-120px)}to{transform:translateX(220px)}}
+.bob{animation:fe-bob 3.4s ease-in-out infinite alternate}
+@keyframes fe-bob{from{transform:translateY(0)}to{transform:translateY(-14px)}}
+.hop{animation:fe-hop .9s ease-in-out infinite}
+@keyframes fe-hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-34px)}}
+.sway{animation:fe-sway 3.6s ease-in-out infinite alternate;transform-origin:50% 100%;transform-box:fill-box}
+@keyframes fe-sway{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+.twinkle{animation:fe-twinkle 2.6s ease-in-out infinite alternate}
+@keyframes fe-twinkle{from{opacity:.25}to{opacity:1}}
+.spin{animation:fe-spin 14s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes fe-spin{to{transform:rotate(360deg)}}
+.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
+@media (prefers-reduced-motion:reduce){
+  .idle,.eye-open,.drift,.bob,.hop,.sway,.twinkle,.spin,.person.wave-R .armR .fa,.person.talking .head{animation:none!important}
+}
+
+.person.glasses .eye-open ellipse{stroke-width:1.4}

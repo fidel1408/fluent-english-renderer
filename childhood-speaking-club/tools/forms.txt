@@ -1,0 +1,105 @@
+# lemma: surface forms that the suffix rules cannot resolve
+be: am is are was were been being isn't aren't wasn't weren't
+do: did does doing done didn't doesn't don't
+have: had has having haven't hasn't
+go: goes went going gone
+get: gets got getting
+make: makes made making
+take: takes took taking taken
+come: came coming comes
+see: sees saw seen seeing
+say: says said
+know: knew knows known knowing
+think: thought thinks thinking
+tell: told tells telling
+give: gave gives given giving
+find: found finds finding
+grow: grew grows growing grown
+become: became becomes becoming
+break: broke breaks broken
+build: built builds building
+choose: chose chooses choosing chosen
+fall: fell falls falling
+hear: heard hears hearing
+hide: hidden hides hiding
+leave: left leaves leaving
+meet: met meets meeting
+swim: swam swims swimming
+teach: taught teaches teaching
+keep: kept keeps keeping
+run: ran runs running
+write: wrote writes writing written
+read: reads reading
+speak: spoke spoken speaks speaking
+send: sent sends sending
+feel: felt feels feeling
+lose: lost loses losing
+put: puts putting
+let: let's lets
+can: can't cannot
+will: won't
+would: wouldn't
+could: couldn't
+should: shouldn't
+person: people
+child: children
+good: better best
+many: more most
+much: more most
+little: less
+well: better
+young: younger youngest
+old: older oldest
+high: higher highest
+hard: harder hardest
+short: shorter shortest
+quiet: quieter quietest
+strong: stronger strongest
+long: longer longest
+small: smaller smallest
+big: bigger biggest
+fun: funny
+I: i'd i'll i'm i've
+you: you're you've you'd you'll
+we: we'd we'll we're we've
+they: they're they'd they'll
+he: his him he's
+she: her hers she's
+it: it's its itself
+that: that's
+who: who's whose
+there: there's
+what: what's
+let: let's
+neighbor: neighbors neighborhood
+dictionary: dictionaries
+ability: abilities
+activity: activities
+opportunity: opportunities
+priority: priorities
+quality: qualities
+memory: memories
+story: stories
+relationship: relationships
+enjoy: enjoys enjoyed enjoying
+carry: carrying carried carries
+apology: apologize
+organize: organizes organized organizing
+decide: decides decided deciding
+imagine: imagined imagining imagines
+include: includes included including
+invite: invites invited inviting
+ignore: ignored ignores ignoring
+produce: produced produces producing
+prefer: prefers preferred preferring
+play: plays played playing
+use: uses used using
+stop: stops stopped stopping
+plan: plans planned planning
+drop: dropped drops dropping
+share: shared shares sharing
+save: saved saves saving
+convert: converted
+show: shown showing shows
+learner: learner's
+someone: someone's

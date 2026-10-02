@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../css/ipa-font.css"><link rel="stylesheet" href="../css/art.css">
+<body style="margin:0;background:#222"><div id="g" style="display:grid;grid-template-columns:repeat(3,640px);gap:6px"></div>
+<script src="../js/text.js"></script><script src="../js/art.js"></script><script src="../js/scenes.js"></script>
+<script>
+const items=[['living',{tod:'golden'}],['living',{tod:'dusk',memory:true}],['schoolyard',{}],['street',{tod:'golden'}],['art',{}],['community',{}],['journal',{}]];
+document.getElementById('g').innerHTML=items.map(([id,o])=>`<svg viewBox="0 0 1920 1080" width="640" height="360">${FE.Scenes.build(id,o)}</svg>`).join('');
+</script>

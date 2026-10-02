@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Childhood: Memories, Games, and Growing Up – Fluent English Speaking Club</title>
+<meta name="description" content="A 60-minute interactive, narrated Speaking Club lesson for adults, run by the teacher on a shared screen.">
+<link rel="stylesheet" href="css/ipa-font.css">
+<link rel="stylesheet" href="css/art.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app" data-mode="class">
+  <main id="viewport">
+    <div id="stagebox">
+      <div id="stage">
+        <svg id="world" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+        <div id="vig" class="vig" hidden></div>
+        <div id="polaroid" class="polaroid" aria-hidden="true"></div>
+        <div id="overlays"></div>
+        <svg id="tailsvg" viewBox="0 0 1920 1080" aria-hidden="true"></svg>
+        <div id="avatar" class="avatar" hidden aria-hidden="true"></div>
+        <div id="bubble" class="bubble" hidden aria-live="polite"></div>
+        <div id="panel" class="panel R" hidden></div>
+        <div id="hud">
+          <div class="logo"><img src="assets/fluent_english_logo.png" alt="Fluent English"></div>
+          <div class="chip"></div>
+          <div class="hudr">
+            <div class="phase" hidden></div>
+            <div class="ring" hidden><svg viewBox="0 0 128 128" aria-hidden="true"><circle class="bg" cx="64" cy="64" r="54"/><circle class="fg" cx="64" cy="64" r="54" style="stroke-dasharray:339.292;stroke-dashoffset:0"/></svg><div class="t"></div></div>
+          </div>
+        </div>
+        <div id="ribbon" hidden></div>
+        <div id="wipe"></div>
+      </div>
+    </div>
+  </main>
+  <nav id="controlbar" aria-label="Lesson controls"></nav>
+  <button id="showbar" hidden aria-controls="controlbar" aria-expanded="false" aria-label="Show controls"></button>
+  <aside id="drawer" hidden></aside>
+  <div id="modal" hidden></div>
+  <div id="popover" hidden role="dialog" aria-label="Word meaning"></div>
+  <div id="start"></div>
+</div>
+<script src="js/text.js"></script>
+<script src="js/ui-strings.js"></script>
+<script src="js/lexicon-ipa.js"></script>
+<script src="js/lexicon-def.js"></script>
+<script src="js/art.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/vignettes.js"></script>
+<script src="js/data-1.js"></script>
+<script src="js/data-2.js"></script>
+<script src="js/data-3.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/app-core.js"></script>
+<script src="js/app-widgets.js"></script>
+<script src="js/app-run.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../css/ipa-font.css"><link rel="stylesheet" href="../css/art.css">
+<body style="margin:0;background:#FFF3DC"><svg id="s" viewBox="0 0 1920 1080" width="1920" height="1080"></svg>
+<script src="../js/text.js"></script><script src="../js/art.js"></script>
+<script>
+const A=FE.Art; const s=document.getElementById('s');
+const cast=[['maya',160,'wave','smile'],['theo',520,'think','curious'],['alex',880,'open','warm'],['jordan',1240,'point','grin']];
+let h='';
+cast.forEach(([n,x,p,m])=>{h+=`<g transform="translate(${x+90},720) scale(.95)" id="c_${n}">${A.adult(n)}</g>`});
+[0,1,2,3,4,5].forEach((k,i)=>{h+=`<g transform="translate(${1560+(i%3)*110-60},${420+Math.floor(i/3)*300}) scale(.8)" id="k${i}">${A.kid(i)}</g>`});
+s.innerHTML=h;
+cast.forEach(([n,x,p,m])=>{const e=document.getElementById('c_'+n).firstChild;A.setPose(e,p);A.setMood(e,m);});
+['surprised','laugh','worried','shy','proud','thinking'].forEach((m,i)=>{const e=document.getElementById('k'+i).firstChild;A.setMood(e,m);A.setPose(e,['cheer','open','shrug','rest','hips','think'][i])});
+document.getElementById('c_maya').firstChild.classList.add('talking');
+</script>

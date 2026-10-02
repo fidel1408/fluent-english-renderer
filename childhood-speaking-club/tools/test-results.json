@@ -1,0 +1,527 @@
+[
+ {
+  "name": "ten chapters",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "chapter minutes are 1,4,7,8,8,7,7,7,8,3",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "each chapter's step budgets add up exactly to its minutes",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "total planned time is exactly 60:00",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "planned student-speaking time is about 40 minutes (39–43)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "narration fits inside each step's allowance",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "logo is the authentic file (3444x1875) shown with its original proportions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no external network requests",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no console errors (plan)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "voices detected (mock)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "opening narration starts with Maya's welcome",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "Maya uses a female US voice",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "Theo uses a different, male voice",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "speech text contains no IPA symbols",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "never two voices at once so far",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "rapid navigation never overlaps speech",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "pause stops the voice",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "nothing is spoken while paused",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "resume restarts the interrupted line",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no narration over a speaking timer",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "current word is highlighted in the bubble while it is spoken",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no console errors (narration)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "class mode starts the speaking timer after narration",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "class mode stays on the step after the timer ends (waits for the teacher)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "a step marked wait does not advance by itself",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "demo mode reaches the final step on its own",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "demo mode visited (almost) every step",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "demo sample responses are labelled fictional",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no console errors (demo)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "memory stays modest after the full run (heap < 120 MB, DOM < 9000 nodes)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "controls bar occupies space when shown",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "H hides the bar and removes it from the layout",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "hiding reclaims the space (the stage gets taller)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "a small Show controls button remains, in a corner",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "hiding does not reset step, reveals, timer, choices, notes",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "page does not scroll with the bar hidden",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "hidden state survives a chapter change",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "Show controls button restores the bar",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "H is ignored while typing in a text box",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "controls have accessible labels and aria-controls",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "keyboard focus shows an outline",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "(hide state) persisted across reload",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1280x720 expanded: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1280x720 collapsed: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1280x720 collapsed: visible panel text is at least ~15.5 px on screen",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1280x720 fullscreen: stage fits, 16:9, bar still hidden",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1280x720 no console errors",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1366x768 expanded: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1366x768 collapsed: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1366x768 fullscreen: stage fits, 16:9, bar still hidden",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1366x768 no console errors",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1536x864 expanded: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1536x864 collapsed: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1536x864 fullscreen: stage fits, 16:9, bar still hidden",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1536x864 no console errors",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1920x1080 expanded: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1920x1080 collapsed: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1920x1080 fullscreen: stage fits, 16:9, bar still hidden",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1920x1080 no console errors",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1024x768 expanded: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1024x768 collapsed: stage stays 16:9 and fits without scrolling",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1024x768 fullscreen: stage fits, 16:9, bar still hidden",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "1024x768 no console errors",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "double-click opens a popover with the word, IPA, meaning and example",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "the popover speaks the word, then the meaning, then the example",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "Esc closes the popover",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phrases are recognised (grow up)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "control-bar labels have definitions too",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no console errors (dictionary)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "opinion scale counts by click and shift-click removes",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "scale offers five choices (strongly agree … strongly disagree)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "ranking: Move down button works",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "ranking: keyboard arrows move the focused card",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "ranking: dragging moves a card",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "ranking: Top two marks the first two",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "games-day plan board records three activities",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "would-you-rather tallies before and after the twist",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "rubric is operated by the teacher (clarity=3)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "rubric says it is not automatic assessment",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "participation marks count",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "nothing is saved by default",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "JSON export has the teacher data and says it is not automatic assessment",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "CSV export has rows",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "opt-in local save writes only to this browser",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "reset needs a second press",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "reset clears notes, marks, tallies and the saved copy",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no console errors (widgets)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "prefers-reduced-motion is respected",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "without any voice the lesson still runs on captions",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "settings explain that no voice is available",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "a usable narration script is available",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "word banks reveal three words at a time",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "word banks hold 7, 7, 8 and 5 items",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no console errors (misc)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "five core words present",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "four agree/disagree claims verbatim",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "four warm-up questions verbatim",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "all required functional expressions are offered",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "four would-you-rather pairs verbatim",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "dilemma options present, four per situation",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "each dilemma has a twist and a revise step",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "exit line 'Keep Speaking. Keep Growing.' present",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "qualities are creativity, friendship, independence, cooperation",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "pass options are mentioned in the content",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "opinions are never scored",
+  "pass": true,
+  "detail": ""
+ }
+]

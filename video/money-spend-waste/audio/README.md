@@ -16,3 +16,5 @@ Then:
 4. `node scripts/render.mjs --mode 2 --audio audio/voiceover_mix.wav --out output/spend-or-waste_final.mp4`
 
 `scripts/generate_voiceover.mjs` can create the clips with ElevenLabs using **your** API key (untested here; it spends your credits only when you run it). Audition voices first (`--list`), and listen to every clip before using it.
+
+**Shortcut:** once the 7 clips are in `audio/` and listed in `manifest.json`, run `bash scripts/finish_with_audio.sh` (measure → mix → render all 3 variants with sound). The measure/mix/mux chain was tested with synthetic tones; the real voice has not been heard.

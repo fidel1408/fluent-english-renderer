@@ -2,3 +2,8 @@ node_modules/
 dist/
 *.log
 .env
+video/out/stem_*.wav
+video/out/mp4_*
+__pycache__/
+*.onnx
+voices-*.bin

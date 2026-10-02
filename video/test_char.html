@@ -1,0 +1,12 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#ddd"><canvas id=c width=1080 height=1920></canvas>
+<script type=module>
+import {drawCharacter,defaultPose} from './js/character.js'; import {C} from './js/util.js';
+const ctx=document.getElementById('c').getContext('2d');
+const q=new URLSearchParams(location.search);
+ctx.fillStyle=C.ivory;ctx.fillRect(0,0,1080,1920);
+ctx.fillStyle=C.navyD;ctx.fillRect(0,1250,1080,700);
+const p=defaultPose(); const m=q.get('m')||'rest';
+if(m==='open'){p.smile=.9;p.mouth=.5;p.R={x:215,y:1085,z:120,ang:-10,curl:0,spread:.5,thumbOut:.4,vis:1};p.L={x:-175,y:1230,z:200,ang:15,curl:.3,spread:.1,vis:1};}
+if(m==='down'){p.smile=.7;p.L={x:-60,y:1120,z:200,ang:78,curl:.05,spread:.2,vis:1};p.R={x:60,y:1120,z:200,ang:-78,curl:.05,spread:.2,vis:1};}
+drawCharacter(ctx,p);
+</script>

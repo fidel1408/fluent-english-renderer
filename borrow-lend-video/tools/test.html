@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#222"><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../assets/assets.js"></script><script src="../js/config.js"></script><script src="../js/draw.js"></script>
+<script>
+FE.ready = FE.loadAssets().then(()=>true);
+FE.shot = (id,u,cc)=>{ const sch=FE.buildSchedule({}); const bi=sch.beats.findIndex(b=>b.id===id); const ctx=document.getElementById('c').getContext('2d');
+ FE.draw(ctx,{sch,bi,u,T:u+sch.beats[bi].start,cc}); };
+</script>

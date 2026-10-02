@@ -1,0 +1,77 @@
+{
+  "total": 29.75,
+  "beats": [
+    {
+      "id": "hook",
+      "start": 0,
+      "duration": 3.5,
+      "speechDuration": 2.538
+    },
+    {
+      "id": "borrowAsk",
+      "start": 3.5,
+      "duration": 2.2,
+      "speechDuration": 1.065
+    },
+    {
+      "id": "borrowHand",
+      "start": 5.7,
+      "duration": 1.5,
+      "speechDuration": 0
+    },
+    {
+      "id": "borrowNarr",
+      "start": 7.2,
+      "duration": 2.2,
+      "speechDuration": 1.731
+    },
+    {
+      "id": "rewind",
+      "start": 9.4,
+      "duration": 0.75,
+      "speechDuration": 0
+    },
+    {
+      "id": "lendAsk",
+      "start": 10.15,
+      "duration": 2.3,
+      "speechDuration": 1.232
+    },
+    {
+      "id": "lendHand",
+      "start": 12.45,
+      "duration": 1.5,
+      "speechDuration": 0
+    },
+    {
+      "id": "lendNarr",
+      "start": 13.95,
+      "duration": 2.1,
+      "speechDuration": 1.202
+    },
+    {
+      "id": "speakPrompt",
+      "start": 16.05,
+      "duration": 3,
+      "speechDuration": 2.512
+    },
+    {
+      "id": "pause",
+      "start": 19.05,
+      "duration": 4,
+      "speechDuration": 0
+    },
+    {
+      "id": "reveal",
+      "start": 23.05,
+      "duration": 2.3,
+      "speechDuration": 1.117
+    },
+    {
+      "id": "cta",
+      "start": 25.35,
+      "duration": 4.4,
+      "speechDuration": 2.949
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#000"><canvas id="c" width="1080" height="1920"></canvas>
+<script src="../assets/assets.js"></script><script src="../js/config.js"></script><script src="../js/draw.js"></script><script src="../js/audio.js"></script>
+<script>
+FE.ready = FE.loadAssets().then(() => true);
+/* durations: {beatId: seconds}. Builds the schedule used for BOTH video frames and audio. */
+FE.setSchedule = (durs) => { FE.sch = FE.buildSchedule(durs); return FE.sch; };
+FE.renderFrame = (t, cc) => {
+  const sch = FE.sch; let bi = sch.beats.findIndex((b) => t < b.start + b.dur); if (bi < 0) bi = sch.beats.length - 1;
+  const b = sch.beats[bi], u = Math.min(t - b.start, b.dur);
+  FE.draw(document.getElementById("c").getContext("2d"), { sch, bi, u, T: t, cc });
+  return bi;
+};
+FE.frameJPEG = (q) => document.getElementById("c").toDataURL("image/jpeg", q).split(",")[1];
+</script>

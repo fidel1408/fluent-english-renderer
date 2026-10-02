@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fluent English – Be: Yes/No Questions</title>
+<meta name="description" content="A 60-minute teacher-led interactive A1 grammar lesson for Spanish-speaking adults: Be – Yes/No Questions.">
+<style>
+/*CSS*/
+</style>
+</head>
+<body class="cc2 ipa">
+<div id="app">
+  <header id="topbar">
+    <div class="brand"><img src="data:image/png;base64,__WORDWHITE__" alt="Fluent English"></div>
+    <div class="ttl">Be: Yes/No Questions<small>A1 grammar · teacher-led · 60 minutes</small></div>
+    <div id="chPill" aria-live="polite"></div>
+    <div class="spacer"></div>
+    <button id="timerBtn" aria-haspopup="dialog" title="Section timer and class-time summary">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="rgba(255,246,229,.25)" stroke-width="5"/><circle id="tRing" cx="20" cy="20" r="16" fill="none" stroke="#5fe3da" stroke-width="5" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="0" transform="rotate(-90 20 20)"/></svg>
+      <span><span class="tt" id="tText">00:00</span><span class="ts" id="tSub">section</span></span>
+    </button>
+    <span class="lbl" id="ccLbl">CC / IPA</span>
+    <div class="seg" role="group" aria-labelledby="ccLbl" id="ccSeg">
+      <button data-cc="0" aria-pressed="false">Off</button>
+      <button data-cc="1" aria-pressed="false">Captions</button>
+      <button data-cc="2" aria-pressed="true">Captions + IPA</button>
+    </div>
+    <button class="tbtn" id="esBtn" aria-pressed="false" title="Show Spanish Help for this step (S)">Spanish Help</button>
+    <button class="tbtn" id="resBtn" title="Results and export">Results</button>
+    <button class="tbtn" id="setBtn" title="Voices, volume, motion">Settings</button>
+    <button class="tbtn" id="fsBtn" title="Fullscreen (F)">Fullscreen</button>
+  </header>
+
+  <main id="stageWrap">
+    <div id="canvas">
+      <div id="bgA"></div><div id="bgB" style="opacity:0"></div>
+      <div id="veil"></div>
+      <canvas id="fx" width="1600" height="900"></canvas>
+      <div id="hdr"><div class="kick" id="kick"></div><h1 id="title"></h1></div>
+      <div id="content"></div>
+      <div id="esCard" role="complementary" aria-label="Spanish Help">
+        <h4><span>Ayuda en español</span><button class="xbtn" id="esMin" aria-label="Minimize Spanish Help" style="width:30px;height:30px;font-size:16px;color:#14173f;border-color:#14173f">–</button></h4>
+        <p id="esText"></p>
+        <div class="row"><button class="btn sm" id="esSpeak">▶ Escuchar en español</button></div>
+      </div>
+      <div id="ccWrap"><div id="cc" class="empty" aria-live="off"></div></div>
+    </div>
+  </main>
+
+  <nav id="dock" aria-label="Teacher controls">
+    <button class="db" id="bPrev" title="Previous step (←)"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg><span>Previous</span></button>
+    <button class="db main" id="bPlay" title="Play / Pause (Space)"><svg viewBox="0 0 24 24" id="playIco"><path d="M8 5v14l11-7z"/></svg><span id="playTxt">Start Lesson</span></button>
+    <button class="db" id="bReplay" title="Replay this example from the beginning (E)"><svg viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a6 6 0 11-6 6H4a8 8 0 108-8z"/></svg><span>Replay Example</span></button>
+    <button class="db" id="bReveal" title="Reveal / Hide answer (R)"><svg viewBox="0 0 24 24"><path d="M12 5C7 5 2.7 8.1 1 12c1.7 3.9 6 7 11 7s9.3-3.100 11-7c-1.700-3.900-6-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8zm0-6a2 2 0 100 4 2 2 0 000-4z"/></svg><span id="revTxt">Reveal Answer</span></button>
+    <button class="db go" id="bNext" title="Next step (→)"><span>Next</span><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+    <span class="sep"></span>
+    <button class="db" id="bExt30" title="Add 30 seconds to this section's timer"><span>+30 s</span></button>
+    <button class="db" id="bExt60" title="Add 1 minute to this section's timer"><span>+1 min</span></button>
+    <button class="db" id="bSkip" title="Skip the rest of this section's timer and go to the next section"><span>Skip Timer</span></button>
+    <span class="sep"></span>
+    <button class="db" id="bChap" title="Chapter menu (M)"><span>Chapters</span></button>
+    <button class="db" id="bSupport" aria-pressed="true" title="Support On/Off for speaking activities"><span>Support: On</span></button>
+    <button class="db" id="bReset" title="Reset lesson (asks first)"><span>Reset</span></button>
+    <button class="db" id="bHide" title="Hide controls for a cleaner shared screen (H)"><span>Hide controls</span></button>
+    <div id="stepInfo" aria-live="polite"></div>
+  </nav>
+</div>
+<button class="tbtn" id="showChrome">Show controls (H)</button>
+
+<aside class="drawer left" id="chapDrawer" aria-label="Chapter menu">
+  <header><span>Chapters</span><button class="xbtn" data-close="chapDrawer" aria-label="Close">×</button></header>
+  <div class="body" id="chapBody"></div>
+</aside>
+<aside class="drawer" id="setDrawer" aria-label="Settings">
+  <header><span>Settings</span><button class="xbtn" data-close="setDrawer" aria-label="Close">×</button></header>
+  <div class="body" id="setBody"></div>
+</aside>
+<div id="modalBg"><div id="modal" role="dialog" aria-modal="true"></div></div>
+<div id="toast" role="status"></div>
+<div class="sr" id="live" aria-live="polite"></div>
+
+<section id="start" aria-label="Start screen">
+  <div class="card">
+    <img class="globe" alt="Fluent English globe" src="data:image/png;base64,__GLOBE__">
+    <div>
+      <img src="data:image/png;base64,__WORDWHITE__" alt="Fluent English" style="height:70px;margin-bottom:10px;display:none">
+      <div class="tag" style="color:var(--gold-l);font-weight:800;letter-spacing:.14em;text-transform:uppercase">Fluent English · A1 grammar</div>
+      <h1>Be: Yes/No Questions</h1>
+      <div class="sub">Am I…? Are you…? Is he…? — a 60-minute, teacher-led lesson for Spanish-speaking adult beginners.</div>
+      <div id="resumeBox" style="display:none" class="glass"></div>
+      <ul>
+        <li><b>Start Lesson</b> unlocks browser audio (voices, music, effects). No microphone is used; nothing is recorded or uploaded.</li>
+        <li>Nine sections with default timers that total exactly <b>60:00</b>. Pause, extend, skip or revisit any time — that changes the <i>actual</i> class length (see the timer panel).</li>
+        <li>Share this tab in your online class. Learners speak aloud; <b>you</b> click to reveal and move on.</li>
+      </ul>
+      <div class="rowb">
+        <button class="btn gold big-start" id="startBtn">▶ Start Lesson</button>
+        <button class="btn ghost" id="startFresh" style="display:none">Start over</button>
+      </div>
+      <div class="fine">Voices come from your browser/device, so quality varies. Use Chrome, Edge or Safari for the best choice of American-English voices. Settings, progress and scores stay in this browser only.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+/*JS*/
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+const { chromium } = require('/opt/node22/lib/node_modules/playwright'); const path = require('path');
+let pass = 0, fail = 0; const ok = (c, m) => { c ? pass++ : fail++; console.log(c ? '  ok  ' : '  FAIL', m); };
+(async () => {
+  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
+  const p = await b.newPage({ viewport: { width: 1280, height: 780 } }); const errs = []; p.on('pageerror', (e) => errs.push(e.message));
+  await p.goto('file://' + path.resolve(__dirname, '../fluent-english-be-lesson.html'));
+  await p.evaluate(() => { S.started = true; document.getElementById('start').hidden = true; S.settings.mute = true; applySettings(); __lesson.enter(0, 1, { noIntro: true, tr: false }); });
+  await p.waitForTimeout(500);
+  ok(await p.isVisible('#b-video'), 'Sound chart video button visible in the dock');
+  const t0 = await p.evaluate(() => S.spent[0]);
+  await p.click('#b-video'); await p.waitForTimeout(2500);
+  const info = await p.evaluate(() => { const v = document.getElementById('chart-vid'); return { dur: v.duration, rs: v.readyState, t: v.currentTime, paused: v.paused, err: !!v.error }; });
+  console.log('   video', JSON.stringify(info));
+  ok(info.dur > 119 && info.dur < 121 && !info.err, 'video loads (120 s)');
+  ok(await p.evaluate(() => paused === true), 'lesson paused while video is open');
+  const t1 = await p.evaluate(() => S.spent[0]); await p.waitForTimeout(1200); ok(Math.abs(await p.evaluate(() => S.spent[0]) - t1) < 0.3, 'timer does not run during video');
+  await p.screenshot({ path: '/tmp/claude-0/-home-user-fluent-english-renderer/0b86f73e-8468-530d-bbc1-d4a728591c15/scratchpad/shots/video.png' });
+  await p.keyboard.press('Escape'); await p.waitForTimeout(400);
+  ok(await p.evaluate(() => paused === false), 'closing the video resumes the lesson');
+  ok(await p.evaluate(() => !document.getElementById('chart-vid')), 'video modal removed');
+  await p.click('#b-chart'); await p.click('#chart-watch'); await p.waitForTimeout(500); ok(await p.isVisible('#chart-vid'), 'chart panel has a Watch the video button');
+  console.log('errors', errs.length); console.log(`${pass} passed, ${fail} failed`); await b.close(); process.exit(fail ? 1 : 0);
+})();

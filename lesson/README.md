@@ -2,7 +2,7 @@
 
 A teacher-led, 60-minute interactive lesson for adult Spanish-speaking beginners. One self-contained file:
 
-**`lesson/fluent-english-be-lesson.html`** (≈505 KB, no network, no API keys, no uploads)
+**`lesson/fluent-english-be-lesson.html`** (≈3.4 MB including the embedded sound-chart video, no network, no API keys, no uploads)
 
 ## Launch
 
@@ -45,7 +45,7 @@ Source: `lesson/src/` (`art.js` vector people/scenes, `audio.js` Web Audio + spe
 
 ## Limitations — please read
 
-- **IPA follows your Fluent English sound chart, but is not Oxford-checked.** Oxford lookup was unreachable from the build environment. Every entry (`build/ipa-words.txt`, ~350 words) was typed by hand using only the 36 symbols on your `Sound_Chart.mp4` (plus stress marks ˈ ˌ), e.g. the sailboat vowel is written **əʊ**, as on the chart. `ɪr` and `ʊr` (here, you’re) are not separate chart cells; they are ɪ/ʊ + r, like the chart’s `er`. Sentence lines are *assembled word by word from citation forms* (small words are not reduced). Spot-check before relying on it. The chart is built in: dock → **Sound chart**.
+- **IPA follows your Fluent English sound chart, but is not Oxford-checked.** Oxford lookup was unreachable from the build environment. Every entry (`build/ipa-words.txt`, ~350 words) was typed by hand using only the 36 symbols on your `Sound_Chart.mp4` (plus stress marks ˈ ˌ), e.g. the sailboat vowel is written **əʊ**, as on the chart. `ɪr` and `ʊr` (here, you’re) are not separate chart cells; they are ɪ/ʊ + r, like the chart’s `er`. Sentence lines are *assembled word by word from citation forms* (small words are not reduced). Spot-check before relying on it. The chart is built in: dock → **Sound chart** (still image) and **▶ Sound chart video** (your video, compressed to 1280×720 and embedded as WebM + MP4; opening it pauses the lesson timer, narration and music, and closing it resumes).
 - **Voices were not heard by the author.** Real speech quality depends on the voices installed on your device; I tested sequencing with a mock and measured music/effects levels, but did not listen to real voices or to the music. Preview a voice in **Voice & volume** first. Some devices have no English (or no Spanish) voice; captions still run and Spanish read-aloud is skipped.
 - Tested only in Chromium on Linux. Safari/Firefox, touch devices, and real Zoom/Meet screen-sharing audio were not tested.
 - No microphone, speech recognition or pronunciation scoring — by design. Repeating after a synthetic voice does not prove accuracy.

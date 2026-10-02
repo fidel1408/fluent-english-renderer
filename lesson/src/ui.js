@@ -263,10 +263,21 @@ function openSettings() {
   $('#c-rm', m.el).onchange = (e) => { st.rm = e.target.checked; applyRM(); save(); };
   $('#c-ind', m.el).onchange = (e) => { S.mode = e.target.checked ? 'individual' : 'shared'; save(); toast(S.mode === 'individual' ? 'Individual mode on (own copy).' : 'Shared class mode on.'); };
 }
+function openVideo() {
+  // The video has its own sound: pause the lesson (timer, voice, music) while it plays, then restore.
+  const wasPaused = paused; if (!wasPaused) setPaused(true);
+  const m = modal(`<button class="btn alt sm x" data-close>Close</button><h2>Fluent English sound chart — video</h2>
+    <video id="chart-vid" controls preload="metadata" playsinline style="width:100%;border-radius:10px;background:#000" aria-label="Sound chart video: each English sound with its symbol and picture"><source src="__SOUND_WEBM__" type="video/webm"><source src="__SOUND_VIDEO__" type="video/mp4"></video>
+    <p class="small-note">The lesson is paused while this video is open (timer, narration and music stop). Closing the video resumes the lesson${wasPaused ? ' — it was already paused, so it stays paused' : ''}.</p>
+    <div class="ft"><button class="btn alt" id="vid-chart">Open the still chart</button></div>`, { label: 'Sound chart video', cls: 'wide', onClose: () => { const v = document.getElementById('chart-vid'); if (v) v.pause(); if (!wasPaused) setPaused(false); } });
+  $('#vid-chart', m.el).onclick = () => { m.close(); openChart(); };
+  const v = $('#chart-vid', m.el); v.play().catch(() => {});
+}
 function openChart() {
-  modal(`<button class="btn alt sm x" data-close>Close</button><h2>Fluent English sound chart</h2>
+  const m = modal(`<button class="btn alt sm x" data-close>Close</button><h2>Fluent English sound chart</h2>
     <img src="__SOUND_CHART__" alt="Sound chart: 36 English sounds with their IPA symbols and a picture for each" style="width:100%;border-radius:10px;border:1px solid var(--cream-3)">
-    <p class="small-note">The IPA in this lesson uses these symbols. Extra marks: ˈ primary stress, ˌ secondary stress. <b>ɪr</b> and <b>ʊr</b> (here, you’re) are ɪ or ʊ followed by r, like <b>er</b> on the chart. Stress marks and spaces between words are the only additions.</p>`, { label: 'Sound chart' });
+    <p class="small-note">The IPA in this lesson uses these symbols. Extra marks: ˈ primary stress, ˌ secondary stress. <b>ɪr</b> and <b>ʊr</b> (here, you’re) are ɪ or ʊ followed by r, like <b>er</b> on the chart. Stress marks and spaces between words are the only additions.</p><div class="ft"><button class="btn" id="chart-watch">▶ Watch the video</button></div>`, { label: 'Sound chart' });
+  $('#chart-watch', m.el).onclick = () => { m.close(); openVideo(); };
 }
 function openGuide() {
   const spk = ACTS.map((a) => a.beats.reduce((s, b) => s + (b.talk || 0), 0));
@@ -337,7 +348,7 @@ function init() {
   on('#b-play', () => setPaused(!paused));
   on('#b-replay', replay); on('#b-prev', prev); on('#b-next', next); on('#b-pa', prevAct); on('#b-na', nextAct);
   on('#b-chap', openChapters); on('#b-reveal', toggleReveal); on('#b-es', toggleEs);
-  on('#b-chart', openChart);
+  on('#b-chart', openChart); on('#b-video', openVideo);
   on('#b-cc', () => { const o = ['off', 'cap', 'ipa'], i = o.indexOf(S.settings.cc); S.settings.cc = o[(i + 1) % 3]; applyCC(); save(); toast('CC/IPA: ' + { off: 'Off', cap: 'Captions', ipa: 'Captions + IPA' }[S.settings.cc]); });
   on('#b-30', () => extend(30)); on('#b-60', () => extend(60)); on('#b-skip', skipTimer);
   on('#b-set', openSettings); on('#b-res', openResults); on('#b-reset', openReset);

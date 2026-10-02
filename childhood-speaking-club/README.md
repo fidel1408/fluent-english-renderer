@@ -64,9 +64,9 @@ Double-click any word on the screen (lesson text, bubbles, buttons, drawers) to 
 * Contextual rule: *used to* is shown as /juːst tuː/, and *(did) use to* as /juːs/.
 
 ## Narration and audio
-* Narration uses the **speech voices already installed in your browser or operating system** (Web Speech API). Nothing is uploaded and **no paid voice service was used or activated; no credits were consumed**.
-* Lines are spoken **phrase by phrase** with small pauses and with pitch and speed that follow the mood, questions and exclamations, instead of one flat pass. This helps a lot, but the voice itself is whatever your browser provides. **For the least robotic sound use Microsoft Edge (Windows) and pick a "Natural" voice** (e.g. Microsoft Aria, Jenny, Guy, Davis) in Settings → Audition; Chrome on macOS gives Samantha/Ava/Evan.
-* Optional: studio-quality recordings can be dropped in `audio/` and registered in `audio/manifest.js`; the lesson plays a recording when one exists for a line and falls back to the browser voice otherwise. The manifest ships empty; **no paid voice service was used and no credits were consumed.**
+* **Natural voices (recorded).** Maya and Theo's lines, every sample response, the cheers and the double-click dictionary (word, meaning, example) are **pre-recorded in `audio/`** with **Kokoro**, a free, open-source neural voice model, run locally on the build machine. The lesson plays these files, so it sounds the same on every computer, **needs no internet and no browser voice**, and still highlights each word as it is spoken. **No paid voice service was used and no credits were consumed.** Settings → **Natural voices** switches back to your browser's own voices.
+* If a recording is ever missing or fails, the lesson falls back to your browser's voice, speaking phrase by phrase with pitch and speed that follow the mood, questions and exclamations. For the best fallback, use Microsoft Edge and pick a "Natural" voice in Settings → Audition.
+* **Re-recording or changing a voice:** `node tools/collect-speech.mjs` lists every spoken line, `python3 tools/make-voices.py narr` and `... dict` record them (voices are set at the top of that script; see its docstring for the model files), and `node tools/build-manifest.mjs` rebuilds `audio/manifest.js`. If you edit any lesson text, re-run these so the new wording is recorded (changed lines fall back to the browser voice until then).
 * Maya, Theo, Alex and Jordan each get their own voice when your computer has enough English (US) voices; with fewer, the pitch is varied so they still sound different. Settings lists the voices found with an **Audition** button for each character. Chrome and Edge on Windows (Microsoft "Natural" voices) and macOS (Samantha, Ava, Evan…) usually give the best results.
 * If no English voice exists, the lesson still runs: captions advance on an estimated reading time, and **Settings → Narration script** shows every line so you can read it aloud.
 * Only one voice speaks at a time. Every navigation, pause or Replay cancels the previous line first, so audio never overlaps. Narration stops when a speaking timer starts.
@@ -92,7 +92,7 @@ childhood-speaking-club/
        lexicon-ipa.js lexicon-def.js    generated pronunciation and definitions
        audio.js                         narration, music, chime
        app-core.js app-widgets.js app-run.js   engine and controls
-  audio/  manifest.js     optional pre-recorded narration clips (empty)
+  audio/  n/ d/ manifest.js           natural recorded narration and dictionary audio (mp3)
   assets/ fluent_english_logo.png  sound_chart.jpg
   docs/CREDITS.md
   tools/  (developer only: rebuild the lexicon, crawl and test the lesson; not needed to teach)

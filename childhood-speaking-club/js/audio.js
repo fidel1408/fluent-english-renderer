@@ -160,7 +160,7 @@
         var au = new root.Audio(); au.preload = "auto"; curAudio = au;
         var packed = clip.s > 0 || !!clip.p, fell = false, begun = false;
         var key = V.clipKey(opts.role, text);
-        var fallback = function () { if (fell || my !== tok) return; fell = true; if (curAudio === au) { try { au.pause(); } catch (e) {} curAudio = null; } delete V.clips[key]; V.speak(text, opts).then(resolve); };
+        var fallback = function () { if (fell || my !== tok) return; fell = true; if (curAudio === au) { try { au.pause(); } catch (e) {} curAudio = null; } delete V.clips[key]; V._resolve = null; V.speak(text, opts).then(resolve); };
         var finish = function () { if (my !== tok) return; try { au.pause(); } catch (e) {} if (curAudio === au) curAudio = null; done(true); };
         au.onplaying = function () {
           if (begun || my !== tok) return; begun = true;

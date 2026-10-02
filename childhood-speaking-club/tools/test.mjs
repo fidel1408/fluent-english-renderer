@@ -446,6 +446,39 @@ if (want("content")) {
   await ctx.close();
 }
 
+/* ============ 9. natural recorded voices ============ */
+if (want("natural")) {
+  const { ctx, page: p } = await fresh({ clips: true });
+  const cov = await p.evaluate(() => {
+    const V = FE.Voice, miss = [];
+    let n = 0;
+    FE.X.chapters().forEach((c) => c.steps.forEach((st) => {
+      const lines = [];
+      (st.say || []).forEach((l) => lines.push(Array.isArray(l) ? [l[0], l[1]] : [l.who, l.t]));
+      (st.sample || []).forEach((l) => lines.push([l[0], l[1]]));
+      lines.forEach(([who, t]) => { n++; if (!V.clips[V.clipKey(who, FE.plain(t))]) miss.push(who + ": " + FE.plain(t)); });
+    }));
+    return { n, miss, total: Object.keys(V.clips).length };
+  });
+  ok("every narration and sample line has a natural recording", cov.miss.length === 0 && cov.n > 150, JSON.stringify(cov.miss.slice(0, 3)) + " of " + cov.n);
+  const r = await p.evaluate(async () => {
+    const V = FE.Voice, t0 = performance.now(); let started = -1, words = 0;
+    const clip = V.clips[V.clipKey("theo", "In the end, a surprising friendship began.")] || V.clips[Object.keys(V.clips).find((k) => k.startsWith("theo:"))];
+    const text = Object.keys(V.clips).find((k) => k.startsWith("theo:")) && "In the end, a surprising friendship began.";
+    const done = await V.speak(text, { role: "theo", onStart: () => (started = performance.now() - t0), onWord: () => words++ });
+    return { done, started, ms: performance.now() - t0, words, d: clip && clip.d, spoken: (window.__spoken || []).length };
+  });
+  ok("a recorded line plays through the audio player (not the browser voice)", r.done && r.started >= 0 && r.spoken === 0 && Math.abs(r.ms - r.d * 1000) < 600, JSON.stringify(r));
+  ok("word highlighting still follows a recorded line", r.words >= 5, r.words);
+  await p.click('[data-start="class"]'); await p.waitForTimeout(400);
+  await p.click("#cb-settings"); await p.waitForTimeout(200);
+  ok("Settings offers a Natural voices switch", await p.evaluate(() => !!document.getElementById("natChk")));
+  await p.click("#natChk"); await p.waitForTimeout(200);
+  ok("switching Natural voices off uses the browser voices again", await p.evaluate(() => FE.Voice.useClips === false));
+  ok("no console errors (natural voices)", p.__errs.length === 0, p.__errs.join("|"));
+  await ctx.close();
+}
+
 await browser.close();
 const failed = results.filter((r) => !r.pass);
 console.log(`\n${results.length - failed.length} passed, ${failed.length} failed`);

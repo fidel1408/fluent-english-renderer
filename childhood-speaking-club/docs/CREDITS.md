@@ -27,6 +27,7 @@ The lesson itself loads none of this; only the generated `js/lexicon-ipa.js`.
 Background music and the timer chime are generated live in the browser by `js/audio.js` (simple sine and triangle tones).
 They are original, contain no recorded or copyrighted material, and are optional. No childhood songs or television audio are used.
 
-## Narration voices
-Narration uses the speech voices already installed in the teacher's browser or operating system (Web Speech API).
-Nothing is uploaded, no paid voice service is used, and no credits are consumed.
+## Narration voices (recorded)
+The mp3 files in `audio/` were generated once, on the build machine, with **Kokoro-82M** (open-source neural text-to-speech by hexgrad, Apache-2.0 licence)
+through `kokoro-onnx` (MIT licence), using the voices `af_heart` (Maya) and `am_michael` (Theo). Phonemes come from espeak-ng, which was used only while generating the audio.
+Nothing is uploaded when the lesson runs, no paid voice service was used and no credits were consumed. If a recording is missing, the browser's own speech voices are used instead.

@@ -10,7 +10,7 @@ const rd = (p) => fs.readFileSync(path.resolve(root, p), "utf8");
 const b64 = (p, mime) => `data:${mime};base64,` + fs.readFileSync(p).toString("base64");
 let html = rd("index.html");
 const css = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map((m) => rd(m[1])).join("\n");
-const scripts = [...html.matchAll(/<script src="([^"]+)"><\/script>/g)].map((m) => rd(m[1]).replace(/src="assets\/fluent_english_logo\.png"/g, `src="' + window.__LOGO + '"`).replace(/src="assets\/sound_chart\.jpg"/g, `src="' + window.__CHART + '"`)).join("\n;\n");
+const scripts = [...html.matchAll(/<script src="([^"]+)"(?: onerror="void 0")?><\/script>/g)].map((m) => rd(m[1]).replace(/src="assets\/fluent_english_logo\.png"/g, `src="' + window.__LOGO + '"`).replace(/src="assets\/sound_chart\.jpg"/g, `src="' + window.__CHART + '"`)).join("\n;\n");
 const body = html.slice(html.indexOf("<body>") + 6, html.indexOf("<script src=")).trim().replace(/<img src="assets\/fluent_english_logo\.png" alt="Fluent English">/, '<img id="hudlogo" alt="Fluent English">');
 const title = html.match(/<title>(.*?)<\/title>/)[1];
 const safe = (s) => s.replace(/<\/script/gi, "<\\/script");

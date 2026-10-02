@@ -245,7 +245,7 @@ body.rm .person.talking .mouth-open{opacity:1}body.rm .person.talking .mouth-clo
 body.rm *{scroll-behavior:auto!important;transition-duration:.01ms!important}
 body.rm #fx{display:none}
 
-@media(max-width:1100px){#dock .db span{display:none}#topbar .ttl small{display:none}}
+@media(max-width:1100px){#dock .db:has(svg) span{display:none}#topbar .ttl small{display:none}}
 
 .mchip{display:inline-flex;align-items:flex-start;gap:14px;background:var(--cream);color:var(--ink);border-radius:22px;padding:8px 14px 12px 26px;font-family:var(--serif);font-weight:700;font-size:48px;line-height:1.1;box-shadow:0 12px 26px rgba(5,7,35,.5);--ipa-c:#4a4fa8;border-bottom:8px solid var(--turq);white-space:nowrap}
 .mchip.n{border-bottom-color:var(--coral)}.mchip.g{border-bottom-color:var(--gold)}

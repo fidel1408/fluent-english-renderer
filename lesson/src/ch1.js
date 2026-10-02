@@ -39,8 +39,8 @@ const CH1 = {
         S.add(A.obj.phone(690, 640, 0.95)); S.add(A.obj.books(770, 646, 0.95)); S.add(A.obj.bag(950, 650, 0.62));
         const ppl = [['nora', 120, 'present', 'a teacher'], ['sam', 370, 'rest', 'a student'], ['maya', 1250, 'rest', 'a doctor'], ['alex', 1450, 'presentL', 'a student']]
           .map(([k, x, pose, job]) => { const p = stand(S, k, x, { pose, look: [x < 800 ? 5 : -5, 0], job }); p.tag.style.opacity = 0; p.tag.style.transition = 'opacity .6s'; return p; });
-        const b = S.board(430, 110, 740, 280);
-        b.innerHTML = `<div class="tag">${T('Fluent English · A1')}</div><div class="big" style="font-size:68px;line-height:1.05;text-align:center">${T('Be: Yes/No Questions')}</div><div style="margin-top:8px;font-size:38px;color:var(--turq-l);font-family:var(--serif);font-weight:700">${T('Am I…? Are you…? Is she…?')}</div>`;
+        const b = S.board(450, 100, 700, 330);
+        b.innerHTML = `<div class="tag">${T('Fluent English · A1')}</div><div class="big" style="font-size:56px;line-height:1.05;text-align:center">${T('Be: Yes/No Questions')}</div><div style="margin-top:6px;font-size:32px;color:var(--turq-l);font-family:var(--serif);font-weight:700">${T('Am I…? Are you…? Is she…?')}</div>`;
         b.style.opacity = 0; b.style.transition = 'opacity 1.4s';
         S.play = async () => {
           await S.sleep(500); b.style.opacity = 1; Fx.burst(800, 250, 26);

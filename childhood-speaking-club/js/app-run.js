@@ -13,7 +13,7 @@
     replay: ic('<path d="M12 5V2L7 6.5 12 11V8a5 5 0 11-5 5H5a7 7 0 107-8z"/>'),
     timer: ic('<path d="M9 2h6v2H9zM12 6a8 8 0 100 16 8 8 0 000-16zm1 4v5h-2v-6h2z"/>'),
     reveal: ic('<path d="M12 5C7 5 2.7 8.1 1 12c1.7 3.9 6 7 11 7s9.300-3.100 11-7c-1.700-3.900-6-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/>'),
-    starters: ic('<path d="M4 4h16v12H8l-4 4z"/>'), example: ic('<path d="M12 2l2.400 6.600L21 9.300l-5 4.500 1.500 6.700L12 17l-5.500 3.500L8 13.800 3 9.300l6.600-.700z"/>'),
+    starters: ic('<path d="M4 4h16v12H8l-4 4z"/>'), example: ic('<path d="M9 21h6v-1H9zM12 2a7 7 0 00-4 12.700V17h8v-2.300A7 7 0 0012 2z"/>'), star: ic('<path d="M12 2l2.900 6.300 6.900.8-5.100 4.700 1.400 6.800L12 17.200l-6.100 3.400 1.400-6.800L2.200 9.100l6.900-.8z"/>'),
     words: ic('<path d="M4 4h7a3 3 0 013 3v13a2 2 0 00-2-2H4zM20 4h-7a3 3 0 00-3 3v13a2 2 0 012-2h8z"/>'),
     chapters: ic('<path d="M4 5h16v3H4zM4 10.500h16v3H4zM4 16h16v3H4z"/>'), notes: ic('<path d="M3 17.300V21h3.700L17.800 9.900l-3.700-3.700zM20.700 7a1 1 0 000-1.400l-2.300-2.300a1 1 0 00-1.400 0l-1.800 1.800 3.700 3.700z"/>'),
     mode: ic('<path d="M7 7h10V4l5 5-5 5v-3H7zM17 17H7v3l-5-5 5-5v3h10z"/>'),
@@ -56,6 +56,7 @@
   Tm.finish = function () {
     Tm.running = false; Tm.done = true; clearInterval(Tm.id);
     if (FE.Sound) FE.Sound.chime();
+    if (X.onTimeUp) X.onTimeUp();
     var w = Tm.waiters; Tm.waiters = []; w.forEach(function (f) { f(true); });
     Tm.render();
   };
@@ -97,7 +98,7 @@
       while (S.paused || S.listening) { await waitResume(); if (tok !== S.tok) return; }
       X.setTalking(ln.who, true);
       S.narrating = true;
-      var ok = await V.speak(plain, { role: ln.who, onWord: X.hlWord, muted: !P.narration });
+      var ok = await V.speak(plain, { role: ln.who, mood: ln.mood, onWord: X.hlWord, muted: !P.narration });
       S.narrating = false;
       X.setTalking(ln.who, false);
       if (tok !== S.tok) return;
@@ -162,6 +163,70 @@
     if (S.mode === "demo") await demoFlow(step, tok); else await classFlow(step, tok);
   }
 
+  /* ---------------- memory jar, confetti, celebration ---------------- */
+  var JAR_GOAL = 20, STAR_PATH = "M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.100l6.9-.8z";
+  X.updateJar = function (grew) {
+    var jar = X.el.jar; if (!jar) return;
+    jar.hidden = !S.started;
+    var n = X.D.stars || 0, pct = Math.min(1, n / JAR_GOAL);
+    $("#jarlevel").style.transform = "translateY(" + (-100 * pct) + "px)";
+    $("#jarcount").textContent = n;
+    jar.classList.toggle("full", n >= JAR_GOAL);
+    if (grew) {
+      var g = $("#jarstars"), x = 26 + Math.random() * 48, y = 112 - Math.random() * Math.max(10, 90 * pct);
+      g.insertAdjacentHTML("beforeend", '<path transform="translate(' + x + "," + y + ') scale(.5)" d="' + STAR_PATH + '" fill="#fff" opacity=".9"/>');
+    }
+  };
+  X.confetti = function (n) {
+    if (X.reduceMotion()) return;
+    var cols = ["#F26B5B", "#F2B544", "#1F9E9A", "#6B4C9A", "#8DBF8B", "#3C78C9", "#FF8FA3"];
+    for (var i = 0; i < n; i++) {
+      var e = document.createElement("i"); e.className = "cf";
+      e.style.left = Math.round(80 + Math.random() * 1760) + "px";
+      e.style.background = cols[i % cols.length];
+      e.style.setProperty("--dx", Math.round(-160 + Math.random() * 320) + "px");
+      e.style.setProperty("--rot", Math.round(360 + Math.random() * 720) + "deg");
+      e.style.animationDelay = (Math.random() * 0.5).toFixed(2) + "s";
+      e.style.animationDuration = (1.6 + Math.random() * 1.2).toFixed(2) + "s";
+      X.el.stage.appendChild(e);
+      setTimeout(function (el) { el.remove(); }.bind(null, e), 3600);
+    }
+  };
+  X.addStar = function () {
+    if (!S.started) return;
+    var before = X.D.stars || 0;
+    X.D.stars = before + 1; X.saveData();
+    if (FE.Sound) FE.Sound.star();
+    var st = document.createElement("div"); st.className = "flystar";
+    st.innerHTML = '<svg viewBox="0 0 24 24"><path d="' + STAR_PATH + '" fill="#FFC93C" stroke="#0A2E63" stroke-width="1.2" stroke-linejoin="round"/></svg>';
+    X.el.stage.appendChild(st);
+    if (!X.reduceMotion() && st.animate) {
+      var a = st.animate([{ transform: "translate(0,0) scale(.2) rotate(0)", opacity: 0 }, { transform: "translate(0,-40px) scale(1.6) rotate(120deg)", opacity: 1, offset: 0.35 }, { transform: "translate(-860px,500px) scale(.45) rotate(360deg)", opacity: 1 }], { duration: 950, easing: "cubic-bezier(.4,.1,.3,1)" });
+      a.onfinish = function () { st.remove(); X.updateJar(true); };
+    } else { st.remove(); X.updateJar(true); }
+    if (X.D.stars === JAR_GOAL) setTimeout(function () { X.confetti(70); X.toast(U.jarFull); }, 900);
+    if (X.refreshNotes) X.refreshNotes();
+  };
+  var cheerTok = 0;
+  X.onTimeUp = function () {
+    X.confetti(S.mode === "demo" ? 10 : 22);
+    ["maya", "theo"].forEach(function (id) {
+      var a = X.actors[id]; if (!a) return;
+      var pose = a.person.dataset.pose || "rest", mood = a.person.dataset.mood || "smile";
+      A.setPose(a.person, "cheer"); A.setMood(a.person, "laugh");
+      setTimeout(function () { if (X.actors[id] === a) { A.setPose(a.person, pose); A.setMood(a.person, mood); } }, 1900);
+    });
+    if (S.mode === "demo" || !P.celebrate || S.listening) return;
+    var my = ++cheerTok, who = Math.random() < 0.5 ? "maya" : "theo", text = U.cheers[Math.floor(Math.random() * U.cheers.length)];
+    X.showBubble(who, text, {});
+    X.el.bubble.classList.add("cheer");
+    X.setTalking(who, true);
+    V.speak(FE.plain(text), { role: who, mood: "grin", muted: !P.narration }).then(function () {
+      X.setTalking(who, false);
+      setTimeout(function () { if (my === cheerTok && X.bubbleState && X.bubbleState.who === who && !S.narrating) X.hideBubble(); }, 1400);
+    });
+  };
+
   /* ---------------- HUD ---------------- */
   X.updateHUD = function () {
     var ch = S.chapter, st = S.step;
@@ -202,7 +267,8 @@
     var chs = X.chapters();
     ci = Math.max(0, Math.min(chs.length - 1, ci));
     si = Math.max(0, Math.min(chs[ci].steps.length - 1, si));
-    S.tok++; var tok = S.tok;
+    S.tok++; var tok = S.tok; cheerTok++;
+    if (S.started && FE.Sound && (ci !== S.ci || si !== S.si)) FE.Sound.whoosh();
     V.cancel(); flushWaiters(); Tm.waiters = [];
     X.hideBubble(); X.setTalking(null, false);
     Tm.stop();
@@ -225,6 +291,7 @@
     if (step.timer) Tm.set(step.timer); else Tm.render();
     X.updateBar();
     X.buildStrip && X.buildStripState();
+    X.updateJar();
     X.saveSession();
     runStep(tok);
   };
@@ -314,7 +381,7 @@
       '<button class="cb" id="cb-timer" data-act="timer" aria-label="' + esc(U.cTimer) + '"><span class="ic tmr" id="tmr">--:--</span><span class="lb">' + T(U.cStart) + '</span></button>' +
       '<button class="cb mini" id="cb-tmPlus" data-act="tmPlus" aria-label="' + esc(U.aTimerPlus) + '"><span class="ic">+30</span></button>' +
       '<button class="cb mini" id="cb-tmReset" data-act="tmReset" aria-label="' + esc(U.cReset) + '"><span class="ic">' + IC.replay + "</span></button></div></div>" +
-      '<div class="cg">' + cbtn("reveal", IC.reveal, U.cReveal) + cbtn("starters", IC.starters, U.cStarters) + cbtn("example", IC.example, U.cExample) + cbtn("words", IC.words, U.cWords) + "</div>" +
+      '<div class="cg">' + cbtn("reveal", IC.reveal, U.cReveal) + cbtn("star", IC.star, U.cStar, U.aStar, "starbtn") + cbtn("starters", IC.starters, U.cStarters) + cbtn("example", IC.example, U.cExample) + cbtn("words", IC.words, U.cWords) + "</div>" +
       '<div class="cg">' + cbtn("chapters", IC.chapters, U.cChapters) + cbtn("notes", IC.notes, U.cNotes) + cbtn("mode", IC.mode, U.cClass) + "</div>" +
       '<div class="cg"><label class="volwrap"><input id="vol" type="range" min="0" max="100" value="' + Math.round(P.volume * 100) + '" aria-label="' + esc(U.cVolume) + '"><span>' + T(U.cVolume) + "</span></label>" +
       cbtn("full", IC.full, U.cFull) + cbtn("settings", IC.gear, U.cSettings) + '<button class="cb" id="cb-hide" data-act="hide" aria-controls="controlbar" aria-expanded="true" aria-label="' + esc(U.cHide) + '"><span class="ic">' + IC.hide + '</span><span class="lb">' + T(U.cHide) + "</span></button></div></div>";
@@ -332,6 +399,7 @@
       case "next": X.next(); break; case "chNext": X.chapNext(); break; case "replay": X.replay(); break;
       case "timer": X.timerToggle(); break; case "tmMinus": Tm.adjust(-30); break; case "tmPlus": Tm.adjust(30); break; case "tmReset": Tm.reset(); break;
       case "reveal": X.setRev(S.rev + 1); break;
+      case "star": X.addStar(); break;
       case "starters": X.toggleTray("starters"); break; case "example": X.toggleTray("example"); break;
       case "words": X.openDrawer("words"); break; case "chapters": X.openModal("plan"); break; case "notes": X.openDrawer("notes"); break;
       case "mode": X.setMode(S.mode === "class" ? "demo" : "class"); break;
@@ -492,7 +560,7 @@
   X.exportObject = function () {
     var D = X.D;
     return { type: "teacher-observations", note: "Entered by the teacher. Anonymous. Not automatic assessment of speaking or pronunciation.", lesson: "Childhood: Memories, Games, and Growing Up", exportedAt: new Date().toISOString(),
-      opinionScale: D.scale, wouldYouRather: D.wyr, ranking: D.rank, rankingTopTwoMarked: D.rankTop, gamesDayPlan: D.plan, rubric: D.rubric, reflection: D.reflect, participationMarks: D.marks, marksColumns: ["Speaking", "Clear reason", "Vocabulary", "Listening"], notes: D.notes };
+      memoryJarStars: D.stars || 0, opinionScale: D.scale, wouldYouRather: D.wyr, ranking: D.rank, rankingTopTwoMarked: D.rankTop, gamesDayPlan: D.plan, rubric: D.rubric, reflection: D.reflect, participationMarks: D.marks, marksColumns: ["Speaking", "Clear reason", "Vocabulary", "Listening"], notes: D.notes };
   };
   X.exportCsv = function () {
     var o = X.exportObject(), rows = [["section", "item", "field", "value"]];
@@ -502,6 +570,7 @@
     Object.keys(o.participationMarks).forEach(function (s) { o.participationMarks[s].forEach(function (n, i) { rows.push(["participation marks (teacher)", "S" + s, o.marksColumns[i], n]); }); });
     Object.keys(o.rubric).forEach(function (s) { Object.keys(o.rubric[s]).forEach(function (c) { rows.push(["rubric (teacher)", "S" + s, U.rubricCrit[c], o.rubric[s][c]]); }); });
     Object.keys(o.reflection).forEach(function (k) { rows.push(["reflection", k, "count", o.reflection[k]]); });
+    rows.push(["memory jar", "stars", "count", o.memoryJarStars]);
     rows.push(["notes", "teacher", "text", o.notes]);
     return rows.map(function (r) { return r.map(function (c) { c = String(c); return /[",\n]/.test(c) ? '"' + c.replace(/"/g, '""') + '"' : c; }).join(","); }).join("\n");
   };
@@ -525,7 +594,7 @@
       '<div class="vrow"><span class="vn">' + T(U.sRate) + '</span><input type="range" id="rateR" min="70" max="130" value="' + Math.round(P.rate * 100) + '" aria-label="' + esc(U.sRate) + '"></div>' +
       sw("narrChk", U.sNarr, P.narration) + sw("musicChk", U.sMusic, P.music, U.sMusicD) +
       '<div class="vrow"><span class="vn">' + T(U.sMusicVol) + '</span><input type="range" id="musicV" min="0" max="100" value="' + Math.round(P.musicVol * 100) + '" aria-label="' + esc(U.sMusicVol) + '"></div>' +
-      sw("sfxChk", U.sSfx, P.sfx) + sw("autoChk", U.sAuto, P.autoTimer) + sw("motionChk", U.sMotion, P.reduceMotion) +
+      sw("sfxChk", U.sSfx, P.sfx) + sw("celChk", U.sCelebrate, P.celebrate) + sw("autoChk", U.sAuto, P.autoTimer) + sw("motionChk", U.sMotion, P.reduceMotion) +
       '<div class="vrow"><span class="vn" style="width:auto">' + T(U.sDemoSec) + '</span><select id="demoSel" aria-label="' + esc(U.sDemoSec) + '">' + [5, 10, 20, 30].map(function (n) { return '<option value="' + n + '"' + (P.demoSec === n ? " selected" : "") + ">" + n + " s</option>"; }).join("") + "</select></div>" +
       '<div class="dr-row"><button class="btn" data-m="script">' + T(U.sScript) + '</button><button class="btn" data-m="chart">' + T(U.sChart) + '</button><button class="btn" data-m="about">' + T(U.sAbout) + '</button><button class="btn" data-m="help">' + T(U.sShort) + '</button></div>' +
       '<div class="dr-row"><button class="btn warn" data-sreset="1">' + T(U.sReset) + "</button></div></div>";
@@ -541,6 +610,7 @@
       else if (t.id === "narrChk") { P.narration = t.checked; V.enabled = t.checked; if (!t.checked) V.cancel(); X.savePrefs(); }
       else if (t.id === "musicChk") { P.music = t.checked; FE.Sound.unlock(); FE.Sound.music(P.music); X.savePrefs(); }
       else if (t.id === "sfxChk") { P.sfx = t.checked; FE.Sound.setSfx(P.sfx); X.savePrefs(); }
+      else if (t.id === "celChk") { P.celebrate = t.checked; X.savePrefs(); }
       else if (t.id === "autoChk") { P.autoTimer = t.checked; X.savePrefs(); }
       else if (t.id === "motionChk") { P.reduceMotion = t.checked; applyPrefs(); X.savePrefs(); }
       else if (t.id === "demoSel") { P.demoSec = +t.value; X.savePrefs(); }
@@ -686,6 +756,7 @@
     else if (k === "s" || k === "S") X.toggleTray("starters");
     else if (k === "e" || k === "E") X.toggleTray("example");
     else if (k === "w" || k === "W") X.openDrawer("words");
+    else if (k === "j" || k === "J") X.addStar();
     else if (k === "?") X.openModal("help");
   });
   document.addEventListener("dblclick", function (e) {
@@ -709,12 +780,13 @@
       '<div class="mcard"><h2>' + T(U.demoModeT) + "</h2><div>" + T(U.demoModeD) + '</div><button class="mbtn alt" data-start="demo">' + T(U.startDemo) + "</button></div></div>" +
       '<div class="start-info"><div>' + T(U.startTime) + "</div>" +
       '<div class="row"><b>' + T(U.audioCheck) + ":</b> " + (n ? T(U.audioOk) + " <b id=\"vcount\">" + n + "</b>" : T(U.audioNone)) + '<button class="btn" data-test="1">' + T(U.audioTest) + "</button></div>" +
+      '<div class="row"><label class="stog"><input type="checkbox" id="stMusic"' + (P.music ? " checked" : "") + "> " + T(U.startMusic) + '</label><label class="stog"><input type="checkbox" id="stSfx"' + (P.sfx ? " checked" : "") + "> " + T(U.startSfx) + "</label></div>" +
       "<div>" + T(U.tipH) + " " + T(U.tipDbl) + "</div><div>" + T(U.tipShare) + "</div></div></div>";
   }
   X.refreshStart = function () { if (!S.started) $("#start").innerHTML = startHtml(); };
 
   X.boot = function () {
-    ["viewport", "stagebox", "stage", "world", "tailsvg", "wipe", "vig", "polaroid", "overlays", "bubble", "avatar", "panel", "hud", "ribbon", "drawer", "modal", "popover", "start", "showbar"].forEach(function (id) { X.el[id] = document.getElementById(id); });
+    ["jar", "viewport", "stagebox", "stage", "world", "tailsvg", "wipe", "vig", "polaroid", "overlays", "bubble", "avatar", "panel", "hud", "ribbon", "drawer", "modal", "popover", "start", "showbar"].forEach(function (id) { X.el[id] = document.getElementById(id); });
     X.el.bar = document.getElementById("controlbar");
     X.el.ribbon.innerHTML = T(U.demoShort) + " · " + T(U.sampleTag);
     applyPrefs();
@@ -730,6 +802,10 @@
     document.getElementById("app").dataset.mode = S.mode;
     $("#start").innerHTML = startHtml();
     V.onVoices = function () { X.refreshStart(); };
+    $("#start").addEventListener("change", function (e) {
+      if (e.target.id === "stMusic") { P.music = e.target.checked; X.savePrefs(); }
+      if (e.target.id === "stSfx") { P.sfx = e.target.checked; FE.Sound.setSfx(P.sfx); X.savePrefs(); }
+    });
     $("#start").addEventListener("click", function (e) {
       var st = e.target.closest("[data-start]");
       if (st) { startLesson(st.dataset.start); return; }

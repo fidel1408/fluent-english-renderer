@@ -140,6 +140,16 @@ if (want("narration")) {
   await p.evaluate(() => FE.X.go(1, 0));
   await p.waitForFunction(() => document.querySelector(".bubble .wu.say"), null, { timeout: 5000 }).catch(() => {});
   ok("current word is highlighted in the bubble while it is spoken", await p.evaluate(() => !!document.querySelector(".bubble .wu.say")));
+  // phrase-by-phrase delivery with mood-shaped pitch (less robotic than one flat pass)
+  await p.evaluate(() => { FE.X.pause(); window.__spoken.length = 0; FE.Voice.speak("Hello there, my friend. How are you today? I am great!", { role: "theo", mood: "grin" }); });
+  await p.waitForTimeout(1800);
+  const pr = await p.evaluate(() => window.__spoken.map((s) => [s.text, +s.pitch.toFixed(2), +s.rate.toFixed(2)]));
+  ok("a line is spoken in phrases (not one flat pass)", pr.length >= 3, JSON.stringify(pr));
+  ok("pitch varies between a statement, a question and an exclamation", new Set(pr.map((x) => x[1])).size >= 3, JSON.stringify(pr));
+  const mv = await p.evaluate(() => { window.__spoken.length = 0; FE.Voice.speak("Hello there.", { role: "maya", mood: "neutral" }); return null; });
+  await p.waitForTimeout(500);
+  const mp = await p.evaluate(() => window.__spoken[0].pitch);
+  ok("Theo's voice is pitched lower than Maya's", pr[0][1] < mp, JSON.stringify([pr[0][1], mp]));
   ok("no console errors (narration)", p.__errs.length === 0, p.__errs.join("|"));
   await ctx.close();
 }
@@ -153,6 +163,7 @@ if (want("class")) {
   const t0 = await p.evaluate(() => [FE.X.Tm.running, FE.X.Tm.total]);
   ok("class mode starts the speaking timer after narration", t0[0] === true && t0[1] === 22, JSON.stringify(t0));
   await p.waitForFunction(() => FE.X.Tm.done, null, { timeout: 15000 });
+  ok("confetti and a cheer when the speaking time is up", await p.evaluate(() => document.querySelectorAll(".cf").length > 5));
   await p.waitForTimeout(1500);
   const pos = await p.evaluate(() => [FE.X.S.ci, FE.X.S.si]);
   ok("class mode stays on the step after the timer ends (waits for the teacher)", pos[0] === 1 && pos[1] === 2, JSON.stringify(pos));
@@ -313,11 +324,28 @@ if (want("widgets")) {
   ok("ranking: dragging moves a card", order3.indexOf("cooperation") < order2.indexOf("cooperation"), JSON.stringify([order2, order3]));
   await p.click('[data-rt="top"]');
   ok("ranking: Top two marks the first two", await p.evaluate(() => document.querySelectorAll("#panel .rcard.top").length === 2));
-  // plan board
-  await p.evaluate(() => FE.X.go(7, 2)); await p.waitForTimeout(1300);
-  await p.click('#panel [data-pa="tag"]'); await p.click('#panel [data-pa="drawing"]'); await p.click('#panel [data-pa="board game"]');
-  const plan = await p.evaluate(() => FE.X.D.plan.slots.map((s) => s.a + ":" + s.m));
-  ok("games-day plan board records three activities", plan.every((x) => !/null/.test(x)), JSON.stringify(plan));
+  // mystery clues
+  await p.evaluate(() => FE.X.go(6, 1)); await p.waitForTimeout(1300);
+  const cl0 = await p.evaluate(() => ({ clues: [...document.querySelectorAll("#panel .clue")].filter((e) => e.offsetParent).length, ans: !!(document.querySelector("#panel .answer") && document.querySelector("#panel .answer").offsetParent) }));
+  ok("mystery clues start with two visible and the answer hidden", cl0.clues === 2 && !cl0.ans, JSON.stringify(cl0));
+  await p.evaluate(() => FE.X.setRev(5, true));
+  const cl1 = await p.evaluate(() => ({ clues: [...document.querySelectorAll("#panel .clue")].filter((e) => e.offsetParent).length, ans: !!(document.querySelector("#panel .answer") && document.querySelector("#panel .answer").offsetParent) }));
+  ok("revealing shows all four clues and the answer", cl1.clues === 4 && cl1.ans, JSON.stringify(cl1));
+  // story cards
+  await p.evaluate(() => FE.X.go(7, 1)); await p.waitForTimeout(1300);
+  ok("story spinner starts with four face-down cards", await p.evaluate(() => [...document.querySelectorAll("#panel .scard .back")].filter((e) => e.offsetParent).length === 4));
+  await p.click('#panel [data-draw="next"]'); await p.click('#panel [data-draw="next"]');
+  const t0 = await p.evaluate(() => [...document.querySelectorAll("#panel .scard .front")].filter((e) => e.offsetParent).map((e) => e.querySelector(".st").textContent));
+  ok("drawing reveals one card at a time (two drawn = two faces up)", t0.length === 2 && t0.every(Boolean), JSON.stringify(t0));
+  await p.click('#panel [data-draw="again"]');
+  const t1 = await p.evaluate(() => [...document.querySelectorAll("#panel .scard .front")].filter((e) => e.offsetParent).map((e) => e.querySelector(".st").textContent));
+  ok("Draw again replaces the latest card with a different one", t1.length === 2 && t1[0] === t0[0] && t1[1] !== t0[1], JSON.stringify([t0, t1]));
+  // memory jar and stars
+  await p.keyboard.press("j"); await p.waitForTimeout(1300);
+  await p.click("#cb-star"); await p.waitForTimeout(1300);
+  ok("J and the Star button add stars to the memory jar", await p.evaluate(() => FE.X.D.stars === 2 && document.getElementById("jarcount").textContent === "2"), await p.evaluate(() => FE.X.D.stars));
+  await p.evaluate(() => { FE.X.D.stars = 19; FE.X.updateJar(); }); await p.keyboard.press("j"); await p.waitForTimeout(1500);
+  ok("a full jar glows and celebrates", await p.evaluate(() => document.getElementById("jar").classList.contains("full") && document.querySelectorAll(".cf").length > 10));
   // would you rather
   await p.evaluate(() => FE.X.go(8, 2)); await p.waitForTimeout(1300);
   const w = await p.$$("#panel .wopt"); await w[0].click(); await w[0].click(); await w[1].click();
@@ -385,7 +413,7 @@ if (want("content")) {
     out.vocab = ["childhood", "imagination", "independent", "grow up", "look back on"].map((w) => all.includes('"' + w + '"') || all.includes(w));
     out.claims = ["Children need more free play than organized activities.", "Having chores helps children become independent.".replace("become independent", "become more independent"), "Childhood friendships can be just as important as friendships made later.", "Technology gives children more opportunities to be creative."].map((t) => all.includes(t));
     out.warm = ["What games or activities did you enjoy when you were younger?", "What did you use to do after school or during your free time?", "What is something you liked as a child but feel differently about now?", "What do you think has changed most about childhood?"].map((t) => all.includes(t));
-    out.exprs = ["I see your point, but", "In some situations", "One example would be", "I would prioritize", "This matters because", "Could we compromise by", "How about", "That might work, but", "What equipment would we need", "Let's make sure everyone can join in", "Do you remember", "I remember it a little differently", "Would you like to"].map((t) => all.includes(t));
+    out.exprs = ["I see your point, but", "In some situations", "One example would be", "I would prioritize", "This matters because", "Did you use to", "Where did you keep it", "What was it made of", "At first", "After that", "In the end", "I'd rather"].map((t) => all.includes(t));
     out.wyr = ["play your favorite childhood game again", "watch your favorite childhood show again", "invent a new playground game", "design a new board game", "revisit a childhood place as it was then", "see how it has changed today", "keep one meaningful childhood object", "preserve one childhood story in a book"].map((t) => all.includes(t));
     out.dil = ["Make the teams uneven", "Hide the damage", "Vote, and the majority decides"].map((t) => all.includes(t));
     out.pass = (all.match(/pass/gi) || []).length;
@@ -410,6 +438,10 @@ if (want("content")) {
   ok("qualities are creativity, friendship, independence, cooperation", r.qual === "Creativity,Friendship,Independence,Cooperation", r.qual);
   ok("pass options are mentioned in the content", r.pass >= 4, r.pass);
   ok("opinions are never scored", r.noScore);
+  const g = await p.evaluate(() => ({ titles: FE.LESSON.chapters.map((c) => c.title), rp: /roleplay|role-play|Organizer/i.test(JSON.stringify(FE.LESSON.chapters)), theo: FE.Art.adult("theo"), maya: FE.Art.adult("maya"), deck: Object.values(FE.LESSON.storyDeck).map((d) => d.length) }));
+  ok("the roleplay chapters are gone (replaced by two games)", !g.rp && !g.titles.some((t) => /roleplay/i.test(t)) && /mystery/i.test(g.titles[6]) && /story/i.test(g.titles[7]), JSON.stringify(g.titles));
+  ok("story deck has six cards in each of four categories", JSON.stringify(g.deck) === "[6,6,6,6]", JSON.stringify(g.deck));
+  ok("Theo is drawn with a masculine build and a beard; Maya is not", /person[^"]*bearded[^"]*male|person[^"]*male[^"]*bearded/.test(g.theo.slice(0, 200)) && !/male/.test(g.maya.slice(0, 120)), g.theo.slice(0, 120));
   await ctx.close();
 }
 

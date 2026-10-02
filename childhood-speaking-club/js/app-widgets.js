@@ -106,6 +106,43 @@
     return '<div class="versions"' + rvAttr(b.rv, b.rvx) + ">" + [[U.verSupported, U.verSupportedD], [U.verStandard, U.verStandardD], [U.verLonger, U.verLongerD]].map(function (v) { return '<div class="ver"><b>' + T(v[0]) + "</b>" + T(v[1]) + "</div>"; }).join("") + "</div>";
   };
 
+  /* ---------- mystery clues ---------- */
+  B.clues = function (b) {
+    return '<div class="clues">' + b.items.map(function (t, i) { return '<div class="clue" data-rv="' + (i + 1) + '"><span class="cn">' + (i + 1) + "</span><span>" + T(t) + "</span></div>"; }).join("") +
+      (b.answer ? '<div class="answer" data-rv="5"><span class="al">' + T(U.answerLabel) + "</span> " + T(b.answer) + "</div>" : "") + "</div>";
+  };
+
+  /* ---------- story cards ---------- */
+  X.story = null;
+  X.rollStory = function (idx) {
+    var deck = L.storyDeck, keys = ["who", "where", "problem", "ending"];
+    X.story = idx || keys.map(function (k) { return Math.floor(Math.random() * deck[k].length); });
+  };
+  var STORY_ICO = [
+    '<svg viewBox="0 0 48 48"><circle cx="24" cy="15" r="9" fill="currentColor"/><path d="M8 42c0-10 7-16 16-16s16 6 16 16z" fill="currentColor"/></svg>',
+    '<svg viewBox="0 0 48 48"><path d="M24 4c-8 0-14 6-14 14 0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14zm0 19a5 5 0 110-10 5 5 0 010 10z" fill="currentColor"/></svg>',
+    '<svg viewBox="0 0 48 48"><path d="M28 2L10 26h12l-4 20 20-26H26z" fill="currentColor"/></svg>',
+    '<svg viewBox="0 0 48 48"><path d="M24 3l6 13 14 2-10 10 3 14-13-7-13 7 3-14L4 18l14-2z" fill="currentColor"/></svg>',
+  ];
+  function storyHtml() {
+    if (!X.story) X.rollStory();
+    var deck = L.storyDeck, keys = ["who", "where", "problem", "ending"];
+    return '<div class="scards">' + keys.map(function (k, i) {
+      return '<div class="scard c' + i + '"><div class="back" data-rv="0" data-rvx="' + (i + 1) + '"><span class="si">' + STORY_ICO[i] + "</span><span>" + T(L.storyLabels[i]) + '</span></div>' +
+        '<div class="front" data-rv="' + (i + 1) + '"><span class="sl2"><span class="si">' + STORY_ICO[i] + "</span>" + T(L.storyLabels[i]) + '</span><span class="st">' + T(deck[k][X.story[i]]) + "</span></div></div>";
+    }).join("") + '</div><div class="drawrow"><button class="btn-s" data-draw="next">' + T(U.drawCard) + '</button><button class="btn-s" data-draw="again">' + T(U.drawAgain) + "</button></div>";
+  }
+  B.story = function () { X.rollStory(); return '<div class="story">' + storyHtml() + "</div>"; };
+  X.redrawStory = function (i, idx) {
+    var deck = L.storyDeck, keys = ["who", "where", "problem", "ending"];
+    if (!X.story) X.rollStory();
+    var n = deck[keys[i]].length;
+    X.story[i] = idx != null ? idx : (X.story[i] + 1 + Math.floor(Math.random() * (n - 1))) % n;
+    var st = X.$("#panel .story"); if (!st) return;
+    var keep = X.S.rev;
+    st.innerHTML = storyHtml(); X.applyReveal(); if (FE.Sound) FE.Sound.pop();
+  };
+
   /* ---------- scale ---------- */
   B["scale-demo"] = function (b) {
     return '<div class="scale demo"><div class="row">' + b.items.map(function (t, i) { return '<div class="sbtn s' + i + '"><span>' + T(t) + '</span><span class="bar" style="width:0"></span></div>'; }).join("") + "</div></div>";
@@ -276,6 +313,12 @@
     bindRank(panel);
     panel.addEventListener("click", function (e) {
       var t = e.target;
+      var dr = t.closest("[data-draw]");
+      if (dr) {
+        if (dr.dataset.draw === "next") { X.setRev(X.S.rev + 1); if (FE.Sound) FE.Sound.pop(); }
+        else if (X.S.rev > 0) X.redrawStory(Math.min(3, X.S.rev - 1));
+        return;
+      }
       var say = t.closest(".say-btn");
       if (say) { X.listen(say.dataset.say, say.dataset.role); return; }
       var opt = t.closest(".opts .opt");

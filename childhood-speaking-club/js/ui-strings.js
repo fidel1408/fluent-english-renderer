@@ -96,7 +96,7 @@
     hTitle: "Keyboard shortcuts",
     hKeys: [["Space", "Play or pause"], ["Right arrow", "Next step"], ["Left arrow", "Previous step"], ["Shift and right arrow", "Next chapter"],
             ["Shift and left arrow", "Previous chapter"], ["R", "Replay this step"], ["T", "Start or pause the timer"], ["N", "Reveal the next item"],
-            ["S", "Show sentence starters"], ["E", "Show a fictional example"], ["H", "Hide or show the controls"], ["F", "Full screen"], ["W", "Word banks"], ["Question mark", "This list"]],
+            ["S", "Show sentence starters"], ["E", "Show a fictional example"], ["H", "Hide or show the controls"], ["F", "Full screen"], ["W", "Word banks"], ["J", "Add a star to the memory jar"], ["Question mark", "This list"]],
 
     /* about pronunciation */
     aboutTitle: "About the pronunciation",
@@ -157,6 +157,12 @@
     chartTitle: "Sound chart",
     reflectHint: "Click to count an expression.",
     loading: "Loading",
+    answerLabel: "The answer:", drawCard: "Draw a card", drawAgain: "Draw again",
+    cStar: "Star", aStar: "Add a speaking star to the memory jar",
+    jarFull: "The memory jar is full!", jarTitle: "Memory jar", starNote: "Add a star when someone speaks, asks a question, or helps.",
+    sCelebrate: "Celebrate when time is up",
+    cheers: ["Time! Great speaking, everyone!", "Wonderful! Thank you for sharing.", "Nice work! Every sentence counts.", "That was brave. Well done!", "Great ideas! Time is up."],
+    startMusic: "Play soft background music", startSfx: "Play sound effects",
     yourTurn: "Your turn", twist: "Twist", wyrHead: "Would you rather…?", orWord: "or", go: "Go",
     claimLbl: "Claim", roundLbl: "Round", rankingLbl: "Ranking", reuseLbl: "Expressions to reuse",
     demoShort: "Demo Mode", aboutDot: "Words with a faint dot below them have no transcription yet.",

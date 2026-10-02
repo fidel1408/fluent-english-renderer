@@ -18,14 +18,14 @@
 
   /* ---------------- state ---------------- */
   var PREF_KEY = "fe.childhood.prefs.v1", DATA_KEY = "fe.childhood.data.v1";
-  var defaultsP = { mode: "class", volume: 1, narration: true, music: false, musicVol: 0.4, sfx: true, reduceMotion: false, autoTimer: true, demoSec: 10, controlsHidden: false, rate: 1, voices: {}, saveData: false };
+  var defaultsP = { celebrate: true, mode: "class", volume: 1, narration: true, music: false, musicVol: 0.4, sfx: true, reduceMotion: false, autoTimer: true, demoSec: 10, controlsHidden: false, rate: 1, voices: {}, saveData: false };
   function load(key) { try { var s = root.localStorage.getItem(key); return s ? JSON.parse(s) : null; } catch (e) { return null; } }
   X.P = Object.assign({}, defaultsP, load(PREF_KEY) || {});
   X.savePrefs = function () { try { root.localStorage.setItem(PREF_KEY, JSON.stringify(X.P)); } catch (e) {} };
   X.freshData = function () {
     return { scale: {}, wyr: {}, rank: ["creativity", "friendship", "independence", "cooperation"], rankTop: false,
       plan: { slots: [{ a: null, m: null }, { a: null, m: null }, { a: null, m: null }], backup: null },
-      rubric: {}, rubricWho: 1, reflect: {}, marks: {}, notes: "", constraintIdx: 0, students: 6 };
+      rubric: {}, rubricWho: 1, reflect: {}, marks: {}, notes: "", constraintIdx: 0, students: 6, stars: 0 };
   };
   X.D = X.freshData();
   if (X.P.saveData) { var saved = load(DATA_KEY); if (saved) Object.assign(X.D, saved); }
@@ -221,7 +221,10 @@
     note:    { slot: [150, 6, 0.5, 6], hover: [0, -330, 1.25] },
     toy:     { slot: [235, 4, 0.44, 0], hover: [0, -330, 1.0] },
   };
+  OBJ.mystery = { slot: [0, 0, 0.5, 0], hover: [0, -340, 1.15] };
+  OBJ.bell = { slot: [0, 0, 0.5, 0], hover: [0, -340, 1.15] };
   var ORDER = ["drawing", "ball", "note", "toy"];
+  var EXTRA = ["mystery", "bell"];
   X.boxState = { shown: false, open: false, obj: null };
   X.fxRebuild = function () {
     if (!X.topLayer) return;
@@ -247,7 +250,7 @@
     X.boxState.shown = true;
     // objects
     var holder = g.querySelector(".bobjs");
-    ORDER.forEach(function (n) {
+    ORDER.concat(EXTRA).forEach(function (n) {
       var o = svg("g", { class: "bo bo-" + n });
       o.style.transition = "transform .95s cubic-bezier(.3,.9,.3,1),opacity .6s";
       o.style.opacity = "0";
@@ -258,7 +261,7 @@
       X.placeObject(n, "inside", true);
     });
     if (X.boxState.open) X.setBoxOpen(true, true);
-    ORDER.forEach(function (n) { if (X.boxState.placed && X.boxState.placed[n]) X.placeObject(n, X.boxState.placed[n], true); });
+    ORDER.concat(EXTRA).forEach(function (n) { if (X.boxState.placed && X.boxState.placed[n]) X.placeObject(n, X.boxState.placed[n], true); });
   };
   X.placeObject = function (n, where, instant) {
     if (!X.boxEl) return;
@@ -312,6 +315,18 @@
       case "box-calm":
         X.card(null); X.boxState.shown = true; X.ensureBox(); X.setBoxOpen(true);
         ORDER.forEach(function (n) { X.placeObject(n, "slot"); });
+        break;
+      case "mystery":
+        X.card(null); X.boxState.shown = true; X.ensureBox(); X.setBoxOpen(true);
+        ORDER.concat(["bell"]).forEach(function (n) { X.placeObject(n, "inside"); });
+        X.placeObject("mystery", "hover");
+        break;
+      case "mystery-reveal":
+        X.card(null); X.boxState.shown = true; X.ensureBox(); X.setBoxOpen(true);
+        ORDER.concat(["mystery"]).forEach(function (n) { X.placeObject(n, "inside"); });
+        X.placeObject("bell", "hover");
+        if (X.confetti) X.confetti(34);
+        if (FE.Sound) FE.Sound.star();
         break;
       case "closing":
         X.card("closing", '<div class="big">' + T(U.tagline) + '</div><div class="sub"><img src="assets/fluent_english_logo.png" alt="Fluent English"></div>');
@@ -520,6 +535,6 @@
     if (n === X.S.rev) return;
     X.S.rev = n;
     X.applyReveal();
-    if (!quiet && FE.Sound) FE.Sound.tick();
+    if (!quiet && FE.Sound) FE.Sound.pop();
   };
 })(typeof window !== "undefined" ? window : globalThis);

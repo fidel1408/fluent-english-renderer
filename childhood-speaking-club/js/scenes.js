@@ -9,12 +9,51 @@
   var S = (FE.Scenes = {});
 
   var SKY = {
-    day:    ["#BFE5F7", "#EAF6FB", "#FFF3D6"],
-    golden: ["#F7C99A", "#FBE3B8", "#FFF1D2"],
-    dusk:   ["#6C77B8", "#E9A98F", "#FBD9A8"],
-    night:  ["#1D2A5B", "#37508F", "#7C87BF"],
+    day:    ["#6EC1F4", "#B8E4FA", "#FFF0CC"],
+    golden: ["#F4864A", "#FFC684", "#FFEBC2"],
+    dusk:   ["#4A55B2", "#DE7C93", "#FFBE78"],
+    night:  ["#17224F", "#32498A", "#7A86BE"],
   };
 
+  function sunRays(cx, cy, col) {
+    var s = '<g class="spin" style="transform-origin:' + cx + 'px ' + cy + 'px;animation-duration:90s" opacity=".22" fill="' + (col || "#FFF6C8") + '">';
+    for (var i = 0; i < 12; i++) s += '<path d="M' + cx + "," + cy + " L" + (cx + Math.cos(i * 0.5236 - 0.09) * 1500) + "," + (cy + Math.sin(i * 0.5236 - 0.09) * 1500) + " L" + (cx + Math.cos(i * 0.5236 + 0.09) * 1500) + "," + (cy + Math.sin(i * 0.5236 + 0.09) * 1500) + 'Z"/>';
+    return s + "</g>";
+  }
+  function birds(y) {
+    var s = "";
+    [[0, 0], [90, 36], [190, -12]].forEach(function (p, i) {
+      s += '<g class="drift" style="animation-duration:' + (70 + i * 14) + 's;animation-delay:-' + i * 17 + 's"><g transform="translate(' + (300 + p[0]) + "," + (y + p[1]) + ')"><path class="flap" d="M-16,0 Q-8,-14 0,0 Q8,-14 16,0" fill="none" stroke="#2A3D6B" stroke-width="4" stroke-linecap="round" style="animation-delay:' + (i * 0.3) + 's"/></g></g>';
+    });
+    return s;
+  }
+  function flowers(y, x0, x1) {
+    var s = "", cols = ["#FF8FA3", "#FFD166", "#FFFFFF", "#C9A3FF"];
+    for (var x = x0, i = 0; x < x1; x += 46, i++) {
+      var yy = y + ((i * 17) % 14);
+      s += '<g transform="translate(' + x + "," + yy + ')"><path d="M0,0 V-22" stroke="#3F8E55" stroke-width="3"/><g class="sway" fill="' + cols[i % cols.length] + '"><circle cx="0" cy="-26" r="6"/><circle cx="-7" cy="-22" r="5"/><circle cx="7" cy="-22" r="5"/><circle cx="0" cy="-19" r="5"/></g><circle cx="0" cy="-23" r="3" fill="#F2B544"/></g>';
+    }
+    return s;
+  }
+  function lights(x1, y1, x2, y2, n) {
+    var s = '<path d="M' + x1 + ',' + y1 + ' Q' + (x1 + x2) / 2 + ',' + ((y1 + y2) / 2 + 70) + ' ' + x2 + ',' + y2 + '" fill="none" stroke="#5B4636" stroke-width="3"/>', cols = ["#FFD166", "#FF8FA3", "#9FE3D6", "#C9A3FF"];
+    for (var i = 1; i <= n; i++) {
+      var t = i / (n + 1);
+      var x = (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * ((x1 + x2) / 2) + t * t * x2, y = (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * ((y1 + y2) / 2 + 70) + t * t * y2;
+      s += '<g class="twinkle" style="animation-delay:' + (i * 0.3).toFixed(1) + 's"><circle cx="' + x + '" cy="' + (y + 12) + '" r="22" fill="' + cols[i % 4] + '" opacity=".35"/><circle cx="' + x + '" cy="' + (y + 12) + '" r="9" fill="' + cols[i % 4] + '"/></g>';
+    }
+    return s;
+  }
+  function balloons(x, y) {
+    var cols = ["#F26B5B", "#F2B544", "#1F9E9A", "#6B4C9A", "#FF8FA3"], s = '<g class="bob" transform="translate(' + x + "," + y + ')">';
+    cols.forEach(function (col, i) { var bx = (i - 2) * 46, by = (i % 2) * 24; s += '<path d="M' + bx + "," + (by + 60) + " Q" + (bx + 8) + ",200 0,300" + '" stroke="#6B5A4A" stroke-width="2" fill="none"/><ellipse cx="' + bx + '" cy="' + by + '" rx="34" ry="42" fill="' + col + '"/><ellipse cx="' + (bx - 11) + '" cy="' + (by - 14) + '" rx="8" ry="12" fill="#fff" opacity=".35"/>'; });
+    return s + "</g>";
+  }
+  function splats() {
+    var s = "", cols = ["#F26B5B", "#F2B544", "#1F9E9A", "#6B4C9A", "#8DBF8B"];
+    for (var i = 0; i < 16; i++) { var x = 120 + ((i * 197) % 1650), y = 760 + ((i * 83) % 260); s += '<ellipse cx="' + x + '" cy="' + y + '" rx="' + (14 + (i % 4) * 7) + '" ry="' + (6 + (i % 3) * 3) + '" fill="' + cols[i % 5] + '" opacity=".7"/>'; }
+    return s;
+  }
   function layer(d, inner, cls) { return '<g class="layer' + (cls ? " " + cls : "") + '" data-d="' + d + '">' + inner + "</g>"; }
 
   function defsFor(tod) {
@@ -24,13 +63,17 @@
       '<radialGradient id="glow"><stop offset="0" stop-color="#FFE7A8" stop-opacity=".95"/><stop offset="1" stop-color="#FFE7A8" stop-opacity="0"/></radialGradient>' +
       '<linearGradient id="floorg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9A872"/><stop offset="1" stop-color="#B9814F"/></linearGradient>' +
       '<linearGradient id="grassg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9AD08B"/><stop offset="1" stop-color="#6FB172"/></linearGradient>' +
+      '<pattern id="brick" width="64" height="32" patternUnits="userSpaceOnUse"><path d="M0,16 H64 M32,0 V16 M0,16 V32 M64,16 V32" stroke="rgba(90,30,10,.24)" stroke-width="2.5" fill="none"/></pattern>' +
+      '<pattern id="stripe" width="90" height="90" patternUnits="userSpaceOnUse"><rect width="45" height="90" fill="rgba(255,255,255,.2)"/></pattern>' +
+      '<pattern id="tiles" width="36" height="22" patternUnits="userSpaceOnUse"><path d="M0,22 q18,-16 36,0" stroke="rgba(60,10,10,.3)" stroke-width="2.5" fill="none"/></pattern>' +
+      '<linearGradient id="shadeR" x1="0" y1="0" x2="1" y2="0"><stop offset=".55" stop-color="#1B1030" stop-opacity="0"/><stop offset="1" stop-color="#1B1030" stop-opacity=".26"/></linearGradient>' +
       '<linearGradient id="beam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF4C8" stop-opacity=".55"/><stop offset="1" stop-color="#FFF4C8" stop-opacity="0"/></linearGradient>' +
       "</defs>";
   }
 
   function cloud(x, y, s, cls) {
     return '<g class="' + (cls || "") + '" transform="translate(' + x + ',' + y + ') scale(' + (s || 1) + ')" fill="#fff" opacity=".92">' +
-      '<ellipse cx="0" cy="0" rx="90" ry="30"/><ellipse cx="-50" cy="-14" rx="46" ry="30"/><ellipse cx="22" cy="-26" rx="56" ry="38"/><ellipse cx="68" cy="-4" rx="42" ry="26"/></g>';
+      '<ellipse cx="0" cy="0" rx="90" ry="30"/><ellipse cx="-50" cy="-14" rx="46" ry="30"/><ellipse cx="22" cy="-26" rx="56" ry="38"/><ellipse cx="68" cy="-4" rx="42" ry="26"/><ellipse cx="4" cy="14" rx="86" ry="14" fill="#C9DDF0" opacity=".55"/></g>';
   }
   function tree(x, y, s, col) {
     col = col || "#6FB172";
@@ -96,12 +139,12 @@
     var tod = o.tod || "golden";
     var wall = tod === "night" || tod === "dusk" ? "#E9C9A6" : "#F6E2C3";
     var s = defsFor(tod);
-    s += layer(0.15, '<rect x="-300" y="-200" width="2520" height="1200" fill="' + wall + '"/>' +
-      '<rect x="-300" y="640" width="2520" height="30" fill="#E4C08F"/>');
+    s += layer(0.15, '<rect x="-300" y="-200" width="2520" height="1200" fill="' + wall + '"/><rect x="-300" y="-200" width="2520" height="860" fill="url(#stripe)"/>' +
+      '<rect x="-300" y="640" width="2520" height="30" fill="#E4C08F"/><rect x="-300" y="660" width="2520" height="10" fill="rgba(90,40,10,.18)"/>');
     s += layer(0.35, windowBox(150, 150, 360, 420, tod) +
       '<path d="M150,150 L-40,70 L-40,700 L150,570Z" fill="#E8B77A" opacity=".5"/>' +
       '<path d="M510,150 L700,70 L700,700 L510,570Z" fill="#E8B77A" opacity=".5"/>' +
-      '<polygon points="170,570 520,570 820,980 -120,980" fill="url(#beam)"/>');
+      '<polygon class="twinkle" style="animation-duration:5s" points="170,570 520,570 820,980 -120,980" fill="url(#beam)"/>' + sunRays(330, 360, "#FFF0B0"));
     s += layer(0.55, bookshelf(1380, 190, 420, 470) + frame(930, 190, 220, 160, C.coral) + frame(1190, 260, 150, 120, C.mustard) + lamp(1300, 700, 1));
     s += layer(0.8, floorBoards(660, 460) + '<ellipse cx="900" cy="860" rx="660" ry="130" fill="#D8624F" opacity=".92"/><ellipse cx="900" cy="860" rx="560" ry="100" fill="none" stroke="#F8D9A0" stroke-width="6" stroke-dasharray="26 18"/>');
     if (o.sofa !== false && !o.memory) {
@@ -119,12 +162,13 @@
     o = o || {};
     var tod = o.tod || "day";
     var s = defsFor(tod);
-    s += layer(0.1, '<rect x="-300" y="-200" width="2520" height="1000" fill="url(#sky-' + tod + ')"/>' +
-      '<circle cx="1560" cy="180" r="74" fill="#FFE18A"/><circle cx="1560" cy="180" r="120" fill="url(#glow)"/>' +
-      cloud(380, 170, 1.2, "drift") + cloud(1100, 120, 0.9, "drift") + cloud(1700, 300, 0.7));
+    s += layer(0.1, '<rect x="-300" y="-200" width="2520" height="1000" fill="url(#sky-' + tod + ')"/>' + sunRays(1560, 180) +
+      '<circle cx="1560" cy="180" r="74" fill="#FFE18A"/><circle cx="1560" cy="180" r="130" fill="url(#glow)"/>' +
+      cloud(380, 170, 1.2, "drift") + cloud(1100, 120, 0.9, "drift") + cloud(1700, 300, 0.7) + birds(250));
     s += layer(0.3, '<path d="M-100,560 Q300,420 640,540 T1300,520 T2100,540 V700 H-100Z" fill="#B9DFA9"/>');
     s += layer(0.5,
-      '<g transform="translate(250,230)"><rect width="1000" height="420" fill="#D9805F"/><rect y="-34" width="1000" height="40" fill="#B5603F"/>' +
+      '<g transform="translate(250,230)"><rect width="1000" height="420" fill="#E0805A"/><rect width="1000" height="420" fill="url(#brick)"/><rect width="1000" height="420" fill="url(#shadeR)"/><rect y="-34" width="1000" height="40" fill="#B5603F"/><rect x="0" y="380" width="1000" height="40" fill="#C86B48"/>' +
+      '<g transform="translate(470,-110)"><rect width="10" height="80" fill="#6B4228"/><path class="flag" d="M10,4 Q50,-6 90,8 Q60,22 90,34 Q50,22 10,32Z" fill="#F2B544"/></g>' +
       [0, 1, 2, 3, 4].map(function (i) { return '<rect x="' + (50 + i * 190) + '" y="64" width="110" height="130" rx="6" fill="#BFE5F7" stroke="#fff" stroke-width="10"/><path d="M' + (105 + i * 190) + ',64 V194 M' + (50 + i * 190) + ',129 H' + (160 + i * 190) + '" stroke="#fff" stroke-width="6"/>'; }).join("") +
       '<rect x="420" y="250" width="160" height="170" rx="10" fill="#7A4A2D"/><rect x="440" y="270" width="55" height="150" fill="#BFE5F7" opacity=".8"/><rect x="505" y="270" width="55" height="150" fill="#BFE5F7" opacity=".8"/>' +
       '<path d="M0,-34 L500,-120 L1000,-34Z" fill="#9B4B34"/></g>' + tree(120, 700, 1) + tree(1700, 700, 1.1, "#7DBD74"));
@@ -136,7 +180,8 @@
       '<rect x="360" y="820" width="90" height="90"/><rect x="450" y="820" width="90" height="90"/><rect x="450" y="910" width="90" height="90"/><rect x="540" y="910" width="90" height="90"/><rect x="540" y="1000" width="90" height="70"/>' +
       '<path d="M1180,760 H1700 M1180,980 H1700 M1440,760 V980"/><circle cx="1440" cy="870" r="48"/></g>' +
       '<g transform="translate(1790,560)"><rect x="-6" y="0" width="12" height="250" fill="#6B7280"/><rect x="-60" y="-70" width="120" height="84" rx="6" fill="#fff" stroke="#6B7280" stroke-width="6"/><ellipse cx="0" cy="22" rx="38" ry="9" fill="none" stroke="#F26B5B" stroke-width="7"/></g>');
-    s += layer(1.15, '<g transform="translate(120,1030)"><ellipse cx="0" cy="0" rx="130" ry="46" fill="#5FA666"/><ellipse cx="90" cy="14" rx="100" ry="38" fill="#74B879"/></g>');
+    s += layer(0.9, '<g>' + flowers(704, 60, 1900) + "</g>");
+    s += layer(1.15, '<g transform="translate(120,1030)"><ellipse cx="0" cy="0" rx="130" ry="46" fill="#4F9E5E"/><ellipse cx="90" cy="14" rx="100" ry="38" fill="#74B879"/><path d="M-60,-30 q6,-30 14,0 M-20,-36 q8,-30 16,0 M30,-26 q6,-28 14,0" stroke="#3F8E55" stroke-width="4" fill="none"/></g>');
     return s;
   };
 
@@ -147,18 +192,20 @@
     var s = defsFor(tod);
     var house = function (x, y, w, h, wall, roof) {
       return '<g transform="translate(' + x + ',' + y + ')"><rect width="' + w + '" height="' + h + '" fill="' + wall + '"/>' +
-        '<path d="M-24,0 L' + w / 2 + ',' + (-h * 0.42) + ' L' + (w + 24) + ',0Z" fill="' + roof + '"/>' +
+        '<rect width="' + w + '" height="' + h + '" fill="url(#shadeR)"/><path d="M-24,0 L' + w / 2 + ',' + (-h * 0.42) + ' L' + (w + 24) + ',0Z" fill="' + roof + '"/><path d="M-24,0 L' + w / 2 + ',' + (-h * 0.42) + ' L' + (w + 24) + ',0Z" fill="url(#tiles)"/><rect x="' + w * 0.7 + '" y="' + (-h * 0.34) + '" width="30" height="' + h * 0.2 + '" fill="' + A.shade(roof, -30) + '"/>' +
+        '<rect x="' + w * 0.1 + '" y="' + h * 0.46 + '" width="' + w * 0.3 + '" height="14" rx="4" fill="#8A5A33"/><circle cx="' + w * 0.15 + '" cy="' + (h * 0.44) + '" r="7" fill="#FF8FA3"/><circle cx="' + w * 0.22 + '" cy="' + (h * 0.43) + '" r="7" fill="#FFD166"/><circle cx="' + w * 0.3 + '" cy="' + (h * 0.44) + '" r="7" fill="#fff"/>' +
         '<rect x="' + w * 0.12 + '" y="' + h * 0.2 + '" width="' + w * 0.26 + '" height="' + h * 0.26 + '" rx="6" fill="#FFE9A8" stroke="#fff" stroke-width="8"/>' +
         '<rect x="' + w * 0.62 + '" y="' + h * 0.2 + '" width="' + w * 0.26 + '" height="' + h * 0.26 + '" rx="6" fill="#FFE9A8" stroke="#fff" stroke-width="8"/>' +
         '<rect x="' + w * 0.4 + '" y="' + h * 0.52 + '" width="' + w * 0.2 + '" height="' + h * 0.48 + '" rx="8" fill="' + A.shade(roof, -10) + '"/></g>';
     };
-    s += layer(0.1, '<rect x="-300" y="-200" width="2520" height="1000" fill="url(#sky-' + tod + ')"/>' + (tod === "day" ? cloud(300, 210, 1.1, "drift") + cloud(1300, 150, 1) : '<circle cx="1500" cy="190" r="66" fill="#FFE9A8"/><circle cx="1500" cy="190" r="140" fill="url(#glow)"/>'));
+    s += layer(0.1, '<rect x="-300" y="-200" width="2520" height="1000" fill="url(#sky-' + tod + ')"/>' + sunRays(1500, 190) + (tod === "day" ? cloud(300, 210, 1.1, "drift") + cloud(1300, 150, 1) : '<circle cx="1500" cy="190" r="70" fill="#FFE9A8"/><circle cx="1500" cy="190" r="150" fill="url(#glow)"/>') + birds(280));
     s += layer(0.25, '<path d="M-100,520 Q240,380 560,500 T1180,470 T1800,500 T2100,470 V700 H-100Z" fill="#A5CFA1"/>');
     s += layer(0.5, house(120, 370, 330, 300, "#F2C48C", "#C8654F") + house(520, 330, 360, 340, "#9FD3F0", "#6B4C9A") + house(960, 380, 320, 290, "#F4A9A0", "#8A5A33") + house(1350, 340, 380, 330, "#C9E4B2", "#D9805F") + tree(1830, 700, 0.95));
     s += layer(0.8, '<rect x="-300" y="670" width="2520" height="60" fill="#D8D2C4"/><rect x="-300" y="730" width="2520" height="400" fill="#7E8798"/>' +
       '<g stroke="#FFE9A8" stroke-width="10" stroke-dasharray="70 56"><path d="M-100,900 H2100"/></g>' +
       '<g transform="translate(1420,670)"><rect x="-6" y="-290" width="12" height="290" fill="#44506A"/><path d="M-4,-290 q50,-4 70,30" fill="none" stroke="#44506A" stroke-width="10"/><circle cx="66" cy="-250" r="20" fill="#FFE9A8"/><circle cx="66" cy="-250" r="70" fill="url(#glow)"/></g>' +
       '<g transform="translate(180,690)"><rect x="-120" y="-40" width="240" height="18" rx="6" fill="#B9814F"/><rect x="-120" y="-90" width="240" height="14" rx="6" fill="#B9814F"/><rect x="-100" y="-22" width="12" height="40" fill="#44506A"/><rect x="88" y="-22" width="12" height="40" fill="#44506A"/></g>');
+    s += layer(0.8, '<g>' + flowers(740, 40, 1900) + "</g>");
     s += layer(1.15, tree(40, 1060, 0.9, "#5FA666") + '<g transform="translate(1850,1010)"><ellipse cx="0" cy="0" rx="100" ry="40" fill="#5FA666"/></g>');
     return s;
   };
@@ -184,6 +231,7 @@
     s += layer(1.0, '<g transform="translate(260,860)"><ellipse cx="0" cy="70" rx="230" ry="30" fill="rgba(60,30,10,.2)"/><rect x="-210" y="-20" width="420" height="30" rx="8" fill="#C8905A"/><rect x="-190" y="10" width="18" height="70" fill="#8A5A33"/><rect x="172" y="10" width="18" height="70" fill="#8A5A33"/>' +
       '<ellipse cx="-90" cy="-26" rx="46" ry="10" fill="' + C.coral + '"/><ellipse cx="0" cy="-26" rx="40" ry="9" fill="' + C.teal + '"/><ellipse cx="90" cy="-26" rx="44" ry="10" fill="' + C.mustard + '"/>' +
       '<g class="bob"><rect x="130" y="-90" width="60" height="64" rx="6" fill="#fff" stroke="' + C.ink + '" stroke-width="3"/></g></g>');
+    s += layer(0.85, splats() + lights(900, 200, 1860, 150, 9));
     s += layer(1.2, dust(10));
     return s;
   };
@@ -206,7 +254,8 @@
       '<g transform="translate(1780,420)">' + [0, 1, 2, 3].map(function (i) { return '<rect x="' + (-30) + '" y="' + (-i * 26) + '" width="90" height="22" rx="5" fill="' + (i % 2 ? "#6B4C9A" : "#1F9E9A") + '"/>'; }).join("") + "</g>");
     s += layer(0.85, floorBoards(640, 460) + '<ellipse cx="960" cy="850" rx="760" ry="120" fill="#9FD3F0" opacity=".45"/>');
     s += layer(1.0, table(80, 830, 380) + table(1470, 840, 400));
-    s += layer(1.2, plant(60, 1030, 0.9) + dust(10));
+    s += layer(0.7, balloons(1710, 520) + balloons(210, 560) + sunRays(300, 300, "#FFF3C4") + lights(-20, 300, 960, 330, 11));
+    s += layer(1.2, plant(60, 1030, 0.9) + dust(14));
     return s;
   };
 
@@ -228,6 +277,9 @@
       '<rect x="40" y="30" width="1840" height="1020" rx="30" fill="#FFF9EC" stroke="#E8CFA6" stroke-width="6"/>' +
       Array.apply(null, Array(22)).map(function (_, i) { return '<path d="M80,' + (160 + i * 40) + ' H1840" stroke="#CFE3F2" stroke-width="2" opacity=".55"/>'; }).join("") +
       '<path d="M200,40 V1040" stroke="#F4A9A0" stroke-width="3" opacity=".7"/>');
+    var sp = "";
+    for (var q = 0; q < 14; q++) sp += '<path class="twinkle" style="animation-delay:' + (q * 0.4).toFixed(1) + 's" transform="translate(' + (90 + ((q * 271) % 1740)) + "," + (80 + ((q * 149) % 900)) + ') scale(' + (0.5 + (q % 3) * 0.25) + ')" d="M0,-18 L5,-5 L18,0 L5,5 L0,18 L-5,5 L-18,0 L-5,-5Z" fill="' + cols[q % 5] + '"/>';
+    s += layer(0.4, sp);
     s += layer(0.4, doodles + '<rect x="30" y="20" width="150" height="46" fill="#F2B544" opacity=".75" transform="rotate(-8 100 40)"/><rect x="1750" y="990" width="150" height="46" fill="#1F9E9A" opacity=".65" transform="rotate(-8 1800 1010)"/>');
     return s;
   };

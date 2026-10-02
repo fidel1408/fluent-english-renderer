@@ -42,6 +42,10 @@ for (let ci = 0; ci < chapters.length; ci++) {
     await p.waitForTimeout(ci === 0 || si === 0 ? 750 : 500);
     await p.evaluate(() => { const X = FE.X; X.setRev(X.S.revMax, true); document.querySelectorAll(".opts .opt").forEach((o) => o.classList.add("open")); });
     await collect(`c${ci + 1}s${si + 1}`);
+    // story cards: show every card of every category
+    if (await p.evaluate(() => !!document.querySelector("#panel .story"))) {
+      for (let cat = 0; cat < 4; cat++) for (let k = 0; k < 6; k++) { await p.evaluate(([c2, k2]) => FE.X.redrawStory(c2, k2), [cat, k]); await collect(`story ${cat}-${k}`); }
+    }
     // bubble lines (narration + samples + examples)
     const lines = await p.evaluate(() => {
       const st = FE.X.S.step, out = [];
@@ -62,6 +66,7 @@ for (let ci = 0; ci < chapters.length; ci++) {
 }
 // overlays
 async function overlay(name, fn, arg) { await p.evaluate(fn, arg); await p.waitForTimeout(150); await collect(name); }
+await p.evaluate(() => { FE.X.D.stars = 3; FE.X.updateJar(); FE.X.toast(FE.S.jarFull); });
 await overlay("plan", () => FE.X.openModal("plan"));
 for (let i = 0; i < chapters.length; i++) await overlay("plan" + i, (n) => document.querySelector(`[data-pc="${n}"]`).click(), i);
 for (const m of ["script", "chart", "about", "help"]) await overlay(m, (k) => FE.X.openModal(k), m);

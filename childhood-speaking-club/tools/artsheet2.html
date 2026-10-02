@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="../css/ipa-font.css"><link rel="stylesheet" href="../css/art.css">
+<body style="margin:0;background:#FFF3DC"><svg id="s" viewBox="0 0 1920 1080" width="1920" height="1080"></svg>
+<script src="../js/text.js"></script><script src="../js/art.js"></script>
+<script>
+const A=FE.Art;const s=document.getElementById('s');
+const cast=[['maya',230,'wave','smile'],['theo',640,'think','curious'],['theo',1050,'open','grin'],['maya',1460,'point','laugh']];
+let h='';cast.forEach(([n,x],i)=>{h+=`<g transform="translate(${x},900) scale(1.4)" id="c${i}">${A.adult(n)}</g>`});
+s.innerHTML=h;cast.forEach(([n,x,p,m],i)=>{const e=document.getElementById('c'+i).firstChild;A.setPose(e,p);A.setMood(e,m);});
+</script>

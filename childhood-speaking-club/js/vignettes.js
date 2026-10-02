@@ -152,6 +152,15 @@
     toy: function () { return '<g transform="scale(1.7) translate(0,26)">' + A.props.toyRobot() + "</g>"; },
   };
 
+  FE.Objects.mystery = function () {
+    return '<g><circle r="96" fill="#FFE9A8" opacity=".35"/><path d="M-62,40 Q-70,-40 -10,-66 Q60,-80 68,-8 Q74,52 30,64 Q-30,76 -62,40Z" fill="#14284B"/><text x="0" y="22" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="92" fill="#F2B544">?</text>' +
+      '<g fill="#fff"><circle class="twinkle" cx="-80" cy="-50" r="5"/><circle class="twinkle" cx="84" cy="-30" r="4" style="animation-delay:.5s"/><circle class="twinkle" cx="60" cy="70" r="5" style="animation-delay:1s"/></g></g>';
+  };
+  FE.Objects.bell = function () {
+    return '<g><circle r="100" fill="#FFE9A8" opacity=".4"/><circle cx="0" cy="12" r="62" fill="#9AA7B8" stroke="#14284B" stroke-width="5"/><circle cx="0" cy="12" r="44" fill="#C9D3E0"/><path d="M-30,-4 Q0,-34 30,-4" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".8"/><rect x="-10" y="-62" width="20" height="16" rx="4" fill="#14284B"/><circle cx="0" cy="12" r="8" fill="#F26B5B"/>' +
+      '<g class="burst" fill="#F2B544"><path d="M-96,-40 l8,-14 l8,14 l-14,-8z" class="twinkle"/><circle class="twinkle" cx="96" cy="-30" r="6" style="animation-delay:.3s"/><circle class="twinkle" cx="80" cy="70" r="5" style="animation-delay:.7s"/><circle class="twinkle" cx="-88" cy="60" r="6" style="animation-delay:.2s"/></g></g>';
+  };
+
   /* hand-held props for characters */
   A.props.bridge = FE.World.bridge;
   A.props.bag = function () { return '<g transform="translate(0,-4)"><rect x="-22" y="-40" width="44" height="44" rx="12" fill="#E98B3C"/></g>'; };

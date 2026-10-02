@@ -56,3 +56,19 @@
 }
 
 .person.glasses .eye-open ellipse{stroke-width:1.4}
+
+/* v2: livelier idle, bearded mouths */
+.bsway{animation:fe-sway2 5.5s ease-in-out infinite alternate}
+.person:nth-of-type(2n) .bsway{animation-duration:6.5s;animation-delay:-2s}
+@keyframes fe-sway2{from{transform:translateX(-3px) rotate(-.5deg)}to{transform:translateX(3px) rotate(.5deg)}}
+.person.talking .bsway{animation:fe-talkbob .5s ease-in-out infinite alternate}
+@keyframes fe-talkbob{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+.person.bearded .m-smile,.person.bearded .m-think,.person.bearded .m-worry,.person.bearded .m-flat{stroke:#F6D6C8}
+.person.male .brow{transform-box:fill-box}
+@media (prefers-reduced-motion:reduce){.bsway{animation:none!important}}
+
+.flap{animation:fe-flap .5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center}
+@keyframes fe-flap{from{transform:scaleY(1)}to{transform:scaleY(-.6)}}
+.flag{animation:fe-flag 1.8s ease-in-out infinite alternate;transform-origin:10px 18px;transform-box:fill-box}
+@keyframes fe-flag{from{transform:skewY(-4deg)}to{transform:skewY(5deg)}}
+@media (prefers-reduced-motion:reduce){.flap,.flag{animation:none!important}}

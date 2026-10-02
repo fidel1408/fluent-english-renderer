@@ -7,169 +7,125 @@
   var NOKIDS = { k1: null, k2: null, k3: null, k4: null, newcomer: null, quiet: null, owner: null };
   function cast(o) { var r = {}; for (var k in NOKIDS) r[k] = null; for (var j in o) r[j] = o[j]; return r; }
 
-  /* ================= 7. ROLEPLAY: MEETING AN OLD FRIEND (420 s) ================= */
-  var RP1_PROMPTS = ["Do you remember…?", "What did you use to enjoy most?", "I remember it a little differently.", "I used to…, but now…", "Would you like to…?"];
-  var RP1_ROLES = [
-    { n: "Alex", lines: ["Remembers art projects and quiet games", "Used to be shy", "Now enjoys organizing activities"] },
-    { n: "Jordan", lines: ["Remembers outdoor games and school performances", "Used to be outgoing", "Now prefers smaller gatherings"] },
-  ];
-  var RP1_FACTS = ["They went to the same school and shared a class for two years.", "Their school put on a show every spring.", "After lessons, they sometimes met in the art room because it was quiet."];
-  var RP1_GOAL = ["Reconnect", "Compare how your interests have changed", "Share one short memory", "Agree on a simple way to keep in touch"];
-  var RP1_STARTERS = RP1_PROMPTS;
-  var rp1Cast = function (alexPose, jordanPose, am, jm) {
-    return cast({ alex: at(190, 990, 0.74, { char: "alex", pose: alexPose, mood: am }), jordan: at(1730, 990, 0.74, { char: "jordan", pose: jordanPose, mood: jm, flip: true }), maya: null, theo: null });
-  };
-  var RP1_PANEL = function (key, swap) {
-    return { pos: "C", key: key, blocks: [
-      { k: "tag", t: swap ? "Roles switched" : "Two old schoolmates" },
-      { k: "roles", items: swap ? [RP1_ROLES[1], RP1_ROLES[0]] : RP1_ROLES, swapped: !!swap, rvx: 1 },
-      { k: "facts", items: RP1_FACTS, label: "Shared facts", rv: 1, rvx: 2 },
-      { k: "goal", items: RP1_GOAL, label: "Your goal", rv: 2 },
-    ] };
-  };
-
-  L.chapters.push({ n: 7, id: "rp-friend", title: "Roleplay: meeting an old friend", min: 7, mode: "roleplay",
-    goal: "Two fictional adults reconnect: compare how interests changed, share a short memory, and agree how to keep in touch.",
+  /* ================= 7. GAME: MYSTERY OBJECT (420 s) ================= */
+  var MQ = ["Was it…?", "Did you use to…?", "Could you…?", "Where did you keep it?", "What was it made of?"];
+  var MCAM = [1300, 580, 1.0];
+  var mCast = function (mm, tm, mp, tp) { return cast({ maya: at(560, 950, 0.84, { char: "maya", pose: mp || "rest", mood: mm || "smile" }), theo: at(1190, 950, 0.84, { char: "theo", pose: tp || "rest", mood: tm || "grin" }), alex: null, jordan: null }); };
+  var MYSTERY_CLUES = ["It was small and made of metal.", "I used to ring it every day on my way to school.", "It made a bright sound.", "One day, it fell off, and I looked for it for an hour."];
+  L.chapters.push({ n: 7, id: "mystery", title: "Game: mystery object", min: 7, mode: "game",
+    goal: "Guess a hidden object from clues by asking questions, then hide your own object and let the group find it.",
     steps: [
-      { id: "r-intro", t: "Meet Alex and Jordan", sec: 30, phase: "Listen", wait: true,
-        scene: { bg: "street", tod: "golden", fx: null, vig: null, memory: false, props: [], cam: [960, 540, 1.0], cast: rp1Cast("rest", "rest", "warm", "warm") },
-        say: [["maya", "Meet two fictional adults: Alex and Jordan.", "smile", "present"], ["theo", "They went to the same school, but haven't spoken for years.", "curious", "present"]],
-        panel: RP1_PANEL("rp1"), starters: RP1_STARTERS },
-      { id: "r-model", t: "Listen to a short model", sec: 40, phase: "Listen", wait: true,
-        scene: { cast: rp1Cast("rest", "rest", "smile", "surprised") }, panel: { pos: "none", key: "rp1-model", blocks: [] },
-        say: [
-          ["jordan", "Alex? Is that you? It's been years!", "surprised", "open"],
-          ["alex", "Jordan! I can't believe it. Do you remember the spring show?", "laugh", "wave"],
-          ["jordan", "Of course! I used to love the stage. What did you use to enjoy most?", "grin", "open"],
-          ["alex", "The art room. I used to be shy, but now I organize workshops.", "warm", "present"],
-          ["jordan", "I used to be outgoing, but now I prefer small dinners.", "smile", "shrug"],
-          ["alex", "Funny how things change. Would you like to keep in touch?", "smile", "open"],
-          ["jordan", "I'd love that. Let's meet for coffee next month.", "grin", "present"],
-          ["alex", "Great. I'll send you a message this week.", "warm", "rest"]] },
-      { id: "r-prep", t: "Prepare", sec: 20, timer: 20, phase: "Think",
-        scene: { cast: rp1Cast("think", "think", "thinking", "thinking") },
-        panel: { pos: "C", key: "rp1-prompts", blocks: [
-          { k: "tag", t: "Prompts, not a script" },
-          { k: "roles", items: RP1_ROLES, compact: true },
-          { k: "chips", items: RP1_PROMPTS, label: "Useful prompts", rv: 1, each: true },
-          { k: "note", t: "Both role cards are visible to everyone. The teacher assigns roles aloud." },
-        ] }, starters: RP1_STARTERS },
-      { id: "r-r1a", t: "Round 1: reconnect", sec: 80, timer: 80, speak: true, phase: "Role-play",
-        scene: { cast: rp1Cast("open", "open", "smile", "smile") },
-        sample: [["jordan", "Alex! It's great to see you. Do you remember the art room?"], ["alex", "Of course. I used to hide there. What did you use to enjoy most?"], ["jordan", "Outdoor games! I used to be loud, but now I prefer smaller groups."]],
-        starters: RP1_STARTERS },
-      { id: "r-twist", t: "Twist: a different memory", sec: 10, phase: "Twist", wait: true,
-        scene: { cast: rp1Cast("think", "shrug", "curious", "curious") },
-        say: [["theo", "A twist: you remember the same show differently.", "surprised", "present"], ["maya", "Neither memory has to be wrong.", "warm", "present"]],
-        panel: { pos: "C", key: "rp1-twist", blocks: [
-          { k: "tag", t: "Twist" },
-          { k: "twistbig", t: "Both remember the spring show. Alex remembers rain. Jordan remembers sunshine." },
-          { k: "chips", items: ["I remember it a little differently.", "That's interesting. Tell me more."], label: "You could say", rv: 1 },
-        ] } },
-      { id: "r-r1b", t: "Round 1: continue with the twist", sec: 70, timer: 70, speak: true, phase: "Role-play",
-        scene: { cast: rp1Cast("open", "open", "curious", "laugh") },
-        sample: [["alex", "I remember it a little differently. I think it rained, and we moved indoors."], ["jordan", "Really? I remember sunshine. Maybe it changed during the show!"], ["alex", "Maybe! Would you like to keep in touch?"]],
-        starters: ["I remember it a little differently.", "That's interesting. Tell me more.", "Would you like to…?"] },
-      { id: "r-feedback", t: "Feedback", sec: 20, timer: 20, speak: true, phase: "Listen",
-        panel: { pos: "C", key: "rp1-feedback", blocks: [
-          { k: "tag", t: "Feedback" },
-          { k: "q", t: "Partner: say one thing you liked. Then ask one follow-up question." },
-          { k: "note", t: "The teacher can offer one correction after the turn." },
+      { id: "m-intro", t: "How the game works", sec: 20, phase: "Listen", wait: true,
+        scene: { bg: "living", tod: "dusk", memory: true, fx: "mystery", vig: null, props: [], cam: MCAM, cast: mCast("grin", "curious", "present", "rest") },
+        say: [["maya", "Time for a guessing game!", "grin", "present"], ["theo", "I hid one object in the memory box. Ask questions to find it.", "curious", "present"]],
+        panel: { pos: "R", key: "m-play", blocks: [
+          { k: "h", t: "Mystery object" },
+          { k: "list", items: ["Listen to the clues.", "Ask questions. Yes or no.", "Guess the object!"], num: true, each: true, rv: 0 },
+          { k: "chips", items: MQ, label: "Good questions", rv: 3, small: true },
+        ] }, starters: MQ },
+      { id: "m-clues", t: "Clues from the box", sec: 30, phase: "Listen", wait: true,
+        scene: { fx: "mystery", cast: mCast("curious", "grin", "think", "present") },
+        say: [["theo", "Clue one: it was small and made of metal.", "grin", "present"], ["maya", "Clue two: I used to ring it every day on my way to school.", "smile", "present"]],
+        panel: { pos: "R", key: "m-clues", blocks: [
+          { k: "tag", t: "Mystery object" },
+          { k: "clues", items: MYSTERY_CLUES, answer: "a bicycle bell" },
+        ] }, reveal: 2, starters: MQ },
+      { id: "m-guess", t: "Ask questions and guess", sec: 25, timer: 25, speak: true, phase: "Ask", reveal: 4,
+        scene: { cast: mCast("curious", "curious", "think", "think") },
+        sample: [["maya", "Was it a toy?"], ["theo", "No, it wasn't. But it made a sound."], ["maya", "Was it a bicycle bell?"], ["theo", "Yes! Well done!"]],
+        starters: MQ },
+      { id: "m-reveal", t: "The reveal", sec: 10, phase: "Listen", wait: true,
+        scene: { fx: "mystery-reveal", cast: mCast("laugh", "laugh", "cheer", "cheer") },
+        say: [["maya", "It was a bicycle bell! Did you guess?", "laugh", "cheer"]], reveal: 5 },
+      { id: "m-prep", t: "Choose your mystery object", sec: 30, timer: 30, phase: "Think",
+        scene: { fx: "mystery", cast: mCast("thinking", "thinking", "think", "think") },
+        panel: { pos: "R", key: "m-prep", blocks: [
+          { k: "tag", t: "Your turn" },
+          { k: "q", t: "Choose an ordinary object. Real or fictional. Think of three clues." },
+          { k: "chips", items: ["It used to…", "I used it to…", "It was made of…", "One day, …"], label: "Clue starters", rv: 1, each: true },
+          { k: "note", t: "Pass is fine. A fictional object is fine.", rv: 5 },
+        ] }, reveal: 1, starters: ["It used to…", "I used it to…", "It was made of…", "One day, …"] },
+      { id: "m-r1", t: "Round one: your clues", sec: 130, timer: 130, speak: true, phase: "Speak", reveal: 4,
+        scene: { fx: "mystery", cast: mCast("smile", "curious", "open", "think") },
+        sample: [["maya", "My mystery object used to be on my desk. It was long and yellow."], ["theo", "Was it a pencil?"], ["maya", "Yes! One day, I lost it for a week. Did you use to lose pencils?"], ["theo", "All the time!"]],
+        starters: MQ },
+      { id: "m-twist", t: "Bonus challenge", sec: 15, phase: "Twist", wait: true,
+        scene: { fx: "mystery", cast: mCast("surprised", "surprised", "present", "presentL") },
+        say: [["theo", "Bonus challenge!", "surprised", "presentL"], ["maya", "Use used to once, and add the words: one day.", "grin", "present"]],
+        panel: { pos: "R", key: "m-r2", blocks: [
+          { k: "tag", t: "Bonus challenge" },
+          { k: "twistbig", t: "Use “used to” once. Add the words “one day.”" },
+          { k: "chips", items: MQ, label: "Good questions", small: true },
+        ] }, starters: MQ },
+      { id: "m-r2", t: "Round two: new object, new speaker", sec: 130, timer: 130, speak: true, phase: "Speak",
+        scene: { fx: "mystery", cast: mCast("smile", "grin", "open", "open") },
+        sample: [["theo", "My object used to hang by my bed. It was blue. One day, it stopped working."], ["maya", "Could you read with it?"], ["theo", "Yes, I could. I used to read under the blanket."], ["maya", "Was it a flashlight?"], ["theo", "Right! You're good at this."]],
+        starters: MQ },
+      { id: "m-wrap", t: "Which question helped most?", sec: 30, timer: 30, speak: true, phase: "Share",
+        scene: { fx: "mystery", cast: mCast("warm", "warm", "open", "open") },
+        panel: { pos: "R", key: "m-wrap", blocks: [
+          { k: "tag", t: "Wrap-up" },
+          { k: "q", t: "Which clue or question helped most? Why?" },
+          { k: "note", t: "Give a reason or an example." },
         ] },
-        scene: { cast: rp1Cast("rest", "rest", "warm", "warm") },
-        sample: [["maya", "I liked your question about the art room."], ["theo", "What was your favorite project?"]],
-        starters: ["I liked…", "Could you tell me more about…?"] },
-      { id: "r-switch", t: "Switch roles", sec: 10, phase: "Twist", wait: true,
-        scene: { cast: rp1Cast("present", "present", "grin", "grin") },
-        say: [["theo", "Switch roles. A shorter round, and a fresh start.", "grin", "present"]],
-        panel: RP1_PANEL("rp1b", true) },
-      { id: "r-r2", t: "Round 2: roles switched", sec: 100, timer: 100, speak: true, phase: "Role-play",
-        scene: { cast: rp1Cast("open", "open", "smile", "smile") },
-        sample: [["jordan", "Alex? Wow! I remember the quiet games in the art room."], ["alex", "And I remember your performances. I used to be outgoing, but now I like smaller groups."], ["jordan", "Same here. Would you like to keep in touch?"]],
-        starters: RP1_STARTERS },
-      { id: "r-wrap", t: "Share", sec: 40, timer: 40, speak: true, phase: "Share",
-        panel: { pos: "C", key: "rp1-wrap", blocks: [
-          { k: "tag", t: "Share with the group" },
-          { k: "q", t: "What is one thing your partner said? Which expression did you use?" },
-          { k: "chips", items: ["Do you remember…?", "I used to…, but now…", "Would you like to…?"], small: true },
-        ] },
-        sample: [["maya", "My partner said they used to be shy. I used “Would you like to…?” to invite them for coffee."]],
-        starters: ["My partner said…", "I used the expression…"] },
+        sample: [["maya", "The question about where I kept it helped most. It gave a picture in my mind."]],
+        starters: ["The best question was…", "It helped because…", "One example would be…"] },
     ] });
 
-  /* ================= 8. ROLEPLAY: PLANNING A CHILDHOOD GAMES DAY (420 s) ================= */
-  var GD_PROMPTS = ["How about…?", "We could…", "That might work, but…", "What equipment would we need?", "Let's make sure everyone can join in."];
-  var GD_ORG = [
-    { n: "Organizer A", lines: ["Wants active outdoor games", "Wants very little equipment"] },
-    { n: "Organizer B", lines: ["Wants quieter creative activities", "Wants an indoor backup"] },
-  ];
-  var GD_CONS = ["The event lasts one hour.", "Equipment is limited.", "People have different interests and abilities.", "The weather may change."];
-  var GD_GOAL = ["Three activities", "Their order and timing", "Basic rules", "An alternative for anyone who can't or doesn't want to join"];
-  var gdCast = function (am, bm, ap, bp) { return cast({ maya: at(190, 990, 0.74, { char: "maya", pose: ap || "rest", mood: am || "smile" }), theo: at(1730, 990, 0.74, { char: "theo", pose: bp || "rest", mood: bm || "smile", flip: true }), alex: null, jordan: null }); };
-  var GD_PANEL = function (key, swap) {
-    return { pos: "C", key: key, blocks: [
-      { k: "tag", t: swap ? "Priorities switched" : "A fictional community games afternoon" },
-      { k: "roles", items: swap ? [GD_ORG[1], GD_ORG[0]] : GD_ORG, orgs: true, rvx: 1 },
-      { k: "facts", items: GD_CONS, label: "Constraints", rv: 1, rvx: 2 },
-      { k: "goal", items: GD_GOAL, label: "Your goal", rv: 2 },
-    ] };
+  /* ================= 8. GAME: THE STORY SPINNER (420 s) ================= */
+  L.storyDeck = {
+    who: ["a curious neighbor", "a clever best friend", "a brave kid with a flashlight", "a talking toy robot", "a quiet kid with a big imagination", "a sleepy babysitter"],
+    where: ["an old playground", "a rainy bus stop", "a tiny library", "a crowded school hallway", "a secret garden", "a summer campsite"],
+    problem: ["the lights suddenly go out", "a mysterious note appears", "someone loses something important", "it starts to snow in the middle of summer", "a game has no rules", "a surprise visitor arrives"],
+    ending: ["everyone learns something new", "a surprising friendship begins", "the problem becomes a funny memory", "a secret is shared", "someone makes a brave promise", "the whole group celebrates"],
   };
-  L.chapters.push({ n: 8, id: "rp-games", title: "Roleplay: planning a childhood games day", min: 7, mode: "roleplay",
-    goal: "Two organizers negotiate a one-hour games afternoon: three activities, an order, timing, rules, and an alternative for everyone.",
+  L.storyLabels = ["Who", "Where", "Problem", "Ending"];
+  var SEQ = ["At first…", "Then…", "After that…", "In the end…"];
+  var sCast = function (am, bm, ap, bp) { return cast({ maya: at(300, 960, 0.86, { char: "maya", pose: ap || "rest", mood: am || "smile" }), theo: at(640, 960, 0.86, { char: "theo", pose: bp || "rest", mood: bm || "grin" }), alex: null, jordan: null }); };
+  var SPANEL = { pos: "R", key: "story", blocks: [
+    { k: "tag", t: "Our story" },
+    { k: "story" },
+    { k: "chips", items: SEQ, small: true },
+  ] };
+  L.chapters.push({ n: 8, id: "story", title: "Game: the story spinner", min: 7, mode: "game",
+    goal: "Draw story cards and build one fictional story together, one sentence at a time, then retell it.",
     steps: [
-      { id: "g-intro", t: "The scenario", sec: 30, phase: "Listen", wait: true,
-        scene: { bg: "community", tod: "day", fx: null, vig: null, memory: false, props: [], cam: [960, 540, 1.0], cast: gdCast("smile", "warm") },
-        say: [["theo", "Two organizers are planning a fictional games afternoon.", "smile", "presentL"], ["maya", "They want different things. They must agree.", "curious", "present"]],
-        panel: GD_PANEL("rp2"), starters: GD_PROMPTS },
-      { id: "g-model", t: "Listen to a short model", sec: 40, phase: "Listen", wait: true,
-        scene: { cast: gdCast("smile", "curious") }, panel: { pos: "none", key: "rp2-model", blocks: [] },
-        say: [
-          ["maya", "How about tag and relay races? We hardly need any equipment.", "grin", "open"],
-          ["theo", "That might work, but not everyone likes running. What about a drawing table?", "curious", "presentL"],
-          ["maya", "Good idea. What equipment would we need?", "curious", "think"],
-          ["theo", "Paper, markers, and a quiet room as our indoor backup.", "smile", "presentL"],
-          ["maya", "Let's make sure everyone can join in. Anyone can be scorekeeper.", "warm", "open"],
-          ["theo", "Perfect. Tag, drawing, then a board game. Twenty minutes each.", "grin", "presentL"],
-          ["maya", "And if it rains, we move the drawing and the board game inside.", "smile", "present"],
-          ["theo", "Great. Let's write the rules on one card.", "grin", "rest"]] },
-      { id: "g-plan", t: "Plan quietly", sec: 30, timer: 30, phase: "Think",
-        scene: { cast: gdCast("thinking", "thinking", "think", "thinkL") },
-        panel: { pos: "C", key: "rp2-plan", blocks: [
-          { k: "tag", t: "Planning board" },
-          { k: "plan" },
-        ] }, starters: GD_PROMPTS },
-      { id: "g-nego", t: "Round 1: negotiate", sec: 100, timer: 100, speak: true, phase: "Role-play",
-        scene: { cast: gdCast("smile", "smile", "open", "presentL") },
-        sample: [["maya", "How about starting with tag? We don't need any equipment."], ["theo", "That might work, but let's add a quiet drawing table, too."], ["maya", "Good idea. Let's make sure everyone can join in. What about twenty minutes each?"]],
-        starters: GD_PROMPTS },
-      { id: "g-constraint", t: "New constraint", sec: 10, phase: "Twist", wait: true,
-        scene: { cast: gdCast("surprised", "surprised", "present", "presentL") },
-        say: [["theo", "New constraint! Check the weather card.", "surprised", "presentL"]],
-        panel: { pos: "C", key: "rp2-constraint", blocks: [
-          { k: "tag", t: "New constraint" },
-          { k: "constraint", items: ["Rain is coming after thirty minutes.", "Only one ball is available.", "A group of newcomers arrives who don't know the games."] },
-          { k: "note", t: "Teacher: choose the card that fits your group." },
-        ] } },
-      { id: "g-adapt", t: "Round 1: adapt the plan", sec: 50, timer: 50, speak: true, phase: "Role-play",
-        scene: { cast: gdCast("curious", "curious", "open", "presentL") },
-        sample: [["theo", "If rain is coming, we could move the board game first."], ["maya", "Then tag outside, before the rain. That might work, but we need a backup."]],
-        starters: ["If…, we could…", "That might work, but…", "Let's make sure everyone can join in."] },
-      { id: "g-switch", t: "Switch priorities", sec: 10, phase: "Twist", wait: true,
-        scene: { cast: gdCast("grin", "grin", "present", "presentL") },
-        say: [["maya", "Switch priorities. A shorter round with new views.", "grin", "present"]],
-        panel: GD_PANEL("rp2b", true) },
-      { id: "g-r2", t: "Round 2: priorities switched", sec: 100, timer: 100, speak: true, phase: "Role-play",
-        scene: { cast: gdCast("smile", "smile", "open", "presentL") },
-        sample: [["theo", "How about a puzzle table and a drawing corner? They're quiet and need little space."], ["maya", "That might work, but I'd like one active game. We could play tag outside."], ["theo", "Great. And an indoor backup for rain."]],
-        starters: GD_PROMPTS },
-      { id: "g-share", t: "Share your final plan", sec: 50, timer: 50, speak: true, phase: "Share",
-        panel: { pos: "C", key: "rp2-share", blocks: [
-          { k: "tag", t: "Share your plan" },
-          { k: "p", t: "Tell the group: three activities, their order, timing, one rule, and an alternative." },
-          { k: "plan", readonly: true },
-        ] },
-        sample: [["maya", "First, tag for twenty minutes. Then drawing, then a board game."], ["maya", "The rule is: take turns. Anyone who doesn't want to run can be the scorekeeper."]],
-        starters: ["First…, then…, and finally…", "The rule is…", "If someone can't…, they can…"] },
+      { id: "s-intro", t: "How the game works", sec: 30, phase: "Listen", wait: true,
+        scene: { bg: "art", tod: "day", memory: false, fx: null, vig: null, props: [], cam: [1060, 540, 1.0], cast: sCast("grin", "curious", "present", "rest") },
+        say: [["maya", "Let's invent one story together.", "grin", "present"], ["theo", "Draw cards: a hero, a place, a problem, and an ending.", "curious", "presentL"], ["maya", "Take turns. Add one sentence each.", "smile", "present"]],
+        panel: { pos: "R", key: "s-how", blocks: [
+          { k: "h", t: "The story spinner" },
+          { k: "list", items: ["Draw a card.", "Add one sentence. Take turns.", "Retell the whole story."], num: true, each: true, rv: 0 },
+          { k: "chips", items: SEQ, label: "Use these to tell it in order", rv: 3 },
+        ] }, starters: SEQ },
+      { id: "s-draw1", t: "Draw: hero and place", sec: 20, phase: "Listen", wait: true,
+        scene: { cast: sCast("curious", "grin", "think", "present") },
+        say: [["theo", "First, draw the hero and the place.", "grin", "present"]],
+        panel: SPANEL, reveal: 0 },
+      { id: "s-chain1", t: "Build the beginning", sec: 100, timer: 100, speak: true, phase: "Speak", reveal: 2,
+        scene: { cast: sCast("smile", "smile", "open", "open") },
+        sample: [["maya", "At first, a clever best friend sat alone at an old playground."], ["theo", "Then she noticed a small door under the slide."], ["maya", "After that, she called her friends to look."]],
+        starters: SEQ },
+      { id: "s-draw2", t: "Draw: the problem", sec: 20, phase: "Twist", wait: true,
+        scene: { cast: sCast("surprised", "surprised", "present", "presentL") },
+        say: [["maya", "Now, draw the problem!", "surprised", "present"]],
+        reveal: 2 },
+      { id: "s-chain2", t: "Add the problem", sec: 100, timer: 100, speak: true, phase: "Speak", reveal: 3,
+        scene: { cast: sCast("curious", "curious", "think", "think") },
+        sample: [["theo", "Suddenly, the lights went out."], ["maya", "Then everyone held hands and moved slowly."], ["theo", "After that, they heard a quiet knock behind the door."]],
+        starters: SEQ },
+      { id: "s-draw3", t: "Draw: the ending", sec: 20, phase: "Listen", wait: true,
+        scene: { cast: sCast("grin", "grin", "present", "presentL") },
+        say: [["theo", "Last card: how does it end?", "grin", "presentL"]],
+        reveal: 3 },
+      { id: "s-chain3", t: "Finish the story", sec: 80, timer: 80, speak: true, phase: "Speak", reveal: 4,
+        scene: { cast: sCast("warm", "warm", "open", "open") },
+        sample: [["maya", "At last, a tiny robot opened the door from the other side."], ["theo", "In the end, a surprising friendship began."]],
+        starters: SEQ },
+      { id: "s-retell", t: "Retell the whole story", sec: 50, timer: 50, speak: true, phase: "Share", reveal: 4,
+        scene: { cast: sCast("laugh", "laugh", "open", "cheer") },
+        sample: [["maya", "At first, a clever best friend sat alone at an old playground. Then she found a small door under the slide."], ["theo", "After that, the lights went out, but a tiny robot opened the door. In the end, a surprising friendship began."]],
+        starters: SEQ },
     ] });
 
   /* ================= 9. GAME: WOULD YOU RATHER? (480 s) ================= */

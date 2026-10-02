@@ -103,3 +103,11 @@ convert: converted
 show: shown showing shows
 learner: learner's
 someone: someone's
+begin: began begins beginning begun
+hold: held holds holding
+sit: sat sits sitting
+hide: hid
+hand: hands
+light: lights
+call: called calls calling
+appear: appears appeared

@@ -786,3 +786,56 @@ i see your point | phrase | I understand your opinion | I see your point, but I 
 art teacher | noun | a teacher who teaches drawing and painting | When he looks back on school, he remembers his art teacher.
 relay race | noun | a race in which team members take turns running | We ran a relay race.
 story circle | noun | a group sitting in a circle to share stories | We ended the day with a story circle.
+alone | adjective | without other people | A clever best friend sat alone at the playground.
+appear | verb | to come into view | A mysterious note appears on the table.
+babysitter | noun | a person who looks after children for a short time | The sleepy babysitter read us a story.
+begin | verb | to start | The story begins at an old playground.
+behind | preposition | at the back of something | There was a small door behind the slide.
+bell | noun | a metal object that makes a ringing sound | I used to ring my bicycle bell every day.
+bicycle | noun | a vehicle with two wheels that you ride by pedaling | I rode my bicycle to school.
+blanket | noun | a soft cover for a bed | I used to read under the blanket.
+blue | adjective | the color of the sky on a clear day | The blue flashlight hung by my bed.
+bonus | noun | something extra that you get or do | Here is a bonus challenge.
+brave | adjective | not afraid to do something difficult | A brave kid walked into the dark.
+bright | adjective | giving a lot of light; clear and strong | The bell made a bright sound.
+bus | noun | a large vehicle that carries many people | We waited at the bus stop in the rain.
+call | verb | to ask someone to come; to name | She called her friends to look.
+campsite | noun | a place where people stay in tents | We sat by the fire at the summer campsite.
+celebrate | verb | to enjoy a special event together | The whole group celebrates.
+clever | adjective | quick at understanding and finding answers | A clever best friend solved the puzzle.
+clue | noun | a small piece of information that helps you find an answer | Clue one: it was small and made of metal.
+crowded | adjective | very full of people | The school hallway was crowded.
+desk | noun | a table where you write or study | It used to be on my desk.
+finish | verb | to complete | Finish the story with an ending.
+flashlight | noun | a small light that you carry in your hand | I used to keep a flashlight under my pillow.
+garden | noun | an area where plants and flowers grow | We found a secret garden.
+guess | verb | to say an answer when you are not sure | Can you guess the object?
+hallway | noun | a long space inside a building with rooms on each side | We ran down the hallway.
+hand | noun | the part of your body at the end of your arm | Everyone held hands.
+hang | verb | to be fixed at the top and free at the bottom | It used to hang by my bed.
+hero | noun | the main character who does something brave | Draw a hero and a place.
+j | noun | the tenth letter of the alphabet | Press J to add a star.
+jar | noun | a glass container with a wide opening | The memory jar is filling with stars.
+knock | noun | the sound of hitting a door | They heard a quiet knock.
+light | noun | brightness that lets you see | The lights suddenly went out.
+metal | noun | a hard, shiny material such as iron | It was small and made of metal.
+middle | noun | the center or the part between the start and the end | It starts to snow in the middle of summer.
+mysterious | adjective | strange and hard to explain | A mysterious note appears.
+mystery | noun | something that nobody can explain yet | Find the mystery object.
+off | adverb | not on; away | The bell fell off.
+pencil | noun | a thin tool for writing or drawing | It was a yellow pencil.
+promise | noun | a serious statement that you will do something | Someone makes a brave promise.
+retell | verb | to tell a story again | Retell the whole story.
+robot | noun | a machine that can move and do tasks | A talking toy robot opened the door.
+side | noun | one of the two parts of something | The robot opened the door from the other side.
+sit | verb | to rest with your body on a seat or the ground | A friend sat alone on the bench.
+sleepy | adjective | feeling tired and ready to sleep | The sleepy babysitter yawned.
+slide | noun | a smooth slope for playing | There was a small door under the slide.
+slowly | adverb | not fast | Everyone moved slowly in the dark.
+snow | noun | soft white frozen rain | It starts to snow in the middle of summer.
+star | noun | a small shining light in the sky; a prize shape | Add a star to the memory jar.
+suddenly | adverb | quickly and unexpectedly | Suddenly, the lights went out.
+under | preposition | below something | The door was under the slide.
+visitor | noun | a person who comes to see someone | A surprise visitor arrives.
+yellow | adjective | the color of the sun or a banana | It was long and yellow.
+hold | verb | to keep something in your hands | Everyone held hands in the dark.

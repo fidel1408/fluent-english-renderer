@@ -30,6 +30,17 @@
             <div class="ring" hidden><svg viewBox="0 0 128 128" aria-hidden="true"><circle class="bg" cx="64" cy="64" r="54"/><circle class="fg" cx="64" cy="64" r="54" style="stroke-dasharray:339.292;stroke-dashoffset:0"/></svg><div class="t"></div></div>
           </div>
         </div>
+        <div id="jar" aria-label="Memory jar" hidden>
+          <svg viewBox="0 0 100 124" aria-hidden="true">
+            <defs><clipPath id="jarclip"><path d="M22 24h56v10q12 8 12 24v46q0 14-14 14H24q-14 0-14-14V58q0-16 12-24z"/></clipPath>
+            <linearGradient id="jarfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset="1" stop-color="#F2B544"/></linearGradient></defs>
+            <path d="M22 24h56v10q12 8 12 24v46q0 14-14 14H24q-14 0-14-14V58q0-16 12-24z" fill="rgba(255,255,255,.55)"/>
+            <g clip-path="url(#jarclip)"><rect id="jarlevel" x="0" y="122" width="100" height="124" fill="url(#jarfill)" style="transition:transform .8s cubic-bezier(.3,.9,.3,1)"/><g id="jarstars" fill="#fff"></g></g>
+            <path d="M22 24h56v10q12 8 12 24v46q0 14-14 14H24q-14 0-14-14V58q0-16 12-24z" fill="none" stroke="#0A2E63" stroke-width="4" stroke-linejoin="round"/>
+            <rect x="18" y="10" width="64" height="16" rx="6" fill="#F26B5B" stroke="#0A2E63" stroke-width="4"/>
+          </svg>
+          <div class="jcount" id="jarcount">0</div>
+        </div>
         <div id="ribbon" hidden></div>
         <div id="wipe"></div>
       </div>
@@ -53,6 +64,7 @@
 <script src="js/data-2.js"></script>
 <script src="js/data-3.js"></script>
 <script src="js/audio.js"></script>
+<script src="audio/manifest.js" onerror="void 0"></script>
 <script src="js/app-core.js"></script>
 <script src="js/app-widgets.js"></script>
 <script src="js/app-run.js"></script>

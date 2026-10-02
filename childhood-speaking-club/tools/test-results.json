@@ -105,12 +105,32 @@
   "detail": ""
  },
  {
+  "name": "a line is spoken in phrases (not one flat pass)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "pitch varies between a statement, a question and an exclamation",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "Theo's voice is pitched lower than Maya's",
+  "pass": true,
+  "detail": ""
+ },
+ {
   "name": "no console errors (narration)",
   "pass": true,
   "detail": ""
  },
  {
   "name": "class mode starts the speaking timer after narration",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "confetti and a cheer when the speaking time is up",
   "pass": true,
   "detail": ""
  },
@@ -375,7 +395,37 @@
   "detail": ""
  },
  {
-  "name": "games-day plan board records three activities",
+  "name": "mystery clues start with two visible and the answer hidden",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "revealing shows all four clues and the answer",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "story spinner starts with four face-down cards",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "drawing reveals one card at a time (two drawn = two faces up)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "Draw again replaces the latest card with a different one",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "J and the Star button add stars to the memory jar",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "a full jar glows and celebrates",
   "pass": true,
   "detail": ""
  },
@@ -521,6 +571,21 @@
  },
  {
   "name": "opinions are never scored",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "the roleplay chapters are gone (replaced by two games)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "story deck has six cards in each of four categories",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "Theo is drawn with a masculine build and a beard; Maya is not",
   "pass": true,
   "detail": ""
  }

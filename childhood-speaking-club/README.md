@@ -25,30 +25,36 @@ It is not a video; it is a live lesson with timers, reveals, choices and teacher
 | 4 | Childhood dilemmas | 8 | Intro + quick start 30 s; three situations × 150 s (scene 25, think 10, discuss 55, twist 15, revise 30, share 15) |
 | 5 | Agree or disagree? | 8 | Intro + quick try 25 s; four claims × 105 s (read, choose, explain 45, challenge 25, respond 10); wrap-up 35 s |
 | 6 | Compare and decide | 7 | Intro + quick start 30 s; think 30; explain 90; respond 60; agree 90; new situation 20; discuss 70; wrap-up 30 |
-| 7 | Roleplay: meeting an old friend | 7 | Roles 30; model 40; prepare 20; round 80; twist 10; round 70; feedback 20; switch 10; round 2 100; share 40 |
-| 8 | Roleplay: planning a childhood games day | 7 | Scenario 30; model 40; plan 30; negotiate 100; constraint 10; adapt 50; switch 10; round 2 100; share plan 50 |
+| 7 | Game: mystery object | 7 | How it works 20; clues from the box 30; ask questions and guess 25; reveal 10; choose your own object 30; round one 130; bonus challenge 15; round two, new speaker 130; which question helped most? 30 |
+| 8 | Game: the story spinner | 7 | How it works 30; draw hero + place 20; build the beginning 100; draw the problem 20; add the problem 100; draw the ending 20; finish the story 80; retell it all 50 |
 | 9 | Game: would you rather? | 8 | Intro + quick try 30 s; four rounds × 100 s (choice 8, think 10, choose 30, follow-up 30, twist 12, reconsider 10); make your own 50 s |
 | 10 | Reflection and exit challenge | 3 | Task 20; prepare 30; speaker A 45; speaker B 45; rubric 15; reflect 20; closing 5 |
 
 Chapter minutes add up to exactly **60**. The Chapters panel (button *Chapters*) also lists the planned **student-speaking time**
-(timers on steps where students talk), which is about **41 minutes**.
+(timers on steps where students talk), which is about **42 minutes**.
 Class Mode waits for you, so extra discussion, questions or technical pauses will make the real lesson longer than 60 minutes.
 Use *Skip*, the timer −30/+30 buttons or the progress strip to stay on time.
+
+## What keeps students motivated to speak
+* **Two games replace the old roleplays.** *Mystery object*: Maya and Theo give four clues about a hidden childhood object, students guess with question starters (*Was it…? Did you use to…?*), then each student chooses their own object and gives clues while the group asks questions. *The story spinner*: the teacher draws hero, place, problem and ending cards (press *Draw a card*, *Draw again* for a different one) and the group builds one story together with *At first… Then… After that… In the end…*, then someone retells all of it.
+* **Memory Jar.** Press **J** or the **Star** button each time a student speaks; the jar in the corner fills (goal: 20 stars) and glows with confetti when full. It is a group celebration, not a score for individuals.
+* **Celebrations.** Soft confetti and a cheer when a speaking timer ends (Settings → *Celebrate when time is up*), plus short original sound effects (pop, whoosh, star). Music and effects can be switched off on the start screen.
+* **Livelier pictures.** Redrawn characters with outlines, shading, hairstyles and gentle idle/talking motion; Theo is drawn as an adult man (broader build, strong jaw, beard, glasses, rolled sleeves); richer, warmer scene colours (sun rays, bunting, flowers, balloons, lights).
 
 ## Modes
 * **Class Mode** – narration introduces each task, then the lesson **waits**. Speaking timers start automatically after the narration (switch off in Settings), chime when finished, and never advance by themselves. You press **Next**.
 * **Demo Mode** – plays the whole lesson hands-free for a preview. Every sample response is shown in a dashed bubble labelled **"Sample response (fictional)"**, and a red ribbon says *Demo Mode*. Timers are shortened (5, 10, 20 or 30 s; Settings → Demo timer length).
 
 ## Teacher controls (bottom bar)
-Chapter back/next · step back/next · Play/Pause · Replay · Timer start/pause, −30, +30, reset · **Reveal** (next hidden item) · **Starters** (sentence starters) · **Example** (fictional example, also read aloud) · **Words** (the four optional word banks, three words at a time) · **Chapters** (plan and jump) · **Notes** (tally, marks, notes, export) · Mode · Volume · Full screen · Settings · **Hide controls**.
+Chapter back/next · step back/next · Play/Pause · Replay · Timer start/pause, −30, +30, reset · **Reveal** (next hidden item) · **Star** (add a star to the Memory Jar) · **Starters** (sentence starters) · **Example** (fictional example, also read aloud) · **Words** (the four optional word banks, three words at a time) · **Chapters** (plan and jump) · **Notes** (tally, marks, notes, export) · Mode · Volume · Full screen · Settings · **Hide controls**.
 A coloured progress strip above the buttons shows chapters and steps; click any segment to jump.
 
-Keyboard: **Space** play/pause · **←/→** step · **Shift+←/→** chapter · **R** replay · **T** timer · **N** reveal next · **S** starters · **E** example · **W** word banks · **H** hide/show controls · **F** full screen · **?** list. Shortcuts are ignored while you type in a text box.
+Keyboard: **Space** play/pause · **←/→** step · **Shift+←/→** chapter · **R** replay · **T** timer · **N** reveal next · **J** add a star · **S** starters · **E** example · **W** word banks · **H** hide/show controls · **F** full screen · **?** list. Shortcuts are ignored while you type in a text box.
 
 **Hide controls** removes the bar from the layout completely (the lesson grows to use the space; it is never stretched or cropped), leaves only a small *Show controls* button in the bottom-right corner, and keeps playback, narration, timers, choices, notes and activity state exactly as they were. The hidden/shown state also survives chapter changes, full screen and reloads.
 
 ## Double-click any word
-Double-click any word on the screen (lesson text, bubbles, buttons, drawers) to hear and see **its pronunciation, a short definition, and an example sentence**, each with audio. Phrases such as *grow up*, *look back on*, *used to*, *keep in touch* are recognised when you click one of their words. Press **Esc** to close. Every one of the 993 distinct words displayed anywhere in the lesson has an entry (checked automatically by the crawler, see Testing).
+Double-click any word on the screen (lesson text, bubbles, buttons, drawers) to hear and see **its pronunciation, a short definition, and an example sentence**, each with audio. Phrases such as *grow up*, *look back on*, *used to*, *keep in touch* are recognised when you click one of their words. Press **Esc** to close. Every one of the 978 distinct words displayed anywhere in the lesson has an entry (checked automatically by the crawler, see Testing).
 
 ## Pronunciation (IPA)
 * IPA sits **directly beneath every English word** (word-and-IPA units that wrap together). Punctuation has no IPA. The Fluent English logo is the only displayed text without IPA. Narration reads English only, never IPA symbols.
@@ -59,6 +65,8 @@ Double-click any word on the screen (lesson text, bubbles, buttons, drawers) to 
 
 ## Narration and audio
 * Narration uses the **speech voices already installed in your browser or operating system** (Web Speech API). Nothing is uploaded and **no paid voice service was used or activated; no credits were consumed**.
+* Lines are spoken **phrase by phrase** with small pauses and with pitch and speed that follow the mood, questions and exclamations, instead of one flat pass. This helps a lot, but the voice itself is whatever your browser provides. **For the least robotic sound use Microsoft Edge (Windows) and pick a "Natural" voice** (e.g. Microsoft Aria, Jenny, Guy, Davis) in Settings → Audition; Chrome on macOS gives Samantha/Ava/Evan.
+* Optional: studio-quality recordings can be dropped in `audio/` and registered in `audio/manifest.js`; the lesson plays a recording when one exists for a line and falls back to the browser voice otherwise. The manifest ships empty; **no paid voice service was used and no credits were consumed.**
 * Maya, Theo, Alex and Jordan each get their own voice when your computer has enough English (US) voices; with fewer, the pitch is varied so they still sound different. Settings lists the voices found with an **Audition** button for each character. Chrome and Edge on Windows (Microsoft "Natural" voices) and macOS (Samantha, Ava, Evan…) usually give the best results.
 * If no English voice exists, the lesson still runs: captions advance on an estimated reading time, and **Settings → Narration script** shows every line so you can read it aloud.
 * Only one voice speaks at a time. Every navigation, pause or Replay cancels the previous line first, so audio never overlaps. Narration stops when a speaking timer starts.
@@ -84,6 +92,7 @@ childhood-speaking-club/
        lexicon-ipa.js lexicon-def.js    generated pronunciation and definitions
        audio.js                         narration, music, chime
        app-core.js app-widgets.js app-run.js   engine and controls
+  audio/  manifest.js     optional pre-recorded narration clips (empty)
   assets/ fluent_english_logo.png  sound_chart.jpg
   docs/CREDITS.md
   tools/  (developer only: rebuild the lexicon, crawl and test the lesson; not needed to teach)

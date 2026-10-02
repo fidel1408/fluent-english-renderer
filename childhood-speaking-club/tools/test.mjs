@@ -470,6 +470,18 @@ if (want("natural")) {
   });
   ok("a recorded line plays through the audio player (not the browser voice)", r.done && r.started >= 0 && r.spoken === 0 && Math.abs(r.ms - r.d * 1000) < 600, JSON.stringify(r));
   ok("word highlighting still follows a recorded line", r.words >= 5, r.words);
+  const dc = await p.evaluate(() => {
+    const V = FE.Voice, miss = [];
+    Object.keys(FE.LEX_DEF).forEach((k) => { const e = FE.LEX_DEF[k]; [FE.plain(k), FE.plain(e.def), FE.plain(e.ex)].forEach((t) => { if (!V.clips[V.clipKey("maya", t)]) miss.push(t); }); });
+    return { n: Object.keys(FE.LEX_DEF).length, miss };
+  });
+  ok("every dictionary word, meaning and example has a natural recording", dc.miss.length === 0 && dc.n > 900, dc.miss.slice(0, 3).join(" | "));
+  const pk = await p.evaluate(async () => {
+    const V = FE.Voice, e = FE.LEX_DEF["friendship"] ? "friendship" : "friend", t = FE.plain(FE.LEX_DEF[e].def), clip = V.clips[V.clipKey("maya", t)];
+    const t0 = performance.now(); const done = await V.speak(t, { role: "maya" });
+    return { done, ms: performance.now() - t0, d: clip.d, s: clip.s };
+  });
+  ok("a packed dictionary clip plays only its own segment", pk.done && pk.s > 0 && Math.abs(pk.ms - pk.d * 1000) < 700, JSON.stringify(pk));
   await p.click('[data-start="class"]'); await p.waitForTimeout(400);
   await p.click("#cb-settings"); await p.waitForTimeout(200);
   ok("Settings offers a Natural voices switch", await p.evaluate(() => !!document.getElementById("natChk")));

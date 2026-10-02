@@ -1,0 +1,7562 @@
+[
+{
+"role": "maya",
+"text": "a",
+"f": "audio/d/d00.mp3",
+"s": 0.0,
+"d": 0.462
+},
+{
+"role": "maya",
+"text": "one; used before a singular noun",
+"f": "audio/d/d00.mp3",
+"s": 0.862,
+"d": 1.915
+},
+{
+"role": "maya",
+"text": "She has a kite.",
+"f": "audio/d/d00.mp3",
+"s": 3.178,
+"d": 0.947
+},
+{
+"role": "maya",
+"text": "ability",
+"f": "audio/d/d00.mp3",
+"s": 4.525,
+"d": 0.694
+},
+{
+"role": "maya",
+"text": "the power or skill to do something",
+"f": "audio/d/d00.mp3",
+"s": 5.619,
+"d": 1.842
+},
+{
+"role": "maya",
+"text": "She has the ability to explain ideas clearly.",
+"f": "audio/d/d00.mp3",
+"s": 7.861,
+"d": 2.597
+},
+{
+"role": "maya",
+"text": "able",
+"f": "audio/d/d00.mp3",
+"s": 10.857,
+"d": 0.558
+},
+{
+"role": "maya",
+"text": "having the skill or chance to do something",
+"f": "audio/d/d00.mp3",
+"s": 11.815,
+"d": 2.063
+},
+{
+"role": "maya",
+"text": "I was able to ride a bike at six.",
+"f": "audio/d/d00.mp3",
+"s": 14.278,
+"d": 1.852
+},
+{
+"role": "maya",
+"text": "about",
+"f": "audio/d/d00.mp3",
+"s": 16.531,
+"d": 0.602
+},
+{
+"role": "maya",
+"text": "on the subject of",
+"f": "audio/d/d00.mp3",
+"s": 17.533,
+"d": 1.096
+},
+{
+"role": "maya",
+"text": "Tell us about your favorite game.",
+"f": "audio/d/d00.mp3",
+"s": 19.029,
+"d": 1.609
+},
+{
+"role": "maya",
+"text": "accuracy",
+"f": "audio/d/d00.mp3",
+"s": 21.038,
+"d": 0.806
+},
+{
+"role": "maya",
+"text": "being correct and free from mistakes",
+"f": "audio/d/d00.mp3",
+"s": 22.245,
+"d": 1.813
+},
+{
+"role": "maya",
+"text": "Accuracy matters, but clear ideas matter too.",
+"f": "audio/d/d00.mp3",
+"s": 24.458,
+"d": 2.704
+},
+{
+"role": "maya",
+"text": "across",
+"f": "audio/d/d00.mp3",
+"s": 27.562,
+"d": 0.741
+},
+{
+"role": "maya",
+"text": "from one side to the other",
+"f": "audio/d/d00.mp3",
+"s": 28.703,
+"d": 1.46
+},
+{
+"role": "maya",
+"text": "We ran across the yard.",
+"f": "audio/d/d00.mp3",
+"s": 30.563,
+"d": 1.318
+},
+{
+"role": "maya",
+"text": "acting",
+"f": "audio/d/d00.mp3",
+"s": 32.281,
+"d": 0.704
+},
+{
+"role": "maya",
+"text": "to do something or behave in a certain way",
+"f": "audio/d/d00.mp3",
+"s": 33.385,
+"d": 1.987
+},
+{
+"role": "maya",
+"text": "The children act quickly when the bell rings.",
+"f": "audio/d/d00.mp3",
+"s": 35.772,
+"d": 2.216
+},
+{
+"role": "maya",
+"text": "action",
+"f": "audio/d/d00.mp3",
+"s": 38.388,
+"d": 0.65
+},
+{
+"role": "maya",
+"text": "something that you do",
+"f": "audio/d/d00.mp3",
+"s": 39.438,
+"d": 1.17
+},
+{
+"role": "maya",
+"text": "One action can change the whole game.",
+"f": "audio/d/d00.mp3",
+"s": 41.008,
+"d": 2.02
+},
+{
+"role": "maya",
+"text": "actions",
+"f": "audio/d/d00.mp3",
+"s": 43.428,
+"d": 0.743
+},
+{
+"role": "maya",
+"text": "something that you do",
+"f": "audio/d/d00.mp3",
+"s": 44.571,
+"d": 1.17
+},
+{
+"role": "maya",
+"text": "One action can change the whole game.",
+"f": "audio/d/d00.mp3",
+"s": 46.141,
+"d": 2.02
+},
+{
+"role": "maya",
+"text": "activities",
+"f": "audio/d/d00.mp3",
+"s": 48.561,
+"d": 0.925
+},
+{
+"role": "maya",
+"text": "something you do for fun or learning",
+"f": "audio/d/d00.mp3",
+"s": 49.886,
+"d": 1.803
+},
+{
+"role": "maya",
+"text": "Drawing is a quiet activity.",
+"f": "audio/d/d00.mp3",
+"s": 52.089,
+"d": 1.651
+},
+{
+"role": "maya",
+"text": "activity",
+"f": "audio/d/d00.mp3",
+"s": 54.14,
+"d": 0.798
+},
+{
+"role": "maya",
+"text": "something you do for fun or learning",
+"f": "audio/d/d00.mp3",
+"s": 55.338,
+"d": 1.803
+},
+{
+"role": "maya",
+"text": "Drawing is a quiet activity.",
+"f": "audio/d/d00.mp3",
+"s": 57.541,
+"d": 1.651
+},
+{
+"role": "maya",
+"text": "actual",
+"f": "audio/d/d00.mp3",
+"s": 59.592,
+"d": 0.728
+},
+{
+"role": "maya",
+"text": "real, not imagined",
+"f": "audio/d/d00.mp3",
+"s": 60.721,
+"d": 1.318
+},
+{
+"role": "maya",
+"text": "The actual lesson may be longer than planned.",
+"f": "audio/d/d00.mp3",
+"s": 62.439,
+"d": 2.597
+},
+{
+"role": "maya",
+"text": "add",
+"f": "audio/d/d00.mp3",
+"s": 65.436,
+"d": 0.517
+},
+{
+"role": "maya",
+"text": "to put one more thing with others",
+"f": "audio/d/d00.mp3",
+"s": 66.353,
+"d": 1.625
+},
+{
+"role": "maya",
+"text": "Add one more detail to your story.",
+"f": "audio/d/d00.mp3",
+"s": 68.379,
+"d": 1.85
+},
+{
+"role": "maya",
+"text": "adult",
+"f": "audio/d/d00.mp3",
+"s": 70.629,
+"d": 0.65
+},
+{
+"role": "maya",
+"text": "a person who is fully grown",
+"f": "audio/d/d00.mp3",
+"s": 71.679,
+"d": 1.544
+},
+{
+"role": "maya",
+"text": "As an adult, she enjoys quiet evenings.",
+"f": "audio/d/d00.mp3",
+"s": 73.623,
+"d": 2.421
+},
+{
+"role": "maya",
+"text": "adventure",
+"f": "audio/d/d00.mp3",
+"s": 76.444,
+"d": 0.818
+},
+{
+"role": "maya",
+"text": "an exciting or unusual experience",
+"f": "audio/d/d00.mp3",
+"s": 77.662,
+"d": 2.232
+},
+{
+"role": "maya",
+"text": "The toy robot went on an adventure across the rug.",
+"f": "audio/d/d00.mp3",
+"s": 80.293,
+"d": 3.017
+},
+{
+"role": "maya",
+"text": "adventures",
+"f": "audio/d/d00.mp3",
+"s": 83.71,
+"d": 0.923
+},
+{
+"role": "maya",
+"text": "an exciting or unusual experience",
+"f": "audio/d/d00.mp3",
+"s": 85.033,
+"d": 2.232
+},
+{
+"role": "maya",
+"text": "The toy robot went on an adventure across the rug.",
+"f": "audio/d/d00.mp3",
+"s": 87.665,
+"d": 3.017
+},
+{
+"role": "maya",
+"text": "adventurous",
+"f": "audio/d/d00.mp3",
+"s": 91.081,
+"d": 0.892
+},
+{
+"role": "maya",
+"text": "happy to try new or exciting things",
+"f": "audio/d/d00.mp3",
+"s": 92.373,
+"d": 2.134
+},
+{
+"role": "maya",
+"text": "He was an adventurous child who loved climbing trees.",
+"f": "audio/d/d00.mp3",
+"s": 94.907,
+"d": 3.18
+},
+{
+"role": "maya",
+"text": "advice",
+"f": "audio/d/d00.mp3",
+"s": 98.486,
+"d": 0.719
+},
+{
+"role": "maya",
+"text": "helpful ideas about what someone should do",
+"f": "audio/d/d00.mp3",
+"s": 99.605,
+"d": 2.391
+},
+{
+"role": "maya",
+"text": "She asked an adult for advice.",
+"f": "audio/d/d00.mp3",
+"s": 102.397,
+"d": 1.713
+},
+{
+"role": "maya",
+"text": "affected",
+"f": "audio/d/d00.mp3",
+"s": 104.51,
+"d": 0.737
+},
+{
+"role": "maya",
+"text": "to change or influence someone or something",
+"f": "audio/d/d00.mp3",
+"s": 105.647,
+"d": 2.207
+},
+{
+"role": "maya",
+"text": "A decision can affect many people.",
+"f": "audio/d/d00.mp3",
+"s": 108.253,
+"d": 1.973
+},
+{
+"role": "maya",
+"text": "afraid",
+"f": "audio/d/d00.mp3",
+"s": 110.626,
+"d": 0.678
+},
+{
+"role": "maya",
+"text": "feeling fear",
+"f": "audio/d/d00.mp3",
+"s": 111.704,
+"d": 0.811
+},
+{
+"role": "maya",
+"text": "I was afraid to swim at first.",
+"f": "audio/d/d00.mp3",
+"s": 112.915,
+"d": 1.717
+},
+{
+"role": "maya",
+"text": "after",
+"f": "audio/d/d00.mp3",
+"s": 115.032,
+"d": 0.677
+},
+{
+"role": "maya",
+"text": "later than something",
+"f": "audio/d/d00.mp3",
+"s": 116.108,
+"d": 1.075
+},
+{
+"role": "maya",
+"text": "We played after school.",
+"f": "audio/d/d00.mp3",
+"s": 117.583,
+"d": 1.22
+},
+{
+"role": "maya",
+"text": "after that",
+"f": "audio/d/d00.mp3",
+"s": 119.204,
+"d": 0.833
+},
+{
+"role": "maya",
+"text": "next; following that",
+"f": "audio/d/d00.mp3",
+"s": 120.437,
+"d": 1.322
+},
+{
+"role": "maya",
+"text": "After that, we played tag.",
+"f": "audio/d/d00.mp3",
+"s": 122.159,
+"d": 1.507
+},
+{
+"role": "maya",
+"text": "afternoon",
+"f": "audio/d/d00.mp3",
+"s": 124.066,
+"d": 0.787
+},
+{
+"role": "maya",
+"text": "the part of the day between noon and evening",
+"f": "audio/d/d00.mp3",
+"s": 125.254,
+"d": 2.281
+},
+{
+"role": "maya",
+"text": "One afternoon, we built a kite.",
+"f": "audio/d/d00.mp3",
+"s": 127.935,
+"d": 1.889
+},
+{
+"role": "maya",
+"text": "again",
+"f": "audio/d/d00.mp3",
+"s": 130.224,
+"d": 0.628
+},
+{
+"role": "maya",
+"text": "one more time",
+"f": "audio/d/d00.mp3",
+"s": 131.252,
+"d": 0.905
+},
+{
+"role": "maya",
+"text": "Let's play the game again.",
+"f": "audio/d/d00.mp3",
+"s": 132.557,
+"d": 1.395
+},
+{
+"role": "maya",
+"text": "against",
+"f": "audio/d/d00.mp3",
+"s": 134.352,
+"d": 0.707
+},
+{
+"role": "maya",
+"text": "opposite to; in competition with",
+"f": "audio/d/d00.mp3",
+"s": 135.459,
+"d": 2.163
+},
+{
+"role": "maya",
+"text": "One team played against the other.",
+"f": "audio/d/d00.mp3",
+"s": 138.023,
+"d": 1.659
+},
+{
+"role": "maya",
+"text": "age",
+"f": "audio/d/d00.mp3",
+"s": 140.082,
+"d": 0.577
+},
+{
+"role": "maya",
+"text": "how old a person is",
+"f": "audio/d/d00.mp3",
+"s": 141.059,
+"d": 1.367
+},
+{
+"role": "maya",
+"text": "Your answer may change with age.",
+"f": "audio/d/d00.mp3",
+"s": 142.826,
+"d": 1.74
+},
+{
+"role": "maya",
+"text": "agree",
+"f": "audio/d/d00.mp3",
+"s": 144.966,
+"d": 0.706
+},
+{
+"role": "maya",
+"text": "to have the same opinion as someone",
+"f": "audio/d/d00.mp3",
+"s": 146.073,
+"d": 1.852
+},
+{
+"role": "maya",
+"text": "I agree with you.",
+"f": "audio/d/d00.mp3",
+"s": 148.324,
+"d": 0.967
+},
+{
+"role": "maya",
+"text": "all",
+"f": "audio/d/d00.mp3",
+"s": 149.692,
+"d": 0.424
+},
+{
+"role": "maya",
+"text": "every one of; the whole amount",
+"f": "audio/d/d00.mp3",
+"s": 150.516,
+"d": 1.634
+},
+{
+"role": "maya",
+"text": "All of us took turns.",
+"f": "audio/d/d00.mp3",
+"s": 152.55,
+"d": 1.269
+},
+{
+"role": "maya",
+"text": "almost",
+"f": "audio/d/d00.mp3",
+"s": 154.218,
+"d": 0.745
+},
+{
+"role": "maya",
+"text": "very nearly",
+"f": "audio/d/d00.mp3",
+"s": 155.363,
+"d": 0.821
+},
+{
+"role": "maya",
+"text": "We almost missed the bell.",
+"f": "audio/d/d00.mp3",
+"s": 156.584,
+"d": 1.296
+},
+{
+"role": "maya",
+"text": "alone",
+"f": "audio/d/d00.mp3",
+"s": 158.28,
+"d": 0.633
+},
+{
+"role": "maya",
+"text": "without other people",
+"f": "audio/d/d00.mp3",
+"s": 159.314,
+"d": 1.066
+},
+{
+"role": "maya",
+"text": "A clever best friend sat alone at the playground.",
+"f": "audio/d/d00.mp3",
+"s": 160.779,
+"d": 2.742
+},
+{
+"role": "maya",
+"text": "along",
+"f": "audio/d/d00.mp3",
+"s": 163.922,
+"d": 0.617
+},
+{
+"role": "maya",
+"text": "moving on a line or path",
+"f": "audio/d/d00.mp3",
+"s": 164.939,
+"d": 1.505
+},
+{
+"role": "maya",
+"text": "We walked along the river.",
+"f": "audio/d/d00.mp3",
+"s": 166.844,
+"d": 1.295
+},
+{
+"role": "maya",
+"text": "aloud",
+"f": "audio/d/d00.mp3",
+"s": 168.539,
+"d": 0.593
+},
+{
+"role": "maya",
+"text": "in a voice that other people can hear",
+"f": "audio/d/d00.mp3",
+"s": 169.532,
+"d": 1.939
+},
+{
+"role": "maya",
+"text": "Read the sentence aloud.",
+"f": "audio/d/d00.mp3",
+"s": 171.871,
+"d": 1.417
+},
+{
+"role": "maya",
+"text": "also",
+"f": "audio/d/d00.mp3",
+"s": 173.688,
+"d": 0.672
+},
+{
+"role": "maya",
+"text": "in addition; too",
+"f": "audio/d/d00.mp3",
+"s": 174.76,
+"d": 1.288
+},
+{
+"role": "maya",
+"text": "I also enjoyed drawing.",
+"f": "audio/d/d00.mp3",
+"s": 176.448,
+"d": 1.344
+},
+{
+"role": "maya",
+"text": "always",
+"f": "audio/d/d00.mp3",
+"s": 178.192,
+"d": 0.722
+},
+{
+"role": "maya",
+"text": "every time",
+"f": "audio/d/d00.mp3",
+"s": 179.315,
+"d": 0.82
+},
+{
+"role": "maya",
+"text": "I always walked to school with a friend.",
+"f": "audio/d/d00.mp3",
+"s": 180.534,
+"d": 1.853
+},
+{
+"role": "maya",
+"text": "american",
+"f": "audio/d/d00.mp3",
+"s": 182.787,
+"d": 0.78
+},
+{
+"role": "maya",
+"text": "from the United States",
+"f": "audio/d/d00.mp3",
+"s": 183.967,
+"d": 1.245
+},
+{
+"role": "maya",
+"text": "This lesson uses American English.",
+"f": "audio/d/d00.mp3",
+"s": 185.613,
+"d": 2.28
+},
+{
+"role": "maya",
+"text": "an",
+"f": "audio/d/d00.mp3",
+"s": 188.293,
+"d": 0.434
+},
+{
+"role": "maya",
+"text": "one; used before a singular noun that starts with a vowel sound",
+"f": "audio/d/d00.mp3",
+"s": 189.127,
+"d": 3.967
+},
+{
+"role": "maya",
+"text": "We built an enormous fort.",
+"f": "audio/d/d00.mp3",
+"s": 193.493,
+"d": 1.497
+},
+{
+"role": "maya",
+"text": "and",
+"f": "audio/d/d00.mp3",
+"s": 195.39,
+"d": 0.479
+},
+{
+"role": "maya",
+"text": "used to join words or ideas",
+"f": "audio/d/d00.mp3",
+"s": 196.269,
+"d": 1.891
+},
+{
+"role": "maya",
+"text": "We played tag and hide-and-seek.",
+"f": "audio/d/d00.mp3",
+"s": 198.56,
+"d": 1.716
+},
+{
+"role": "maya",
+"text": "animated",
+"f": "audio/d/d00.mp3",
+"s": 200.676,
+"d": 0.759
+},
+{
+"role": "maya",
+"text": "made with moving pictures",
+"f": "audio/d/d00.mp3",
+"s": 201.835,
+"d": 1.446
+},
+{
+"role": "maya",
+"text": "The lesson starts with an animated opening.",
+"f": "audio/d/d00.mp3",
+"s": 203.681,
+"d": 2.42
+},
+{
+"role": "maya",
+"text": "anonymous",
+"f": "audio/d/d00.mp3",
+"s": 206.501,
+"d": 0.777
+},
+{
+"role": "maya",
+"text": "without a name",
+"f": "audio/d/d00.mp3",
+"s": 207.677,
+"d": 0.884
+},
+{
+"role": "maya",
+"text": "The marks are anonymous.",
+"f": "audio/d/d00.mp3",
+"s": 208.962,
+"d": 1.37
+},
+{
+"role": "maya",
+"text": "another",
+"f": "audio/d/d00.mp3",
+"s": 210.732,
+"d": 0.587
+},
+{
+"role": "maya",
+"text": "one more; a different one",
+"f": "audio/d/d00.mp3",
+"s": 211.719,
+"d": 1.406
+},
+{
+"role": "maya",
+"text": "Is there another solution?",
+"f": "audio/d/d00.mp3",
+"s": 213.525,
+"d": 1.34
+},
+{
+"role": "maya",
+"text": "answer",
+"f": "audio/d/d00.mp3",
+"s": 215.265,
+"d": 0.685
+},
+{
+"role": "maya",
+"text": "what you say when someone asks a question",
+"f": "audio/d/d00.mp3",
+"s": 216.35,
+"d": 1.961
+},
+{
+"role": "maya",
+"text": "Give your answer and a reason.",
+"f": "audio/d/d00.mp3",
+"s": 218.711,
+"d": 1.652
+},
+{
+"role": "maya",
+"text": "any",
+"f": "audio/d/d00.mp3",
+"s": 220.763,
+"d": 0.558
+},
+{
+"role": "maya",
+"text": "one or some; no matter which",
+"f": "audio/d/d00.mp3",
+"s": 221.721,
+"d": 1.654
+},
+{
+"role": "maya",
+"text": "Any idea is welcome.",
+"f": "audio/d/d00.mp3",
+"s": 223.775,
+"d": 1.375
+},
+{
+"role": "maya",
+"text": "anything",
+"f": "audio/d/d00.mp3",
+"s": 225.549,
+"d": 0.655
+},
+{
+"role": "maya",
+"text": "any thing",
+"f": "audio/d/d00.mp3",
+"s": 226.604,
+"d": 0.702
+},
+{
+"role": "maya",
+"text": "You can say anything you like.",
+"f": "audio/d/d00.mp3",
+"s": 227.706,
+"d": 1.599
+},
+{
+"role": "maya",
+"text": "apologize",
+"f": "audio/d/d00.mp3",
+"s": 229.704,
+"d": 0.971
+},
+{
+"role": "maya",
+"text": "to say you are sorry",
+"f": "audio/d/d00.mp3",
+"s": 231.075,
+"d": 1.21
+},
+{
+"role": "maya",
+"text": "They decided to apologize to the owner.",
+"f": "audio/d/d00.mp3",
+"s": 232.685,
+"d": 2.224
+},
+{
+"role": "maya",
+"text": "appears",
+"f": "audio/d/d00.mp3",
+"s": 235.309,
+"d": 0.758
+},
+{
+"role": "maya",
+"text": "to come into view",
+"f": "audio/d/d00.mp3",
+"s": 236.467,
+"d": 1.008
+},
+{
+"role": "maya",
+"text": "A mysterious note appears on the table.",
+"f": "audio/d/d00.mp3",
+"s": 237.875,
+"d": 2.241
+},
+{
+"role": "maya",
+"text": "castle",
+"f": "audio/d/d03.mp3",
+"s": 0.0,
+"d": 0.658
+},
+{
+"role": "maya",
+"text": "a large old building with strong walls",
+"f": "audio/d/d03.mp3",
+"s": 1.058,
+"d": 2.119
+},
+{
+"role": "maya",
+"text": "The box became a castle.",
+"f": "audio/d/d03.mp3",
+"s": 3.578,
+"d": 1.429
+},
+{
+"role": "maya",
+"text": "celebrate",
+"f": "audio/d/d03.mp3",
+"s": 5.406,
+"d": 0.815
+},
+{
+"role": "maya",
+"text": "to enjoy a special event together",
+"f": "audio/d/d03.mp3",
+"s": 6.621,
+"d": 1.821
+},
+{
+"role": "maya",
+"text": "The whole group celebrates.",
+"f": "audio/d/d03.mp3",
+"s": 8.842,
+"d": 1.508
+},
+{
+"role": "maya",
+"text": "celebrates",
+"f": "audio/d/d03.mp3",
+"s": 10.75,
+"d": 0.846
+},
+{
+"role": "maya",
+"text": "to enjoy a special event together",
+"f": "audio/d/d03.mp3",
+"s": 11.996,
+"d": 1.821
+},
+{
+"role": "maya",
+"text": "The whole group celebrates.",
+"f": "audio/d/d03.mp3",
+"s": 14.217,
+"d": 1.508
+},
+{
+"role": "maya",
+"text": "challenge",
+"f": "audio/d/d03.mp3",
+"s": 16.125,
+"d": 0.663
+},
+{
+"role": "maya",
+"text": "something difficult that tests your skill",
+"f": "audio/d/d03.mp3",
+"s": 17.188,
+"d": 1.846
+},
+{
+"role": "maya",
+"text": "Try the longer challenge.",
+"f": "audio/d/d03.mp3",
+"s": 19.434,
+"d": 1.397
+},
+{
+"role": "maya",
+"text": "change",
+"f": "audio/d/d03.mp3",
+"s": 21.231,
+"d": 0.628
+},
+{
+"role": "maya",
+"text": "to become different, or to make something different",
+"f": "audio/d/d03.mp3",
+"s": 22.259,
+"d": 2.544
+},
+{
+"role": "maya",
+"text": "Many things change as we grow up.",
+"f": "audio/d/d03.mp3",
+"s": 25.203,
+"d": 1.869
+},
+{
+"role": "maya",
+"text": "changed",
+"f": "audio/d/d03.mp3",
+"s": 27.473,
+"d": 0.641
+},
+{
+"role": "maya",
+"text": "to become different, or to make something different",
+"f": "audio/d/d03.mp3",
+"s": 28.514,
+"d": 2.544
+},
+{
+"role": "maya",
+"text": "Many things change as we grow up.",
+"f": "audio/d/d03.mp3",
+"s": 31.458,
+"d": 1.869
+},
+{
+"role": "maya",
+"text": "changes",
+"f": "audio/d/d03.mp3",
+"s": 33.727,
+"d": 0.776
+},
+{
+"role": "maya",
+"text": "to become different, or to make something different",
+"f": "audio/d/d03.mp3",
+"s": 34.903,
+"d": 2.544
+},
+{
+"role": "maya",
+"text": "Many things change as we grow up.",
+"f": "audio/d/d03.mp3",
+"s": 37.848,
+"d": 1.869
+},
+{
+"role": "maya",
+"text": "chapter",
+"f": "audio/d/d03.mp3",
+"s": 40.117,
+"d": 0.731
+},
+{
+"role": "maya",
+"text": "a main part of a book or lesson",
+"f": "audio/d/d03.mp3",
+"s": 41.248,
+"d": 1.77
+},
+{
+"role": "maya",
+"text": "This is chapter four.",
+"f": "audio/d/d03.mp3",
+"s": 43.418,
+"d": 1.216
+},
+{
+"role": "maya",
+"text": "chapters",
+"f": "audio/d/d03.mp3",
+"s": 45.034,
+"d": 0.801
+},
+{
+"role": "maya",
+"text": "a main part of a book or lesson",
+"f": "audio/d/d03.mp3",
+"s": 46.235,
+"d": 1.77
+},
+{
+"role": "maya",
+"text": "This is chapter four.",
+"f": "audio/d/d03.mp3",
+"s": 48.405,
+"d": 1.216
+},
+{
+"role": "maya",
+"text": "character",
+"f": "audio/d/d03.mp3",
+"s": 50.021,
+"d": 0.757
+},
+{
+"role": "maya",
+"text": "a person in a story",
+"f": "audio/d/d03.mp3",
+"s": 51.178,
+"d": 1.261
+},
+{
+"role": "maya",
+"text": "Maya is a character in this lesson.",
+"f": "audio/d/d03.mp3",
+"s": 52.839,
+"d": 1.867
+},
+{
+"role": "maya",
+"text": "chart",
+"f": "audio/d/d03.mp3",
+"s": 55.106,
+"d": 0.638
+},
+{
+"role": "maya",
+"text": "a table or picture that shows information",
+"f": "audio/d/d03.mp3",
+"s": 56.143,
+"d": 2.447
+},
+{
+"role": "maya",
+"text": "Use the sound chart to check symbols.",
+"f": "audio/d/d03.mp3",
+"s": 58.991,
+"d": 2.014
+},
+{
+"role": "maya",
+"text": "check",
+"f": "audio/d/d03.mp3",
+"s": 61.405,
+"d": 0.573
+},
+{
+"role": "maya",
+"text": "to look at something to make sure it is right",
+"f": "audio/d/d03.mp3",
+"s": 62.377,
+"d": 2.038
+},
+{
+"role": "maya",
+"text": "Check your answer.",
+"f": "audio/d/d03.mp3",
+"s": 64.815,
+"d": 0.916
+},
+{
+"role": "maya",
+"text": "checked",
+"f": "audio/d/d03.mp3",
+"s": 66.131,
+"d": 0.598
+},
+{
+"role": "maya",
+"text": "to look at something to make sure it is right",
+"f": "audio/d/d03.mp3",
+"s": 67.129,
+"d": 2.038
+},
+{
+"role": "maya",
+"text": "Check your answer.",
+"f": "audio/d/d03.mp3",
+"s": 69.567,
+"d": 0.916
+},
+{
+"role": "maya",
+"text": "child",
+"f": "audio/d/d03.mp3",
+"s": 70.882,
+"d": 0.638
+},
+{
+"role": "maya",
+"text": "a young person",
+"f": "audio/d/d03.mp3",
+"s": 71.92,
+"d": 0.93
+},
+{
+"role": "maya",
+"text": "Every child plays in a different way.",
+"f": "audio/d/d03.mp3",
+"s": 73.25,
+"d": 1.926
+},
+{
+"role": "maya",
+"text": "childhood",
+"f": "audio/d/d03.mp3",
+"s": 75.576,
+"d": 0.745
+},
+{
+"role": "maya",
+"text": "the period of someone's life when they are a child",
+"f": "audio/d/d03.mp3",
+"s": 76.72,
+"d": 2.538
+},
+{
+"role": "maya",
+"text": "Their childhood was very different from ours.",
+"f": "audio/d/d03.mp3",
+"s": 79.659,
+"d": 2.408
+},
+{
+"role": "maya",
+"text": "childhood friend",
+"f": "audio/d/d03.mp3",
+"s": 82.467,
+"d": 1.034
+},
+{
+"role": "maya",
+"text": "a friend from the time when you were a child",
+"f": "audio/d/d03.mp3",
+"s": 83.901,
+"d": 2.166
+},
+{
+"role": "maya",
+"text": "A childhood friend remembers your old games.",
+"f": "audio/d/d03.mp3",
+"s": 86.467,
+"d": 2.63
+},
+{
+"role": "maya",
+"text": "children",
+"f": "audio/d/d03.mp3",
+"s": 89.497,
+"d": 0.676
+},
+{
+"role": "maya",
+"text": "a young person",
+"f": "audio/d/d03.mp3",
+"s": 90.573,
+"d": 0.93
+},
+{
+"role": "maya",
+"text": "Every child plays in a different way.",
+"f": "audio/d/d03.mp3",
+"s": 91.903,
+"d": 1.926
+},
+{
+"role": "maya",
+"text": "choice",
+"f": "audio/d/d03.mp3",
+"s": 94.229,
+"d": 0.653
+},
+{
+"role": "maya",
+"text": "the act of choosing; something you choose",
+"f": "audio/d/d03.mp3",
+"s": 95.282,
+"d": 2.237
+},
+{
+"role": "maya",
+"text": "Both choices are fine.",
+"f": "audio/d/d03.mp3",
+"s": 97.919,
+"d": 1.444
+},
+{
+"role": "maya",
+"text": "choices",
+"f": "audio/d/d03.mp3",
+"s": 99.763,
+"d": 0.8
+},
+{
+"role": "maya",
+"text": "the act of choosing; something you choose",
+"f": "audio/d/d03.mp3",
+"s": 100.962,
+"d": 2.237
+},
+{
+"role": "maya",
+"text": "Both choices are fine.",
+"f": "audio/d/d03.mp3",
+"s": 103.599,
+"d": 1.444
+},
+{
+"role": "maya",
+"text": "choose",
+"f": "audio/d/d03.mp3",
+"s": 105.443,
+"d": 0.675
+},
+{
+"role": "maya",
+"text": "to pick one thing from several",
+"f": "audio/d/d03.mp3",
+"s": 106.518,
+"d": 1.546
+},
+{
+"role": "maya",
+"text": "Choose a place on the scale.",
+"f": "audio/d/d03.mp3",
+"s": 108.464,
+"d": 1.345
+},
+{
+"role": "maya",
+"text": "choosing",
+"f": "audio/d/d03.mp3",
+"s": 110.21,
+"d": 0.688
+},
+{
+"role": "maya",
+"text": "to pick one thing from several",
+"f": "audio/d/d03.mp3",
+"s": 111.298,
+"d": 1.546
+},
+{
+"role": "maya",
+"text": "Choose a place on the scale.",
+"f": "audio/d/d03.mp3",
+"s": 113.244,
+"d": 1.345
+},
+{
+"role": "maya",
+"text": "chores",
+"f": "audio/d/d03.mp3",
+"s": 114.99,
+"d": 0.666
+},
+{
+"role": "maya",
+"text": "small regular jobs at home",
+"f": "audio/d/d03.mp3",
+"s": 116.056,
+"d": 1.64
+},
+{
+"role": "maya",
+"text": "Chores helped me become independent.",
+"f": "audio/d/d03.mp3",
+"s": 118.097,
+"d": 1.951
+},
+{
+"role": "maya",
+"text": "chose",
+"f": "audio/d/d03.mp3",
+"s": 120.448,
+"d": 0.679
+},
+{
+"role": "maya",
+"text": "to pick one thing from several",
+"f": "audio/d/d03.mp3",
+"s": 121.527,
+"d": 1.546
+},
+{
+"role": "maya",
+"text": "Choose a place on the scale.",
+"f": "audio/d/d03.mp3",
+"s": 123.473,
+"d": 1.345
+},
+{
+"role": "maya",
+"text": "circles",
+"f": "audio/d/d03.mp3",
+"s": 125.218,
+"d": 0.741
+},
+{
+"role": "maya",
+"text": "a perfectly round shape",
+"f": "audio/d/d03.mp3",
+"s": 126.36,
+"d": 1.299
+},
+{
+"role": "maya",
+"text": "We sat in a circle.",
+"f": "audio/d/d03.mp3",
+"s": 128.058,
+"d": 1.193
+},
+{
+"role": "maya",
+"text": "circumstances",
+"f": "audio/d/d03.mp3",
+"s": 129.652,
+"d": 1.109
+},
+{
+"role": "maya",
+"text": "the facts and conditions around a situation",
+"f": "audio/d/d03.mp3",
+"s": 131.161,
+"d": 2.645
+},
+{
+"role": "maya",
+"text": "Circumstances can change your answer.",
+"f": "audio/d/d03.mp3",
+"s": 134.206,
+"d": 2.181
+},
+{
+"role": "maya",
+"text": "claim",
+"f": "audio/d/d03.mp3",
+"s": 136.787,
+"d": 0.602
+},
+{
+"role": "maya",
+"text": "a statement that something is true",
+"f": "audio/d/d03.mp3",
+"s": 137.788,
+"d": 1.699
+},
+{
+"role": "maya",
+"text": "This is a claim, not a fact.",
+"f": "audio/d/d03.mp3",
+"s": 139.887,
+"d": 1.688
+},
+{
+"role": "maya",
+"text": "claims",
+"f": "audio/d/d03.mp3",
+"s": 141.975,
+"d": 0.644
+},
+{
+"role": "maya",
+"text": "a statement that something is true",
+"f": "audio/d/d03.mp3",
+"s": 143.019,
+"d": 1.699
+},
+{
+"role": "maya",
+"text": "This is a claim, not a fact.",
+"f": "audio/d/d03.mp3",
+"s": 145.118,
+"d": 1.688
+},
+{
+"role": "maya",
+"text": "clarity",
+"f": "audio/d/d03.mp3",
+"s": 147.206,
+"d": 0.683
+},
+{
+"role": "maya",
+"text": "being clear and easy to understand",
+"f": "audio/d/d03.mp3",
+"s": 148.289,
+"d": 1.942
+},
+{
+"role": "maya",
+"text": "Clarity is one part of the rubric.",
+"f": "audio/d/d03.mp3",
+"s": 150.631,
+"d": 1.889
+},
+{
+"role": "maya",
+"text": "class",
+"f": "audio/d/d03.mp3",
+"s": 152.919,
+"d": 0.619
+},
+{
+"role": "maya",
+"text": "a group of students who learn together",
+"f": "audio/d/d03.mp3",
+"s": 153.938,
+"d": 1.842
+},
+{
+"role": "maya",
+"text": "The class chose a plan.",
+"f": "audio/d/d03.mp3",
+"s": 156.181,
+"d": 1.287
+},
+{
+"role": "maya",
+"text": "clear",
+"f": "audio/d/d03.mp3",
+"s": 157.867,
+"d": 0.559
+},
+{
+"role": "maya",
+"text": "easy to understand",
+"f": "audio/d/d03.mp3",
+"s": 158.826,
+"d": 1.149
+},
+{
+"role": "maya",
+"text": "Give a clear ending.",
+"f": "audio/d/d03.mp3",
+"s": 160.376,
+"d": 1.042
+},
+{
+"role": "maya",
+"text": "clever",
+"f": "audio/d/d03.mp3",
+"s": 161.817,
+"d": 0.614
+},
+{
+"role": "maya",
+"text": "quick at understanding and finding answers",
+"f": "audio/d/d03.mp3",
+"s": 162.832,
+"d": 2.362
+},
+{
+"role": "maya",
+"text": "A clever best friend solved the puzzle.",
+"f": "audio/d/d03.mp3",
+"s": 165.593,
+"d": 2.017
+},
+{
+"role": "maya",
+"text": "click",
+"f": "audio/d/d03.mp3",
+"s": 168.01,
+"d": 0.528
+},
+{
+"role": "maya",
+"text": "to press a mouse button",
+"f": "audio/d/d03.mp3",
+"s": 168.938,
+"d": 1.303
+},
+{
+"role": "maya",
+"text": "Click a choice to add one.",
+"f": "audio/d/d03.mp3",
+"s": 170.641,
+"d": 1.393
+},
+{
+"role": "maya",
+"text": "close",
+"f": "audio/d/d03.mp3",
+"s": 172.434,
+"d": 0.625
+},
+{
+"role": "maya",
+"text": "to shut",
+"f": "audio/d/d03.mp3",
+"s": 173.459,
+"d": 0.64
+},
+{
+"role": "maya",
+"text": "Close the box slowly.",
+"f": "audio/d/d03.mp3",
+"s": 174.499,
+"d": 1.302
+},
+{
+"role": "maya",
+"text": "cloud",
+"f": "audio/d/d03.mp3",
+"s": 176.202,
+"d": 0.59
+},
+{
+"role": "maya",
+"text": "a white or gray shape in the sky",
+"f": "audio/d/d03.mp3",
+"s": 177.192,
+"d": 1.682
+},
+{
+"role": "maya",
+"text": "A cloud covered the sun.",
+"f": "audio/d/d03.mp3",
+"s": 179.274,
+"d": 1.394
+},
+{
+"role": "maya",
+"text": "club",
+"f": "audio/d/d03.mp3",
+"s": 181.068,
+"d": 0.582
+},
+{
+"role": "maya",
+"text": "a group of people who meet for a shared interest",
+"f": "audio/d/d03.mp3",
+"s": 182.05,
+"d": 2.32
+},
+{
+"role": "maya",
+"text": "We joined a drama club.",
+"f": "audio/d/d03.mp3",
+"s": 184.77,
+"d": 1.464
+},
+{
+"role": "maya",
+"text": "clubhouse",
+"f": "audio/d/d03.mp3",
+"s": 186.634,
+"d": 0.751
+},
+{
+"role": "maya",
+"text": "a small house for club members",
+"f": "audio/d/d03.mp3",
+"s": 187.785,
+"d": 1.732
+},
+{
+"role": "maya",
+"text": "We built a secret clubhouse.",
+"f": "audio/d/d03.mp3",
+"s": 189.916,
+"d": 1.693
+},
+{
+"role": "maya",
+"text": "clue",
+"f": "audio/d/d03.mp3",
+"s": 192.01,
+"d": 0.537
+},
+{
+"role": "maya",
+"text": "a small piece of information that helps you find an answer",
+"f": "audio/d/d03.mp3",
+"s": 192.947,
+"d": 3.251
+},
+{
+"role": "maya",
+"text": "Clue one: it was small and made of metal.",
+"f": "audio/d/d03.mp3",
+"s": 196.598,
+"d": 2.098
+},
+{
+"role": "maya",
+"text": "clues",
+"f": "audio/d/d03.mp3",
+"s": 199.096,
+"d": 0.644
+},
+{
+"role": "maya",
+"text": "a small piece of information that helps you find an answer",
+"f": "audio/d/d03.mp3",
+"s": 200.14,
+"d": 3.251
+},
+{
+"role": "maya",
+"text": "Clue one: it was small and made of metal.",
+"f": "audio/d/d03.mp3",
+"s": 203.79,
+"d": 2.098
+},
+{
+"role": "maya",
+"text": "colors",
+"f": "audio/d/d03.mp3",
+"s": 206.288,
+"d": 0.669
+},
+{
+"role": "maya",
+"text": "red, blue, yellow, and other shades",
+"f": "audio/d/d03.mp3",
+"s": 207.357,
+"d": 1.897
+},
+{
+"role": "maya",
+"text": "The colors were bright.",
+"f": "audio/d/d03.mp3",
+"s": 209.655,
+"d": 1.239
+},
+{
+"role": "maya",
+"text": "combine",
+"f": "audio/d/d03.mp3",
+"s": 211.294,
+"d": 0.716
+},
+{
+"role": "maya",
+"text": "to join two or more things",
+"f": "audio/d/d03.mp3",
+"s": 212.41,
+"d": 1.48
+},
+{
+"role": "maya",
+"text": "Combine art and sports in one game.",
+"f": "audio/d/d03.mp3",
+"s": 214.289,
+"d": 2.107
+},
+{
+"role": "maya",
+"text": "come",
+"f": "audio/d/d03.mp3",
+"s": 216.796,
+"d": 0.54
+},
+{
+"role": "maya",
+"text": "to move toward the speaker or arrive",
+"f": "audio/d/d03.mp3",
+"s": 217.736,
+"d": 2.077
+},
+{
+"role": "maya",
+"text": "Come and join us.",
+"f": "audio/d/d03.mp3",
+"s": 220.213,
+"d": 1.05
+},
+{
+"role": "maya",
+"text": "comic",
+"f": "audio/d/d03.mp3",
+"s": 221.664,
+"d": 0.6
+},
+{
+"role": "maya",
+"text": "a story told in pictures",
+"f": "audio/d/d03.mp3",
+"s": 222.664,
+"d": 1.533
+},
+{
+"role": "maya",
+"text": "I loved comic books.",
+"f": "audio/d/d03.mp3",
+"s": 224.597,
+"d": 1.36
+},
+{
+"role": "maya",
+"text": "compare",
+"f": "audio/d/d03.mp3",
+"s": 226.357,
+"d": 0.664
+},
+{
+"role": "maya",
+"text": "to look at how things are alike and different",
+"f": "audio/d/d03.mp3",
+"s": 227.421,
+"d": 2.193
+},
+{
+"role": "maya",
+"text": "Compare childhood and adult life.",
+"f": "audio/d/d03.mp3",
+"s": 230.015,
+"d": 1.881
+},
+{
+"role": "maya",
+"text": "compared",
+"f": "audio/d/d03.mp3",
+"s": 232.295,
+"d": 0.701
+},
+{
+"role": "maya",
+"text": "to look at how things are alike and different",
+"f": "audio/d/d03.mp3",
+"s": 233.396,
+"d": 2.193
+},
+{
+"role": "maya",
+"text": "Compare childhood and adult life.",
+"f": "audio/d/d03.mp3",
+"s": 235.989,
+"d": 1.881
+},
+{
+"role": "maya",
+"text": "completely",
+"f": "audio/d/d03.mp3",
+"s": 238.27,
+"d": 0.815
+},
+{
+"role": "maya",
+"text": "in every way",
+"f": "audio/d/d03.mp3",
+"s": 239.484,
+"d": 0.887
+},
+{
+"role": "maya",
+"text": "I completely forgot the rules.",
+"f": "audio/d/d03.mp3",
+"s": 240.772,
+"d": 1.707
+},
+{
+"role": "maya",
+"text": "event",
+"f": "audio/d/d06.mp3",
+"s": 0.0,
+"d": 0.641
+},
+{
+"role": "maya",
+"text": "something that happens, especially something planned",
+"f": "audio/d/d06.mp3",
+"s": 1.041,
+"d": 2.593
+},
+{
+"role": "maya",
+"text": "The school event lasts one hour.",
+"f": "audio/d/d06.mp3",
+"s": 4.034,
+"d": 1.829
+},
+{
+"role": "maya",
+"text": "every",
+"f": "audio/d/d06.mp3",
+"s": 6.264,
+"d": 0.633
+},
+{
+"role": "maya",
+"text": "each one of a group",
+"f": "audio/d/d06.mp3",
+"s": 7.296,
+"d": 1.087
+},
+{
+"role": "maya",
+"text": "Every child can join in.",
+"f": "audio/d/d06.mp3",
+"s": 8.784,
+"d": 1.545
+},
+{
+"role": "maya",
+"text": "everyone",
+"f": "audio/d/d06.mp3",
+"s": 10.729,
+"d": 0.679
+},
+{
+"role": "maya",
+"text": "all people",
+"f": "audio/d/d06.mp3",
+"s": 11.808,
+"d": 0.799
+},
+{
+"role": "maya",
+"text": "Everyone gets a turn.",
+"f": "audio/d/d06.mp3",
+"s": 13.007,
+"d": 1.322
+},
+{
+"role": "maya",
+"text": "everything",
+"f": "audio/d/d06.mp3",
+"s": 14.729,
+"d": 0.743
+},
+{
+"role": "maya",
+"text": "all things",
+"f": "audio/d/d06.mp3",
+"s": 15.872,
+"d": 0.766
+},
+{
+"role": "maya",
+"text": "Everything changed that year.",
+"f": "audio/d/d06.mp3",
+"s": 17.039,
+"d": 1.482
+},
+{
+"role": "maya",
+"text": "example",
+"f": "audio/d/d06.mp3",
+"s": 18.921,
+"d": 0.756
+},
+{
+"role": "maya",
+"text": "something that shows what a general rule means",
+"f": "audio/d/d06.mp3",
+"s": 20.076,
+"d": 2.377
+},
+{
+"role": "maya",
+"text": "One example would be a game of tag.",
+"f": "audio/d/d06.mp3",
+"s": 22.853,
+"d": 2.04
+},
+{
+"role": "maya",
+"text": "exception",
+"f": "audio/d/d06.mp3",
+"s": 25.293,
+"d": 0.795
+},
+{
+"role": "maya",
+"text": "something that does not follow the usual rule",
+"f": "audio/d/d06.mp3",
+"s": 26.489,
+"d": 2.291
+},
+{
+"role": "maya",
+"text": "Give a reason, an example, or an exception.",
+"f": "audio/d/d06.mp3",
+"s": 29.18,
+"d": 2.492
+},
+{
+"role": "maya",
+"text": "exciting",
+"f": "audio/d/d06.mp3",
+"s": 32.072,
+"d": 0.773
+},
+{
+"role": "maya",
+"text": "making you feel happy and interested",
+"f": "audio/d/d06.mp3",
+"s": 33.246,
+"d": 1.948
+},
+{
+"role": "maya",
+"text": "The game was exciting.",
+"f": "audio/d/d06.mp3",
+"s": 35.593,
+"d": 1.255
+},
+{
+"role": "maya",
+"text": "exit",
+"f": "audio/d/d06.mp3",
+"s": 37.248,
+"d": 0.669
+},
+{
+"role": "maya",
+"text": "a way out; the end of a lesson",
+"f": "audio/d/d06.mp3",
+"s": 38.317,
+"d": 1.848
+},
+{
+"role": "maya",
+"text": "The exit challenge is the last task.",
+"f": "audio/d/d06.mp3",
+"s": 40.565,
+"d": 2.164
+},
+{
+"role": "maya",
+"text": "explain",
+"f": "audio/d/d06.mp3",
+"s": 43.129,
+"d": 0.781
+},
+{
+"role": "maya",
+"text": "to make something clear",
+"f": "audio/d/d06.mp3",
+"s": 44.31,
+"d": 1.174
+},
+{
+"role": "maya",
+"text": "Explain your ranking.",
+"f": "audio/d/d06.mp3",
+"s": 45.884,
+"d": 1.183
+},
+{
+"role": "maya",
+"text": "export",
+"f": "audio/d/d06.mp3",
+"s": 47.467,
+"d": 0.765
+},
+{
+"role": "maya",
+"text": "to save information in a file that you can use elsewhere",
+"f": "audio/d/d06.mp3",
+"s": 48.632,
+"d": 3.289
+},
+{
+"role": "maya",
+"text": "Export the notes as a file.",
+"f": "audio/d/d06.mp3",
+"s": 52.321,
+"d": 1.595
+},
+{
+"role": "maya",
+"text": "expression",
+"f": "audio/d/d06.mp3",
+"s": 54.316,
+"d": 0.83
+},
+{
+"role": "maya",
+"text": "a word or phrase",
+"f": "audio/d/d06.mp3",
+"s": 55.545,
+"d": 1.074
+},
+{
+"role": "maya",
+"text": "\"Take turns\" is a useful expression.",
+"f": "audio/d/d06.mp3",
+"s": 57.019,
+"d": 2.233
+},
+{
+"role": "maya",
+"text": "expressions",
+"f": "audio/d/d06.mp3",
+"s": 59.652,
+"d": 0.938
+},
+{
+"role": "maya",
+"text": "a word or phrase",
+"f": "audio/d/d06.mp3",
+"s": 60.991,
+"d": 1.074
+},
+{
+"role": "maya",
+"text": "\"Take turns\" is a useful expression.",
+"f": "audio/d/d06.mp3",
+"s": 62.465,
+"d": 2.233
+},
+{
+"role": "maya",
+"text": "extend",
+"f": "audio/d/d06.mp3",
+"s": 65.098,
+"d": 0.741
+},
+{
+"role": "maya",
+"text": "to make longer",
+"f": "audio/d/d06.mp3",
+"s": 66.239,
+"d": 0.897
+},
+{
+"role": "maya",
+"text": "Extra discussion may extend the lesson.",
+"f": "audio/d/d06.mp3",
+"s": 67.536,
+"d": 2.151
+},
+{
+"role": "maya",
+"text": "extension",
+"f": "audio/d/d06.mp3",
+"s": 70.087,
+"d": 0.859
+},
+{
+"role": "maya",
+"text": "an extra part that goes beyond the basic task",
+"f": "audio/d/d06.mp3",
+"s": 71.346,
+"d": 2.934
+},
+{
+"role": "maya",
+"text": "The extension uses would.",
+"f": "audio/d/d06.mp3",
+"s": 74.68,
+"d": 1.572
+},
+{
+"role": "maya",
+"text": "f",
+"f": "audio/d/d06.mp3",
+"s": 76.652,
+"d": 0.503
+},
+{
+"role": "maya",
+"text": "the sixth letter of the alphabet",
+"f": "audio/d/d06.mp3",
+"s": 77.554,
+"d": 1.717
+},
+{
+"role": "maya",
+"text": "F is for full screen.",
+"f": "audio/d/d06.mp3",
+"s": 79.671,
+"d": 1.325
+},
+{
+"role": "maya",
+"text": "facts",
+"f": "audio/d/d06.mp3",
+"s": 81.396,
+"d": 0.659
+},
+{
+"role": "maya",
+"text": "something that is true",
+"f": "audio/d/d06.mp3",
+"s": 82.456,
+"d": 1.228
+},
+{
+"role": "maya",
+"text": "A claim is not always a fact.",
+"f": "audio/d/d06.mp3",
+"s": 84.083,
+"d": 1.884
+},
+{
+"role": "maya",
+"text": "faint",
+"f": "audio/d/d06.mp3",
+"s": 86.367,
+"d": 0.638
+},
+{
+"role": "maya",
+"text": "not strong; hard to see",
+"f": "audio/d/d06.mp3",
+"s": 87.405,
+"d": 1.593
+},
+{
+"role": "maya",
+"text": "A faint dot appears below the word.",
+"f": "audio/d/d06.mp3",
+"s": 89.398,
+"d": 1.883
+},
+{
+"role": "maya",
+"text": "fair",
+"f": "audio/d/d06.mp3",
+"s": 91.681,
+"d": 0.532
+},
+{
+"role": "maya",
+"text": "treating everyone equally",
+"f": "audio/d/d06.mp3",
+"s": 92.613,
+"d": 1.525
+},
+{
+"role": "maya",
+"text": "A fair game gives everyone a turn.",
+"f": "audio/d/d06.mp3",
+"s": 94.538,
+"d": 1.941
+},
+{
+"role": "maya",
+"text": "fairly",
+"f": "audio/d/d06.mp3",
+"s": 96.879,
+"d": 0.637
+},
+{
+"role": "maya",
+"text": "in a way that treats people equally",
+"f": "audio/d/d06.mp3",
+"s": 97.916,
+"d": 1.823
+},
+{
+"role": "maya",
+"text": "They shared the tasks fairly.",
+"f": "audio/d/d06.mp3",
+"s": 100.139,
+"d": 1.459
+},
+{
+"role": "maya",
+"text": "familiar",
+"f": "audio/d/d06.mp3",
+"s": 101.998,
+"d": 0.703
+},
+{
+"role": "maya",
+"text": "well known to you",
+"f": "audio/d/d06.mp3",
+"s": 103.101,
+"d": 0.97
+},
+{
+"role": "maya",
+"text": "The street felt familiar.",
+"f": "audio/d/d06.mp3",
+"s": 104.471,
+"d": 1.393
+},
+{
+"role": "maya",
+"text": "favorite",
+"f": "audio/d/d06.mp3",
+"s": 106.264,
+"d": 0.715
+},
+{
+"role": "maya",
+"text": "liked best",
+"f": "audio/d/d06.mp3",
+"s": 107.379,
+"d": 0.909
+},
+{
+"role": "maya",
+"text": "What is your favorite childhood game?",
+"f": "audio/d/d06.mp3",
+"s": 108.688,
+"d": 1.873
+},
+{
+"role": "maya",
+"text": "feedback",
+"f": "audio/d/d06.mp3",
+"s": 110.961,
+"d": 0.763
+},
+{
+"role": "maya",
+"text": "comments about how well someone did something",
+"f": "audio/d/d06.mp3",
+"s": 112.125,
+"d": 2.116
+},
+{
+"role": "maya",
+"text": "The teacher gives feedback after your turn.",
+"f": "audio/d/d06.mp3",
+"s": 114.641,
+"d": 2.195
+},
+{
+"role": "maya",
+"text": "feel",
+"f": "audio/d/d06.mp3",
+"s": 117.236,
+"d": 0.53
+},
+{
+"role": "maya",
+"text": "to have an emotion or sense",
+"f": "audio/d/d06.mp3",
+"s": 118.166,
+"d": 1.514
+},
+{
+"role": "maya",
+"text": "How do you feel about it now?",
+"f": "audio/d/d06.mp3",
+"s": 120.08,
+"d": 1.409
+},
+{
+"role": "maya",
+"text": "feeling",
+"f": "audio/d/d06.mp3",
+"s": 121.889,
+"d": 0.651
+},
+{
+"role": "maya",
+"text": "to have an emotion or sense",
+"f": "audio/d/d06.mp3",
+"s": 122.939,
+"d": 1.514
+},
+{
+"role": "maya",
+"text": "How do you feel about it now?",
+"f": "audio/d/d06.mp3",
+"s": 124.853,
+"d": 1.409
+},
+{
+"role": "maya",
+"text": "feels",
+"f": "audio/d/d06.mp3",
+"s": 126.662,
+"d": 0.681
+},
+{
+"role": "maya",
+"text": "to have an emotion or sense",
+"f": "audio/d/d06.mp3",
+"s": 127.743,
+"d": 1.514
+},
+{
+"role": "maya",
+"text": "How do you feel about it now?",
+"f": "audio/d/d06.mp3",
+"s": 129.657,
+"d": 1.409
+},
+{
+"role": "maya",
+"text": "fell",
+"f": "audio/d/d06.mp3",
+"s": 131.466,
+"d": 0.528
+},
+{
+"role": "maya",
+"text": "to go down quickly",
+"f": "audio/d/d06.mp3",
+"s": 132.394,
+"d": 1.172
+},
+{
+"role": "maya",
+"text": "I laughed until I fell over.",
+"f": "audio/d/d06.mp3",
+"s": 133.966,
+"d": 1.588
+},
+{
+"role": "maya",
+"text": "few",
+"f": "audio/d/d06.mp3",
+"s": 135.954,
+"d": 0.553
+},
+{
+"role": "maya",
+"text": "a small number of",
+"f": "audio/d/d06.mp3",
+"s": 136.907,
+"d": 1.055
+},
+{
+"role": "maya",
+"text": "A few friends joined us.",
+"f": "audio/d/d06.mp3",
+"s": 138.362,
+"d": 1.422
+},
+{
+"role": "maya",
+"text": "fictional",
+"f": "audio/d/d06.mp3",
+"s": 140.184,
+"d": 0.692
+},
+{
+"role": "maya",
+"text": "not real; from a story",
+"f": "audio/d/d06.mp3",
+"s": 141.276,
+"d": 1.621
+},
+{
+"role": "maya",
+"text": "Use a fictional character if you like.",
+"f": "audio/d/d06.mp3",
+"s": 143.298,
+"d": 1.999
+},
+{
+"role": "maya",
+"text": "film",
+"f": "audio/d/d06.mp3",
+"s": 145.696,
+"d": 0.596
+},
+{
+"role": "maya",
+"text": "a movie",
+"f": "audio/d/d06.mp3",
+"s": 146.692,
+"d": 0.651
+},
+{
+"role": "maya",
+"text": "Would you rather read a book or watch a film?",
+"f": "audio/d/d06.mp3",
+"s": 147.744,
+"d": 2.094
+},
+{
+"role": "maya",
+"text": "final",
+"f": "audio/d/d06.mp3",
+"s": 150.238,
+"d": 0.601
+},
+{
+"role": "maya",
+"text": "last",
+"f": "audio/d/d06.mp3",
+"s": 151.238,
+"d": 0.626
+},
+{
+"role": "maya",
+"text": "State your final answer.",
+"f": "audio/d/d06.mp3",
+"s": 152.264,
+"d": 1.418
+},
+{
+"role": "maya",
+"text": "find",
+"f": "audio/d/d06.mp3",
+"s": 154.082,
+"d": 0.617
+},
+{
+"role": "maya",
+"text": "to discover something",
+"f": "audio/d/d06.mp3",
+"s": 155.099,
+"d": 1.172
+},
+{
+"role": "maya",
+"text": "Someone you've never met will find it.",
+"f": "audio/d/d06.mp3",
+"s": 156.671,
+"d": 1.75
+},
+{
+"role": "maya",
+"text": "finds",
+"f": "audio/d/d06.mp3",
+"s": 158.821,
+"d": 0.675
+},
+{
+"role": "maya",
+"text": "to discover something",
+"f": "audio/d/d06.mp3",
+"s": 159.896,
+"d": 1.172
+},
+{
+"role": "maya",
+"text": "Someone you've never met will find it.",
+"f": "audio/d/d06.mp3",
+"s": 161.468,
+"d": 1.75
+},
+{
+"role": "maya",
+"text": "fine",
+"f": "audio/d/d06.mp3",
+"s": 163.618,
+"d": 0.591
+},
+{
+"role": "maya",
+"text": "good enough; okay",
+"f": "audio/d/d06.mp3",
+"s": 164.609,
+"d": 1.144
+},
+{
+"role": "maya",
+"text": "Pass is fine.",
+"f": "audio/d/d06.mp3",
+"s": 166.152,
+"d": 0.96
+},
+{
+"role": "maya",
+"text": "finish",
+"f": "audio/d/d06.mp3",
+"s": 167.512,
+"d": 0.638
+},
+{
+"role": "maya",
+"text": "to complete",
+"f": "audio/d/d06.mp3",
+"s": 168.55,
+"d": 0.887
+},
+{
+"role": "maya",
+"text": "Finish the story with an ending.",
+"f": "audio/d/d06.mp3",
+"s": 169.837,
+"d": 1.624
+},
+{
+"role": "maya",
+"text": "first",
+"f": "audio/d/d06.mp3",
+"s": 171.86,
+"d": 0.654
+},
+{
+"role": "maya",
+"text": "before anything else",
+"f": "audio/d/d06.mp3",
+"s": 172.915,
+"d": 1.105
+},
+{
+"role": "maya",
+"text": "First, we played tag.",
+"f": "audio/d/d06.mp3",
+"s": 174.42,
+"d": 1.297
+},
+{
+"role": "maya",
+"text": "five",
+"f": "audio/d/d06.mp3",
+"s": 176.117,
+"d": 0.606
+},
+{
+"role": "maya",
+"text": "the number 5",
+"f": "audio/d/d06.mp3",
+"s": 177.123,
+"d": 0.934
+},
+{
+"role": "maya",
+"text": "There are five choices on the scale.",
+"f": "audio/d/d06.mp3",
+"s": 178.457,
+"d": 1.873
+},
+{
+"role": "maya",
+"text": "fix",
+"f": "audio/d/d06.mp3",
+"s": 180.729,
+"d": 0.603
+},
+{
+"role": "maya",
+"text": "to repair",
+"f": "audio/d/d06.mp3",
+"s": 181.732,
+"d": 0.753
+},
+{
+"role": "maya",
+"text": "We'd like to fix it together.",
+"f": "audio/d/d06.mp3",
+"s": 182.885,
+"d": 1.457
+},
+{
+"role": "maya",
+"text": "flashlight",
+"f": "audio/d/d06.mp3",
+"s": 184.742,
+"d": 0.817
+},
+{
+"role": "maya",
+"text": "a small light that you carry in your hand",
+"f": "audio/d/d06.mp3",
+"s": 185.96,
+"d": 1.957
+},
+{
+"role": "maya",
+"text": "I used to keep a flashlight under my pillow.",
+"f": "audio/d/d06.mp3",
+"s": 188.317,
+"d": 2.391
+},
+{
+"role": "maya",
+"text": "float",
+"f": "audio/d/d06.mp3",
+"s": 191.108,
+"d": 0.639
+},
+{
+"role": "maya",
+"text": "to stay on top of water",
+"f": "audio/d/d06.mp3",
+"s": 192.147,
+"d": 1.348
+},
+{
+"role": "maya",
+"text": "A neighbor taught me to float.",
+"f": "audio/d/d06.mp3",
+"s": 193.895,
+"d": 1.464
+},
+{
+"role": "maya",
+"text": "fluent",
+"f": "audio/d/d06.mp3",
+"s": 195.759,
+"d": 0.648
+},
+{
+"role": "maya",
+"text": "able to speak a language easily",
+"f": "audio/d/d06.mp3",
+"s": 196.807,
+"d": 1.763
+},
+{
+"role": "maya",
+"text": "Keep practicing to become fluent.",
+"f": "audio/d/d06.mp3",
+"s": 198.97,
+"d": 1.851
+},
+{
+"role": "maya",
+"text": "flying",
+"f": "audio/d/d06.mp3",
+"s": 201.221,
+"d": 0.665
+},
+{
+"role": "maya",
+"text": "to move through the air",
+"f": "audio/d/d06.mp3",
+"s": 202.286,
+"d": 1.141
+},
+{
+"role": "maya",
+"text": "Spinning felt like flying.",
+"f": "audio/d/d06.mp3",
+"s": 203.827,
+"d": 1.481
+},
+{
+"role": "maya",
+"text": "follow-up",
+"f": "audio/d/d06.mp3",
+"s": 205.708,
+"d": 0.745
+},
+{
+"role": "maya",
+"text": "coming after something",
+"f": "audio/d/d06.mp3",
+"s": 206.853,
+"d": 1.187
+},
+{
+"role": "maya",
+"text": "Ask a follow-up question.",
+"f": "audio/d/d06.mp3",
+"s": 208.44,
+"d": 1.456
+},
+{
+"role": "maya",
+"text": "for",
+"f": "audio/d/d06.mp3",
+"s": 210.296,
+"d": 0.528
+},
+{
+"role": "maya",
+"text": "intended to help or belong to",
+"f": "audio/d/d06.mp3",
+"s": 211.223,
+"d": 1.697
+},
+{
+"role": "maya",
+"text": "This card is for you.",
+"f": "audio/d/d06.mp3",
+"s": 213.32,
+"d": 1.184
+},
+{
+"role": "maya",
+"text": "form",
+"f": "audio/d/d06.mp3",
+"s": 214.904,
+"d": 0.601
+},
+{
+"role": "maya",
+"text": "a particular shape or type of something",
+"f": "audio/d/d06.mp3",
+"s": 215.906,
+"d": 2.191
+},
+{
+"role": "maya",
+"text": "Use the base form of the verb.",
+"f": "audio/d/d06.mp3",
+"s": 218.497,
+"d": 1.717
+},
+{
+"role": "maya",
+"text": "found",
+"f": "audio/d/d06.mp3",
+"s": 220.614,
+"d": 0.617
+},
+{
+"role": "maya",
+"text": "to discover something",
+"f": "audio/d/d06.mp3",
+"s": 221.631,
+"d": 1.172
+},
+{
+"role": "maya",
+"text": "Someone you've never met will find it.",
+"f": "audio/d/d06.mp3",
+"s": 223.202,
+"d": 1.75
+},
+{
+"role": "maya",
+"text": "independence",
+"f": "audio/d/d09.mp3",
+"s": 0.0,
+"d": 0.93
+},
+{
+"role": "maya",
+"text": "the ability to do things by yourself",
+"f": "audio/d/d09.mp3",
+"s": 1.33,
+"d": 2.014
+},
+{
+"role": "maya",
+"text": "Chores teach independence.",
+"f": "audio/d/d09.mp3",
+"s": 3.744,
+"d": 1.511
+},
+{
+"role": "maya",
+"text": "independent",
+"f": "audio/d/d09.mp3",
+"s": 5.655,
+"d": 0.888
+},
+{
+"role": "maya",
+"text": "able to do things or make some decisions without help",
+"f": "audio/d/d09.mp3",
+"s": 6.943,
+"d": 3.086
+},
+{
+"role": "maya",
+"text": "I became more independent when I learned to prepare a simple snack.",
+"f": "audio/d/d09.mp3",
+"s": 10.429,
+"d": 3.926
+},
+{
+"role": "maya",
+"text": "independently",
+"f": "audio/d/d09.mp3",
+"s": 14.755,
+"d": 0.97
+},
+{
+"role": "maya",
+"text": "able to do things or make some decisions without help",
+"f": "audio/d/d09.mp3",
+"s": 16.124,
+"d": 3.086
+},
+{
+"role": "maya",
+"text": "I became more independent when I learned to prepare a simple snack.",
+"f": "audio/d/d09.mp3",
+"s": 19.61,
+"d": 3.926
+},
+{
+"role": "maya",
+"text": "ing",
+"f": "audio/d/d09.mp3",
+"s": 23.936,
+"d": 0.526
+},
+{
+"role": "maya",
+"text": "the ending of a verb such as playing or running",
+"f": "audio/d/d09.mp3",
+"s": 24.862,
+"d": 2.355
+},
+{
+"role": "maya",
+"text": "Add -ing to the verb.",
+"f": "audio/d/d09.mp3",
+"s": 27.617,
+"d": 1.121
+},
+{
+"role": "maya",
+"text": "instructions",
+"f": "audio/d/d09.mp3",
+"s": 29.138,
+"d": 0.933
+},
+{
+"role": "maya",
+"text": "a statement that tells you how to do something",
+"f": "audio/d/d09.mp3",
+"s": 30.471,
+"d": 2.267
+},
+{
+"role": "maya",
+"text": "There are no spoken instructions.",
+"f": "audio/d/d09.mp3",
+"s": 33.138,
+"d": 1.693
+},
+{
+"role": "maya",
+"text": "interaction",
+"f": "audio/d/d09.mp3",
+"s": 35.231,
+"d": 0.866
+},
+{
+"role": "maya",
+"text": "talking and working with other people",
+"f": "audio/d/d09.mp3",
+"s": 36.496,
+"d": 1.864
+},
+{
+"role": "maya",
+"text": "Interaction is part of the rubric.",
+"f": "audio/d/d09.mp3",
+"s": 38.76,
+"d": 2.057
+},
+{
+"role": "maya",
+"text": "interest",
+"f": "audio/d/d09.mp3",
+"s": 41.217,
+"d": 0.745
+},
+{
+"role": "maya",
+"text": "something you like to do or learn about",
+"f": "audio/d/d09.mp3",
+"s": 42.361,
+"d": 2.034
+},
+{
+"role": "maya",
+"text": "My interests have changed.",
+"f": "audio/d/d09.mp3",
+"s": 44.796,
+"d": 1.418
+},
+{
+"role": "maya",
+"text": "interests",
+"f": "audio/d/d09.mp3",
+"s": 46.613,
+"d": 0.794
+},
+{
+"role": "maya",
+"text": "something you like to do or learn about",
+"f": "audio/d/d09.mp3",
+"s": 47.808,
+"d": 2.034
+},
+{
+"role": "maya",
+"text": "My interests have changed.",
+"f": "audio/d/d09.mp3",
+"s": 50.242,
+"d": 1.418
+},
+{
+"role": "maya",
+"text": "into",
+"f": "audio/d/d09.mp3",
+"s": 52.059,
+"d": 0.519
+},
+{
+"role": "maya",
+"text": "to the inside of",
+"f": "audio/d/d09.mp3",
+"s": 52.978,
+"d": 1.034
+},
+{
+"role": "maya",
+"text": "We turned the box into a castle.",
+"f": "audio/d/d09.mp3",
+"s": 54.412,
+"d": 1.637
+},
+{
+"role": "maya",
+"text": "invent",
+"f": "audio/d/d09.mp3",
+"s": 56.449,
+"d": 0.702
+},
+{
+"role": "maya",
+"text": "to create something new",
+"f": "audio/d/d09.mp3",
+"s": 57.551,
+"d": 1.295
+},
+{
+"role": "maya",
+"text": "They like to invent games.",
+"f": "audio/d/d09.mp3",
+"s": 59.246,
+"d": 1.414
+},
+{
+"role": "maya",
+"text": "invite",
+"f": "audio/d/d09.mp3",
+"s": 61.06,
+"d": 0.682
+},
+{
+"role": "maya",
+"text": "to ask someone to join",
+"f": "audio/d/d09.mp3",
+"s": 62.142,
+"d": 1.263
+},
+{
+"role": "maya",
+"text": "Invite the newcomer to play.",
+"f": "audio/d/d09.mp3",
+"s": 63.805,
+"d": 1.473
+},
+{
+"role": "maya",
+"text": "is",
+"f": "audio/d/d09.mp3",
+"s": 65.678,
+"d": 0.488
+},
+{
+"role": "maya",
+"text": "to exist or to have a quality",
+"f": "audio/d/d09.mp3",
+"s": 66.565,
+"d": 1.825
+},
+{
+"role": "maya",
+"text": "I used to be shy.",
+"f": "audio/d/d09.mp3",
+"s": 68.791,
+"d": 1.105
+},
+{
+"role": "maya",
+"text": "isn't",
+"f": "audio/d/d09.mp3",
+"s": 70.296,
+"d": 0.644
+},
+{
+"role": "maya",
+"text": "to exist or to have a quality",
+"f": "audio/d/d09.mp3",
+"s": 71.34,
+"d": 1.825
+},
+{
+"role": "maya",
+"text": "I used to be shy.",
+"f": "audio/d/d09.mp3",
+"s": 73.566,
+"d": 1.105
+},
+{
+"role": "maya",
+"text": "it",
+"f": "audio/d/d09.mp3",
+"s": 75.071,
+"d": 0.401
+},
+{
+"role": "maya",
+"text": "a thing that was already mentioned",
+"f": "audio/d/d09.mp3",
+"s": 75.872,
+"d": 1.579
+},
+{
+"role": "maya",
+"text": "It was a sunny day.",
+"f": "audio/d/d09.mp3",
+"s": 77.85,
+"d": 1.082
+},
+{
+"role": "maya",
+"text": "it's",
+"f": "audio/d/d09.mp3",
+"s": 79.332,
+"d": 0.459
+},
+{
+"role": "maya",
+"text": "a thing that was already mentioned",
+"f": "audio/d/d09.mp3",
+"s": 80.191,
+"d": 1.579
+},
+{
+"role": "maya",
+"text": "It was a sunny day.",
+"f": "audio/d/d09.mp3",
+"s": 82.17,
+"d": 1.082
+},
+{
+"role": "maya",
+"text": "item",
+"f": "audio/d/d09.mp3",
+"s": 83.652,
+"d": 0.605
+},
+{
+"role": "maya",
+"text": "one thing in a list",
+"f": "audio/d/d09.mp3",
+"s": 84.656,
+"d": 1.117
+},
+{
+"role": "maya",
+"text": "Reveal the next item.",
+"f": "audio/d/d09.mp3",
+"s": 86.173,
+"d": 1.302
+},
+{
+"role": "maya",
+"text": "its",
+"f": "audio/d/d09.mp3",
+"s": 87.875,
+"d": 0.459
+},
+{
+"role": "maya",
+"text": "a thing that was already mentioned",
+"f": "audio/d/d09.mp3",
+"s": 88.734,
+"d": 1.579
+},
+{
+"role": "maya",
+"text": "It was a sunny day.",
+"f": "audio/d/d09.mp3",
+"s": 90.712,
+"d": 1.082
+},
+{
+"role": "maya",
+"text": "itself",
+"f": "audio/d/d09.mp3",
+"s": 92.194,
+"d": 0.728
+},
+{
+"role": "maya",
+"text": "a thing that was already mentioned",
+"f": "audio/d/d09.mp3",
+"s": 93.322,
+"d": 1.579
+},
+{
+"role": "maya",
+"text": "It was a sunny day.",
+"f": "audio/d/d09.mp3",
+"s": 95.301,
+"d": 1.082
+},
+{
+"role": "maya",
+"text": "j",
+"f": "audio/d/d09.mp3",
+"s": 96.782,
+"d": 0.553
+},
+{
+"role": "maya",
+"text": "the tenth letter of the alphabet",
+"f": "audio/d/d09.mp3",
+"s": 97.735,
+"d": 1.753
+},
+{
+"role": "maya",
+"text": "Press J to add a star.",
+"f": "audio/d/d09.mp3",
+"s": 99.888,
+"d": 1.387
+},
+{
+"role": "maya",
+"text": "jar",
+"f": "audio/d/d09.mp3",
+"s": 101.675,
+"d": 0.579
+},
+{
+"role": "maya",
+"text": "a glass container with a wide opening",
+"f": "audio/d/d09.mp3",
+"s": 102.653,
+"d": 2.075
+},
+{
+"role": "maya",
+"text": "The memory jar is filling with stars.",
+"f": "audio/d/d09.mp3",
+"s": 105.129,
+"d": 2.046
+},
+{
+"role": "maya",
+"text": "job",
+"f": "audio/d/d09.mp3",
+"s": 107.574,
+"d": 0.526
+},
+{
+"role": "maya",
+"text": "a task or work",
+"f": "audio/d/d09.mp3",
+"s": 108.5,
+"d": 1.055
+},
+{
+"role": "maya",
+"text": "Everyone had a job.",
+"f": "audio/d/d09.mp3",
+"s": 109.955,
+"d": 1.179
+},
+{
+"role": "maya",
+"text": "join",
+"f": "audio/d/d09.mp3",
+"s": 111.534,
+"d": 0.601
+},
+{
+"role": "maya",
+"text": "to become part of a group",
+"f": "audio/d/d09.mp3",
+"s": 112.535,
+"d": 1.336
+},
+{
+"role": "maya",
+"text": "Can I join in?",
+"f": "audio/d/d09.mp3",
+"s": 114.271,
+"d": 1.02
+},
+{
+"role": "maya",
+"text": "join in",
+"f": "audio/d/d09.mp3",
+"s": 115.691,
+"d": 0.727
+},
+{
+"role": "maya",
+"text": "to take part in an activity that has already started",
+"f": "audio/d/d09.mp3",
+"s": 116.818,
+"d": 2.976
+},
+{
+"role": "maya",
+"text": "Let's make sure everyone can join in.",
+"f": "audio/d/d09.mp3",
+"s": 120.194,
+"d": 1.953
+},
+{
+"role": "maya",
+"text": "joined",
+"f": "audio/d/d09.mp3",
+"s": 122.547,
+"d": 0.616
+},
+{
+"role": "maya",
+"text": "to become part of a group",
+"f": "audio/d/d09.mp3",
+"s": 123.563,
+"d": 1.336
+},
+{
+"role": "maya",
+"text": "Can I join in?",
+"f": "audio/d/d09.mp3",
+"s": 125.299,
+"d": 1.02
+},
+{
+"role": "maya",
+"text": "json",
+"f": "audio/d/d09.mp3",
+"s": 126.719,
+"d": 0.776
+},
+{
+"role": "maya",
+"text": "a file type for storing information as text",
+"f": "audio/d/d09.mp3",
+"s": 127.895,
+"d": 2.663
+},
+{
+"role": "maya",
+"text": "Export the data as a JSON file.",
+"f": "audio/d/d09.mp3",
+"s": 130.958,
+"d": 2.299
+},
+{
+"role": "maya",
+"text": "judge",
+"f": "audio/d/d09.mp3",
+"s": 133.657,
+"d": 0.621
+},
+{
+"role": "maya",
+"text": "a person who decides who wins",
+"f": "audio/d/d09.mp3",
+"s": 134.677,
+"d": 1.803
+},
+{
+"role": "maya",
+"text": "We took turns being the judge.",
+"f": "audio/d/d09.mp3",
+"s": 136.88,
+"d": 1.61
+},
+{
+"role": "maya",
+"text": "judgment",
+"f": "audio/d/d09.mp3",
+"s": 138.89,
+"d": 0.765
+},
+{
+"role": "maya",
+"text": "an opinion about whether something is good or bad",
+"f": "audio/d/d09.mp3",
+"s": 140.056,
+"d": 2.576
+},
+{
+"role": "maya",
+"text": "This task is a negotiation, not a judgment.",
+"f": "audio/d/d09.mp3",
+"s": 143.032,
+"d": 2.863
+},
+{
+"role": "maya",
+"text": "just",
+"f": "audio/d/d09.mp3",
+"s": 146.295,
+"d": 0.566
+},
+{
+"role": "maya",
+"text": "only; very recently",
+"f": "audio/d/d09.mp3",
+"s": 147.261,
+"d": 1.473
+},
+{
+"role": "maya",
+"text": "The newcomer just moved here.",
+"f": "audio/d/d09.mp3",
+"s": 149.134,
+"d": 1.5
+},
+{
+"role": "maya",
+"text": "keep",
+"f": "audio/d/d09.mp3",
+"s": 151.034,
+"d": 0.529
+},
+{
+"role": "maya",
+"text": "to continue to have or do",
+"f": "audio/d/d09.mp3",
+"s": 151.963,
+"d": 1.47
+},
+{
+"role": "maya",
+"text": "Keep speaking.",
+"f": "audio/d/d09.mp3",
+"s": 153.833,
+"d": 0.924
+},
+{
+"role": "maya",
+"text": "keep in touch",
+"f": "audio/d/d09.mp3",
+"s": 155.157,
+"d": 0.934
+},
+{
+"role": "maya",
+"text": "to stay in contact with someone",
+"f": "audio/d/d09.mp3",
+"s": 156.491,
+"d": 1.745
+},
+{
+"role": "maya",
+"text": "Would you like to keep in touch?",
+"f": "audio/d/d09.mp3",
+"s": 158.636,
+"d": 1.456
+},
+{
+"role": "maya",
+"text": "keeps",
+"f": "audio/d/d09.mp3",
+"s": 160.492,
+"d": 0.584
+},
+{
+"role": "maya",
+"text": "to continue to have or do",
+"f": "audio/d/d09.mp3",
+"s": 161.476,
+"d": 1.47
+},
+{
+"role": "maya",
+"text": "Keep speaking.",
+"f": "audio/d/d09.mp3",
+"s": 163.346,
+"d": 0.924
+},
+{
+"role": "maya",
+"text": "kept",
+"f": "audio/d/d09.mp3",
+"s": 164.67,
+"d": 0.509
+},
+{
+"role": "maya",
+"text": "to continue to have or do",
+"f": "audio/d/d09.mp3",
+"s": 165.579,
+"d": 1.47
+},
+{
+"role": "maya",
+"text": "Keep speaking.",
+"f": "audio/d/d09.mp3",
+"s": 167.449,
+"d": 0.924
+},
+{
+"role": "maya",
+"text": "keyboard",
+"f": "audio/d/d09.mp3",
+"s": 168.773,
+"d": 0.553
+},
+{
+"role": "maya",
+"text": "the keys that you press to type",
+"f": "audio/d/d09.mp3",
+"s": 169.726,
+"d": 1.656
+},
+{
+"role": "maya",
+"text": "Use the keyboard to move the card.",
+"f": "audio/d/d09.mp3",
+"s": 171.782,
+"d": 1.826
+},
+{
+"role": "maya",
+"text": "kid",
+"f": "audio/d/d09.mp3",
+"s": 174.008,
+"d": 0.554
+},
+{
+"role": "maya",
+"text": "a child",
+"f": "audio/d/d09.mp3",
+"s": 174.962,
+"d": 0.703
+},
+{
+"role": "maya",
+"text": "The kids next door played with us.",
+"f": "audio/d/d09.mp3",
+"s": 176.065,
+"d": 1.876
+},
+{
+"role": "maya",
+"text": "kids",
+"f": "audio/d/d09.mp3",
+"s": 178.341,
+"d": 0.599
+},
+{
+"role": "maya",
+"text": "a child",
+"f": "audio/d/d09.mp3",
+"s": 179.34,
+"d": 0.703
+},
+{
+"role": "maya",
+"text": "The kids next door played with us.",
+"f": "audio/d/d09.mp3",
+"s": 180.443,
+"d": 1.876
+},
+{
+"role": "maya",
+"text": "kite",
+"f": "audio/d/d09.mp3",
+"s": 182.719,
+"d": 0.583
+},
+{
+"role": "maya",
+"text": "a toy that flies on a long string",
+"f": "audio/d/d09.mp3",
+"s": 183.702,
+"d": 1.892
+},
+{
+"role": "maya",
+"text": "One afternoon, we built a kite.",
+"f": "audio/d/d09.mp3",
+"s": 185.994,
+"d": 1.889
+},
+{
+"role": "maya",
+"text": "knew",
+"f": "audio/d/d09.mp3",
+"s": 188.283,
+"d": 0.566
+},
+{
+"role": "maya",
+"text": "to have information in your mind",
+"f": "audio/d/d09.mp3",
+"s": 189.249,
+"d": 1.689
+},
+{
+"role": "maya",
+"text": "I know the rules.",
+"f": "audio/d/d09.mp3",
+"s": 191.337,
+"d": 1.011
+},
+{
+"role": "maya",
+"text": "knock",
+"f": "audio/d/d09.mp3",
+"s": 192.748,
+"d": 0.588
+},
+{
+"role": "maya",
+"text": "the sound of hitting a door",
+"f": "audio/d/d09.mp3",
+"s": 193.736,
+"d": 1.356
+},
+{
+"role": "maya",
+"text": "They heard a quiet knock.",
+"f": "audio/d/d09.mp3",
+"s": 195.493,
+"d": 1.352
+},
+{
+"role": "maya",
+"text": "know",
+"f": "audio/d/d09.mp3",
+"s": 197.245,
+"d": 0.565
+},
+{
+"role": "maya",
+"text": "to have information in your mind",
+"f": "audio/d/d09.mp3",
+"s": 198.21,
+"d": 1.689
+},
+{
+"role": "maya",
+"text": "I know the rules.",
+"f": "audio/d/d09.mp3",
+"s": 200.298,
+"d": 1.011
+},
+{
+"role": "maya",
+"text": "knows",
+"f": "audio/d/d09.mp3",
+"s": 201.709,
+"d": 0.627
+},
+{
+"role": "maya",
+"text": "to have information in your mind",
+"f": "audio/d/d09.mp3",
+"s": 202.736,
+"d": 1.689
+},
+{
+"role": "maya",
+"text": "I know the rules.",
+"f": "audio/d/d09.mp3",
+"s": 204.824,
+"d": 1.011
+},
+{
+"role": "maya",
+"text": "lake",
+"f": "audio/d/d09.mp3",
+"s": 206.235,
+"d": 0.576
+},
+{
+"role": "maya",
+"text": "a large area of water with land around it",
+"f": "audio/d/d09.mp3",
+"s": 207.212,
+"d": 2.347
+},
+{
+"role": "maya",
+"text": "I swam across the lake.",
+"f": "audio/d/d09.mp3",
+"s": 209.959,
+"d": 1.351
+},
+{
+"role": "maya",
+"text": "last",
+"f": "audio/d/d09.mp3",
+"s": 211.71,
+"d": 0.67
+},
+{
+"role": "maya",
+"text": "final",
+"f": "audio/d/d09.mp3",
+"s": 212.78,
+"d": 0.591
+},
+{
+"role": "maya",
+"text": "This is the last task.",
+"f": "audio/d/d09.mp3",
+"s": 213.771,
+"d": 1.322
+},
+{
+"role": "maya",
+"text": "later",
+"f": "audio/d/d09.mp3",
+"s": 215.493,
+"d": 0.634
+},
+{
+"role": "maya",
+"text": "after the present time",
+"f": "audio/d/d09.mp3",
+"s": 216.526,
+"d": 1.251
+},
+{
+"role": "maya",
+"text": "We met later in life.",
+"f": "audio/d/d09.mp3",
+"s": 218.177,
+"d": 1.265
+},
+{
+"role": "maya",
+"text": "laugh",
+"f": "audio/d/d09.mp3",
+"s": 219.842,
+"d": 0.556
+},
+{
+"role": "maya",
+"text": "to make a sound that shows you think something is funny",
+"f": "audio/d/d09.mp3",
+"s": 220.798,
+"d": 2.663
+},
+{
+"role": "maya",
+"text": "We would laugh until we fell over.",
+"f": "audio/d/d09.mp3",
+"s": 223.862,
+"d": 1.809
+},
+{
+"role": "maya",
+"text": "learn",
+"f": "audio/d/d09.mp3",
+"s": 226.07,
+"d": 0.575
+},
+{
+"role": "maya",
+"text": "to get new knowledge or skill",
+"f": "audio/d/d09.mp3",
+"s": 227.045,
+"d": 1.472
+},
+{
+"role": "maya",
+"text": "I learned to prepare a simple snack.",
+"f": "audio/d/d09.mp3",
+"s": 228.918,
+"d": 1.922
+},
+{
+"role": "maya",
+"text": "names",
+"f": "audio/d/d12.mp3",
+"s": 0.0,
+"d": 0.656
+},
+{
+"role": "maya",
+"text": "the word that people call you",
+"f": "audio/d/d12.mp3",
+"s": 1.056,
+"d": 1.56
+},
+{
+"role": "maya",
+"text": "Please do not write full names.",
+"f": "audio/d/d12.mp3",
+"s": 3.017,
+"d": 1.646
+},
+{
+"role": "maya",
+"text": "narration",
+"f": "audio/d/d12.mp3",
+"s": 5.063,
+"d": 0.805
+},
+{
+"role": "maya",
+"text": "a voice that tells or explains something",
+"f": "audio/d/d12.mp3",
+"s": 6.267,
+"d": 2.012
+},
+{
+"role": "maya",
+"text": "The narration stops while you speak.",
+"f": "audio/d/d12.mp3",
+"s": 8.68,
+"d": 1.782
+},
+{
+"role": "maya",
+"text": "natural",
+"f": "audio/d/d12.mp3",
+"s": 10.862,
+"d": 0.731
+},
+{
+"role": "maya",
+"text": "normal and easy",
+"f": "audio/d/d12.mp3",
+"s": 11.993,
+"d": 1.056
+},
+{
+"role": "maya",
+"text": "Which question is natural?",
+"f": "audio/d/d12.mp3",
+"s": 13.449,
+"d": 1.51
+},
+{
+"role": "maya",
+"text": "near",
+"f": "audio/d/d12.mp3",
+"s": 15.359,
+"d": 0.553
+},
+{
+"role": "maya",
+"text": "close to",
+"f": "audio/d/d12.mp3",
+"s": 16.311,
+"d": 0.75
+},
+{
+"role": "maya",
+"text": "I grew up near a river.",
+"f": "audio/d/d12.mp3",
+"s": 17.461,
+"d": 1.262
+},
+{
+"role": "maya",
+"text": "nearby",
+"f": "audio/d/d12.mp3",
+"s": 19.123,
+"d": 0.7
+},
+{
+"role": "maya",
+"text": "close",
+"f": "audio/d/d12.mp3",
+"s": 20.223,
+"d": 0.609
+},
+{
+"role": "maya",
+"text": "A nearby friend joined us.",
+"f": "audio/d/d12.mp3",
+"s": 21.232,
+"d": 1.562
+},
+{
+"role": "maya",
+"text": "need",
+"f": "audio/d/d12.mp3",
+"s": 23.194,
+"d": 0.555
+},
+{
+"role": "maya",
+"text": "to require",
+"f": "audio/d/d12.mp3",
+"s": 24.148,
+"d": 0.822
+},
+{
+"role": "maya",
+"text": "We need a backup plan.",
+"f": "audio/d/d12.mp3",
+"s": 25.37,
+"d": 1.26
+},
+{
+"role": "maya",
+"text": "needing",
+"f": "audio/d/d12.mp3",
+"s": 27.03,
+"d": 0.655
+},
+{
+"role": "maya",
+"text": "to require",
+"f": "audio/d/d12.mp3",
+"s": 28.085,
+"d": 0.822
+},
+{
+"role": "maya",
+"text": "We need a backup plan.",
+"f": "audio/d/d12.mp3",
+"s": 29.307,
+"d": 1.26
+},
+{
+"role": "maya",
+"text": "needs",
+"f": "audio/d/d12.mp3",
+"s": 30.966,
+"d": 0.688
+},
+{
+"role": "maya",
+"text": "to require",
+"f": "audio/d/d12.mp3",
+"s": 32.055,
+"d": 0.822
+},
+{
+"role": "maya",
+"text": "We need a backup plan.",
+"f": "audio/d/d12.mp3",
+"s": 33.277,
+"d": 1.26
+},
+{
+"role": "maya",
+"text": "negatives",
+"f": "audio/d/d12.mp3",
+"s": 34.936,
+"d": 0.854
+},
+{
+"role": "maya",
+"text": "a sentence that says something is not true",
+"f": "audio/d/d12.mp3",
+"s": 36.191,
+"d": 2.071
+},
+{
+"role": "maya",
+"text": "Practice questions and negatives.",
+"f": "audio/d/d12.mp3",
+"s": 38.661,
+"d": 1.94
+},
+{
+"role": "maya",
+"text": "negotiation",
+"f": "audio/d/d12.mp3",
+"s": 41.001,
+"d": 1.056
+},
+{
+"role": "maya",
+"text": "a discussion in which people try to agree",
+"f": "audio/d/d12.mp3",
+"s": 42.457,
+"d": 2.351
+},
+{
+"role": "maya",
+"text": "This is a negotiation task.",
+"f": "audio/d/d12.mp3",
+"s": 45.208,
+"d": 1.839
+},
+{
+"role": "maya",
+"text": "neighbor",
+"f": "audio/d/d12.mp3",
+"s": 47.447,
+"d": 0.651
+},
+{
+"role": "maya",
+"text": "a person who lives near you",
+"f": "audio/d/d12.mp3",
+"s": 48.497,
+"d": 1.507
+},
+{
+"role": "maya",
+"text": "A neighbor taught me to float.",
+"f": "audio/d/d12.mp3",
+"s": 50.404,
+"d": 1.464
+},
+{
+"role": "maya",
+"text": "neighborhood",
+"f": "audio/d/d12.mp3",
+"s": 52.268,
+"d": 0.753
+},
+{
+"role": "maya",
+"text": "an area of a town where people live",
+"f": "audio/d/d12.mp3",
+"s": 53.421,
+"d": 2.291
+},
+{
+"role": "maya",
+"text": "The neighborhood felt very big.",
+"f": "audio/d/d12.mp3",
+"s": 56.112,
+"d": 1.634
+},
+{
+"role": "maya",
+"text": "nervous",
+"f": "audio/d/d12.mp3",
+"s": 58.146,
+"d": 0.688
+},
+{
+"role": "maya",
+"text": "worried and a little afraid",
+"f": "audio/d/d12.mp3",
+"s": 59.234,
+"d": 1.533
+},
+{
+"role": "maya",
+"text": "I was nervous on stage.",
+"f": "audio/d/d12.mp3",
+"s": 61.167,
+"d": 1.427
+},
+{
+"role": "maya",
+"text": "never",
+"f": "audio/d/d12.mp3",
+"s": 62.994,
+"d": 0.605
+},
+{
+"role": "maya",
+"text": "not at any time",
+"f": "audio/d/d12.mp3",
+"s": 63.999,
+"d": 1.068
+},
+{
+"role": "maya",
+"text": "I've never met that person.",
+"f": "audio/d/d12.mp3",
+"s": 65.466,
+"d": 1.475
+},
+{
+"role": "maya",
+"text": "new",
+"f": "audio/d/d12.mp3",
+"s": 67.341,
+"d": 0.566
+},
+{
+"role": "maya",
+"text": "recently made or arrived",
+"f": "audio/d/d12.mp3",
+"s": 68.307,
+"d": 1.598
+},
+{
+"role": "maya",
+"text": "A new child walks over.",
+"f": "audio/d/d12.mp3",
+"s": 70.305,
+"d": 1.447
+},
+{
+"role": "maya",
+"text": "newcomer",
+"f": "audio/d/d12.mp3",
+"s": 72.153,
+"d": 0.706
+},
+{
+"role": "maya",
+"text": "a person who has just arrived",
+"f": "audio/d/d12.mp3",
+"s": 73.259,
+"d": 1.656
+},
+{
+"role": "maya",
+"text": "They included the newcomer.",
+"f": "audio/d/d12.mp3",
+"s": 75.315,
+"d": 1.32
+},
+{
+"role": "maya",
+"text": "next",
+"f": "audio/d/d12.mp3",
+"s": 77.035,
+"d": 0.628
+},
+{
+"role": "maya",
+"text": "coming after this one",
+"f": "audio/d/d12.mp3",
+"s": 78.062,
+"d": 1.125
+},
+{
+"role": "maya",
+"text": "Reveal the next item.",
+"f": "audio/d/d12.mp3",
+"s": 79.588,
+"d": 1.302
+},
+{
+"role": "maya",
+"text": "no",
+"f": "audio/d/d12.mp3",
+"s": 81.29,
+"d": 0.565
+},
+{
+"role": "maya",
+"text": "not any",
+"f": "audio/d/d12.mp3",
+"s": 82.255,
+"d": 0.686
+},
+{
+"role": "maya",
+"text": "There is no wrong answer.",
+"f": "audio/d/d12.mp3",
+"s": 83.341,
+"d": 1.353
+},
+{
+"role": "maya",
+"text": "nobody",
+"f": "audio/d/d12.mp3",
+"s": 85.094,
+"d": 0.764
+},
+{
+"role": "maya",
+"text": "no person",
+"f": "audio/d/d12.mp3",
+"s": 86.258,
+"d": 0.873
+},
+{
+"role": "maya",
+"text": "Nobody wants to stop the game.",
+"f": "audio/d/d12.mp3",
+"s": 87.531,
+"d": 1.697
+},
+{
+"role": "maya",
+"text": "not",
+"f": "audio/d/d12.mp3",
+"s": 89.627,
+"d": 0.594
+},
+{
+"role": "maya",
+"text": "used to make a word mean the opposite",
+"f": "audio/d/d12.mp3",
+"s": 90.621,
+"d": 2.177
+},
+{
+"role": "maya",
+"text": "It is not a fact.",
+"f": "audio/d/d12.mp3",
+"s": 93.198,
+"d": 1.152
+},
+{
+"role": "maya",
+"text": "note",
+"f": "audio/d/d12.mp3",
+"s": 94.75,
+"d": 0.596
+},
+{
+"role": "maya",
+"text": "a short written message",
+"f": "audio/d/d12.mp3",
+"s": 95.746,
+"d": 1.235
+},
+{
+"role": "maya",
+"text": "The note said, \"Meet me at the park.\"",
+"f": "audio/d/d12.mp3",
+"s": 97.381,
+"d": 1.929
+},
+{
+"role": "maya",
+"text": "notes",
+"f": "audio/d/d12.mp3",
+"s": 99.711,
+"d": 0.659
+},
+{
+"role": "maya",
+"text": "used to make a word mean the opposite",
+"f": "audio/d/d12.mp3",
+"s": 100.77,
+"d": 2.177
+},
+{
+"role": "maya",
+"text": "It is not a fact.",
+"f": "audio/d/d12.mp3",
+"s": 103.347,
+"d": 1.152
+},
+{
+"role": "maya",
+"text": "nothing",
+"f": "audio/d/d12.mp3",
+"s": 104.899,
+"d": 0.656
+},
+{
+"role": "maya",
+"text": "not anything",
+"f": "audio/d/d12.mp3",
+"s": 105.955,
+"d": 0.825
+},
+{
+"role": "maya",
+"text": "Nothing is saved by default.",
+"f": "audio/d/d12.mp3",
+"s": 107.18,
+"d": 1.714
+},
+{
+"role": "maya",
+"text": "notice",
+"f": "audio/d/d12.mp3",
+"s": 109.293,
+"d": 0.696
+},
+{
+"role": "maya",
+"text": "to see or become aware of",
+"f": "audio/d/d12.mp3",
+"s": 110.389,
+"d": 1.523
+},
+{
+"role": "maya",
+"text": "They notice a small change.",
+"f": "audio/d/d12.mp3",
+"s": 112.313,
+"d": 1.541
+},
+{
+"role": "maya",
+"text": "noticed",
+"f": "audio/d/d12.mp3",
+"s": 114.254,
+"d": 0.684
+},
+{
+"role": "maya",
+"text": "to see or become aware of",
+"f": "audio/d/d12.mp3",
+"s": 115.338,
+"d": 1.523
+},
+{
+"role": "maya",
+"text": "They notice a small change.",
+"f": "audio/d/d12.mp3",
+"s": 117.261,
+"d": 1.541
+},
+{
+"role": "maya",
+"text": "noun",
+"f": "audio/d/d12.mp3",
+"s": 119.202,
+"d": 0.577
+},
+{
+"role": "maya",
+"text": "a word that names a person, place, or thing",
+"f": "audio/d/d12.mp3",
+"s": 120.179,
+"d": 2.444
+},
+{
+"role": "maya",
+"text": "\"Game\" is a noun.",
+"f": "audio/d/d12.mp3",
+"s": 123.023,
+"d": 1.033
+},
+{
+"role": "maya",
+"text": "now",
+"f": "audio/d/d12.mp3",
+"s": 124.456,
+"d": 0.544
+},
+{
+"role": "maya",
+"text": "at this time",
+"f": "audio/d/d12.mp3",
+"s": 125.4,
+"d": 0.838
+},
+{
+"role": "maya",
+"text": "Now it makes me dizzy.",
+"f": "audio/d/d12.mp3",
+"s": 126.638,
+"d": 1.219
+},
+{
+"role": "maya",
+"text": "numbers",
+"f": "audio/d/d12.mp3",
+"s": 128.257,
+"d": 0.75
+},
+{
+"role": "maya",
+"text": "a word or sign that shows how many",
+"f": "audio/d/d12.mp3",
+"s": 129.407,
+"d": 1.851
+},
+{
+"role": "maya",
+"text": "Write a number.",
+"f": "audio/d/d12.mp3",
+"s": 131.658,
+"d": 0.798
+},
+{
+"role": "maya",
+"text": "object",
+"f": "audio/d/d12.mp3",
+"s": 132.855,
+"d": 0.727
+},
+{
+"role": "maya",
+"text": "a thing that you can see or touch",
+"f": "audio/d/d12.mp3",
+"s": 133.982,
+"d": 1.668
+},
+{
+"role": "maya",
+"text": "An ordinary object can hold a memory.",
+"f": "audio/d/d12.mp3",
+"s": 136.05,
+"d": 2.294
+},
+{
+"role": "maya",
+"text": "observation",
+"f": "audio/d/d12.mp3",
+"s": 138.744,
+"d": 0.954
+},
+{
+"role": "maya",
+"text": "something that you notice and record",
+"f": "audio/d/d12.mp3",
+"s": 140.098,
+"d": 1.751
+},
+{
+"role": "maya",
+"text": "These are teacher observations.",
+"f": "audio/d/d12.mp3",
+"s": 142.249,
+"d": 1.701
+},
+{
+"role": "maya",
+"text": "observations",
+"f": "audio/d/d12.mp3",
+"s": 144.35,
+"d": 1.06
+},
+{
+"role": "maya",
+"text": "something that you notice and record",
+"f": "audio/d/d12.mp3",
+"s": 145.81,
+"d": 1.751
+},
+{
+"role": "maya",
+"text": "These are teacher observations.",
+"f": "audio/d/d12.mp3",
+"s": 147.961,
+"d": 1.701
+},
+{
+"role": "maya",
+"text": "of",
+"f": "audio/d/d12.mp3",
+"s": 150.062,
+"d": 0.453
+},
+{
+"role": "maya",
+"text": "belonging to; made from",
+"f": "audio/d/d12.mp3",
+"s": 150.914,
+"d": 1.375
+},
+{
+"role": "maya",
+"text": "A group of children played.",
+"f": "audio/d/d12.mp3",
+"s": 152.69,
+"d": 1.372
+},
+{
+"role": "maya",
+"text": "off",
+"f": "audio/d/d12.mp3",
+"s": 154.462,
+"d": 0.528
+},
+{
+"role": "maya",
+"text": "not on; away",
+"f": "audio/d/d12.mp3",
+"s": 155.39,
+"d": 1.276
+},
+{
+"role": "maya",
+"text": "The bell fell off.",
+"f": "audio/d/d12.mp3",
+"s": 157.067,
+"d": 1.013
+},
+{
+"role": "maya",
+"text": "offer",
+"f": "audio/d/d12.mp3",
+"s": 158.479,
+"d": 0.617
+},
+{
+"role": "maya",
+"text": "to give someone a choice or help",
+"f": "audio/d/d12.mp3",
+"s": 159.496,
+"d": 1.615
+},
+{
+"role": "maya",
+"text": "The teacher offers a correction.",
+"f": "audio/d/d12.mp3",
+"s": 161.512,
+"d": 1.732
+},
+{
+"role": "maya",
+"text": "often",
+"f": "audio/d/d12.mp3",
+"s": 163.643,
+"d": 0.621
+},
+{
+"role": "maya",
+"text": "many times",
+"f": "audio/d/d12.mp3",
+"s": 164.665,
+"d": 0.858
+},
+{
+"role": "maya",
+"text": "We often played cards.",
+"f": "audio/d/d12.mp3",
+"s": 165.922,
+"d": 1.425
+},
+{
+"role": "maya",
+"text": "okay",
+"f": "audio/d/d12.mp3",
+"s": 167.747,
+"d": 0.619
+},
+{
+"role": "maya",
+"text": "acceptable",
+"f": "audio/d/d12.mp3",
+"s": 168.766,
+"d": 0.783
+},
+{
+"role": "maya",
+"text": "Pass is always okay.",
+"f": "audio/d/d12.mp3",
+"s": 169.95,
+"d": 1.347
+},
+{
+"role": "maya",
+"text": "old",
+"f": "audio/d/d12.mp3",
+"s": 171.696,
+"d": 0.572
+},
+{
+"role": "maya",
+"text": "having lived or existed for a long time",
+"f": "audio/d/d12.mp3",
+"s": 172.668,
+"d": 2.395
+},
+{
+"role": "maya",
+"text": "We met at our old school.",
+"f": "audio/d/d12.mp3",
+"s": 175.463,
+"d": 1.408
+},
+{
+"role": "maya",
+"text": "older",
+"f": "audio/d/d12.mp3",
+"s": 177.271,
+"d": 0.635
+},
+{
+"role": "maya",
+"text": "having lived or existed for a long time",
+"f": "audio/d/d12.mp3",
+"s": 178.305,
+"d": 2.395
+},
+{
+"role": "maya",
+"text": "We met at our old school.",
+"f": "audio/d/d12.mp3",
+"s": 181.1,
+"d": 1.408
+},
+{
+"role": "maya",
+"text": "on",
+"f": "audio/d/d12.mp3",
+"s": 182.908,
+"d": 0.525
+},
+{
+"role": "maya",
+"text": "above and touching; about a subject",
+"f": "audio/d/d12.mp3",
+"s": 183.833,
+"d": 2.219
+},
+{
+"role": "maya",
+"text": "Look back on your school days.",
+"f": "audio/d/d12.mp3",
+"s": 186.452,
+"d": 1.509
+},
+{
+"role": "maya",
+"text": "once",
+"f": "audio/d/d12.mp3",
+"s": 188.362,
+"d": 0.638
+},
+{
+"role": "maya",
+"text": "one time",
+"f": "audio/d/d12.mp3",
+"s": 189.4,
+"d": 0.763
+},
+{
+"role": "maya",
+"text": "We played once a week.",
+"f": "audio/d/d12.mp3",
+"s": 190.563,
+"d": 1.253
+},
+{
+"role": "maya",
+"text": "one",
+"f": "audio/d/d12.mp3",
+"s": 192.215,
+"d": 0.528
+},
+{
+"role": "maya",
+"text": "the number 1",
+"f": "audio/d/d12.mp3",
+"s": 193.143,
+"d": 0.818
+},
+{
+"role": "maya",
+"text": "One afternoon, we built a kite.",
+"f": "audio/d/d12.mp3",
+"s": 194.361,
+"d": 1.889
+},
+{
+"role": "maya",
+"text": "only",
+"f": "audio/d/d12.mp3",
+"s": 196.65,
+"d": 0.613
+},
+{
+"role": "maya",
+"text": "above and touching; about a subject",
+"f": "audio/d/d12.mp3",
+"s": 197.662,
+"d": 2.219
+},
+{
+"role": "maya",
+"text": "Look back on your school days.",
+"f": "audio/d/d12.mp3",
+"s": 200.281,
+"d": 1.509
+},
+{
+"role": "maya",
+"text": "open",
+"f": "audio/d/d12.mp3",
+"s": 202.191,
+"d": 0.65
+},
+{
+"role": "maya",
+"text": "to make something not closed",
+"f": "audio/d/d12.mp3",
+"s": 203.241,
+"d": 1.497
+},
+{
+"role": "maya",
+"text": "Maya opens the memory box.",
+"f": "audio/d/d12.mp3",
+"s": 205.138,
+"d": 1.758
+},
+{
+"role": "maya",
+"text": "opened",
+"f": "audio/d/d12.mp3",
+"s": 207.295,
+"d": 0.656
+},
+{
+"role": "maya",
+"text": "to make something not closed",
+"f": "audio/d/d12.mp3",
+"s": 208.352,
+"d": 1.497
+},
+{
+"role": "maya",
+"text": "Maya opens the memory box.",
+"f": "audio/d/d12.mp3",
+"s": 210.249,
+"d": 1.758
+},
+{
+"role": "maya",
+"text": "opening",
+"f": "audio/d/d12.mp3",
+"s": 212.406,
+"d": 0.681
+},
+{
+"role": "maya",
+"text": "to make something not closed",
+"f": "audio/d/d12.mp3",
+"s": 213.488,
+"d": 1.497
+},
+{
+"role": "maya",
+"text": "Maya opens the memory box.",
+"f": "audio/d/d12.mp3",
+"s": 215.385,
+"d": 1.758
+},
+{
+"role": "maya",
+"text": "recess",
+"f": "audio/d/d15.mp3",
+"s": 0.0,
+"d": 0.754
+},
+{
+"role": "maya",
+"text": "a break between classes at school",
+"f": "audio/d/d15.mp3",
+"s": 1.154,
+"d": 1.737
+},
+{
+"role": "maya",
+"text": "We played tag at recess.",
+"f": "audio/d/d15.mp3",
+"s": 3.292,
+"d": 1.454
+},
+{
+"role": "maya",
+"text": "recipe",
+"f": "audio/d/d15.mp3",
+"s": 5.146,
+"d": 0.815
+},
+{
+"role": "maya",
+"text": "instructions for cooking a dish",
+"f": "audio/d/d15.mp3",
+"s": 6.361,
+"d": 1.735
+},
+{
+"role": "maya",
+"text": "I cook dinner without a recipe.",
+"f": "audio/d/d15.mp3",
+"s": 8.496,
+"d": 1.8
+},
+{
+"role": "maya",
+"text": "reconsider",
+"f": "audio/d/d15.mp3",
+"s": 10.696,
+"d": 0.914
+},
+{
+"role": "maya",
+"text": "to think again about a decision",
+"f": "audio/d/d15.mp3",
+"s": 12.01,
+"d": 1.743
+},
+{
+"role": "maya",
+"text": "Would you reconsider your answer?",
+"f": "audio/d/d15.mp3",
+"s": 14.153,
+"d": 1.578
+},
+{
+"role": "maya",
+"text": "reduce",
+"f": "audio/d/d15.mp3",
+"s": 16.131,
+"d": 0.681
+},
+{
+"role": "maya",
+"text": "to make smaller",
+"f": "audio/d/d15.mp3",
+"s": 17.212,
+"d": 0.922
+},
+{
+"role": "maya",
+"text": "Reduce motion in the settings.",
+"f": "audio/d/d15.mp3",
+"s": 18.534,
+"d": 1.639
+},
+{
+"role": "maya",
+"text": "referee",
+"f": "audio/d/d15.mp3",
+"s": 20.573,
+"d": 0.743
+},
+{
+"role": "maya",
+"text": "a person who makes sure players follow the rules",
+"f": "audio/d/d15.mp3",
+"s": 21.716,
+"d": 2.497
+},
+{
+"role": "maya",
+"text": "The newcomer could be the referee.",
+"f": "audio/d/d15.mp3",
+"s": 24.613,
+"d": 1.812
+},
+{
+"role": "maya",
+"text": "reflect",
+"f": "audio/d/d15.mp3",
+"s": 26.825,
+"d": 0.738
+},
+{
+"role": "maya",
+"text": "to think carefully about something",
+"f": "audio/d/d15.mp3",
+"s": 27.963,
+"d": 1.608
+},
+{
+"role": "maya",
+"text": "Take a moment to reflect.",
+"f": "audio/d/d15.mp3",
+"s": 29.971,
+"d": 1.428
+},
+{
+"role": "maya",
+"text": "reflection",
+"f": "audio/d/d15.mp3",
+"s": 31.799,
+"d": 0.828
+},
+{
+"role": "maya",
+"text": "careful thought about what happened",
+"f": "audio/d/d15.mp3",
+"s": 33.027,
+"d": 1.618
+},
+{
+"role": "maya",
+"text": "The last task is a short reflection.",
+"f": "audio/d/d15.mp3",
+"s": 35.045,
+"d": 2.112
+},
+{
+"role": "maya",
+"text": "relationships",
+"f": "audio/d/d15.mp3",
+"s": 37.558,
+"d": 1.079
+},
+{
+"role": "maya",
+"text": "the way people are connected",
+"f": "audio/d/d15.mp3",
+"s": 39.037,
+"d": 1.526
+},
+{
+"role": "maya",
+"text": "Friendships are important relationships.",
+"f": "audio/d/d15.mp3",
+"s": 40.962,
+"d": 2.29
+},
+{
+"role": "maya",
+"text": "relax",
+"f": "audio/d/d15.mp3",
+"s": 43.652,
+"d": 0.706
+},
+{
+"role": "maya",
+"text": "to rest and feel calm",
+"f": "audio/d/d15.mp3",
+"s": 44.758,
+"d": 1.245
+},
+{
+"role": "maya",
+"text": "A plan helps me relax.",
+"f": "audio/d/d15.mp3",
+"s": 46.403,
+"d": 1.551
+},
+{
+"role": "maya",
+"text": "relay",
+"f": "audio/d/d15.mp3",
+"s": 48.354,
+"d": 0.625
+},
+{
+"role": "maya",
+"text": "a race in which teams take turns",
+"f": "audio/d/d15.mp3",
+"s": 49.379,
+"d": 1.864
+},
+{
+"role": "maya",
+"text": "We ran a relay race.",
+"f": "audio/d/d15.mp3",
+"s": 51.643,
+"d": 1.309
+},
+{
+"role": "maya",
+"text": "relay race",
+"f": "audio/d/d15.mp3",
+"s": 53.352,
+"d": 0.94
+},
+{
+"role": "maya",
+"text": "a race in which team members take turns running",
+"f": "audio/d/d15.mp3",
+"s": 54.692,
+"d": 2.426
+},
+{
+"role": "maya",
+"text": "We ran a relay race.",
+"f": "audio/d/d15.mp3",
+"s": 57.518,
+"d": 1.309
+},
+{
+"role": "maya",
+"text": "relevant",
+"f": "audio/d/d15.mp3",
+"s": 59.228,
+"d": 0.744
+},
+{
+"role": "maya",
+"text": "connected to the topic",
+"f": "audio/d/d15.mp3",
+"s": 60.372,
+"d": 1.335
+},
+{
+"role": "maya",
+"text": "Use relevant vocabulary.",
+"f": "audio/d/d15.mp3",
+"s": 62.107,
+"d": 1.798
+},
+{
+"role": "maya",
+"text": "remember",
+"f": "audio/d/d15.mp3",
+"s": 64.305,
+"d": 0.684
+},
+{
+"role": "maya",
+"text": "to bring something back to mind",
+"f": "audio/d/d15.mp3",
+"s": 65.389,
+"d": 1.539
+},
+{
+"role": "maya",
+"text": "I remember the spring show.",
+"f": "audio/d/d15.mp3",
+"s": 67.328,
+"d": 1.36
+},
+{
+"role": "maya",
+"text": "remembers",
+"f": "audio/d/d15.mp3",
+"s": 69.088,
+"d": 0.805
+},
+{
+"role": "maya",
+"text": "to bring something back to mind",
+"f": "audio/d/d15.mp3",
+"s": 70.293,
+"d": 1.539
+},
+{
+"role": "maya",
+"text": "I remember the spring show.",
+"f": "audio/d/d15.mp3",
+"s": 72.231,
+"d": 1.36
+},
+{
+"role": "maya",
+"text": "remind",
+"f": "audio/d/d15.mp3",
+"s": 73.991,
+"d": 0.708
+},
+{
+"role": "maya",
+"text": "to help someone remember",
+"f": "audio/d/d15.mp3",
+"s": 75.099,
+"d": 1.319
+},
+{
+"role": "maya",
+"text": "An object can remind us of a place.",
+"f": "audio/d/d15.mp3",
+"s": 76.818,
+"d": 2.11
+},
+{
+"role": "maya",
+"text": "removes",
+"f": "audio/d/d15.mp3",
+"s": 79.328,
+"d": 0.75
+},
+{
+"role": "maya",
+"text": "to take away",
+"f": "audio/d/d15.mp3",
+"s": 80.478,
+"d": 0.931
+},
+{
+"role": "maya",
+"text": "Shift-click removes one.",
+"f": "audio/d/d15.mp3",
+"s": 81.809,
+"d": 1.359
+},
+{
+"role": "maya",
+"text": "repair",
+"f": "audio/d/d15.mp3",
+"s": 83.568,
+"d": 0.659
+},
+{
+"role": "maya",
+"text": "to fix",
+"f": "audio/d/d15.mp3",
+"s": 84.626,
+"d": 0.701
+},
+{
+"role": "maya",
+"text": "They tried to repair the bridge.",
+"f": "audio/d/d15.mp3",
+"s": 85.727,
+"d": 1.503
+},
+{
+"role": "maya",
+"text": "repeated",
+"f": "audio/d/d15.mp3",
+"s": 87.63,
+"d": 0.715
+},
+{
+"role": "maya",
+"text": "to do again",
+"f": "audio/d/d15.mp3",
+"s": 88.746,
+"d": 0.809
+},
+{
+"role": "maya",
+"text": "We would repeat the game each week.",
+"f": "audio/d/d15.mp3",
+"s": 89.955,
+"d": 1.723
+},
+{
+"role": "maya",
+"text": "replay",
+"f": "audio/d/d15.mp3",
+"s": 92.078,
+"d": 0.706
+},
+{
+"role": "maya",
+"text": "to play again",
+"f": "audio/d/d15.mp3",
+"s": 93.185,
+"d": 0.88
+},
+{
+"role": "maya",
+"text": "Press R to replay the step.",
+"f": "audio/d/d15.mp3",
+"s": 94.465,
+"d": 1.573
+},
+{
+"role": "maya",
+"text": "reset",
+"f": "audio/d/d15.mp3",
+"s": 96.438,
+"d": 0.663
+},
+{
+"role": "maya",
+"text": "to put back to the start",
+"f": "audio/d/d15.mp3",
+"s": 97.501,
+"d": 1.295
+},
+{
+"role": "maya",
+"text": "Reset the order.",
+"f": "audio/d/d15.mp3",
+"s": 99.196,
+"d": 0.963
+},
+{
+"role": "maya",
+"text": "respond",
+"f": "audio/d/d15.mp3",
+"s": 100.558,
+"d": 0.77
+},
+{
+"role": "maya",
+"text": "to answer",
+"f": "audio/d/d15.mp3",
+"s": 101.728,
+"d": 0.79
+},
+{
+"role": "maya",
+"text": "Respond to another view.",
+"f": "audio/d/d15.mp3",
+"s": 102.918,
+"d": 1.389
+},
+{
+"role": "maya",
+"text": "response",
+"f": "audio/d/d15.mp3",
+"s": 104.707,
+"d": 0.819
+},
+{
+"role": "maya",
+"text": "an answer",
+"f": "audio/d/d15.mp3",
+"s": 105.926,
+"d": 0.639
+},
+{
+"role": "maya",
+"text": "Give a short response.",
+"f": "audio/d/d15.mp3",
+"s": 106.965,
+"d": 1.26
+},
+{
+"role": "maya",
+"text": "responses",
+"f": "audio/d/d15.mp3",
+"s": 108.625,
+"d": 0.967
+},
+{
+"role": "maya",
+"text": "an answer",
+"f": "audio/d/d15.mp3",
+"s": 109.992,
+"d": 0.639
+},
+{
+"role": "maya",
+"text": "Give a short response.",
+"f": "audio/d/d15.mp3",
+"s": 111.031,
+"d": 1.26
+},
+{
+"role": "maya",
+"text": "result",
+"f": "audio/d/d15.mp3",
+"s": 112.69,
+"d": 0.688
+},
+{
+"role": "maya",
+"text": "what happens because of something",
+"f": "audio/d/d15.mp3",
+"s": 113.778,
+"d": 1.583
+},
+{
+"role": "maya",
+"text": "One possible result is shown here.",
+"f": "audio/d/d15.mp3",
+"s": 115.761,
+"d": 1.937
+},
+{
+"role": "maya",
+"text": "retell",
+"f": "audio/d/d15.mp3",
+"s": 118.098,
+"d": 0.632
+},
+{
+"role": "maya",
+"text": "to tell a story again",
+"f": "audio/d/d15.mp3",
+"s": 119.13,
+"d": 1.268
+},
+{
+"role": "maya",
+"text": "Retell the whole story.",
+"f": "audio/d/d15.mp3",
+"s": 120.798,
+"d": 1.289
+},
+{
+"role": "maya",
+"text": "return",
+"f": "audio/d/d15.mp3",
+"s": 122.487,
+"d": 0.688
+},
+{
+"role": "maya",
+"text": "to give back",
+"f": "audio/d/d15.mp3",
+"s": 123.575,
+"d": 0.867
+},
+{
+"role": "maya",
+"text": "They returned it quickly.",
+"f": "audio/d/d15.mp3",
+"s": 124.842,
+"d": 1.3
+},
+{
+"role": "maya",
+"text": "reuse",
+"f": "audio/d/d15.mp3",
+"s": 126.542,
+"d": 0.715
+},
+{
+"role": "maya",
+"text": "to use again",
+"f": "audio/d/d15.mp3",
+"s": 127.657,
+"d": 0.9
+},
+{
+"role": "maya",
+"text": "Which expression will you reuse?",
+"f": "audio/d/d15.mp3",
+"s": 128.958,
+"d": 1.667
+},
+{
+"role": "maya",
+"text": "reveal",
+"f": "audio/d/d15.mp3",
+"s": 131.025,
+"d": 0.68
+},
+{
+"role": "maya",
+"text": "to show",
+"f": "audio/d/d15.mp3",
+"s": 132.105,
+"d": 0.609
+},
+{
+"role": "maya",
+"text": "Reveal the next item.",
+"f": "audio/d/d15.mp3",
+"s": 133.114,
+"d": 1.302
+},
+{
+"role": "maya",
+"text": "revise",
+"f": "audio/d/d15.mp3",
+"s": 134.816,
+"d": 0.75
+},
+{
+"role": "maya",
+"text": "to change after thinking again",
+"f": "audio/d/d15.mp3",
+"s": 135.966,
+"d": 1.663
+},
+{
+"role": "maya",
+"text": "Revise your response.",
+"f": "audio/d/d15.mp3",
+"s": 138.029,
+"d": 1.305
+},
+{
+"role": "maya",
+"text": "revisit",
+"f": "audio/d/d15.mp3",
+"s": 139.733,
+"d": 0.715
+},
+{
+"role": "maya",
+"text": "to go back to a place",
+"f": "audio/d/d15.mp3",
+"s": 140.849,
+"d": 1.217
+},
+{
+"role": "maya",
+"text": "I'd revisit a childhood place.",
+"f": "audio/d/d15.mp3",
+"s": 142.466,
+"d": 1.77
+},
+{
+"role": "maya",
+"text": "ride",
+"f": "audio/d/d15.mp3",
+"s": 144.636,
+"d": 0.482
+},
+{
+"role": "maya",
+"text": "to sit on and control a bike",
+"f": "audio/d/d15.mp3",
+"s": 145.518,
+"d": 1.596
+},
+{
+"role": "maya",
+"text": "I used to ride my bike to the library.",
+"f": "audio/d/d15.mp3",
+"s": 147.515,
+"d": 2.145
+},
+{
+"role": "maya",
+"text": "right",
+"f": "audio/d/d15.mp3",
+"s": 150.06,
+"d": 0.592
+},
+{
+"role": "maya",
+"text": "correct",
+"f": "audio/d/d15.mp3",
+"s": 151.052,
+"d": 0.64
+},
+{
+"role": "maya",
+"text": "There is no right answer.",
+"f": "audio/d/d15.mp3",
+"s": 152.092,
+"d": 1.34
+},
+{
+"role": "maya",
+"text": "ring",
+"f": "audio/d/d15.mp3",
+"s": 153.833,
+"d": 0.55
+},
+{
+"role": "maya",
+"text": "the eighteenth letter of the alphabet",
+"f": "audio/d/d15.mp3",
+"s": 154.783,
+"d": 2.027
+},
+{
+"role": "maya",
+"text": "Press R to replay the step.",
+"f": "audio/d/d15.mp3",
+"s": 157.21,
+"d": 1.573
+},
+{
+"role": "maya",
+"text": "risk",
+"f": "audio/d/d15.mp3",
+"s": 159.183,
+"d": 0.584
+},
+{
+"role": "maya",
+"text": "the chance that something bad happens",
+"f": "audio/d/d15.mp3",
+"s": 160.167,
+"d": 1.857
+},
+{
+"role": "maya",
+"text": "A risk might be hurt feelings.",
+"f": "audio/d/d15.mp3",
+"s": 162.423,
+"d": 1.661
+},
+{
+"role": "maya",
+"text": "river",
+"f": "audio/d/d15.mp3",
+"s": 164.484,
+"d": 0.559
+},
+{
+"role": "maya",
+"text": "a large stream of water",
+"f": "audio/d/d15.mp3",
+"s": 165.443,
+"d": 1.353
+},
+{
+"role": "maya",
+"text": "I grew up near a river.",
+"f": "audio/d/d15.mp3",
+"s": 167.196,
+"d": 1.262
+},
+{
+"role": "maya",
+"text": "robot",
+"f": "audio/d/d15.mp3",
+"s": 168.858,
+"d": 0.76
+},
+{
+"role": "maya",
+"text": "a machine that can move and do tasks",
+"f": "audio/d/d15.mp3",
+"s": 170.018,
+"d": 1.994
+},
+{
+"role": "maya",
+"text": "A talking toy robot opened the door.",
+"f": "audio/d/d15.mp3",
+"s": 172.412,
+"d": 2.085
+},
+{
+"role": "maya",
+"text": "role",
+"f": "audio/d/d15.mp3",
+"s": 174.897,
+"d": 0.546
+},
+{
+"role": "maya",
+"text": "a part that a person plays",
+"f": "audio/d/d15.mp3",
+"s": 175.843,
+"d": 1.519
+},
+{
+"role": "maya",
+"text": "Take the role of Alex.",
+"f": "audio/d/d15.mp3",
+"s": 177.762,
+"d": 1.334
+},
+{
+"role": "maya",
+"text": "role-play",
+"f": "audio/d/d15.mp3",
+"s": 179.496,
+"d": 0.803
+},
+{
+"role": "maya",
+"text": "an activity in which people act out a situation",
+"f": "audio/d/d15.mp3",
+"s": 180.699,
+"d": 2.82
+},
+{
+"role": "maya",
+"text": "The role-play is about an old friend.",
+"f": "audio/d/d15.mp3",
+"s": 183.919,
+"d": 1.971
+},
+{
+"role": "maya",
+"text": "rope",
+"f": "audio/d/d15.mp3",
+"s": 186.29,
+"d": 0.58
+},
+{
+"role": "maya",
+"text": "a thick, strong cord",
+"f": "audio/d/d15.mp3",
+"s": 187.27,
+"d": 1.263
+},
+{
+"role": "maya",
+"text": "We made up a game with a rope.",
+"f": "audio/d/d15.mp3",
+"s": 188.933,
+"d": 1.502
+},
+{
+"role": "maya",
+"text": "round",
+"f": "audio/d/d15.mp3",
+"s": 190.835,
+"d": 0.62
+},
+{
+"role": "maya",
+"text": "one part of a game",
+"f": "audio/d/d15.mp3",
+"s": 191.855,
+"d": 1.198
+},
+{
+"role": "maya",
+"text": "Each round has a twist.",
+"f": "audio/d/d15.mp3",
+"s": 193.453,
+"d": 1.394
+},
+{
+"role": "maya",
+"text": "route",
+"f": "audio/d/d15.mp3",
+"s": 195.247,
+"d": 0.589
+},
+{
+"role": "maya",
+"text": "the way from one place to another",
+"f": "audio/d/d15.mp3",
+"s": 196.236,
+"d": 1.876
+},
+{
+"role": "maya",
+"text": "I took the same route to school.",
+"f": "audio/d/d15.mp3",
+"s": 198.512,
+"d": 1.636
+},
+{
+"role": "maya",
+"text": "routine",
+"f": "audio/d/d15.mp3",
+"s": 200.549,
+"d": 0.726
+},
+{
+"role": "maya",
+"text": "things that you do regularly",
+"f": "audio/d/d15.mp3",
+"s": 201.675,
+"d": 1.539
+},
+{
+"role": "maya",
+"text": "My routine after school was simple.",
+"f": "audio/d/d15.mp3",
+"s": 203.614,
+"d": 1.977
+},
+{
+"role": "maya",
+"text": "routines",
+"f": "audio/d/d15.mp3",
+"s": 205.991,
+"d": 0.825
+},
+{
+"role": "maya",
+"text": "things that you do regularly",
+"f": "audio/d/d15.mp3",
+"s": 207.215,
+"d": 1.539
+},
+{
+"role": "maya",
+"text": "My routine after school was simple.",
+"f": "audio/d/d15.mp3",
+"s": 209.155,
+"d": 1.977
+},
+{
+"role": "maya",
+"text": "rubric",
+"f": "audio/d/d15.mp3",
+"s": 211.531,
+"d": 0.703
+},
+{
+"role": "maya",
+"text": "a chart that shows how work is judged",
+"f": "audio/d/d15.mp3",
+"s": 212.635,
+"d": 1.995
+},
+{
+"role": "maya",
+"text": "The teacher can use the rubric.",
+"f": "audio/d/d15.mp3",
+"s": 215.029,
+"d": 1.748
+},
+{
+"role": "maya",
+"text": "rug",
+"f": "audio/d/d15.mp3",
+"s": 217.178,
+"d": 0.532
+},
+{
+"role": "maya",
+"text": "a small carpet",
+"f": "audio/d/d15.mp3",
+"s": 218.11,
+"d": 1.03
+},
+{
+"role": "maya",
+"text": "The toy robot walked across the rug.",
+"f": "audio/d/d15.mp3",
+"s": 219.54,
+"d": 2.108
+},
+{
+"role": "maya",
+"text": "states",
+"f": "audio/d/d18.mp3",
+"s": 0.0,
+"d": 0.678
+},
+{
+"role": "maya",
+"text": "a condition; a situation",
+"f": "audio/d/d18.mp3",
+"s": 1.078,
+"d": 1.739
+},
+{
+"role": "maya",
+"text": "Use \"used to\" for a past state.",
+"f": "audio/d/d18.mp3",
+"s": 3.218,
+"d": 1.713
+},
+{
+"role": "maya",
+"text": "stations",
+"f": "audio/d/d18.mp3",
+"s": 5.331,
+"d": 0.852
+},
+{
+"role": "maya",
+"text": "a place where an activity happens",
+"f": "audio/d/d18.mp3",
+"s": 6.583,
+"d": 1.81
+},
+{
+"role": "maya",
+"text": "Two short stations could work.",
+"f": "audio/d/d18.mp3",
+"s": 8.793,
+"d": 1.652
+},
+{
+"role": "maya",
+"text": "stay",
+"f": "audio/d/d18.mp3",
+"s": 10.845,
+"d": 0.603
+},
+{
+"role": "maya",
+"text": "to remain",
+"f": "audio/d/d18.mp3",
+"s": 11.849,
+"d": 0.752
+},
+{
+"role": "maya",
+"text": "Some things stay the same.",
+"f": "audio/d/d18.mp3",
+"s": 13.001,
+"d": 1.384
+},
+{
+"role": "maya",
+"text": "step",
+"f": "audio/d/d18.mp3",
+"s": 14.786,
+"d": 0.578
+},
+{
+"role": "maya",
+"text": "one part of a process",
+"f": "audio/d/d18.mp3",
+"s": 15.763,
+"d": 1.45
+},
+{
+"role": "maya",
+"text": "Go to the next step.",
+"f": "audio/d/d18.mp3",
+"s": 17.613,
+"d": 1.25
+},
+{
+"role": "maya",
+"text": "still",
+"f": "audio/d/d18.mp3",
+"s": 19.263,
+"d": 0.586
+},
+{
+"role": "maya",
+"text": "up to now; even so",
+"f": "audio/d/d18.mp3",
+"s": 20.249,
+"d": 1.467
+},
+{
+"role": "maya",
+"text": "I still remember it.",
+"f": "audio/d/d18.mp3",
+"s": 22.117,
+"d": 1.185
+},
+{
+"role": "maya",
+"text": "stop",
+"f": "audio/d/d18.mp3",
+"s": 23.702,
+"d": 0.58
+},
+{
+"role": "maya",
+"text": "to end",
+"f": "audio/d/d18.mp3",
+"s": 24.682,
+"d": 0.629
+},
+{
+"role": "maya",
+"text": "They didn't want to stop the game.",
+"f": "audio/d/d18.mp3",
+"s": 25.711,
+"d": 1.545
+},
+{
+"role": "maya",
+"text": "stopped",
+"f": "audio/d/d18.mp3",
+"s": 27.656,
+"d": 0.649
+},
+{
+"role": "maya",
+"text": "to end",
+"f": "audio/d/d18.mp3",
+"s": 28.705,
+"d": 0.629
+},
+{
+"role": "maya",
+"text": "They didn't want to stop the game.",
+"f": "audio/d/d18.mp3",
+"s": 29.734,
+"d": 1.545
+},
+{
+"role": "maya",
+"text": "stopping",
+"f": "audio/d/d18.mp3",
+"s": 31.679,
+"d": 0.746
+},
+{
+"role": "maya",
+"text": "to end",
+"f": "audio/d/d18.mp3",
+"s": 32.825,
+"d": 0.629
+},
+{
+"role": "maya",
+"text": "They didn't want to stop the game.",
+"f": "audio/d/d18.mp3",
+"s": 33.854,
+"d": 1.545
+},
+{
+"role": "maya",
+"text": "stories",
+"f": "audio/d/d18.mp3",
+"s": 35.799,
+"d": 0.728
+},
+{
+"role": "maya",
+"text": "a description of events",
+"f": "audio/d/d18.mp3",
+"s": 36.927,
+"d": 1.275
+},
+{
+"role": "maya",
+"text": "Tell a thirty-second story.",
+"f": "audio/d/d18.mp3",
+"s": 38.602,
+"d": 1.507
+},
+{
+"role": "maya",
+"text": "story",
+"f": "audio/d/d18.mp3",
+"s": 40.508,
+"d": 0.648
+},
+{
+"role": "maya",
+"text": "a description of events",
+"f": "audio/d/d18.mp3",
+"s": 41.556,
+"d": 1.275
+},
+{
+"role": "maya",
+"text": "Tell a thirty-second story.",
+"f": "audio/d/d18.mp3",
+"s": 43.231,
+"d": 1.507
+},
+{
+"role": "maya",
+"text": "story circle",
+"f": "audio/d/d18.mp3",
+"s": 45.138,
+"d": 0.977
+},
+{
+"role": "maya",
+"text": "a group sitting in a circle to share stories",
+"f": "audio/d/d18.mp3",
+"s": 46.515,
+"d": 2.217
+},
+{
+"role": "maya",
+"text": "We ended the day with a story circle.",
+"f": "audio/d/d18.mp3",
+"s": 49.132,
+"d": 1.978
+},
+{
+"role": "maya",
+"text": "stranger",
+"f": "audio/d/d18.mp3",
+"s": 51.51,
+"d": 0.778
+},
+{
+"role": "maya",
+"text": "a person you do not know",
+"f": "audio/d/d18.mp3",
+"s": 52.687,
+"d": 1.321
+},
+{
+"role": "maya",
+"text": "Someone you've never met is a stranger.",
+"f": "audio/d/d18.mp3",
+"s": 54.408,
+"d": 1.933
+},
+{
+"role": "maya",
+"text": "street",
+"f": "audio/d/d18.mp3",
+"s": 56.741,
+"d": 0.687
+},
+{
+"role": "maya",
+"text": "a road in a town",
+"f": "audio/d/d18.mp3",
+"s": 57.828,
+"d": 0.979
+},
+{
+"role": "maya",
+"text": "We played hide-and-seek on my street.",
+"f": "audio/d/d18.mp3",
+"s": 59.207,
+"d": 1.814
+},
+{
+"role": "maya",
+"text": "streetlights",
+"f": "audio/d/d18.mp3",
+"s": 61.421,
+"d": 0.844
+},
+{
+"role": "maya",
+"text": "lights along a road",
+"f": "audio/d/d18.mp3",
+"s": 62.664,
+"d": 1.194
+},
+{
+"role": "maya",
+"text": "We played until the streetlights came on.",
+"f": "audio/d/d18.mp3",
+"s": 64.258,
+"d": 1.997
+},
+{
+"role": "maya",
+"text": "stressful",
+"f": "audio/d/d18.mp3",
+"s": 66.655,
+"d": 0.756
+},
+{
+"role": "maya",
+"text": "causing worry",
+"f": "audio/d/d18.mp3",
+"s": 67.81,
+"d": 0.9
+},
+{
+"role": "maya",
+"text": "Too many chores can be stressful.",
+"f": "audio/d/d18.mp3",
+"s": 69.111,
+"d": 1.617
+},
+{
+"role": "maya",
+"text": "strict",
+"f": "audio/d/d18.mp3",
+"s": 71.128,
+"d": 0.662
+},
+{
+"role": "maya",
+"text": "demanding that rules are followed",
+"f": "audio/d/d18.mp3",
+"s": 72.189,
+"d": 1.713
+},
+{
+"role": "maya",
+"text": "The teacher was strict but fair.",
+"f": "audio/d/d18.mp3",
+"s": 74.302,
+"d": 1.668
+},
+{
+"role": "maya",
+"text": "strong",
+"f": "audio/d/d18.mp3",
+"s": 76.371,
+"d": 0.647
+},
+{
+"role": "maya",
+"text": "having great power",
+"f": "audio/d/d18.mp3",
+"s": 77.418,
+"d": 1.099
+},
+{
+"role": "maya",
+"text": "Teamwork makes a strong group.",
+"f": "audio/d/d18.mp3",
+"s": 78.918,
+"d": 1.506
+},
+{
+"role": "maya",
+"text": "stronger",
+"f": "audio/d/d18.mp3",
+"s": 80.824,
+"d": 0.714
+},
+{
+"role": "maya",
+"text": "having great power",
+"f": "audio/d/d18.mp3",
+"s": 81.938,
+"d": 1.099
+},
+{
+"role": "maya",
+"text": "Teamwork makes a strong group.",
+"f": "audio/d/d18.mp3",
+"s": 83.437,
+"d": 1.506
+},
+{
+"role": "maya",
+"text": "strongly",
+"f": "audio/d/d18.mp3",
+"s": 85.343,
+"d": 0.729
+},
+{
+"role": "maya",
+"text": "having great power",
+"f": "audio/d/d18.mp3",
+"s": 86.472,
+"d": 1.099
+},
+{
+"role": "maya",
+"text": "Teamwork makes a strong group.",
+"f": "audio/d/d18.mp3",
+"s": 87.972,
+"d": 1.506
+},
+{
+"role": "maya",
+"text": "student",
+"f": "audio/d/d18.mp3",
+"s": 89.878,
+"d": 0.724
+},
+{
+"role": "maya",
+"text": "a person who is learning",
+"f": "audio/d/d18.mp3",
+"s": 91.002,
+"d": 1.363
+},
+{
+"role": "maya",
+"text": "Each student has a turn.",
+"f": "audio/d/d18.mp3",
+"s": 92.765,
+"d": 1.35
+},
+{
+"role": "maya",
+"text": "students",
+"f": "audio/d/d18.mp3",
+"s": 94.515,
+"d": 0.75
+},
+{
+"role": "maya",
+"text": "a person who is learning",
+"f": "audio/d/d18.mp3",
+"s": 95.664,
+"d": 1.363
+},
+{
+"role": "maya",
+"text": "Each student has a turn.",
+"f": "audio/d/d18.mp3",
+"s": 97.427,
+"d": 1.35
+},
+{
+"role": "maya",
+"text": "such",
+"f": "audio/d/d18.mp3",
+"s": 99.177,
+"d": 0.584
+},
+{
+"role": "maya",
+"text": "of that kind",
+"f": "audio/d/d18.mp3",
+"s": 100.161,
+"d": 0.917
+},
+{
+"role": "maya",
+"text": "Such games need little equipment.",
+"f": "audio/d/d18.mp3",
+"s": 101.477,
+"d": 1.747
+},
+{
+"role": "maya",
+"text": "suddenly",
+"f": "audio/d/d18.mp3",
+"s": 103.624,
+"d": 0.728
+},
+{
+"role": "maya",
+"text": "quickly and unexpectedly",
+"f": "audio/d/d18.mp3",
+"s": 104.752,
+"d": 1.525
+},
+{
+"role": "maya",
+"text": "Suddenly, the lights went out.",
+"f": "audio/d/d18.mp3",
+"s": 106.677,
+"d": 1.609
+},
+{
+"role": "maya",
+"text": "suggest",
+"f": "audio/d/d18.mp3",
+"s": 108.687,
+"d": 0.753
+},
+{
+"role": "maya",
+"text": "to offer an idea",
+"f": "audio/d/d18.mp3",
+"s": 109.839,
+"d": 1.095
+},
+{
+"role": "maya",
+"text": "Suggest another solution.",
+"f": "audio/d/d18.mp3",
+"s": 111.335,
+"d": 1.547
+},
+{
+"role": "maya",
+"text": "summer",
+"f": "audio/d/d18.mp3",
+"s": 113.281,
+"d": 0.605
+},
+{
+"role": "maya",
+"text": "the warmest season",
+"f": "audio/d/d18.mp3",
+"s": 114.286,
+"d": 1.052
+},
+{
+"role": "maya",
+"text": "During summer vacations, we would play cards.",
+"f": "audio/d/d18.mp3",
+"s": 115.739,
+"d": 2.654
+},
+{
+"role": "maya",
+"text": "summers",
+"f": "audio/d/d18.mp3",
+"s": 118.793,
+"d": 0.681
+},
+{
+"role": "maya",
+"text": "the warmest season",
+"f": "audio/d/d18.mp3",
+"s": 119.874,
+"d": 1.052
+},
+{
+"role": "maya",
+"text": "During summer vacations, we would play cards.",
+"f": "audio/d/d18.mp3",
+"s": 121.327,
+"d": 2.654
+},
+{
+"role": "maya",
+"text": "support",
+"f": "audio/d/d18.mp3",
+"s": 124.381,
+"d": 0.714
+},
+{
+"role": "maya",
+"text": "to give help or show reasons",
+"f": "audio/d/d18.mp3",
+"s": 125.495,
+"d": 1.675
+},
+{
+"role": "maya",
+"text": "Support your opinion with an example.",
+"f": "audio/d/d18.mp3",
+"s": 127.57,
+"d": 2.141
+},
+{
+"role": "maya",
+"text": "supported",
+"f": "audio/d/d18.mp3",
+"s": 130.111,
+"d": 0.749
+},
+{
+"role": "maya",
+"text": "to give help or show reasons",
+"f": "audio/d/d18.mp3",
+"s": 131.26,
+"d": 1.675
+},
+{
+"role": "maya",
+"text": "Support your opinion with an example.",
+"f": "audio/d/d18.mp3",
+"s": 133.336,
+"d": 2.141
+},
+{
+"role": "maya",
+"text": "surprise",
+"f": "audio/d/d18.mp3",
+"s": 135.877,
+"d": 0.83
+},
+{
+"role": "maya",
+"text": "something unexpected",
+"f": "audio/d/d18.mp3",
+"s": 137.107,
+"d": 1.248
+},
+{
+"role": "maya",
+"text": "The twist is a surprise.",
+"f": "audio/d/d18.mp3",
+"s": 138.755,
+"d": 1.51
+},
+{
+"role": "maya",
+"text": "surprising",
+"f": "audio/d/d18.mp3",
+"s": 140.665,
+"d": 0.853
+},
+{
+"role": "maya",
+"text": "something unexpected",
+"f": "audio/d/d18.mp3",
+"s": 141.918,
+"d": 1.248
+},
+{
+"role": "maya",
+"text": "The twist is a surprise.",
+"f": "audio/d/d18.mp3",
+"s": 143.566,
+"d": 1.51
+},
+{
+"role": "maya",
+"text": "swam",
+"f": "audio/d/d18.mp3",
+"s": 145.476,
+"d": 0.678
+},
+{
+"role": "maya",
+"text": "to move through water",
+"f": "audio/d/d18.mp3",
+"s": 146.553,
+"d": 1.167
+},
+{
+"role": "maya",
+"text": "I learned to swim.",
+"f": "audio/d/d18.mp3",
+"s": 148.121,
+"d": 1.059
+},
+{
+"role": "maya",
+"text": "swim",
+"f": "audio/d/d18.mp3",
+"s": 149.58,
+"d": 0.595
+},
+{
+"role": "maya",
+"text": "to move through water",
+"f": "audio/d/d18.mp3",
+"s": 150.575,
+"d": 1.167
+},
+{
+"role": "maya",
+"text": "I learned to swim.",
+"f": "audio/d/d18.mp3",
+"s": 152.142,
+"d": 1.059
+},
+{
+"role": "maya",
+"text": "swings",
+"f": "audio/d/d18.mp3",
+"s": 153.601,
+"d": 0.675
+},
+{
+"role": "maya",
+"text": "a seat that moves back and forth on ropes",
+"f": "audio/d/d18.mp3",
+"s": 154.676,
+"d": 2.065
+},
+{
+"role": "maya",
+"text": "We took turns on the swings.",
+"f": "audio/d/d18.mp3",
+"s": 157.141,
+"d": 1.469
+},
+{
+"role": "maya",
+"text": "symbols",
+"f": "audio/d/d18.mp3",
+"s": 159.01,
+"d": 0.7
+},
+{
+"role": "maya",
+"text": "a sign that stands for a sound or idea",
+"f": "audio/d/d18.mp3",
+"s": 160.11,
+"d": 2.163
+},
+{
+"role": "maya",
+"text": "The chart shows each symbol.",
+"f": "audio/d/d18.mp3",
+"s": 162.673,
+"d": 1.45
+},
+{
+"role": "maya",
+"text": "sync",
+"f": "audio/d/d18.mp3",
+"s": 164.523,
+"d": 0.619
+},
+{
+"role": "maya",
+"text": "happening at the same time",
+"f": "audio/d/d18.mp3",
+"s": 165.542,
+"d": 1.416
+},
+{
+"role": "maya",
+"text": "The captions stay in sync with the voice.",
+"f": "audio/d/d18.mp3",
+"s": 167.359,
+"d": 2.017
+},
+{
+"role": "maya",
+"text": "t",
+"f": "audio/d/d18.mp3",
+"s": 169.776,
+"d": 0.563
+},
+{
+"role": "maya",
+"text": "the twentieth letter of the alphabet",
+"f": "audio/d/d18.mp3",
+"s": 170.738,
+"d": 2.013
+},
+{
+"role": "maya",
+"text": "Press T to start the timer.",
+"f": "audio/d/d18.mp3",
+"s": 173.152,
+"d": 1.632
+},
+{
+"role": "maya",
+"text": "tab",
+"f": "audio/d/d18.mp3",
+"s": 175.183,
+"d": 0.544
+},
+{
+"role": "maya",
+"text": "a small label that you click to see another page",
+"f": "audio/d/d18.mp3",
+"s": 176.127,
+"d": 2.718
+},
+{
+"role": "maya",
+"text": "Click a tab to change the page.",
+"f": "audio/d/d18.mp3",
+"s": 179.246,
+"d": 1.694
+},
+{
+"role": "maya",
+"text": "table",
+"f": "audio/d/d18.mp3",
+"s": 181.34,
+"d": 0.6
+},
+{
+"role": "maya",
+"text": "a piece of furniture with a flat top",
+"f": "audio/d/d18.mp3",
+"s": 182.339,
+"d": 1.957
+},
+{
+"role": "maya",
+"text": "The box is on the table.",
+"f": "audio/d/d18.mp3",
+"s": 184.697,
+"d": 1.333
+},
+{
+"role": "maya",
+"text": "tag",
+"f": "audio/d/d18.mp3",
+"s": 186.43,
+"d": 0.543
+},
+{
+"role": "maya",
+"text": "a chasing game",
+"f": "audio/d/d18.mp3",
+"s": 187.373,
+"d": 0.999
+},
+{
+"role": "maya",
+"text": "We played tag at recess.",
+"f": "audio/d/d18.mp3",
+"s": 188.772,
+"d": 1.454
+},
+{
+"role": "maya",
+"text": "take",
+"f": "audio/d/d18.mp3",
+"s": 190.626,
+"d": 0.58
+},
+{
+"role": "maya",
+"text": "to get hold of; to need",
+"f": "audio/d/d18.mp3",
+"s": 191.606,
+"d": 1.443
+},
+{
+"role": "maya",
+"text": "We took turns.",
+"f": "audio/d/d18.mp3",
+"s": 193.449,
+"d": 0.941
+},
+{
+"role": "maya",
+"text": "take turns",
+"f": "audio/d/d18.mp3",
+"s": 194.79,
+"d": 0.875
+},
+{
+"role": "maya",
+"text": "to do something one after another, not at the same time",
+"f": "audio/d/d18.mp3",
+"s": 196.064,
+"d": 3.091
+},
+{
+"role": "maya",
+"text": "We took turns on the swings.",
+"f": "audio/d/d18.mp3",
+"s": 199.556,
+"d": 1.469
+},
+{
+"role": "maya",
+"text": "takes",
+"f": "audio/d/d18.mp3",
+"s": 201.425,
+"d": 0.653
+},
+{
+"role": "maya",
+"text": "to get hold of; to need",
+"f": "audio/d/d18.mp3",
+"s": 202.479,
+"d": 1.443
+},
+{
+"role": "maya",
+"text": "We took turns.",
+"f": "audio/d/d18.mp3",
+"s": 204.321,
+"d": 0.941
+},
+{
+"role": "maya",
+"text": "talk",
+"f": "audio/d/d18.mp3",
+"s": 205.662,
+"d": 0.555
+},
+{
+"role": "maya",
+"text": "to speak with someone",
+"f": "audio/d/d18.mp3",
+"s": 206.617,
+"d": 1.153
+},
+{
+"role": "maya",
+"text": "Talk with your partner.",
+"f": "audio/d/d18.mp3",
+"s": 208.17,
+"d": 1.177
+},
+{
+"role": "maya",
+"text": "talking",
+"f": "audio/d/d18.mp3",
+"s": 209.748,
+"d": 0.704
+},
+{
+"role": "maya",
+"text": "to speak with someone",
+"f": "audio/d/d18.mp3",
+"s": 210.852,
+"d": 1.153
+},
+{
+"role": "maya",
+"text": "Talk with your partner.",
+"f": "audio/d/d18.mp3",
+"s": 212.405,
+"d": 1.177
+},
+{
+"role": "maya",
+"text": "tally",
+"f": "audio/d/d18.mp3",
+"s": 213.982,
+"d": 0.575
+},
+{
+"role": "maya",
+"text": "a count that the teacher records",
+"f": "audio/d/d18.mp3",
+"s": 214.958,
+"d": 1.756
+},
+{
+"role": "maya",
+"text": "The tally shows the class choices.",
+"f": "audio/d/d18.mp3",
+"s": 217.113,
+"d": 1.878
+},
+{
+"role": "maya",
+"text": "wait",
+"f": "audio/d/d21.mp3",
+"s": 0.0,
+"d": 0.588
+},
+{
+"role": "maya",
+"text": "to stay until something happens",
+"f": "audio/d/d21.mp3",
+"s": 0.988,
+"d": 1.75
+},
+{
+"role": "maya",
+"text": "The newcomer may have to wait.",
+"f": "audio/d/d21.mp3",
+"s": 3.138,
+"d": 1.609
+},
+{
+"role": "maya",
+"text": "waiting",
+"f": "audio/d/d21.mp3",
+"s": 5.147,
+"d": 0.679
+},
+{
+"role": "maya",
+"text": "to stay until something happens",
+"f": "audio/d/d21.mp3",
+"s": 6.226,
+"d": 1.75
+},
+{
+"role": "maya",
+"text": "The newcomer may have to wait.",
+"f": "audio/d/d21.mp3",
+"s": 8.376,
+"d": 1.609
+},
+{
+"role": "maya",
+"text": "waits",
+"f": "audio/d/d21.mp3",
+"s": 10.385,
+"d": 0.613
+},
+{
+"role": "maya",
+"text": "to stay until something happens",
+"f": "audio/d/d21.mp3",
+"s": 11.398,
+"d": 1.75
+},
+{
+"role": "maya",
+"text": "The newcomer may have to wait.",
+"f": "audio/d/d21.mp3",
+"s": 13.548,
+"d": 1.609
+},
+{
+"role": "maya",
+"text": "waking",
+"f": "audio/d/d21.mp3",
+"s": 15.557,
+"d": 0.73
+},
+{
+"role": "maya",
+"text": "to stop sleeping",
+"f": "audio/d/d21.mp3",
+"s": 16.687,
+"d": 1.095
+},
+{
+"role": "maya",
+"text": "I used to wake up early.",
+"f": "audio/d/d21.mp3",
+"s": 18.182,
+"d": 1.399
+},
+{
+"role": "maya",
+"text": "walk",
+"f": "audio/d/d21.mp3",
+"s": 19.981,
+"d": 0.563
+},
+{
+"role": "maya",
+"text": "to move on foot",
+"f": "audio/d/d21.mp3",
+"s": 20.944,
+"d": 1.045
+},
+{
+"role": "maya",
+"text": "We walk home together.",
+"f": "audio/d/d21.mp3",
+"s": 22.389,
+"d": 1.255
+},
+{
+"role": "maya",
+"text": "walks",
+"f": "audio/d/d21.mp3",
+"s": 24.044,
+"d": 0.638
+},
+{
+"role": "maya",
+"text": "to move on foot",
+"f": "audio/d/d21.mp3",
+"s": 25.082,
+"d": 1.045
+},
+{
+"role": "maya",
+"text": "We walk home together.",
+"f": "audio/d/d21.mp3",
+"s": 26.527,
+"d": 1.255
+},
+{
+"role": "maya",
+"text": "wall",
+"f": "audio/d/d21.mp3",
+"s": 28.182,
+"d": 0.502
+},
+{
+"role": "maya",
+"text": "a side of a room or building",
+"f": "audio/d/d21.mp3",
+"s": 29.084,
+"d": 1.526
+},
+{
+"role": "maya",
+"text": "We threw a ball against the wall.",
+"f": "audio/d/d21.mp3",
+"s": 31.01,
+"d": 1.578
+},
+{
+"role": "maya",
+"text": "want",
+"f": "audio/d/d21.mp3",
+"s": 32.988,
+"d": 0.613
+},
+{
+"role": "maya",
+"text": "to wish for",
+"f": "audio/d/d21.mp3",
+"s": 34.0,
+"d": 0.81
+},
+{
+"role": "maya",
+"text": "Some want a sports activity.",
+"f": "audio/d/d21.mp3",
+"s": 35.211,
+"d": 1.54
+},
+{
+"role": "maya",
+"text": "wants",
+"f": "audio/d/d21.mp3",
+"s": 37.151,
+"d": 0.615
+},
+{
+"role": "maya",
+"text": "to wish for",
+"f": "audio/d/d21.mp3",
+"s": 38.166,
+"d": 0.81
+},
+{
+"role": "maya",
+"text": "Some want a sports activity.",
+"f": "audio/d/d21.mp3",
+"s": 39.376,
+"d": 1.54
+},
+{
+"role": "maya",
+"text": "warm",
+"f": "audio/d/d21.mp3",
+"s": 41.316,
+"d": 0.608
+},
+{
+"role": "maya",
+"text": "pleasantly hot; friendly",
+"f": "audio/d/d21.mp3",
+"s": 42.324,
+"d": 1.566
+},
+{
+"role": "maya",
+"text": "Not every memory feels warm.",
+"f": "audio/d/d21.mp3",
+"s": 44.29,
+"d": 1.695
+},
+{
+"role": "maya",
+"text": "warm-up",
+"f": "audio/d/d21.mp3",
+"s": 46.385,
+"d": 0.655
+},
+{
+"role": "maya",
+"text": "an easy activity at the start",
+"f": "audio/d/d21.mp3",
+"s": 47.44,
+"d": 1.764
+},
+{
+"role": "maya",
+"text": "The warm-up has four questions.",
+"f": "audio/d/d21.mp3",
+"s": 49.604,
+"d": 1.68
+},
+{
+"role": "maya",
+"text": "was",
+"f": "audio/d/d21.mp3",
+"s": 51.684,
+"d": 0.58
+},
+{
+"role": "maya",
+"text": "to exist or to have a quality",
+"f": "audio/d/d21.mp3",
+"s": 52.665,
+"d": 1.825
+},
+{
+"role": "maya",
+"text": "I used to be shy.",
+"f": "audio/d/d21.mp3",
+"s": 54.89,
+"d": 1.105
+},
+{
+"role": "maya",
+"text": "wasn't",
+"f": "audio/d/d21.mp3",
+"s": 56.395,
+"d": 0.628
+},
+{
+"role": "maya",
+"text": "to exist or to have a quality",
+"f": "audio/d/d21.mp3",
+"s": 57.423,
+"d": 1.825
+},
+{
+"role": "maya",
+"text": "I used to be shy.",
+"f": "audio/d/d21.mp3",
+"s": 59.648,
+"d": 1.105
+},
+{
+"role": "maya",
+"text": "watch",
+"f": "audio/d/d21.mp3",
+"s": 61.154,
+"d": 0.626
+},
+{
+"role": "maya",
+"text": "to look at something for a time",
+"f": "audio/d/d21.mp3",
+"s": 62.179,
+"d": 1.448
+},
+{
+"role": "maya",
+"text": "Watch a short scene.",
+"f": "audio/d/d21.mp3",
+"s": 64.027,
+"d": 1.16
+},
+{
+"role": "maya",
+"text": "way",
+"f": "audio/d/d21.mp3",
+"s": 65.587,
+"d": 0.506
+},
+{
+"role": "maya",
+"text": "a method; a path",
+"f": "audio/d/d21.mp3",
+"s": 66.493,
+"d": 1.381
+},
+{
+"role": "maya",
+"text": "There are many ways to solve it.",
+"f": "audio/d/d21.mp3",
+"s": 68.274,
+"d": 1.577
+},
+{
+"role": "maya",
+"text": "we",
+"f": "audio/d/d21.mp3",
+"s": 70.251,
+"d": 0.494
+},
+{
+"role": "maya",
+"text": "the speaker and other people",
+"f": "audio/d/d21.mp3",
+"s": 71.144,
+"d": 1.542
+},
+{
+"role": "maya",
+"text": "We played tag.",
+"f": "audio/d/d21.mp3",
+"s": 73.087,
+"d": 0.945
+},
+{
+"role": "maya",
+"text": "we'd",
+"f": "audio/d/d21.mp3",
+"s": 74.432,
+"d": 0.551
+},
+{
+"role": "maya",
+"text": "the speaker and other people",
+"f": "audio/d/d21.mp3",
+"s": 75.383,
+"d": 1.542
+},
+{
+"role": "maya",
+"text": "We played tag.",
+"f": "audio/d/d21.mp3",
+"s": 77.325,
+"d": 0.945
+},
+{
+"role": "maya",
+"text": "we'll",
+"f": "audio/d/d21.mp3",
+"s": 78.671,
+"d": 0.521
+},
+{
+"role": "maya",
+"text": "the speaker and other people",
+"f": "audio/d/d21.mp3",
+"s": 79.592,
+"d": 1.542
+},
+{
+"role": "maya",
+"text": "We played tag.",
+"f": "audio/d/d21.mp3",
+"s": 81.534,
+"d": 0.945
+},
+{
+"role": "maya",
+"text": "week",
+"f": "audio/d/d21.mp3",
+"s": 82.879,
+"d": 0.538
+},
+{
+"role": "maya",
+"text": "seven days",
+"f": "audio/d/d21.mp3",
+"s": 83.818,
+"d": 0.979
+},
+{
+"role": "maya",
+"text": "We met once a week.",
+"f": "audio/d/d21.mp3",
+"s": 85.197,
+"d": 1.238
+},
+{
+"role": "maya",
+"text": "weekends",
+"f": "audio/d/d21.mp3",
+"s": 86.834,
+"d": 0.759
+},
+{
+"role": "maya",
+"text": "Saturday and Sunday",
+"f": "audio/d/d21.mp3",
+"s": 87.993,
+"d": 1.146
+},
+{
+"role": "maya",
+"text": "Weekends are better with a plan.",
+"f": "audio/d/d21.mp3",
+"s": 89.539,
+"d": 1.689
+},
+{
+"role": "maya",
+"text": "weekly",
+"f": "audio/d/d21.mp3",
+"s": 91.627,
+"d": 0.662
+},
+{
+"role": "maya",
+"text": "seven days",
+"f": "audio/d/d21.mp3",
+"s": 92.69,
+"d": 0.979
+},
+{
+"role": "maya",
+"text": "We met once a week.",
+"f": "audio/d/d21.mp3",
+"s": 94.069,
+"d": 1.238
+},
+{
+"role": "maya",
+"text": "welcome",
+"f": "audio/d/d21.mp3",
+"s": 95.707,
+"d": 0.673
+},
+{
+"role": "maya",
+"text": "to greet someone happily",
+"f": "audio/d/d21.mp3",
+"s": 96.78,
+"d": 1.332
+},
+{
+"role": "maya",
+"text": "Welcome to Speaking Club.",
+"f": "audio/d/d21.mp3",
+"s": 98.511,
+"d": 1.538
+},
+{
+"role": "maya",
+"text": "well",
+"f": "audio/d/d21.mp3",
+"s": 100.449,
+"d": 0.505
+},
+{
+"role": "maya",
+"text": "in a good way",
+"f": "audio/d/d21.mp3",
+"s": 101.354,
+"d": 0.865
+},
+{
+"role": "maya",
+"text": "We get along well.",
+"f": "audio/d/d21.mp3",
+"s": 102.619,
+"d": 1.001
+},
+{
+"role": "maya",
+"text": "went",
+"f": "audio/d/d21.mp3",
+"s": 104.02,
+"d": 0.559
+},
+{
+"role": "maya",
+"text": "to move from one place to another",
+"f": "audio/d/d21.mp3",
+"s": 104.979,
+"d": 1.76
+},
+{
+"role": "maya",
+"text": "We go to the park after school.",
+"f": "audio/d/d21.mp3",
+"s": 107.139,
+"d": 1.676
+},
+{
+"role": "maya",
+"text": "were",
+"f": "audio/d/d21.mp3",
+"s": 109.214,
+"d": 0.479
+},
+{
+"role": "maya",
+"text": "to exist or to have a quality",
+"f": "audio/d/d21.mp3",
+"s": 110.093,
+"d": 1.825
+},
+{
+"role": "maya",
+"text": "I used to be shy.",
+"f": "audio/d/d21.mp3",
+"s": 112.318,
+"d": 1.105
+},
+{
+"role": "maya",
+"text": "what",
+"f": "audio/d/d21.mp3",
+"s": 113.824,
+"d": 0.503
+},
+{
+"role": "maya",
+"text": "used to ask for information",
+"f": "audio/d/d21.mp3",
+"s": 114.726,
+"d": 1.522
+},
+{
+"role": "maya",
+"text": "What happened next?",
+"f": "audio/d/d21.mp3",
+"s": 116.648,
+"d": 1.102
+},
+{
+"role": "maya",
+"text": "when",
+"f": "audio/d/d21.mp3",
+"s": 118.15,
+"d": 0.534
+},
+{
+"role": "maya",
+"text": "at what time",
+"f": "audio/d/d21.mp3",
+"s": 119.083,
+"d": 0.834
+},
+{
+"role": "maya",
+"text": "When I was seven, I learned to ride a bike.",
+"f": "audio/d/d21.mp3",
+"s": 120.317,
+"d": 2.299
+},
+{
+"role": "maya",
+"text": "where",
+"f": "audio/d/d21.mp3",
+"s": 123.016,
+"d": 0.52
+},
+{
+"role": "maya",
+"text": "in what place",
+"f": "audio/d/d21.mp3",
+"s": 123.937,
+"d": 0.897
+},
+{
+"role": "maya",
+"text": "Where did you grow up?",
+"f": "audio/d/d21.mp3",
+"s": 125.234,
+"d": 1.078
+},
+{
+"role": "maya",
+"text": "which",
+"f": "audio/d/d21.mp3",
+"s": 126.712,
+"d": 0.59
+},
+{
+"role": "maya",
+"text": "used to ask about a choice",
+"f": "audio/d/d21.mp3",
+"s": 127.703,
+"d": 1.58
+},
+{
+"role": "maya",
+"text": "Which expression do you want to reuse?",
+"f": "audio/d/d21.mp3",
+"s": 129.682,
+"d": 1.951
+},
+{
+"role": "maya",
+"text": "while",
+"f": "audio/d/d21.mp3",
+"s": 132.033,
+"d": 0.556
+},
+{
+"role": "maya",
+"text": "during the time that",
+"f": "audio/d/d21.mp3",
+"s": 132.989,
+"d": 1.116
+},
+{
+"role": "maya",
+"text": "While carrying it, they dropped it.",
+"f": "audio/d/d21.mp3",
+"s": 134.505,
+"d": 1.516
+},
+{
+"role": "maya",
+"text": "whispers",
+"f": "audio/d/d21.mp3",
+"s": 136.42,
+"d": 0.798
+},
+{
+"role": "maya",
+"text": "to speak very quietly",
+"f": "audio/d/d21.mp3",
+"s": 137.619,
+"d": 1.379
+},
+{
+"role": "maya",
+"text": "One friend whispers, \"Let's hide it.\"",
+"f": "audio/d/d21.mp3",
+"s": 139.398,
+"d": 1.992
+},
+{
+"role": "maya",
+"text": "who",
+"f": "audio/d/d21.mp3",
+"s": 141.791,
+"d": 0.537
+},
+{
+"role": "maya",
+"text": "used to ask about a person",
+"f": "audio/d/d21.mp3",
+"s": 142.728,
+"d": 1.6
+},
+{
+"role": "maya",
+"text": "Who did you usually play with?",
+"f": "audio/d/d21.mp3",
+"s": 144.729,
+"d": 1.501
+},
+{
+"role": "maya",
+"text": "whole",
+"f": "audio/d/d21.mp3",
+"s": 146.63,
+"d": 0.525
+},
+{
+"role": "maya",
+"text": "complete",
+"f": "audio/d/d21.mp3",
+"s": 147.555,
+"d": 0.748
+},
+{
+"role": "maya",
+"text": "The whole class joined in.",
+"f": "audio/d/d21.mp3",
+"s": 148.703,
+"d": 1.464
+},
+{
+"role": "maya",
+"text": "why",
+"f": "audio/d/d21.mp3",
+"s": 150.567,
+"d": 0.546
+},
+{
+"role": "maya",
+"text": "for what reason",
+"f": "audio/d/d21.mp3",
+"s": 151.514,
+"d": 0.898
+},
+{
+"role": "maya",
+"text": "Why did you choose it?",
+"f": "audio/d/d21.mp3",
+"s": 152.811,
+"d": 1.154
+},
+{
+"role": "maya",
+"text": "will",
+"f": "audio/d/d21.mp3",
+"s": 154.366,
+"d": 0.55
+},
+{
+"role": "maya",
+"text": "used to talk about the future",
+"f": "audio/d/d21.mp3",
+"s": 155.315,
+"d": 1.742
+},
+{
+"role": "maya",
+"text": "Someone will find it.",
+"f": "audio/d/d21.mp3",
+"s": 157.457,
+"d": 1.097
+},
+{
+"role": "maya",
+"text": "with",
+"f": "audio/d/d21.mp3",
+"s": 158.954,
+"d": 0.534
+},
+{
+"role": "maya",
+"text": "together with; using",
+"f": "audio/d/d21.mp3",
+"s": 159.888,
+"d": 1.422
+},
+{
+"role": "maya",
+"text": "I played with my cousin.",
+"f": "audio/d/d21.mp3",
+"s": 161.71,
+"d": 1.324
+},
+{
+"role": "maya",
+"text": "without",
+"f": "audio/d/d21.mp3",
+"s": 163.435,
+"d": 0.59
+},
+{
+"role": "maya",
+"text": "not having",
+"f": "audio/d/d21.mp3",
+"s": 164.425,
+"d": 0.797
+},
+{
+"role": "maya",
+"text": "Sam makes a sandwich without help.",
+"f": "audio/d/d21.mp3",
+"s": 165.622,
+"d": 1.788
+},
+{
+"role": "maya",
+"text": "word",
+"f": "audio/d/d21.mp3",
+"s": 167.811,
+"d": 0.553
+},
+{
+"role": "maya",
+"text": "a single unit of language",
+"f": "audio/d/d21.mp3",
+"s": 168.764,
+"d": 1.612
+},
+{
+"role": "maya",
+"text": "Double-click any word.",
+"f": "audio/d/d21.mp3",
+"s": 170.776,
+"d": 1.249
+},
+{
+"role": "maya",
+"text": "words",
+"f": "audio/d/d21.mp3",
+"s": 172.425,
+"d": 0.65
+},
+{
+"role": "maya",
+"text": "a single unit of language",
+"f": "audio/d/d21.mp3",
+"s": 173.475,
+"d": 1.612
+},
+{
+"role": "maya",
+"text": "Double-click any word.",
+"f": "audio/d/d21.mp3",
+"s": 175.487,
+"d": 1.249
+},
+{
+"role": "maya",
+"text": "work",
+"f": "audio/d/d21.mp3",
+"s": 177.136,
+"d": 0.593
+},
+{
+"role": "maya",
+"text": "to be effective; to do a job",
+"f": "audio/d/d21.mp3",
+"s": 178.129,
+"d": 1.881
+},
+{
+"role": "maya",
+"text": "That might work.",
+"f": "audio/d/d21.mp3",
+"s": 180.41,
+"d": 0.961
+},
+{
+"role": "maya",
+"text": "working",
+"f": "audio/d/d21.mp3",
+"s": 181.771,
+"d": 0.73
+},
+{
+"role": "maya",
+"text": "to be effective; to do a job",
+"f": "audio/d/d21.mp3",
+"s": 182.901,
+"d": 1.881
+},
+{
+"role": "maya",
+"text": "That might work.",
+"f": "audio/d/d21.mp3",
+"s": 185.182,
+"d": 0.961
+},
+{
+"role": "maya",
+"text": "works",
+"f": "audio/d/d21.mp3",
+"s": 186.543,
+"d": 0.653
+},
+{
+"role": "maya",
+"text": "to be effective; to do a job",
+"f": "audio/d/d21.mp3",
+"s": 187.596,
+"d": 1.881
+},
+{
+"role": "maya",
+"text": "That might work.",
+"f": "audio/d/d21.mp3",
+"s": 189.877,
+"d": 0.961
+},
+{
+"role": "maya",
+"text": "would",
+"f": "audio/d/d21.mp3",
+"s": 191.238,
+"d": 0.534
+},
+{
+"role": "maya",
+"text": "used for past habits and polite questions",
+"f": "audio/d/d21.mp3",
+"s": 192.171,
+"d": 2.37
+},
+{
+"role": "maya",
+"text": "We would play cards after lunch.",
+"f": "audio/d/d21.mp3",
+"s": 194.941,
+"d": 1.668
+},
+{
+"role": "maya",
+"text": "wrap-up",
+"f": "audio/d/d21.mp3",
+"s": 197.009,
+"d": 0.69
+},
+{
+"role": "maya",
+"text": "a short ending activity",
+"f": "audio/d/d21.mp3",
+"s": 198.099,
+"d": 1.362
+},
+{
+"role": "maya",
+"text": "The wrap-up asks which claim made you think.",
+"f": "audio/d/d21.mp3",
+"s": 199.861,
+"d": 2.041
+},
+{
+"role": "maya",
+"text": "wrong",
+"f": "audio/d/d21.mp3",
+"s": 202.302,
+"d": 0.593
+},
+{
+"role": "maya",
+"text": "not correct",
+"f": "audio/d/d21.mp3",
+"s": 203.294,
+"d": 0.855
+},
+{
+"role": "maya",
+"text": "Neither memory has to be wrong.",
+"f": "audio/d/d21.mp3",
+"s": 204.55,
+"d": 1.81
+}
+]

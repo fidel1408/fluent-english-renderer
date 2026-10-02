@@ -15,6 +15,16 @@
   "detail": ""
  },
  {
+  "name": "every dictionary word, meaning and example has a natural recording",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "a packed dictionary clip plays only its own segment",
+  "pass": true,
+  "detail": ""
+ },
+ {
   "name": "Settings offers a Natural voices switch",
   "pass": true,
   "detail": ""

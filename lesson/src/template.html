@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluent English — Be: Negatives (A1)</title>
+<meta name="description" content="A teacher-led, 60-minute interactive grammar lesson: negatives with am / is / are for Spanish-speaking A1 adults.">
+<style>
+{{CSS}}
+</style>
+</head>
+<body data-cc="0">
+<a class="skip" href="#stage">Skip to lesson</a>
+<div id="live" class="sr" aria-live="polite"></div>
+
+<!-- Start / resume screen: Start unlocks browser audio -->
+<div id="overlayStart" class="overlay" role="dialog" aria-modal="true" aria-labelledby="startTitle" hidden>
+  <div class="startcard">
+    <img class="logo-big" alt="Fluent English" src="{{LOGO_BLUE}}">
+    <h1 id="startTitle">Be: Negatives</h1>
+    <p class="meta">A1 grammar for adult Spanish-speaking beginners · 60-minute teacher-led lesson</p>
+    <div class="startrow">
+      <button id="btnStart" class="btn big">Start Lesson</button>
+    </div>
+    <div id="resumeBox" class="resume" hidden>
+      <p id="resumeInfo"></p>
+      <button id="btnResume" class="btn">Resume where we left off</button>
+    </div>
+    <ul class="startnotes">
+      <li>Starting the lesson unlocks sound. Voices come from this device, so quality varies.</li>
+      <li>No microphone is used. Nothing is uploaded. Progress is saved only in this browser.</li>
+      <li>Press <kbd>?</kbd> in the lesson for keyboard shortcuts.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <header id="top">
+    <div class="brand"><img class="logo" alt="Fluent English" src="{{LOGO_WHITE}}"><div class="lt"><b>Be: Negatives</b><span id="secTitle"></span></div></div>
+    <nav id="chips" aria-label="Lesson sections"></nav>
+    <div class="tools">
+      <div id="timer" class="timer" role="timer" aria-label="Section timer"><span id="tsec">Section 1</span><b id="tleft">05:00</b><small id="tall"></small></div>
+      <button id="btnCC" class="tbtn" aria-label="CC/IPA"><b>CC/IPA</b><span>Off</span></button>
+      <button id="btnES" class="tbtn" aria-pressed="false"><b>Spanish</b><span>Help</span></button>
+      <button id="btnSet" class="tbtn"><b>Settings</b><span>voice · sound</span></button>
+      <button id="btnFull" class="tbtn" aria-pressed="false"><b>Full</b><span>screen</span></button>
+    </div>
+  </header>
+
+  <main id="stagewrap">
+    <div id="stage" class="stage" tabindex="-1"></div>
+    <div id="pausedBadge" class="paused" hidden>Paused</div>
+  </main>
+
+  <aside id="es" class="es" hidden aria-label="Spanish help">
+      <div class="eshead"><b>Ayuda en español</b><button id="btnEsSay" class="btn ghost sm">Escuchar</button></div>
+      <p class="estext" lang="es"></p>
+    </aside>
+  <div id="caption" class="caption" hidden aria-live="polite" aria-label="Captions"></div>
+
+  <footer id="ctl">
+    <div class="grp">
+      <button id="btnPrev" class="cbtn" aria-label="Previous screen"><i>◀</i><span>Previous</span></button>
+      <button id="btnPlay" class="cbtn" aria-pressed="false"><i>⏯</i><span>Pause</span></button>
+      <button id="btnReplay" class="cbtn" aria-label="Replay example"><i>↻</i><span>Replay Example</span></button>
+      <button id="btnReveal" class="cbtn" aria-pressed="false"><i>◉</i><span>Reveal Answer</span></button>
+      <button id="btnNext" class="cbtn primary" aria-label="Next screen"><i>▶</i><span>Next</span></button>
+    </div>
+    <div class="grp">
+      <button id="btnExt30" class="cbtn sm">+30 s</button>
+      <button id="btnExt60" class="cbtn sm">+1 min</button>
+      <button id="btnSkip" class="cbtn sm" title="End this section's timer and go to the next section">Skip Timer</button>
+    </div>
+    <div class="grp">
+      <button id="btnSupport" class="cbtn sm" aria-pressed="true"><span>Support: On</span></button>
+      <button id="btnMute" class="cbtn sm" aria-pressed="false"><span>Narration on</span></button>
+      <label class="rate">Speed<input id="rate2" type="range" min="0.5" max="1.2" step="0.05" value="0.85" aria-label="Speaking rate"></label>
+    </div>
+    <div class="grp">
+      <button id="btnMenu" class="cbtn sm">Chapters</button>
+      <button id="btnRes" class="cbtn sm">Results</button>
+      <button id="btnKeys" class="cbtn sm" aria-label="Keyboard shortcuts">?</button>
+      <button id="btnReset" class="cbtn sm danger">Reset</button>
+    </div>
+  </footer>
+</div>
+
+<div id="toast" class="toast" role="status" hidden></div>
+
+<dialog id="dlgSet" aria-labelledby="setTitle">
+  <div class="dlg"><h3 id="setTitle">Settings</h3>
+    <fieldset><legend>Voice (device speech synthesis)</legend>
+      <label>English voice <select id="selEn"></select></label>
+      <label>Spanish Help voice <select id="selEs"></select></label>
+      <div class="row"><button id="btnTestEn" class="btn ghost">Test English</button><button id="btnTestEs" class="btn ghost">Test Spanish</button></div>
+      <p id="voiceNote" class="small"></p>
+      <label>Speaking rate <input id="rate" type="range" min="0.5" max="1.2" step="0.05"><output id="rateOut"></output></label>
+      <label class="chk"><input type="checkbox" id="chkMute"> Mute narration (captions still appear)</label>
+      <label class="chk"><input type="checkbox" id="chkAuto"> Narrate each screen automatically</label>
+    </fieldset>
+    <fieldset><legend>Volumes</legend>
+      <label>Speech <input id="vSpeech" type="range" min="0" max="1" step="0.05"></label>
+      <label>Music <input id="vMusic" type="range" min="0" max="1" step="0.05"></label>
+      <label>Effects <input id="vFx" type="range" min="0" max="1" step="0.05"></label>
+      <div class="row"><button id="btnTestFx" class="btn ghost">Test effect</button><button id="btnTestMusic" class="btn ghost">Play theme</button></div>
+    </fieldset>
+    <fieldset><legend>Display</legend>
+      <label class="chk"><input type="checkbox" id="chkRm"> Reduce motion</label>
+    </fieldset>
+    <details class="about"><summary>About the sound, IPA and your data</summary>
+      <p>All music and sound effects are generated by code in your browser. Voices use your device's speech synthesis; they are not human recordings and sound different on each device.</p>
+      <p>IPA uses only the symbols on the Fluent English Sound Chart (American English). Each word was transcribed from that symbol set, but the words could not be looked up on Oxford Learner's Dictionaries when this lesson was built, so no Oxford verification is claimed. Sentence lines are assembled word by word from citation forms (articles use weak forms); they are not Oxford sentence transcriptions. Please check important words yourself.</p>
+      <p>No names, e-mail addresses or microphone data are collected. Settings, progress and scores stay in this browser. Exports happen only when you press a download button.</p>
+    </details>
+    <div class="row end"><button class="btn" data-close="dlgSet">Done</button></div>
+  </div>
+</dialog>
+
+<dialog id="dlgMenu" aria-labelledby="menuTitle"><div class="dlg wide"><h3 id="menuTitle">Chapters</h3><div id="menuBody"></div><div class="row end"><button class="btn" data-close="dlgMenu">Close</button></div></div></dialog>
+
+<dialog id="dlgRes" aria-labelledby="resTitle"><div class="dlg wide"><h3 id="resTitle">Results and export</h3><div id="resBody"></div>
+  <div class="row end"><button id="btnJson" class="btn ghost">Download JSON</button><button id="btnCsv" class="btn ghost">Download CSV</button><button class="btn" data-close="dlgRes">Close</button></div></div></dialog>
+
+<dialog id="dlgConfirm" aria-labelledby="cfTitle"><div class="dlg"><h3 id="cfTitle"></h3><p id="cfText"></p><div class="row end"><button id="cfNo" class="btn ghost">Cancel</button><button id="cfOk" class="btn danger">Confirm</button></div></div></dialog>
+
+<dialog id="dlgKeys" aria-labelledby="keysTitle"><div class="dlg"><h3 id="keysTitle">Keyboard shortcuts</h3>
+  <table class="rt"><tbody>
+    <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>Previous / next screen</td></tr>
+    <tr><td><kbd>Space</kbd></td><td>Pause / play</td></tr>
+    <tr><td><kbd>R</kbd></td><td>Replay example</td></tr>
+    <tr><td><kbd>A</kbd></td><td>Reveal / hide answer</td></tr>
+    <tr><td><kbd>C</kbd></td><td>Cycle CC / IPA</td></tr>
+    <tr><td><kbd>S</kbd></td><td>Spanish Help</td></tr>
+    <tr><td><kbd>M</kbd></td><td>Mute narration</td></tr>
+    <tr><td><kbd>F</kbd></td><td>Fullscreen</td></tr>
+  </tbody></table><div class="row end"><button class="btn" data-close="dlgKeys">Close</button></div></div></dialog>
+
+<script>
+{{JS}}
+</script>
+</body>
+</html>

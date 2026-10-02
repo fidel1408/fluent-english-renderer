@@ -1,0 +1,14 @@
+{
+  "name": "fluent-english-be-negatives-lesson",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-contained interactive A1 grammar lesson: Be: Negatives",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node build.mjs && node tests/run-tests.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.49.0"
+  }
+}

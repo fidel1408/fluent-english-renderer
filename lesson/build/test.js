@@ -11,6 +11,8 @@ const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail+
   await p.goto(URL); await p.evaluate(() => localStorage.clear()); await p.goto(URL);
 
   console.log('# structure');
+  ok(await p.evaluate(() => { const bad = Object.values(IPA.D).join('').replace(/[ˈˌ ː]/g, '').split('').filter((c) => !'æeɪɔʊəʌiuɑaʒzstmnfvdðθlwrbgʃhkŋjpɜ'.includes(c)); return bad.length === 0; }), 'IPA dictionary uses only sound-chart symbols (+ stress marks)');
+  ok(await p.evaluate(() => !JSON.stringify(IPA.D).includes('oʊ') && Object.values(IPA.D).some((v) => v.includes('əʊ'))), 'GOAT vowel written əʊ as on the chart');
   ok(await p.evaluate(() => ACT_MIN.reduce((a, b) => a + b, 0) === 60), 'default activity minutes total exactly 60');
   ok(await p.evaluate(() => ACTS.length === 9), 'nine activities');
   ok(await p.evaluate(() => ACTS.reduce((s, a) => s + a.beats.reduce((t, x) => t + (x.talk || 0), 0), 0) === 2100), 'planned learner speaking = 35.0 min');
@@ -21,6 +23,10 @@ const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail+
   ok(await p.evaluate((exp) => MCQ_ITEMS.every((q, i) => q.opts[q.ok] === exp[i + 1]), exp), 'correct answers match the specification');
   ok(await p.evaluate(() => MCQ_ITEMS.every((q) => q.opts.filter((o) => o === q.opts[q.ok]).length === 1)), 'each item has exactly one option equal to its key');
 
+  console.log('# sound chart');
+  await p.evaluate(() => { document.getElementById('start').hidden = true; });
+  await p.click('#b-chart'); ok(await p.isVisible('.modal img'), 'Sound chart button opens the chart'); ok(await p.evaluate(() => document.querySelector('.modal img').naturalWidth > 1000), 'chart image loads'); await p.keyboard.press('Escape');
+  await p.evaluate(() => { document.getElementById('start').hidden = false; });
   console.log('# start / audio unlock');
   ok(!(await p.evaluate(() => Sound.ready)), 'no AudioContext before Start');
   await p.click('#b-start'); await p.waitForTimeout(800);

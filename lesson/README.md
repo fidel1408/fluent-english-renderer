@@ -2,7 +2,7 @@
 
 A teacher-led, 60-minute interactive lesson for adult Spanish-speaking beginners. One self-contained file:
 
-**`lesson/fluent-english-be-lesson.html`** (≈335 KB, no network, no API keys, no uploads)
+**`lesson/fluent-english-be-lesson.html`** (≈505 KB, no network, no API keys, no uploads)
 
 ## Launch
 
@@ -39,12 +39,13 @@ Source: `lesson/src/` (`art.js` vector people/scenes, `audio.js` Web Audio + spe
 - `test.js` — 65 checks: timers total 60:00; 2100 s planned speaking; 10 items × 4 distinct options with the specified keys; AudioContext only after Start; opening-theme level; timer runs / stops on pause; +30 s / +1 min / skip; no auto-advance; navigation, chapter menu, keyboard; revisit keeps time; reveal/hide; Spanish panel; CC/IPA cycle; click-to-build feedback; full ten-question flow with 8/10 first attempt, retry 2/2 kept separate, shared vs individual labels; checklist; JSON + CSV download; resume after reload; reset confirmation. **65 passed, 0 failed.**
 - `test-speech.js` — a mock `speechSynthesis`: narration order, no overlapping voices, nothing spoken while paused, resume, old lines not spoken after navigating, Spanish only on request, mute still shows captions. **14 passed.**
 - `test-audio.js` — measured Web Audio levels: peaks ≤ 0.11 (no clipping), ambient ducks ≈12 dB under speech and ≈ −35 dB in quiet mode.
+- Chart check: the dictionary contains no symbol outside the chart (test.js), and the Sound chart panel loads.
 - `probe.js` — visits all 100 steps: 0 console/page errors, 0 words missing from the IPA dictionary.
 - Screenshots reviewed at 1280×760, 1366×768 and 1920×1080, including IPA mode.
 
 ## Limitations — please read
 
-- **IPA is not Oxford-verified.** Oxford lookup was unreachable from the build environment. Every entry (`build/ipa-words.txt`, ~340 words) was typed by hand in Oxford-style American notation, and sentence lines are *assembled word by word from citation forms* (so small words are not reduced). Spot-check before relying on it.
+- **IPA follows your Fluent English sound chart, but is not Oxford-checked.** Oxford lookup was unreachable from the build environment. Every entry (`build/ipa-words.txt`, ~350 words) was typed by hand using only the 36 symbols on your `Sound_Chart.mp4` (plus stress marks ˈ ˌ), e.g. the sailboat vowel is written **əʊ**, as on the chart. `ɪr` and `ʊr` (here, you’re) are not separate chart cells; they are ɪ/ʊ + r, like the chart’s `er`. Sentence lines are *assembled word by word from citation forms* (small words are not reduced). Spot-check before relying on it. The chart is built in: dock → **Sound chart**.
 - **Voices were not heard by the author.** Real speech quality depends on the voices installed on your device; I tested sequencing with a mock and measured music/effects levels, but did not listen to real voices or to the music. Preview a voice in **Voice & volume** first. Some devices have no English (or no Spanish) voice; captions still run and Spanish read-aloud is skipped.
 - Tested only in Chromium on Linux. Safari/Firefox, touch devices, and real Zoom/Meet screen-sharing audio were not tested.
 - No microphone, speech recognition or pronunciation scoring — by design. Repeating after a synthetic voice does not prove accuracy.

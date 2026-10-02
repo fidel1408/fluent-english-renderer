@@ -80,7 +80,7 @@ function frame(act, beat) {
   const talk = beat.talk ? `<span class="talkchip" title="Planned learner speaking time on this screen">Learner speaking ≈ ${tl}</span>` : '';
   return `<div class="pane enter"><div class="head"><span class="num" aria-label="Activity ${act.n}">${act.n}</span><h1>${tx(beat.title)}</h1>${beat.sub ? `<span class="sub">${tx(beat.sub)}</span>` : ''}${talk}</div>
     <div class="body" style="display:contents">__BODY__</div>
-    <div class="small-note ipa-note" style="display:none">IPA: American English, typed by hand in Oxford-style notation and assembled word by word from dictionary (citation) forms — not supplied or verified by Oxford, and natural speech reduces small words.</div></div>`;
+    <div class="small-note ipa-note" style="display:none">IPA: American English, written with the symbols of the Fluent English sound chart (button: Sound chart) and assembled word by word from citation forms. Entered by hand, not checked against Oxford; natural speech reduces small words.</div></div>`;
 }
 function enter(a, b, o = {}) {
   const act = ACTS[a]; b = Math.max(0, Math.min(b, act.beats.length - 1));
@@ -263,6 +263,11 @@ function openSettings() {
   $('#c-rm', m.el).onchange = (e) => { st.rm = e.target.checked; applyRM(); save(); };
   $('#c-ind', m.el).onchange = (e) => { S.mode = e.target.checked ? 'individual' : 'shared'; save(); toast(S.mode === 'individual' ? 'Individual mode on (own copy).' : 'Shared class mode on.'); };
 }
+function openChart() {
+  modal(`<button class="btn alt sm x" data-close>Close</button><h2>Fluent English sound chart</h2>
+    <img src="__SOUND_CHART__" alt="Sound chart: 36 English sounds with their IPA symbols and a picture for each" style="width:100%;border-radius:10px;border:1px solid var(--cream-3)">
+    <p class="small-note">The IPA in this lesson uses these symbols. Extra marks: ˈ primary stress, ˌ secondary stress. <b>ɪr</b> and <b>ʊr</b> (here, you’re) are ɪ or ʊ followed by r, like <b>er</b> on the chart. Stress marks and spaces between words are the only additions.</p>`, { label: 'Sound chart' });
+}
 function openGuide() {
   const spk = ACTS.map((a) => a.beats.reduce((s, b) => s + (b.talk || 0), 0));
   const tot = spk.reduce((a, b) => a + b, 0);
@@ -277,7 +282,7 @@ function openGuide() {
     <dt>+30 s / +1 min / Skip timer</dt><dd>Adjust the current activity’s timer. When it reaches zero the lesson never advances by itself.</dd>
     <dt>Reveal / Hide answer (A)</dt><dd>Show or hide the answer on the current screen. In the ten-question check, answers stay hidden until the class answer is submitted.</dd>
     <dt>Español (S)</dt><dd>Concise Spanish help for the current screen, only when you ask for it.</dd>
-    <dt>CC/IPA (C)</dt><dd>Off, Captions, or Captions + IPA. IPA is typed by hand in Oxford-style American English notation and assembled word by word; it was <b>not</b> verified against Oxford in this build (lookup was unavailable).</dd>
+    <dt>CC/IPA (C)</dt><dd>Off, Captions, or Captions + IPA. IPA uses only the symbols on the Fluent English sound chart (open it with <b>Sound chart</b>), plus stress marks. It is typed by hand and assembled word by word; it was <b>not</b> checked against Oxford (lookup was unavailable).</dd>
     <dt>Settings</dt><dd>Choose and preview voices, speaking rate, speech/music/effects volume, reduced motion.</dd></dl>
     <p class="small-note"><b>Limits:</b> no microphone, speech recognition or pronunciation scoring — you listen and judge. Synthetic voices are models for rhythm, not proof of accuracy. Progress is saved only in this browser. Results leave the browser only if you press a download button.</p>
     <p class="small-note">Keyboard: Space pause/play · ← → step · Shift+← → activity · R replay · A reveal · S Spanish · C CC/IPA · M mute narration · F fullscreen · H hide controls.</p></div>`, { label: 'Teacher guide' });
@@ -332,6 +337,7 @@ function init() {
   on('#b-play', () => setPaused(!paused));
   on('#b-replay', replay); on('#b-prev', prev); on('#b-next', next); on('#b-pa', prevAct); on('#b-na', nextAct);
   on('#b-chap', openChapters); on('#b-reveal', toggleReveal); on('#b-es', toggleEs);
+  on('#b-chart', openChart);
   on('#b-cc', () => { const o = ['off', 'cap', 'ipa'], i = o.indexOf(S.settings.cc); S.settings.cc = o[(i + 1) % 3]; applyCC(); save(); toast('CC/IPA: ' + { off: 'Off', cap: 'Captions', ipa: 'Captions + IPA' }[S.settings.cc]); });
   on('#b-30', () => extend(30)); on('#b-60', () => extend(60)); on('#b-skip', skipTimer);
   on('#b-set', openSettings); on('#b-res', openResults); on('#b-reset', openReset);

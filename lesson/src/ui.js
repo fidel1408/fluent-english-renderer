@@ -219,6 +219,8 @@ function applyCC() {
   $('#b-cc').innerHTML = `CC/IPA: <b>${lab}</b>`; $('#b-cc').setAttribute('aria-pressed', S.settings.cc !== 'off');
   $$('.ipa-note').forEach((n) => (n.style.display = S.settings.cc === 'ipa' ? 'block' : 'none'));
 }
+const TS = [['Standard', 1], ['Large', 1.2], ['Extra large', 1.5]];
+function applyTS() { const t = TS[S.settings.ts] || TS[1]; document.documentElement.style.setProperty('--tscale', t[1]); const b = $('#b-ts'); if (b) b.innerHTML = `Text: <b>${t[0]}</b>`; }
 function applyRM() { document.body.classList.toggle('rm', !!S.settings.rm); document.body.classList.toggle('rm-off', !S.settings.rm); }
 function applyAudio() {
   const st = S.settings; Speech.cfg.rate = st.rate; Speech.cfg.volume = st.vSpeech; Speech.cfg.mute = st.mute; Speech.cfg.en = st.voice; Speech.cfg.es = st.voiceEs;
@@ -294,9 +296,9 @@ function openGuide() {
     <dt>Reveal / Hide answer (A)</dt><dd>Show or hide the answer on the current screen. In the ten-question check, answers stay hidden until the class answer is submitted.</dd>
     <dt>Español (S)</dt><dd>Concise Spanish help for the current screen, only when you ask for it.</dd>
     <dt>CC/IPA (C)</dt><dd>Off, Captions, or Captions + IPA. IPA uses only the symbols on the Fluent English sound chart (open it with <b>Sound chart</b>), plus stress marks. It is typed by hand and assembled word by word; it was <b>not</b> checked against Oxford (lookup was unavailable).</dd>
-    <dt>Settings</dt><dd>Choose and preview voices, speaking rate, speech/music/effects volume, reduced motion.</dd></dl>
+    <dt>Text size (T)</dt><dd>Standard, Large or Extra large for captions, IPA and labels. Use Large or Extra large when learners watch on a phone.</dd>\n    <dt>Settings</dt><dd>Choose and preview voices, speaking rate, speech/music/effects volume, reduced motion.</dd></dl>
     <p class="small-note"><b>Limits:</b> no microphone, speech recognition or pronunciation scoring — you listen and judge. Synthetic voices are models for rhythm, not proof of accuracy. Progress is saved only in this browser. Results leave the browser only if you press a download button.</p>
-    <p class="small-note">Keyboard: Space pause/play · ← → step · Shift+← → activity · R replay · A reveal · S Spanish · C CC/IPA · M mute narration · F fullscreen · H hide controls.</p></div>`, { label: 'Teacher guide' });
+    <p class="small-note">Keyboard: Space pause/play · ← → step · Shift+← → activity · R replay · A reveal · S Spanish · C CC/IPA · T text size · M mute narration · F fullscreen · H hide controls.</p></div>`, { label: 'Teacher guide' });
 }
 function openReset() {
   confirmBox('Reset the lesson?', 'This clears saved progress, timers, scores, checklists and notes from this browser and returns to the start. Settings (voices, volume) are kept.', 'Reset everything', () => {
@@ -317,7 +319,7 @@ function showStart() {
     $('#b-fresh').onclick = () => confirmBox('Start from the beginning?', 'Saved timers, scores and checklists will be cleared.', 'Clear and start', () => { const keep = saved.settings; S = fresh(); S.settings = Object.assign(S.settings, keep); applySettings(); beginLesson(false); });
   } else box.hidden = true;
 }
-function applySettings() { applyCC(); applyRM(); applyAudio(); }
+function applySettings() { applyCC(); applyRM(); applyAudio(); applyTS(); }
 async function beginLesson(resume) {
   Sound.init(); applyAudio(); S.started = true; $('#start').hidden = true; lastTick = performance.now();
   Sound.setMode('ambient');
@@ -348,6 +350,7 @@ function init() {
   on('#b-play', () => setPaused(!paused));
   on('#b-replay', replay); on('#b-prev', prev); on('#b-next', next); on('#b-pa', prevAct); on('#b-na', nextAct);
   on('#b-chap', openChapters); on('#b-reveal', toggleReveal); on('#b-es', toggleEs);
+  on('#b-ts', () => { S.settings.ts = ((S.settings.ts == null ? 1 : S.settings.ts) + 1) % 3; applyTS(); save(); toast('Text size: ' + TS[S.settings.ts][0]); });
   on('#b-chart', openChart); on('#b-video', openVideo);
   on('#b-cc', () => { const o = ['off', 'cap', 'ipa'], i = o.indexOf(S.settings.cc); S.settings.cc = o[(i + 1) % 3]; applyCC(); save(); toast('CC/IPA: ' + { off: 'Off', cap: 'Captions', ipa: 'Captions + IPA' }[S.settings.cc]); });
   on('#b-30', () => extend(30)); on('#b-60', () => extend(60)); on('#b-skip', skipTimer);
@@ -368,6 +371,7 @@ function init() {
     else if (k === 's' || k === 'S') toggleEs();
     else if (k === 'c' || k === 'C') $('#b-cc').click();
     else if (k === 'm' || k === 'M') $('#b-mute').click();
+    else if (k === 't' || k === 'T') $('#b-ts').click();
     else if (k === 'f' || k === 'F') $('#b-full').click();
     else if (k === 'h' || k === 'H') $('#b-dock').click();
   });

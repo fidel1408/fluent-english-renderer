@@ -18,7 +18,7 @@
   --ipa:'Charis SIL','Doulos SIL','Gentium Plus','Noto Sans','DejaVu Sans','Segoe UI','Arial Unicode MS',sans-serif;
 }
 *{box-sizing:border-box}
-html{font-size:clamp(12px,min(1.12vw,2.05vh),22px)}
+html{--tscale:1.2;font-size:calc(clamp(13px,min(1.12vw,2.05vh),22px) * var(--tscale))}
 html,body{height:100%;margin:0}
 body{font-family:var(--sans);background:var(--teal-950);color:var(--ink);overflow:hidden;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit;cursor:pointer}
@@ -27,7 +27,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 [hidden]{display:none!important}
 
 /* ---------- app frame ---------- */
-#app{height:100%;display:grid;grid-template-rows:auto 1fr auto auto;background:radial-gradient(120% 90% at 20% 0%,var(--teal-800),var(--teal-950))}
+#app{height:100%;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto auto;background:radial-gradient(120% 90% at 20% 0%,var(--teal-800),var(--teal-950))}
 #top{display:flex;align-items:center;gap:1rem;padding:.45rem 1rem;color:var(--cream)}
 #top .brand{display:flex;align-items:center;gap:.6rem;min-width:0}
 #top .brand img{height:2.6rem;width:2.6rem;border-radius:50%;background:#fff;object-fit:cover}
@@ -66,7 +66,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* ---------- teaching text with IPA ---------- */
 .tx{display:inline-flex;flex-direction:column;align-items:inherit;vertical-align:top;max-width:100%}
 .tx .w{display:block}
-.tx .ipa{display:none;font-family:var(--ipa);font-size:.62em;font-weight:400;font-style:normal;color:var(--ink-2);letter-spacing:.2px;line-height:1.35;margin-top:.1em;opacity:.95}
+.tx .ipa{display:none;font-family:var(--ipa);font-size:.8em;font-weight:500;font-style:normal;color:#26414a;letter-spacing:.2px;line-height:1.35;margin-top:.1em;opacity:.95}
 body[data-cc=ipa] .tx .ipa{display:block}
 .tx .ipa.unk{color:#b4570a}
 .on-dark .tx .ipa{color:#cfe9e8}
@@ -130,7 +130,7 @@ body[data-cc=ipa] .tx .ipa{display:block}
 .chip{display:inline-flex;flex-direction:column;align-items:center;border-radius:12px;padding:.25rem .8rem;font-family:var(--serif);font-size:1.6rem;font-weight:600;background:#fff;border:2px solid var(--cream-3);color:var(--teal-900);box-shadow:0 3px 8px rgba(7,42,48,.12)}
 .chip.am{border-color:var(--be-am);color:var(--be-am)}.chip.is{border-color:var(--be-is);color:var(--be-is)}.chip.are{border-color:var(--be-are);color:var(--be-are)}
 .chip.not{border-color:#b33;color:#b33}
-.chip .ipa{font-size:.5em}
+.chip .ipa{font-size:.62em}
 .fly{opacity:0;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .5s}
 .fly.l{transform:translateX(-90px)}.fly.r{transform:translateX(90px)}.fly.u{transform:translateY(-60px)}.fly.d{transform:translateY(60px)}
 .fly.on{opacity:1;transform:none}
@@ -176,9 +176,9 @@ table.t td.tick{text-align:center}
 .ringtimer b{width:4.1rem;height:4.1rem;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:1.5rem;font-variant-numeric:tabular-nums}
 
 /* ---------- caption / dock ---------- */
-#caption{margin:0 .8rem;background:rgba(7,42,48,.94);color:#fff;text-align:center;padding:.4rem 1rem;min-height:0;font-size:1.25rem;font-family:var(--serif);display:none}
+#caption{margin:0 .8rem;background:rgba(7,42,48,.96);color:#fff;text-align:center;padding:.5rem 1rem;min-height:0;font-size:1.7rem;line-height:1.25;max-height:30vh;overflow:auto;font-family:var(--serif);display:none}
 body[data-cc=cap] #caption,body[data-cc=ipa] #caption{display:block}
-#caption .ipa{display:none;font-family:var(--ipa);font-size:.72em;color:#bfe3e1;font-style:normal}
+#caption .ipa{display:none;font-family:var(--ipa);font-size:.82em;font-weight:500;color:#d6f1ef;font-style:normal}
 body[data-cc=ipa] #caption .ipa{display:block}
 #caption:empty:before{content:"Captions on — they appear while the lesson speaks.";font-family:var(--sans);font-size:.85rem;opacity:.6}
 #dock{background:var(--teal-900);margin:0 .8rem;border-radius:0 0 20px 20px;padding:.5rem .7rem .6rem;display:flex;flex-wrap:wrap;gap:.35rem .45rem;align-items:center;color:var(--cream);border-top:1px solid rgba(255,255,255,.1)}
@@ -261,6 +261,52 @@ details summary{cursor:pointer}
 .pane:has(.turn){padding-bottom:4.2rem}
 .strike .w{text-decoration:line-through;opacity:.75}
 
+/* larger IPA in small spaces (phones viewing a shared screen) */
+.tag .tx .ipa{font-size:.82em}.tag small .tx .ipa{font-size:.9em}
+.bubble .tx .ipa{font-size:.78em;color:#26414a}
+.tile .tx .ipa,.opt .tx .ipa{font-size:.7em}
+.bigpill .tx .ipa{font-size:.62em}
+.chip .tx .ipa{font-size:.62em}
+.meaning .tx .ipa,.small-note .tx .ipa{font-size:.85em}
+@media (max-width:700px){
+  html{font-size:calc(max(15px,4.1vw) * var(--tscale))}
+  #chapters,#clock small{display:none}
+  #top{padding:.3rem .6rem}
+  .pane{padding:.7rem .8rem 1rem}
+  .head h1{font-size:1.5rem}
+  .big-sentence{font-size:1.7rem}
+  #dock button{padding:.3rem .5rem}
+}
+
+#top{flex-wrap:wrap;min-width:0}
+#top .brand{flex:1 1 12rem}
+#top .brand small{overflow:hidden;text-overflow:ellipsis;max-width:30vw}
+@media (max-width:700px){
+  #top .brand small,#dock .hint{display:none}
+  #top .brand b{font-size:1rem}
+  #clock{gap:.4rem}#clock .big{font-size:1.3rem;min-width:0}#clock .bar{width:4rem}
+  #stage,#caption,#dock{margin-left:.3rem;margin-right:.3rem}
+  #dock .grp{border:0;padding-right:0}
+  #caption{font-size:1.5rem}
+  .scene{border-radius:12px}
+}
+.scene{container-type:inline-size}
+@media (max-width:700px){
+  /* labels inside the picture scale with the picture; their IPA stays in the caption bar and side cards */
+  .scene .tag{font-size:3.3cqw;padding:.1em .45em;border-width:1.5px}
+  .scene .tag small{font-size:.85em}
+  .scene .tag .ipa,.scene .bubble .ipa{display:none!important}
+  .scene .bubble{font-size:3.9cqw;white-space:normal;width:max-content;max-width:62cqw;padding:.25em .6em}
+  .scene .bigpill{font-size:5cqw}
+}
+#dock .grp{flex-wrap:wrap}
+@media (max-width:700px){.turn{position:static;margin-top:.6rem}.pane:has(.turn){padding-bottom:1rem}}
+@media (max-width:700px){
+  #dock{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding:.4rem .5rem}
+  #dock .grp{flex-wrap:nowrap;flex:none}
+  #caption{max-height:26vh}
+}
+
 </style>
 </head>
 <body data-cc="cap">
@@ -292,6 +338,7 @@ details summary{cursor:pointer}
       <button id="b-reveal">Reveal answer</button>
       <button id="b-es" aria-pressed="false" title="Spanish help (S)">Español</button>
       <button id="b-cc" aria-pressed="true" title="Captions / IPA (C)">CC/IPA</button>
+      <button id="b-ts" title="Text size for captions, IPA and labels (T)">Text size</button>
       <button id="b-chart" title="Fluent English sound chart (the IPA symbols used in this lesson)">Sound chart</button>
       <button id="b-video" title="Watch the Fluent English sound chart video (pauses the lesson)">▶ Sound chart video</button>
     </div>
@@ -599,7 +646,7 @@ const Art = (() => {
   }
 
   /* ---------- arm (forward kinematics) ---------- */
-  const L1 = 62, L2 = 54;
+  const L1 = 55, L2 = 45;   // shoulder→wrist ≈ shoulder→hip (100), so relaxed hands end at mid-thigh
   function armPoints(side, sh, pose) {
     const ex = sh.x + side * L1 * Math.sin(rad(pose.a1)), ey = sh.y + L1 * Math.cos(rad(pose.a1));
     const wx = ex + side * L2 * Math.sin(rad(pose.a2)), wy = ey + L2 * Math.cos(rad(pose.a2));
@@ -626,19 +673,19 @@ const Art = (() => {
     }
     const hv = pose.held || R.held[side < 0 ? 'L' : 'R'];
     if (hv) out += held(hv, p.wx + Math.sin(rad(p.rot)) * -4, p.wy - 6);
-    out += `<g transform="translate(${f(p.wx)} ${f(p.wy)}) rotate(${f(p.rot)}) scale(${side * 1.25} 1.25)">${hand(pose.hand || 'open', skin)}</g>`;
+    out += `<g transform="translate(${f(p.wx)} ${f(p.wy)}) rotate(${f(p.rot)}) scale(${side * 1.1} 1.1)">${hand(pose.hand || 'open', skin)}</g>`;
     return out;
   }
   const POSES = {
     rest:   { a1: 7, a2: 4, hand: 'open' },
-    chest:  { a1: 22, a2: -96, hand: 'flat' },
+    chest:  { a1: 10, a2: -100, hand: 'flat' },
     point:  { a1: 64, a2: 80, hand: 'point' },
     pointUp:{ a1: 70, a2: 104, hand: 'point' },
     present:{ a1: 38, a2: 70, hand: 'open' },
     hold:   { a1: 22, a2: -62, hand: 'fist' },
     holdHi: { a1: 18, a2: -100, hand: 'fist' },
     desk:   { a1: 24, a2: -50, hand: 'open' },
-    hip:    { a1: 36, a2: -58, hand: 'fist' },
+    hip:    { a1: 45, a2: -40, hand: 'fist' },
   };
 
   /* ---------- face ---------- */
@@ -910,7 +957,7 @@ const fresh = () => ({
   diag: {}, picks: {}, mode: 'shared',
   mcq: { shared: { first: {}, retry: {} }, individual: { first: {}, retry: {} } }, retry: { active: false },
   classScore: '', labels: ['L1', 'L2', 'L3', 'L4', 'L5', 'L6'], part: {}, exit: {}, notes: '', savedAt: 0,
-  settings: { cc: 'cap', voice: '', voiceEs: '', rate: 0.9, vSpeech: 1, vMusic: 0.5, vSfx: 0.7, mute: false, rm: false },
+  settings: { ts: 1, cc: 'cap', voice: '', voiceEs: '', rate: 0.9, vSpeech: 1, vMusic: 0.5, vSfx: 0.7, mute: false, rm: false },
 });
 let S = fresh();
 function loadSaved() { try { const j = JSON.parse(localStorage.getItem(KEY)); return j && j.v === 1 ? j : null; } catch (e) { return null; } }
@@ -1067,14 +1114,14 @@ const ACTS = [];
 const NAMEC = (who) => Art.CAST[who];
 const prCls = (who) => (NAMEC(who).pr.startsWith('he') ? 'he' : 'she');
 /** Overlay name tag: "Alex / he/him" at svg coords (x, y). */
-const tagY = (y) => (y >= 480 ? [458, ' tagtop'] : [y, '']);
+const tagY = (y) => (y >= 480 ? [446, ' tagtop'] : [y, '']);
 const NT = (who, x, y = 508, id) => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${prCls(who)}">${tx(NAMEC(who).name)}<small>${tx(NAMEC(who).pr)}</small></div>` }; };
 const TG = (title, sub, x, y, id, cls = '') => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${cls}">${tx(title)}${sub ? `<small>${tx(sub)}</small>` : ''}</div>` }; };
 const PILL = (text, x, y, id, color = 'coral', mv) => ({ x, y, id, cls: (mv ? 'mv ' : '') + 'fadein', html: `<span class="bigpill ${color}">${tx(text)}</span>` });
 const BUB = (id, x, y, text) => ({ id, x, y, html: tx(text, { be: 0 }) });
 const RING = (id, x, y, w, h, cls = '') => ({ id, x, y, w, h, cls });
 /** Scene shortcut. ppl: [[who, x, opts]] */
-const GROUND = 36; // everything sits this much higher so tag + IPA lines fit underneath
+const GROUND = 46; // everything sits this much higher so tag + IPA lines fit underneath
 function SC(o) {
   return Art.scene({
     bg: o.bg || 'class', alt: o.alt || '', cls: o.cls,
@@ -1958,6 +2005,8 @@ function applyCC() {
   $('#b-cc').innerHTML = `CC/IPA: <b>${lab}</b>`; $('#b-cc').setAttribute('aria-pressed', S.settings.cc !== 'off');
   $$('.ipa-note').forEach((n) => (n.style.display = S.settings.cc === 'ipa' ? 'block' : 'none'));
 }
+const TS = [['Standard', 1], ['Large', 1.2], ['Extra large', 1.5]];
+function applyTS() { const t = TS[S.settings.ts] || TS[1]; document.documentElement.style.setProperty('--tscale', t[1]); const b = $('#b-ts'); if (b) b.innerHTML = `Text: <b>${t[0]}</b>`; }
 function applyRM() { document.body.classList.toggle('rm', !!S.settings.rm); document.body.classList.toggle('rm-off', !S.settings.rm); }
 function applyAudio() {
   const st = S.settings; Speech.cfg.rate = st.rate; Speech.cfg.volume = st.vSpeech; Speech.cfg.mute = st.mute; Speech.cfg.en = st.voice; Speech.cfg.es = st.voiceEs;
@@ -2033,9 +2082,9 @@ function openGuide() {
     <dt>Reveal / Hide answer (A)</dt><dd>Show or hide the answer on the current screen. In the ten-question check, answers stay hidden until the class answer is submitted.</dd>
     <dt>Español (S)</dt><dd>Concise Spanish help for the current screen, only when you ask for it.</dd>
     <dt>CC/IPA (C)</dt><dd>Off, Captions, or Captions + IPA. IPA uses only the symbols on the Fluent English sound chart (open it with <b>Sound chart</b>), plus stress marks. It is typed by hand and assembled word by word; it was <b>not</b> checked against Oxford (lookup was unavailable).</dd>
-    <dt>Settings</dt><dd>Choose and preview voices, speaking rate, speech/music/effects volume, reduced motion.</dd></dl>
+    <dt>Text size (T)</dt><dd>Standard, Large or Extra large for captions, IPA and labels. Use Large or Extra large when learners watch on a phone.</dd>\n    <dt>Settings</dt><dd>Choose and preview voices, speaking rate, speech/music/effects volume, reduced motion.</dd></dl>
     <p class="small-note"><b>Limits:</b> no microphone, speech recognition or pronunciation scoring — you listen and judge. Synthetic voices are models for rhythm, not proof of accuracy. Progress is saved only in this browser. Results leave the browser only if you press a download button.</p>
-    <p class="small-note">Keyboard: Space pause/play · ← → step · Shift+← → activity · R replay · A reveal · S Spanish · C CC/IPA · M mute narration · F fullscreen · H hide controls.</p></div>`, { label: 'Teacher guide' });
+    <p class="small-note">Keyboard: Space pause/play · ← → step · Shift+← → activity · R replay · A reveal · S Spanish · C CC/IPA · T text size · M mute narration · F fullscreen · H hide controls.</p></div>`, { label: 'Teacher guide' });
 }
 function openReset() {
   confirmBox('Reset the lesson?', 'This clears saved progress, timers, scores, checklists and notes from this browser and returns to the start. Settings (voices, volume) are kept.', 'Reset everything', () => {
@@ -2056,7 +2105,7 @@ function showStart() {
     $('#b-fresh').onclick = () => confirmBox('Start from the beginning?', 'Saved timers, scores and checklists will be cleared.', 'Clear and start', () => { const keep = saved.settings; S = fresh(); S.settings = Object.assign(S.settings, keep); applySettings(); beginLesson(false); });
   } else box.hidden = true;
 }
-function applySettings() { applyCC(); applyRM(); applyAudio(); }
+function applySettings() { applyCC(); applyRM(); applyAudio(); applyTS(); }
 async function beginLesson(resume) {
   Sound.init(); applyAudio(); S.started = true; $('#start').hidden = true; lastTick = performance.now();
   Sound.setMode('ambient');
@@ -2087,6 +2136,7 @@ function init() {
   on('#b-play', () => setPaused(!paused));
   on('#b-replay', replay); on('#b-prev', prev); on('#b-next', next); on('#b-pa', prevAct); on('#b-na', nextAct);
   on('#b-chap', openChapters); on('#b-reveal', toggleReveal); on('#b-es', toggleEs);
+  on('#b-ts', () => { S.settings.ts = ((S.settings.ts == null ? 1 : S.settings.ts) + 1) % 3; applyTS(); save(); toast('Text size: ' + TS[S.settings.ts][0]); });
   on('#b-chart', openChart); on('#b-video', openVideo);
   on('#b-cc', () => { const o = ['off', 'cap', 'ipa'], i = o.indexOf(S.settings.cc); S.settings.cc = o[(i + 1) % 3]; applyCC(); save(); toast('CC/IPA: ' + { off: 'Off', cap: 'Captions', ipa: 'Captions + IPA' }[S.settings.cc]); });
   on('#b-30', () => extend(30)); on('#b-60', () => extend(60)); on('#b-skip', skipTimer);
@@ -2107,6 +2157,7 @@ function init() {
     else if (k === 's' || k === 'S') toggleEs();
     else if (k === 'c' || k === 'C') $('#b-cc').click();
     else if (k === 'm' || k === 'M') $('#b-mute').click();
+    else if (k === 't' || k === 'T') $('#b-ts').click();
     else if (k === 'f' || k === 'F') $('#b-full').click();
     else if (k === 'h' || k === 'H') $('#b-dock').click();
   });

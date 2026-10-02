@@ -29,7 +29,7 @@ const fresh = () => ({
   diag: {}, picks: {}, mode: 'shared',
   mcq: { shared: { first: {}, retry: {} }, individual: { first: {}, retry: {} } }, retry: { active: false },
   classScore: '', labels: ['L1', 'L2', 'L3', 'L4', 'L5', 'L6'], part: {}, exit: {}, notes: '', savedAt: 0,
-  settings: { cc: 'cap', voice: '', voiceEs: '', rate: 0.9, vSpeech: 1, vMusic: 0.5, vSfx: 0.7, mute: false, rm: false },
+  settings: { ts: 1, cc: 'cap', voice: '', voiceEs: '', rate: 0.9, vSpeech: 1, vMusic: 0.5, vSfx: 0.7, mute: false, rm: false },
 });
 let S = fresh();
 function loadSaved() { try { const j = JSON.parse(localStorage.getItem(KEY)); return j && j.v === 1 ? j : null; } catch (e) { return null; } }

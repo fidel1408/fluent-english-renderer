@@ -3,14 +3,14 @@ const ACTS = [];
 const NAMEC = (who) => Art.CAST[who];
 const prCls = (who) => (NAMEC(who).pr.startsWith('he') ? 'he' : 'she');
 /** Overlay name tag: "Alex / he/him" at svg coords (x, y). */
-const tagY = (y) => (y >= 480 ? [458, ' tagtop'] : [y, '']);
+const tagY = (y) => (y >= 480 ? [446, ' tagtop'] : [y, '']);
 const NT = (who, x, y = 508, id) => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${prCls(who)}">${tx(NAMEC(who).name)}<small>${tx(NAMEC(who).pr)}</small></div>` }; };
 const TG = (title, sub, x, y, id, cls = '') => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${cls}">${tx(title)}${sub ? `<small>${tx(sub)}</small>` : ''}</div>` }; };
 const PILL = (text, x, y, id, color = 'coral', mv) => ({ x, y, id, cls: (mv ? 'mv ' : '') + 'fadein', html: `<span class="bigpill ${color}">${tx(text)}</span>` });
 const BUB = (id, x, y, text) => ({ id, x, y, html: tx(text, { be: 0 }) });
 const RING = (id, x, y, w, h, cls = '') => ({ id, x, y, w, h, cls });
 /** Scene shortcut. ppl: [[who, x, opts]] */
-const GROUND = 36; // everything sits this much higher so tag + IPA lines fit underneath
+const GROUND = 46; // everything sits this much higher so tag + IPA lines fit underneath
 function SC(o) {
   return Art.scene({
     bg: o.bg || 'class', alt: o.alt || '', cls: o.cls,

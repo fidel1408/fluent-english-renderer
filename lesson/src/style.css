@@ -10,7 +10,7 @@
   --ipa:'Charis SIL','Doulos SIL','Gentium Plus','Noto Sans','DejaVu Sans','Segoe UI','Arial Unicode MS',sans-serif;
 }
 *{box-sizing:border-box}
-html{font-size:clamp(12px,min(1.12vw,2.05vh),22px)}
+html{--tscale:1.2;font-size:calc(clamp(13px,min(1.12vw,2.05vh),22px) * var(--tscale))}
 html,body{height:100%;margin:0}
 body{font-family:var(--sans);background:var(--teal-950);color:var(--ink);overflow:hidden;-webkit-font-smoothing:antialiased}
 button{font:inherit;color:inherit;cursor:pointer}
@@ -19,7 +19,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 [hidden]{display:none!important}
 
 /* ---------- app frame ---------- */
-#app{height:100%;display:grid;grid-template-rows:auto 1fr auto auto;background:radial-gradient(120% 90% at 20% 0%,var(--teal-800),var(--teal-950))}
+#app{height:100%;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto auto;background:radial-gradient(120% 90% at 20% 0%,var(--teal-800),var(--teal-950))}
 #top{display:flex;align-items:center;gap:1rem;padding:.45rem 1rem;color:var(--cream)}
 #top .brand{display:flex;align-items:center;gap:.6rem;min-width:0}
 #top .brand img{height:2.6rem;width:2.6rem;border-radius:50%;background:#fff;object-fit:cover}
@@ -58,7 +58,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 /* ---------- teaching text with IPA ---------- */
 .tx{display:inline-flex;flex-direction:column;align-items:inherit;vertical-align:top;max-width:100%}
 .tx .w{display:block}
-.tx .ipa{display:none;font-family:var(--ipa);font-size:.62em;font-weight:400;font-style:normal;color:var(--ink-2);letter-spacing:.2px;line-height:1.35;margin-top:.1em;opacity:.95}
+.tx .ipa{display:none;font-family:var(--ipa);font-size:.8em;font-weight:500;font-style:normal;color:#26414a;letter-spacing:.2px;line-height:1.35;margin-top:.1em;opacity:.95}
 body[data-cc=ipa] .tx .ipa{display:block}
 .tx .ipa.unk{color:#b4570a}
 .on-dark .tx .ipa{color:#cfe9e8}
@@ -122,7 +122,7 @@ body[data-cc=ipa] .tx .ipa{display:block}
 .chip{display:inline-flex;flex-direction:column;align-items:center;border-radius:12px;padding:.25rem .8rem;font-family:var(--serif);font-size:1.6rem;font-weight:600;background:#fff;border:2px solid var(--cream-3);color:var(--teal-900);box-shadow:0 3px 8px rgba(7,42,48,.12)}
 .chip.am{border-color:var(--be-am);color:var(--be-am)}.chip.is{border-color:var(--be-is);color:var(--be-is)}.chip.are{border-color:var(--be-are);color:var(--be-are)}
 .chip.not{border-color:#b33;color:#b33}
-.chip .ipa{font-size:.5em}
+.chip .ipa{font-size:.62em}
 .fly{opacity:0;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .5s}
 .fly.l{transform:translateX(-90px)}.fly.r{transform:translateX(90px)}.fly.u{transform:translateY(-60px)}.fly.d{transform:translateY(60px)}
 .fly.on{opacity:1;transform:none}
@@ -168,9 +168,9 @@ table.t td.tick{text-align:center}
 .ringtimer b{width:4.1rem;height:4.1rem;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:1.5rem;font-variant-numeric:tabular-nums}
 
 /* ---------- caption / dock ---------- */
-#caption{margin:0 .8rem;background:rgba(7,42,48,.94);color:#fff;text-align:center;padding:.4rem 1rem;min-height:0;font-size:1.25rem;font-family:var(--serif);display:none}
+#caption{margin:0 .8rem;background:rgba(7,42,48,.96);color:#fff;text-align:center;padding:.5rem 1rem;min-height:0;font-size:1.7rem;line-height:1.25;max-height:30vh;overflow:auto;font-family:var(--serif);display:none}
 body[data-cc=cap] #caption,body[data-cc=ipa] #caption{display:block}
-#caption .ipa{display:none;font-family:var(--ipa);font-size:.72em;color:#bfe3e1;font-style:normal}
+#caption .ipa{display:none;font-family:var(--ipa);font-size:.82em;font-weight:500;color:#d6f1ef;font-style:normal}
 body[data-cc=ipa] #caption .ipa{display:block}
 #caption:empty:before{content:"Captions on — they appear while the lesson speaks.";font-family:var(--sans);font-size:.85rem;opacity:.6}
 #dock{background:var(--teal-900);margin:0 .8rem;border-radius:0 0 20px 20px;padding:.5rem .7rem .6rem;display:flex;flex-wrap:wrap;gap:.35rem .45rem;align-items:center;color:var(--cream);border-top:1px solid rgba(255,255,255,.1)}
@@ -252,3 +252,49 @@ details summary{cursor:pointer}
 .body>.scene{max-width:min(100%,40rem);align-self:center;margin-inline:auto}
 .pane:has(.turn){padding-bottom:4.2rem}
 .strike .w{text-decoration:line-through;opacity:.75}
+
+/* larger IPA in small spaces (phones viewing a shared screen) */
+.tag .tx .ipa{font-size:.82em}.tag small .tx .ipa{font-size:.9em}
+.bubble .tx .ipa{font-size:.78em;color:#26414a}
+.tile .tx .ipa,.opt .tx .ipa{font-size:.7em}
+.bigpill .tx .ipa{font-size:.62em}
+.chip .tx .ipa{font-size:.62em}
+.meaning .tx .ipa,.small-note .tx .ipa{font-size:.85em}
+@media (max-width:700px){
+  html{font-size:calc(max(15px,4.1vw) * var(--tscale))}
+  #chapters,#clock small{display:none}
+  #top{padding:.3rem .6rem}
+  .pane{padding:.7rem .8rem 1rem}
+  .head h1{font-size:1.5rem}
+  .big-sentence{font-size:1.7rem}
+  #dock button{padding:.3rem .5rem}
+}
+
+#top{flex-wrap:wrap;min-width:0}
+#top .brand{flex:1 1 12rem}
+#top .brand small{overflow:hidden;text-overflow:ellipsis;max-width:30vw}
+@media (max-width:700px){
+  #top .brand small,#dock .hint{display:none}
+  #top .brand b{font-size:1rem}
+  #clock{gap:.4rem}#clock .big{font-size:1.3rem;min-width:0}#clock .bar{width:4rem}
+  #stage,#caption,#dock{margin-left:.3rem;margin-right:.3rem}
+  #dock .grp{border:0;padding-right:0}
+  #caption{font-size:1.5rem}
+  .scene{border-radius:12px}
+}
+.scene{container-type:inline-size}
+@media (max-width:700px){
+  /* labels inside the picture scale with the picture; their IPA stays in the caption bar and side cards */
+  .scene .tag{font-size:3.3cqw;padding:.1em .45em;border-width:1.5px}
+  .scene .tag small{font-size:.85em}
+  .scene .tag .ipa,.scene .bubble .ipa{display:none!important}
+  .scene .bubble{font-size:3.9cqw;white-space:normal;width:max-content;max-width:62cqw;padding:.25em .6em}
+  .scene .bigpill{font-size:5cqw}
+}
+#dock .grp{flex-wrap:wrap}
+@media (max-width:700px){.turn{position:static;margin-top:.6rem}.pane:has(.turn){padding-bottom:1rem}}
+@media (max-width:700px){
+  #dock{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding:.4rem .5rem}
+  #dock .grp{flex-wrap:nowrap;flex:none}
+  #caption{max-height:26vh}
+}

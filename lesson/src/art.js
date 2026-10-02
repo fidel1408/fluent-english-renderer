@@ -58,7 +58,7 @@ const Art = (() => {
   }
 
   /* ---------- arm (forward kinematics) ---------- */
-  const L1 = 62, L2 = 54;
+  const L1 = 55, L2 = 45;   // shoulder→wrist ≈ shoulder→hip (100), so relaxed hands end at mid-thigh
   function armPoints(side, sh, pose) {
     const ex = sh.x + side * L1 * Math.sin(rad(pose.a1)), ey = sh.y + L1 * Math.cos(rad(pose.a1));
     const wx = ex + side * L2 * Math.sin(rad(pose.a2)), wy = ey + L2 * Math.cos(rad(pose.a2));
@@ -85,19 +85,19 @@ const Art = (() => {
     }
     const hv = pose.held || R.held[side < 0 ? 'L' : 'R'];
     if (hv) out += held(hv, p.wx + Math.sin(rad(p.rot)) * -4, p.wy - 6);
-    out += `<g transform="translate(${f(p.wx)} ${f(p.wy)}) rotate(${f(p.rot)}) scale(${side * 1.25} 1.25)">${hand(pose.hand || 'open', skin)}</g>`;
+    out += `<g transform="translate(${f(p.wx)} ${f(p.wy)}) rotate(${f(p.rot)}) scale(${side * 1.1} 1.1)">${hand(pose.hand || 'open', skin)}</g>`;
     return out;
   }
   const POSES = {
     rest:   { a1: 7, a2: 4, hand: 'open' },
-    chest:  { a1: 22, a2: -96, hand: 'flat' },
+    chest:  { a1: 10, a2: -100, hand: 'flat' },
     point:  { a1: 64, a2: 80, hand: 'point' },
     pointUp:{ a1: 70, a2: 104, hand: 'point' },
     present:{ a1: 38, a2: 70, hand: 'open' },
     hold:   { a1: 22, a2: -62, hand: 'fist' },
     holdHi: { a1: 18, a2: -100, hand: 'fist' },
     desk:   { a1: 24, a2: -50, hand: 'open' },
-    hip:    { a1: 36, a2: -58, hand: 'fist' },
+    hip:    { a1: 45, a2: -40, hand: 'fist' },
   };
 
   /* ---------- face ---------- */

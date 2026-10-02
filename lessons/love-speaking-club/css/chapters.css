@@ -1,0 +1,29 @@
+/* chapter-specific layouts */
+#startOverlay .stage-fill { position: absolute; inset: 0; }
+#startOverlay .stage-fill .stage-svg { width: 100%; height: 100%; }
+#startOverlay::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(7,14,34,.15), rgba(7,14,34,.82)); pointer-events: none; }
+.startcard { position: absolute; left: 0; right: 0; top: 60px; text-align: center; z-index: 2; }
+.startcard .slogo { width: 250px; display: block; margin: 0 auto 6px; }
+.startcard .t-hero .wu { margin: 0 .16em; } .startcard .wu .p { color: var(--ipa-on-navy); }
+#art .stage-svg { animation: fade .7s ease both; }
+.coin { display: inline-block; width: 46px; height: 46px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #FFE9B0, #F5B544 55%, #C98418); box-shadow: 0 3px 0 #8a5a10, 0 6px 10px rgba(0,0,0,.3); position: relative; flex: 0 0 auto; touch-action: none; cursor: grab; }
+.coin::after { content: ''; position: absolute; inset: 9px; border-radius: 50%; border: 3px solid rgba(138, 90, 16, .55); }
+.coin.sm { width: 26px; height: 26px; cursor: default; box-shadow: 0 2px 0 #8a5a10; } .coin.sm::after { inset: 6px; border-width: 2px; }
+.coin.ghost { background: transparent; border: 3px dashed var(--raspDk); box-shadow: none; } .coin.ghost::after { display: none; }
+.coin.dragging { cursor: grabbing; transform: scale(1.12); opacity: .92; }
+.jar { margin-top: 6px; height: 140px; border-radius: 22px 22px 40px 40px; border: 6px solid rgba(11, 22, 48, .55); background: linear-gradient(180deg, rgba(31, 168, 160, .10), rgba(31, 168, 160, .28)); display: flex; flex-wrap: wrap-reverse; align-content: flex-start; gap: 6px; padding: 10px; position: relative; box-shadow: inset 0 0 0 4px rgba(255, 255, 255, .5); }
+.jar::before { content: ''; position: absolute; top: -18px; left: 20%; right: 20%; height: 14px; border-radius: 6px; background: rgba(11, 22, 48, .55); }
+.tray { flex: 1 1 auto; min-height: 58px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; background: rgba(255, 255, 255, .08); border-radius: 18px; padding: 4px 12px; }
+.goal { appearance: none; border: 3px solid var(--ivory3); background: #fff; color: var(--ink); border-radius: 18px; padding: 8px 18px 10px; display: flex; align-items: center; gap: 16px; cursor: pointer; text-align: left; width: 100%; }
+.goal .gbox { width: 44px; height: 44px; border-radius: 12px; border: 4px solid var(--ink); display: inline-flex; align-items: center; justify-content: center; font: 700 32px/1 var(--sans); color: var(--ivory); flex: 0 0 auto; }
+.goal.on { background: #D9F3EE; border-color: var(--tealDk); } .goal.on .gbox { background: var(--tealDk); border-color: var(--tealDk); }
+.stemcard { appearance: none; display: block; width: 100%; margin-bottom: 18px; text-align: left; background: var(--ivory); color: var(--ink); border: 5px solid transparent; border-radius: 28px; padding: 22px 34px 26px; cursor: pointer; box-shadow: 0 14px 40px rgba(2,6,18,.4); }
+.stemcard.sel { border-color: var(--amber); background: #FFF6DC; }
+.doorart { width: 100%; height: 190px; background: #0b1636; }
+.doorart svg { display: block; width: 100%; height: 100%; }
+.ack { animation: pop .5s var(--ease) both; }
+.ack .chip { box-shadow: 0 0 0 8px rgba(31, 168, 160, .3); animation: glow 2.2s ease-in-out 2; }
+
+.compact .chip, .compact .supportbar .chip { font-size: 22px; padding: 2px 12px 4px; }
+
+.goal .gbox { width: 38px; height: 38px; font-size: 28px; }

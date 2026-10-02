@@ -1,0 +1,222 @@
+[
+ {
+  "ok": true,
+  "name": "Plan: ten chapters with the exact minutes and speaking minutes",
+  "detail": "1/0 5/4 6/4 8/6 8/6 7/5 8/6 7/5 7/5 3/2"
+ },
+ {
+  "ok": true,
+  "name": "Plan totals 60 classroom minutes and 43 planned speaking minutes",
+  "detail": "60/43"
+ },
+ {
+  "ok": true,
+  "name": "Plan: segment minutes add up to each chapter total",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Ten chapter modules registered in plan order",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "No page or console errors while walking all steps in Class and Demo Mode",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Zero roleplay: no role cards, acting, assigned identities or \"switch roles\" text anywhere",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "All ten chapters and branches rendered",
+  "detail": "406 states"
+ },
+ {
+  "ok": true,
+  "name": "IPA: every displayed English word unit has aligned /IPA/ beneath it (stage, drawers, controls)",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "IPA: no English word is displayed outside a word+IPA unit",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Layout: no text, card, control or face overlaps in any state",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Layout: every card and control stays inside the 16:9 board",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Control: mystery evidence appears only after the teacher clicks Reveal",
+  "detail": "{\"r\":false}"
+ },
+ {
+  "ok": true,
+  "name": "Control: vocabulary scene plays only after the teacher clicks Play the scene",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Control: when a timer ends, nothing moves until the teacher clicks",
+  "detail": "done=true ch=2 step=0"
+ },
+ {
+  "ok": true,
+  "name": "Control: warm-up twist, new circumstance, case evidence and twist wait for clicks",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Hide controls @1600x900: bar removed from layout, H toggles back",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Board expands when hidden, stays 16:9 and uncropped @1600x900",
+  "detail": "shown 1426x802 / hidden 1600x900"
+ },
+ {
+  "ok": true,
+  "name": "Hide controls @1920x1080: bar removed from layout, H toggles back",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Board expands when hidden, stays 16:9 and uncropped @1920x1080",
+  "detail": "shown 1712x963 / hidden 1920x1080"
+ },
+ {
+  "ok": true,
+  "name": "Hide controls @1366x768: bar removed from layout, H toggles back",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Board expands when hidden, stays 16:9 and uncropped @1366x768",
+  "detail": "shown 1214x683 / hidden 1365x768"
+ },
+ {
+  "ok": true,
+  "name": "Hide controls @1280x720: bar removed from layout, H toggles back",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Board expands when hidden, stays 16:9 and uncropped @1280x720",
+  "detail": "shown 1138x640 / hidden 1280x720"
+ },
+ {
+  "ok": true,
+  "name": "Hide controls @1024x768: bar removed from layout, H toggles back",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Board expands when hidden, stays 16:9 and uncropped @1024x768",
+  "detail": "shown 1024x576 / hidden 1024x576"
+ },
+ {
+  "ok": true,
+  "name": "Hiding controls keeps tokens, timer and the on-stage timer chip",
+  "detail": "{\"A\":[[3,3,2,2],[0,0,0,0],[0,0,0,0]],\"left\":90}"
+ },
+ {
+  "ok": true,
+  "name": "Fullscreen: hidden-controls state works and survives the mode change",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "H does not toggle controls while typing in a text field",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Progress and hidden-menu state survive chapter navigation",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Progress, choices and hidden-menu state are restored after reload (localStorage)",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Every on-stage, bar and drawer button was clicked without error",
+  "detail": "676 clicks; "
+ },
+ {
+  "ok": true,
+  "name": "Next and Back walk through the whole lesson in both directions",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Accessible names on all controls; document language en-US",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Keyboard focus is available (visible focus ring defined for :focus-visible)",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Demo Mode: clearly labeled sample answers and a Demo pill",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Demo Mode autoplay moves ahead only after the adjustable demo timer",
+  "detail": "0->0->1"
+ },
+ {
+  "ok": true,
+  "name": "Class Mode ignores the demo autoplay setting",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Every narration line has a recorded clip that loads",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Audio: a new narration cancels the old one (single voice channel, no overlap)",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Audio: pause freezes narration and resume continues without restarting",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Contrast: all word and IPA text on opaque surfaces is at least 4.5:1",
+  "detail": "1248 text runs checked; "
+ },
+ {
+  "ok": true,
+  "name": "Authentic Fluent English logo files (unredrawn, cropped copies of the originals) are present",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "No external network dependencies in index.html",
+  "detail": ""
+ },
+ {
+  "ok": true,
+  "name": "Lightweight delivery (js, css, audio, assets)",
+  "detail": "2.32 MB"
+ }
+]

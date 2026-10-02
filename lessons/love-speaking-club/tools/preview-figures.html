@@ -1,0 +1,15 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#2a3358">
+<script src="../js/art-core.js"></script><script src="../js/art-figure.js"></script>
+<svg id=s width=1600 height=900 viewBox="0 0 1600 900" style="display:block"></svg>
+<script>
+Art.mountDefs();
+const svg=document.getElementById('s');
+const alex={build:'male',skin:'s2',hair:'short',hairColor:'#2A1E1C',beard:'stubble',watch:true,outfit:{tee:'#F3E7D0',neck:'henley',jacket:'#35508F',sleeve:'rolled',pockets:true,texture:'weave',pants:'#2b2f3f'}};
+const maya={build:'female',skin:'s3',hair:'wavy',hairColor:'#1E1417',earrings:true,bracelet:true,outfit:{tee:'#FBF4E6',neck:'scoop',jacket:'#1B8F8A',sleeve:'long',texture:'knit',edge:16}};
+const sam={build:'male',skin:'s1',hair:'bald',hairColor:'#cfcfd6',beard:'full',beardColor:'#d9d9e0',glasses:true,outfit:{tee:'#9b2f3d',neck:'crew',sleeve:'short'}};
+const priya={build:'female',skin:'s2',hair:'bun',hairColor:'#1b1218',outfit:{tee:'#E6A93A',neck:'v',sleeve:'long'}};
+const defs=[[alex,300,'smile'],[maya,700,'warm'],[sam,1050,'laugh'],[priya,1380,'surprised']];
+const figs=[];
+defs.forEach(([sp,x,ex])=>{const fg=Art.makeFigure(Object.assign({},sp,{legs:false}));svg.appendChild(fg.el);fg.pos(x,480,1.45);fg.set({expr:ex});figs.push(fg);});
+window.figs=figs;
+</script>

@@ -1,0 +1,19 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#2a3358">
+<script src="../js/art-core.js"></script><script src="../js/art-figure.js"></script>
+<svg id=s width=1600 height=900 viewBox="0 0 1600 900" style="display:block"></svg>
+<script>
+Art.mountDefs();
+const svg=document.getElementById('s');
+const alex={build:'male',skin:'s2',hair:'short',hairColor:'#2A1E1C',beard:'stubble',watch:true,outfit:{tee:'#F3E7D0',neck:'henley',jacket:'#35508F',sleeve:'rolled',pockets:true,texture:'weave'}};
+const maya={build:'female',skin:'s3',hair:'wavy',hairColor:'#1E1417',earrings:true,bracelet:true,outfit:{tee:'#FBF4E6',neck:'scoop',jacket:'#1B8F8A',sleeve:'long',texture:'knit',edge:16}};
+const poses=[
+ [alex,{expr:'smile',aL:[34,100,8,'open'],aR:[20,125,-6,'open'],head:-3,yaw:.4},'talk open'],
+ [maya,{expr:'curious',aL:[8,130,0,'relaxed'],aR:[40,60,-20,'point'],head:4,yaw:-.3},'point'],
+ [alex,{expr:'thinking',aL:[12,140,0,'fist'],aR:[8,10,0,'relaxed'],head:5,yaw:-.4,lean:3},'hand to chin?'],
+ [maya,{expr:'laugh',aL:[10,100,0,'open'],aR:[10,110,0,'open'],lean:-4,head:-6},'laugh'],
+ [alex,{expr:'sorry',aL:[16,115,0,'loose'],aR:[16,115,0,'loose'],lean:4,pitch:.5},'clasped'],
+ [maya,{expr:'surprised',aL:[50,40,0,'open'],aR:[50,40,0,'open'],yaw:.3},'surprise'],
+];
+const figs=[];
+poses.forEach(([sp,p,l],i)=>{const fg=Art.makeFigure(sp);svg.appendChild(fg.el);const col=i%3,row=Math.floor(i/3);fg.pos(280+col*520,330+row*430,.95);fg.set(p);figs.push(fg);});
+</script>

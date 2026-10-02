@@ -1,0 +1,12 @@
+<!doctype html><meta charset=utf-8><link rel=stylesheet href="../css/fonts.css"><link rel=stylesheet href="../css/style.css">
+<body style="margin:0;background:#000;overflow:hidden">
+<script src="../js/art-core.js"></script><script src="../js/art-figure.js"></script><script src="../js/art-scenes.js"></script><script src="../js/art-cast.js"></script><script src="../js/content.js"></script><script src="../js/vignettes.js"></script><script src="../js/vignettes-words.js"></script><script src="../js/vignettes-mystery.js"></script><script>window.Voice={bound:{},bind(){},say(){},timeline(ids,gap){gap=gap==null?380:gap;let t=0;const out=[];ids.forEach(id=>{const d=Math.max(1200,LC.NAR[id].text.length*62);out.push({id,at:t,dur:d});t+=d+gap;});return{lines:out,total:t-gap};}};</script>
+<div id=w style="width:1600px;height:900px"></div>
+<script>
+Art.mountDefs();
+const q=new URLSearchParams(location.search); const kind=q.get('k')||'open'; const i=+(q.get('i')||0);
+let st;
+if(kind==='open') st=V.opening[i](); else if(kind==='word'){ const sc=V.word(q.get('id')); st=sc.stage; sc.bind&&sc.bind(); window.sc=sc; sc.play&&sc.play(); } else if(kind==='myst'){ const m=V.mystery(); st=m.stage; window.m=m; m.setup(); const n=+(q.get('n')||0); if(n) m.freeze(n); } else st=V.backdrop(q.get('s')||'cafe');
+document.getElementById('w').appendChild(st.el); st.el.setAttribute('width',1600); st.el.setAttribute('height',900);
+if(st.run) st.run(); window.st=st;
+</script>

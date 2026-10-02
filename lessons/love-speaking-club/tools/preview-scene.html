@@ -1,0 +1,20 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#000">
+<script src="../js/art-core.js"></script><script src="../js/art-figure.js"></script><script src="../js/art-scenes.js"></script><script src="../js/art-cast.js"></script>
+<div id=w style="width:1600px;height:900px"></div>
+<script>
+Art.mountDefs();
+const q=new URLSearchParams(location.search); const name=q.get('s')||'cafe';
+const st=new Art.Stage(name); document.getElementById('w').appendChild(st.el); st.el.setAttribute('width',1600);st.el.setAttribute('height',900);
+const A=Art.Cast.make('alex'), M=Art.Cast.make('maya');
+const ty=st.scene.tableY;
+if(name==='cafe'){
+ const sc=1.38, oy=ty-170*sc;
+ st.addFigure(M,545,oy,sc); st.addFigure(A,1055,oy,sc);
+ M.set({expr:'warm',yaw:.5,head:3,aL:[14,96,0,'cup'],aR:[14,100,0,'relaxed']}); A.set({expr:'smile',yaw:-.5,head:-3,aL:[16,100,0,'relaxed'],aR:[14,96,0,'cup']});
+} else if(name==='balcony'){
+ st.addFigure(M,520,ty-135,1.45); st.addFigure(A,1080,ty-135,1.45); M.set({expr:'listening',yaw:.4}); A.set({expr:'warm',yaw:-.4});
+} else if(name==='park'){
+ st.addFigure(M,560,ty-100,1.35); st.addFigure(A,1040,ty-100,1.35);
+} else { st.addFigure(M,560,ty-135,1.4); st.addFigure(A,1040,ty-135,1.4);}
+window.st=st;
+</script>

@@ -1,0 +1,42 @@
+# Teacher narration script (Teacher reads mode)
+
+These are the exact lines the recorded voices speak, in lesson order. In **Sound → Teacher reads** each line appears on screen instead of playing. Narration never plays during student discussion; every line starts only after a teacher click.
+
+- `ch1.q` **Narrator** (voice `af_heart`): What makes a connection worth keeping?
+- `ch2.intro` **Narrator** (voice `af_heart`): Choose a side. You can say, it depends, if you tell us what it depends on. And you can always pass.
+- `ch2.q1` **Narrator** (voice `af_heart`): Strong chemistry, or strong communication?
+- `ch2.q2` **Narrator** (voice `af_heart`): Similar interests, or different perspectives?
+- `ch2.q3` **Narrator** (voice `af_heart`): Big romantic gestures, or consistent small actions?
+- `ch2.q4` **Narrator** (voice `af_heart`): More time together, or more personal space?
+- `ch2.t1` **Narrator** (voice `af_heart`): Would your answer change after five years?
+- `ch2.t2` **Narrator** (voice `af_heart`): Which would matter more during a disagreement?
+- `ch2.t3` **Narrator** (voice `af_heart`): Could someone show this in a way you would not immediately recognize?
+- `ch2.t4` **Narrator** (voice `af_heart`): Would your answer change if one person had a very stressful month at work?
+- `ch3.intro` **Narrator** (voice `af_heart`): Five useful words and phrases. Watch a short scene, check the meaning, and then talk.
+- `chem.1` **Maya** (voice `af_bella`): Wait, you love that author too?
+- `chem.2` **Alex** (voice `am_michael`): I could talk about her books all night.
+- `chem.n` **Narrator** (voice `af_heart`): From the first conversation, there was real chemistry between them.
+- `comm.1` **Alex** (voice `am_michael`): Honestly, we could stop here.
+- `comm.2` **Maya** (voice `af_bella`): We said we would finish it. One more try?
+- `comm.n` **Narrator** (voice `af_heart`): Even when it was hard, they showed commitment by staying and trying again.
+- `affe.1` **Sam** (voice `am_onyx`): You always notice when I am cold.
+- `affe.2` **Nora** (voice `af_nova`): Of course I do.
+- `affe.n` **Narrator** (voice `af_heart`): They are very affectionate with each other.
+- `comp.n` **Narrator** (voice `af_heart`): Alex wakes up at six. Maya is a night owl. But they are compatible, because they respect each other and want similar things.
+- `work.1` **Maya** (voice `af_bella`): I felt ignored last night.
+- `work.2` **Alex** (voice `am_michael`): I am sorry. I did not realize. Let us talk.
+- `work.n` **Narrator** (voice `af_heart`): It took time, but they worked things out.
+- `ch4.intro` **Narrator** (voice `af_heart`): Alex and Maya planned an important evening. Friday, eight o’clock, a table for two.
+- `ch4.r1a` **Narrator** (voice `af_heart`): At seven fifty-two, Maya’s phone buzzes.
+- `ch4.r1b` **Alex** (voice `am_michael`): Can’t make it tonight. Sorry. Let’s talk later.
+- `ch4.r2` **Narrator** (voice `af_heart`): Across the city, Alex is still at his desk. At five forty-seven, an email arrived: the client moved the deadline to tomorrow morning.
+- `ch4.r3` **Narrator** (voice `af_heart`): Earlier that week, they had planned the evening by text. Each of them remembered the plan a little differently.
+- `ch5.intro` **Narrator** (voice `af_heart`): Defend it, then challenge it. Remember: these are debatable opinions, not facts.
+- `ch6.intro` **Narrator** (voice `af_heart`): Ten tokens. Four qualities. One group decision.
+- `ch6.circ` **Narrator** (voice `af_heart`): New circumstance. For the next six months, the couple will live in different cities while one of them studies.
+- `ch7.intro` **Narrator** (voice `af_heart`): Three short cases. Choose a position, then find the one detail that could change your mind.
+- `ch8.intro` **Narrator** (voice `af_heart`): Would you rather? Choose a door, give a reason, and expect a twist.
+- `ch8.hyp` **Narrator** (voice `af_heart`): This last one is an imaginative hypothetical.
+- `ch9.intro` **Narrator** (voice `af_heart`): Make your case. Claim it, face a follow-up, and respond with a target expression.
+- `ch10.intro` **Narrator** (voice `af_heart`): One last turn. Complete one sentence, then add a final response.
+- `ch10.close` **Narrator** (voice `af_heart`): Keep speaking. Keep growing.

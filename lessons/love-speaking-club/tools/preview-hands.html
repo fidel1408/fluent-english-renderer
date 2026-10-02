@@ -1,0 +1,16 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#3a4570">
+<script src="../js/art-core.js"></script><script src="../js/art-figure.js"></script>
+<svg id=s width=1600 height=900 viewBox="0 0 1600 900" style="display:block"></svg>
+<script>
+Art.mountDefs();
+const svg=document.getElementById('s');
+const alex={build:'male',skin:'s2',hair:'short',hairColor:'#2A1E1C',beard:'stubble',watch:true,outfit:{tee:'#F3E7D0',neck:'henley',jacket:'#35508F',sleeve:'rolled',pockets:true,texture:'weave'}};
+const maya={build:'female',skin:'s3',hair:'wavy',outfit:{tee:'#FBF4E6',neck:'scoop',jacket:'#1B8F8A',sleeve:'long'}};
+const names=['relaxed','open','point','fist','cup','pinch','flat','loose'];
+names.forEach((n,i)=>{
+ const fg=Art.makeFigure(i%2?maya:alex); svg.appendChild(fg.el);
+ // place so that left hand hangs straight down in view
+ fg.pos(110+ i*400, 300, 1.0);
+ fg.set({aL:[4,0,0,n],aR:[4,0,0,n]});
+});
+</script>

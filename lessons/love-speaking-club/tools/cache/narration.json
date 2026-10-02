@@ -1,0 +1,163 @@
+{
+ "voices": {
+  "nar": "af_heart",
+  "maya": "af_bella",
+  "alex": "am_michael",
+  "sam": "am_onyx",
+  "nora": "af_nova"
+ },
+ "lines": {
+  "ch1.q": {
+   "who": "nar",
+   "text": "What makes a connection worth keeping?"
+  },
+  "ch2.intro": {
+   "who": "nar",
+   "text": "Choose a side. You can say, it depends, if you tell us what it depends on. And you can always pass."
+  },
+  "ch2.q1": {
+   "who": "nar",
+   "text": "Strong chemistry, or strong communication?"
+  },
+  "ch2.q2": {
+   "who": "nar",
+   "text": "Similar interests, or different perspectives?"
+  },
+  "ch2.q3": {
+   "who": "nar",
+   "text": "Big romantic gestures, or consistent small actions?"
+  },
+  "ch2.q4": {
+   "who": "nar",
+   "text": "More time together, or more personal space?"
+  },
+  "ch2.t1": {
+   "who": "nar",
+   "text": "Would your answer change after five years?"
+  },
+  "ch2.t2": {
+   "who": "nar",
+   "text": "Which would matter more during a disagreement?"
+  },
+  "ch2.t3": {
+   "who": "nar",
+   "text": "Could someone show this in a way you would not immediately recognize?"
+  },
+  "ch2.t4": {
+   "who": "nar",
+   "text": "Would your answer change if one person had a very stressful month at work?"
+  },
+  "ch3.intro": {
+   "who": "nar",
+   "text": "Five useful words and phrases. Watch a short scene, check the meaning, and then talk."
+  },
+  "chem.1": {
+   "who": "maya",
+   "text": "Wait, you love that author too?"
+  },
+  "chem.2": {
+   "who": "alex",
+   "text": "I could talk about her books all night."
+  },
+  "chem.n": {
+   "who": "nar",
+   "text": "From the first conversation, there was real chemistry between them."
+  },
+  "comm.1": {
+   "who": "alex",
+   "text": "Honestly, we could stop here."
+  },
+  "comm.2": {
+   "who": "maya",
+   "text": "We said we would finish it. One more try?"
+  },
+  "comm.n": {
+   "who": "nar",
+   "text": "Even when it was hard, they showed commitment by staying and trying again."
+  },
+  "affe.1": {
+   "who": "sam",
+   "text": "You always notice when I am cold."
+  },
+  "affe.2": {
+   "who": "nora",
+   "text": "Of course I do."
+  },
+  "affe.n": {
+   "who": "nar",
+   "text": "They are very affectionate with each other."
+  },
+  "comp.n": {
+   "who": "nar",
+   "text": "Alex wakes up at six. Maya is a night owl. But they are compatible, because they respect each other and want similar things."
+  },
+  "work.1": {
+   "who": "maya",
+   "text": "I felt ignored last night."
+  },
+  "work.2": {
+   "who": "alex",
+   "text": "I am sorry. I did not realize. Let us talk."
+  },
+  "work.n": {
+   "who": "nar",
+   "text": "It took time, but they worked things out."
+  },
+  "ch4.intro": {
+   "who": "nar",
+   "text": "Alex and Maya planned an important evening. Friday, eight o’clock, a table for two."
+  },
+  "ch4.r1a": {
+   "who": "nar",
+   "text": "At seven fifty-two, Maya’s phone buzzes."
+  },
+  "ch4.r1b": {
+   "who": "alex",
+   "text": "Can’t make it tonight. Sorry. Let’s talk later."
+  },
+  "ch4.r2": {
+   "who": "nar",
+   "text": "Across the city, Alex is still at his desk. At five forty-seven, an email arrived: the client moved the deadline to tomorrow morning."
+  },
+  "ch4.r3": {
+   "who": "nar",
+   "text": "Earlier that week, they had planned the evening by text. Each of them remembered the plan a little differently."
+  },
+  "ch5.intro": {
+   "who": "nar",
+   "text": "Defend it, then challenge it. Remember: these are debatable opinions, not facts."
+  },
+  "ch6.intro": {
+   "who": "nar",
+   "text": "Ten tokens. Four qualities. One group decision."
+  },
+  "ch6.circ": {
+   "who": "nar",
+   "text": "New circumstance. For the next six months, the couple will live in different cities while one of them studies."
+  },
+  "ch7.intro": {
+   "who": "nar",
+   "text": "Three short cases. Choose a position, then find the one detail that could change your mind."
+  },
+  "ch8.intro": {
+   "who": "nar",
+   "text": "Would you rather? Choose a door, give a reason, and expect a twist."
+  },
+  "ch8.hyp": {
+   "who": "nar",
+   "text": "This last one is an imaginative hypothetical."
+  },
+  "ch9.intro": {
+   "who": "nar",
+   "text": "Make your case. Claim it, face a follow-up, and respond with a target expression."
+  },
+  "ch10.intro": {
+   "who": "nar",
+   "text": "One last turn. Complete one sentence, then add a final response."
+  },
+  "ch10.close": {
+   "who": "nar",
+   "text": "Keep speaking. Keep growing."
+  }
+ }
+}

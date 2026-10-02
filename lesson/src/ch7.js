@@ -55,7 +55,7 @@ function deckStep(o) {
       S.onLevel = (n) => { if (n) Fx.burst(1360, 280, 10); };
       draw();
       S.play = async () => {
-        await S.sleep(400);
+        await S.sleep(250);
         await S.say(o.intro, {});
         if (o.speakCard) { const sc = o.speakCard(o.cards[order[pos]]); await S.say(sc.t, { tone: sc.tone }); }
       };
@@ -89,9 +89,9 @@ const CH7 = {
         const note = S.el(`<div class="note-card lv hidden-lv" style="left:70px;top:600px;width:980px;font-size:26px">${T('Personal questions are optional. You can invent your answer.')}</div>`);
         tallyPanel(S, 1130, 200);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           const t = ['Round A: ask one question.', 'Round B: answer with a short answer.', 'Round C: ask your own question.'];
-          for (let i = 0; i < 3; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(t[i], { after: 200 }); }
+          for (let i = 0; i < 3; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(t[i], { after: 100 }); }
           note.classList.remove('hidden-lv'); await S.say('Personal questions are optional. | You can invent your answer.');
         };
       }

@@ -63,7 +63,7 @@ function sceneAct(o) {
       if (!CFG.support) sup.style.display = 'none';
       setPh(0);
       S.play = async () => {
-        await S.sleep(500);
+        await S.sleep(250);
         await S.say('Choose a subject.', {}); await S.say('Make a yes/no question.', {}); await S.say('Another learner answers.', {});
       };
     }
@@ -82,9 +82,9 @@ const CH6 = {
         const cards = steps.map(s => { const c = S.paper(s[2], s[3] + 40, 330, 200, { cls: 'tilt' + (1 + (s[0] % 2)) }); c.innerHTML = `<div class="chip gold" style="font-size:34px;margin-bottom:8px">${s[0]}</div><div style="font-size:30px;font-weight:700;line-height:1.2">${T(s[1])}</div>`; c.classList.add('lv', 'hidden-lv'); return c; });
         const note = S.el(`<div class="note-card lv hidden-lv" style="left:200px;top:700px;width:1200px;text-align:center;font-size:26px">${T('Use only the facts in the picture. Do not guess jobs or feelings from faces or clothes.')}</div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           const say = ['First, a learner chooses a subject.', 'Then, the learner makes a yes/no question.', 'Another learner answers, using the evidence.', 'Last, the teacher shows one possible question.'];
-          for (let i = 0; i < 4; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(say[i], { after: 200 }); }
+          for (let i = 0; i < 4; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(say[i], { after: 100 }); }
           note.classList.remove('hidden-lv'); await S.say('Use only the facts in the picture.');
         };
       }

@@ -266,3 +266,5 @@ body.vocab .vl{display:block}
 .w .p{text-transform:none!important;letter-spacing:0!important;font-weight:400!important;font-style:normal!important}
 
 #dock .db{padding:8px 11px}
+
+.bin{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;transform-origin:center center;position:relative}

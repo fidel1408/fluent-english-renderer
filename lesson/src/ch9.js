@@ -21,7 +21,7 @@ const CH9 = {
         S.levels = 4; S.revLabels = ['Task 1', 'Task 2', 'Task 3', 'Task 4'];
         S.onLevel = (n) => { rows.forEach((r, i) => r.style.opacity = i === n - 1 ? 1 : (i < n - 1 ? 0.85 : 0.5)); if (n) Aud.sfx('card'); };
         S.sayAtMap = { 1: { text: tasks[0], o: {} }, 2: { text: tasks[1], o: {} }, 3: { text: tasks[2], o: {} }, 4: { text: tasks[3], o: {} } };
-        S.play = async () => { await S.sleep(500); await S.say('Now it is your turn. | Support is hidden.'); await S.say('Use the facts on the cards.'); };
+        S.play = async () => { await S.sleep(250); await S.say('Now it is your turn. | Support is hidden.'); await S.say('Use the facts on the cards.'); };
       }
     },
     {
@@ -42,7 +42,7 @@ const CH9 = {
           box.appendChild(r);
         });
         S.el(`<div class="note-card" style="left:200px;top:640px;width:1200px;font-size:22px">${T('Notes from your own listening. The app does not hear or grade learners.')}</div>`);
-        S.play = async () => { await S.sleep(400); await S.say('Teacher: | note what you heard.'); };
+        S.play = async () => { await S.sleep(250); await S.say('Teacher: | note what you heard.'); };
       }
     },
     {
@@ -58,13 +58,13 @@ const CH9 = {
         ['Am I…?', 'Are you…?', 'Is he…?', 'Is she…?', 'Is it…?', 'Are we…?', 'Are they…?'].forEach(t => list.appendChild(mk(`<span class="chip indigo" style="font-size:34px">${T(t)}</span>`)));
         const ans = S.el(`<div class="lv hidden-lv" style="left:230px;top:600px;width:1140px;display:flex;gap:16px;justify-content:center"><span class="chip">${T('Yes, I am.')}</span><span class="chip coral">${T('No, I’m not.')}</span></div>`);
         S.play = async () => {
-          await S.sleep(500);
-          await S.say('You are ready.', { tone: 's', who: nora }); await S.sleep(500);
+          await S.sleep(250);
+          await S.say('You are ready.', { tone: 's', who: nora }); await S.sleep(250);
           lab.innerHTML = T('Question'); Aud.sfx('move'); await sent.morph(P.quest, 1300, S.e); Aud.sfx('question');
-          await S.say('Are you ready?', { tone: 'q', who: nora }); await S.sleep(300);
+          await S.say('Are you ready?', { tone: 'q', who: nora }); await S.sleep(200);
           await S.say('Be goes first.', { who: nora });
           list.classList.remove('hidden-lv'); Aud.sfx('reveal');
-          await S.say('Am I, | are you, | is he, | is she, | is it, | are we, | are they?', { who: nora, gap: 200 });
+          await S.say('Am I, | are you, | is he, | is she, | is it, | are we, | are they?', { who: nora });
           await sent.morph([tk('Yes,', 'yes', 'y'), tk('I', 'subj', 's'), tk('am', 'be', 'b'), tk('.', 'punct', 'dot')], 1000, S.e);
           lab.innerHTML = T('Positive short answer'); ans.classList.remove('hidden-lv');
           await S.say('Yes, I am.', { tone: 's', who: alex });
@@ -88,7 +88,7 @@ const CH9 = {
         const res = S.el(`<button class="btn gold" style="left:930px;top:715px;font-size:24px">Open results &amp; export</button>`);
         res.onclick = () => UI.results();
         S.play = async () => {
-          await S.sleep(600); Aud.finale(); Fx.drift(50);
+          await S.sleep(200); Aud.finale(); Fx.drift(50);
           await S.say('Great work today!', {}); await S.say('You asked questions. | You answered with be.', {});
           await S.say('Try the optional practice after class.', {});
         };

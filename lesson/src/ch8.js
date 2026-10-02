@@ -71,11 +71,11 @@ function itemStep(it) {
         note.textContent = '';
       } else {
         const rd = S.el(`<button class="btn ghost sm" style="left:1330px;top:56px">Read the choices aloud</button>`);
-        rd.onclick = async () => { Aud.init(); const e = S.interrupt(); try { for (let i = 0; i < 4; i++) await S.say('ABCD'[i] + '. ' + it.opts[i].replace('___', 'blank'), { after: 250 }); } catch (x) { if (x !== CANCEL) console.error(x); } };
+        rd.onclick = async () => { Aud.init(); const e = S.interrupt(); try { for (let i = 0; i < 4; i++) await S.say('ABCD'[i] + '. ' + it.opts[i].replace('___', 'blank'), { after: 100 }); } catch (x) { if (x !== CANCEL) console.error(x); } };
       }
       S.captureKeys = true;
       S.onKey = (e) => { const k = e.key.toUpperCase(); if ('ABCD'.includes(k) && k.length === 1 && !sub) btns['ABCD'.indexOf(k)].click(); };
-      S.play = async () => { if (sub) return; await S.sleep(400); await S.say(it.speak, { tone: /\?/.test(it.speak) && it.n < 5 ? 'q' : 's' }); };
+      S.play = async () => { if (sub) return; await S.sleep(250); await S.say(it.speak, { tone: /\?/.test(it.speak) && it.n < 5 ? 'q' : 's' }); };
     }
   };
 }
@@ -102,7 +102,7 @@ const CH8 = {
         bi.onclick = () => { AS.mode = 'individual'; sync(); saveSoon(); };
         sync();
         S.el(`<div class="note-card" style="left:100px;top:690px;width:1400px;font-size:22px">${T('A shared teacher-entered score describes the class activity. It is not any one learner’s mastery.')}</div>`);
-        S.play = async () => { await S.sleep(400); await S.say('Ten questions. | One point for each.'); await S.say('Correct answers stay hidden until you submit.'); };
+        S.play = async () => { await S.sleep(250); await S.say('Ten questions. | One point for each.'); await S.say('Correct answers stay hidden until you submit.'); };
       }
     },
     ...ITEMS.map(itemStep),
@@ -134,7 +134,7 @@ const CH8 = {
           }
         }
         S.render = render; render();
-        S.play = async () => { await S.sleep(300); await S.say(AS.submitted ? 'Here is your first attempt.' : 'Check your answers. Then submit.'); };
+        S.play = async () => { await S.sleep(200); await S.say(AS.submitted ? 'Here is your first attempt.' : 'Check your answers. Then submit.'); };
       }
     },
     {
@@ -169,7 +169,7 @@ const CH8 = {
           panel.appendChild(sb);
         }
         render();
-        S.play = async () => { await S.sleep(300); await S.say(ids.length ? 'Try the missed questions again.' : 'There is nothing to retry.'); };
+        S.play = async () => { await S.sleep(200); await S.say(ids.length ? 'Try the missed questions again.' : 'There is nothing to retry.'); };
       }
     }
   ]

@@ -20,7 +20,7 @@ function picQ(o) {
       S.onLevel = (n) => { if (n > 0) Fx.burst(1330, 400, 14); };
       if (o.vocab) o.vocab.forEach(v => S.add && S.el(`<div class="vl" style="left:${v[0]}px;top:${v[1]}px">${T(v[2])}</div>`));
       S.play = async () => {
-        await S.sleep(500);
+        await S.sleep(250);
         await S.say(o.q, { tone: 'q', who: nora });
         turn.classList.remove('hidden-lv');
       };
@@ -43,13 +43,13 @@ const CH1 = {
         b.innerHTML = `<div class="tag">${T('Fluent English · A1')}</div><div class="big" style="font-size:56px;line-height:1.05;text-align:center">${T('Be: Yes/No Questions')}</div><div style="margin-top:6px;font-size:32px;color:var(--turq-l);font-family:var(--serif);font-weight:700">${T('Am I…? Are you…? Is she…?')}</div>`;
         b.style.opacity = 0; b.style.transition = 'opacity 1.4s';
         S.play = async () => {
-          await S.sleep(500); b.style.opacity = 1; Fx.burst(800, 250, 26);
+          await S.sleep(250); b.style.opacity = 1; Fx.burst(800, 250, 26);
           await S.sleep(2600);
-          await S.say('Welcome to Fluent English.', { who: ppl[0], after: 200 });
+          await S.say('Welcome to Fluent English.', { who: ppl[0], after: 100 });
           await S.say('Today, we ask yes/no questions | with be.', { who: ppl[0] });
-          await S.sleep(300);
+          await S.sleep(200);
           await S.say('Meet the people in our pictures.', { who: ppl[0] });
-          for (let i = 0; i < 4; i++) { ppl[i].tag.style.opacity = 1; Aud.sfx('tick'); await S.say(['Nora.', 'Sam.', 'Maya.', 'Alex.'][i], { who: ppl[i], after: 150 }); }
+          for (let i = 0; i < 4; i++) { ppl[i].tag.style.opacity = 1; Aud.sfx('tick'); await S.say(['Nora.', 'Sam.', 'Maya.', 'Alex.'][i], { who: ppl[i], after: 100 }); }
         };
       }
     },
@@ -69,16 +69,16 @@ const CH1 = {
         m1.classList.add('hidden-lv', 'lv'); m2.classList.add('hidden-lv', 'lv');
         const show = el => el.classList.remove('hidden-lv');
         S.play = async () => {
-          await S.sleep(600);
+          await S.sleep(200);
           await S.say('You are ready.', { tone: 's', who: nora });
-          await S.sleep(800);
+          await S.sleep(250);
           Aud.sfx('move'); kind.innerHTML = T('A question');
           await sent.morph(P.quest, 1400, S.e); Aud.sfx('question');
           await S.say('Are you ready?', { tone: 'q', who: nora });
-          await S.sleep(500);
+          await S.sleep(250);
           show(cStmt); Aud.sfx('tick'); await S.say('A statement gives information.', { who: nora });
           show(cQ); Aud.sfx('tick'); await S.say('A question asks for information.', { who: nora });
-          await S.sleep(400);
+          await S.sleep(250);
           show(cI); await S.say('In many yes/no questions, | the voice goes up at the end.', { who: nora });
           show(m1); show(m2);
         };

@@ -158,6 +158,26 @@ const eq = (a, b, m) => ok(JSON.stringify(a) === JSON.stringify(b), `${m} (got $
   await ev(() => FE.replay()); await page.waitForTimeout(300);
   eq(await beName(), 'are', 'Replay Example restarts the sequence from the statement');
 
+  console.log('Gender-matched voices');
+  const spoken = await ev(async () => {
+    const mk = (name, lang) => ({ name, lang, voiceURI: name, localService: true });
+    Sp.voices = [mk('Microsoft Aria Online (Natural) - English (United States)', 'en-US'), mk('Microsoft Guy Online (Natural) - English (United States)', 'en-US'), mk('Microsoft Sabina - Spanish (Mexico)', 'es-MX')];
+    Sp.none = false;
+    const log = [];
+    window.SpeechSynthesisUtterance = function (t) { this.text = t; };
+    const realSpeak = speechSynthesis.speak.bind(speechSynthesis);
+    speechSynthesis.speak = (u) => { log.push([u.text, u.voice && u.voice.name, u.pitch]); setTimeout(() => u.onend && u.onend(), 20); };
+    CFG.voiceF = ''; CFG.voiceM = '';
+    const e = ++Run.epoch; const S = makeCtx({}, e);
+    ST.paused = false;
+    await S.say('Yes, I am.', { who: { o: { k: 'alex' }, talk() { } } });
+    await S.say('Are you ready?', { who: { o: { k: 'nora' }, talk() { } } });
+    await S.say('Is he late?', { who: { o: { k: 'sam' }, talk() { } } });
+    await S.say('Yes, she is.', { who: { o: { k: 'maya' }, talk() { } } });
+    speechSynthesis.speak = realSpeak; return log;
+  });
+  eq(spoken.map(x => /Guy/.test(x[1]) ? 'male' : /Aria/.test(x[1]) ? 'female' : x[1]), ['male', 'female', 'male', 'female'], 'Alex/Sam use a male voice, Nora/Maya a female voice');
+
   console.log('Every step builds, every word has IPA');
   const n = await ev(() => FE.flat.length); eq(n, 65, 'sixty-five steps');
   for (let i = 0; i < n; i++) {

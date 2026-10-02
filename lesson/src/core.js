@@ -11,7 +11,7 @@ const CANCEL = { cancelled: true };
 const KEY = 'fluent-english.be-yes-no.v1';
 
 /* ---------------- settings & state ---------------- */
-const CFG0 = { cc: 2, es: false, voiceEn: '', voiceEs: '', rate: 0.85, vSpeech: 1, vMusic: 0.6, vSfx: 0.8, rm: 'auto', support: true, vocab: false };
+const CFG0 = { cc: 2, es: false, voiceEn: '', voiceF: '', voiceM: '', voiceEs: '', rate: 0.92, vSpeech: 1, vMusic: 0.6, vSfx: 0.8, rm: 'auto', support: true, vocab: false };
 const CFG = Object.assign({}, CFG0);
 let ST = null;
 const freshState = () => ({
@@ -168,7 +168,7 @@ function Sentence(parent, tokens, o = {}) {
     set(toks) { el.innerHTML = ''; nodes.clear(); toks.forEach(tk => { const n = make(tk); el.appendChild(n); nodes.set(tk.id, n); }); self.tokens = toks; return self; },
     async morph(toks, ms = 1200, e = Run.epoch) {
       if (reduced()) ms = 1;
-      const sc = FE.scale || 1;
+      const sc = (el.offsetWidth ? el.getBoundingClientRect().width / el.offsetWidth : FE.scale) || 1;
       const first = new Map(); nodes.forEach((n, id) => first.set(id, n.getBoundingClientRect()));
       const elr = el.getBoundingClientRect();
       const keep = new Set(toks.map(t => t.id));
@@ -226,6 +226,7 @@ function makeCtx(step, e) {
       const e = S.e; alive(e);
       const plain = text.replace(/\|/g, ' ').replace(/\s+/g, ' ').trim();
       const lang = o.lang || 'en';
+      const sex = o.sex || (o.who && o.who.o && A.cast[o.who.o.k] ? A.cast[o.who.o.k].sex : 'f');
       if (o.caption !== false) setCaption(o.cap || plain, lang);
       if (o.who) o.who.talk(true);
       Sp.n = (Sp.n || 0) + 1; Aud.duck(true);
@@ -235,11 +236,11 @@ function makeCtx(step, e) {
           const ph = parts[i].trim(); if (!ph) continue;
           for (; ;) {
             await waitUnpaused(e);
-            const r = await Sp.once(ph, { lang, pitch: o.tone === 'q' ? 1.08 : (o.tone === 's' ? 0.97 : 1), rate: o.rate }, e);
+            const r = await Sp.once(ph, { lang, sex, pitch: o.tone === 'q' ? 1.05 : (o.tone === 's' ? 0.98 : 1), rate: o.rate }, e);
             alive(e);
             if (r === 'done') break;
           }
-          if (i < parts.length - 1) await sleep(o.gap || 260, e);
+          if (i < parts.length - 1) await sleep(o.gap || 80, e);
         }
       } finally {
         if (o.who) o.who.talk(false);
@@ -262,7 +263,20 @@ function makeCtx(step, e) {
       const d = mk(`<div class="bubble ${o.cls || ''}" style="left:${x}px;top:${y}px;${o.w ? 'width:' + o.w + 'px;' : ''}${o.style || ''}${o.tail ? '--tail:' + o.tail + 'px;' : ''}">${T(text)}</div>`);
       root.appendChild(d); return d;
     },
-    board(x, y, w, h, o = {}) { const d = mk(`<div class="board ${o.cls || ''}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"></div>`); root.appendChild(d); return d; },
+    board(x, y, w, h, o = {}) {
+      const d = mk(`<div class="board ${o.cls || ''}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"></div>`);
+      const inner = document.createElement('div'); inner.className = 'bin'; d.appendChild(inner);
+      Object.defineProperty(d, 'innerHTML', { set(v) { inner.innerHTML = v; }, get() { return inner.innerHTML; } });
+      d.appendChild = (n) => inner.appendChild(n);
+      const fit = () => {
+        inner.style.transform = 'none';
+        const cs = getComputedStyle(d), aw = d.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 8, ah = d.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) - 8;
+        const k = Math.min(1, aw / Math.max(1, inner.scrollWidth), ah / Math.max(1, inner.offsetHeight));
+        inner.style.transform = k < 0.995 ? `scale(${k})` : 'none';
+      };
+      new ResizeObserver(fit).observe(inner); new MutationObserver(fit).observe(inner, { childList: true, subtree: true, characterData: true });
+      d._fit = fit; root.appendChild(d); requestAnimationFrame(fit); return d;
+    },
     paper(x, y, w, h, o = {}) { const d = mk(`<div class="paper ${o.cls || ''}" style="left:${x}px;top:${y}px;${w ? 'width:' + w + 'px;' : ''}${h ? 'height:' + h + 'px;' : ''}${o.style || ''}"></div>`); root.appendChild(d); return d; },
     sentence(parent, toks_, o) { return Sentence(parent, toks_, o); },
     replayBtn(text, x, y, o = {}) {
@@ -473,11 +487,13 @@ const UI = {
     const sel = (list, cur, id) => `<select id="${id}"><option value="">Automatic (best match)</option>${list.map(v => `<option value="${esc(v.voiceURI)}" ${cur === v.voiceURI ? 'selected' : ''}>${esc(v.name)} — ${esc(v.lang)}</option>`).join('')}</select>`;
     const warn = Sp.none ? '<p class="note" style="color:var(--coral-l)">No speech voices were found on this device/browser. The lesson still runs with on-screen captions and timed pauses.</p>' : (!Sp.hasUS() ? '<p class="note" style="color:var(--gold-l)">No American-English (en-US) voice found. The lesson will use another English voice, which may not sound American.</p>' : '');
     $('#setBody').innerHTML = `
-      <h3>English model voice</h3>${sel(en, CFG.voiceEn, 'vEn')}
+      <h3>Female voice (Nora, Maya, teacher)</h3>${sel(en, CFG.voiceF, 'vF')}
+      <h3>Male voice (Alex, Sam)</h3>${sel(en, CFG.voiceM, 'vM')}
+      <p class="note">Each character speaks with a voice that matches their gender, using the best matching voice on your device. Voices named “Natural” or “Online” (Microsoft Edge) or Google/Apple premium voices sound far less robotic.</p>
       <h3>Spanish Help voice</h3>${sel(es, CFG.voiceEs, 'vEs')}
       ${warn}
-      <label for="rate">Speaking rate: <span id="rateV">${CFG.rate.toFixed(2)}</span>×</label><input type="range" id="rate" min="0.55" max="1.2" step="0.05" value="${CFG.rate}">
-      <p><button class="btn sm" id="testEn">▶ Test English</button> <button class="btn sm ghost" id="testEs">▶ Prueba español</button></p>
+      <label for="rate">Speaking rate: <span id="rateV">${CFG.rate.toFixed(2)}</span>×</label><input type="range" id="rate" min="0.6" max="1.3" step="0.05" value="${CFG.rate}">
+      <p><button class="btn sm" id="testEn">▶ Test female</button> <button class="btn sm" id="testM">▶ Test male</button> <button class="btn sm ghost" id="testEs">▶ Prueba español</button></p>
       <h3>Volume</h3>
       <label for="vSp">Speech</label><input type="range" id="vSp" min="0" max="1" step="0.05" value="${CFG.vSpeech}">
       <label for="vMu">Music</label><input type="range" id="vMu" min="0" max="1" step="0.05" value="${CFG.vMusic}">
@@ -494,7 +510,8 @@ const UI = {
       <p class="note">Settings, progress and scores are stored only in this browser. No names or emails are collected and nothing is uploaded.</p>
       <button class="btn sm coral" id="clrData">Clear all local data…</button>`;
     const b = $('#setBody');
-    $('#vEn', b).onchange = e => { CFG.voiceEn = e.target.value; Store.save(); };
+    $('#vF', b).onchange = e => { CFG.voiceF = e.target.value; Store.save(); };
+    $('#vM', b).onchange = e => { CFG.voiceM = e.target.value; Store.save(); };
     $('#vEs', b).onchange = e => { CFG.voiceEs = e.target.value; Store.save(); };
     $('#rate', b).oninput = e => { CFG.rate = +e.target.value; $('#rateV', b).textContent = CFG.rate.toFixed(2); Store.save(); };
     $('#vSp', b).oninput = e => { CFG.vSpeech = +e.target.value; Store.save(); };
@@ -502,7 +519,8 @@ const UI = {
     $('#vSf', b).oninput = e => { CFG.vSfx = +e.target.value; Aud.setVol('sfx', CFG.vSfx); Store.save(); };
     $('#rmSel', b).onchange = e => { CFG.rm = e.target.value; UI.applyCfg(); Store.save(); };
     $('#vocabChk', b).onchange = e => { CFG.vocab = e.target.checked; UI.applyCfg(); Store.save(); };
-    $('#testEn', b).onclick = () => { Aud.init(); FE.speakOne('Are you ready?', 'q'); };
+    $('#testEn', b).onclick = () => { Aud.init(); const e = ++Run.epoch; Sp.cancel(); makeCtx({}, e).say('Are you ready?', { tone: 'q', sex: 'f' }).catch(() => { }); };
+    $('#testM', b).onclick = () => { Aud.init(); const e = ++Run.epoch; Sp.cancel(); makeCtx({}, e).say('Yes, I am.', { tone: 's', sex: 'm' }).catch(() => { }); };
     $('#testEs', b).onclick = () => { Aud.init(); const e = ++Run.epoch; Sp.cancel(); const S = makeCtx({}, e); S.say('¿Estás listo?', { lang: 'es' }).catch(() => { }); };
     $('#ipaKeyBtn', b).onclick = () => UI.ipaKey();
     $('#clrData', b).onclick = () => UI.modal(`<h2>Clear all local data?</h2><p>This removes saved settings, progress, scores and notes from this browser. It cannot be undone.</p><div class="acts"><button class="btn coral" id="yes">Clear everything</button><button class="btn ghost" id="no">Cancel</button></div>`, m => { $('#no', m).onclick = () => UI.closeModal(); $('#yes', m).onclick = () => { Store.clear(); location.reload(); }; });

@@ -32,11 +32,11 @@ function whoStep(o) {
       const pointer = S.el(`<div class="chip cream lv hidden-lv" style="left:${o.ax}px;top:${o.ay - 62}px;font-size:24px">${T(o.say2)}</div>`);
       S.reg(who, 1); rg.forEach(r => S.reg(r, 1)); S.reg(ans, 2); S.reg(why, 2); S.reg(pointer, 2);
       S.levels = 2; S.revLabels = ['Who is the pronoun?', 'Show the complete answer'];
-      S.sayAt(1, o.sayWho); S.sayAt(2, o.ans, { tone: 's' });
+      S.sayAt(1, o.sayWho, { who: asker }); S.sayAt(2, o.ans, { tone: 's', who: answerer });
       S.onLevel = (n) => { if (n) { turnA.classList.add('hidden-lv'); Fx.burst(o.ax + 100, o.ay, 12); } };
       if (o.extra) o.extra(S, P);
       S.play = async () => {
-        await S.sleep(500);
+        await S.sleep(250);
         icons.forEach(g => g.classList.remove('hidden-lv'));
         await S.say(o.q, { tone: 'q', who: asker });
         turnA.classList.remove('hidden-lv');
@@ -64,12 +64,12 @@ const CH5 = {
         items.forEach(a => a.forEach(el => el.classList.add('hidden-lv', 'lv')));
         const reveal = (i) => items[i].forEach(el => el.classList.remove('hidden-lv'));
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Look at three things.', { who: al });
           reveal(0); Aud.sfx('tick'); await S.say('Who asks?', { who: al, tone: 'q' });
           reveal(1); Aud.sfx('tick'); await S.say('Who answers?', { who: al, tone: 'q' });
           reveal(2); Aud.sfx('tick'); await S.say('Who do we talk about?', { who: al, tone: 'q' });
-          await S.sleep(400);
+          await S.sleep(250);
           reveal(3); await S.say('Is he ready?', { tone: 'q', who: al });
           reveal(4); await S.say('Yes, he is.', { tone: 's', who: ma });
           await S.say('“He” is Sam, | the person we talk about.', { who: ma });
@@ -139,7 +139,7 @@ const CH5 = {
         S.levels = 2; S.revLabels = ['Is the answerer inside “we”?', 'Show the complete answer'];
         S.onLevel = (n) => { ans.classList.toggle('hidden-lv', !(n >= 2 && mode === 'A')); ans2.classList.toggle('hidden-lv', !(n >= 2 && mode === 'B')); if (n) Fx.burst(800, 600, 12); };
         setMode('A');
-        S.play = async () => { await S.sleep(500); await S.say('Are we late?', { tone: 'q', who: al }); await S.say('Alex and Sam are in the circle. | Who answers?', { who: al }); };
+        S.play = async () => { await S.sleep(250); await S.say('Are we late?', { tone: 'q', who: al }); await S.say('Alex and Sam are in the circle. | Who answers?', { who: al }); };
       }
     }
   ]

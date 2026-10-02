@@ -15,7 +15,7 @@ function shortNo(o) {
       S.levels = 2; S.revLabels = ['Show the negative answer', 'Add a true sentence'];
       S.sayAt(1, o.ans, { tone: 's' }); S.sayAt(2, o.ans + ' ' + o.add, { tone: 's' });
       S.onLevel = (n) => { if (n) { turn.classList.add('hidden-lv'); Fx.burst(1200, 350, 12, ['#ff9a8d', '#ffd978', '#fff6e5']); } };
-      S.play = async () => { await S.sleep(500); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
+      S.play = async () => { await S.sleep(250); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
     }
   };
 }
@@ -48,11 +48,11 @@ const CH4 = {
         ['No, it is not.', 'No, it isn’t.', 'No, it’s not.'].forEach(t => { const c = modelChip(S, t, 0, 0, { cls: 'sm n', tone: 's', style: 'position:static' }); c.style.position = 'static'; chips.appendChild(c); });
         const ok = S.el(`<div class="chip lv hidden-lv" style="left:560px;top:620px;font-size:30px">${T('All three are correct.')}</div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Is it a book?', { tone: 'q', who: nora });
-          await S.say('No, it is not.', { tone: 's', who: nora, after: 400 });
+          await S.say('No, it is not.', { tone: 's', who: nora, after: 100 });
           lab.innerHTML = T('Short form: is + not'); Aud.sfx('move'); await sent.morph(c1, 1200, S.e);
-          await S.say('No, it isn’t.', { tone: 's', who: nora, after: 400 });
+          await S.say('No, it isn’t.', { tone: 's', who: nora, after: 100 });
           lab.innerHTML = T('Short form: it + is'); Aud.sfx('move'); await sent.morph(c2, 1200, S.e);
           await S.say('No, it’s not.', { tone: 's', who: nora });
           chips.classList.remove('hidden-lv'); ok.classList.remove('hidden-lv'); Aud.sfx('reveal');
@@ -85,7 +85,7 @@ const CH4 = {
         S.onLevel = (n, p, silent) => { if (silent || n === 0) { orbs.forEach(o => o.classList.remove('on')); list.innerHTML = ''; hd.innerHTML = T('Choose a pronoun'); note.innerHTML = ''; return; } show(n - 1, true).catch(x => { if (x !== CANCEL) console.error(x); }); };
         S.play = async () => {
           hd.innerHTML = T('Choose a pronoun');
-          await S.sleep(400);
+          await S.sleep(250);
           for (let i = 0; i < NEG.length; i++) { await show(i, false); await S.sleep(250); }
         };
       }
@@ -121,7 +121,7 @@ const CH4 = {
         const a1 = modelChip(S, 'No, it isn’t.', 1010, 300, { cls: 'n', tone: 's' });
         const x = S.el(`<div class="paper lv hidden-lv" style="left:1000px;top:430px;width:500px;border:4px solid var(--coral)"><span class="chip coral" style="font-size:30px">✗</span> <span class="big" style="font-size:40px;text-decoration:line-through;text-decoration-color:var(--coral-d)">${T('It’s a book.')}</span><div class="small" style="margin-top:8px">${T('We cannot see it. Do not guess.')}</div></div>`);
         S.reg(a1, 1); S.reg(x, 2); S.levels = 2; S.revLabels = ['Show the answer', 'Careful: do not guess']; S.sayAt(1, 'No, it isn’t.', { tone: 's' }); S.sayAt(2, 'We cannot see it. | Do not guess.');
-        S.play = async () => { await S.sleep(500); await S.say('Is it a phone?', { tone: 'q', who: nora }); await S.say('The information card says: | it is not a phone.', { who: nora }); };
+        S.play = async () => { await S.sleep(250); await S.say('Is it a phone?', { tone: 'q', who: nora }); await S.say('The information card says: | it is not a phone.', { who: nora }); };
       }
     },
     {
@@ -145,7 +145,7 @@ const CH4 = {
         function reset() { sel.clear(); btns.forEach(b => b.className = 'opt'); fb.style.display = 'none'; }
         chk.onclick = check;
         S.levels = 1; S.revLabels = ['Show which are acceptable']; S.onLevel = (n) => { if (n) { OPT.forEach((o, i) => { if (o[1]) sel.add(i); else sel.delete(i); }); check(); } else reset(); };
-        S.play = async () => { await S.sleep(500); await S.say('Is he late?', { tone: 'q', who: nora }); await S.say('Sam is on time. | Choose all the acceptable answers.', { who: nora }); };
+        S.play = async () => { await S.sleep(250); await S.say('Is he late?', { tone: 'q', who: nora }); await S.say('Sam is on time. | Choose all the acceptable answers.', { who: nora }); };
       }
     }
   ]

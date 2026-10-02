@@ -198,6 +198,18 @@ const Sp = {
     const l = this.list(lang);
     return l.find(v => v.voiceURI === uri) || l[0] || null;
   },
+  FEM: /aria|jenny|samantha|zira|ava\b|allison|susan|karen|victoria|joanna|salli|kendra|kimberly|ivy|emma|michelle|libby|sonia|hazel|serena|moira|tessa|fiona|nicky|female|google us english|paulina|monica|sabina|helena|elena|lucia|dalia|laura|jessa|amy|zoe|siri/i,
+  MAL: /guy|davis|christopher|eric|roger|brian|david|mark\b|james|\balex\b|daniel|fred|tom\b|ryan|andrew|steffan|matthew|joey|justin|kevin|male|diego|jorge|pablo|raul|alvaro|aaron|arthur|gordon|rishi|oliver|liam/i,
+  /* a male voice for male characters, a female voice for female characters */
+  pickSex(sex) {
+    const all = this.list('en'), isM = v => this.MAL.test(v.name) && !/female/i.test(v.name), isF = v => this.FEM.test(v.name) || /female/i.test(v.name);
+    const pool = all.filter(sex === 'm' ? isM : (v => isF(v) && !isM(v)));
+    const uri = sex === 'm' ? CFG.voiceM : CFG.voiceF;
+    const chosen = all.find(v => v.voiceURI === uri);
+    if (chosen) return { v: chosen, matched: true };
+    if (pool.length) return { v: pool[0], matched: true };
+    return { v: all[0] || null, matched: false };
+  },
   hasUS() { return this.list('en').some(v => /en[-_]US/i.test(v.lang)); },
   cancel() { try { speechSynthesis.cancel(); } catch (e) { } this.cur = null; },
   est(text, rate) { return Math.max(700, text.length * 68 / Math.max(0.4, rate) + 450); },
@@ -217,8 +229,8 @@ const Sp = {
         return;
       }
       const u = new SpeechSynthesisUtterance(text);
-      const v = this.pick(lang); if (v) { u.voice = v; u.lang = v.lang; } else u.lang = lang === 'es' ? 'es-MX' : 'en-US';
-      u.rate = Math.min(2, Math.max(0.4, rate)); u.pitch = o.pitch || 1; u.volume = CFG.vSpeech;
+      let v = null, matched = true; if (lang === 'es') v = this.pick('es'); else { const r = this.pickSex(o.sex || 'f'); v = r.v; matched = r.matched; } if (v) { u.voice = v; u.lang = v.lang; } else u.lang = lang === 'es' ? 'es-MX' : 'en-US';
+      u.rate = Math.min(2, Math.max(0.4, rate)); u.pitch = (o.pitch || 1) * (lang === 'es' ? 1 : (matched ? (o.sex === 'm' ? 0.96 : 1) : (o.sex === 'm' ? 0.78 : 1.1))); u.volume = CFG.vSpeech;
       let fin = false;
       const done = (r) => { if (fin) return; fin = true; clearTimeout(wd); clearInterval(poll); this.cur = null; res(r); };
       u.onend = () => done(e !== Run.epoch || ST.paused ? 'stop' : 'done');

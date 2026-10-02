@@ -14,7 +14,7 @@ function challenge(o) {
       S.onLevel = async (n) => { if (n === 1) { turn.classList.add('hidden-lv'); const e = S.interrupt(); await g.auto(e); await S.say(P.qText, { tone: 'q' }); } else g.reset(); };
       if (o.extra) o.extra(S);
       S.play = async () => {
-        await S.sleep(400);
+        await S.sleep(250);
         await S.say(P.sText, { tone: 's', who });
         turn.classList.remove('hidden-lv');
       };
@@ -38,9 +38,9 @@ const CH2 = {
         const c2 = S.el(`<div class="note-card hidden-lv lv" style="left:830px;top:470px;width:440px;border-color:var(--turq-l)"><div class="tag">${T('Question')}</div>${T('Be + subject + complement + ?')}</div>`);
         const leg = S.el(`<div class="hidden-lv lv" style="left:340px;top:620px;width:930px;display:flex;gap:18px;justify-content:center"><span class="chip">${T('subject')}</span><span class="chip gold">${T('be')}</span><span class="chip cream">${T('complement')}</span></div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Subject | be | complement.', { who: nora });
-          c1.classList.remove('hidden-lv'); await S.sleep(500);
+          c1.classList.remove('hidden-lv'); await S.sleep(250);
           Aud.sfx('move'); await sent.morph(gq, 1500, S.e); Aud.sfx('question');
           await S.say('Be | subject | complement | question mark.', { who: nora });
           c2.classList.remove('hidden-lv'); leg.classList.remove('hidden-lv');
@@ -69,7 +69,7 @@ const CH2 = {
           if (q) { Aud.sfx('move'); await sent.morph(P.quest, 1300, e); Aud.sfx('question'); Fx.burst(800, 280, 16); await S.say(P.qText, { tone: 'q', who: nora }); }
           else { sent.set(P.stmt); await S.say(P.sText, { tone: 's', who: nora }); }
         };
-        S.play = async () => { await S.sleep(500); await S.say(EX[0].sText, { tone: 's', who: nora }); };
+        S.play = async () => { await S.sleep(250); await S.say(EX[0].sText, { tone: 's', who: nora }); };
         S.onLevel(0, 0, true);
       }
     },
@@ -100,7 +100,7 @@ const CH2 = {
         S.levels = 7; S.revLabels = PATS.map((p, i) => 'Next pattern');
         S.onLevel = (n, prev, silent) => { if (silent || n === 0) { orbs.forEach(o => o.classList.remove('on')); return; } show(n - 1, true).catch(x => { if (x !== CANCEL) console.error(x); }); };
         S.play = async () => {
-          await S.sleep(400);
+          await S.sleep(250);
           for (let i = 0; i < PATS.length; i++) { await show(i, false); await S.sleep(250); }
           ag.classList.remove('hidden-lv');
           await S.say('I, am. | He, she, it, is. | You, we, they, are.');
@@ -123,9 +123,9 @@ const CH2 = {
         const they = S.el(`<div class="note-card hidden-lv lv" style="left:360px;top:130px;width:880px;text-align:center;font-size:30px">${T('One person who uses they? Still: Are they ready?')}</div>`);
         S.levels = 1; S.revLabels = ['Show: one person who uses they']; S.reg(they, 1);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Are you ready?', { tone: 'q', who: n1 }); await S.say('You means one person.', { who: n1 });
-          await S.sleep(300);
+          await S.sleep(200);
           await S.say('Are you ready?', { tone: 'q', who: n2 }); await S.say('You can also mean more than one person.', { who: n2 });
         };
       }

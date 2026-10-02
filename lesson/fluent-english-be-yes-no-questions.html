@@ -275,6 +275,8 @@ body.vocab .vl{display:block}
 
 #dock .db{padding:8px 11px}
 
+.bin{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;transform-origin:center center;position:relative}
+
 </style>
 </head>
 <body class="cc2 ipa">
@@ -1228,6 +1230,18 @@ const Sp = {
     const l = this.list(lang);
     return l.find(v => v.voiceURI === uri) || l[0] || null;
   },
+  FEM: /aria|jenny|samantha|zira|ava\b|allison|susan|karen|victoria|joanna|salli|kendra|kimberly|ivy|emma|michelle|libby|sonia|hazel|serena|moira|tessa|fiona|nicky|female|google us english|paulina|monica|sabina|helena|elena|lucia|dalia|laura|jessa|amy|zoe|siri/i,
+  MAL: /guy|davis|christopher|eric|roger|brian|david|mark\b|james|\balex\b|daniel|fred|tom\b|ryan|andrew|steffan|matthew|joey|justin|kevin|male|diego|jorge|pablo|raul|alvaro|aaron|arthur|gordon|rishi|oliver|liam/i,
+  /* a male voice for male characters, a female voice for female characters */
+  pickSex(sex) {
+    const all = this.list('en'), isM = v => this.MAL.test(v.name) && !/female/i.test(v.name), isF = v => this.FEM.test(v.name) || /female/i.test(v.name);
+    const pool = all.filter(sex === 'm' ? isM : (v => isF(v) && !isM(v)));
+    const uri = sex === 'm' ? CFG.voiceM : CFG.voiceF;
+    const chosen = all.find(v => v.voiceURI === uri);
+    if (chosen) return { v: chosen, matched: true };
+    if (pool.length) return { v: pool[0], matched: true };
+    return { v: all[0] || null, matched: false };
+  },
   hasUS() { return this.list('en').some(v => /en[-_]US/i.test(v.lang)); },
   cancel() { try { speechSynthesis.cancel(); } catch (e) { } this.cur = null; },
   est(text, rate) { return Math.max(700, text.length * 68 / Math.max(0.4, rate) + 450); },
@@ -1247,8 +1261,8 @@ const Sp = {
         return;
       }
       const u = new SpeechSynthesisUtterance(text);
-      const v = this.pick(lang); if (v) { u.voice = v; u.lang = v.lang; } else u.lang = lang === 'es' ? 'es-MX' : 'en-US';
-      u.rate = Math.min(2, Math.max(0.4, rate)); u.pitch = o.pitch || 1; u.volume = CFG.vSpeech;
+      let v = null, matched = true; if (lang === 'es') v = this.pick('es'); else { const r = this.pickSex(o.sex || 'f'); v = r.v; matched = r.matched; } if (v) { u.voice = v; u.lang = v.lang; } else u.lang = lang === 'es' ? 'es-MX' : 'en-US';
+      u.rate = Math.min(2, Math.max(0.4, rate)); u.pitch = (o.pitch || 1) * (lang === 'es' ? 1 : (matched ? (o.sex === 'm' ? 0.96 : 1) : (o.sex === 'm' ? 0.78 : 1.1))); u.volume = CFG.vSpeech;
       let fin = false;
       const done = (r) => { if (fin) return; fin = true; clearTimeout(wd); clearInterval(poll); this.cur = null; res(r); };
       u.onend = () => done(e !== Run.epoch || ST.paused ? 'stop' : 'done');
@@ -1275,7 +1289,7 @@ const CANCEL = { cancelled: true };
 const KEY = 'fluent-english.be-yes-no.v1';
 
 /* ---------------- settings & state ---------------- */
-const CFG0 = { cc: 2, es: false, voiceEn: '', voiceEs: '', rate: 0.85, vSpeech: 1, vMusic: 0.6, vSfx: 0.8, rm: 'auto', support: true, vocab: false };
+const CFG0 = { cc: 2, es: false, voiceEn: '', voiceF: '', voiceM: '', voiceEs: '', rate: 0.92, vSpeech: 1, vMusic: 0.6, vSfx: 0.8, rm: 'auto', support: true, vocab: false };
 const CFG = Object.assign({}, CFG0);
 let ST = null;
 const freshState = () => ({
@@ -1432,7 +1446,7 @@ function Sentence(parent, tokens, o = {}) {
     set(toks) { el.innerHTML = ''; nodes.clear(); toks.forEach(tk => { const n = make(tk); el.appendChild(n); nodes.set(tk.id, n); }); self.tokens = toks; return self; },
     async morph(toks, ms = 1200, e = Run.epoch) {
       if (reduced()) ms = 1;
-      const sc = FE.scale || 1;
+      const sc = (el.offsetWidth ? el.getBoundingClientRect().width / el.offsetWidth : FE.scale) || 1;
       const first = new Map(); nodes.forEach((n, id) => first.set(id, n.getBoundingClientRect()));
       const elr = el.getBoundingClientRect();
       const keep = new Set(toks.map(t => t.id));
@@ -1490,6 +1504,7 @@ function makeCtx(step, e) {
       const e = S.e; alive(e);
       const plain = text.replace(/\|/g, ' ').replace(/\s+/g, ' ').trim();
       const lang = o.lang || 'en';
+      const sex = o.sex || (o.who && o.who.o && A.cast[o.who.o.k] ? A.cast[o.who.o.k].sex : 'f');
       if (o.caption !== false) setCaption(o.cap || plain, lang);
       if (o.who) o.who.talk(true);
       Sp.n = (Sp.n || 0) + 1; Aud.duck(true);
@@ -1499,11 +1514,11 @@ function makeCtx(step, e) {
           const ph = parts[i].trim(); if (!ph) continue;
           for (; ;) {
             await waitUnpaused(e);
-            const r = await Sp.once(ph, { lang, pitch: o.tone === 'q' ? 1.08 : (o.tone === 's' ? 0.97 : 1), rate: o.rate }, e);
+            const r = await Sp.once(ph, { lang, sex, pitch: o.tone === 'q' ? 1.05 : (o.tone === 's' ? 0.98 : 1), rate: o.rate }, e);
             alive(e);
             if (r === 'done') break;
           }
-          if (i < parts.length - 1) await sleep(o.gap || 260, e);
+          if (i < parts.length - 1) await sleep(o.gap || 80, e);
         }
       } finally {
         if (o.who) o.who.talk(false);
@@ -1526,7 +1541,20 @@ function makeCtx(step, e) {
       const d = mk(`<div class="bubble ${o.cls || ''}" style="left:${x}px;top:${y}px;${o.w ? 'width:' + o.w + 'px;' : ''}${o.style || ''}${o.tail ? '--tail:' + o.tail + 'px;' : ''}">${T(text)}</div>`);
       root.appendChild(d); return d;
     },
-    board(x, y, w, h, o = {}) { const d = mk(`<div class="board ${o.cls || ''}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"></div>`); root.appendChild(d); return d; },
+    board(x, y, w, h, o = {}) {
+      const d = mk(`<div class="board ${o.cls || ''}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px"></div>`);
+      const inner = document.createElement('div'); inner.className = 'bin'; d.appendChild(inner);
+      Object.defineProperty(d, 'innerHTML', { set(v) { inner.innerHTML = v; }, get() { return inner.innerHTML; } });
+      d.appendChild = (n) => inner.appendChild(n);
+      const fit = () => {
+        inner.style.transform = 'none';
+        const cs = getComputedStyle(d), aw = d.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 8, ah = d.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) - 8;
+        const k = Math.min(1, aw / Math.max(1, inner.scrollWidth), ah / Math.max(1, inner.offsetHeight));
+        inner.style.transform = k < 0.995 ? `scale(${k})` : 'none';
+      };
+      new ResizeObserver(fit).observe(inner); new MutationObserver(fit).observe(inner, { childList: true, subtree: true, characterData: true });
+      d._fit = fit; root.appendChild(d); requestAnimationFrame(fit); return d;
+    },
     paper(x, y, w, h, o = {}) { const d = mk(`<div class="paper ${o.cls || ''}" style="left:${x}px;top:${y}px;${w ? 'width:' + w + 'px;' : ''}${h ? 'height:' + h + 'px;' : ''}${o.style || ''}"></div>`); root.appendChild(d); return d; },
     sentence(parent, toks_, o) { return Sentence(parent, toks_, o); },
     replayBtn(text, x, y, o = {}) {
@@ -1737,11 +1765,13 @@ const UI = {
     const sel = (list, cur, id) => `<select id="${id}"><option value="">Automatic (best match)</option>${list.map(v => `<option value="${esc(v.voiceURI)}" ${cur === v.voiceURI ? 'selected' : ''}>${esc(v.name)} — ${esc(v.lang)}</option>`).join('')}</select>`;
     const warn = Sp.none ? '<p class="note" style="color:var(--coral-l)">No speech voices were found on this device/browser. The lesson still runs with on-screen captions and timed pauses.</p>' : (!Sp.hasUS() ? '<p class="note" style="color:var(--gold-l)">No American-English (en-US) voice found. The lesson will use another English voice, which may not sound American.</p>' : '');
     $('#setBody').innerHTML = `
-      <h3>English model voice</h3>${sel(en, CFG.voiceEn, 'vEn')}
+      <h3>Female voice (Nora, Maya, teacher)</h3>${sel(en, CFG.voiceF, 'vF')}
+      <h3>Male voice (Alex, Sam)</h3>${sel(en, CFG.voiceM, 'vM')}
+      <p class="note">Each character speaks with a voice that matches their gender, using the best matching voice on your device. Voices named “Natural” or “Online” (Microsoft Edge) or Google/Apple premium voices sound far less robotic.</p>
       <h3>Spanish Help voice</h3>${sel(es, CFG.voiceEs, 'vEs')}
       ${warn}
-      <label for="rate">Speaking rate: <span id="rateV">${CFG.rate.toFixed(2)}</span>×</label><input type="range" id="rate" min="0.55" max="1.2" step="0.05" value="${CFG.rate}">
-      <p><button class="btn sm" id="testEn">▶ Test English</button> <button class="btn sm ghost" id="testEs">▶ Prueba español</button></p>
+      <label for="rate">Speaking rate: <span id="rateV">${CFG.rate.toFixed(2)}</span>×</label><input type="range" id="rate" min="0.6" max="1.3" step="0.05" value="${CFG.rate}">
+      <p><button class="btn sm" id="testEn">▶ Test female</button> <button class="btn sm" id="testM">▶ Test male</button> <button class="btn sm ghost" id="testEs">▶ Prueba español</button></p>
       <h3>Volume</h3>
       <label for="vSp">Speech</label><input type="range" id="vSp" min="0" max="1" step="0.05" value="${CFG.vSpeech}">
       <label for="vMu">Music</label><input type="range" id="vMu" min="0" max="1" step="0.05" value="${CFG.vMusic}">
@@ -1758,7 +1788,8 @@ const UI = {
       <p class="note">Settings, progress and scores are stored only in this browser. No names or emails are collected and nothing is uploaded.</p>
       <button class="btn sm coral" id="clrData">Clear all local data…</button>`;
     const b = $('#setBody');
-    $('#vEn', b).onchange = e => { CFG.voiceEn = e.target.value; Store.save(); };
+    $('#vF', b).onchange = e => { CFG.voiceF = e.target.value; Store.save(); };
+    $('#vM', b).onchange = e => { CFG.voiceM = e.target.value; Store.save(); };
     $('#vEs', b).onchange = e => { CFG.voiceEs = e.target.value; Store.save(); };
     $('#rate', b).oninput = e => { CFG.rate = +e.target.value; $('#rateV', b).textContent = CFG.rate.toFixed(2); Store.save(); };
     $('#vSp', b).oninput = e => { CFG.vSpeech = +e.target.value; Store.save(); };
@@ -1766,7 +1797,8 @@ const UI = {
     $('#vSf', b).oninput = e => { CFG.vSfx = +e.target.value; Aud.setVol('sfx', CFG.vSfx); Store.save(); };
     $('#rmSel', b).onchange = e => { CFG.rm = e.target.value; UI.applyCfg(); Store.save(); };
     $('#vocabChk', b).onchange = e => { CFG.vocab = e.target.checked; UI.applyCfg(); Store.save(); };
-    $('#testEn', b).onclick = () => { Aud.init(); FE.speakOne('Are you ready?', 'q'); };
+    $('#testEn', b).onclick = () => { Aud.init(); const e = ++Run.epoch; Sp.cancel(); makeCtx({}, e).say('Are you ready?', { tone: 'q', sex: 'f' }).catch(() => { }); };
+    $('#testM', b).onclick = () => { Aud.init(); const e = ++Run.epoch; Sp.cancel(); makeCtx({}, e).say('Yes, I am.', { tone: 's', sex: 'm' }).catch(() => { }); };
     $('#testEs', b).onclick = () => { Aud.init(); const e = ++Run.epoch; Sp.cancel(); const S = makeCtx({}, e); S.say('¿Estás listo?', { lang: 'es' }).catch(() => { }); };
     $('#ipaKeyBtn', b).onclick = () => UI.ipaKey();
     $('#clrData', b).onclick = () => UI.modal(`<h2>Clear all local data?</h2><p>This removes saved settings, progress, scores and notes from this browser. It cannot be undone.</p><div class="acts"><button class="btn coral" id="yes">Clear everything</button><button class="btn ghost" id="no">Cancel</button></div>`, m => { $('#no', m).onclick = () => UI.closeModal(); $('#yes', m).onclick = () => { Store.clear(); location.reload(); }; });
@@ -2115,7 +2147,7 @@ function picQ(o) {
       S.onLevel = (n) => { if (n > 0) Fx.burst(1330, 400, 14); };
       if (o.vocab) o.vocab.forEach(v => S.add && S.el(`<div class="vl" style="left:${v[0]}px;top:${v[1]}px">${T(v[2])}</div>`));
       S.play = async () => {
-        await S.sleep(500);
+        await S.sleep(250);
         await S.say(o.q, { tone: 'q', who: nora });
         turn.classList.remove('hidden-lv');
       };
@@ -2138,13 +2170,13 @@ const CH1 = {
         b.innerHTML = `<div class="tag">${T('Fluent English · A1')}</div><div class="big" style="font-size:56px;line-height:1.05;text-align:center">${T('Be: Yes/No Questions')}</div><div style="margin-top:6px;font-size:32px;color:var(--turq-l);font-family:var(--serif);font-weight:700">${T('Am I…? Are you…? Is she…?')}</div>`;
         b.style.opacity = 0; b.style.transition = 'opacity 1.4s';
         S.play = async () => {
-          await S.sleep(500); b.style.opacity = 1; Fx.burst(800, 250, 26);
+          await S.sleep(250); b.style.opacity = 1; Fx.burst(800, 250, 26);
           await S.sleep(2600);
-          await S.say('Welcome to Fluent English.', { who: ppl[0], after: 200 });
+          await S.say('Welcome to Fluent English.', { who: ppl[0], after: 100 });
           await S.say('Today, we ask yes/no questions | with be.', { who: ppl[0] });
-          await S.sleep(300);
+          await S.sleep(200);
           await S.say('Meet the people in our pictures.', { who: ppl[0] });
-          for (let i = 0; i < 4; i++) { ppl[i].tag.style.opacity = 1; Aud.sfx('tick'); await S.say(['Nora.', 'Sam.', 'Maya.', 'Alex.'][i], { who: ppl[i], after: 150 }); }
+          for (let i = 0; i < 4; i++) { ppl[i].tag.style.opacity = 1; Aud.sfx('tick'); await S.say(['Nora.', 'Sam.', 'Maya.', 'Alex.'][i], { who: ppl[i], after: 100 }); }
         };
       }
     },
@@ -2164,16 +2196,16 @@ const CH1 = {
         m1.classList.add('hidden-lv', 'lv'); m2.classList.add('hidden-lv', 'lv');
         const show = el => el.classList.remove('hidden-lv');
         S.play = async () => {
-          await S.sleep(600);
+          await S.sleep(200);
           await S.say('You are ready.', { tone: 's', who: nora });
-          await S.sleep(800);
+          await S.sleep(250);
           Aud.sfx('move'); kind.innerHTML = T('A question');
           await sent.morph(P.quest, 1400, S.e); Aud.sfx('question');
           await S.say('Are you ready?', { tone: 'q', who: nora });
-          await S.sleep(500);
+          await S.sleep(250);
           show(cStmt); Aud.sfx('tick'); await S.say('A statement gives information.', { who: nora });
           show(cQ); Aud.sfx('tick'); await S.say('A question asks for information.', { who: nora });
-          await S.sleep(400);
+          await S.sleep(250);
           show(cI); await S.say('In many yes/no questions, | the voice goes up at the end.', { who: nora });
           show(m1); show(m2);
         };
@@ -2214,7 +2246,7 @@ function challenge(o) {
       S.onLevel = async (n) => { if (n === 1) { turn.classList.add('hidden-lv'); const e = S.interrupt(); await g.auto(e); await S.say(P.qText, { tone: 'q' }); } else g.reset(); };
       if (o.extra) o.extra(S);
       S.play = async () => {
-        await S.sleep(400);
+        await S.sleep(250);
         await S.say(P.sText, { tone: 's', who });
         turn.classList.remove('hidden-lv');
       };
@@ -2238,9 +2270,9 @@ const CH2 = {
         const c2 = S.el(`<div class="note-card hidden-lv lv" style="left:830px;top:470px;width:440px;border-color:var(--turq-l)"><div class="tag">${T('Question')}</div>${T('Be + subject + complement + ?')}</div>`);
         const leg = S.el(`<div class="hidden-lv lv" style="left:340px;top:620px;width:930px;display:flex;gap:18px;justify-content:center"><span class="chip">${T('subject')}</span><span class="chip gold">${T('be')}</span><span class="chip cream">${T('complement')}</span></div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Subject | be | complement.', { who: nora });
-          c1.classList.remove('hidden-lv'); await S.sleep(500);
+          c1.classList.remove('hidden-lv'); await S.sleep(250);
           Aud.sfx('move'); await sent.morph(gq, 1500, S.e); Aud.sfx('question');
           await S.say('Be | subject | complement | question mark.', { who: nora });
           c2.classList.remove('hidden-lv'); leg.classList.remove('hidden-lv');
@@ -2269,7 +2301,7 @@ const CH2 = {
           if (q) { Aud.sfx('move'); await sent.morph(P.quest, 1300, e); Aud.sfx('question'); Fx.burst(800, 280, 16); await S.say(P.qText, { tone: 'q', who: nora }); }
           else { sent.set(P.stmt); await S.say(P.sText, { tone: 's', who: nora }); }
         };
-        S.play = async () => { await S.sleep(500); await S.say(EX[0].sText, { tone: 's', who: nora }); };
+        S.play = async () => { await S.sleep(250); await S.say(EX[0].sText, { tone: 's', who: nora }); };
         S.onLevel(0, 0, true);
       }
     },
@@ -2300,7 +2332,7 @@ const CH2 = {
         S.levels = 7; S.revLabels = PATS.map((p, i) => 'Next pattern');
         S.onLevel = (n, prev, silent) => { if (silent || n === 0) { orbs.forEach(o => o.classList.remove('on')); return; } show(n - 1, true).catch(x => { if (x !== CANCEL) console.error(x); }); };
         S.play = async () => {
-          await S.sleep(400);
+          await S.sleep(250);
           for (let i = 0; i < PATS.length; i++) { await show(i, false); await S.sleep(250); }
           ag.classList.remove('hidden-lv');
           await S.say('I, am. | He, she, it, is. | You, we, they, are.');
@@ -2323,9 +2355,9 @@ const CH2 = {
         const they = S.el(`<div class="note-card hidden-lv lv" style="left:360px;top:130px;width:880px;text-align:center;font-size:30px">${T('One person who uses they? Still: Are they ready?')}</div>`);
         S.levels = 1; S.revLabels = ['Show: one person who uses they']; S.reg(they, 1);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Are you ready?', { tone: 'q', who: n1 }); await S.say('You means one person.', { who: n1 });
-          await S.sleep(300);
+          await S.sleep(200);
           await S.say('Are you ready?', { tone: 'q', who: n2 }); await S.say('You can also mean more than one person.', { who: n2 });
         };
       }
@@ -2410,7 +2442,7 @@ function shortYes(o) {
       S.reg(ans, 1); S.reg(map, 1);
       S.levels = 1; S.revLabels = ['Show short answer']; S.sayAt(1, o.ans, { tone: 's' });
       S.onLevel = (n) => { if (n) { turn.classList.add('hidden-lv'); Fx.burst(1280, 380, 16); } };
-      S.play = async () => { await S.sleep(500); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
+      S.play = async () => { await S.sleep(250); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
     }
   };
 }
@@ -2437,7 +2469,7 @@ const CH3 = {
         const wrap = S.el(`<div style="left:120px;top:480px;width:1360px;display:flex;flex-wrap:wrap;gap:16px 20px;justify-content:center"></div>`);
         const chips = rows.map(r => { const c = modelChip(S, r[2], 0, 0, { cls: 'sm', style: 'position:static', tone: 's' }); c.style.position = 'static'; c.classList.add('hidden-lv', 'lv'); wrap.appendChild(c); return c; });
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           q.innerHTML = T('Yes + pronoun + be.'); await S.say('Yes | plus pronoun | plus be.');
           for (let i = 0; i < rows.length; i++) {
             const r = rows[i];
@@ -2446,7 +2478,7 @@ const CH3 = {
             Aud.sfx('move');
             await sent.morph([tk('Yes,', 'yes', 'y'), tk(r[3], 'subj', 's'), tk(r[4], 'be', 'b'), tk('.', 'punct', 'dot')], 900, S.e);
             chips[i].classList.remove('hidden-lv');
-            await S.say(r[2], { tone: 's', after: 300 });
+            await S.say(r[2], { tone: 's', after: 100 });
           }
         };
       }
@@ -2463,10 +2495,10 @@ const CH3 = {
         S.reg(no, 1); S.reg(why, 1); S.levels = 1; S.revLabels = ['Show the contrast'];
         S.onLevel = (n) => { if (n) Aud.sfx('soft'); };
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Is she a teacher?', { tone: 'q', who: nora });
           await S.say('Yes, she is.', { tone: 's', who: nora });
-          await S.sleep(500); no.classList.remove('hidden-lv'); why.classList.remove('hidden-lv'); Aud.sfx('soft');
+          await S.sleep(250); no.classList.remove('hidden-lv'); why.classList.remove('hidden-lv'); Aud.sfx('soft');
           await S.say('In a short answer, | we end with is.', { who: nora });
         };
       }
@@ -2510,11 +2542,11 @@ const CH3 = {
         const l1 = S.el(`<div class="chip lv hidden-lv" style="left:700px;top:430px;font-size:30px">${T('you = the listener: Alex')}</div>`);
         const l2 = S.el(`<div class="chip gold lv hidden-lv" style="left:700px;top:520px;font-size:30px">${T('I = the speaker: Alex')}</div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           b1.classList.remove('hidden-lv'); await S.say('Are you ready?', { tone: 'q', who: nora });
-          Aud.sfx('move'); const p = a1.draw(S.e, 1100); await S.sleep(300); await p;
+          Aud.sfx('move'); const p = a1.draw(S.e, 1100); await S.sleep(200); await p;
           l1.classList.remove('hidden-lv'); await S.say('You | is Alex, | the listener.', { who: nora });
-          await S.sleep(400);
+          await S.sleep(250);
           await alex.pose('chest', 800, S.e);
           b2.classList.remove('hidden-lv'); await S.say('Yes, I am.', { tone: 's', who: alex });
           Aud.sfx('move'); await a2.draw(S.e, 900);
@@ -2577,7 +2609,7 @@ const CH3 = {
         S.levels = 2; S.revLabels = ['Show an example question', 'Show the answer']; S.sayAt(1, 'Is the bag blue?', { tone: 'q' }); S.sayAt(2, 'Yes, it is.', { tone: 's' });
         setP(); S.onSupport();
         S.play = async () => {
-          await S.sleep(500); await S.say('Choose a picture. | Ask two questions.', { who: nora });
+          await S.sleep(250); await S.say('Choose a picture. | Ask two questions.', { who: nora });
           await S.say('Another learner answers.', { who: nora });
         };
       }
@@ -2603,7 +2635,7 @@ function shortNo(o) {
       S.levels = 2; S.revLabels = ['Show the negative answer', 'Add a true sentence'];
       S.sayAt(1, o.ans, { tone: 's' }); S.sayAt(2, o.ans + ' ' + o.add, { tone: 's' });
       S.onLevel = (n) => { if (n) { turn.classList.add('hidden-lv'); Fx.burst(1200, 350, 12, ['#ff9a8d', '#ffd978', '#fff6e5']); } };
-      S.play = async () => { await S.sleep(500); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
+      S.play = async () => { await S.sleep(250); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
     }
   };
 }
@@ -2636,11 +2668,11 @@ const CH4 = {
         ['No, it is not.', 'No, it isn’t.', 'No, it’s not.'].forEach(t => { const c = modelChip(S, t, 0, 0, { cls: 'sm n', tone: 's', style: 'position:static' }); c.style.position = 'static'; chips.appendChild(c); });
         const ok = S.el(`<div class="chip lv hidden-lv" style="left:560px;top:620px;font-size:30px">${T('All three are correct.')}</div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Is it a book?', { tone: 'q', who: nora });
-          await S.say('No, it is not.', { tone: 's', who: nora, after: 400 });
+          await S.say('No, it is not.', { tone: 's', who: nora, after: 100 });
           lab.innerHTML = T('Short form: is + not'); Aud.sfx('move'); await sent.morph(c1, 1200, S.e);
-          await S.say('No, it isn’t.', { tone: 's', who: nora, after: 400 });
+          await S.say('No, it isn’t.', { tone: 's', who: nora, after: 100 });
           lab.innerHTML = T('Short form: it + is'); Aud.sfx('move'); await sent.morph(c2, 1200, S.e);
           await S.say('No, it’s not.', { tone: 's', who: nora });
           chips.classList.remove('hidden-lv'); ok.classList.remove('hidden-lv'); Aud.sfx('reveal');
@@ -2673,7 +2705,7 @@ const CH4 = {
         S.onLevel = (n, p, silent) => { if (silent || n === 0) { orbs.forEach(o => o.classList.remove('on')); list.innerHTML = ''; hd.innerHTML = T('Choose a pronoun'); note.innerHTML = ''; return; } show(n - 1, true).catch(x => { if (x !== CANCEL) console.error(x); }); };
         S.play = async () => {
           hd.innerHTML = T('Choose a pronoun');
-          await S.sleep(400);
+          await S.sleep(250);
           for (let i = 0; i < NEG.length; i++) { await show(i, false); await S.sleep(250); }
         };
       }
@@ -2709,7 +2741,7 @@ const CH4 = {
         const a1 = modelChip(S, 'No, it isn’t.', 1010, 300, { cls: 'n', tone: 's' });
         const x = S.el(`<div class="paper lv hidden-lv" style="left:1000px;top:430px;width:500px;border:4px solid var(--coral)"><span class="chip coral" style="font-size:30px">✗</span> <span class="big" style="font-size:40px;text-decoration:line-through;text-decoration-color:var(--coral-d)">${T('It’s a book.')}</span><div class="small" style="margin-top:8px">${T('We cannot see it. Do not guess.')}</div></div>`);
         S.reg(a1, 1); S.reg(x, 2); S.levels = 2; S.revLabels = ['Show the answer', 'Careful: do not guess']; S.sayAt(1, 'No, it isn’t.', { tone: 's' }); S.sayAt(2, 'We cannot see it. | Do not guess.');
-        S.play = async () => { await S.sleep(500); await S.say('Is it a phone?', { tone: 'q', who: nora }); await S.say('The information card says: | it is not a phone.', { who: nora }); };
+        S.play = async () => { await S.sleep(250); await S.say('Is it a phone?', { tone: 'q', who: nora }); await S.say('The information card says: | it is not a phone.', { who: nora }); };
       }
     },
     {
@@ -2733,7 +2765,7 @@ const CH4 = {
         function reset() { sel.clear(); btns.forEach(b => b.className = 'opt'); fb.style.display = 'none'; }
         chk.onclick = check;
         S.levels = 1; S.revLabels = ['Show which are acceptable']; S.onLevel = (n) => { if (n) { OPT.forEach((o, i) => { if (o[1]) sel.add(i); else sel.delete(i); }); check(); } else reset(); };
-        S.play = async () => { await S.sleep(500); await S.say('Is he late?', { tone: 'q', who: nora }); await S.say('Sam is on time. | Choose all the acceptable answers.', { who: nora }); };
+        S.play = async () => { await S.sleep(250); await S.say('Is he late?', { tone: 'q', who: nora }); await S.say('Sam is on time. | Choose all the acceptable answers.', { who: nora }); };
       }
     }
   ]
@@ -2774,11 +2806,11 @@ function whoStep(o) {
       const pointer = S.el(`<div class="chip cream lv hidden-lv" style="left:${o.ax}px;top:${o.ay - 62}px;font-size:24px">${T(o.say2)}</div>`);
       S.reg(who, 1); rg.forEach(r => S.reg(r, 1)); S.reg(ans, 2); S.reg(why, 2); S.reg(pointer, 2);
       S.levels = 2; S.revLabels = ['Who is the pronoun?', 'Show the complete answer'];
-      S.sayAt(1, o.sayWho); S.sayAt(2, o.ans, { tone: 's' });
+      S.sayAt(1, o.sayWho, { who: asker }); S.sayAt(2, o.ans, { tone: 's', who: answerer });
       S.onLevel = (n) => { if (n) { turnA.classList.add('hidden-lv'); Fx.burst(o.ax + 100, o.ay, 12); } };
       if (o.extra) o.extra(S, P);
       S.play = async () => {
-        await S.sleep(500);
+        await S.sleep(250);
         icons.forEach(g => g.classList.remove('hidden-lv'));
         await S.say(o.q, { tone: 'q', who: asker });
         turnA.classList.remove('hidden-lv');
@@ -2806,12 +2838,12 @@ const CH5 = {
         items.forEach(a => a.forEach(el => el.classList.add('hidden-lv', 'lv')));
         const reveal = (i) => items[i].forEach(el => el.classList.remove('hidden-lv'));
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Look at three things.', { who: al });
           reveal(0); Aud.sfx('tick'); await S.say('Who asks?', { who: al, tone: 'q' });
           reveal(1); Aud.sfx('tick'); await S.say('Who answers?', { who: al, tone: 'q' });
           reveal(2); Aud.sfx('tick'); await S.say('Who do we talk about?', { who: al, tone: 'q' });
-          await S.sleep(400);
+          await S.sleep(250);
           reveal(3); await S.say('Is he ready?', { tone: 'q', who: al });
           reveal(4); await S.say('Yes, he is.', { tone: 's', who: ma });
           await S.say('“He” is Sam, | the person we talk about.', { who: ma });
@@ -2881,7 +2913,7 @@ const CH5 = {
         S.levels = 2; S.revLabels = ['Is the answerer inside “we”?', 'Show the complete answer'];
         S.onLevel = (n) => { ans.classList.toggle('hidden-lv', !(n >= 2 && mode === 'A')); ans2.classList.toggle('hidden-lv', !(n >= 2 && mode === 'B')); if (n) Fx.burst(800, 600, 12); };
         setMode('A');
-        S.play = async () => { await S.sleep(500); await S.say('Are we late?', { tone: 'q', who: al }); await S.say('Alex and Sam are in the circle. | Who answers?', { who: al }); };
+        S.play = async () => { await S.sleep(250); await S.say('Are we late?', { tone: 'q', who: al }); await S.say('Alex and Sam are in the circle. | Who answers?', { who: al }); };
       }
     }
   ]
@@ -2953,7 +2985,7 @@ function sceneAct(o) {
       if (!CFG.support) sup.style.display = 'none';
       setPh(0);
       S.play = async () => {
-        await S.sleep(500);
+        await S.sleep(250);
         await S.say('Choose a subject.', {}); await S.say('Make a yes/no question.', {}); await S.say('Another learner answers.', {});
       };
     }
@@ -2972,9 +3004,9 @@ const CH6 = {
         const cards = steps.map(s => { const c = S.paper(s[2], s[3] + 40, 330, 200, { cls: 'tilt' + (1 + (s[0] % 2)) }); c.innerHTML = `<div class="chip gold" style="font-size:34px;margin-bottom:8px">${s[0]}</div><div style="font-size:30px;font-weight:700;line-height:1.2">${T(s[1])}</div>`; c.classList.add('lv', 'hidden-lv'); return c; });
         const note = S.el(`<div class="note-card lv hidden-lv" style="left:200px;top:700px;width:1200px;text-align:center;font-size:26px">${T('Use only the facts in the picture. Do not guess jobs or feelings from faces or clothes.')}</div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           const say = ['First, a learner chooses a subject.', 'Then, the learner makes a yes/no question.', 'Another learner answers, using the evidence.', 'Last, the teacher shows one possible question.'];
-          for (let i = 0; i < 4; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(say[i], { after: 200 }); }
+          for (let i = 0; i < 4; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(say[i], { after: 100 }); }
           note.classList.remove('hidden-lv'); await S.say('Use only the facts in the picture.');
         };
       }
@@ -3104,7 +3136,7 @@ function deckStep(o) {
       S.onLevel = (n) => { if (n) Fx.burst(1360, 280, 10); };
       draw();
       S.play = async () => {
-        await S.sleep(400);
+        await S.sleep(250);
         await S.say(o.intro, {});
         if (o.speakCard) { const sc = o.speakCard(o.cards[order[pos]]); await S.say(sc.t, { tone: sc.tone }); }
       };
@@ -3138,9 +3170,9 @@ const CH7 = {
         const note = S.el(`<div class="note-card lv hidden-lv" style="left:70px;top:600px;width:980px;font-size:26px">${T('Personal questions are optional. You can invent your answer.')}</div>`);
         tallyPanel(S, 1130, 200);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           const t = ['Round A: ask one question.', 'Round B: answer with a short answer.', 'Round C: ask your own question.'];
-          for (let i = 0; i < 3; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(t[i], { after: 200 }); }
+          for (let i = 0; i < 3; i++) { cards[i].classList.remove('hidden-lv'); Aud.sfx('card'); await S.say(t[i], { after: 100 }); }
           note.classList.remove('hidden-lv'); await S.say('Personal questions are optional. | You can invent your answer.');
         };
       }
@@ -3266,11 +3298,11 @@ function itemStep(it) {
         note.textContent = '';
       } else {
         const rd = S.el(`<button class="btn ghost sm" style="left:1330px;top:56px">Read the choices aloud</button>`);
-        rd.onclick = async () => { Aud.init(); const e = S.interrupt(); try { for (let i = 0; i < 4; i++) await S.say('ABCD'[i] + '. ' + it.opts[i].replace('___', 'blank'), { after: 250 }); } catch (x) { if (x !== CANCEL) console.error(x); } };
+        rd.onclick = async () => { Aud.init(); const e = S.interrupt(); try { for (let i = 0; i < 4; i++) await S.say('ABCD'[i] + '. ' + it.opts[i].replace('___', 'blank'), { after: 100 }); } catch (x) { if (x !== CANCEL) console.error(x); } };
       }
       S.captureKeys = true;
       S.onKey = (e) => { const k = e.key.toUpperCase(); if ('ABCD'.includes(k) && k.length === 1 && !sub) btns['ABCD'.indexOf(k)].click(); };
-      S.play = async () => { if (sub) return; await S.sleep(400); await S.say(it.speak, { tone: /\?/.test(it.speak) && it.n < 5 ? 'q' : 's' }); };
+      S.play = async () => { if (sub) return; await S.sleep(250); await S.say(it.speak, { tone: /\?/.test(it.speak) && it.n < 5 ? 'q' : 's' }); };
     }
   };
 }
@@ -3297,7 +3329,7 @@ const CH8 = {
         bi.onclick = () => { AS.mode = 'individual'; sync(); saveSoon(); };
         sync();
         S.el(`<div class="note-card" style="left:100px;top:690px;width:1400px;font-size:22px">${T('A shared teacher-entered score describes the class activity. It is not any one learner’s mastery.')}</div>`);
-        S.play = async () => { await S.sleep(400); await S.say('Ten questions. | One point for each.'); await S.say('Correct answers stay hidden until you submit.'); };
+        S.play = async () => { await S.sleep(250); await S.say('Ten questions. | One point for each.'); await S.say('Correct answers stay hidden until you submit.'); };
       }
     },
     ...ITEMS.map(itemStep),
@@ -3329,7 +3361,7 @@ const CH8 = {
           }
         }
         S.render = render; render();
-        S.play = async () => { await S.sleep(300); await S.say(AS.submitted ? 'Here is your first attempt.' : 'Check your answers. Then submit.'); };
+        S.play = async () => { await S.sleep(200); await S.say(AS.submitted ? 'Here is your first attempt.' : 'Check your answers. Then submit.'); };
       }
     },
     {
@@ -3364,7 +3396,7 @@ const CH8 = {
           panel.appendChild(sb);
         }
         render();
-        S.play = async () => { await S.sleep(300); await S.say(ids.length ? 'Try the missed questions again.' : 'There is nothing to retry.'); };
+        S.play = async () => { await S.sleep(200); await S.say(ids.length ? 'Try the missed questions again.' : 'There is nothing to retry.'); };
       }
     }
   ]
@@ -3394,7 +3426,7 @@ const CH9 = {
         S.levels = 4; S.revLabels = ['Task 1', 'Task 2', 'Task 3', 'Task 4'];
         S.onLevel = (n) => { rows.forEach((r, i) => r.style.opacity = i === n - 1 ? 1 : (i < n - 1 ? 0.85 : 0.5)); if (n) Aud.sfx('card'); };
         S.sayAtMap = { 1: { text: tasks[0], o: {} }, 2: { text: tasks[1], o: {} }, 3: { text: tasks[2], o: {} }, 4: { text: tasks[3], o: {} } };
-        S.play = async () => { await S.sleep(500); await S.say('Now it is your turn. | Support is hidden.'); await S.say('Use the facts on the cards.'); };
+        S.play = async () => { await S.sleep(250); await S.say('Now it is your turn. | Support is hidden.'); await S.say('Use the facts on the cards.'); };
       }
     },
     {
@@ -3415,7 +3447,7 @@ const CH9 = {
           box.appendChild(r);
         });
         S.el(`<div class="note-card" style="left:200px;top:640px;width:1200px;font-size:22px">${T('Notes from your own listening. The app does not hear or grade learners.')}</div>`);
-        S.play = async () => { await S.sleep(400); await S.say('Teacher: | note what you heard.'); };
+        S.play = async () => { await S.sleep(250); await S.say('Teacher: | note what you heard.'); };
       }
     },
     {
@@ -3431,13 +3463,13 @@ const CH9 = {
         ['Am I…?', 'Are you…?', 'Is he…?', 'Is she…?', 'Is it…?', 'Are we…?', 'Are they…?'].forEach(t => list.appendChild(mk(`<span class="chip indigo" style="font-size:34px">${T(t)}</span>`)));
         const ans = S.el(`<div class="lv hidden-lv" style="left:230px;top:600px;width:1140px;display:flex;gap:16px;justify-content:center"><span class="chip">${T('Yes, I am.')}</span><span class="chip coral">${T('No, I’m not.')}</span></div>`);
         S.play = async () => {
-          await S.sleep(500);
-          await S.say('You are ready.', { tone: 's', who: nora }); await S.sleep(500);
+          await S.sleep(250);
+          await S.say('You are ready.', { tone: 's', who: nora }); await S.sleep(250);
           lab.innerHTML = T('Question'); Aud.sfx('move'); await sent.morph(P.quest, 1300, S.e); Aud.sfx('question');
-          await S.say('Are you ready?', { tone: 'q', who: nora }); await S.sleep(300);
+          await S.say('Are you ready?', { tone: 'q', who: nora }); await S.sleep(200);
           await S.say('Be goes first.', { who: nora });
           list.classList.remove('hidden-lv'); Aud.sfx('reveal');
-          await S.say('Am I, | are you, | is he, | is she, | is it, | are we, | are they?', { who: nora, gap: 200 });
+          await S.say('Am I, | are you, | is he, | is she, | is it, | are we, | are they?', { who: nora });
           await sent.morph([tk('Yes,', 'yes', 'y'), tk('I', 'subj', 's'), tk('am', 'be', 'b'), tk('.', 'punct', 'dot')], 1000, S.e);
           lab.innerHTML = T('Positive short answer'); ans.classList.remove('hidden-lv');
           await S.say('Yes, I am.', { tone: 's', who: alex });
@@ -3461,7 +3493,7 @@ const CH9 = {
         const res = S.el(`<button class="btn gold" style="left:930px;top:715px;font-size:24px">Open results &amp; export</button>`);
         res.onclick = () => UI.results();
         S.play = async () => {
-          await S.sleep(600); Aud.finale(); Fx.drift(50);
+          await S.sleep(200); Aud.finale(); Fx.drift(50);
           await S.say('Great work today!', {}); await S.say('You asked questions. | You answered with be.', {});
           await S.say('Try the optional practice after class.', {});
         };

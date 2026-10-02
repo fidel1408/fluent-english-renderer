@@ -29,7 +29,7 @@ function shortYes(o) {
       S.reg(ans, 1); S.reg(map, 1);
       S.levels = 1; S.revLabels = ['Show short answer']; S.sayAt(1, o.ans, { tone: 's' });
       S.onLevel = (n) => { if (n) { turn.classList.add('hidden-lv'); Fx.burst(1280, 380, 16); } };
-      S.play = async () => { await S.sleep(500); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
+      S.play = async () => { await S.sleep(250); await S.say(o.q, { tone: 'q', who }); turn.classList.remove('hidden-lv'); };
     }
   };
 }
@@ -56,7 +56,7 @@ const CH3 = {
         const wrap = S.el(`<div style="left:120px;top:480px;width:1360px;display:flex;flex-wrap:wrap;gap:16px 20px;justify-content:center"></div>`);
         const chips = rows.map(r => { const c = modelChip(S, r[2], 0, 0, { cls: 'sm', style: 'position:static', tone: 's' }); c.style.position = 'static'; c.classList.add('hidden-lv', 'lv'); wrap.appendChild(c); return c; });
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           q.innerHTML = T('Yes + pronoun + be.'); await S.say('Yes | plus pronoun | plus be.');
           for (let i = 0; i < rows.length; i++) {
             const r = rows[i];
@@ -65,7 +65,7 @@ const CH3 = {
             Aud.sfx('move');
             await sent.morph([tk('Yes,', 'yes', 'y'), tk(r[3], 'subj', 's'), tk(r[4], 'be', 'b'), tk('.', 'punct', 'dot')], 900, S.e);
             chips[i].classList.remove('hidden-lv');
-            await S.say(r[2], { tone: 's', after: 300 });
+            await S.say(r[2], { tone: 's', after: 100 });
           }
         };
       }
@@ -82,10 +82,10 @@ const CH3 = {
         S.reg(no, 1); S.reg(why, 1); S.levels = 1; S.revLabels = ['Show the contrast'];
         S.onLevel = (n) => { if (n) Aud.sfx('soft'); };
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           await S.say('Is she a teacher?', { tone: 'q', who: nora });
           await S.say('Yes, she is.', { tone: 's', who: nora });
-          await S.sleep(500); no.classList.remove('hidden-lv'); why.classList.remove('hidden-lv'); Aud.sfx('soft');
+          await S.sleep(250); no.classList.remove('hidden-lv'); why.classList.remove('hidden-lv'); Aud.sfx('soft');
           await S.say('In a short answer, | we end with is.', { who: nora });
         };
       }
@@ -129,11 +129,11 @@ const CH3 = {
         const l1 = S.el(`<div class="chip lv hidden-lv" style="left:700px;top:430px;font-size:30px">${T('you = the listener: Alex')}</div>`);
         const l2 = S.el(`<div class="chip gold lv hidden-lv" style="left:700px;top:520px;font-size:30px">${T('I = the speaker: Alex')}</div>`);
         S.play = async () => {
-          await S.sleep(500);
+          await S.sleep(250);
           b1.classList.remove('hidden-lv'); await S.say('Are you ready?', { tone: 'q', who: nora });
-          Aud.sfx('move'); const p = a1.draw(S.e, 1100); await S.sleep(300); await p;
+          Aud.sfx('move'); const p = a1.draw(S.e, 1100); await S.sleep(200); await p;
           l1.classList.remove('hidden-lv'); await S.say('You | is Alex, | the listener.', { who: nora });
-          await S.sleep(400);
+          await S.sleep(250);
           await alex.pose('chest', 800, S.e);
           b2.classList.remove('hidden-lv'); await S.say('Yes, I am.', { tone: 's', who: alex });
           Aud.sfx('move'); await a2.draw(S.e, 900);
@@ -196,7 +196,7 @@ const CH3 = {
         S.levels = 2; S.revLabels = ['Show an example question', 'Show the answer']; S.sayAt(1, 'Is the bag blue?', { tone: 'q' }); S.sayAt(2, 'Yes, it is.', { tone: 's' });
         setP(); S.onSupport();
         S.play = async () => {
-          await S.sleep(500); await S.say('Choose a picture. | Ask two questions.', { who: nora });
+          await S.sleep(250); await S.say('Choose a picture. | Ask two questions.', { who: nora });
           await S.say('Another learner answers.', { who: nora });
         };
       }

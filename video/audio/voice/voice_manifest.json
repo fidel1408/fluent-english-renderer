@@ -1,0 +1,58 @@
+{
+ "n1_hook": {
+  "voice": "em_alex",
+  "lang": "es-419",
+  "speed": 0.93,
+  "text": "¿Entiendes inglés, pero te bloqueas al hablar?",
+  "duration": 2.628
+ },
+ "n2_first": {
+  "voice": "em_alex",
+  "lang": "es-419",
+  "speed": 0.93,
+  "text": "Empieza con una frase que puedas hacer tuya.",
+  "duration": 2.952
+ },
+ "n4_you": {
+  "voice": "em_alex",
+  "lang": "es-419",
+  "speed": 0.93,
+  "text": "Ahora tú: ¿qué te gustaría hacer?",
+  "duration": 1.987
+ },
+ "n5_school": {
+  "voice": "em_alex",
+  "lang": "es-419",
+  "speed": 0.93,
+  "text": "Practica inglés con Fluent English, en clases en línea.",
+  "duration": 3.294
+ },
+ "n6_cta": {
+  "voice": "em_alex",
+  "lang": "es-419",
+  "speed": 0.93,
+  "text": "Escríbenos “INGLÉS” y conoce las opciones.",
+  "duration": 2.706
+ },
+ "e1_normal": {
+  "voice": "af_heart",
+  "lang": "en-us",
+  "speed": 0.92,
+  "text": "I'd like to learn English.",
+  "duration": 1.348
+ },
+ "e2_slow": {
+  "voice": "af_heart",
+  "lang": "en-us",
+  "speed": 0.72,
+  "text": "I'd like to learn English.",
+  "duration": 1.893
+ },
+ "e3_blank": {
+  "voice": "af_heart",
+  "lang": "en-us",
+  "speed": 0.8,
+  "text": "I'd like to...",
+  "duration": 1.185
+ }
+}

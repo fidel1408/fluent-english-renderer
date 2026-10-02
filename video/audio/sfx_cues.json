@@ -1,0 +1,184 @@
+{
+ "cues": [
+  [
+   0.12,
+   "Incoming-question cue (soft interface ping, two notes)",
+   -22
+  ],
+  [
+   0.3,
+   "Incoming-question cue, second note",
+   -25
+  ],
+  [
+   1.52,
+   "Understood check tick",
+   -26
+  ],
+  [
+   3.95,
+   "Bloom whoosh (scene opens up)",
+   -23
+  ],
+  [
+   5.75,
+   "Word click 1/5 (sentence assembling)",
+   -23
+  ],
+  [
+   5.9,
+   "Word click 2/5 (sentence assembling)",
+   -23
+  ],
+  [
+   6.05,
+   "Word click 3/5 (sentence assembling)",
+   -23
+  ],
+  [
+   6.2,
+   "Word click 4/5 (sentence assembling)",
+   -23
+  ],
+  [
+   6.4,
+   "Word click 5/5 (sentence assembling)",
+   -21
+  ],
+  [
+   6.4,
+   "Sentence-complete soft sparkle",
+   -29
+  ],
+  [
+   6.38,
+   "Gesture cloth movement",
+   -35
+  ],
+  [
+   7.95,
+   "Transition sweep to lesson card",
+   -25
+  ],
+  [
+   12.8,
+   "Blank-slot soft tick (after model audio ends)",
+   -30
+  ],
+  [
+   13.95,
+   "Transition sweep to the viewer scene",
+   -25
+  ],
+  [
+   14.95,
+   "Option card 1 soft pop",
+   -31
+  ],
+  [
+   15.37,
+   "Option card 2 soft pop",
+   -31
+  ],
+  [
+   15.79,
+   "Option card 3 soft pop",
+   -31
+  ],
+  [
+   19.8,
+   "End of speaking time \u2013 soft single chime",
+   -26
+  ],
+  [
+   19.95,
+   "Transition sweep + warm lift",
+   -22
+  ],
+  [
+   20.5,
+   "Logo shimmer",
+   -30
+  ],
+  [
+   21.0,
+   "Call window pop",
+   -31
+  ],
+  [
+   22.0,
+   "Chat bubble",
+   -33
+  ],
+  [
+   22.45,
+   "Chat reply",
+   -33
+  ],
+  [
+   24.8,
+   "Transition sweep to CTA",
+   -24
+  ],
+  [
+   26.4,
+   "Typing tick 1/6",
+   -33
+  ],
+  [
+   26.5,
+   "Typing tick 2/6",
+   -33
+  ],
+  [
+   26.6,
+   "Typing tick 3/6",
+   -33
+  ],
+  [
+   26.7,
+   "Typing tick 4/6",
+   -33
+  ],
+  [
+   26.8,
+   "Typing tick 5/6",
+   -33
+  ],
+  [
+   26.9,
+   "Typing tick 6/6",
+   -33
+  ],
+  [
+   28.25,
+   "Closing accent note 1",
+   -23
+  ],
+  [
+   28.31,
+   "Closing accent note 2",
+   -25
+  ],
+  [
+   28.37,
+   "Closing accent note 3",
+   -27
+  ]
+ ],
+ "bpm": 96,
+ "progression": [
+  "Am9",
+  "Dm7",
+  "F",
+  "C9",
+  "Am7",
+  "F",
+  "C9",
+  "Am7",
+  "F",
+  "G",
+  "F",
+  "Cm9"
+ ]
+}

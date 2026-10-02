@@ -1,0 +1,12 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#F6EEDC"><svg id=s width=1600 height=1100 viewBox="0 0 1600 1100"></svg>
+<script src=person.js></script><script>
+const P=Person;
+let o='';
+o+=P.person({x:260,y:420,scale:.62,armL:{u:4,f:-34,hand:'relax',handRot:0},armR:{u:4,f:-34,hand:'relax'},head:{smile:.4}});
+o+=P.person({x:800,y:420,scale:.62,armL:{u:4,f:-34,hand:'relax'},armR:{u:-12,us:.5,f:-156,fs:1.0,hand:'fist',handRot:0},head:{brow:.5,smile:0,gaze:{x:-1,y:-1},tilt:-4}});
+o+=P.person({x:1340,y:420,scale:.62,armL:{u:6,f:96,hand:'open',handRot:-6},armR:{u:6,f:96,hand:'open',handRot:-6},head:{smile:.8,mouth:.3}});
+o+=P.person({style:'womanA',x:260,y:1000,scale:.4,head:{smile:.7}});
+o+=P.person({style:'manB',x:560,y:1000,scale:.4,head:{smile:.6}});
+o+=P.person({style:'womanB',x:860,y:1000,scale:.4,head:{smile:.6}});
+document.getElementById('s').innerHTML=o;
+</script>

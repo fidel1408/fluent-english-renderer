@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fluent English – ¿Te bloqueas al hablar? (vista previa)</title>
+<style>
+@font-face{font-family:'Plus Jakarta Sans';font-weight:500;src:url(fonts/plus-jakarta-sans-latin-500-normal.woff2)}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:700;src:url(fonts/plus-jakarta-sans-latin-700-normal.woff2)}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:800;src:url(fonts/plus-jakarta-sans-latin-800-normal.woff2)}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:700;unicode-range:U+0100-02BA,U+1E00-1EFF;src:url(fonts/plus-jakarta-sans-latin-ext-700-normal.woff2)}
+@font-face{font-family:'Plus Jakarta Sans';font-weight:800;unicode-range:U+0100-02BA,U+1E00-1EFF;src:url(fonts/plus-jakarta-sans-latin-ext-800-normal.woff2)}
+@font-face{font-family:'Gentium Plus';font-weight:400;src:url(fonts/gentium-plus-latin-400-normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Gentium Plus';font-weight:400;src:url(fonts/gentium-plus-latin-ext-400-normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1EFF}
+:root{--navy:#0B1F3A;--teal:#14B8A6;--ivory:#FBF5E9}
+body{margin:0;background:#06142A;color:var(--ivory);font:15px 'Plus Jakarta Sans',system-ui,sans-serif}
+#wrap{display:flex;gap:28px;justify-content:center;align-items:flex-start;padding:18px;flex-wrap:wrap}
+#stageBox{position:relative;width:min(92vw,calc((100vh - 36px)*9/16));aspect-ratio:9/16;background:#000;border-radius:14px;overflow:hidden}
+#stage{position:absolute;inset:0}#stage svg{width:100%;height:100%;display:block}
+#panel{width:min(92vw,420px)}
+h1{font-size:18px;margin:4px 0 2px}p.s{opacity:.7;margin:0 0 12px;font-size:13px}
+button,select{font:inherit;color:var(--ivory);background:#13294B;border:1px solid #2A4C7C;border-radius:10px;padding:8px 12px;cursor:pointer}
+button.on{background:var(--teal);color:var(--navy);border-color:var(--teal);font-weight:800}
+.row{display:flex;gap:8px;align-items:center;margin:8px 0;flex-wrap:wrap}
+.lay{display:grid;grid-template-columns:110px 1fr auto;gap:8px;align-items:center;margin:6px 0;font-size:13px}
+input[type=range]{width:100%}input[type=file]{display:none}
+label.imp{background:#13294B;border:1px dashed #2A4C7C;border-radius:8px;padding:4px 8px;cursor:pointer;font-size:12px}
+#tbar{width:100%;margin:8px 0}
+.note{font-size:12px;opacity:.65;line-height:1.4;margin-top:14px}
+body.export{background:#000}body.export #panel{display:none}body.export #wrap{padding:0}body.export #stageBox{width:1080px;height:1920px;border-radius:0}
+</style></head><body>
+<div id="wrap">
+ <div id="stageBox"><div id="stage"></div></div>
+ <div id="panel">
+  <h1>Fluent English · ¿Te bloqueas al hablar?</h1>
+  <p class="s">Vista previa en navegador (no es el MP4). Controles solo de producción: no aparecen en el video exportado.</p>
+  <div class="row"><button id="play">▶ Reproducir</button><button id="restart">⏮</button><span id="clock">0.0 / 30.0 s</span></div>
+  <input type="range" id="tbar" min="0" max="30" step="0.01" value="0">
+  <div class="row"><b>CC / IPA</b><button data-m="off">Off</button><button data-m="cc">Captions</button><button data-m="ipa">Captions + IPA</button></div>
+  <b>Capas de audio</b>
+  <div id="layers"></div>
+  <div class="note">Cada capa se puede reemplazar con tu propio archivo (botón «Importar»). Para exportar el MP4 usa <code>python tools/render.py</code> (ver README).</div>
+ </div>
+</div>
+<script src="timeline.js"></script><script src="person.js"></script><script src="scene.js"></script><script src="player.js"></script>
+</body></html>

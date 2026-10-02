@@ -1,0 +1,9 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#F6EEDC"><svg id=s width=1600 height=700 viewBox="0 0 1600 700"></svg>
+<script src=person.js></script><script>
+const P=Person, st=P.STYLES.male; let o='';
+let x=140;
+for (const [name,ang,side] of [['open',-0.3,-1],['open',-0.3,1],['relax',1.5,-1],['relax',1.5,1],['fist',-1.4,-1],['fist',-1.4,1],['flat',0,-1]]) {
+  o+=P.hand({x:x,y:350},ang,P.HANDS[name],st.skin,st.shade,side,2.4); o+=`<text x="${x}" y="660" font-size="30">${name} ${side}</text>`; x+=225;
+}
+document.getElementById('s').innerHTML=o;
+</script>

@@ -2,3 +2,10 @@ node_modules/
 dist/
 *.log
 .env
+video/.venv/
+video/models/
+video/build/
+video/audio/**/*.wav
+video/audio/audition/
+__pycache__/
+video/audio/**/*.flac

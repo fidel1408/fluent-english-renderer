@@ -13,7 +13,7 @@ for (const e of list) {
   await page.evaluate(([c, s]) => { window.Lesson.go(c, s, { rebuild: true }); }, [e.c, e.s]);
   await page.waitForTimeout(e.wait || 900);
   if (e.js) { await page.evaluate(e.js); await page.waitForTimeout(e.wait2 || 1500); }
-  await page.evaluate(() => document.querySelector('#narr')?.classList.remove('on'));
+  
   await page.screenshot({ path: path.join(out, e.name || `c${e.c}_s${e.s}.png`) });
 }
 await browser.close();

@@ -31,6 +31,10 @@ Optional local server instead of double-click: `cd lessons/love-speaking-club &&
 Total 60 planned minutes, 43 planned student-speaking minutes. **These are classroom targets. The app never measures speaking time.**
 **There is no roleplay anywhere.** Alex, Maya and the other fictional adults only appear in short animated cases that students observe and discuss.
 
+## Using Speechelo (or any other voice) for the voice-overs
+
+Speechelo needs your own login, so I could not generate those clips. `docs/SPEECHELO-SCRIPT.txt` lists all 38 lines with suggested voices. Make a clip for each in Speechelo, export MP3s named by line id (e.g. `ch2.intro.mp3`), then run `python3 tools/import-audio.py <folder>` and `python3 tools/build-single.py`. Lines you skip keep the current voice. The **Captions** button (key **C**) shows each narrated line with IPA while it plays.
+
 ## Teacher controls
 
 Bottom bar: Back, Pause/Play (freezes narration *and* scene motion), Replay, Next, Chapters (full 60-minute plan, jump to any chapter, typed teacher notes),

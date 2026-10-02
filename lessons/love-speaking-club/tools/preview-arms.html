@@ -1,0 +1,11 @@
+<!doctype html><meta charset=utf-8><body style="margin:0;background:#2a3358">
+<script src="../js/art-core.js"></script><script src="../js/art-figure.js"></script><script src="../js/art-cast.js"></script>
+<svg id=s width=1600 height=900 viewBox="0 0 1600 900" style="display:block"></svg>
+<script>
+Art.mountDefs(); const svg=document.getElementById('s');
+const ik=(f,sd,x,y,h)=>f.ik(sd,x,y).concat([h]);
+const A=(id)=>Art.Cast.make(id);
+const rows=[['alex',[{aL:[20,66,0,'relaxed'],aR:[20,66,0,'relaxed']},(f)=>({aL:ik(f,'L',-50,150,'relaxed'),aR:ik(f,'R',50,150,'relaxed')}),(f)=>({aL:ik(f,'L',-30,60,'cup'),aR:ik(f,'R',40,100,'cup')}),(f)=>({aL:ik(f,'L',-150,100,'open'),aR:ik(f,'R',120,60,'open')})]],
+['maya',[{aL:[8,12,0,'relaxed'],aR:[8,12,0,'relaxed']},(f)=>({aL:ik(f,'L',-60,110,'open'),aR:ik(f,'R',100,70,'point')}),(f)=>({aL:ik(f,'L',-40,40,'relaxed'),aR:ik(f,'R',40,60,'relaxed')}),(f)=>({aL:[28,95,0,'fist'],aR:[28,95,0,'fist']})]]];
+rows.forEach(([id,poses],r)=>poses.forEach((p,c)=>{const f=A(id);svg.appendChild(f.el);f.pos(220+c*380,230+r*430,.9);f.set(Object.assign({expr:'warm'},typeof p==='function'?p(f):p));}));
+</script>

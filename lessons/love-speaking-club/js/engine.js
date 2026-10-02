@@ -13,7 +13,7 @@
 
   /* =========================================================== STATE */
   const KEY = 'fe-love-speaking-club-v1';
-  const DEF = () => ({ v: 1, mode: 'class', ch: 0, step: {}, controls: 'shown', vol: 0.9, music: false, musicVol: 0.25, voice: 'voice', reduced: 'auto', demoSecs: 20, demoAuto: false, c: {}, notes: '', roster: { n: 6, rec: {} }, started: false });
+  const DEF = () => ({ v: 1, mode: 'class', ch: 0, step: {}, controls: 'shown', vol: 0.9, music: false, musicVol: 0.25, voice: 'voice', reduced: 'auto', cc: false, demoSecs: 20, demoAuto: false, c: {}, notes: '', roster: { n: 6, rec: {} }, started: false });
   const State = {
     d: DEF(), _t: null, ok: true,
     load() { try { const raw = localStorage.getItem(KEY); if (raw) { const o = JSON.parse(raw); if (o && o.v === 1) this.d = Object.assign(DEF(), o); } } catch (e) { this.ok = false; } },
@@ -51,6 +51,7 @@
     full: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>',
     hide: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7 7 7-7"/><path d="M4 20h16"/></svg>',
     show: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/><path d="M4 4h16"/></svg>',
+    cc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M10.5 10.2a2.6 2.6 0 1 0 0 3.6M17.5 10.2a2.6 2.6 0 1 0 0 3.6"/></svg>',
     x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>'
   };
   g.FE_IC = IC;
@@ -83,7 +84,7 @@
       return new Promise((resolve) => {
         const run = (i) => {
           if (tok !== this.tok) return resolve(false);
-          if (i >= ids.length) { this.state = 'idle'; Music.setTalk(null); this.stopTalk(); if (o.onDone) o.onDone(); return resolve(true); }
+          if (i >= ids.length) { this.state = 'idle'; Music.setTalk(null); this.stopTalk(); if (State.d.cc) setTimeout(() => { if (tok === this.tok) Narr.hide(); }, 900); if (o.onDone) o.onDone(); return resolve(true); }
           const id = ids[i], line = LC.NAR[id]; if (!line) return run(i + 1);
           const fig = this.bound[line.who];
           const m = MAN[id];
@@ -91,6 +92,7 @@
           Music.setTalk(line.who);
           if (mode === 'off') { this.fakeTalk(fig, this.dur(id)); this.fakeTimer = setTimeout(next, this.dur(id)); this.state = 'playing'; return; }
           if (mode === 'teacher' || !m) { Narr.show(line.who, [line.text], this.dur(id)); this.fakeTalk(fig, this.dur(id)); this.fakeTimer = setTimeout(next, this.dur(id)); this.state = 'playing'; return; }
+          if (State.d.cc) Narr.show(line.who, [line.text], this.dur(id), true);
           const el = this.el; el.src = m.f; el.volume = clamp(State.d.vol, 0, 1);
           el.onended = () => { if (tok === this.tok) next(); };
           el.onerror = () => { if (tok !== this.tok) return; Narr.show(line.who, [line.text], this.dur(id)); this.fakeTalk(fig, this.dur(id)); this.fakeTimer = setTimeout(next, this.dur(id)); };
@@ -109,10 +111,10 @@
   /* narration card for "Teacher reads" mode and failed audio */
   const Narr = {
     el: $('#narr'),
-    names: { nar: 'Narrator', alex: 'Alex', maya: 'Maya', sam: 'Sam', nora: 'Nora' },
-    show(who, lines, ms) {
+    names: LC.UI.names,
+    show(who, lines, ms, cap) {
       clearTimeout(this.t); this.t = setTimeout(() => this.hide(), Math.max(7000, (ms || 0) + 3500));
-      this.el.innerHTML = `<div class="who">${I(this.names[who] || 'Narrator')}</div>` + lines.map((t) => `<div class="line">${I(t)}</div>`).join('') + `<button class="btn btn-ink sm" data-narr-close type="button" style="background:var(--navy2);color:var(--ivory)">${I('Done reading')}</button>`;
+      this.el.innerHTML = `<div class="who">${I(this.names[who] || 'Narrator')}</div>` + lines.map((t) => `<div class="line">${I(t)}</div>`).join('') + (cap ? '' : `<button class="btn btn-ink sm" data-narr-close type="button" style="background:var(--navy2);color:var(--ivory)">${I('Done reading')}</button>`);
       this.el.classList.add('on');
     },
     hide() { this.el.classList.remove('on'); }
@@ -298,7 +300,7 @@
   const BAR = [
     { id: 'back', ic: 'back', l: 'Back' }, { id: 'play', ic: 'pause', l: 'Pause' }, { id: 'replay', ic: 'replay', l: 'Replay' }, { id: 'next', ic: 'next', l: 'Next', primary: true }, 'sep',
     { id: 'chapters', ic: 'chapters', l: 'Chapters', drawer: true }, { id: 'timer', ic: 'timer', l: 'Timer', drawer: true }, { id: 'words', ic: 'words', l: 'Words', drawer: true }, { id: 'starters', ic: 'starters', l: 'Starters', drawer: true }, 'sep',
-    { id: 'sound', ic: 'sound', l: 'Sound', drawer: true }, { id: 'mode', ic: 'mode', l: 'Mode', drawer: true }, { id: 'full', ic: 'full', l: 'Full screen' }, 'spacer', { id: 'hide', ic: 'hide', l: 'Hide controls' }
+    { id: 'cc', ic: 'cc', l: 'Captions' }, { id: 'sound', ic: 'sound', l: 'Sound', drawer: true }, { id: 'mode', ic: 'mode', l: 'Mode', drawer: true }, { id: 'full', ic: 'full', l: 'Full screen' }, 'spacer', { id: 'hide', ic: 'hide', l: 'Hide controls' }
   ];
   function buildBar() {
     const bar = $('#bar'); bar.innerHTML = '';
@@ -323,6 +325,7 @@
     setBar('full', 'full', document.fullscreenElement ? 'Exit full screen' : 'Full screen', !!document.fullscreenElement);
     ['chapters', 'timer', 'words', 'starters', 'sound', 'mode'].forEach((k) => { const el = $(`#bar [data-bar="${k}"]`); if (el) el.setAttribute('aria-pressed', Drawers.open === k ? 'true' : 'false'); });
     const modeEl = $('#bar [data-bar="mode"] .lab'); if (modeEl) modeEl.innerHTML = I(State.d.mode === 'demo' ? 'Demo' : 'Class');
+    const ccEl = $('#bar [data-bar="cc"]'); if (ccEl) { ccEl.setAttribute('aria-pressed', State.d.cc ? 'true' : 'false'); ccEl.classList.toggle('active', !!State.d.cc); }
     const sEl = $('#bar [data-bar="sound"]'); if (sEl) sEl.classList.toggle('active', State.d.music);
     const nx = $('#bar [data-bar="next"]'); if (nx) nx.disabled = false;
     $('#showControls').setAttribute('aria-label', 'Show controls');
@@ -333,6 +336,7 @@
     else if (id === 'next') Lesson.next();
     else if (id === 'play') { Voice.togglePause(); updateBar(); }
     else if (id === 'replay') Lesson.replay();
+    else if (id === 'cc') { State.d.cc = !State.d.cc; State.save(); if (!State.d.cc) Narr.hide(); updateBar(); }
     else if (id === 'full') toggleFull();
     else if (id === 'hide') setControls('hidden');
     else Drawers.toggle(id);
@@ -472,6 +476,7 @@
     else if (k === 'r' || k === 'R') { Lesson.replay(); }
     else if (k === 'p' || k === 'P') { Voice.togglePause(); updateBar(); }
     else if (k === 'm' || k === 'M') { Music.set(!State.d.music); }
+    else if (k === 'c' || k === 'C') { barAct('cc'); }
   });
 
   /* =========================================================== START OVERLAY (user-initiated audio) */

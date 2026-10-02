@@ -152,7 +152,7 @@
  {
   "ok": true,
   "name": "Every on-stage, bar and drawer button was clicked without error",
-  "detail": "676 clicks; "
+  "detail": "677 clicks; "
  },
  {
   "ok": true,
@@ -202,7 +202,7 @@
  {
   "ok": true,
   "name": "Contrast: all word and IPA text on opaque surfaces is at least 4.5:1",
-  "detail": "1248 text runs checked; "
+  "detail": "1268 text runs checked; "
  },
  {
   "ok": true,

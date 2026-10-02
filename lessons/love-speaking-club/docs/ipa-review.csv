@@ -122,6 +122,7 @@ word,ipa,source,oxford_us_url
 "can't","/kænt/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/cant
 "cancelled","/ˈkænsəld/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/cancelled
 "cannot","/ˈkænɑːt/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/cannot
+"captions","/ˈkæpʃənz/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/captions
 "card","/kɑːrd/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/card
 "care","/ker/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/care
 "cared","/kerd/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/cared
@@ -522,6 +523,7 @@ word,ipa,source,oxford_us_url
 "name","/neɪm/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/name
 "names","/neɪmz/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/names
 "narration","/neˈreɪʃən/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/narration
+"narrator","/ˈnereɪtər/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/narrator
 "need","/niːd/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/need
 "needs","/niːdz/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/needs
 "negotiate","/nəˈɡəʊʃieɪt/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/negotiate
@@ -534,6 +536,7 @@ word,ipa,source,oxford_us_url
 "night","/naɪt/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/night
 "nine","/naɪn/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/nine
 "no","/nəʊ/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/no
+"nora","/ˈnɔːrə/",override,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/nora
 "not","/nɑːt/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/not
 "note","/nəʊt/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/note
 "notes","/nəʊts/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/notes
@@ -687,6 +690,7 @@ word,ipa,source,oxford_us_url
 "s","/es/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/s
 "sad","/sæd/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/sad
 "said","/sed/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/said
+"sam","/sæm/",override,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/sam
 "same","/seɪm/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/same
 "sample","/ˈsæmpl/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/sample
 "saturday","/ˈsætərdi/",cmudict,https://www.oxfordlearnersdictionaries.com/us/definition/american_english/saturday

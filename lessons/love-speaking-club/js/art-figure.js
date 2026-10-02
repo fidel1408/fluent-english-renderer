@@ -82,7 +82,7 @@
 
   const DEFAULT = {
     lean: 0, head: 0, yaw: 0, pitch: 0, breathe: 0,
-    aL: 6, aLe: 10, aLw: 0, aR: 6, aRe: 10, aRw: 0,
+    aL: 6, aLe: 10, aLw: 0, aLf: 0, aR: 6, aRe: 10, aRw: 0, aRf: 0,
     bl: 0, br: 0, blt: 0, brt: 0, eo: 1, ex: 0, ey: 0, ms: .12, mo: 0,
     hL_i: .3, hL_m: .38, hL_r: .46, hL_p: .55, hL_t: .35, hL_sp: 4,
     hR_i: .3, hR_m: .38, hR_r: .46, hR_p: .55, hR_t: .35, hR_sp: 4
@@ -96,8 +96,13 @@
       if (k === 'expr') { Object.assign(o, EXPR[v] || {}); continue; }
       if (k === 'aL' || k === 'aR') {
         if (Array.isArray(v)) {
-          o[k] = v[0]; if (v[1] !== undefined) o[k + 'e'] = v[1]; if (v[2] !== undefined) o[k + 'w'] = v[2];
-          if (v[3]) { const h = typeof v[3] === 'string' ? HANDS[v[3]] : v[3]; const side = k === 'aL' ? 'hL_' : 'hR_'; for (const hk of handKeys) o[side + hk] = h[hk]; if (h.w) o[k + 'w'] = (v[2] || 0) + h.w; }
+          let sh = v[0], el = v[1], wr = v[2], fs = 0;
+          if (wr && typeof wr === 'object') { fs = wr.f || 0; wr = wr.w || 0; }      // from fig.ik(): tucked, foreshortened forearm
+          else if (typeof el === 'number' && el > 30 && sh < 35) {                     // raw 'hands in front' pose: tuck the elbow, foreshorten the forearm
+            fs = clamp((el - 20) / 90, 0, .78); sh = sh * .3; el = 8 + (el - 30) * .06;
+          } else if (typeof sh === 'number' && sh > 6 && typeof el === 'number' && el <= 30) sh = Math.min(sh, 8);
+          o[k] = sh; if (el !== undefined) o[k + 'e'] = el; o[k + 'w'] = wr || 0; o[k + 'f'] = fs;
+          if (v[3]) { const h = typeof v[3] === 'string' ? HANDS[v[3]] : v[3]; const side = k === 'aL' ? 'hL_' : 'hR_'; for (const hk of handKeys) o[side + hk] = h[hk]; if (h.w) o[k + 'w'] = (o[k + 'w'] || 0) + h.w; }
         } else o[k] = v;
         continue;
       }
@@ -454,23 +459,24 @@
       // sleeve over forearm
       if (C.sleeve === 'long') {
         const sl = `M${-wBot},0 A${wBot},${wBot} 0 0 1 ${wBot},0 C${wBot},${FA * .3} ${w1 + 3},${FA * .62} ${w1 + 2.5},${FA - 9} L${-w1 - 2.5},${FA - 9} C${-w1 - 3},${FA * .62} ${-wBot},${FA * .3} ${-wBot},0Z`;
-        el.appendChild(S('path', { d: sl, fill: sleeveC })); el.appendChild(S('path', { d: sl, fill: 'url(#shadeSide)', opacity: .9 }));
-        el.appendChild(S('rect', { x: -w1 - 3, y: FA - 14, width: 2 * w1 + 6, height: 8, rx: 3, fill: sleeveLt }));
-        el.appendChild(S('rect', { x: -w1 - 3, y: FA - 14, width: 2 * w1 + 6, height: 8, rx: 3, fill: 'none', stroke: sleeveDk, 'stroke-width': 1, opacity: .8 }));
+        fa.appendChild(S('path', { d: sl, fill: sleeveC })); fa.appendChild(S('path', { d: sl, fill: 'url(#shadeSide)', opacity: .9 }));
+        fa.appendChild(S('rect', { x: -w1 - 3, y: FA - 14, width: 2 * w1 + 6, height: 8, rx: 3, fill: sleeveLt }));
+        fa.appendChild(S('rect', { x: -w1 - 3, y: FA - 14, width: 2 * w1 + 6, height: 8, rx: 3, fill: 'none', stroke: sleeveDk, 'stroke-width': 1, opacity: .8 }));
       } else if (rolled) {
         const sl = `M${-wBot},0 A${wBot},${wBot} 0 0 1 ${wBot},0 C${wBot + .5},10 ${w0 + 3.5},20 ${w0 + 4},30 L${-w0 - 4},30 C${-w0 - 3.5},20 ${-wBot - .5},10 ${-wBot},0Z`;
-        el.appendChild(S('path', { d: sl, fill: sleeveC })); el.appendChild(S('path', { d: sl, fill: 'url(#shadeSide)', opacity: .9 }));
+        fa.appendChild(S('path', { d: sl, fill: sleeveC })); fa.appendChild(S('path', { d: sl, fill: 'url(#shadeSide)', opacity: .9 }));
         // rolled cuff band
-        el.appendChild(S('rect', { x: -w0 - 5.5, y: 20, width: 2 * w0 + 11, height: 13, rx: 5, fill: sleeveLt }));
-        el.appendChild(S('rect', { x: -w0 - 5.5, y: 20, width: 2 * w0 + 11, height: 13, rx: 5, fill: 'url(#shadeSide)', opacity: .8 }));
-        el.appendChild(S('rect', { x: -w0 - 5.5, y: 20, width: 2 * w0 + 11, height: 13, rx: 5, fill: 'none', stroke: sleeveDk, 'stroke-width': 1.1, opacity: .85 }));
-        el.appendChild(S('path', { d: `M${-w0 - 3},26.5 L${w0 + 3},26.5`, stroke: sleeveDk, 'stroke-width': .9, opacity: .5 }));
+        fa.appendChild(S('rect', { x: -w0 - 5.5, y: 20, width: 2 * w0 + 11, height: 13, rx: 5, fill: sleeveLt }));
+        fa.appendChild(S('rect', { x: -w0 - 5.5, y: 20, width: 2 * w0 + 11, height: 13, rx: 5, fill: 'url(#shadeSide)', opacity: .8 }));
+        fa.appendChild(S('rect', { x: -w0 - 5.5, y: 20, width: 2 * w0 + 11, height: 13, rx: 5, fill: 'none', stroke: sleeveDk, 'stroke-width': 1.1, opacity: .85 }));
+        fa.appendChild(S('path', { d: `M${-w0 - 3},26.5 L${w0 + 3},26.5`, stroke: sleeveDk, 'stroke-width': .9, opacity: .5 }));
       }
       sh.appendChild(el);
 
       // watch on screen-left wrist (male)
+      let wtRef = null;
       if (spec.watch && side === -1) {
-        const wt = S('g', { transform: `translate(0,${FA - 14})` });
+        const wt = wtRef = S('g', { transform: `translate(0,${FA - 14})` });
         wt.appendChild(S('rect', { x: -w1 - 1.2, y: -4, width: 2 * w1 + 2.4, height: 9, rx: 3, fill: '#8a5a32' }));
         wt.appendChild(S('circle', { cx: 0, cy: .5, r: 8.2, fill: '#c9ccd4', stroke: '#6b6f7e', 'stroke-width': 1 }));
         wt.appendChild(S('circle', { cx: 0, cy: .5, r: 6.2, fill: '#162036' }));
@@ -479,7 +485,7 @@
       }
       // bracelets for female
       if (spec.bracelet && side === 1) {
-        el.appendChild(S('rect', { x: -w1 - 1, y: FA - 15, width: 2 * w1 + 2, height: 3.2, rx: 1.6, fill: PAL.amber, stroke: PAL.amberDk, 'stroke-width': .6 }));
+        fa.appendChild(S('rect', { x: -w1 - 1, y: FA - 15, width: 2 * w1 + 2, height: 3.2, rx: 1.6, fill: PAL.amber, stroke: PAL.amberDk, 'stroke-width': .6 }));
       }
 
       // hand
@@ -489,7 +495,7 @@
       const holder = S('g', { class: 'held' }); // objects attached to hand
       hand.g.appendChild(holder);
 
-      arms[side] = { sh, el, hg, hand, holder, upper, fa };
+      arms[side] = { sh, el, hg, hand, holder, upper, fa, wt: wtRef };
       return sh;
     };
     const armL = makeArm(-1), armR = makeArm(1);
@@ -606,7 +612,10 @@
         const A = arms[sg];
         A.sh.setAttribute('transform', `translate(${sg * B.sx},13) rotate(${f(-sg * c[k])})`);
         A.el.setAttribute('transform', `translate(0,${B.UA}) rotate(${f(sg * c[k + 'e'])})`);
-        A.hg.setAttribute('transform', `translate(0,${B.FA - 2}) rotate(${f(sg * c[k + 'w'])})`);
+        const sy = 1 - (c[k + 'f'] || 0);
+        A.fa.setAttribute('transform', `scale(1,${f(sy)})`);
+        A.hg.setAttribute('transform', `translate(0,${f((B.FA - 2) * sy)}) rotate(${f(sg * c[k + 'w'])}) scale(1,${f(1 - (c[k + 'f'] || 0) * .3)})`);
+        if (A.wt) A.wt.setAttribute('transform', `translate(0,${f((B.FA - 14) * sy)})`);
         A.hand.set({ i: c[hp + 'i'], m: c[hp + 'm'], r: c[hp + 'r'], p: c[hp + 'p'], t: c[hp + 't'], sp: c[hp + 'sp'] });
       });
     }
@@ -631,20 +640,31 @@
     /* two-bone IK: place the wrist of arm 'L' (screen-left) or 'R' at (tx,ty) in figure units. returns [s,e,w] */
     fig.ik = function (side, tx, ty, bend) {
       const sg = side === 'L' ? -1 : 1; const px = sg * B.sx, py = 13, UA = B.UA, FA = B.FA - 2;
+      const toPose = (ux, uy, fx, fy, sy) => {
+        const th = Math.atan2(-ux, uy) * 180 / Math.PI, thf = Math.atan2(-fx, fy) * 180 / Math.PI;
+        let e = sg * (thf - th); while (e > 180) e -= 360; while (e < -180) e += 360;
+        let sh = -sg * th; while (sh > 180) sh -= 360; while (sh < -180) sh += 360;
+        return [sh, e, { w: 0, f: 1 - sy }];
+      };
+      /* hands in front of the body: keep the elbow tucked by the ribs and foreshorten the forearm (it points toward the viewer) instead of flaring the elbow out */
+      const inFront = sg * (tx - px) < 10 && ty > py + 8;
+      if (inFront && bend !== 'out') {
+        const ab = (6 + Math.max(0, sg * (px - tx) - 40) * .05) * Math.PI / 180;
+        const ux = -sg * Math.sin(ab), uy = Math.cos(ab);
+        const ex = px + UA * ux, ey = py + UA * uy;
+        const vx = tx - ex, vy = ty - ey, L2 = Math.hypot(vx, vy);
+        if (L2 <= FA * 1.04) return toPose(ux, uy, vx / (L2 || 1), vy / (L2 || 1), clamp(L2 / FA, .3, 1));
+      }
       let dx = tx - px, dy = ty - py; let d = Math.hypot(dx, dy); d = clamp(d, Math.abs(UA - FA) + 2, UA + FA - 1);
       const phi = Math.atan2(dy, dx), a = Math.acos(clamp((UA * UA + d * d - FA * FA) / (2 * UA * d), -1, 1));
       const cands = [phi + a, phi - a].map((ang) => ({ ang, ex: px + UA * Math.cos(ang), ey: py + UA * Math.sin(ang) }));
       let pick;
       if (bend === 'up') pick = cands[0].ey < cands[1].ey ? cands[0] : cands[1];
       else if (bend === 'out') pick = Math.abs(cands[0].ex) > Math.abs(cands[1].ex) ? cands[0] : cands[1];
-      else pick = cands[0].ey + Math.abs(cands[0].ex) * .0 > cands[1].ey ? cands[0] : cands[1];   // default: elbow low, like a relaxed arm
+      else pick = cands[0].ey > cands[1].ey ? cands[0] : cands[1];   // default: elbow low, like a relaxed arm
       const ux = Math.cos(pick.ang), uy = Math.sin(pick.ang);
       const wx = px + d * Math.cos(phi), wy = py + d * Math.sin(phi);
-      const fx = wx - pick.ex, fy = wy - pick.ey;
-      const th = Math.atan2(-ux, uy) * 180 / Math.PI, thf = Math.atan2(-fx, fy) * 180 / Math.PI;
-      let e = sg * (thf - th); while (e > 180) e -= 360; while (e < -180) e += 360;
-      let sh = -sg * th; while (sh > 180) sh -= 360; while (sh < -180) sh += 360;
-      return [sh, e, 0];
+      return toPose(ux, uy, wx - pick.ex, wy - pick.ey, 1);
     };
     fig.setTalk = (v) => { talkAmt = v; render(); };
     fig.talkTicker = null;

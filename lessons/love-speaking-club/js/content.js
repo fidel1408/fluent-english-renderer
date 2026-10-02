@@ -401,6 +401,7 @@
 
   /* Teacher-interface labels (rendered with IPA like everything else). */
   const UI = {
+    names: { nar: 'Narrator', alex: 'Alex', maya: 'Maya', sam: 'Sam', nora: 'Nora' },
     bar: { back: 'Back', next: 'Next', play: 'Play', pause: 'Pause', replay: 'Replay', chapters: 'Chapters', timer: 'Timer', words: 'Words', starters: 'Starters', sound: 'Sound',
       mode: 'Mode', class: 'Class', demo: 'Demo', full: 'Full screen', exit: 'Exit full screen', hide: 'Hide controls', show: 'Show controls', plan: 'Plan', notes: 'Notes' },
     modeClass: 'Class Mode: every reveal waits for you.',

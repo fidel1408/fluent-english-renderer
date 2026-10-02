@@ -1,0 +1,26 @@
+:root{--navy:#0B1E3F;--navy2:#13305F;--tang:#FF8A2B;--mint:#5FD6B0;--ivory:#FFF6E5;--ink:#07122A}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#050B1A;color:var(--ivory);font:15px/1.4 "Nunito","Segoe UI",system-ui,Arial,sans-serif}
+body{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:center;padding:16px}
+#stageWrap{position:relative;height:min(92vh,calc((100vw - 32px)*16/9));aspect-ratio:9/16;max-width:100%;border-radius:18px;overflow:hidden;box-shadow:0 20px 60px #000a,0 0 0 1px #ffffff14}
+canvas#stage{width:100%;height:100%;display:block;background:var(--navy)}
+#startOverlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:12%;background:linear-gradient(#0000 55%,#050B1Acc);cursor:pointer;border:0;color:inherit;width:100%}
+#startOverlay span.go{background:var(--tang);color:#2a1200;font-weight:800;font-size:clamp(18px,4.2vw,26px);padding:.7em 1.6em;border-radius:99px;box-shadow:0 8px 30px #ff8a2b66;letter-spacing:.02em}
+#startOverlay small{margin-top:10px;opacity:.8}
+#startOverlay.hidden{display:none}
+#panel{width:min(380px,100%);display:flex;flex-direction:column;gap:12px}
+#panel h1{font:800 22px/1.2 "Fraunces",Georgia,serif;margin:0}
+#panel p{margin:0;opacity:.8;font-size:13px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+button.btn{appearance:none;border:1px solid #ffffff2a;background:#13305F;color:var(--ivory);padding:.6em 1em;border-radius:12px;font:700 14px inherit;cursor:pointer;min-height:44px}
+button.btn:hover{background:#1a3d78}
+button.btn.primary{background:var(--tang);color:#2a1200;border-color:transparent}
+button.btn[aria-pressed="true"]{background:var(--mint);color:#032a1f}
+button.btn:disabled{opacity:.45;cursor:not-allowed}
+label{display:flex;flex-direction:column;gap:4px;font-size:12px;opacity:.9}
+select{background:#0f2750;color:var(--ivory);border:1px solid #ffffff2a;border-radius:10px;padding:.5em;font:inherit;min-height:40px}
+#status{font-size:12px;min-height:2.6em;opacity:.85}
+#warn{font-size:12px;color:#ffd7ae}
+details{font-size:12px;opacity:.9}
+.mono{font-family:ui-monospace,monospace}
+@media (max-width:760px){#panel{width:100%}}

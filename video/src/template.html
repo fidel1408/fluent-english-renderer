@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fluent English · Actually vs Currently</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800;9..144,900&family=Nunito:wght@700;800&family=Noto+Sans:wght@500;600&display=swap" rel="stylesheet">
+<style>/*CSS*/</style>
+</head>
+<body>
+<div id="stageWrap">
+  <canvas id="stage" width="1080" height="1920" aria-label="Video: Actually versus currently — Fluent English"></canvas>
+  <button id="startOverlay" aria-label="Empezar video"><span class="go">▶ Empezar con sonido</span><small>Toca para activar el audio</small></button>
+</div>
+<aside id="panel">
+  <h1>Actually ≠ actualmente</h1>
+  <p>Video vertical 9:16 de ~30 s para Fluent English. Todo (animación, voces, música y efectos) se genera con código en tu navegador.</p>
+  <div class="row">
+    <button class="btn primary" id="bStart">▶ Start</button>
+    <button class="btn" id="bPause" disabled>⏸ Pause</button>
+    <button class="btn" id="bReplay" disabled>↺ Replay</button>
+    <button class="btn" id="bMute" aria-pressed="false">🔊 Mute</button>
+    <button class="btn" id="bCC" aria-label="Subtítulos e IPA">CC: Off</button>
+  </div>
+  <label>Voz de narración (español)<select id="selEs"></select></label>
+  <label>Voz del personaje (inglés americano)<select id="selEn"></select></label>
+  <div id="warn"></div>
+  <div id="status" aria-live="polite">Listo.</div>
+  <div class="row">
+    <button class="btn" id="bExport">⬇ Exportar video (música + efectos)</button>
+    <button class="btn" id="bRecord">⏺ Grabar con voces (captura de pestaña)</button>
+    <button class="btn" id="bCover">⬇ Portada PNG</button>
+  </div>
+  <details><summary>Sobre la exportación y las voces</summary>
+    <p><b>Exportar</b> crea un archivo con la animación, subtítulos del modo CC elegido, música y efectos. <b>No incluye las voces</b>: la síntesis de voz del navegador no se puede capturar desde el canvas ni desde Web Audio. Para obtener un archivo con voces usa <b>Grabar con voces</b> (elige “Esta pestaña” y activa “Compartir audio de la pestaña”) o graba la pantalla del dispositivo. La calidad de las voces depende de tu dispositivo.</p>
+    <p>El modo CC/IPA elegido queda grabado en el video; en un MP4/WebM exportado ya no es interactivo.</p>
+  </details>
+</div>
+</aside>
+<script>/*JS*/</script>
+</body>
+</html>

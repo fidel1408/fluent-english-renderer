@@ -1,0 +1,7172 @@
+{
+ "lines": [
+  {
+   "role": "maya",
+   "text": "Welcome to Speaking Club.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "I'm Maya.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Let's open the memory box.",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "A drawing. Maybe a rainy afternoon and a box of crayons.",
+   "mood": "warm"
+  },
+  {
+   "role": "maya",
+   "text": "A ball. Perhaps a quick game of tag at recess.",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "A note. “Meet me at the park after school.”",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "A small toy. Maybe it had adventures across the rug.",
+   "mood": "laugh"
+  },
+  {
+   "role": "theo",
+   "text": "Not every memory feels warm, and that's okay.",
+   "mood": "warm"
+  },
+  {
+   "role": "maya",
+   "text": "Today, you choose what to share. You can always pass.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "So, what can an ordinary object remind us of?",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "Let's warm up with four questions.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Use the cycle: think, answer, give a reason, listen, and ask.",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "A fictional answer or a pass is always fine.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "What games or activities did you enjoy when you were younger?",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "I used to play hide-and-seek on my street. We played until the streetlights came on.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Who did you usually play with?",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Mostly the kids next door. Sometimes my cousin joined us.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "What did you use to do after school or during your free time?",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "I used to ride my bike to the library. I loved the quiet and the comic books.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "How often did you go?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Almost every Friday. It was my weekly adventure.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "What is something you liked as a child but feel differently about now?",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "I loved spinning in circles on the playground. Now it makes me dizzy!",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "What made it so much fun?",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "The feeling of flying. I'd laugh until I fell over.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "What do you think has changed most about childhood?",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "Many children have more screens now, but they still invent games. Some things stay the same.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "What do you mean by 'invent games'?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Like rules for a game with just a ball and a wall.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Five useful words. Watch a short scene, then use each one.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Word banks are always one click away.",
+   "mood": "warm"
+  },
+  {
+   "role": "maya",
+   "text": "childhood. It means: the period of someone's life when they are a child.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "For example: “Their childhood was very different from ours.”",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "I think the first one. When I was seven, I learned to ride a bike.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Many people think of games, school, and growing up.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "imagination. It means: the ability to form ideas or pictures in your mind.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "For example: “We used our imagination to turn the yard into a spaceship.”",
+   "mood": "warm"
+  },
+  {
+   "role": "maya",
+   "text": "I think the first one. A child turns a cardboard box into a castle.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "I use it when I plan a surprise or imagine a new route home.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "independent. It means: able to do things or make some decisions without help.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "For example: “I became more independent when I learned to prepare a simple snack.”",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "I think the first one. Sam makes a sandwich without help.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Now I can cook dinner by myself without a recipe.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "grow up. It means: develop from being a child into being an adult.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "For example: “She grew up in a small town.”",
+   "mood": "warm"
+  },
+  {
+   "role": "maya",
+   "text": "I think the first one. Where did you grow up?",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "I grew up in a small town near a river.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "look back on. It means: think about something from the past.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "For example: “When he looks back on school, he remembers his art teacher.”",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "I think the first one. The past",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I look back on my first art class with a smile.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Use the past simple for one event.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Use used to for old routines and states.",
+   "mood": "warm"
+  },
+  {
+   "role": "maya",
+   "text": "Careful: used to, be used to, and get used to have different meanings.",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "To tell a story: at first, then, after that, in the end.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "At first, I used to be nervous on stage. Then I joined a drama club. In the end, I loved it.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I might use playground and take turns. We took turns on the playground swings.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Three short situations, all fictional.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "There is more than one good answer. Give a reason.",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "A game feels fair when everyone knows the rules and gets a turn.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "At recess, two teams are playing a ball game.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "A new child walks over with a backpack.",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "The players say, “Sorry, our teams are full.”",
+   "mood": "worried"
+  },
+  {
+   "role": "theo",
+   "text": "Nobody wants to stop the exciting game.",
+   "mood": "worried"
+  },
+  {
+   "role": "maya",
+   "text": "I'd say, “Join us this round. We'll even out the teams.” That includes them without stopping the game.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Another idea: add a third team. Then nobody waits.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "One more detail: the newcomer just moved here.",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "They don't know the rules yet.",
+   "mood": "worried"
+  },
+  {
+   "role": "maya",
+   "text": "If they don't know the rules, I'd explain the game in one minute, then invite them in.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "My final answer: make space, explain simply, and keep playing.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Two friends borrowed a model bridge for a school project.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "While carrying it, they dropped it. A small piece broke.",
+   "mood": "worried"
+  },
+  {
+   "role": "maya",
+   "text": "One friend whispers, “Let's hide it.”",
+   "mood": "worried"
+  },
+  {
+   "role": "theo",
+   "text": "The other says, “We should explain.”",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "I'd say, “I'm sorry. It broke when we dropped it. We'd like to fix it.” That's honest.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Yes, but I'd tell them first, then offer to repair it together.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "One more detail: the owner arrives.",
+   "mood": "surprised"
+  },
+  {
+   "role": "maya",
+   "text": "They ask, “Is everything okay with the bridge?”",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "With the owner right there, I'd answer honestly now. Waiting makes it harder.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "My final answer: say what happened, apologize, and offer to help repair it.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "A group has limited time to prepare a school event.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Some want a sports activity.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Others want an art activity.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "And one person feels ignored.",
+   "mood": "worried"
+  },
+  {
+   "role": "maya",
+   "text": "I'd ask everyone for one idea, starting with the quiet person. Then we choose together.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I'd suggest a relay that mixes art and sports, so both groups can enjoy it.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "One more detail: only thirty minutes are left.",
+   "mood": "surprised"
+  },
+  {
+   "role": "maya",
+   "text": "And there is only one table.",
+   "mood": "worried"
+  },
+  {
+   "role": "theo",
+   "text": "With thirty minutes, I'd pick one simple activity and give everyone a role.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "My final answer: hear every idea, then choose a simple plan that includes everyone.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Four claims. They are opinions, not facts.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Choose a place on the scale, then explain.",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "It depends. A plan helps me relax, but sometimes I want a free day.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Children need more free play than organized activities.",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "I partly agree. Free play builds creativity. But a good class can also teach teamwork.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "How might age or circumstances change your answer?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "For younger children, I'd say the answer changes. Older children can manage more.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I see your point, but I think the context matters.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Having chores helps children become more independent.",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "It depends. Small tasks can build confidence, but too many chores may be stressful.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Childhood friendships can be just as important as friendships made later.",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "I partly agree. One example would be a friend who knew you in difficult times.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Technology gives children more opportunities to be creative.",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "In some situations, yes. A child can make music or a short film. But paper and tape are creative too.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "The second claim made me think. In some situations, chores help, but too many can be stressful.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "You're planning a fictional childhood activity program.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "All four qualities matter. This is a negotiation, not a judgment.",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "I'd pick cooperation. Children learn that a good idea is stronger when people build it together.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "I would prioritize friendship. This matters because children join in when they feel welcome.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I would put independence first. This matters because children learn to try things on their own.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I see your point about friendship, but I'd put independence higher. Could we compromise by choosing both?",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Could we compromise by choosing friendship and cooperation?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "That works. Friendship and cooperation are our top two.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "New situation: the group has mixed interests and only thirty minutes.",
+   "mood": "surprised"
+  },
+  {
+   "role": "maya",
+   "text": "Should your priorities, or your planned activities, change?",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "With thirty minutes, I'd keep cooperation. Could we compromise by making two short stations?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Our top two stay the same, and our compromise is two short stations.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Time for a guessing game!",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "I hid one object in the memory box. Ask questions to find it.",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "Clue one: it was small and made of metal.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Clue two: I used to ring it every day on my way to school.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Was it a toy?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "No, it wasn't. But it made a sound.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Was it a bicycle bell?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Yes! Well done!",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "It was a bicycle bell! Did you guess?",
+   "mood": "laugh"
+  },
+  {
+   "role": "maya",
+   "text": "My mystery object used to be on my desk. It was long and yellow.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Was it a pencil?",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Yes! One day, I lost it for a week. Did you use to lose pencils?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "All the time!",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Bonus challenge!",
+   "mood": "surprised"
+  },
+  {
+   "role": "maya",
+   "text": "Use used to once, and add the words: one day.",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "My object used to hang by my bed. It was blue. One day, it stopped working.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Could you read with it?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Yes, I could. I used to read under the blanket.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Was it a flashlight?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Right! You're good at this.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "The question about where I kept it helped most. It gave a picture in my mind.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Let's invent one story together.",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "Draw cards: a hero, a place, a problem, and an ending.",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "Take turns. Add one sentence each.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "First, draw the hero and the place.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "At first, a clever best friend sat alone at an old playground.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Then she noticed a small door under the slide.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "After that, she called her friends to look.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Now, draw the problem!",
+   "mood": "surprised"
+  },
+  {
+   "role": "theo",
+   "text": "Suddenly, the lights went out.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Then everyone held hands and moved slowly.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "After that, they heard a quiet knock behind the door.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Last card: how does it end?",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "At last, a tiny robot opened the door from the other side.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "In the end, a surprising friendship began.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "At first, a clever best friend sat alone at an old playground. Then she found a small door under the slide.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "After that, the lights went out, but a tiny robot opened the door. In the end, a surprising friendship began.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Would you rather read a book or watch a movie?",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "I'd rather watch a movie. There is no wrong answer.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Pass is always fine. A fictional choice is fine, too.",
+   "mood": "warm"
+  },
+  {
+   "role": "theo",
+   "text": "I'd rather draw. It feels quiet and calm.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Would you rather play your favorite childhood game again or watch your favorite childhood show again?",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "I'd rather play the game again. I'd love to move and laugh with other people.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "What game would you play?",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Hide-and-seek. It's simple and exciting.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Twist: You can only enjoy it for one hour.",
+   "mood": "surprised"
+  },
+  {
+   "role": "theo",
+   "text": "With one hour, I'd still pick the game, but I'd choose a shorter one.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Would you rather invent a new playground game or design a new board game?",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "I'd rather invent a playground game. Movement and a few simple rules.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "How would you explain it?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "By showing it once. Pictures help, too.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Twist: Children in another country will play it, and you can't use spoken instructions.",
+   "mood": "surprised"
+  },
+  {
+   "role": "maya",
+   "text": "With no spoken instructions, I'd pick the board game. Pictures on the cards would explain it.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Would you rather revisit a childhood place as it was then or see how it has changed today?",
+   "mood": "curious"
+  },
+  {
+   "role": "maya",
+   "text": "I'd rather see it as it was then. I'd like to remember the details.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "What would you look for first?",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "The colors. I'd compare them with my memory.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Twist: You can look, but you can't touch or change anything.",
+   "mood": "surprised"
+  },
+  {
+   "role": "theo",
+   "text": "If I can only look, I'd still choose the old place. Looking is enough.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Would you rather keep one meaningful childhood object or preserve one childhood story in a book?",
+   "mood": "curious"
+  },
+  {
+   "role": "theo",
+   "text": "I'd rather preserve a story. A story can be shared more easily.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Which story would you choose?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "A story about a long walk home.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Twist: Someone you've never met will find it.",
+   "mood": "surprised"
+  },
+  {
+   "role": "maya",
+   "text": "If a stranger finds it, I'd choose the story. It speaks for itself.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Would you rather have a treehouse or a secret clubhouse?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I'd rather have a treehouse, because I'd see the whole neighborhood.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Last task: a thirty-second story, real or fictional.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "Use a routine or event, two expressions, and a clear ending. Then ask a question.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "When I look back on my summers, I remember the lake. At first, I used to be afraid to swim.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Then a neighbor taught me to float. In the end, I swam across the lake!",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "How old were you when you swam across?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "After school, I used to get along with the kids next door. We made up a game with a rope.",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "In the end, we took turns being the judge.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "What were the rules?",
+   "mood": "smile"
+  },
+  {
+   "role": "theo",
+   "text": "I want to reuse “look back on.” It sounds natural when I talk about my past.",
+   "mood": "smile"
+  },
+  {
+   "role": "maya",
+   "text": "Keep speaking. Keep growing.",
+   "mood": "laugh"
+  },
+  {
+   "role": "maya",
+   "text": "childhood",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "Their childhood was very different from ours.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "imagination",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "We used our imagination to turn the yard into a spaceship.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "independent",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I became more independent when I learned to prepare a simple snack.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "grow up",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "She grew up in a small town.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "look back on",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "When he looks back on school, he remembers his art teacher.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "One afternoon, we built a kite.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I used to play outside.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I used to be shy.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "Did you use to...?",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I didn't use to...",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "We used to walk to school.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I'm used to waking up early.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I got used to the new school.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "During summer vacations, we would play cards after lunch.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I'd say, Join us this round. We'll even out the teams. That includes them without stopping the game.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I'd say, I'm sorry. It broke when we dropped it. We'd like to fix it. That's honest.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I would prioritize friendship first. This matters because children join in when they feel welcome.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "I'd rather watch a movie.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "Time! Great speaking, everyone!",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "Wonderful! Thank you for sharing.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Nice work! Every sentence counts.",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "That was brave. Well done!",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Great ideas! Time is up.",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "Time! Great speaking, everyone!",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Wonderful! Thank you for sharing.",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "Nice work! Every sentence counts.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "That was brave. Well done!",
+   "mood": "grin"
+  },
+  {
+   "role": "theo",
+   "text": "Great ideas! Time is up.",
+   "mood": "grin"
+  },
+  {
+   "role": "maya",
+   "text": "Hello! I'm Maya. This is how I sound in the lesson.",
+   "mood": ""
+  },
+  {
+   "role": "theo",
+   "text": "Hello! I'm Theo. This is how I sound in the lesson.",
+   "mood": ""
+  },
+  {
+   "role": "alex",
+   "text": "Hello! I'm Alex. This is how I sound in the lesson.",
+   "mood": ""
+  },
+  {
+   "role": "jordan",
+   "text": "Hello! I'm Jordan. This is how I sound in the lesson.",
+   "mood": ""
+  },
+  {
+   "role": "maya",
+   "text": "Welcome to Speaking Club. This is how the narration will sound.",
+   "mood": ""
+  }
+ ],
+ "dict": [
+  {
+   "k": "a",
+   "word": "a",
+   "def": "one; used before a singular noun",
+   "ex": "She has a kite."
+  },
+  {
+   "k": "ability",
+   "word": "ability",
+   "def": "the power or skill to do something",
+   "ex": "She has the ability to explain ideas clearly."
+  },
+  {
+   "k": "able",
+   "word": "able",
+   "def": "having the skill or chance to do something",
+   "ex": "I was able to ride a bike at six."
+  },
+  {
+   "k": "about",
+   "word": "about",
+   "def": "on the subject of",
+   "ex": "Tell us about your favorite game."
+  },
+  {
+   "k": "accuracy",
+   "word": "accuracy",
+   "def": "being correct and free from mistakes",
+   "ex": "Accuracy matters, but clear ideas matter too."
+  },
+  {
+   "k": "across",
+   "word": "across",
+   "def": "from one side to the other",
+   "ex": "We ran across the yard."
+  },
+  {
+   "k": "acting",
+   "word": "acting",
+   "def": "to do something or behave in a certain way",
+   "ex": "The children act quickly when the bell rings."
+  },
+  {
+   "k": "action",
+   "word": "action",
+   "def": "something that you do",
+   "ex": "One action can change the whole game."
+  },
+  {
+   "k": "actions",
+   "word": "actions",
+   "def": "something that you do",
+   "ex": "One action can change the whole game."
+  },
+  {
+   "k": "activities",
+   "word": "activities",
+   "def": "something you do for fun or learning",
+   "ex": "Drawing is a quiet activity."
+  },
+  {
+   "k": "activity",
+   "word": "activity",
+   "def": "something you do for fun or learning",
+   "ex": "Drawing is a quiet activity."
+  },
+  {
+   "k": "actual",
+   "word": "actual",
+   "def": "real, not imagined",
+   "ex": "The actual lesson may be longer than planned."
+  },
+  {
+   "k": "add",
+   "word": "add",
+   "def": "to put one more thing with others",
+   "ex": "Add one more detail to your story."
+  },
+  {
+   "k": "adult",
+   "word": "adult",
+   "def": "a person who is fully grown",
+   "ex": "As an adult, she enjoys quiet evenings."
+  },
+  {
+   "k": "adventure",
+   "word": "adventure",
+   "def": "an exciting or unusual experience",
+   "ex": "The toy robot went on an adventure across the rug."
+  },
+  {
+   "k": "adventures",
+   "word": "adventures",
+   "def": "an exciting or unusual experience",
+   "ex": "The toy robot went on an adventure across the rug."
+  },
+  {
+   "k": "adventurous",
+   "word": "adventurous",
+   "def": "happy to try new or exciting things",
+   "ex": "He was an adventurous child who loved climbing trees."
+  },
+  {
+   "k": "advice",
+   "word": "advice",
+   "def": "helpful ideas about what someone should do",
+   "ex": "She asked an adult for advice."
+  },
+  {
+   "k": "affected",
+   "word": "affected",
+   "def": "to change or influence someone or something",
+   "ex": "A decision can affect many people."
+  },
+  {
+   "k": "afraid",
+   "word": "afraid",
+   "def": "feeling fear",
+   "ex": "I was afraid to swim at first."
+  },
+  {
+   "k": "after",
+   "word": "after",
+   "def": "later than something",
+   "ex": "We played after school."
+  },
+  {
+   "k": "afternoon",
+   "word": "afternoon",
+   "def": "the part of the day between noon and evening",
+   "ex": "One afternoon, we built a kite."
+  },
+  {
+   "k": "again",
+   "word": "again",
+   "def": "one more time",
+   "ex": "Let's play the game again."
+  },
+  {
+   "k": "against",
+   "word": "against",
+   "def": "opposite to; in competition with",
+   "ex": "One team played against the other."
+  },
+  {
+   "k": "age",
+   "word": "age",
+   "def": "how old a person is",
+   "ex": "Your answer may change with age."
+  },
+  {
+   "k": "agree",
+   "word": "agree",
+   "def": "to have the same opinion as someone",
+   "ex": "I agree with you."
+  },
+  {
+   "k": "all",
+   "word": "all",
+   "def": "every one of; the whole amount",
+   "ex": "All of us took turns."
+  },
+  {
+   "k": "almost",
+   "word": "almost",
+   "def": "very nearly",
+   "ex": "We almost missed the bell."
+  },
+  {
+   "k": "alone",
+   "word": "alone",
+   "def": "without other people",
+   "ex": "A clever best friend sat alone at the playground."
+  },
+  {
+   "k": "along",
+   "word": "along",
+   "def": "moving on a line or path",
+   "ex": "We walked along the river."
+  },
+  {
+   "k": "aloud",
+   "word": "aloud",
+   "def": "in a voice that other people can hear",
+   "ex": "Read the sentence aloud."
+  },
+  {
+   "k": "also",
+   "word": "also",
+   "def": "in addition; too",
+   "ex": "I also enjoyed drawing."
+  },
+  {
+   "k": "always",
+   "word": "always",
+   "def": "every time",
+   "ex": "I always walked to school with a friend."
+  },
+  {
+   "k": "american",
+   "word": "american",
+   "def": "from the United States",
+   "ex": "This lesson uses American English."
+  },
+  {
+   "k": "an",
+   "word": "an",
+   "def": "one; used before a singular noun that starts with a vowel sound",
+   "ex": "We built an enormous fort."
+  },
+  {
+   "k": "and",
+   "word": "and",
+   "def": "used to join words or ideas",
+   "ex": "We played tag and hide-and-seek."
+  },
+  {
+   "k": "animated",
+   "word": "animated",
+   "def": "made with moving pictures",
+   "ex": "The lesson starts with an animated opening."
+  },
+  {
+   "k": "anonymous",
+   "word": "anonymous",
+   "def": "without a name",
+   "ex": "The marks are anonymous."
+  },
+  {
+   "k": "another",
+   "word": "another",
+   "def": "one more; a different one",
+   "ex": "Is there another solution?"
+  },
+  {
+   "k": "answer",
+   "word": "answer",
+   "def": "what you say when someone asks a question",
+   "ex": "Give your answer and a reason."
+  },
+  {
+   "k": "any",
+   "word": "any",
+   "def": "one or some; no matter which",
+   "ex": "Any idea is welcome."
+  },
+  {
+   "k": "anything",
+   "word": "anything",
+   "def": "any thing",
+   "ex": "You can say anything you like."
+  },
+  {
+   "k": "apologize",
+   "word": "apologize",
+   "def": "to say you are sorry",
+   "ex": "They decided to apologize to the owner."
+  },
+  {
+   "k": "appears",
+   "word": "appears",
+   "def": "to come into view",
+   "ex": "A mysterious note appears on the table."
+  },
+  {
+   "k": "are",
+   "word": "are",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "arrives",
+   "word": "arrives",
+   "def": "to reach a place",
+   "ex": "The owner arrives at the table."
+  },
+  {
+   "k": "arrow",
+   "word": "arrow",
+   "def": "a sign that points in one direction",
+   "ex": "Follow the arrow to the next step."
+  },
+  {
+   "k": "art",
+   "word": "art",
+   "def": "drawing, painting, and other creative work",
+   "ex": "Art was my favorite class."
+  },
+  {
+   "k": "art-and-sports",
+   "word": "art-and-sports",
+   "def": "joining art activities with sports",
+   "ex": "We planned an art-and-sports relay."
+  },
+  {
+   "k": "as",
+   "word": "as",
+   "def": "one; used before a singular noun",
+   "ex": "She has a kite."
+  },
+  {
+   "k": "ask",
+   "word": "ask",
+   "def": "to say something to get an answer",
+   "ex": "Ask a follow-up question."
+  },
+  {
+   "k": "asks",
+   "word": "asks",
+   "def": "to say something to get an answer",
+   "ex": "Ask a follow-up question."
+  },
+  {
+   "k": "assess",
+   "word": "assess",
+   "def": "to judge how good or how much something is",
+   "ex": "The lesson does not assess your speaking automatically."
+  },
+  {
+   "k": "assessment",
+   "word": "assessment",
+   "def": "a way of judging how well someone does something",
+   "ex": "This is a teacher's observation, not an automatic assessment."
+  },
+  {
+   "k": "at",
+   "word": "at",
+   "def": "in or near a place or time",
+   "ex": "We met at the park."
+  },
+  {
+   "k": "audio",
+   "word": "audio",
+   "def": "sound that you can hear",
+   "ex": "Each word has audio."
+  },
+  {
+   "k": "author",
+   "word": "author",
+   "def": "the person who wrote something",
+   "ex": "The author chose these pronunciations."
+  },
+  {
+   "k": "automatic",
+   "word": "automatic",
+   "def": "done by a machine without a person",
+   "ex": "There is no automatic scoring."
+  },
+  {
+   "k": "automatically",
+   "word": "automatically",
+   "def": "done by a machine, without a person doing it",
+   "ex": "The timer can start automatically."
+  },
+  {
+   "k": "available",
+   "word": "available",
+   "def": "ready to use",
+   "ex": "A backup plan is available."
+  },
+  {
+   "k": "away",
+   "word": "away",
+   "def": "to another place; not here",
+   "ex": "The ball rolled away."
+  },
+  {
+   "k": "b",
+   "word": "b",
+   "def": "the second letter of the alphabet",
+   "ex": "Choose A or B."
+  },
+  {
+   "k": "babysitter",
+   "word": "babysitter",
+   "def": "a person who looks after children for a short time",
+   "ex": "The sleepy babysitter read us a story."
+  },
+  {
+   "k": "back",
+   "word": "back",
+   "def": "to an earlier place or time",
+   "ex": "I look back on those summers."
+  },
+  {
+   "k": "background",
+   "word": "background",
+   "def": "the part of a picture behind the main subject",
+   "ex": "The background shows a schoolyard."
+  },
+  {
+   "k": "backpack",
+   "word": "backpack",
+   "def": "a bag that you carry on your back",
+   "ex": "The new child had a backpack."
+  },
+  {
+   "k": "ball",
+   "word": "ball",
+   "def": "a round object used in games",
+   "ex": "We kicked the ball across the yard."
+  },
+  {
+   "k": "banks",
+   "word": "banks",
+   "def": "a collection of useful words or items",
+   "ex": "Open the word bank for ideas."
+  },
+  {
+   "k": "base",
+   "word": "base",
+   "def": "the main or starting part",
+   "ex": "Use the base form of the verb."
+  },
+  {
+   "k": "be",
+   "word": "be",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "became",
+   "word": "became",
+   "def": "to begin to be",
+   "ex": "She became more independent."
+  },
+  {
+   "k": "because",
+   "word": "because",
+   "def": "for the reason that",
+   "ex": "I liked it because it was exciting."
+  },
+  {
+   "k": "become",
+   "word": "become",
+   "def": "to begin to be",
+   "ex": "She became more independent."
+  },
+  {
+   "k": "becomes",
+   "word": "becomes",
+   "def": "to begin to be",
+   "ex": "She became more independent."
+  },
+  {
+   "k": "becoming",
+   "word": "becoming",
+   "def": "to begin to be",
+   "ex": "She became more independent."
+  },
+  {
+   "k": "bed",
+   "word": "bed",
+   "def": "the second letter of the alphabet",
+   "ex": "Choose A or B."
+  },
+  {
+   "k": "bedtime",
+   "word": "bedtime",
+   "def": "the time when you go to bed",
+   "ex": "Bedtime was at eight."
+  },
+  {
+   "k": "been",
+   "word": "been",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "before",
+   "word": "before",
+   "def": "earlier than something",
+   "ex": "We finished before the rain."
+  },
+  {
+   "k": "began",
+   "word": "began",
+   "def": "to start",
+   "ex": "The story begins at an old playground."
+  },
+  {
+   "k": "beginning",
+   "word": "beginning",
+   "def": "to start",
+   "ex": "The story begins at an old playground."
+  },
+  {
+   "k": "begins",
+   "word": "begins",
+   "def": "to start",
+   "ex": "The story begins at an old playground."
+  },
+  {
+   "k": "behind",
+   "word": "behind",
+   "def": "at the back of something",
+   "ex": "There was a small door behind the slide."
+  },
+  {
+   "k": "being",
+   "word": "being",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "bell",
+   "word": "bell",
+   "def": "a metal object that makes a ringing sound",
+   "ex": "I used to ring my bicycle bell every day."
+  },
+  {
+   "k": "below",
+   "word": "below",
+   "def": "lower than something",
+   "ex": "Look at the picture below."
+  },
+  {
+   "k": "best",
+   "word": "best",
+   "def": "of high quality; pleasant",
+   "ex": "That is a good idea."
+  },
+  {
+   "k": "better",
+   "word": "better",
+   "def": "of a higher quality",
+   "ex": "Is cooperation better than competition?"
+  },
+  {
+   "k": "bicycle",
+   "word": "bicycle",
+   "def": "a vehicle with two wheels that you ride by pedaling",
+   "ex": "I rode my bicycle to school."
+  },
+  {
+   "k": "big",
+   "word": "big",
+   "def": "large",
+   "ex": "It was a big decision."
+  },
+  {
+   "k": "bike",
+   "word": "bike",
+   "def": "a bicycle",
+   "ex": "I rode my bike to the library."
+  },
+  {
+   "k": "blanket",
+   "word": "blanket",
+   "def": "a soft cover for a bed",
+   "ex": "I used to read under the blanket."
+  },
+  {
+   "k": "blocks",
+   "word": "blocks",
+   "def": "small pieces that you build with",
+   "ex": "We made towers with building blocks."
+  },
+  {
+   "k": "blue",
+   "word": "blue",
+   "def": "the color of the sky on a clear day",
+   "ex": "The blue flashlight hung by my bed."
+  },
+  {
+   "k": "board",
+   "word": "board",
+   "def": "a flat piece used for a game",
+   "ex": "We played a board game."
+  },
+  {
+   "k": "bonus",
+   "word": "bonus",
+   "def": "something extra that you get or do",
+   "ex": "Here is a bonus challenge."
+  },
+  {
+   "k": "book",
+   "word": "book",
+   "def": "pages with words and pictures, joined together",
+   "ex": "I borrowed a book from the library."
+  },
+  {
+   "k": "books",
+   "word": "books",
+   "def": "pages with words and pictures, joined together",
+   "ex": "I borrowed a book from the library."
+  },
+  {
+   "k": "borrowed",
+   "word": "borrowed",
+   "def": "to take something and give it back later",
+   "ex": "They borrowed a model bridge."
+  },
+  {
+   "k": "both",
+   "word": "both",
+   "def": "the two of them",
+   "ex": "Both friends felt worried."
+  },
+  {
+   "k": "box",
+   "word": "box",
+   "def": "a container with straight sides",
+   "ex": "The memory box is on the table."
+  },
+  {
+   "k": "brave",
+   "word": "brave",
+   "def": "not afraid to do something difficult",
+   "ex": "A brave kid walked into the dark."
+  },
+  {
+   "k": "bridge",
+   "word": "bridge",
+   "def": "a structure that crosses over water or a road",
+   "ex": "The model bridge was made of wood."
+  },
+  {
+   "k": "bright",
+   "word": "bright",
+   "def": "giving a lot of light; clear and strong",
+   "ex": "The bell made a bright sound."
+  },
+  {
+   "k": "broke",
+   "word": "broke",
+   "def": "to damage something so that it comes apart",
+   "ex": "A small piece broke when they dropped it."
+  },
+  {
+   "k": "browser",
+   "word": "browser",
+   "def": "a program for using the internet",
+   "ex": "Use a modern browser."
+  },
+  {
+   "k": "build",
+   "word": "build",
+   "def": "to make something by putting parts together",
+   "ex": "We built a fort."
+  },
+  {
+   "k": "building",
+   "word": "building",
+   "def": "a place with walls and a roof",
+   "ex": "The school building is red."
+  },
+  {
+   "k": "builds",
+   "word": "builds",
+   "def": "to make something by putting parts together",
+   "ex": "We built a fort."
+  },
+  {
+   "k": "built",
+   "word": "built",
+   "def": "to make something by putting parts together",
+   "ex": "We built a fort."
+  },
+  {
+   "k": "bus",
+   "word": "bus",
+   "def": "a large vehicle that carries many people",
+   "ex": "We waited at the bus stop in the rain."
+  },
+  {
+   "k": "but",
+   "word": "but",
+   "def": "used to show a different idea",
+   "ex": "It was fun, but it was tiring."
+  },
+  {
+   "k": "buttons",
+   "word": "buttons",
+   "def": "a small part you press",
+   "ex": "Press the button to start the timer."
+  },
+  {
+   "k": "by",
+   "word": "by",
+   "def": "next to; done through",
+   "ex": "She sat by the window."
+  },
+  {
+   "k": "c",
+   "word": "c",
+   "def": "the third letter of the alphabet",
+   "ex": "C is the third letter."
+  },
+  {
+   "k": "called",
+   "word": "called",
+   "def": "to ask someone to come; to name",
+   "ex": "She called her friends to look."
+  },
+  {
+   "k": "calm",
+   "word": "calm",
+   "def": "quiet and relaxed",
+   "ex": "Drawing is a calm activity."
+  },
+  {
+   "k": "came",
+   "word": "came",
+   "def": "to move toward the speaker or arrive",
+   "ex": "Come and join us."
+  },
+  {
+   "k": "campsite",
+   "word": "campsite",
+   "def": "a place where people stay in tents",
+   "ex": "We sat by the fire at the summer campsite."
+  },
+  {
+   "k": "can't",
+   "word": "can't",
+   "def": "to be able to; to be allowed to",
+   "ex": "You can pass if you like."
+  },
+  {
+   "k": "can",
+   "word": "can",
+   "def": "to be able to; to be allowed to",
+   "ex": "You can pass if you like."
+  },
+  {
+   "k": "captions",
+   "word": "captions",
+   "def": "words shown on a screen that match what is said",
+   "ex": "The captions follow the speaker."
+  },
+  {
+   "k": "card",
+   "word": "card",
+   "def": "a small, flat piece of paper",
+   "ex": "Write the rules on one card."
+  },
+  {
+   "k": "cardboard",
+   "word": "cardboard",
+   "def": "thick, stiff paper",
+   "ex": "We turned a cardboard box into a castle."
+  },
+  {
+   "k": "cards",
+   "word": "cards",
+   "def": "a small, flat piece of paper",
+   "ex": "Write the rules on one card."
+  },
+  {
+   "k": "care",
+   "word": "care",
+   "def": "attention to avoid problems",
+   "ex": "Handle the model with care."
+  },
+  {
+   "k": "careful",
+   "word": "careful",
+   "def": "thinking about what you do to avoid mistakes",
+   "ex": "Be careful with borrowed things."
+  },
+  {
+   "k": "caring",
+   "word": "caring",
+   "def": "attention to avoid problems",
+   "ex": "Handle the model with care."
+  },
+  {
+   "k": "carrying",
+   "word": "carrying",
+   "def": "to hold something and take it somewhere",
+   "ex": "They were carrying the bridge."
+  },
+  {
+   "k": "castle",
+   "word": "castle",
+   "def": "a large old building with strong walls",
+   "ex": "The box became a castle."
+  },
+  {
+   "k": "celebrate",
+   "word": "celebrate",
+   "def": "to enjoy a special event together",
+   "ex": "The whole group celebrates."
+  },
+  {
+   "k": "celebrates",
+   "word": "celebrates",
+   "def": "to enjoy a special event together",
+   "ex": "The whole group celebrates."
+  },
+  {
+   "k": "challenge",
+   "word": "challenge",
+   "def": "something difficult that tests your skill",
+   "ex": "Try the longer challenge."
+  },
+  {
+   "k": "change",
+   "word": "change",
+   "def": "to become different, or to make something different",
+   "ex": "Many things change as we grow up."
+  },
+  {
+   "k": "changed",
+   "word": "changed",
+   "def": "to become different, or to make something different",
+   "ex": "Many things change as we grow up."
+  },
+  {
+   "k": "changes",
+   "word": "changes",
+   "def": "to become different, or to make something different",
+   "ex": "Many things change as we grow up."
+  },
+  {
+   "k": "chapter",
+   "word": "chapter",
+   "def": "a main part of a book or lesson",
+   "ex": "This is chapter four."
+  },
+  {
+   "k": "chapters",
+   "word": "chapters",
+   "def": "a main part of a book or lesson",
+   "ex": "This is chapter four."
+  },
+  {
+   "k": "character",
+   "word": "character",
+   "def": "a person in a story",
+   "ex": "Maya is a character in this lesson."
+  },
+  {
+   "k": "chart",
+   "word": "chart",
+   "def": "a table or picture that shows information",
+   "ex": "Use the sound chart to check symbols."
+  },
+  {
+   "k": "check",
+   "word": "check",
+   "def": "to look at something to make sure it is right",
+   "ex": "Check your answer."
+  },
+  {
+   "k": "checked",
+   "word": "checked",
+   "def": "to look at something to make sure it is right",
+   "ex": "Check your answer."
+  },
+  {
+   "k": "child",
+   "word": "child",
+   "def": "a young person",
+   "ex": "Every child plays in a different way."
+  },
+  {
+   "k": "childhood",
+   "word": "childhood",
+   "def": "the period of someone's life when they are a child",
+   "ex": "Their childhood was very different from ours."
+  },
+  {
+   "k": "children",
+   "word": "children",
+   "def": "a young person",
+   "ex": "Every child plays in a different way."
+  },
+  {
+   "k": "choice",
+   "word": "choice",
+   "def": "the act of choosing; something you choose",
+   "ex": "Both choices are fine."
+  },
+  {
+   "k": "choices",
+   "word": "choices",
+   "def": "the act of choosing; something you choose",
+   "ex": "Both choices are fine."
+  },
+  {
+   "k": "choose",
+   "word": "choose",
+   "def": "to pick one thing from several",
+   "ex": "Choose a place on the scale."
+  },
+  {
+   "k": "choosing",
+   "word": "choosing",
+   "def": "to pick one thing from several",
+   "ex": "Choose a place on the scale."
+  },
+  {
+   "k": "chores",
+   "word": "chores",
+   "def": "small regular jobs at home",
+   "ex": "Chores helped me become independent."
+  },
+  {
+   "k": "chose",
+   "word": "chose",
+   "def": "to pick one thing from several",
+   "ex": "Choose a place on the scale."
+  },
+  {
+   "k": "circles",
+   "word": "circles",
+   "def": "a perfectly round shape",
+   "ex": "We sat in a circle."
+  },
+  {
+   "k": "circumstances",
+   "word": "circumstances",
+   "def": "the facts and conditions around a situation",
+   "ex": "Circumstances can change your answer."
+  },
+  {
+   "k": "claim",
+   "word": "claim",
+   "def": "a statement that something is true",
+   "ex": "This is a claim, not a fact."
+  },
+  {
+   "k": "claims",
+   "word": "claims",
+   "def": "a statement that something is true",
+   "ex": "This is a claim, not a fact."
+  },
+  {
+   "k": "clarity",
+   "word": "clarity",
+   "def": "being clear and easy to understand",
+   "ex": "Clarity is one part of the rubric."
+  },
+  {
+   "k": "class",
+   "word": "class",
+   "def": "a group of students who learn together",
+   "ex": "The class chose a plan."
+  },
+  {
+   "k": "clear",
+   "word": "clear",
+   "def": "easy to understand",
+   "ex": "Give a clear ending."
+  },
+  {
+   "k": "clever",
+   "word": "clever",
+   "def": "quick at understanding and finding answers",
+   "ex": "A clever best friend solved the puzzle."
+  },
+  {
+   "k": "click",
+   "word": "click",
+   "def": "to press a mouse button",
+   "ex": "Click a choice to add one."
+  },
+  {
+   "k": "close",
+   "word": "close",
+   "def": "to shut",
+   "ex": "Close the box slowly."
+  },
+  {
+   "k": "cloud",
+   "word": "cloud",
+   "def": "a white or gray shape in the sky",
+   "ex": "A cloud covered the sun."
+  },
+  {
+   "k": "club",
+   "word": "club",
+   "def": "a group of people who meet for a shared interest",
+   "ex": "We joined a drama club."
+  },
+  {
+   "k": "clubhouse",
+   "word": "clubhouse",
+   "def": "a small house for club members",
+   "ex": "We built a secret clubhouse."
+  },
+  {
+   "k": "clue",
+   "word": "clue",
+   "def": "a small piece of information that helps you find an answer",
+   "ex": "Clue one: it was small and made of metal."
+  },
+  {
+   "k": "clues",
+   "word": "clues",
+   "def": "a small piece of information that helps you find an answer",
+   "ex": "Clue one: it was small and made of metal."
+  },
+  {
+   "k": "colors",
+   "word": "colors",
+   "def": "red, blue, yellow, and other shades",
+   "ex": "The colors were bright."
+  },
+  {
+   "k": "combine",
+   "word": "combine",
+   "def": "to join two or more things",
+   "ex": "Combine art and sports in one game."
+  },
+  {
+   "k": "come",
+   "word": "come",
+   "def": "to move toward the speaker or arrive",
+   "ex": "Come and join us."
+  },
+  {
+   "k": "comic",
+   "word": "comic",
+   "def": "a story told in pictures",
+   "ex": "I loved comic books."
+  },
+  {
+   "k": "compare",
+   "word": "compare",
+   "def": "to look at how things are alike and different",
+   "ex": "Compare childhood and adult life."
+  },
+  {
+   "k": "compared",
+   "word": "compared",
+   "def": "to look at how things are alike and different",
+   "ex": "Compare childhood and adult life."
+  },
+  {
+   "k": "completely",
+   "word": "completely",
+   "def": "in every way",
+   "ex": "I completely forgot the rules."
+  },
+  {
+   "k": "compromise",
+   "word": "compromise",
+   "def": "an agreement where each side gives up something",
+   "ex": "Could we reach a compromise?"
+  },
+  {
+   "k": "computer",
+   "word": "computer",
+   "def": "a machine for storing and using information",
+   "ex": "Save the notes on this computer."
+  },
+  {
+   "k": "confidence",
+   "word": "confidence",
+   "def": "a feeling that you can do something well",
+   "ex": "Small tasks build confidence."
+  },
+  {
+   "k": "connect",
+   "word": "connect",
+   "def": "to join or link",
+   "ex": "Many people connect games with childhood."
+  },
+  {
+   "k": "context",
+   "word": "context",
+   "def": "the situation in which something happens",
+   "ex": "The context matters."
+  },
+  {
+   "k": "continue",
+   "word": "continue",
+   "def": "to keep going",
+   "ex": "Continue the conversation."
+  },
+  {
+   "k": "controls",
+   "word": "controls",
+   "def": "buttons that you use to operate something",
+   "ex": "Hide the controls with H."
+  },
+  {
+   "k": "converted",
+   "word": "converted",
+   "def": "to change into a different form",
+   "ex": "The symbols were converted to the chart symbols."
+  },
+  {
+   "k": "cook",
+   "word": "cook",
+   "def": "to prepare food with heat",
+   "ex": "Now I can cook dinner by myself."
+  },
+  {
+   "k": "cooperation",
+   "word": "cooperation",
+   "def": "working well together",
+   "ex": "Cooperation makes the job easier."
+  },
+  {
+   "k": "copies",
+   "word": "copies",
+   "def": "to make something that is the same",
+   "ex": "Copy the sentence into your notes."
+  },
+  {
+   "k": "core",
+   "word": "core",
+   "def": "most important",
+   "ex": "These are the core words."
+  },
+  {
+   "k": "correct",
+   "word": "correct",
+   "def": "right; without mistakes",
+   "ex": "The correct answer is A."
+  },
+  {
+   "k": "corrections",
+   "word": "corrections",
+   "def": "a change that fixes a mistake",
+   "ex": "The teacher offers a correction after your turn."
+  },
+  {
+   "k": "could",
+   "word": "could",
+   "def": "used to talk about possibility or a polite request",
+   "ex": "Could we compromise?"
+  },
+  {
+   "k": "count",
+   "word": "count",
+   "def": "to find the total number",
+   "ex": "The teacher counts the choices."
+  },
+  {
+   "k": "counted",
+   "word": "counted",
+   "def": "to find the total number",
+   "ex": "The teacher counts the choices."
+  },
+  {
+   "k": "country",
+   "word": "country",
+   "def": "a nation, such as Canada or Japan",
+   "ex": "Children in another country will play the game."
+  },
+  {
+   "k": "cousin",
+   "word": "cousin",
+   "def": "the child of your aunt or uncle",
+   "ex": "My cousin played with us."
+  },
+  {
+   "k": "crayons",
+   "word": "crayons",
+   "def": "colored sticks for drawing",
+   "ex": "We drew with crayons."
+  },
+  {
+   "k": "creative",
+   "word": "creative",
+   "def": "able to make new ideas or things",
+   "ex": "Technology can help children be creative."
+  },
+  {
+   "k": "creativity",
+   "word": "creativity",
+   "def": "the ability to make new ideas or things",
+   "ex": "Creativity grows when we play."
+  },
+  {
+   "k": "crowded",
+   "word": "crowded",
+   "def": "very full of people",
+   "ex": "The school hallway was crowded."
+  },
+  {
+   "k": "csv",
+   "word": "csv",
+   "def": "a simple file for tables of data",
+   "ex": "Export the marks as a CSV file."
+  },
+  {
+   "k": "curious",
+   "word": "curious",
+   "def": "wanting to learn or know more",
+   "ex": "Curious children ask many questions."
+  },
+  {
+   "k": "cycle",
+   "word": "cycle",
+   "def": "a set of steps that repeat",
+   "ex": "Follow the speaking cycle."
+  },
+  {
+   "k": "damage",
+   "word": "damage",
+   "def": "to harm something so that it does not work well",
+   "ex": "They accidentally damaged the bridge."
+  },
+  {
+   "k": "damaged",
+   "word": "damaged",
+   "def": "to harm something so that it does not work well",
+   "ex": "They accidentally damaged the bridge."
+  },
+  {
+   "k": "data",
+   "word": "data",
+   "def": "facts and information",
+   "ex": "No student data is saved by default."
+  },
+  {
+   "k": "day",
+   "word": "day",
+   "def": "twenty-four hours; the time when it is light",
+   "ex": "It was a long day."
+  },
+  {
+   "k": "days",
+   "word": "days",
+   "def": "twenty-four hours; the time when it is light",
+   "ex": "It was a long day."
+  },
+  {
+   "k": "decide",
+   "word": "decide",
+   "def": "to make a choice",
+   "ex": "The group had to decide quickly."
+  },
+  {
+   "k": "decided",
+   "word": "decided",
+   "def": "to make a choice",
+   "ex": "The group had to decide quickly."
+  },
+  {
+   "k": "decides",
+   "word": "decides",
+   "def": "to make a choice",
+   "ex": "The group had to decide quickly."
+  },
+  {
+   "k": "decisions",
+   "word": "decisions",
+   "def": "a choice that you make",
+   "ex": "Fair decisions include everyone."
+  },
+  {
+   "k": "default",
+   "word": "default",
+   "def": "the setting that is used when you do not choose another",
+   "ex": "Saving is off by default."
+  },
+  {
+   "k": "demo",
+   "word": "demo",
+   "def": "a short example that shows how something works",
+   "ex": "Demo Mode shows sample answers."
+  },
+  {
+   "k": "depend",
+   "word": "depend",
+   "def": "to be decided by something else",
+   "ex": "It depends on the situation."
+  },
+  {
+   "k": "depends",
+   "word": "depends",
+   "def": "to be decided by something else",
+   "ex": "It depends on the situation."
+  },
+  {
+   "k": "describe",
+   "word": "describe",
+   "def": "to say what someone or something is like",
+   "ex": "Describe your favorite game."
+  },
+  {
+   "k": "descriptions",
+   "word": "descriptions",
+   "def": "words that say what something is like",
+   "ex": "Use a short description."
+  },
+  {
+   "k": "design",
+   "word": "design",
+   "def": "to plan how something will look or work",
+   "ex": "I'd like to design a new board game."
+  },
+  {
+   "k": "desk",
+   "word": "desk",
+   "def": "a table where you write or study",
+   "ex": "It used to be on my desk."
+  },
+  {
+   "k": "detail",
+   "word": "detail",
+   "def": "one small fact about something",
+   "ex": "Add one more detail."
+  },
+  {
+   "k": "details",
+   "word": "details",
+   "def": "one small fact about something",
+   "ex": "Add one more detail."
+  },
+  {
+   "k": "develop",
+   "word": "develop",
+   "def": "to grow and change over time",
+   "ex": "Children develop new skills."
+  },
+  {
+   "k": "developing",
+   "word": "developing",
+   "def": "to grow and change over time",
+   "ex": "Children develop new skills."
+  },
+  {
+   "k": "dictionaries",
+   "word": "dictionaries",
+   "def": "a book or website that explains words",
+   "ex": "Use a dictionary to check the meaning."
+  },
+  {
+   "k": "dictionary",
+   "word": "dictionary",
+   "def": "a book or website that explains words",
+   "ex": "Use a dictionary to check the meaning."
+  },
+  {
+   "k": "did",
+   "word": "did",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "didn't",
+   "word": "didn't",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "different",
+   "word": "different",
+   "def": "not the same",
+   "ex": "Everyone's childhood is different."
+  },
+  {
+   "k": "differently",
+   "word": "differently",
+   "def": "not the same",
+   "ex": "Everyone's childhood is different."
+  },
+  {
+   "k": "difficult",
+   "word": "difficult",
+   "def": "not easy",
+   "ex": "Cooking was difficult at first."
+  },
+  {
+   "k": "dilemmas",
+   "word": "dilemmas",
+   "def": "a hard choice between two or more options",
+   "ex": "Each dilemma has more than one good answer."
+  },
+  {
+   "k": "dinner",
+   "word": "dinner",
+   "def": "the main meal of the day, usually in the evening",
+   "ex": "We had dinner at six."
+  },
+  {
+   "k": "disagree",
+   "word": "disagree",
+   "def": "to have a different opinion",
+   "ex": "I partly disagree."
+  },
+  {
+   "k": "discuss",
+   "word": "discuss",
+   "def": "to talk about something with other people",
+   "ex": "Discuss what you would do."
+  },
+  {
+   "k": "discussion",
+   "word": "discussion",
+   "def": "a conversation about a topic",
+   "ex": "The discussion was lively."
+  },
+  {
+   "k": "divide",
+   "word": "divide",
+   "def": "to split into parts",
+   "ex": "Divide the time between sports and art."
+  },
+  {
+   "k": "dizzy",
+   "word": "dizzy",
+   "def": "feeling that everything is spinning",
+   "ex": "Spinning makes me dizzy."
+  },
+  {
+   "k": "do",
+   "word": "do",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "does",
+   "word": "does",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "doesn't",
+   "word": "doesn't",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "doing",
+   "word": "doing",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "don't",
+   "word": "don't",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "done",
+   "word": "done",
+   "def": "to carry out an action",
+   "ex": "What did you do after school?"
+  },
+  {
+   "k": "door",
+   "word": "door",
+   "def": "the part you open to enter a room",
+   "ex": "The door was painted blue."
+  },
+  {
+   "k": "dot",
+   "word": "dot",
+   "def": "a very small round mark",
+   "ex": "A faint dot means there is no transcription yet."
+  },
+  {
+   "k": "double-click",
+   "word": "double-click",
+   "def": "to press a mouse button two times quickly",
+   "ex": "Double-click any word for its meaning."
+  },
+  {
+   "k": "down",
+   "word": "down",
+   "def": "toward a lower place",
+   "ex": "The ball rolled down the hill."
+  },
+  {
+   "k": "drag",
+   "word": "drag",
+   "def": "to pull something along",
+   "ex": "Drag a card to a new place."
+  },
+  {
+   "k": "drama",
+   "word": "drama",
+   "def": "acting and plays",
+   "ex": "I joined the drama club."
+  },
+  {
+   "k": "draw",
+   "word": "draw",
+   "def": "to make a picture with a pencil or pen",
+   "ex": "I loved to draw on rainy days."
+  },
+  {
+   "k": "drawing",
+   "word": "drawing",
+   "def": "to make a picture with a pencil or pen",
+   "ex": "I loved to draw on rainy days."
+  },
+  {
+   "k": "dropped",
+   "word": "dropped",
+   "def": "to let something fall",
+   "ex": "They dropped the model by accident."
+  },
+  {
+   "k": "during",
+   "word": "during",
+   "def": "at some point in a period of time",
+   "ex": "During summer vacations, we would play cards."
+  },
+  {
+   "k": "e",
+   "word": "e",
+   "def": "the fifth letter of the alphabet",
+   "ex": "E is a vowel."
+  },
+  {
+   "k": "each",
+   "word": "each",
+   "def": "every one of two or more",
+   "ex": "Each round has a twist."
+  },
+  {
+   "k": "early",
+   "word": "early",
+   "def": "before the usual or expected time",
+   "ex": "I woke up early."
+  },
+  {
+   "k": "easily",
+   "word": "easily",
+   "def": "without difficulty",
+   "ex": "She learned easily."
+  },
+  {
+   "k": "effects",
+   "word": "effects",
+   "def": "results or changes caused by something",
+   "ex": "The effects of the rain were big."
+  },
+  {
+   "k": "emerging",
+   "word": "emerging",
+   "def": "just beginning to appear or develop",
+   "ex": "Emerging means you are starting to use it."
+  },
+  {
+   "k": "end",
+   "word": "end",
+   "def": "the last part",
+   "ex": "Give your story a clear end."
+  },
+  {
+   "k": "ending",
+   "word": "ending",
+   "def": "the last part",
+   "ex": "Give your story a clear end."
+  },
+  {
+   "k": "english",
+   "word": "english",
+   "def": "the language spoken in the United States and many other countries",
+   "ex": "We practice English together."
+  },
+  {
+   "k": "enjoy",
+   "word": "enjoy",
+   "def": "to like doing something",
+   "ex": "I enjoy drawing."
+  },
+  {
+   "k": "enough",
+   "word": "enough",
+   "def": "as much as you need",
+   "ex": "We don't have enough equipment."
+  },
+  {
+   "k": "entry",
+   "word": "entry",
+   "def": "a single item in a dictionary",
+   "ex": "The entry shows the meaning."
+  },
+  {
+   "k": "even",
+   "word": "even",
+   "def": "used to add surprise",
+   "ex": "Even the quiet child had an idea."
+  },
+  {
+   "k": "event",
+   "word": "event",
+   "def": "something that happens, especially something planned",
+   "ex": "The school event lasts one hour."
+  },
+  {
+   "k": "every",
+   "word": "every",
+   "def": "each one of a group",
+   "ex": "Every child can join in."
+  },
+  {
+   "k": "everyone",
+   "word": "everyone",
+   "def": "all people",
+   "ex": "Everyone gets a turn."
+  },
+  {
+   "k": "everything",
+   "word": "everything",
+   "def": "all things",
+   "ex": "Everything changed that year."
+  },
+  {
+   "k": "example",
+   "word": "example",
+   "def": "something that shows what a general rule means",
+   "ex": "One example would be a game of tag."
+  },
+  {
+   "k": "exception",
+   "word": "exception",
+   "def": "something that does not follow the usual rule",
+   "ex": "Give a reason, an example, or an exception."
+  },
+  {
+   "k": "exciting",
+   "word": "exciting",
+   "def": "making you feel happy and interested",
+   "ex": "The game was exciting."
+  },
+  {
+   "k": "exit",
+   "word": "exit",
+   "def": "a way out; the end of a lesson",
+   "ex": "The exit challenge is the last task."
+  },
+  {
+   "k": "explain",
+   "word": "explain",
+   "def": "to make something clear",
+   "ex": "Explain your ranking."
+  },
+  {
+   "k": "export",
+   "word": "export",
+   "def": "to save information in a file that you can use elsewhere",
+   "ex": "Export the notes as a file."
+  },
+  {
+   "k": "expression",
+   "word": "expression",
+   "def": "a word or phrase",
+   "ex": "\"Take turns\" is a useful expression."
+  },
+  {
+   "k": "expressions",
+   "word": "expressions",
+   "def": "a word or phrase",
+   "ex": "\"Take turns\" is a useful expression."
+  },
+  {
+   "k": "extend",
+   "word": "extend",
+   "def": "to make longer",
+   "ex": "Extra discussion may extend the lesson."
+  },
+  {
+   "k": "extension",
+   "word": "extension",
+   "def": "an extra part that goes beyond the basic task",
+   "ex": "The extension uses would."
+  },
+  {
+   "k": "f",
+   "word": "f",
+   "def": "the sixth letter of the alphabet",
+   "ex": "F is for full screen."
+  },
+  {
+   "k": "facts",
+   "word": "facts",
+   "def": "something that is true",
+   "ex": "A claim is not always a fact."
+  },
+  {
+   "k": "faint",
+   "word": "faint",
+   "def": "not strong; hard to see",
+   "ex": "A faint dot appears below the word."
+  },
+  {
+   "k": "fair",
+   "word": "fair",
+   "def": "treating everyone equally",
+   "ex": "A fair game gives everyone a turn."
+  },
+  {
+   "k": "fairly",
+   "word": "fairly",
+   "def": "in a way that treats people equally",
+   "ex": "They shared the tasks fairly."
+  },
+  {
+   "k": "familiar",
+   "word": "familiar",
+   "def": "well known to you",
+   "ex": "The street felt familiar."
+  },
+  {
+   "k": "favorite",
+   "word": "favorite",
+   "def": "liked best",
+   "ex": "What is your favorite childhood game?"
+  },
+  {
+   "k": "feedback",
+   "word": "feedback",
+   "def": "comments about how well someone did something",
+   "ex": "The teacher gives feedback after your turn."
+  },
+  {
+   "k": "feel",
+   "word": "feel",
+   "def": "to have an emotion or sense",
+   "ex": "How do you feel about it now?"
+  },
+  {
+   "k": "feeling",
+   "word": "feeling",
+   "def": "to have an emotion or sense",
+   "ex": "How do you feel about it now?"
+  },
+  {
+   "k": "feels",
+   "word": "feels",
+   "def": "to have an emotion or sense",
+   "ex": "How do you feel about it now?"
+  },
+  {
+   "k": "fell",
+   "word": "fell",
+   "def": "to go down quickly",
+   "ex": "I laughed until I fell over."
+  },
+  {
+   "k": "few",
+   "word": "few",
+   "def": "a small number of",
+   "ex": "A few friends joined us."
+  },
+  {
+   "k": "fictional",
+   "word": "fictional",
+   "def": "not real; from a story",
+   "ex": "Use a fictional character if you like."
+  },
+  {
+   "k": "film",
+   "word": "film",
+   "def": "a movie",
+   "ex": "Would you rather read a book or watch a film?"
+  },
+  {
+   "k": "final",
+   "word": "final",
+   "def": "last",
+   "ex": "State your final answer."
+  },
+  {
+   "k": "find",
+   "word": "find",
+   "def": "to discover something",
+   "ex": "Someone you've never met will find it."
+  },
+  {
+   "k": "finds",
+   "word": "finds",
+   "def": "to discover something",
+   "ex": "Someone you've never met will find it."
+  },
+  {
+   "k": "fine",
+   "word": "fine",
+   "def": "good enough; okay",
+   "ex": "Pass is fine."
+  },
+  {
+   "k": "finish",
+   "word": "finish",
+   "def": "to complete",
+   "ex": "Finish the story with an ending."
+  },
+  {
+   "k": "first",
+   "word": "first",
+   "def": "before anything else",
+   "ex": "First, we played tag."
+  },
+  {
+   "k": "five",
+   "word": "five",
+   "def": "the number 5",
+   "ex": "There are five choices on the scale."
+  },
+  {
+   "k": "fix",
+   "word": "fix",
+   "def": "to repair",
+   "ex": "We'd like to fix it together."
+  },
+  {
+   "k": "flashlight",
+   "word": "flashlight",
+   "def": "a small light that you carry in your hand",
+   "ex": "I used to keep a flashlight under my pillow."
+  },
+  {
+   "k": "float",
+   "word": "float",
+   "def": "to stay on top of water",
+   "ex": "A neighbor taught me to float."
+  },
+  {
+   "k": "fluent",
+   "word": "fluent",
+   "def": "able to speak a language easily",
+   "ex": "Keep practicing to become fluent."
+  },
+  {
+   "k": "flying",
+   "word": "flying",
+   "def": "to move through the air",
+   "ex": "Spinning felt like flying."
+  },
+  {
+   "k": "follow-up",
+   "word": "follow-up",
+   "def": "coming after something",
+   "ex": "Ask a follow-up question."
+  },
+  {
+   "k": "for",
+   "word": "for",
+   "def": "intended to help or belong to",
+   "ex": "This card is for you."
+  },
+  {
+   "k": "form",
+   "word": "form",
+   "def": "a particular shape or type of something",
+   "ex": "Use the base form of the verb."
+  },
+  {
+   "k": "found",
+   "word": "found",
+   "def": "to discover something",
+   "ex": "Someone you've never met will find it."
+  },
+  {
+   "k": "four",
+   "word": "four",
+   "def": "the number 4",
+   "ex": "I'll rank four qualities."
+  },
+  {
+   "k": "free",
+   "word": "free",
+   "def": "not controlled; without cost",
+   "ex": "Children need free play."
+  },
+  {
+   "k": "friday",
+   "word": "friday",
+   "def": "the day after Thursday",
+   "ex": "I went to the library every Friday."
+  },
+  {
+   "k": "friend",
+   "word": "friend",
+   "def": "a person you know well and like",
+   "ex": "A childhood friend remembers your old games."
+  },
+  {
+   "k": "friends",
+   "word": "friends",
+   "def": "a person you know well and like",
+   "ex": "A childhood friend remembers your old games."
+  },
+  {
+   "k": "friendship",
+   "word": "friendship",
+   "def": "a relationship between friends",
+   "ex": "Friendship matters a lot."
+  },
+  {
+   "k": "friendships",
+   "word": "friendships",
+   "def": "a relationship between friends",
+   "ex": "Friendship matters a lot."
+  },
+  {
+   "k": "from",
+   "word": "from",
+   "def": "starting at a place or time",
+   "ex": "I borrowed it from a friend."
+  },
+  {
+   "k": "full",
+   "word": "full",
+   "def": "holding as much as possible",
+   "ex": "The teams are full."
+  },
+  {
+   "k": "fun",
+   "word": "fun",
+   "def": "enjoyment",
+   "ex": "We had a lot of fun."
+  },
+  {
+   "k": "funny",
+   "word": "funny",
+   "def": "making you laugh",
+   "ex": "It was a funny story."
+  },
+  {
+   "k": "future",
+   "word": "future",
+   "def": "the time after now",
+   "ex": "Will the future bring new games?"
+  },
+  {
+   "k": "game",
+   "word": "game",
+   "def": "an activity with rules that people play for fun",
+   "ex": "We invented a game with a rope."
+  },
+  {
+   "k": "games",
+   "word": "games",
+   "def": "an activity with rules that people play for fun",
+   "ex": "We invented a game with a rope."
+  },
+  {
+   "k": "garden",
+   "word": "garden",
+   "def": "an area where plants and flowers grow",
+   "ex": "We found a secret garden."
+  },
+  {
+   "k": "gave",
+   "word": "gave",
+   "def": "to hand something to someone",
+   "ex": "Give a reason for your choice."
+  },
+  {
+   "k": "general",
+   "word": "general",
+   "def": "not specific; true for most cases",
+   "ex": "A general example is fine."
+  },
+  {
+   "k": "get",
+   "word": "get",
+   "def": "to receive or become",
+   "ex": "We get along well."
+  },
+  {
+   "k": "gets",
+   "word": "gets",
+   "def": "to receive or become",
+   "ex": "We get along well."
+  },
+  {
+   "k": "give",
+   "word": "give",
+   "def": "to hand something to someone",
+   "ex": "Give a reason for your choice."
+  },
+  {
+   "k": "gives",
+   "word": "gives",
+   "def": "to hand something to someone",
+   "ex": "Give a reason for your choice."
+  },
+  {
+   "k": "go",
+   "word": "go",
+   "def": "to move from one place to another",
+   "ex": "We go to the park after school."
+  },
+  {
+   "k": "going",
+   "word": "going",
+   "def": "to move from one place to another",
+   "ex": "We go to the park after school."
+  },
+  {
+   "k": "good",
+   "word": "good",
+   "def": "of high quality; pleasant",
+   "ex": "That is a good idea."
+  },
+  {
+   "k": "google",
+   "word": "google",
+   "def": "the name of a large internet company",
+   "ex": "This lesson does not connect to Google Sheets."
+  },
+  {
+   "k": "got",
+   "word": "got",
+   "def": "to receive or become",
+   "ex": "We get along well."
+  },
+  {
+   "k": "graded",
+   "word": "graded",
+   "def": "to give a score to someone's work",
+   "ex": "Nothing is graded automatically."
+  },
+  {
+   "k": "grew",
+   "word": "grew",
+   "def": "to become bigger or older",
+   "ex": "Children grow quickly."
+  },
+  {
+   "k": "group",
+   "word": "group",
+   "def": "several people or things together",
+   "ex": "A group planned the event."
+  },
+  {
+   "k": "groups",
+   "word": "groups",
+   "def": "several people or things together",
+   "ex": "A group planned the event."
+  },
+  {
+   "k": "grow",
+   "word": "grow",
+   "def": "to become bigger or older",
+   "ex": "Children grow quickly."
+  },
+  {
+   "k": "growing",
+   "word": "growing",
+   "def": "to become bigger or older",
+   "ex": "Children grow quickly."
+  },
+  {
+   "k": "guess",
+   "word": "guess",
+   "def": "to say an answer when you are not sure",
+   "ex": "Can you guess the object?"
+  },
+  {
+   "k": "guessing",
+   "word": "guessing",
+   "def": "to say an answer when you are not sure",
+   "ex": "Can you guess the object?"
+  },
+  {
+   "k": "h",
+   "word": "h",
+   "def": "the eighth letter of the alphabet",
+   "ex": "Press H to hide the controls."
+  },
+  {
+   "k": "had",
+   "word": "had",
+   "def": "to own or hold",
+   "ex": "We have a rope and two balls."
+  },
+  {
+   "k": "half",
+   "word": "half",
+   "def": "one of two equal parts",
+   "ex": "Half the time is for art."
+  },
+  {
+   "k": "hallway",
+   "word": "hallway",
+   "def": "a long space inside a building with rooms on each side",
+   "ex": "We ran down the hallway."
+  },
+  {
+   "k": "hands",
+   "word": "hands",
+   "def": "the part of your body at the end of your arm",
+   "ex": "Everyone held hands."
+  },
+  {
+   "k": "hands-free",
+   "word": "hands-free",
+   "def": "working without needing you to touch it",
+   "ex": "Demo Mode is a hands-free preview."
+  },
+  {
+   "k": "hang",
+   "word": "hang",
+   "def": "to be fixed at the top and free at the bottom",
+   "ex": "It used to hang by my bed."
+  },
+  {
+   "k": "happened",
+   "word": "happened",
+   "def": "to take place",
+   "ex": "What happened next?"
+  },
+  {
+   "k": "harder",
+   "word": "harder",
+   "def": "difficult",
+   "ex": "Sharing was hard at first."
+  },
+  {
+   "k": "has",
+   "word": "has",
+   "def": "to own or hold",
+   "ex": "We have a rope and two balls."
+  },
+  {
+   "k": "have",
+   "word": "have",
+   "def": "to own or hold",
+   "ex": "We have a rope and two balls."
+  },
+  {
+   "k": "having",
+   "word": "having",
+   "def": "to own or hold",
+   "ex": "We have a rope and two balls."
+  },
+  {
+   "k": "he",
+   "word": "he",
+   "def": "the male person already mentioned",
+   "ex": "He remembers his art teacher."
+  },
+  {
+   "k": "hear",
+   "word": "hear",
+   "def": "to notice sound with your ears",
+   "ex": "Everyone can hear the voice."
+  },
+  {
+   "k": "heard",
+   "word": "heard",
+   "def": "to notice sound with your ears",
+   "ex": "Everyone can hear the voice."
+  },
+  {
+   "k": "held",
+   "word": "held",
+   "def": "to keep something in your hands",
+   "ex": "Everyone held hands in the dark."
+  },
+  {
+   "k": "help",
+   "word": "help",
+   "def": "to make something easier for someone",
+   "ex": "Chores help children become independent."
+  },
+  {
+   "k": "helped",
+   "word": "helped",
+   "def": "to make something easier for someone",
+   "ex": "Chores help children become independent."
+  },
+  {
+   "k": "helpful",
+   "word": "helpful",
+   "def": "useful",
+   "ex": "The starters are helpful."
+  },
+  {
+   "k": "helps",
+   "word": "helps",
+   "def": "to make something easier for someone",
+   "ex": "Chores help children become independent."
+  },
+  {
+   "k": "her",
+   "word": "her",
+   "def": "the female person already mentioned",
+   "ex": "She grew up in a small town."
+  },
+  {
+   "k": "here",
+   "word": "here",
+   "def": "in this place",
+   "ex": "Please stay here."
+  },
+  {
+   "k": "hero",
+   "word": "hero",
+   "def": "the main character who does something brave",
+   "ex": "Draw a hero and a place."
+  },
+  {
+   "k": "hid",
+   "word": "hid",
+   "def": "to put something where people cannot see it",
+   "ex": "One friend wanted to hide the damage."
+  },
+  {
+   "k": "hidden",
+   "word": "hidden",
+   "def": "to put something where people cannot see it",
+   "ex": "One friend wanted to hide the damage."
+  },
+  {
+   "k": "hide",
+   "word": "hide",
+   "def": "to put something where people cannot see it",
+   "ex": "One friend wanted to hide the damage."
+  },
+  {
+   "k": "hide-and-seek",
+   "word": "hide-and-seek",
+   "def": "a game in which some players hide and others look for them",
+   "ex": "We played hide-and-seek on my street."
+  },
+  {
+   "k": "higher",
+   "word": "higher",
+   "def": "far above the ground; at a top level",
+   "ex": "Put friendship higher on the list."
+  },
+  {
+   "k": "highest",
+   "word": "highest",
+   "def": "far above the ground; at a top level",
+   "ex": "Put friendship higher on the list."
+  },
+  {
+   "k": "his",
+   "word": "his",
+   "def": "the male person already mentioned",
+   "ex": "He remembers his art teacher."
+  },
+  {
+   "k": "home",
+   "word": "home",
+   "def": "the place where you live",
+   "ex": "I walked home after school."
+  },
+  {
+   "k": "honest",
+   "word": "honest",
+   "def": "telling the truth",
+   "ex": "An honest answer builds trust."
+  },
+  {
+   "k": "honestly",
+   "word": "honestly",
+   "def": "telling the truth",
+   "ex": "An honest answer builds trust."
+  },
+  {
+   "k": "hour",
+   "word": "hour",
+   "def": "sixty minutes",
+   "ex": "The event lasts one hour."
+  },
+  {
+   "k": "how",
+   "word": "how",
+   "def": "in what way",
+   "ex": "How often did you go?"
+  },
+  {
+   "k": "i'd",
+   "word": "i'd",
+   "def": "the person who is speaking",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "i'm",
+   "word": "i'm",
+   "def": "the person who is speaking",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "i",
+   "word": "i",
+   "def": "the person who is speaking",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "idea",
+   "word": "idea",
+   "def": "a thought or plan",
+   "ex": "That's a good idea."
+  },
+  {
+   "k": "ideas",
+   "word": "ideas",
+   "def": "a thought or plan",
+   "ex": "That's a good idea."
+  },
+  {
+   "k": "if",
+   "word": "if",
+   "def": "used to talk about a condition",
+   "ex": "If it rains, we move inside."
+  },
+  {
+   "k": "ignored",
+   "word": "ignored",
+   "def": "to pay no attention to",
+   "ex": "One person felt ignored."
+  },
+  {
+   "k": "imagination",
+   "word": "imagination",
+   "def": "the ability to form ideas or pictures in your mind",
+   "ex": "We used our imagination to turn the yard into a spaceship."
+  },
+  {
+   "k": "imagine",
+   "word": "imagine",
+   "def": "to form a picture in your mind",
+   "ex": "Imagine a rainy afternoon."
+  },
+  {
+   "k": "imagined",
+   "word": "imagined",
+   "def": "to form a picture in your mind",
+   "ex": "Imagine a rainy afternoon."
+  },
+  {
+   "k": "imagining",
+   "word": "imagining",
+   "def": "to form a picture in your mind",
+   "ex": "Imagine a rainy afternoon."
+  },
+  {
+   "k": "important",
+   "word": "important",
+   "def": "having great value or meaning",
+   "ex": "Friends are important."
+  },
+  {
+   "k": "in",
+   "word": "in",
+   "def": "inside a place or period of time",
+   "ex": "We played in the yard."
+  },
+  {
+   "k": "include",
+   "word": "include",
+   "def": "to make someone part of a group",
+   "ex": "Let's include the newcomer."
+  },
+  {
+   "k": "includes",
+   "word": "includes",
+   "def": "to make someone part of a group",
+   "ex": "Let's include the newcomer."
+  },
+  {
+   "k": "incorrect",
+   "word": "incorrect",
+   "def": "not right",
+   "ex": "The second sentence is incorrect."
+  },
+  {
+   "k": "independence",
+   "word": "independence",
+   "def": "the ability to do things by yourself",
+   "ex": "Chores teach independence."
+  },
+  {
+   "k": "independent",
+   "word": "independent",
+   "def": "able to do things or make some decisions without help",
+   "ex": "I became more independent when I learned to prepare a simple snack."
+  },
+  {
+   "k": "independently",
+   "word": "independently",
+   "def": "able to do things or make some decisions without help",
+   "ex": "I became more independent when I learned to prepare a simple snack."
+  },
+  {
+   "k": "ing",
+   "word": "ing",
+   "def": "the ending of a verb such as playing or running",
+   "ex": "Add -ing to the verb."
+  },
+  {
+   "k": "instructions",
+   "word": "instructions",
+   "def": "a statement that tells you how to do something",
+   "ex": "There are no spoken instructions."
+  },
+  {
+   "k": "interaction",
+   "word": "interaction",
+   "def": "talking and working with other people",
+   "ex": "Interaction is part of the rubric."
+  },
+  {
+   "k": "interest",
+   "word": "interest",
+   "def": "something you like to do or learn about",
+   "ex": "My interests have changed."
+  },
+  {
+   "k": "interests",
+   "word": "interests",
+   "def": "something you like to do or learn about",
+   "ex": "My interests have changed."
+  },
+  {
+   "k": "into",
+   "word": "into",
+   "def": "to the inside of",
+   "ex": "We turned the box into a castle."
+  },
+  {
+   "k": "invent",
+   "word": "invent",
+   "def": "to create something new",
+   "ex": "They like to invent games."
+  },
+  {
+   "k": "invite",
+   "word": "invite",
+   "def": "to ask someone to join",
+   "ex": "Invite the newcomer to play."
+  },
+  {
+   "k": "is",
+   "word": "is",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "isn't",
+   "word": "isn't",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "it's",
+   "word": "it's",
+   "def": "a thing that was already mentioned",
+   "ex": "It was a sunny day."
+  },
+  {
+   "k": "it",
+   "word": "it",
+   "def": "a thing that was already mentioned",
+   "ex": "It was a sunny day."
+  },
+  {
+   "k": "item",
+   "word": "item",
+   "def": "one thing in a list",
+   "ex": "Reveal the next item."
+  },
+  {
+   "k": "its",
+   "word": "its",
+   "def": "a thing that was already mentioned",
+   "ex": "It was a sunny day."
+  },
+  {
+   "k": "itself",
+   "word": "itself",
+   "def": "a thing that was already mentioned",
+   "ex": "It was a sunny day."
+  },
+  {
+   "k": "j",
+   "word": "j",
+   "def": "the tenth letter of the alphabet",
+   "ex": "Press J to add a star."
+  },
+  {
+   "k": "jar",
+   "word": "jar",
+   "def": "a glass container with a wide opening",
+   "ex": "The memory jar is filling with stars."
+  },
+  {
+   "k": "job",
+   "word": "job",
+   "def": "a task or work",
+   "ex": "Everyone had a job."
+  },
+  {
+   "k": "join",
+   "word": "join",
+   "def": "to become part of a group",
+   "ex": "Can I join in?"
+  },
+  {
+   "k": "joined",
+   "word": "joined",
+   "def": "to become part of a group",
+   "ex": "Can I join in?"
+  },
+  {
+   "k": "json",
+   "word": "json",
+   "def": "a file type for storing information as text",
+   "ex": "Export the data as a JSON file."
+  },
+  {
+   "k": "judge",
+   "word": "judge",
+   "def": "a person who decides who wins",
+   "ex": "We took turns being the judge."
+  },
+  {
+   "k": "judgment",
+   "word": "judgment",
+   "def": "an opinion about whether something is good or bad",
+   "ex": "This task is a negotiation, not a judgment."
+  },
+  {
+   "k": "just",
+   "word": "just",
+   "def": "only; very recently",
+   "ex": "The newcomer just moved here."
+  },
+  {
+   "k": "keep",
+   "word": "keep",
+   "def": "to continue to have or do",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "keeps",
+   "word": "keeps",
+   "def": "to continue to have or do",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "kept",
+   "word": "kept",
+   "def": "to continue to have or do",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "keyboard",
+   "word": "keyboard",
+   "def": "the keys that you press to type",
+   "ex": "Use the keyboard to move the card."
+  },
+  {
+   "k": "kid",
+   "word": "kid",
+   "def": "a child",
+   "ex": "The kids next door played with us."
+  },
+  {
+   "k": "kids",
+   "word": "kids",
+   "def": "a child",
+   "ex": "The kids next door played with us."
+  },
+  {
+   "k": "kite",
+   "word": "kite",
+   "def": "a toy that flies on a long string",
+   "ex": "One afternoon, we built a kite."
+  },
+  {
+   "k": "knew",
+   "word": "knew",
+   "def": "to have information in your mind",
+   "ex": "I know the rules."
+  },
+  {
+   "k": "knock",
+   "word": "knock",
+   "def": "the sound of hitting a door",
+   "ex": "They heard a quiet knock."
+  },
+  {
+   "k": "know",
+   "word": "know",
+   "def": "to have information in your mind",
+   "ex": "I know the rules."
+  },
+  {
+   "k": "knows",
+   "word": "knows",
+   "def": "to have information in your mind",
+   "ex": "I know the rules."
+  },
+  {
+   "k": "lake",
+   "word": "lake",
+   "def": "a large area of water with land around it",
+   "ex": "I swam across the lake."
+  },
+  {
+   "k": "last",
+   "word": "last",
+   "def": "final",
+   "ex": "This is the last task."
+  },
+  {
+   "k": "later",
+   "word": "later",
+   "def": "after the present time",
+   "ex": "We met later in life."
+  },
+  {
+   "k": "laugh",
+   "word": "laugh",
+   "def": "to make a sound that shows you think something is funny",
+   "ex": "We would laugh until we fell over."
+  },
+  {
+   "k": "learn",
+   "word": "learn",
+   "def": "to get new knowledge or skill",
+   "ex": "I learned to prepare a simple snack."
+  },
+  {
+   "k": "learned",
+   "word": "learned",
+   "def": "to get new knowledge or skill",
+   "ex": "I learned to prepare a simple snack."
+  },
+  {
+   "k": "learner's",
+   "word": "learner's",
+   "def": "a person who is studying something",
+   "ex": "Oxford Learner's Dictionaries help students."
+  },
+  {
+   "k": "learns",
+   "word": "learns",
+   "def": "to get new knowledge or skill",
+   "ex": "I learned to prepare a simple snack."
+  },
+  {
+   "k": "leave",
+   "word": "leave",
+   "def": "to go away from a place",
+   "ex": "They leave after the bell."
+  },
+  {
+   "k": "left",
+   "word": "left",
+   "def": "remaining; not yet used",
+   "ex": "Only thirty minutes are left."
+  },
+  {
+   "k": "length",
+   "word": "length",
+   "def": "how long something is",
+   "ex": "The length of the timer can change."
+  },
+  {
+   "k": "less",
+   "word": "less",
+   "def": "small in size or amount",
+   "ex": "We had very little equipment."
+  },
+  {
+   "k": "lesson",
+   "word": "lesson",
+   "def": "a period of teaching",
+   "ex": "This lesson lasts sixty minutes."
+  },
+  {
+   "k": "let's",
+   "word": "let's",
+   "def": "to allow",
+   "ex": "Let everyone join in."
+  },
+  {
+   "k": "let",
+   "word": "let",
+   "def": "to allow",
+   "ex": "Let everyone join in."
+  },
+  {
+   "k": "library",
+   "word": "library",
+   "def": "a place where you can borrow books",
+   "ex": "I rode my bike to the library."
+  },
+  {
+   "k": "life",
+   "word": "life",
+   "def": "the time between birth and death",
+   "ex": "Life changes as we grow up."
+  },
+  {
+   "k": "lights",
+   "word": "lights",
+   "def": "brightness that lets you see",
+   "ex": "The lights suddenly went out."
+  },
+  {
+   "k": "like",
+   "word": "like",
+   "def": "to enjoy",
+   "ex": "I like quiet games."
+  },
+  {
+   "k": "liked",
+   "word": "liked",
+   "def": "to enjoy",
+   "ex": "I like quiet games."
+  },
+  {
+   "k": "limited",
+   "word": "limited",
+   "def": "small in amount",
+   "ex": "Equipment is limited."
+  },
+  {
+   "k": "lines",
+   "word": "lines",
+   "def": "a long thin mark; a row",
+   "ex": "Read the first line."
+  },
+  {
+   "k": "list",
+   "word": "list",
+   "def": "a series of things written one below another",
+   "ex": "Put it at the top of the list."
+  },
+  {
+   "k": "listen",
+   "word": "listen",
+   "def": "to pay attention to sound",
+   "ex": "Listen to your partner."
+  },
+  {
+   "k": "listened",
+   "word": "listened",
+   "def": "to pay attention to sound",
+   "ex": "Listen to your partner."
+  },
+  {
+   "k": "listening",
+   "word": "listening",
+   "def": "to pay attention to sound",
+   "ex": "Listen to your partner."
+  },
+  {
+   "k": "local",
+   "word": "local",
+   "def": "in this area; on this computer",
+   "ex": "Local save uses this browser only."
+  },
+  {
+   "k": "long",
+   "word": "long",
+   "def": "measuring a great distance or time",
+   "ex": "It was a long walk home."
+  },
+  {
+   "k": "longer",
+   "word": "longer",
+   "def": "measuring a great distance or time",
+   "ex": "It was a long walk home."
+  },
+  {
+   "k": "look",
+   "word": "look",
+   "def": "to turn your eyes toward something",
+   "ex": "Look at the picture."
+  },
+  {
+   "k": "looked",
+   "word": "looked",
+   "def": "to turn your eyes toward something",
+   "ex": "Look at the picture."
+  },
+  {
+   "k": "looking",
+   "word": "looking",
+   "def": "to turn your eyes toward something",
+   "ex": "Look at the picture."
+  },
+  {
+   "k": "looks",
+   "word": "looks",
+   "def": "to turn your eyes toward something",
+   "ex": "Look at the picture."
+  },
+  {
+   "k": "lose",
+   "word": "lose",
+   "def": "to fail to keep or win",
+   "ex": "We didn't want to lose the game."
+  },
+  {
+   "k": "loses",
+   "word": "loses",
+   "def": "to fail to keep or win",
+   "ex": "We didn't want to lose the game."
+  },
+  {
+   "k": "lost",
+   "word": "lost",
+   "def": "to fail to keep or win",
+   "ex": "We didn't want to lose the game."
+  },
+  {
+   "k": "love",
+   "word": "love",
+   "def": "to like very much",
+   "ex": "I used to love the stage."
+  },
+  {
+   "k": "loved",
+   "word": "loved",
+   "def": "to like very much",
+   "ex": "I used to love the stage."
+  },
+  {
+   "k": "lunch",
+   "word": "lunch",
+   "def": "the meal in the middle of the day",
+   "ex": "We would play cards after lunch."
+  },
+  {
+   "k": "made",
+   "word": "made",
+   "def": "to create",
+   "ex": "Make up a game with a rope."
+  },
+  {
+   "k": "majority",
+   "word": "majority",
+   "def": "more than half of a group",
+   "ex": "The majority decides in a vote."
+  },
+  {
+   "k": "make",
+   "word": "make",
+   "def": "to create",
+   "ex": "Make up a game with a rope."
+  },
+  {
+   "k": "make-believe",
+   "word": "make-believe",
+   "def": "pretending and imagining",
+   "ex": "We played make-believe for hours."
+  },
+  {
+   "k": "makes",
+   "word": "makes",
+   "def": "to create",
+   "ex": "Make up a game with a rope."
+  },
+  {
+   "k": "making",
+   "word": "making",
+   "def": "to create",
+   "ex": "Make up a game with a rope."
+  },
+  {
+   "k": "manage",
+   "word": "manage",
+   "def": "to deal with something successfully",
+   "ex": "Older children can manage more."
+  },
+  {
+   "k": "many",
+   "word": "many",
+   "def": "a large number of",
+   "ex": "Many people agree."
+  },
+  {
+   "k": "mark",
+   "word": "mark",
+   "def": "a sign or score that a teacher records",
+   "ex": "Add a participation mark."
+  },
+  {
+   "k": "marks",
+   "word": "marks",
+   "def": "a sign or score that a teacher records",
+   "ex": "Add a participation mark."
+  },
+  {
+   "k": "match",
+   "word": "match",
+   "def": "to be the same as",
+   "ex": "The captions match the voice."
+  },
+  {
+   "k": "matter",
+   "word": "matter",
+   "def": "to be important",
+   "ex": "Cooperation matters."
+  },
+  {
+   "k": "matters",
+   "word": "matters",
+   "def": "to be important",
+   "ex": "Cooperation matters."
+  },
+  {
+   "k": "may",
+   "word": "may",
+   "def": "used to talk about possibility",
+   "ex": "Extra discussion may extend the lesson."
+  },
+  {
+   "k": "maya",
+   "word": "maya",
+   "def": "a fictional guide in this lesson",
+   "ex": "Maya opens the memory box."
+  },
+  {
+   "k": "maybe",
+   "word": "maybe",
+   "def": "perhaps",
+   "ex": "Maybe it was a rainy afternoon."
+  },
+  {
+   "k": "me",
+   "word": "me",
+   "def": "the person who is speaking, as an object",
+   "ex": "Tell me more."
+  },
+  {
+   "k": "mean",
+   "word": "mean",
+   "def": "to have a particular meaning",
+   "ex": "What do you mean?"
+  },
+  {
+   "k": "meaning",
+   "word": "meaning",
+   "def": "what a word or sentence says",
+   "ex": "Double-click to see the meaning."
+  },
+  {
+   "k": "meaningful",
+   "word": "meaningful",
+   "def": "important or full of meaning",
+   "ex": "Keep one meaningful object."
+  },
+  {
+   "k": "meanings",
+   "word": "meanings",
+   "def": "what a word or sentence says",
+   "ex": "Double-click to see the meaning."
+  },
+  {
+   "k": "means",
+   "word": "means",
+   "def": "to have a particular meaning",
+   "ex": "What do you mean?"
+  },
+  {
+   "k": "meet",
+   "word": "meet",
+   "def": "to come together",
+   "ex": "Let's meet for coffee."
+  },
+  {
+   "k": "memorable",
+   "word": "memorable",
+   "def": "easy to remember",
+   "ex": "What made it memorable?"
+  },
+  {
+   "k": "memories",
+   "word": "memories",
+   "def": "something that you remember",
+   "ex": "A favorite memory can start with a small object."
+  },
+  {
+   "k": "memory",
+   "word": "memory",
+   "def": "something that you remember",
+   "ex": "A favorite memory can start with a small object."
+  },
+  {
+   "k": "met",
+   "word": "met",
+   "def": "to come together",
+   "ex": "Let's meet for coffee."
+  },
+  {
+   "k": "metal",
+   "word": "metal",
+   "def": "a hard, shiny material such as iron",
+   "ex": "It was small and made of metal."
+  },
+  {
+   "k": "middle",
+   "word": "middle",
+   "def": "the center or the part between the start and the end",
+   "ex": "It starts to snow in the middle of summer."
+  },
+  {
+   "k": "might",
+   "word": "might",
+   "def": "used to say something is possible",
+   "ex": "That might work."
+  },
+  {
+   "k": "mind",
+   "word": "mind",
+   "def": "the part of you that thinks",
+   "ex": "Picture it in your mind."
+  },
+  {
+   "k": "minute",
+   "word": "minute",
+   "def": "sixty seconds",
+   "ex": "The game lasted one minute."
+  },
+  {
+   "k": "minutes",
+   "word": "minutes",
+   "def": "sixty seconds",
+   "ex": "The game lasted one minute."
+  },
+  {
+   "k": "mixed",
+   "word": "mixed",
+   "def": "made of different kinds",
+   "ex": "The group has mixed interests."
+  },
+  {
+   "k": "mixes",
+   "word": "mixes",
+   "def": "to combine different things",
+   "ex": "The relay mixes art and sports."
+  },
+  {
+   "k": "mode",
+   "word": "mode",
+   "def": "a way of working",
+   "ex": "Class Mode waits for the teacher."
+  },
+  {
+   "k": "model",
+   "word": "model",
+   "def": "an example; a small copy",
+   "ex": "Listen to a short model conversation."
+  },
+  {
+   "k": "more",
+   "word": "more",
+   "def": "a larger amount",
+   "ex": "More children joined the game."
+  },
+  {
+   "k": "most",
+   "word": "most",
+   "def": "to the greatest degree",
+   "ex": "What do you enjoy most?"
+  },
+  {
+   "k": "mostly",
+   "word": "mostly",
+   "def": "to the greatest degree",
+   "ex": "What do you enjoy most?"
+  },
+  {
+   "k": "motion",
+   "word": "motion",
+   "def": "movement",
+   "ex": "Reduce motion if you prefer."
+  },
+  {
+   "k": "move",
+   "word": "move",
+   "def": "to change place",
+   "ex": "They moved to a new town."
+  },
+  {
+   "k": "moved",
+   "word": "moved",
+   "def": "to change place",
+   "ex": "They moved to a new town."
+  },
+  {
+   "k": "movement",
+   "word": "movement",
+   "def": "the act of moving",
+   "ex": "Playground games need movement."
+  },
+  {
+   "k": "movie",
+   "word": "movie",
+   "def": "a film",
+   "ex": "Would you rather watch a movie?"
+  },
+  {
+   "k": "much",
+   "word": "much",
+   "def": "a large amount of",
+   "ex": "We don't have much equipment."
+  },
+  {
+   "k": "music",
+   "word": "music",
+   "def": "sounds that people sing or play",
+   "ex": "The music is soft and optional."
+  },
+  {
+   "k": "must",
+   "word": "must",
+   "def": "used when something is necessary",
+   "ex": "The organizers must agree."
+  },
+  {
+   "k": "my",
+   "word": "my",
+   "def": "belonging to me",
+   "ex": "My friend lived nearby."
+  },
+  {
+   "k": "myself",
+   "word": "myself",
+   "def": "me, and nobody else",
+   "ex": "I did it by myself."
+  },
+  {
+   "k": "mysterious",
+   "word": "mysterious",
+   "def": "strange and hard to explain",
+   "ex": "A mysterious note appears."
+  },
+  {
+   "k": "mystery",
+   "word": "mystery",
+   "def": "something that nobody can explain yet",
+   "ex": "Find the mystery object."
+  },
+  {
+   "k": "n",
+   "word": "n",
+   "def": "the fourteenth letter of the alphabet",
+   "ex": "Press N to reveal the next item."
+  },
+  {
+   "k": "names",
+   "word": "names",
+   "def": "the word that people call you",
+   "ex": "Please do not write full names."
+  },
+  {
+   "k": "narration",
+   "word": "narration",
+   "def": "a voice that tells or explains something",
+   "ex": "The narration stops while you speak."
+  },
+  {
+   "k": "natural",
+   "word": "natural",
+   "def": "normal and easy",
+   "ex": "Which question is natural?"
+  },
+  {
+   "k": "near",
+   "word": "near",
+   "def": "close to",
+   "ex": "I grew up near a river."
+  },
+  {
+   "k": "nearby",
+   "word": "nearby",
+   "def": "close",
+   "ex": "A nearby friend joined us."
+  },
+  {
+   "k": "need",
+   "word": "need",
+   "def": "to require",
+   "ex": "We need a backup plan."
+  },
+  {
+   "k": "needing",
+   "word": "needing",
+   "def": "to require",
+   "ex": "We need a backup plan."
+  },
+  {
+   "k": "needs",
+   "word": "needs",
+   "def": "to require",
+   "ex": "We need a backup plan."
+  },
+  {
+   "k": "negatives",
+   "word": "negatives",
+   "def": "a sentence that says something is not true",
+   "ex": "Practice questions and negatives."
+  },
+  {
+   "k": "negotiation",
+   "word": "negotiation",
+   "def": "a discussion in which people try to agree",
+   "ex": "This is a negotiation task."
+  },
+  {
+   "k": "neighbor",
+   "word": "neighbor",
+   "def": "a person who lives near you",
+   "ex": "A neighbor taught me to float."
+  },
+  {
+   "k": "neighborhood",
+   "word": "neighborhood",
+   "def": "an area of a town where people live",
+   "ex": "The neighborhood felt very big."
+  },
+  {
+   "k": "nervous",
+   "word": "nervous",
+   "def": "worried and a little afraid",
+   "ex": "I was nervous on stage."
+  },
+  {
+   "k": "never",
+   "word": "never",
+   "def": "not at any time",
+   "ex": "I've never met that person."
+  },
+  {
+   "k": "new",
+   "word": "new",
+   "def": "recently made or arrived",
+   "ex": "A new child walks over."
+  },
+  {
+   "k": "newcomer",
+   "word": "newcomer",
+   "def": "a person who has just arrived",
+   "ex": "They included the newcomer."
+  },
+  {
+   "k": "next",
+   "word": "next",
+   "def": "coming after this one",
+   "ex": "Reveal the next item."
+  },
+  {
+   "k": "no",
+   "word": "no",
+   "def": "not any",
+   "ex": "There is no wrong answer."
+  },
+  {
+   "k": "nobody",
+   "word": "nobody",
+   "def": "no person",
+   "ex": "Nobody wants to stop the game."
+  },
+  {
+   "k": "not",
+   "word": "not",
+   "def": "used to make a word mean the opposite",
+   "ex": "It is not a fact."
+  },
+  {
+   "k": "note",
+   "word": "note",
+   "def": "a short written message",
+   "ex": "The note said, \"Meet me at the park.\""
+  },
+  {
+   "k": "notes",
+   "word": "notes",
+   "def": "used to make a word mean the opposite",
+   "ex": "It is not a fact."
+  },
+  {
+   "k": "nothing",
+   "word": "nothing",
+   "def": "not anything",
+   "ex": "Nothing is saved by default."
+  },
+  {
+   "k": "notice",
+   "word": "notice",
+   "def": "to see or become aware of",
+   "ex": "They notice a small change."
+  },
+  {
+   "k": "noticed",
+   "word": "noticed",
+   "def": "to see or become aware of",
+   "ex": "They notice a small change."
+  },
+  {
+   "k": "noun",
+   "word": "noun",
+   "def": "a word that names a person, place, or thing",
+   "ex": "\"Game\" is a noun."
+  },
+  {
+   "k": "now",
+   "word": "now",
+   "def": "at this time",
+   "ex": "Now it makes me dizzy."
+  },
+  {
+   "k": "numbers",
+   "word": "numbers",
+   "def": "a word or sign that shows how many",
+   "ex": "Write a number."
+  },
+  {
+   "k": "object",
+   "word": "object",
+   "def": "a thing that you can see or touch",
+   "ex": "An ordinary object can hold a memory."
+  },
+  {
+   "k": "observation",
+   "word": "observation",
+   "def": "something that you notice and record",
+   "ex": "These are teacher observations."
+  },
+  {
+   "k": "observations",
+   "word": "observations",
+   "def": "something that you notice and record",
+   "ex": "These are teacher observations."
+  },
+  {
+   "k": "of",
+   "word": "of",
+   "def": "belonging to; made from",
+   "ex": "A group of children played."
+  },
+  {
+   "k": "off",
+   "word": "off",
+   "def": "not on; away",
+   "ex": "The bell fell off."
+  },
+  {
+   "k": "offer",
+   "word": "offer",
+   "def": "to give someone a choice or help",
+   "ex": "The teacher offers a correction."
+  },
+  {
+   "k": "often",
+   "word": "often",
+   "def": "many times",
+   "ex": "We often played cards."
+  },
+  {
+   "k": "okay",
+   "word": "okay",
+   "def": "acceptable",
+   "ex": "Pass is always okay."
+  },
+  {
+   "k": "old",
+   "word": "old",
+   "def": "having lived or existed for a long time",
+   "ex": "We met at our old school."
+  },
+  {
+   "k": "older",
+   "word": "older",
+   "def": "having lived or existed for a long time",
+   "ex": "We met at our old school."
+  },
+  {
+   "k": "on",
+   "word": "on",
+   "def": "above and touching; about a subject",
+   "ex": "Look back on your school days."
+  },
+  {
+   "k": "once",
+   "word": "once",
+   "def": "one time",
+   "ex": "We played once a week."
+  },
+  {
+   "k": "one",
+   "word": "one",
+   "def": "the number 1",
+   "ex": "One afternoon, we built a kite."
+  },
+  {
+   "k": "only",
+   "word": "only",
+   "def": "above and touching; about a subject",
+   "ex": "Look back on your school days."
+  },
+  {
+   "k": "open",
+   "word": "open",
+   "def": "to make something not closed",
+   "ex": "Maya opens the memory box."
+  },
+  {
+   "k": "opened",
+   "word": "opened",
+   "def": "to make something not closed",
+   "ex": "Maya opens the memory box."
+  },
+  {
+   "k": "opening",
+   "word": "opening",
+   "def": "to make something not closed",
+   "ex": "Maya opens the memory box."
+  },
+  {
+   "k": "opinion",
+   "word": "opinion",
+   "def": "what you think about something",
+   "ex": "Your opinion is not right or wrong."
+  },
+  {
+   "k": "opinions",
+   "word": "opinions",
+   "def": "what you think about something",
+   "ex": "Your opinion is not right or wrong."
+  },
+  {
+   "k": "opportunities",
+   "word": "opportunities",
+   "def": "a chance to do something",
+   "ex": "Technology offers new opportunities."
+  },
+  {
+   "k": "opposite",
+   "word": "opposite",
+   "def": "something completely different",
+   "ex": "Could the opposite also be true?"
+  },
+  {
+   "k": "optional",
+   "word": "optional",
+   "def": "not required",
+   "ex": "Starters are optional."
+  },
+  {
+   "k": "or",
+   "word": "or",
+   "def": "used to show a choice",
+   "ex": "Choose a cart or a basket."
+  },
+  {
+   "k": "order",
+   "word": "order",
+   "def": "the way things are arranged one after another",
+   "ex": "Tell the story in order."
+  },
+  {
+   "k": "ordinary",
+   "word": "ordinary",
+   "def": "normal; not special",
+   "ex": "An ordinary object can remind us of a lot."
+  },
+  {
+   "k": "organize",
+   "word": "organize",
+   "def": "to plan and arrange",
+   "ex": "Alex now organizes workshops."
+  },
+  {
+   "k": "organized",
+   "word": "organized",
+   "def": "to plan and arrange",
+   "ex": "Alex now organizes workshops."
+  },
+  {
+   "k": "original",
+   "word": "original",
+   "def": "not copied; new",
+   "ex": "The music is original."
+  },
+  {
+   "k": "other",
+   "word": "other",
+   "def": "different or additional",
+   "ex": "The other friend wanted to explain."
+  },
+  {
+   "k": "others",
+   "word": "others",
+   "def": "different or additional",
+   "ex": "The other friend wanted to explain."
+  },
+  {
+   "k": "our",
+   "word": "our",
+   "def": "belonging to us",
+   "ex": "It was our favorite place."
+  },
+  {
+   "k": "ours",
+   "word": "ours",
+   "def": "belonging to us",
+   "ex": "It was our favorite place."
+  },
+  {
+   "k": "out",
+   "word": "out",
+   "def": "away from the inside",
+   "ex": "We played out in the yard."
+  },
+  {
+   "k": "outgoing",
+   "word": "outgoing",
+   "def": "friendly and happy to meet people",
+   "ex": "Jordan used to be outgoing."
+  },
+  {
+   "k": "outside",
+   "word": "outside",
+   "def": "not in a building",
+   "ex": "We played outside after lunch."
+  },
+  {
+   "k": "over",
+   "word": "over",
+   "def": "above; across; ended",
+   "ex": "The game was over."
+  },
+  {
+   "k": "own",
+   "word": "own",
+   "def": "belonging to you",
+   "ex": "Rank them in your own order."
+  },
+  {
+   "k": "owner",
+   "word": "owner",
+   "def": "the person that something belongs to",
+   "ex": "The owner asks about the bridge."
+  },
+  {
+   "k": "oxford",
+   "word": "oxford",
+   "def": "a city in England; the name of a university",
+   "ex": "Oxford Learner's Dictionaries give word pronunciations."
+  },
+  {
+   "k": "paper",
+   "word": "paper",
+   "def": "thin material for writing and drawing",
+   "ex": "We drew on paper."
+  },
+  {
+   "k": "park",
+   "word": "park",
+   "def": "a public area with grass and trees",
+   "ex": "Meet me at the park after school."
+  },
+  {
+   "k": "part",
+   "word": "part",
+   "def": "one piece of something",
+   "ex": "Which part do you remember?"
+  },
+  {
+   "k": "participation",
+   "word": "participation",
+   "def": "taking part in an activity",
+   "ex": "Marks recognize participation."
+  },
+  {
+   "k": "partly",
+   "word": "partly",
+   "def": "not completely",
+   "ex": "I partly agree."
+  },
+  {
+   "k": "pass",
+   "word": "pass",
+   "def": "to choose not to answer",
+   "ex": "You can always pass."
+  },
+  {
+   "k": "past",
+   "word": "past",
+   "def": "the time before now",
+   "ex": "Talk about the past."
+  },
+  {
+   "k": "patient",
+   "word": "patient",
+   "def": "able to wait calmly",
+   "ex": "A patient teacher explained it again."
+  },
+  {
+   "k": "pause",
+   "word": "pause",
+   "def": "to stop for a short time",
+   "ex": "Pause the timer."
+  },
+  {
+   "k": "pauses",
+   "word": "pauses",
+   "def": "to stop for a short time",
+   "ex": "Pause the timer."
+  },
+  {
+   "k": "pencil",
+   "word": "pencil",
+   "def": "a thin tool for writing or drawing",
+   "ex": "It was a yellow pencil."
+  },
+  {
+   "k": "pencils",
+   "word": "pencils",
+   "def": "a thin tool for writing or drawing",
+   "ex": "It was a yellow pencil."
+  },
+  {
+   "k": "people",
+   "word": "people",
+   "def": "a human being",
+   "ex": "Each person has a turn."
+  },
+  {
+   "k": "perhaps",
+   "word": "perhaps",
+   "def": "maybe",
+   "ex": "Perhaps a quick game of tag."
+  },
+  {
+   "k": "period",
+   "word": "period",
+   "def": "a length of time",
+   "ex": "Childhood is a period of life."
+  },
+  {
+   "k": "person",
+   "word": "person",
+   "def": "a human being",
+   "ex": "Each person has a turn."
+  },
+  {
+   "k": "personal",
+   "word": "personal",
+   "def": "private; about one person",
+   "ex": "Do not share personal details."
+  },
+  {
+   "k": "pick",
+   "word": "pick",
+   "def": "to choose",
+   "ex": "Pick one quality."
+  },
+  {
+   "k": "picture",
+   "word": "picture",
+   "def": "an image",
+   "ex": "Look at the picture."
+  },
+  {
+   "k": "pictures",
+   "word": "pictures",
+   "def": "an image",
+   "ex": "Look at the picture."
+  },
+  {
+   "k": "piece",
+   "word": "piece",
+   "def": "a part of something",
+   "ex": "A small piece broke."
+  },
+  {
+   "k": "place",
+   "word": "place",
+   "def": "a position or location",
+   "ex": "Choose a place on the scale."
+  },
+  {
+   "k": "plan",
+   "word": "plan",
+   "def": "an idea of how to do something",
+   "ex": "Agree on a plan."
+  },
+  {
+   "k": "planned",
+   "word": "planned",
+   "def": "arranged in advance",
+   "ex": "The planned time is sixty minutes."
+  },
+  {
+   "k": "planning",
+   "word": "planning",
+   "def": "an idea of how to do something",
+   "ex": "Agree on a plan."
+  },
+  {
+   "k": "play",
+   "word": "play",
+   "def": "to take part in a game",
+   "ex": "We used to play outside."
+  },
+  {
+   "k": "played",
+   "word": "played",
+   "def": "to take part in a game",
+   "ex": "We used to play outside."
+  },
+  {
+   "k": "players",
+   "word": "players",
+   "def": "a person who takes part in a game",
+   "ex": "The players said their teams were full."
+  },
+  {
+   "k": "playful",
+   "word": "playful",
+   "def": "liking to have fun",
+   "ex": "A playful child laughed a lot."
+  },
+  {
+   "k": "playground",
+   "word": "playground",
+   "def": "an outdoor area where children play",
+   "ex": "We took turns on the playground swings."
+  },
+  {
+   "k": "playing",
+   "word": "playing",
+   "def": "to take part in a game",
+   "ex": "We used to play outside."
+  },
+  {
+   "k": "plays",
+   "word": "plays",
+   "def": "to take part in a game",
+   "ex": "We used to play outside."
+  },
+  {
+   "k": "please",
+   "word": "please",
+   "def": "a polite word used to ask for something",
+   "ex": "Please do not write private details."
+  },
+  {
+   "k": "point",
+   "word": "point",
+   "def": "an idea or opinion in a discussion",
+   "ex": "I see your point."
+  },
+  {
+   "k": "possible",
+   "word": "possible",
+   "def": "able to happen",
+   "ex": "Several answers are possible."
+  },
+  {
+   "k": "preferences",
+   "word": "preferences",
+   "def": "a choice that you like better",
+   "ex": "A choice is a preference, not an answer."
+  },
+  {
+   "k": "prepare",
+   "word": "prepare",
+   "def": "to get ready",
+   "ex": "I learned to prepare a simple snack."
+  },
+  {
+   "k": "preserve",
+   "word": "preserve",
+   "def": "to keep safe for the future",
+   "ex": "I'd preserve one childhood story in a book."
+  },
+  {
+   "k": "press",
+   "word": "press",
+   "def": "to push a button",
+   "ex": "Press H to hide the controls."
+  },
+  {
+   "k": "preview",
+   "word": "preview",
+   "def": "a short look at something before the whole thing",
+   "ex": "Demo Mode is a preview."
+  },
+  {
+   "k": "previous",
+   "word": "previous",
+   "def": "coming before",
+   "ex": "Go to the previous step."
+  },
+  {
+   "k": "priorities",
+   "word": "priorities",
+   "def": "something that is most important",
+   "ex": "Our top priority is cooperation."
+  },
+  {
+   "k": "prioritize",
+   "word": "prioritize",
+   "def": "to treat something as most important",
+   "ex": "I would prioritize friendship."
+  },
+  {
+   "k": "priority",
+   "word": "priority",
+   "def": "something that is most important",
+   "ex": "Our top priority is cooperation."
+  },
+  {
+   "k": "private",
+   "word": "private",
+   "def": "not shared with others",
+   "ex": "Do not type private stories."
+  },
+  {
+   "k": "problem",
+   "word": "problem",
+   "def": "something difficult that needs a solution",
+   "ex": "They had a problem with the bridge."
+  },
+  {
+   "k": "produced",
+   "word": "produced",
+   "def": "to make",
+   "ex": "The dictionary produced the transcriptions."
+  },
+  {
+   "k": "program",
+   "word": "program",
+   "def": "a planned set of activities",
+   "ex": "They planned a childhood activity program."
+  },
+  {
+   "k": "project",
+   "word": "project",
+   "def": "a school task that takes time",
+   "ex": "They borrowed a model bridge for a school project."
+  },
+  {
+   "k": "promise",
+   "word": "promise",
+   "def": "a serious statement that you will do something",
+   "ex": "Someone makes a brave promise."
+  },
+  {
+   "k": "pronunciation",
+   "word": "pronunciation",
+   "def": "the way a word is said",
+   "ex": "The pronunciation is shown below each word."
+  },
+  {
+   "k": "put",
+   "word": "put",
+   "def": "to place",
+   "ex": "Put friendship at the top."
+  },
+  {
+   "k": "puzzle",
+   "word": "puzzle",
+   "def": "a game in which you fit pieces together",
+   "ex": "We did a puzzle on rainy days."
+  },
+  {
+   "k": "qualities",
+   "word": "qualities",
+   "def": "a feature of a person or thing",
+   "ex": "Choose a quality for the program."
+  },
+  {
+   "k": "quality",
+   "word": "quality",
+   "def": "a feature of a person or thing",
+   "ex": "Choose a quality for the program."
+  },
+  {
+   "k": "question",
+   "word": "question",
+   "def": "a sentence that asks for information",
+   "ex": "Ask one follow-up question."
+  },
+  {
+   "k": "questions",
+   "word": "questions",
+   "def": "a sentence that asks for information",
+   "ex": "Ask one follow-up question."
+  },
+  {
+   "k": "quick",
+   "word": "quick",
+   "def": "fast",
+   "ex": "A quick game of tag was fun."
+  },
+  {
+   "k": "quickly",
+   "word": "quickly",
+   "def": "fast",
+   "ex": "A quick game of tag was fun."
+  },
+  {
+   "k": "quiet",
+   "word": "quiet",
+   "def": "making little or no noise",
+   "ex": "We liked quiet games."
+  },
+  {
+   "k": "r",
+   "word": "r",
+   "def": "the eighteenth letter of the alphabet",
+   "ex": "Press R to replay the step."
+  },
+  {
+   "k": "rainy",
+   "word": "rainy",
+   "def": "with a lot of rain",
+   "ex": "It was a rainy afternoon."
+  },
+  {
+   "k": "rank",
+   "word": "rank",
+   "def": "to put things in order of importance",
+   "ex": "Rank the four qualities."
+  },
+  {
+   "k": "ranking",
+   "word": "ranking",
+   "def": "to put things in order of importance",
+   "ex": "Rank the four qualities."
+  },
+  {
+   "k": "rather",
+   "word": "rather",
+   "def": "used to show a preference",
+   "ex": "I'd rather watch a movie."
+  },
+  {
+   "k": "read",
+   "word": "read",
+   "def": "to look at words and understand them",
+   "ex": "I like to read before bed."
+  },
+  {
+   "k": "real",
+   "word": "real",
+   "def": "true; not imagined",
+   "ex": "A real or fictional story is fine."
+  },
+  {
+   "k": "reason",
+   "word": "reason",
+   "def": "the cause or explanation for something",
+   "ex": "Give a reason."
+  },
+  {
+   "k": "recess",
+   "word": "recess",
+   "def": "a break between classes at school",
+   "ex": "We played tag at recess."
+  },
+  {
+   "k": "recipe",
+   "word": "recipe",
+   "def": "instructions for cooking a dish",
+   "ex": "I cook dinner without a recipe."
+  },
+  {
+   "k": "reconsider",
+   "word": "reconsider",
+   "def": "to think again about a decision",
+   "ex": "Would you reconsider your answer?"
+  },
+  {
+   "k": "reduce",
+   "word": "reduce",
+   "def": "to make smaller",
+   "ex": "Reduce motion in the settings."
+  },
+  {
+   "k": "referee",
+   "word": "referee",
+   "def": "a person who makes sure players follow the rules",
+   "ex": "The newcomer could be the referee."
+  },
+  {
+   "k": "reflect",
+   "word": "reflect",
+   "def": "to think carefully about something",
+   "ex": "Take a moment to reflect."
+  },
+  {
+   "k": "reflection",
+   "word": "reflection",
+   "def": "careful thought about what happened",
+   "ex": "The last task is a short reflection."
+  },
+  {
+   "k": "relationships",
+   "word": "relationships",
+   "def": "the way people are connected",
+   "ex": "Friendships are important relationships."
+  },
+  {
+   "k": "relax",
+   "word": "relax",
+   "def": "to rest and feel calm",
+   "ex": "A plan helps me relax."
+  },
+  {
+   "k": "relay",
+   "word": "relay",
+   "def": "a race in which teams take turns",
+   "ex": "We ran a relay race."
+  },
+  {
+   "k": "relevant",
+   "word": "relevant",
+   "def": "connected to the topic",
+   "ex": "Use relevant vocabulary."
+  },
+  {
+   "k": "remember",
+   "word": "remember",
+   "def": "to bring something back to mind",
+   "ex": "I remember the spring show."
+  },
+  {
+   "k": "remembers",
+   "word": "remembers",
+   "def": "to bring something back to mind",
+   "ex": "I remember the spring show."
+  },
+  {
+   "k": "remind",
+   "word": "remind",
+   "def": "to help someone remember",
+   "ex": "An object can remind us of a place."
+  },
+  {
+   "k": "removes",
+   "word": "removes",
+   "def": "to take away",
+   "ex": "Shift-click removes one."
+  },
+  {
+   "k": "repair",
+   "word": "repair",
+   "def": "to fix",
+   "ex": "They tried to repair the bridge."
+  },
+  {
+   "k": "repeated",
+   "word": "repeated",
+   "def": "to do again",
+   "ex": "We would repeat the game each week."
+  },
+  {
+   "k": "replay",
+   "word": "replay",
+   "def": "to play again",
+   "ex": "Press R to replay the step."
+  },
+  {
+   "k": "reset",
+   "word": "reset",
+   "def": "to put back to the start",
+   "ex": "Reset the order."
+  },
+  {
+   "k": "respond",
+   "word": "respond",
+   "def": "to answer",
+   "ex": "Respond to another view."
+  },
+  {
+   "k": "response",
+   "word": "response",
+   "def": "an answer",
+   "ex": "Give a short response."
+  },
+  {
+   "k": "responses",
+   "word": "responses",
+   "def": "an answer",
+   "ex": "Give a short response."
+  },
+  {
+   "k": "result",
+   "word": "result",
+   "def": "what happens because of something",
+   "ex": "One possible result is shown here."
+  },
+  {
+   "k": "retell",
+   "word": "retell",
+   "def": "to tell a story again",
+   "ex": "Retell the whole story."
+  },
+  {
+   "k": "return",
+   "word": "return",
+   "def": "to give back",
+   "ex": "They returned it quickly."
+  },
+  {
+   "k": "reuse",
+   "word": "reuse",
+   "def": "to use again",
+   "ex": "Which expression will you reuse?"
+  },
+  {
+   "k": "reveal",
+   "word": "reveal",
+   "def": "to show",
+   "ex": "Reveal the next item."
+  },
+  {
+   "k": "revise",
+   "word": "revise",
+   "def": "to change after thinking again",
+   "ex": "Revise your response."
+  },
+  {
+   "k": "revisit",
+   "word": "revisit",
+   "def": "to go back to a place",
+   "ex": "I'd revisit a childhood place."
+  },
+  {
+   "k": "ride",
+   "word": "ride",
+   "def": "to sit on and control a bike",
+   "ex": "I used to ride my bike to the library."
+  },
+  {
+   "k": "right",
+   "word": "right",
+   "def": "correct",
+   "ex": "There is no right answer."
+  },
+  {
+   "k": "ring",
+   "word": "ring",
+   "def": "the eighteenth letter of the alphabet",
+   "ex": "Press R to replay the step."
+  },
+  {
+   "k": "risk",
+   "word": "risk",
+   "def": "the chance that something bad happens",
+   "ex": "A risk might be hurt feelings."
+  },
+  {
+   "k": "river",
+   "word": "river",
+   "def": "a large stream of water",
+   "ex": "I grew up near a river."
+  },
+  {
+   "k": "robot",
+   "word": "robot",
+   "def": "a machine that can move and do tasks",
+   "ex": "A talking toy robot opened the door."
+  },
+  {
+   "k": "role",
+   "word": "role",
+   "def": "a part that a person plays",
+   "ex": "Take the role of Alex."
+  },
+  {
+   "k": "rope",
+   "word": "rope",
+   "def": "a thick, strong cord",
+   "ex": "We made up a game with a rope."
+  },
+  {
+   "k": "round",
+   "word": "round",
+   "def": "one part of a game",
+   "ex": "Each round has a twist."
+  },
+  {
+   "k": "route",
+   "word": "route",
+   "def": "the way from one place to another",
+   "ex": "I took the same route to school."
+  },
+  {
+   "k": "routine",
+   "word": "routine",
+   "def": "things that you do regularly",
+   "ex": "My routine after school was simple."
+  },
+  {
+   "k": "routines",
+   "word": "routines",
+   "def": "things that you do regularly",
+   "ex": "My routine after school was simple."
+  },
+  {
+   "k": "rubric",
+   "word": "rubric",
+   "def": "a chart that shows how work is judged",
+   "ex": "The teacher can use the rubric."
+  },
+  {
+   "k": "rug",
+   "word": "rug",
+   "def": "a small carpet",
+   "ex": "The toy robot walked across the rug."
+  },
+  {
+   "k": "rules",
+   "word": "rules",
+   "def": "a statement about what you must or must not do",
+   "ex": "Explain one rule."
+  },
+  {
+   "k": "run",
+   "word": "run",
+   "def": "to move fast on foot",
+   "ex": "Not everyone likes to run."
+  },
+  {
+   "k": "s",
+   "word": "s",
+   "def": "the nineteenth letter of the alphabet",
+   "ex": "Press S for starters."
+  },
+  {
+   "k": "sam",
+   "word": "sam",
+   "def": "a fictional character in this lesson",
+   "ex": "Sam makes a sandwich."
+  },
+  {
+   "k": "same",
+   "word": "same",
+   "def": "exactly alike",
+   "ex": "Some things stay the same."
+  },
+  {
+   "k": "sample",
+   "word": "sample",
+   "def": "an example",
+   "ex": "This is a sample response."
+  },
+  {
+   "k": "sandwich",
+   "word": "sandwich",
+   "def": "two slices of bread with food between them",
+   "ex": "Sam makes a sandwich without help."
+  },
+  {
+   "k": "sat",
+   "word": "sat",
+   "def": "to rest with your body on a seat or the ground",
+   "ex": "A friend sat alone on the bench."
+  },
+  {
+   "k": "save",
+   "word": "save",
+   "def": "to keep information for later",
+   "ex": "Save notes on this computer."
+  },
+  {
+   "k": "saved",
+   "word": "saved",
+   "def": "to keep information for later",
+   "ex": "Save notes on this computer."
+  },
+  {
+   "k": "say",
+   "word": "say",
+   "def": "to speak words",
+   "ex": "Say your idea aloud."
+  },
+  {
+   "k": "says",
+   "word": "says",
+   "def": "to speak words",
+   "ex": "Say your idea aloud."
+  },
+  {
+   "k": "scale",
+   "word": "scale",
+   "def": "a line of choices from one end to the other",
+   "ex": "Choose a place on the scale."
+  },
+  {
+   "k": "scene",
+   "word": "scene",
+   "def": "a short part of a story",
+   "ex": "Watch the next scene."
+  },
+  {
+   "k": "school",
+   "word": "school",
+   "def": "a place where children learn",
+   "ex": "We walked to school."
+  },
+  {
+   "k": "scorekeeper",
+   "word": "scorekeeper",
+   "def": "a person who records the points",
+   "ex": "Anyone can be the scorekeeper."
+  },
+  {
+   "k": "screen",
+   "word": "screen",
+   "def": "the flat part of a computer that shows pictures",
+   "ex": "Share your screen."
+  },
+  {
+   "k": "screens",
+   "word": "screens",
+   "def": "the flat part of a computer that shows pictures",
+   "ex": "Share your screen."
+  },
+  {
+   "k": "script",
+   "word": "script",
+   "def": "the written words that people read or say",
+   "ex": "A prompt is not a script."
+  },
+  {
+   "k": "second",
+   "word": "second",
+   "def": "one sixtieth of a minute",
+   "ex": "The story lasts thirty seconds."
+  },
+  {
+   "k": "seconds",
+   "word": "seconds",
+   "def": "one sixtieth of a minute",
+   "ex": "The story lasts thirty seconds."
+  },
+  {
+   "k": "secret",
+   "word": "secret",
+   "def": "known to only a few people",
+   "ex": "We built a secret clubhouse."
+  },
+  {
+   "k": "secure",
+   "word": "secure",
+   "def": "strong and sure",
+   "ex": "Secure means you use it well."
+  },
+  {
+   "k": "see",
+   "word": "see",
+   "def": "to notice with your eyes",
+   "ex": "I see your point."
+  },
+  {
+   "k": "sentence",
+   "word": "sentence",
+   "def": "a group of words with a complete idea",
+   "ex": "Say one sentence with used to."
+  },
+  {
+   "k": "sentences",
+   "word": "sentences",
+   "def": "a group of words with a complete idea",
+   "ex": "Say one sentence with used to."
+  },
+  {
+   "k": "sequencing",
+   "word": "sequencing",
+   "def": "putting things in order",
+   "ex": "Use sequencing language."
+  },
+  {
+   "k": "set",
+   "word": "set",
+   "def": "to put in a place; to arrange",
+   "ex": "The group set the rules."
+  },
+  {
+   "k": "settings",
+   "word": "settings",
+   "def": "a choice that controls how something works",
+   "ex": "Change the setting."
+  },
+  {
+   "k": "seven",
+   "word": "seven",
+   "def": "the number 7",
+   "ex": "We played at seven."
+  },
+  {
+   "k": "share",
+   "word": "share",
+   "def": "to let others have or use something",
+   "ex": "You choose what to share."
+  },
+  {
+   "k": "shared",
+   "word": "shared",
+   "def": "to let others have or use something",
+   "ex": "You choose what to share."
+  },
+  {
+   "k": "she",
+   "word": "she",
+   "def": "the female person already mentioned",
+   "ex": "She grew up in a small town."
+  },
+  {
+   "k": "sheets",
+   "word": "sheets",
+   "def": "a flat piece of paper",
+   "ex": "Use a sheet of paper."
+  },
+  {
+   "k": "shift",
+   "word": "shift",
+   "def": "a key on a keyboard that changes letters",
+   "ex": "Shift-click removes one."
+  },
+  {
+   "k": "shift-click",
+   "word": "shift-click",
+   "def": "to click while holding the Shift key",
+   "ex": "Shift-click removes one."
+  },
+  {
+   "k": "short",
+   "word": "short",
+   "def": "not long",
+   "ex": "Tell a short story."
+  },
+  {
+   "k": "shortcuts",
+   "word": "shortcuts",
+   "def": "a quick way to do something",
+   "ex": "Learn a few keyboard shortcuts."
+  },
+  {
+   "k": "shorter",
+   "word": "shorter",
+   "def": "not long",
+   "ex": "Tell a short story."
+  },
+  {
+   "k": "should",
+   "word": "should",
+   "def": "used to give advice",
+   "ex": "We should explain what happened."
+  },
+  {
+   "k": "show",
+   "word": "show",
+   "def": "to let someone see something",
+   "ex": "Show the next card."
+  },
+  {
+   "k": "showing",
+   "word": "showing",
+   "def": "to let someone see something",
+   "ex": "Show the next card."
+  },
+  {
+   "k": "shown",
+   "word": "shown",
+   "def": "to let someone see something",
+   "ex": "Show the next card."
+  },
+  {
+   "k": "shy",
+   "word": "shy",
+   "def": "nervous about meeting or talking to people",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "side",
+   "word": "side",
+   "def": "one of the two parts of something",
+   "ex": "The robot opened the door from the other side."
+  },
+  {
+   "k": "simple",
+   "word": "simple",
+   "def": "easy to understand",
+   "ex": "Use a simple sentence."
+  },
+  {
+   "k": "simply",
+   "word": "simply",
+   "def": "in an easy way",
+   "ex": "Explain the rule simply."
+  },
+  {
+   "k": "sing",
+   "word": "sing",
+   "def": "the nineteenth letter of the alphabet",
+   "ex": "Press S for starters."
+  },
+  {
+   "k": "situation",
+   "word": "situation",
+   "def": "the facts of a particular time or place",
+   "ex": "Each situation is fictional."
+  },
+  {
+   "k": "situations",
+   "word": "situations",
+   "def": "the facts of a particular time or place",
+   "ex": "Each situation is fictional."
+  },
+  {
+   "k": "sixty",
+   "word": "sixty",
+   "def": "the number 60",
+   "ex": "The lesson plan has sixty minutes."
+  },
+  {
+   "k": "sleepy",
+   "word": "sleepy",
+   "def": "feeling tired and ready to sleep",
+   "ex": "The sleepy babysitter yawned."
+  },
+  {
+   "k": "slide",
+   "word": "slide",
+   "def": "a smooth slope for playing",
+   "ex": "There was a small door under the slide."
+  },
+  {
+   "k": "slowly",
+   "word": "slowly",
+   "def": "not fast",
+   "ex": "Everyone moved slowly in the dark."
+  },
+  {
+   "k": "small",
+   "word": "small",
+   "def": "little",
+   "ex": "A small piece broke."
+  },
+  {
+   "k": "smile",
+   "word": "smile",
+   "def": "a happy look on your face",
+   "ex": "She remembers the day with a smile."
+  },
+  {
+   "k": "snack",
+   "word": "snack",
+   "def": "a small amount of food between meals",
+   "ex": "I learned to prepare a simple snack."
+  },
+  {
+   "k": "snow",
+   "word": "snow",
+   "def": "soft white frozen rain",
+   "ex": "It starts to snow in the middle of summer."
+  },
+  {
+   "k": "so",
+   "word": "so",
+   "def": "for that reason; very",
+   "ex": "So, what can an ordinary object remind us of?"
+  },
+  {
+   "k": "soft",
+   "word": "soft",
+   "def": "gentle; not loud",
+   "ex": "The music is soft."
+  },
+  {
+   "k": "solution",
+   "word": "solution",
+   "def": "an answer to a problem",
+   "ex": "Is there another solution?"
+  },
+  {
+   "k": "some",
+   "word": "some",
+   "def": "an amount or number of",
+   "ex": "Some children wanted art."
+  },
+  {
+   "k": "someone's",
+   "word": "someone's",
+   "def": "belonging to a person who is not named",
+   "ex": "Someone's idea can change the plan."
+  },
+  {
+   "k": "someone",
+   "word": "someone",
+   "def": "a person that is not named",
+   "ex": "Someone you've never met will find it."
+  },
+  {
+   "k": "something",
+   "word": "something",
+   "def": "a thing that is not named",
+   "ex": "Something small can start a memory."
+  },
+  {
+   "k": "sometimes",
+   "word": "sometimes",
+   "def": "not always",
+   "ex": "Sometimes we met after lessons."
+  },
+  {
+   "k": "sorry",
+   "word": "sorry",
+   "def": "feeling sad about something you did",
+   "ex": "I'm sorry. It broke when we dropped it."
+  },
+  {
+   "k": "sound",
+   "word": "sound",
+   "def": "something that you hear",
+   "ex": "Use the sound chart."
+  },
+  {
+   "k": "sounds",
+   "word": "sounds",
+   "def": "something that you hear",
+   "ex": "Use the sound chart."
+  },
+  {
+   "k": "space",
+   "word": "space",
+   "def": "an area that is empty or free",
+   "ex": "We needed more space."
+  },
+  {
+   "k": "spaceship",
+   "word": "spaceship",
+   "def": "a vehicle that travels to space",
+   "ex": "We turned the yard into a spaceship."
+  },
+  {
+   "k": "speak",
+   "word": "speak",
+   "def": "to say words aloud",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "speaker",
+   "word": "speaker",
+   "def": "to say words aloud",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "speaking",
+   "word": "speaking",
+   "def": "to say words aloud",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "speaks",
+   "word": "speaks",
+   "def": "to say words aloud",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "speed",
+   "word": "speed",
+   "def": "how fast something moves",
+   "ex": "Change the speaking speed in the settings."
+  },
+  {
+   "k": "spinner",
+   "word": "spinner",
+   "def": "to turn around quickly",
+   "ex": "I loved spinning in circles."
+  },
+  {
+   "k": "spinning",
+   "word": "spinning",
+   "def": "to turn around quickly",
+   "ex": "I loved spinning in circles."
+  },
+  {
+   "k": "spoken",
+   "word": "spoken",
+   "def": "to say words aloud",
+   "ex": "Keep speaking."
+  },
+  {
+   "k": "sports",
+   "word": "sports",
+   "def": "a game that needs physical skill",
+   "ex": "Some wanted a sports activity."
+  },
+  {
+   "k": "stage",
+   "word": "stage",
+   "def": "a raised area where people perform",
+   "ex": "I used to love the stage."
+  },
+  {
+   "k": "standard",
+   "word": "standard",
+   "def": "usual; normal",
+   "ex": "The standard version lasts thirty seconds."
+  },
+  {
+   "k": "star",
+   "word": "star",
+   "def": "a small shining light in the sky; a prize shape",
+   "ex": "Add a star to the memory jar."
+  },
+  {
+   "k": "start",
+   "word": "start",
+   "def": "to begin",
+   "ex": "Start the timer."
+  },
+  {
+   "k": "started",
+   "word": "started",
+   "def": "to begin",
+   "ex": "Start the timer."
+  },
+  {
+   "k": "starters",
+   "word": "starters",
+   "def": "the first words of a sentence that help you begin",
+   "ex": "Use a sentence starter."
+  },
+  {
+   "k": "starting",
+   "word": "starting",
+   "def": "to begin",
+   "ex": "Start the timer."
+  },
+  {
+   "k": "starts",
+   "word": "starts",
+   "def": "to begin",
+   "ex": "Start the timer."
+  },
+  {
+   "k": "state",
+   "word": "state",
+   "def": "a condition; a situation",
+   "ex": "Use \"used to\" for a past state."
+  },
+  {
+   "k": "states",
+   "word": "states",
+   "def": "a condition; a situation",
+   "ex": "Use \"used to\" for a past state."
+  },
+  {
+   "k": "stations",
+   "word": "stations",
+   "def": "a place where an activity happens",
+   "ex": "Two short stations could work."
+  },
+  {
+   "k": "stay",
+   "word": "stay",
+   "def": "to remain",
+   "ex": "Some things stay the same."
+  },
+  {
+   "k": "step",
+   "word": "step",
+   "def": "one part of a process",
+   "ex": "Go to the next step."
+  },
+  {
+   "k": "still",
+   "word": "still",
+   "def": "up to now; even so",
+   "ex": "I still remember it."
+  },
+  {
+   "k": "stop",
+   "word": "stop",
+   "def": "to end",
+   "ex": "They didn't want to stop the game."
+  },
+  {
+   "k": "stopped",
+   "word": "stopped",
+   "def": "to end",
+   "ex": "They didn't want to stop the game."
+  },
+  {
+   "k": "stopping",
+   "word": "stopping",
+   "def": "to end",
+   "ex": "They didn't want to stop the game."
+  },
+  {
+   "k": "stories",
+   "word": "stories",
+   "def": "a description of events",
+   "ex": "Tell a thirty-second story."
+  },
+  {
+   "k": "story",
+   "word": "story",
+   "def": "a description of events",
+   "ex": "Tell a thirty-second story."
+  },
+  {
+   "k": "stranger",
+   "word": "stranger",
+   "def": "a person you do not know",
+   "ex": "Someone you've never met is a stranger."
+  },
+  {
+   "k": "street",
+   "word": "street",
+   "def": "a road in a town",
+   "ex": "We played hide-and-seek on my street."
+  },
+  {
+   "k": "streetlights",
+   "word": "streetlights",
+   "def": "lights along a road",
+   "ex": "We played until the streetlights came on."
+  },
+  {
+   "k": "stressful",
+   "word": "stressful",
+   "def": "causing worry",
+   "ex": "Too many chores can be stressful."
+  },
+  {
+   "k": "strict",
+   "word": "strict",
+   "def": "demanding that rules are followed",
+   "ex": "The teacher was strict but fair."
+  },
+  {
+   "k": "strong",
+   "word": "strong",
+   "def": "having great power",
+   "ex": "Teamwork makes a strong group."
+  },
+  {
+   "k": "stronger",
+   "word": "stronger",
+   "def": "having great power",
+   "ex": "Teamwork makes a strong group."
+  },
+  {
+   "k": "strongly",
+   "word": "strongly",
+   "def": "having great power",
+   "ex": "Teamwork makes a strong group."
+  },
+  {
+   "k": "student",
+   "word": "student",
+   "def": "a person who is learning",
+   "ex": "Each student has a turn."
+  },
+  {
+   "k": "students",
+   "word": "students",
+   "def": "a person who is learning",
+   "ex": "Each student has a turn."
+  },
+  {
+   "k": "such",
+   "word": "such",
+   "def": "of that kind",
+   "ex": "Such games need little equipment."
+  },
+  {
+   "k": "suddenly",
+   "word": "suddenly",
+   "def": "quickly and unexpectedly",
+   "ex": "Suddenly, the lights went out."
+  },
+  {
+   "k": "suggest",
+   "word": "suggest",
+   "def": "to offer an idea",
+   "ex": "Suggest another solution."
+  },
+  {
+   "k": "summer",
+   "word": "summer",
+   "def": "the warmest season",
+   "ex": "During summer vacations, we would play cards."
+  },
+  {
+   "k": "summers",
+   "word": "summers",
+   "def": "the warmest season",
+   "ex": "During summer vacations, we would play cards."
+  },
+  {
+   "k": "support",
+   "word": "support",
+   "def": "to give help or show reasons",
+   "ex": "Support your opinion with an example."
+  },
+  {
+   "k": "supported",
+   "word": "supported",
+   "def": "to give help or show reasons",
+   "ex": "Support your opinion with an example."
+  },
+  {
+   "k": "surprise",
+   "word": "surprise",
+   "def": "something unexpected",
+   "ex": "The twist is a surprise."
+  },
+  {
+   "k": "surprising",
+   "word": "surprising",
+   "def": "something unexpected",
+   "ex": "The twist is a surprise."
+  },
+  {
+   "k": "swam",
+   "word": "swam",
+   "def": "to move through water",
+   "ex": "I learned to swim."
+  },
+  {
+   "k": "swim",
+   "word": "swim",
+   "def": "to move through water",
+   "ex": "I learned to swim."
+  },
+  {
+   "k": "swings",
+   "word": "swings",
+   "def": "a seat that moves back and forth on ropes",
+   "ex": "We took turns on the swings."
+  },
+  {
+   "k": "symbols",
+   "word": "symbols",
+   "def": "a sign that stands for a sound or idea",
+   "ex": "The chart shows each symbol."
+  },
+  {
+   "k": "sync",
+   "word": "sync",
+   "def": "happening at the same time",
+   "ex": "The captions stay in sync with the voice."
+  },
+  {
+   "k": "t",
+   "word": "t",
+   "def": "the twentieth letter of the alphabet",
+   "ex": "Press T to start the timer."
+  },
+  {
+   "k": "tab",
+   "word": "tab",
+   "def": "a small label that you click to see another page",
+   "ex": "Click a tab to change the page."
+  },
+  {
+   "k": "table",
+   "word": "table",
+   "def": "a piece of furniture with a flat top",
+   "ex": "The box is on the table."
+  },
+  {
+   "k": "tag",
+   "word": "tag",
+   "def": "a chasing game",
+   "ex": "We played tag at recess."
+  },
+  {
+   "k": "take",
+   "word": "take",
+   "def": "to get hold of; to need",
+   "ex": "We took turns."
+  },
+  {
+   "k": "takes",
+   "word": "takes",
+   "def": "to get hold of; to need",
+   "ex": "We took turns."
+  },
+  {
+   "k": "talk",
+   "word": "talk",
+   "def": "to speak with someone",
+   "ex": "Talk with your partner."
+  },
+  {
+   "k": "talking",
+   "word": "talking",
+   "def": "to speak with someone",
+   "ex": "Talk with your partner."
+  },
+  {
+   "k": "tally",
+   "word": "tally",
+   "def": "a count that the teacher records",
+   "ex": "The tally shows the class choices."
+  },
+  {
+   "k": "tape",
+   "word": "tape",
+   "def": "a sticky strip",
+   "ex": "The photo has tape on the corners."
+  },
+  {
+   "k": "task",
+   "word": "task",
+   "def": "a piece of work to do",
+   "ex": "The exit challenge is a short speaking task."
+  },
+  {
+   "k": "tasks",
+   "word": "tasks",
+   "def": "a piece of work to do",
+   "ex": "The exit challenge is a short speaking task."
+  },
+  {
+   "k": "taught",
+   "word": "taught",
+   "def": "to help someone learn",
+   "ex": "A neighbor taught me to float."
+  },
+  {
+   "k": "teach",
+   "word": "teach",
+   "def": "to help someone learn",
+   "ex": "A neighbor taught me to float."
+  },
+  {
+   "k": "teacher",
+   "word": "teacher",
+   "def": "to help someone learn",
+   "ex": "A neighbor taught me to float."
+  },
+  {
+   "k": "teacher-operated",
+   "word": "teacher-operated",
+   "def": "controlled by the teacher",
+   "ex": "The rubric is teacher-operated."
+  },
+  {
+   "k": "team",
+   "word": "team",
+   "def": "a group that plays or works together",
+   "ex": "Two teams played a ball game."
+  },
+  {
+   "k": "teams",
+   "word": "teams",
+   "def": "a group that plays or works together",
+   "ex": "Two teams played a ball game."
+  },
+  {
+   "k": "teamwork",
+   "word": "teamwork",
+   "def": "working well as a group",
+   "ex": "Teamwork helps the whole group."
+  },
+  {
+   "k": "technical",
+   "word": "technical",
+   "def": "connected to machines or computers",
+   "ex": "Technical pauses can extend the lesson."
+  },
+  {
+   "k": "technology",
+   "word": "technology",
+   "def": "machines and computers",
+   "ex": "Technology gives children new tools."
+  },
+  {
+   "k": "tell",
+   "word": "tell",
+   "def": "to say something to someone",
+   "ex": "Tell a short story."
+  },
+  {
+   "k": "test",
+   "word": "test",
+   "def": "to try something to see if it works",
+   "ex": "Test the voice."
+  },
+  {
+   "k": "than",
+   "word": "than",
+   "def": "used to compare things",
+   "ex": "Friendship matters more than winning."
+  },
+  {
+   "k": "that's",
+   "word": "that's",
+   "def": "the thing that was mentioned or is far away",
+   "ex": "That is a good idea."
+  },
+  {
+   "k": "that",
+   "word": "that",
+   "def": "the thing that was mentioned or is far away",
+   "ex": "That is a good idea."
+  },
+  {
+   "k": "the",
+   "word": "the",
+   "def": "used before a noun that is already known",
+   "ex": "The game was exciting."
+  },
+  {
+   "k": "their",
+   "word": "their",
+   "def": "belonging to them",
+   "ex": "Their childhood was different."
+  },
+  {
+   "k": "them",
+   "word": "them",
+   "def": "the people or things already mentioned",
+   "ex": "Include them in the game."
+  },
+  {
+   "k": "then",
+   "word": "then",
+   "def": "after that",
+   "ex": "At first, we built a kite. Then we flew it."
+  },
+  {
+   "k": "theo",
+   "word": "theo",
+   "def": "a fictional guide in this lesson",
+   "ex": "Theo reads the note."
+  },
+  {
+   "k": "there",
+   "word": "there",
+   "def": "in that place",
+   "ex": "There is a park near my home."
+  },
+  {
+   "k": "these",
+   "word": "these",
+   "def": "the ones that are near",
+   "ex": "These are the core words."
+  },
+  {
+   "k": "they",
+   "word": "they",
+   "def": "the people or things already mentioned",
+   "ex": "They went to the same school."
+  },
+  {
+   "k": "thing",
+   "word": "thing",
+   "def": "an object or idea",
+   "ex": "Many things have changed."
+  },
+  {
+   "k": "things",
+   "word": "things",
+   "def": "an object or idea",
+   "ex": "Many things have changed."
+  },
+  {
+   "k": "think",
+   "word": "think",
+   "def": "to use your mind",
+   "ex": "Think about your own order first."
+  },
+  {
+   "k": "thinking",
+   "word": "thinking",
+   "def": "to use your mind",
+   "ex": "Think about your own order first."
+  },
+  {
+   "k": "third",
+   "word": "third",
+   "def": "number three in order",
+   "ex": "The third claim is about friends."
+  },
+  {
+   "k": "thirty",
+   "word": "thirty",
+   "def": "the number 30",
+   "ex": "You have thirty seconds."
+  },
+  {
+   "k": "thirty-second",
+   "word": "thirty-second",
+   "def": "lasting thirty seconds",
+   "ex": "Tell a thirty-second story."
+  },
+  {
+   "k": "this",
+   "word": "this",
+   "def": "the one that is here",
+   "ex": "This is chapter one."
+  },
+  {
+   "k": "those",
+   "word": "those",
+   "def": "the ones that are there",
+   "ex": "I look back on those summers."
+  },
+  {
+   "k": "three",
+   "word": "three",
+   "def": "the number 3",
+   "ex": "Choose three activities."
+  },
+  {
+   "k": "time",
+   "word": "time",
+   "def": "what a clock measures",
+   "ex": "Time is limited."
+  },
+  {
+   "k": "timer",
+   "word": "timer",
+   "def": "a clock that counts down",
+   "ex": "Start the timer."
+  },
+  {
+   "k": "timers",
+   "word": "timers",
+   "def": "a clock that counts down",
+   "ex": "Start the timer."
+  },
+  {
+   "k": "times",
+   "word": "times",
+   "def": "what a clock measures",
+   "ex": "Time is limited."
+  },
+  {
+   "k": "tiny",
+   "word": "tiny",
+   "def": "very small",
+   "ex": "A tiny piece broke."
+  },
+  {
+   "k": "to",
+   "word": "to",
+   "def": "in the direction of; used before a verb",
+   "ex": "We walked to school."
+  },
+  {
+   "k": "today",
+   "word": "today",
+   "def": "on this day",
+   "ex": "Today you choose what to share."
+  },
+  {
+   "k": "together",
+   "word": "together",
+   "def": "with each other",
+   "ex": "We built it together."
+  },
+  {
+   "k": "too",
+   "word": "too",
+   "def": "also; more than needed",
+   "ex": "I'd love that, too."
+  },
+  {
+   "k": "took",
+   "word": "took",
+   "def": "to get hold of; to need",
+   "ex": "We took turns."
+  },
+  {
+   "k": "toolbox",
+   "word": "toolbox",
+   "def": "a set of useful tools",
+   "ex": "This is your language toolbox."
+  },
+  {
+   "k": "top",
+   "word": "top",
+   "def": "the highest part",
+   "ex": "Put friendship at the top."
+  },
+  {
+   "k": "total",
+   "word": "total",
+   "def": "the whole amount",
+   "ex": "The total time is sixty minutes."
+  },
+  {
+   "k": "touch",
+   "word": "touch",
+   "def": "to put your hand on something",
+   "ex": "You can't touch anything."
+  },
+  {
+   "k": "town",
+   "word": "town",
+   "def": "a place with houses and shops, smaller than a city",
+   "ex": "She grew up in a small town."
+  },
+  {
+   "k": "toy",
+   "word": "toy",
+   "def": "an object for children to play with",
+   "ex": "The small toy had many adventures."
+  },
+  {
+   "k": "transcription",
+   "word": "transcription",
+   "def": "symbols that show how a word sounds",
+   "ex": "The transcription is shown below the word."
+  },
+  {
+   "k": "treat",
+   "word": "treat",
+   "def": "to act toward someone in a certain way",
+   "ex": "Treat everyone fairly."
+  },
+  {
+   "k": "treehouse",
+   "word": "treehouse",
+   "def": "a small house built in a tree",
+   "ex": "I'd rather have a treehouse."
+  },
+  {
+   "k": "true",
+   "word": "true",
+   "def": "correct; real",
+   "ex": "Could the opposite also be true?"
+  },
+  {
+   "k": "trust",
+   "word": "trust",
+   "def": "belief that someone is honest and reliable",
+   "ex": "Honesty builds trust."
+  },
+  {
+   "k": "trusted",
+   "word": "trusted",
+   "def": "belief that someone is honest and reliable",
+   "ex": "Honesty builds trust."
+  },
+  {
+   "k": "try",
+   "word": "try",
+   "def": "to attempt",
+   "ex": "Try the longer challenge."
+  },
+  {
+   "k": "turn",
+   "word": "turn",
+   "def": "your chance to do something in a game",
+   "ex": "Everyone gets a turn."
+  },
+  {
+   "k": "turns",
+   "word": "turns",
+   "def": "your chance to do something in a game",
+   "ex": "Everyone gets a turn."
+  },
+  {
+   "k": "twist",
+   "word": "twist",
+   "def": "a surprising change",
+   "ex": "Here is a twist."
+  },
+  {
+   "k": "two",
+   "word": "two",
+   "def": "the number 2",
+   "ex": "Choose two words."
+  },
+  {
+   "k": "type",
+   "word": "type",
+   "def": "to write using a keyboard",
+   "ex": "Please do not type private stories."
+  },
+  {
+   "k": "under",
+   "word": "under",
+   "def": "below something",
+   "ex": "The door was under the slide."
+  },
+  {
+   "k": "uneven",
+   "word": "uneven",
+   "def": "not equal",
+   "ex": "The teams were uneven for one round."
+  },
+  {
+   "k": "unfair",
+   "word": "unfair",
+   "def": "not treating people equally",
+   "ex": "The numbers felt unfair."
+  },
+  {
+   "k": "until",
+   "word": "until",
+   "def": "up to the time that",
+   "ex": "We played until the streetlights came on."
+  },
+  {
+   "k": "unusual",
+   "word": "unusual",
+   "def": "not common",
+   "ex": "Treat unusual words with care."
+  },
+  {
+   "k": "up",
+   "word": "up",
+   "def": "toward a higher place",
+   "ex": "Hands up if you agree."
+  },
+  {
+   "k": "upset",
+   "word": "upset",
+   "def": "unhappy or worried",
+   "ex": "The owner may be upset."
+  },
+  {
+   "k": "us",
+   "word": "us",
+   "def": "me and other people",
+   "ex": "An object can remind us of a place."
+  },
+  {
+   "k": "use",
+   "word": "use",
+   "def": "to do something with a tool or word",
+   "ex": "Use these expressions."
+  },
+  {
+   "k": "used",
+   "word": "used",
+   "def": "to do something with a tool or word",
+   "ex": "Use these expressions."
+  },
+  {
+   "k": "useful",
+   "word": "useful",
+   "def": "helpful",
+   "ex": "These are useful expressions."
+  },
+  {
+   "k": "uses",
+   "word": "uses",
+   "def": "to do something with a tool or word",
+   "ex": "Use these expressions."
+  },
+  {
+   "k": "using",
+   "word": "using",
+   "def": "to do something with a tool or word",
+   "ex": "Use these expressions."
+  },
+  {
+   "k": "usually",
+   "word": "usually",
+   "def": "most of the time",
+   "ex": "We usually walked home."
+  },
+  {
+   "k": "vacations",
+   "word": "vacations",
+   "def": "a holiday; time away from school or work",
+   "ex": "During summer vacations, we would play cards."
+  },
+  {
+   "k": "valuable",
+   "word": "valuable",
+   "def": "important or worth a lot",
+   "ex": "All four qualities are valuable."
+  },
+  {
+   "k": "verb",
+   "word": "verb",
+   "def": "a word for an action",
+   "ex": "\"Play\" is a verb."
+  },
+  {
+   "k": "very",
+   "word": "very",
+   "def": "to a high degree",
+   "ex": "It was very exciting."
+  },
+  {
+   "k": "view",
+   "word": "view",
+   "def": "an opinion or way of seeing something",
+   "ex": "Respond to another view."
+  },
+  {
+   "k": "visitor",
+   "word": "visitor",
+   "def": "a person who comes to see someone",
+   "ex": "A surprise visitor arrives."
+  },
+  {
+   "k": "vocabulary",
+   "word": "vocabulary",
+   "def": "the words that you know",
+   "ex": "Use new vocabulary."
+  },
+  {
+   "k": "voice",
+   "word": "voice",
+   "def": "the sound that you make when you speak",
+   "ex": "Test the voice."
+  },
+  {
+   "k": "voices",
+   "word": "voices",
+   "def": "the sound that you make when you speak",
+   "ex": "Test the voice."
+  },
+  {
+   "k": "volume",
+   "word": "volume",
+   "def": "how loud a sound is",
+   "ex": "Change the volume."
+  },
+  {
+   "k": "vote",
+   "word": "vote",
+   "def": "to choose by raising a hand or marking a paper",
+   "ex": "The group can vote."
+  },
+  {
+   "k": "w",
+   "word": "w",
+   "def": "the twenty-third letter of the alphabet",
+   "ex": "Press W for the word banks."
+  },
+  {
+   "k": "wait",
+   "word": "wait",
+   "def": "to stay until something happens",
+   "ex": "The newcomer may have to wait."
+  },
+  {
+   "k": "waiting",
+   "word": "waiting",
+   "def": "to stay until something happens",
+   "ex": "The newcomer may have to wait."
+  },
+  {
+   "k": "waits",
+   "word": "waits",
+   "def": "to stay until something happens",
+   "ex": "The newcomer may have to wait."
+  },
+  {
+   "k": "waking",
+   "word": "waking",
+   "def": "to stop sleeping",
+   "ex": "I used to wake up early."
+  },
+  {
+   "k": "walk",
+   "word": "walk",
+   "def": "to move on foot",
+   "ex": "We walk home together."
+  },
+  {
+   "k": "walks",
+   "word": "walks",
+   "def": "to move on foot",
+   "ex": "We walk home together."
+  },
+  {
+   "k": "wall",
+   "word": "wall",
+   "def": "a side of a room or building",
+   "ex": "We threw a ball against the wall."
+  },
+  {
+   "k": "want",
+   "word": "want",
+   "def": "to wish for",
+   "ex": "Some want a sports activity."
+  },
+  {
+   "k": "wants",
+   "word": "wants",
+   "def": "to wish for",
+   "ex": "Some want a sports activity."
+  },
+  {
+   "k": "warm",
+   "word": "warm",
+   "def": "pleasantly hot; friendly",
+   "ex": "Not every memory feels warm."
+  },
+  {
+   "k": "warm-up",
+   "word": "warm-up",
+   "def": "an easy activity at the start",
+   "ex": "The warm-up has four questions."
+  },
+  {
+   "k": "was",
+   "word": "was",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "wasn't",
+   "word": "wasn't",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "watch",
+   "word": "watch",
+   "def": "to look at something for a time",
+   "ex": "Watch a short scene."
+  },
+  {
+   "k": "way",
+   "word": "way",
+   "def": "a method; a path",
+   "ex": "There are many ways to solve it."
+  },
+  {
+   "k": "we'd",
+   "word": "we'd",
+   "def": "the speaker and other people",
+   "ex": "We played tag."
+  },
+  {
+   "k": "we'll",
+   "word": "we'll",
+   "def": "the speaker and other people",
+   "ex": "We played tag."
+  },
+  {
+   "k": "we",
+   "word": "we",
+   "def": "the speaker and other people",
+   "ex": "We played tag."
+  },
+  {
+   "k": "week",
+   "word": "week",
+   "def": "seven days",
+   "ex": "We met once a week."
+  },
+  {
+   "k": "weekends",
+   "word": "weekends",
+   "def": "Saturday and Sunday",
+   "ex": "Weekends are better with a plan."
+  },
+  {
+   "k": "weekly",
+   "word": "weekly",
+   "def": "seven days",
+   "ex": "We met once a week."
+  },
+  {
+   "k": "welcome",
+   "word": "welcome",
+   "def": "to greet someone happily",
+   "ex": "Welcome to Speaking Club."
+  },
+  {
+   "k": "well",
+   "word": "well",
+   "def": "in a good way",
+   "ex": "We get along well."
+  },
+  {
+   "k": "went",
+   "word": "went",
+   "def": "to move from one place to another",
+   "ex": "We go to the park after school."
+  },
+  {
+   "k": "were",
+   "word": "were",
+   "def": "to exist or to have a quality",
+   "ex": "I used to be shy."
+  },
+  {
+   "k": "what",
+   "word": "what",
+   "def": "used to ask for information",
+   "ex": "What happened next?"
+  },
+  {
+   "k": "when",
+   "word": "when",
+   "def": "at what time",
+   "ex": "When I was seven, I learned to ride a bike."
+  },
+  {
+   "k": "where",
+   "word": "where",
+   "def": "in what place",
+   "ex": "Where did you grow up?"
+  },
+  {
+   "k": "which",
+   "word": "which",
+   "def": "used to ask about a choice",
+   "ex": "Which expression do you want to reuse?"
+  },
+  {
+   "k": "while",
+   "word": "while",
+   "def": "during the time that",
+   "ex": "While carrying it, they dropped it."
+  },
+  {
+   "k": "whispers",
+   "word": "whispers",
+   "def": "to speak very quietly",
+   "ex": "One friend whispers, \"Let's hide it.\""
+  },
+  {
+   "k": "who",
+   "word": "who",
+   "def": "used to ask about a person",
+   "ex": "Who did you usually play with?"
+  },
+  {
+   "k": "whole",
+   "word": "whole",
+   "def": "complete",
+   "ex": "The whole class joined in."
+  },
+  {
+   "k": "why",
+   "word": "why",
+   "def": "for what reason",
+   "ex": "Why did you choose it?"
+  },
+  {
+   "k": "will",
+   "word": "will",
+   "def": "used to talk about the future",
+   "ex": "Someone will find it."
+  },
+  {
+   "k": "with",
+   "word": "with",
+   "def": "together with; using",
+   "ex": "I played with my cousin."
+  },
+  {
+   "k": "without",
+   "word": "without",
+   "def": "not having",
+   "ex": "Sam makes a sandwich without help."
+  },
+  {
+   "k": "word",
+   "word": "word",
+   "def": "a single unit of language",
+   "ex": "Double-click any word."
+  },
+  {
+   "k": "words",
+   "word": "words",
+   "def": "a single unit of language",
+   "ex": "Double-click any word."
+  },
+  {
+   "k": "work",
+   "word": "work",
+   "def": "to be effective; to do a job",
+   "ex": "That might work."
+  },
+  {
+   "k": "working",
+   "word": "working",
+   "def": "to be effective; to do a job",
+   "ex": "That might work."
+  },
+  {
+   "k": "works",
+   "word": "works",
+   "def": "to be effective; to do a job",
+   "ex": "That might work."
+  },
+  {
+   "k": "would",
+   "word": "would",
+   "def": "used for past habits and polite questions",
+   "ex": "We would play cards after lunch."
+  },
+  {
+   "k": "wrap-up",
+   "word": "wrap-up",
+   "def": "a short ending activity",
+   "ex": "The wrap-up asks which claim made you think."
+  },
+  {
+   "k": "wrong",
+   "word": "wrong",
+   "def": "not correct",
+   "ex": "Neither memory has to be wrong."
+  },
+  {
+   "k": "yard",
+   "word": "yard",
+   "def": "the outdoor space next to a house",
+   "ex": "We turned the yard into a spaceship."
+  },
+  {
+   "k": "year",
+   "word": "year",
+   "def": "twelve months",
+   "ex": "It's been years!"
+  },
+  {
+   "k": "yellow",
+   "word": "yellow",
+   "def": "the color of the sun or a banana",
+   "ex": "It was long and yellow."
+  },
+  {
+   "k": "yes",
+   "word": "yes",
+   "def": "a word that shows agreement",
+   "ex": "Yes, that works."
+  },
+  {
+   "k": "yet",
+   "word": "yet",
+   "def": "up to now",
+   "ex": "There is no transcription yet."
+  },
+  {
+   "k": "you're",
+   "word": "you're",
+   "def": "the person being spoken to",
+   "ex": "You can always pass."
+  },
+  {
+   "k": "you've",
+   "word": "you've",
+   "def": "the person being spoken to",
+   "ex": "You can always pass."
+  },
+  {
+   "k": "you",
+   "word": "you",
+   "def": "the person being spoken to",
+   "ex": "You can always pass."
+  },
+  {
+   "k": "younger",
+   "word": "younger",
+   "def": "not old",
+   "ex": "When I was young, I loved spinning."
+  },
+  {
+   "k": "your",
+   "word": "your",
+   "def": "belonging to you",
+   "ex": "Say your idea aloud."
+  },
+  {
+   "k": "zoom",
+   "word": "zoom",
+   "def": "a program for video calls",
+   "ex": "Share your screen in Zoom."
+  },
+  {
+   "k": "role-play",
+   "word": "role-play",
+   "def": "an activity in which people act out a situation",
+   "ex": "The role-play is about an old friend."
+  },
+  {
+   "k": "grow up",
+   "word": "grow up",
+   "def": "develop from being a child into being an adult",
+   "ex": "She grew up in a small town."
+  },
+  {
+   "k": "look back on",
+   "word": "look back on",
+   "def": "think about something from the past",
+   "ex": "When he looks back on school, he remembers his art teacher."
+  },
+  {
+   "k": "used to",
+   "word": "used to",
+   "def": "describes a past habit or a past state that is no longer true",
+   "ex": "I used to play outside."
+  },
+  {
+   "k": "be used to",
+   "word": "be used to",
+   "def": "to be familiar with something now",
+   "ex": "I'm used to waking up early."
+  },
+  {
+   "k": "get used to",
+   "word": "get used to",
+   "def": "to become familiar with something",
+   "ex": "I got used to the new school."
+  },
+  {
+   "k": "take turns",
+   "word": "take turns",
+   "def": "to do something one after another, not at the same time",
+   "ex": "We took turns on the swings."
+  },
+  {
+   "k": "get along",
+   "word": "get along",
+   "def": "to have a friendly relationship with someone",
+   "ex": "My cousin and I always got along."
+  },
+  {
+   "k": "make up a game",
+   "word": "make up a game",
+   "def": "to invent a new game",
+   "ex": "We made up a game with a rope."
+  },
+  {
+   "k": "make up",
+   "word": "make up",
+   "def": "to invent",
+   "ex": "They made up a story about a spaceship."
+  },
+  {
+   "k": "keep in touch",
+   "word": "keep in touch",
+   "def": "to stay in contact with someone",
+   "ex": "Would you like to keep in touch?"
+  },
+  {
+   "k": "join in",
+   "word": "join in",
+   "def": "to take part in an activity that has already started",
+   "ex": "Let's make sure everyone can join in."
+  },
+  {
+   "k": "board game",
+   "word": "board game",
+   "def": "a game played on a flat board",
+   "ex": "We played a board game after lunch."
+  },
+  {
+   "k": "building blocks",
+   "word": "building blocks",
+   "def": "small pieces that children stack to build things",
+   "ex": "We made towers with building blocks."
+  },
+  {
+   "k": "school project",
+   "word": "school project",
+   "def": "a task that students do over time, often in a group",
+   "ex": "They borrowed a model bridge for a school project."
+  },
+  {
+   "k": "childhood friend",
+   "word": "childhood friend",
+   "def": "a friend from the time when you were a child",
+   "ex": "A childhood friend remembers your old games."
+  },
+  {
+   "k": "in the end",
+   "word": "in the end",
+   "def": "finally, after everything",
+   "ex": "In the end, we swam across the lake."
+  },
+  {
+   "k": "at first",
+   "word": "at first",
+   "def": "at the beginning",
+   "ex": "At first, I was afraid to swim."
+  },
+  {
+   "k": "after that",
+   "word": "after that",
+   "def": "next; following that",
+   "ex": "After that, we played tag."
+  },
+  {
+   "k": "i see your point",
+   "word": "i see your point",
+   "def": "I understand your opinion",
+   "ex": "I see your point, but I think it depends."
+  },
+  {
+   "k": "art teacher",
+   "word": "art teacher",
+   "def": "a teacher who teaches drawing and painting",
+   "ex": "When he looks back on school, he remembers his art teacher."
+  },
+  {
+   "k": "relay race",
+   "word": "relay race",
+   "def": "a race in which team members take turns running",
+   "ex": "We ran a relay race."
+  },
+  {
+   "k": "story circle",
+   "word": "story circle",
+   "def": "a group sitting in a circle to share stories",
+   "ex": "We ended the day with a story circle."
+  }
+ ]
+}

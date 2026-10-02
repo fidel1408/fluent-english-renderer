@@ -76,6 +76,7 @@
     sVoiceNone: "No English voice available in this browser.",
     sAudition: "Audition",
     sNarr: "Narration",
+    sNatural: "Natural voices", sNaturalD: "Recordings of Maya and Theo. Switch this off to use your browser voices.",
     sOn: "On", sOff: "Off",
     sMusic: "Background music",
     sMusicD: "Original, soft, and optional.",

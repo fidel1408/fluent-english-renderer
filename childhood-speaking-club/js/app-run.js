@@ -592,7 +592,7 @@
     d.innerHTML = head(U.sTitle) + '<div class="dr-b">' +
       "<h3 style=\"margin:0\">" + T(U.sVoices) + "</h3>" + vrows +
       '<div class="vrow"><span class="vn">' + T(U.sRate) + '</span><input type="range" id="rateR" min="70" max="130" value="' + Math.round(P.rate * 100) + '" aria-label="' + esc(U.sRate) + '"></div>' +
-      sw("narrChk", U.sNarr, P.narration) + sw("musicChk", U.sMusic, P.music, U.sMusicD) +
+      sw("narrChk", U.sNarr, P.narration) + (Object.keys(V.clips || {}).length ? sw("natChk", U.sNatural, P.natural !== false, U.sNaturalD) : "") + sw("musicChk", U.sMusic, P.music, U.sMusicD) +
       '<div class="vrow"><span class="vn">' + T(U.sMusicVol) + '</span><input type="range" id="musicV" min="0" max="100" value="' + Math.round(P.musicVol * 100) + '" aria-label="' + esc(U.sMusicVol) + '"></div>' +
       sw("sfxChk", U.sSfx, P.sfx) + sw("celChk", U.sCelebrate, P.celebrate) + sw("autoChk", U.sAuto, P.autoTimer) + sw("motionChk", U.sMotion, P.reduceMotion) +
       '<div class="vrow"><span class="vn" style="width:auto">' + T(U.sDemoSec) + '</span><select id="demoSel" aria-label="' + esc(U.sDemoSec) + '">' + [5, 10, 20, 30].map(function (n) { return '<option value="' + n + '"' + (P.demoSec === n ? " selected" : "") + ">" + n + " s</option>"; }).join("") + "</select></div>" +
@@ -608,6 +608,7 @@
       var t = e.target;
       if (t.dataset.vr) { V.setVoice(t.dataset.vr, t.value); P.voices = V.saved; X.savePrefs(); }
       else if (t.id === "narrChk") { P.narration = t.checked; V.enabled = t.checked; if (!t.checked) V.cancel(); X.savePrefs(); }
+      else if (t.id === "natChk") { P.natural = t.checked; V.useClips = t.checked && !V.clipsOff; V.cancel(); X.savePrefs(); }
       else if (t.id === "musicChk") { P.music = t.checked; FE.Sound.unlock(); FE.Sound.music(P.music); X.savePrefs(); }
       else if (t.id === "sfxChk") { P.sfx = t.checked; FE.Sound.setSfx(P.sfx); X.savePrefs(); }
       else if (t.id === "celChk") { P.celebrate = t.checked; X.savePrefs(); }
@@ -730,6 +731,7 @@
   function applyPrefs() {
     document.getElementById("app").classList.toggle("reduce-motion", X.reduceMotion());
     V.volume = P.volume; V.rate = P.rate; V.enabled = P.narration; V.saved = P.voices || {};
+    if (V.clipsOK !== false) V.useClips = P.natural !== false && !V.clipsOff;
     if (FE.Sound) { FE.Sound.setSfx(P.sfx); FE.Sound.setMusicVolume(P.musicVol); FE.Sound.setMasterVolume(P.volume); }
   }
 

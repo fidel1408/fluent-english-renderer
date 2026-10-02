@@ -119,7 +119,8 @@
   };
   function hash(s) { var h = 2166136261; for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h.toString(36); }
   V.clipKey = function (role, text) { return (role || "maya") + ":" + hash(text.replace(/\s+/g, " ").trim()); };
-  V.clips = {}; V.useClips = true;
+  V.clips = V.clips || {}; V.useClips = true;
+  try { if (new URLSearchParams(root.location.search).get("clips") === "0") { V.useClips = false; V.clipsOff = true; } } catch (e) {}
 
   /* split a line into phrases so the voice can breathe: sentences, and long clauses at commas */
   function phrases(text) {
@@ -156,12 +157,27 @@
       /* 1. a pre-recorded clip, when one exists for this exact line and character */
       var clip = !opts.muted && V.enabled && V.useClips && V.clips[V.clipKey(opts.role, text)];
       if (clip && root.Audio) {
-        var au = new root.Audio(clip.f); au.volume = Math.max(0, Math.min(1, V.volume)); curAudio = au;
-        var fell = false, fallback = function () { if (fell || my !== tok) return; fell = true; delete V.clips[V.clipKey(opts.role, text)]; V.speak(text, opts).then(function (r) { if (my === tok || true) resolve(r); }); };
-        au.onplay = function () { setSpeaking(true); if (opts.onStart) opts.onStart(); scheduleRange(0, text.length, (clip.d || au.duration || est / 1000) * 1000); };
-        au.onended = function () { curAudio = null; done(true); };
+        var au = new root.Audio(); au.preload = "auto"; curAudio = au;
+        var packed = clip.s > 0 || !!clip.p, fell = false, begun = false;
+        var key = V.clipKey(opts.role, text);
+        var fallback = function () { if (fell || my !== tok) return; fell = true; if (curAudio === au) { try { au.pause(); } catch (e) {} curAudio = null; } delete V.clips[key]; V.speak(text, opts).then(resolve); };
+        var finish = function () { if (my !== tok) return; try { au.pause(); } catch (e) {} if (curAudio === au) curAudio = null; done(true); };
+        au.onplaying = function () {
+          if (begun || my !== tok) return; begun = true;
+          au.volume = Math.max(0, Math.min(1, V.volume));
+          setSpeaking(true); if (opts.onStart) opts.onStart();
+          var ms = (clip.d || au.duration || est / 1000) * 1000;
+          scheduleRange(0, text.length, ms);
+          if (packed) timers.push(setTimeout(finish, ms + 30));
+        };
+        au.onended = finish;
         au.onerror = fallback;
-        var pl = au.play(); if (pl && pl.catch) pl.catch(fallback);
+        var go = function () { var pl = au.play(); if (pl && pl.catch) pl.catch(fallback); };
+        if (packed) {
+          au.addEventListener("loadedmetadata", function () { au.addEventListener("seeked", go, { once: true }); try { au.currentTime = clip.s; } catch (e) { fallback(); } }, { once: true });
+        }
+        au.src = clip.f;
+        if (!packed) go();
         return;
       }
 

@@ -50,7 +50,8 @@ async function fresh(opts = {}) {
   page.on("console", (m) => m.type() === "error" && errs.push(m.text()));
   page.on("request", (r) => { if (!r.url().startsWith("file://") && !r.url().startsWith("data:")) page.__req.push(r.url()); });
   if (opts.mock !== false) await page.addInitScript(MOCK);
-  await page.goto(URL0 + (opts.query || ""));
+  const qs = (opts.query || "?").replace(/\?$/, "?") + (opts.clips ? "" : (opts.query ? "&" : "") + "clips=0");
+  await page.goto(URL0 + qs);
   await page.waitForTimeout(250);
   return { ctx, page };
 }

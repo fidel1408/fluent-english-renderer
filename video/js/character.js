@@ -27,8 +27,8 @@ export function defaultPose() {
     sway: 0, breath: 0, shoulderLift: 0,
     head: { dx: 0, dy: 0, tilt: 0, pitch: 0 }, look: { x: 0, y: 0 }, blink: 0,
     brow: { raise: 0, worry: 0 }, smile: 0.3, mouth: 0, cheeks: 0.3,
-    L: { x: -SHOULDER_DX + 60, y: 1175, z: 150, ang: 20, curl: 0.3, spread: 0.1, thumbOut: 0, vis: 1 },
-    R: { x: SHOULDER_DX - 60, y: 1175, z: 150, ang: -20, curl: 0.3, spread: 0.1, thumbOut: 0, vis: 1 },
+    L: { x: -175, y: 1325, z: 110, ang: 20, curl: .4, spread: .1, thumbOut: 0, fore: .5, follow: 0, view: 'back', vis: 1 },
+    R: { x: 175, y: 1325, z: 110, ang: -20, curl: .4, spread: .1, thumbOut: 0, fore: .5, follow: 0, view: 'back', vis: 1 },
   };
 }
 
@@ -211,83 +211,64 @@ function drawHair(ctx) {
 function drawArm(ctx, p, key, side, a) {
   const sy = SHOULDER_Y + p.shoulderLift;
   const S = { x: CX + side * SHOULDER_DX, y: sy + 56, z: 0 };
-  const T = { x: CX + a.x * 1, y: a.y, z: a.z };
+  const T = { x: CX + a.x, y: a.y, z: a.z };
   const { E, W } = solveArm(S, T, side);
   const pS = proj(S), pE = proj(E), pW = proj(W);
-  const rS = 56 * pS.k, rE = 45 * pE.k, rW = 25 * pW.k;
+  const rS = 56 * pS.k, rE = 44 * pE.k, rW = 23 * pW.k;
   ctx.save(); ctx.globalAlpha = a.vis;
-  // upper arm sleeve
-  capsule(ctx, pS, pE, rS, rE, C.navy, C.navyD, 5);
-  const hl = { x: (pS.x + pE.x) / 2, y: (pS.y + pE.y) / 2 };
-  // sleeve highlight
+  capsule(ctx, pS, pE, rS, rE, C.navy, C.navyD, 5);                       // upper arm (sleeve)
   ctx.save(); ctx.globalAlpha = a.vis * 0.12; capsule(ctx, { x: pS.x - side * rS * 0.35, y: pS.y }, { x: pE.x - side * rE * 0.3, y: pE.y }, rS * 0.28, rE * 0.28, '#fff'); ctx.restore();
-  // forearm: sleeve (rolled cuff at 36%) then skin to wrist
-  const cuff = { x: lerp(pE.x, pW.x, 0.38), y: lerp(pE.y, pW.y, 0.38) }, rC = lerp(rE, rW, 0.38) * 1.02 + 3;
-  const skinStart = { x: lerp(pE.x, pW.x, 0.30), y: lerp(pE.y, pW.y, 0.30) };
-  capsule(ctx, skinStart, pW, rC * 0.78, rW, C.skin, OL, 5);              // skin forearm (under sleeve)
-  capsule(ctx, pE, cuff, rE * 0.97, rC * 1.02, C.navy, C.navyD, 5);      // sleeve
-  // ribbed cuff band
+  const cuffT = 0.30, cuff = { x: lerp(pE.x, pW.x, cuffT), y: lerp(pE.y, pW.y, cuffT) }, rC = lerp(rE, rW, cuffT) * 1.04 + 2;
+  capsule(ctx, pE, pW, lerp(rE, rW, 0.3) * 0.92, rW, C.skin, OL, 5);       // forearm skin, tapering to the wrist
+  capsule(ctx, pE, cuff, rE * 0.98, rC, C.navy, C.navyD, 5);               // sleeve to the rolled cuff
   const ca = Math.atan2(pW.y - pE.y, pW.x - pE.x);
   ctx.save(); ctx.translate(cuff.x, cuff.y); ctx.rotate(ca);
-  ctx.beginPath(); ctx.roundRect(-9, -rC * 1.06 - 2, 22, rC * 2.12 + 4, 8); ctx.fillStyle = C.tealD; ctx.fill(); ctx.lineWidth = 4; ctx.strokeStyle = C.navyD; ctx.stroke();
-  ctx.restore();
-  // elbow crease
-  // hand
-  const ang = a.ang + Math.atan2(pW.x - pE.x, -(pW.y - pE.y)) * 180 / Math.PI * (a.follow == null ? 0 : a.follow);
-  drawHand(ctx, pW.x, pW.y, pW.k * (a.scale || 1.35), ang, a.curl, a.spread, -side, a.thumbOut, a.pose);
+  ctx.beginPath(); ctx.roundRect(-8, -rC * 1.05 - 2, 20, rC * 2.1 + 4, 8); ctx.fillStyle = C.tealD; ctx.fill(); ctx.lineWidth = 4; ctx.strokeStyle = C.navyD; ctx.stroke(); ctx.restore();
+  // wrist follows the forearm; follow fades out when the forearm is foreshortened (pointing at the camera)
+  const fAng = Math.atan2(pW.x - pE.x, -(pW.y - pE.y)) * 180 / Math.PI, fLen = Math.hypot(pW.x - pE.x, pW.y - pE.y);
+  const follow = (a.follow ?? 0) * clamp(fLen / 120, 0, 1);
+  const ang = a.ang + fAng * follow;
+  drawHand(ctx, pW.x, pW.y, pW.k * 1.12, ang, { curl: a.curl, spread: a.spread, thumbDir: -side, thumbOut: a.thumbOut, fore: a.fore || 0, view: a.view || 'palm' });
   ctx.restore();
 }
 
-// Hand in local coords: wrist at origin, fingers toward -y. Exactly 4 fingers + 1 thumb.
-function drawHand(ctx, x, y, k, angDeg, curl, spread, thumbDir, thumbOut = 0, pose) {
-  ctx.save(); ctx.translate(x, y); ctx.rotate(angDeg * Math.PI / 180); ctx.scale(k, k);
-  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-  const fingers = [ // x base, length, width
-    { x: -26, len: 48, w: 17 }, { x: -9, len: 60, w: 18 }, { x: 9, len: 56, w: 18 }, { x: 26, len: 44, w: 16 },
-  ];
-  // thumbDir: +1 => thumb on +x side. Index finger is nearest the thumb.
-  if (thumbDir > 0) fingers.reverse();
-  const order = [1, 2, 0, 3].map(i => fingers[i]);
-  const palmTop = -70;
-  const fanAng = spread;
-  const thumbSide = thumbDir;
-  const drawFinger = (f, idx) => {
-    let a0 = (f.x / 26) * fanAng * 0.30;   // symmetric fan about the middle of the hand
-    const segs = [0.46, 0.32, 0.22], bend = [0.9, 1.1, 0.8].map(b => b * curl * 1.15);
-    let pt = { x: f.x, y: palmTop + 6 }, pts = [pt], ang = a0;
-    const curlDir = thumbDir; // in-plane bend toward thumb side
-    for (let i = 0; i < 3; i++) {
-      ang += curlDir * bend[i] * (i === 0 ? 0.55 : 1);
-      pt = { x: pt.x + Math.sin(ang) * f.len * segs[i], y: pt.y - Math.cos(ang) * f.len * segs[i] }; pts.push(pt);
-    }
-    const path = () => { ctx.beginPath(); ctx.moveTo(pts[0].x, pts[0].y); for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i].x, pts[i].y); };
-    path(); ctx.lineWidth = f.w + 9; ctx.strokeStyle = OL; ctx.stroke();
-    path(); ctx.lineWidth = f.w; ctx.strokeStyle = C.skin; ctx.stroke();
-    // knuckle crease marks
-    ctx.strokeStyle = 'rgba(122,75,46,.35)'; ctx.lineWidth = 2.5;
-    for (let i = 1; i < 3; i++) { ctx.beginPath(); ctx.moveTo(pts[i].x - 4, pts[i].y + 0.5); ctx.lineTo(pts[i].x + 4, pts[i].y + 0.5); ctx.stroke(); }
-  };
-  // thumb first (behind palm edge), then fingers, then palm
-  const th = () => {
-    const bx = thumbSide * 30, by = -22, a0 = thumbSide * (0.55 + thumbOut * 0.5 - curl * 0.35);
-    const l1 = 34, l2 = 30; const m = { x: bx + Math.sin(a0) * l1, y: by - Math.cos(a0) * l1 };
-    const a1 = a0 - thumbSide * (0.35 + curl * 0.5); const t = { x: m.x + Math.sin(a1) * l2, y: m.y - Math.cos(a1) * l2 };
-    const path = () => { ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo(m.x, m.y); ctx.lineTo(t.x, t.y); };
-    path(); ctx.lineWidth = 29; ctx.strokeStyle = OL; ctx.stroke(); path(); ctx.lineWidth = 20; ctx.strokeStyle = C.skin; ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(m.x - 3, m.y); ctx.lineTo(m.x + 3, m.y); ctx.lineWidth = 2.5; ctx.strokeStyle = 'rgba(122,75,46,.35)'; ctx.stroke();
-  };
-  th();
-  fingers.map((f, i) => [f, i]).sort((a, b) => Math.abs(b[1] - 1.5) - Math.abs(a[1] - 1.5)).forEach(([f, i]) => drawFinger(f, i));
+// Hand in local coords: wrist at origin, fingers toward -y. Exactly 4 tapered fingers (3 phalanges each, own curl) + thumb.
+function drawHand(ctx, x, y, k, angDeg, o) {
+  const { curl = .2, spread = .2, thumbDir = 1, thumbOut = .3, fore = 0, view = 'palm' } = o;
+  ctx.save(); ctx.translate(x, y); ctx.rotate(angDeg * Math.PI / 180); ctx.scale(k, k); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  const fl = 1 - 0.6 * fore, palmH = 1 - 0.32 * fore, top = -74 * palmH, OW = 3.6;
+  const specs = [{ dx: 27, len: 54, w: 15, st: 0, by: 3 }, { dx: 9, len: 63, w: 16.5, st: .08, by: -3 }, { dx: -9, len: 57, w: 15.5, st: .16, by: -2 }, { dx: -27, len: 44, w: 13, st: .26, by: 4 }];
+  const skin = C.skin, fingers = specs.map((s) => {
+    const xpos = thumbDir * s.dx, base = { x: xpos, y: top + s.by * palmH }, a0 = (xpos / 27) * spread * 0.30;
+    const cs = clamp(curl * (1 + s.st * 2.2)), bend = [0.9, 1.15, 0.85].map(b => b * cs * 1.15), lens = [0.5, 0.31, 0.19].map(f => f * s.len * fl);
+    const pts = [base], rs = [s.w / 2]; let phi = 0, p = base;
+    for (let j = 0; j < 3; j++) { phi += bend[j]; const step = lens[j] * Math.cos(phi * 0.85), dir = a0 - thumbDir * Math.sin(phi) * 0.10; p = { x: p.x + Math.sin(dir) * step, y: p.y - Math.cos(dir) * step }; pts.push(p); rs.push(s.w / 2 * [0.95, 0.86, 0.78][j]); }
+    return { pts, rs, dirEnd: a0 };
+  });
+  // thumb (behind palm)
+  const ta = thumbDir * (0.42 + thumbOut * 0.55), tb = { x: thumbDir * 27, y: -16 * palmH }, tl = [36, 30].map(v => v * (1 - .28 * fore));
+  const t1 = { x: tb.x + Math.sin(ta) * tl[0], y: tb.y - Math.cos(ta) * tl[0] }, ta2 = ta - thumbDir * (0.22 + curl * 0.6), t2 = { x: t1.x + Math.sin(ta2) * tl[1], y: t1.y - Math.cos(ta2) * tl[1] };
+  capsule(ctx, tb, t1, 12, 10, OL); capsule(ctx, t1, t2, 10, 8.6, OL);
+  capsule(ctx, tb, t1, 12 - OW, 10 - OW, skin); capsule(ctx, t1, t2, 10 - OW, 8.6 - OW, skin);
+  // fingers: outlines first (so neighbours separate cleanly), then fills; outer fingers first so the middle ones overlap
+  const order = [3, 0, 2, 1];
+  for (const i of order) { const f = fingers[i]; for (let j = 0; j < 3; j++) capsule(ctx, f.pts[j], f.pts[j + 1], f.rs[j], f.rs[j + 1], OL); }
+  for (const i of order) { const f = fingers[i]; for (let j = 0; j < 3; j++) capsule(ctx, f.pts[j], f.pts[j + 1], f.rs[j] - OW + 0.8, f.rs[j + 1] - OW + 0.8, j === 0 ? skin : (j === 1 ? '#DDA878' : '#E2AC7C')); }
+  // knuckle creases + nails on the back view
+  ctx.strokeStyle = 'rgba(122,75,46,.33)'; ctx.lineWidth = 2.2;
+  for (const f of fingers) for (let j = 1; j < 3; j++) { const q = f.pts[j], r = f.rs[j] * 0.55; ctx.beginPath(); ctx.moveTo(q.x - r, q.y); ctx.lineTo(q.x + r, q.y); ctx.stroke(); }
+  if (view === 'back' || fore > 0.3) for (const f of fingers) { const q = f.pts[3], r = f.rs[3]; ctx.save(); ctx.translate(q.x, q.y + r * 0.2); ctx.rotate(f.dirEnd); ctx.beginPath(); ctx.ellipse(0, 0, r * 0.62, r * 0.78, 0, 0, Math.PI * 2); ctx.fillStyle = 'rgba(255,238,224,.78)'; ctx.fill(); ctx.restore(); }
   // palm
-  const palm = new Path2D();
-  palm.moveTo(-24, 6); palm.bezierCurveTo(-38, -10, -42, -40, -40, -62); palm.quadraticCurveTo(-38, -80, -20, -80);
-  palm.lineTo(20, -80); palm.quadraticCurveTo(38, -80, 40, -62); palm.bezierCurveTo(42, -40, 38, -10, 24, 6); palm.closePath();
-  const pg = ctx.createRadialGradient(-8, -42, 4, 0, -34, 54); pg.addColorStop(0, C.skinL); pg.addColorStop(1, C.skin);
-  ctx.fillStyle = pg; ctx.fill(palm); ctx.lineWidth = 5; ctx.strokeStyle = OL; ctx.stroke(palm);
-  // cover finger-root outlines inside the palm
-  ctx.save(); ctx.clip(palm); ctx.fillStyle = pg; ctx.fillRect(-36, -70, 72, 66); ctx.restore();
-  ctx.strokeStyle = 'rgba(122,75,46,.30)'; ctx.lineWidth = 3;
-  ctx.beginPath(); ctx.moveTo(-22, -28); ctx.quadraticCurveTo(0, -18, 24, -34); ctx.stroke();
-  ctx.restore();
+  ctx.save(); ctx.scale(1, palmH);
+  const palm = new Path2D(); palm.moveTo(-22, 8); palm.bezierCurveTo(-35, -2, -39, -30, -38, -56); palm.quadraticCurveTo(-37, -78, -18, -79);
+  palm.lineTo(18, -79); palm.quadraticCurveTo(37, -78, 38, -56); palm.bezierCurveTo(39, -30, 35, -2, 22, 8); palm.closePath();
+  const pg = ctx.createRadialGradient(-8 * thumbDir, -46, 4, 0, -36, 58); pg.addColorStop(0, C.skinL); pg.addColorStop(1, skin);
+  ctx.fillStyle = pg; ctx.fill(palm); ctx.lineWidth = OW + 1; ctx.strokeStyle = OL; ctx.stroke(palm);
+  ctx.beginPath(); ctx.ellipse(thumbDir * 22, -18, 17, 26, thumbDir * 0.35, 0, Math.PI * 2); ctx.fillStyle = pg; ctx.fill();   // thenar mound
+  ctx.fillStyle = pg; ctx.fillRect(-33, -72, 66, 52);
+  ctx.strokeStyle = 'rgba(122,75,46,.32)'; ctx.lineWidth = 2.6;
+  if (view === 'palm') { ctx.beginPath(); ctx.moveTo(thumbDir * 30, -40); ctx.quadraticCurveTo(thumbDir * 6, -30, -thumbDir * 8, -46); ctx.stroke(); ctx.beginPath(); ctx.moveTo(thumbDir * 14, -18); ctx.quadraticCurveTo(thumbDir * 16, -34, thumbDir * 28, -40); ctx.stroke(); }
+  else for (const f of fingers) { ctx.beginPath(); ctx.moveTo(f.pts[0].x, f.pts[0].y + 6); ctx.lineTo(f.pts[0].x * 0.6, -20); ctx.stroke(); }
+  ctx.restore(); ctx.restore();
 }
 export { SHOULDER_DX, SHOULDER_Y };

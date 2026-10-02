@@ -5,16 +5,16 @@ Voices are rendered offline with **Kokoro v1.0** (open-source, runs locally, no 
 ## Voice (VO)
 | Start | End | Voice | Line | Caption / on-screen |
 |---|---|---|---|---|
-| 0.35 | 3.26 | ES `ef_dora` | ¿No entendiste lo que te dijeron? Prueba esta frase. | headline "¿NO ENTENDISTE?" + ES caption (2 phrase chunks) |
-| 4.45 | 6.26 | EN `am_michael` | Could you say that again, please? | phrase + IPA, current word highlighted; mouth lip-synced to the voice envelope |
+| 0.35 | 3.14 | ES `ef_dora` | ¿No entendiste lo que te dijeron? Prueba esta frase. | headline "¿NO ENTENDISTE?" + ES caption (2 phrase chunks) |
+| 4.45 | 6.13 | EN `am_michael` | Could you say that again, please? | phrase + IPA, current word highlighted; mouth lip-synced to the voice envelope |
 | 7.10 | 8.97 | ES | ¿Podrías repetirlo, por favor? | ES caption (card swaps back to English phrase 9.2–11.0) |
-| 11.30 | 13.67 | ES | Y si necesitas que hablen más despacio… | ES caption (explanation first, then example) |
-| 14.35 | 16.12 | EN | A little more slowly, please. | phrase + IPA, word highlight |
-| 18.35 | 19.30 | ES | Ahora dilo tú. | ES caption |
-| 19.30 – 24.55 | | — | **no voice**; practice window: countdown ring 20.2 → 23.2 (3.0 s), silent karaoke highlight 20.2–22.0, check mark 23.2 | phrase 1 + IPA stays on screen |
-| 24.55 | 28.75 | ES (+ "Fluent English." with EN phonemes) | Practica inglés con Fluent English. Escríbenos INGLÉS por mensaje. | logo, CTA "ESCRÍBENOS INGLÉS", 2 caption chunks |
+| 11.30 | 13.62 | ES | Y si necesitas que hablen más despacio… | ES caption (explanation first, then example) |
+| 14.35 | 16.04 | EN | A little more slowly, please. | phrase + IPA, word highlight |
+| 18.35 | 19.28 | ES | Ahora dilo tú. | ES caption |
+| 19.28 – 24.55 | | — | **no voice**; practice window: countdown ring 20.2 → 23.2 (3.0 s), silent karaoke highlight 20.2–22.0, check mark 23.2 | phrase 1 + IPA stays on screen |
+| 24.55 | 28.73 | ES (+ "Fluent English." with EN phonemes) | Practica inglés con Fluent English. Escríbenos INGLÉS por mensaje. | logo, CTA "ESCRÍBENOS INGLÉS", 2 caption chunks |
 
-No speech was sped up unnaturally: Spanish at 0.97× and English at 0.93× of the model's default pace; explanations fit the windows without shortening.
+All lines are at the model's natural pace (1.0×) — slowing it measurably flattened the pitch (am_michael: 3.6 → 3.0 semitones of variation), so nothing is slowed or sped up; every explanation fits its window. Each line gets a light finish (warmth/presence EQ, soft compression, ~8% small-room reverb).
 
 ## Music (procedural, C major, 120 BPM grid = 0.5 s beat; ducked ~6 dB under any voice)
 | Time | Event |

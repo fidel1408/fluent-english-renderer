@@ -20,22 +20,32 @@ const mouthAt = (t) => { for (const id of ['en_repeat', 'en_slowly']) { const l 
 const beat = (t) => { let v = 0; for (const id of ['en_repeat', 'en_slowly']) for (const c of lineById[id].chunks) for (const w of c.words) if (t >= w.t0) v += Math.exp(-(t - w.t0) / 0.16) * 0.55; return clamp(v, 0, 1); };
 const blinkAt = (t) => { for (const b of [1.3, 3.1, 5.6, 8.4, 10.2, 12.6, 15.5, 17.2, 19.8, 22.0, 25, 27.5]) { const d = t - b; if (d >= 0 && d < 0.16) return Math.sin(d / 0.16 * Math.PI); } return 0; };
 
-// arm keyframes: x is offset from the body centre (px), y/z in scene units
-const ARM_R = [[0, { x: 178, y: 1238, z: 150, ang: -66, curl: .3, spread: .12, thumbOut: 0 }], [2.0, { x: 178, y: 1238, z: 150, ang: -66, curl: .3, spread: .12, thumbOut: 0 }], [2.5, { x: 135, y: 1170, z: 170, ang: -30, curl: .35, spread: .1, thumbOut: 0 }],
-  [3.3, { x: 178, y: 1238, z: 150, ang: -66, curl: .3, spread: .12, thumbOut: 0 }],
-  [4.5, { x: 205, y: 1085, z: 120, ang: -9, curl: 0, spread: .55, thumbOut: .45 }], [6.5, { x: 210, y: 1090, z: 130, ang: -12, curl: 0, spread: .5, thumbOut: .4 }],
-  [7.2, { x: 160, y: 1115, z: 215, ang: -22, curl: .02, spread: .65, thumbOut: .5 }], [8.9, { x: 165, y: 1120, z: 215, ang: -22, curl: .02, spread: .65, thumbOut: .5 }],
-  [9.5, { x: 180, y: 1236, z: 150, ang: -62, curl: .28, spread: .15, thumbOut: 0 }], [11.3, { x: 180, y: 1236, z: 150, ang: -62, curl: .28, spread: .15, thumbOut: 0 }],
-  [12.0, { x: 190, y: 1110, z: 150, ang: -12, curl: .04, spread: .5, thumbOut: .4 }], [13.7, { x: 190, y: 1110, z: 150, ang: -12, curl: .04, spread: .5, thumbOut: .4 }],
-  [14.3, { x: 190, y: 1090, z: 235, ang: -80, curl: .05, spread: .3, thumbOut: .1 }], [16.2, { x: 190, y: 1150, z: 235, ang: -80, curl: .05, spread: .3, thumbOut: .1 }],
-  [17.2, { x: 180, y: 1236, z: 150, ang: -62, curl: .28, spread: .15, thumbOut: 0 }], [18.2, { x: 180, y: 1236, z: 150, ang: -62, curl: .28, spread: .15, thumbOut: 0 }],
-  [18.7, { x: 150, y: 1105, z: 330, ang: -5, curl: 0, spread: .6, thumbOut: .5 }], [20.0, { x: 160, y: 1125, z: 280, ang: -8, curl: .02, spread: .5, thumbOut: .4 }], [23.6, { x: 160, y: 1125, z: 280, ang: -8, curl: .02, spread: .5, thumbOut: .4 }],
-  [24.0, { x: 180, y: 1236, z: 150, ang: -62, curl: .28, spread: .15, thumbOut: 0 }]];
-const ARM_L = [[0, { x: -178, y: 1238, z: 150, ang: 66, curl: .3, spread: .12, thumbOut: 0 }], [3.3, { x: -178, y: 1238, z: 150, ang: 66, curl: .3, spread: .12, thumbOut: 0 }],
-  [4.7, { x: -180, y: 1236, z: 150, ang: 62, curl: .28, spread: .15, thumbOut: 0 }], [7.2, { x: -165, y: 1115, z: 215, ang: 22, curl: .02, spread: .65, thumbOut: .5 }], [8.9, { x: -165, y: 1120, z: 215, ang: 22, curl: .02, spread: .65, thumbOut: .5 }],
-  [9.6, { x: -180, y: 1236, z: 150, ang: 62, curl: .28, spread: .15, thumbOut: 0 }], [13.8, { x: -180, y: 1236, z: 150, ang: 62, curl: .28, spread: .15, thumbOut: 0 }],
-  [14.3, { x: -190, y: 1090, z: 235, ang: 80, curl: .05, spread: .3, thumbOut: .1 }], [16.2, { x: -190, y: 1150, z: 235, ang: 80, curl: .05, spread: .3, thumbOut: .1 }],
-  [17.2, { x: -180, y: 1236, z: 150, ang: 62, curl: .28, spread: .15, thumbOut: 0 }], [24, { x: -180, y: 1236, z: 150, ang: 62, curl: .28, spread: .15, thumbOut: 0 }]];
+// ---------- arm gestures: step targets smoothed by a spring so motion eases, overshoots slightly and settles ----------
+const HIDE = { y: 1350, z: 110, curl: .4, spread: .1, thumbOut: 0, fore: .5, follow: 0, view: 'back' };       // resting on / below the table edge
+const mir = (g) => ({ ...g, x: -g.x, ang: -g.ang });
+const PRESENT = { x: 200, y: 1120, z: 130, ang: -8, curl: .14, spread: .32, thumbOut: .45, fore: .12, follow: 1, view: 'palm' };
+const HOVER = { x: 185, y: 1195, z: 130, ang: -12, curl: .2, spread: .25, thumbOut: .3, fore: .12, follow: 1, view: 'palm' };
+const PLEASE = { x: 175, y: 1165, z: 190, ang: -18, curl: .16, spread: .38, thumbOut: .55, fore: .26, follow: .6, view: 'palm' };
+const WAIT = { x: 190, y: 1150, z: 140, ang: -10, curl: .18, spread: .3, thumbOut: .4, fore: .15, follow: 1, view: 'palm' };
+const SLOW1 = { x: 140, y: 1085, z: 200, ang: -125, curl: .12, spread: .2, thumbOut: .2, fore: .5, follow: 0, view: 'back' };
+const SLOW2 = { ...SLOW1, y: 1150 };
+const INVITE = { x: 172, y: 1130, z: 300, ang: -6, curl: .2, spread: .35, thumbOut: .5, fore: .3, follow: .5, view: 'palm' };
+const INVITE2 = { ...INVITE, y: 1165, z: 255 };
+const R_STEPS = [[0, { ...HIDE, x: 175, ang: -20 }], [4.3, PRESENT], [6.45, HOVER], [7.05, PLEASE], [9.1, { ...HIDE, x: 175, ang: -20 }], [11.25, WAIT], [14.2, SLOW1], [15.2, SLOW2], [16.3, { ...HIDE, x: 175, ang: -20 }], [18.4, INVITE], [20.0, INVITE2], [23.5, { ...HIDE, x: 175, ang: -20 }]];
+const L_STEPS = [[0, { ...HIDE, x: -175, ang: 20 }], [7.05, mir(PLEASE)], [9.1, { ...HIDE, x: -175, ang: 20 }], [14.25, mir(SLOW1)], [15.2, mir(SLOW2)], [16.3, { ...HIDE, x: -175, ang: 20 }]];
+const NUMF = ['x', 'y', 'z', 'ang', 'curl', 'spread', 'thumbOut', 'fore', 'follow'];
+function simulateArm(steps, w = 12.5, zeta = 0.78) {
+  const dt = 1 / 240, N = Math.ceil(DURATION / dt) + 2, out = new Array(N), s = {}, v = {}; for (const f of NUMF) { s[f] = steps[0][1][f]; v[f] = 0; }
+  let ki = 0;
+  for (let i = 0; i < N; i++) {
+    const t = i * dt; while (ki + 1 < steps.length && steps[ki + 1][0] <= t) ki++; const tg = steps[ki][1];
+    for (const f of NUMF) { const a = -w * w * (s[f] - tg[f]) - 2 * zeta * w * v[f]; v[f] += a * dt; s[f] += v[f] * dt; }
+    out[i] = { ...s, view: tg.view };
+  }
+  return out;
+}
+let SIM = null;
+const armAt = (arr, t) => { const f = clamp(t, 0, DURATION) * 240, i = Math.floor(f), u = f - i, a = arr[i], b = arr[Math.min(i + 1, arr.length - 1)], o = { view: a.view }; for (const k of NUMF) o[k] = lerp(a[k], b[k], u); return o; };
 
 export function computePose(t) {
   const p = defaultPose(); const b = beat(t);
@@ -53,10 +63,13 @@ export function computePose(t) {
   p.head = { dx: track([[0, -4], [0.5, -14], [2.1, -14], [2.8, 0], [30, 0]], t), dy: nod + nod2 + b * 5 + track([[3.2, 0], [3.7, 5], [4.5, -2], [30, -2]], t) * 1, tilt: track([[0, 0], [0.4, -3], [2.1, -3], [2.8, 0], [5, 2], [8, -2], [11.2, 0], [12, 4], [13.7, 4], [14.4, -1], [18, 2], [30, 0]], t), pitch: 0 };
   p.shoulderLift = track([[0, -6], [2.2, -8], [3.0, -8], [3.8, 8], [4.6, 0], [30, 0]], t) + (t < 3.4 ? 0 : 0);
   p.mouth = mouthAt(t);
-  const r = track(ARM_R, t), l = track(ARM_L, t);
-  p.R = { ...p.R, ...r, x: r.x, y: r.y - b * 14, vis: 1, scale: 1.35 }; p.L = { ...p.L, ...l, vis: 1, scale: 1.35 };
-  // hesitation fidget in scene 1: hands shift slightly
-  if (t < 3.4) { p.L.y += Math.sin(t * 3) * 2; p.R.y += Math.cos(t * 2.6) * 2; }
+  SIM = SIM || { R: simulateArm(R_STEPS), L: simulateArm(L_STEPS) };
+  const r = armAt(SIM.R, t), l = armAt(SIM.L, t);
+  // idle life: slow drift of wrist/fingers, and small beat lifts on stressed words
+  const idle = (ph) => ({ dx: Math.sin(t * 1.3 + ph) * 3, dy: Math.sin(t * 1.7 + ph * 2) * 2.5, da: Math.sin(t * 0.9 + ph) * 2.2, dc: Math.sin(t * 1.1 + ph) * 0.03 });
+  const ir = idle(0.4), il = idle(2.1);
+  p.R = { ...p.R, ...r, x: r.x + ir.dx, y: r.y + ir.dy - b * 7, ang: r.ang + ir.da - b * 2.5, curl: clamp(r.curl + ir.dc, 0, 1), vis: 1 };
+  p.L = { ...p.L, ...l, x: l.x + il.dx, y: l.y + il.dy, ang: l.ang + il.da, curl: clamp(l.curl + il.dc, 0, 1), vis: 1 };
   return p;
 }
 
@@ -113,7 +126,7 @@ export function drawCover() {
   const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#FBF5E6'); g.addColorStop(1, '#EADFC6'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   ctx.fillStyle = 'rgba(31,163,160,.14)'; ctx.beginPath(); ctx.arc(930, 300, 330, 0, 7); ctx.fill(); ctx.fillStyle = 'rgba(242,107,91,.13)'; ctx.beginPath(); ctx.arc(120, 1180, 300, 0, 7); ctx.fill(); ctx.fillStyle = 'rgba(242,184,75,.16)'; ctx.beginPath(); ctx.arc(900, 1300, 220, 0, 7); ctx.fill();
   const p = computePose(5.1); p.mouth = 0.28; p.smile = 0.95; p.brow = { raise: .25, worry: 0 }; p.blink = 0; p.look = { x: 0, y: 0 };
-  p.R = { ...p.R, x: 255, y: 1085, z: 160, ang: -10, curl: 0, spread: .55, thumbOut: .45, scale: 1.35, vis: 1 };
+  p.R = { ...p.R, x: 230, y: 1100, z: 160, ang: -8, curl: .14, spread: .32, thumbOut: .45, fore: .12, follow: 1, view: 'palm', vis: 1 };
   ctx.save(); ctx.translate(0, 330); drawCharacter(ctx, p); ctx.restore();
   ctx.fillStyle = '#145A63'; ctx.fillRect(0, 1602, W, 400); ctx.fillStyle = C.tealL; ctx.fillRect(0, 1602, W, 8);
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round';

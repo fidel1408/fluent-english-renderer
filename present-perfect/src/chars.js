@@ -4,8 +4,8 @@
 'use strict';
 
 const CAST = {
-  D: { id: 'D', name: 'Daniel', sw: 140, skin: '#E2B08A', hair: '#33201A', hairHi: '#6B4A37', eye: '#5B3D26', lips: '#BE6F62', brow: '#2C1A12', jaw: 1.06, eyeW: 17,
-       top: '#27456E', topHi: '#3A6296', collar: '#DCEAF7', style: 'short', glasses: true, stubble: true, outfit: 'sweater', lash: 0, cheek: 0.10 },
+  D: { id: 'D', name: 'Daniel', sw: 140, skin: '#E2B08A', hair: '#33201A', hairHi: '#6B4A37', eye: '#5B3D26', lips: '#BE6F62', brow: '#2C1A12', jaw: 1.06, eyeW: 15.5, male: true,
+       top: '#27456E', topHi: '#3A6296', collar: '#DCEAF7', style: 'short', glasses: true, stubble: true, outfit: 'sweater', lash: 0, cheek: 0.03 },
   M: { id: 'M', name: 'Maya', sw: 120, skin: '#B67A58', hair: '#1F120D', hairHi: '#4A2E22', eye: '#3A2418', lips: '#A9453F', brow: '#1B0F0A', jaw: 0.90, eyeW: 18.5,
        top: '#17727A', topHi: '#2C9AA0', collar: '#FBF1DF', style: 'curls', glasses: false, stubble: false, outfit: 'blazer', lash: 1, cheek: 0.24, pendant: '#E9B949', earring: '#E9B949' },
   S: { id: 'S', name: 'Sofia', sw: 114, skin: '#DDA67F', hair: '#7E3517', hairHi: '#C2692F', eye: '#2F6E55', lips: '#CE4F57', brow: '#5A2610', jaw: 0.88, eyeW: 18.5,
@@ -19,7 +19,21 @@ const POSE0 = {
 };
 
 /* ------------------------------------------------------------------ face */
+function facePathMale() {      // broader brow and cheekbones, straighter jaw line, square chin
+  const p = new Path2D();
+  p.moveTo(0, -98);
+  p.bezierCurveTo(58, -98, 84, -64, 84, -14);
+  p.bezierCurveTo(85, 24, 84, 54, 76, 72);
+  p.bezierCurveTo(70, 86, 52, 97, 32, 99);
+  p.lineTo(-32, 99);
+  p.bezierCurveTo(-52, 97, -70, 86, -76, 72);
+  p.bezierCurveTo(-84, 54, -85, 24, -84, -14);
+  p.bezierCurveTo(-84, -64, -58, -98, 0, -98);
+  p.closePath();
+  return p;
+}
 function facePath(c) {
+  if (c.male) return facePathMale();
   const j = c.jaw, p = new Path2D();
   p.moveTo(0, -98);
   p.bezierCurveTo(54, -98, 79, -62, 79, -14);
@@ -40,7 +54,7 @@ function drawEye(ctx, c, side, P, yawShift) {
   ctx.save(); ctx.translate(ex, ey); ctx.rotate(side * -0.05);
   // socket shadow
   ctx.fillStyle = rgba(shade(c.skin, -0.35), 0.28); ctx.beginPath(); ctx.ellipse(0, -2, ew + 7, 17, 0, 0, TAU); ctx.fill();
-  const uh = 13 * lid, lh = 7.5 * Math.min(lid, 1);
+  const uh = (c.male ? 10.5 : 13) * lid, lh = (c.male ? 5.6 : 7.5) * Math.min(lid, 1);
   const eye = new Path2D();
   eye.moveTo(-ew, 1); eye.bezierCurveTo(-ew * 0.55, -uh * 1.35, ew * 0.55, -uh * 1.35, ew, 1);
   eye.bezierCurveTo(ew * 0.55, lh * 1.35, -ew * 0.55, lh * 1.35, -ew, 1); eye.closePath();
@@ -48,19 +62,19 @@ function drawEye(ctx, c, side, P, yawShift) {
     ctx.save(); ctx.clip(eye);
     ctx.fillStyle = '#FBFAF5'; ctx.fillRect(-ew - 2, -20, ew * 2 + 4, 40);
     const ix = clamp(P.gx, -1, 1) * 8 * far + yawShift * 0.25 * 0 + side * 0, iy = clamp(P.gy, -1, 1) * 4.5 - 0.5;
-    const ir = 10.6 * (0.96 + 0.04 * lid);
+    const ir = (c.male ? 9.2 : 10.6) * (0.96 + 0.04 * lid);
     ctx.fillStyle = rg(ctx, ix, iy, 1, ir, [[0, shade(c.eye, 0.18)], [0.6, c.eye], [1, shade(c.eye, -0.5)]]);
     ctx.beginPath(); ctx.arc(ix, iy, ir, 0, TAU); ctx.fill();
     ctx.fillStyle = '#120A07'; ctx.beginPath(); ctx.arc(ix, iy, 5.2, 0, TAU); ctx.fill();
     ctx.fillStyle = 'rgba(255,255,255,.95)'; ctx.beginPath(); ctx.arc(ix - 3.6, iy - 3.8, 2.6, 0, TAU); ctx.fill();
-    ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.beginPath(); ctx.arc(ix + 3.4, iy + 3.4, 1.3, 0, TAU); ctx.fill();
+    if (!c.male) { ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.beginPath(); ctx.arc(ix + 3.4, iy + 3.4, 1.3, 0, TAU); ctx.fill(); }
     // upper-lid shadow
     ctx.fillStyle = lg(ctx, 0, -uh * 1.3, 0, uh * 0.4, [[0, 'rgba(60,30,20,.38)'], [1, 'rgba(60,30,20,0)']]); ctx.fillRect(-ew - 2, -20, ew * 2 + 4, 28);
     ctx.restore();
   }
   // lids / lashes
   ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-  ctx.strokeStyle = shade(c.hair, -0.2); ctx.lineWidth = 3.4 + c.lash * 0.8;
+  ctx.strokeStyle = shade(c.hair, -0.2); ctx.lineWidth = 3.4 + c.lash * 0.8 + (c.male ? 1.2 : 0);
   ctx.beginPath();
   if (lid > 0.12) { ctx.moveTo(-ew - 1, 1.5); ctx.bezierCurveTo(-ew * 0.55, -uh * 1.4, ew * 0.55, -uh * 1.4, ew + 1, 1.5); }
   else { ctx.moveTo(-ew, 1); ctx.quadraticCurveTo(0, 5, ew, 1); }
@@ -78,9 +92,9 @@ function drawEye(ctx, c, side, P, yawShift) {
 
 function drawBrow(ctx, c, side, P, yawShift) {
   const lift = -P.brow * 11, tilt = P.bt;
-  const x0 = side * 34 + yawShift, y0 = -34 + lift;
-  const th = c.id === 'S' ? 4.2 : c.id === 'M' ? 6.6 : 7.4;
-  const inner = [x0 - side * 25, y0 + 1 - tilt * 7], outer = [x0 + side * 25, y0 + 3 + tilt * 4.5], mid = [x0 + side * 2, y0 - 6 - (c.id === 'S' ? 3 : 0) - tilt * 1.2];
+  const x0 = side * 34 + yawShift, y0 = -34 + lift + (c.male ? 3 : 0);
+  const th = c.id === 'S' ? 4.2 : c.id === 'M' ? 6.6 : 11.5;
+  const inner = [x0 - side * 25, y0 + 1 - tilt * 7], outer = [x0 + side * (c.male ? 28 : 25), y0 + (c.male ? 2 : 3) + tilt * 4.5], mid = [x0 + side * 2, y0 - (c.male ? 4 : 6) - (c.id === 'S' ? 3 : 0) - tilt * 1.2];
   ctx.fillStyle = c.brow;
   ctx.beginPath();
   ctx.moveTo(inner[0], inner[1]);
@@ -92,7 +106,7 @@ function drawBrow(ctx, c, side, P, yawShift) {
 function drawMouth(ctx, c, P, yawShift) {
   const o = clamp(P.open, 0, 1), rd = clamp(P.round, 0, 1), sm = clamp(P.smile, -1, 1);
   const mx = yawShift * 1.05, my = 55;
-  const hw = 21 * (1 + 0.28 * sm - 0.38 * rd + 0.12 * o * (1 - rd));
+  const hw = (c.male ? 23 : 21) * (1 + 0.28 * sm - 0.38 * rd + 0.12 * o * (1 - rd));
   const cy = -sm * 6.5 + 1;                // corner lift
   const up = my - 2.5 + o * 0.0, drop = o * 27 * (1 - 0.25 * rd) + 0.01;
   const lip = c.lips, lipD = shade(c.lips, -0.28);
@@ -106,7 +120,7 @@ function drawMouth(ctx, c, P, yawShift) {
     ctx.bezierCurveTo(hw * 0.5, my + 1.5 + cy * 0.3, -hw * 0.5, my + 1.5 + cy * 0.3, -hw, my + cy); ctx.fill();
     ctx.fillStyle = shade(lip, 0.08);
     ctx.beginPath(); ctx.moveTo(-hw * 0.88, my + cy * 0.9 + 0.5);
-    ctx.bezierCurveTo(-hw * 0.4, my + 11 + sm * 1.5, hw * 0.4, my + 11 + sm * 1.5, hw * 0.88, my + cy * 0.9 + 0.5);
+    const lowH = c.male ? 7.5 : 11; ctx.bezierCurveTo(-hw * 0.4, my + lowH + sm * 1.5, hw * 0.4, my + lowH + sm * 1.5, hw * 0.88, my + cy * 0.9 + 0.5);
     ctx.bezierCurveTo(hw * 0.4, my + 2.4, -hw * 0.4, my + 2.4, -hw * 0.88, my + cy * 0.9 + 0.5); ctx.fill();
     ctx.strokeStyle = lipD; ctx.lineWidth = 2.1; ctx.beginPath(); ctx.moveTo(-hw, my + cy); ctx.bezierCurveTo(-hw * 0.4, my + 2.8, hw * 0.4, my + 2.8, hw, my + cy); ctx.stroke();
     // smile creases
@@ -139,7 +153,7 @@ function drawMouth(ctx, c, P, yawShift) {
 
 function drawNose(ctx, c, yawShift) {
   const x = yawShift * 1.15;
-  ctx.save(); ctx.translate(x, 0);
+  ctx.save(); ctx.translate(x, 0); if (c.male) { ctx.translate(0, 24); ctx.scale(1.22, 1.12); ctx.translate(0, -24); }
   ctx.fillStyle = rgba(shade(c.skin, -0.3), 0.22); ctx.beginPath(); ctx.ellipse(8, 24, 13, 10, 0.2, 0, TAU); ctx.fill();
   ctx.strokeStyle = rgba(shade(c.skin, -0.55), 0.55); ctx.lineWidth = 2.6; ctx.lineCap = 'round';
   ctx.beginPath(); ctx.moveTo(-1, -6); ctx.quadraticCurveTo(7, 12, 6, 22); ctx.stroke();
@@ -279,8 +293,8 @@ function drawTorso(ctx, c, P) {
 
 function drawNeck(ctx, c) {
   ctx.fillStyle = lg(ctx, -30, 0, 30, 0, [[0, shade(c.skin, -0.12)], [0.5, c.skin], [1, shade(c.skin, -0.28)]]);
-  ctx.beginPath(); ctx.moveTo(-27, -62); ctx.lineTo(-29, 12); ctx.quadraticCurveTo(0, 26, 29, 12); ctx.lineTo(27, -62); ctx.closePath(); ctx.fill();
-  ctx.fillStyle = rgba(shade(c.skin, -0.6), 0.32); ctx.beginPath(); ctx.moveTo(-28, -40); ctx.quadraticCurveTo(0, -4, 28, -40); ctx.lineTo(28, -62); ctx.lineTo(-28, -62); ctx.fill();
+  const nw = c.male ? 1.28 : 1; ctx.beginPath(); ctx.moveTo(-27 * nw, -62); ctx.lineTo(-29 * nw, 12); ctx.quadraticCurveTo(0, 26, 29 * nw, 12); ctx.lineTo(27 * nw, -62); ctx.closePath(); ctx.fill();
+  ctx.fillStyle = rgba(shade(c.skin, -0.6), 0.32); ctx.beginPath(); ctx.moveTo(-28 * nw, -40); ctx.quadraticCurveTo(0, -4, 28 * nw, -40); ctx.lineTo(28 * nw, -62); ctx.lineTo(-28 * nw, -62); ctx.fill();
 }
 
 /* ------------------------------------------------------------------ arms */
@@ -395,9 +409,9 @@ function drawHead(ctx, c, P, sway) {
   ctx.fillStyle = lg(ctx, 0, 40, 0, 100, [[0, 'rgba(60,20,10,0)'], [1, 'rgba(60,20,10,.22)']]); ctx.fillRect(-90, 40, 180, 70);
   ctx.fillStyle = lg(ctx, 0, -98, 0, -52, [[0, 'rgba(40,15,8,.30)'], [1, 'rgba(40,15,8,0)']]); ctx.fillRect(-90, -100, 180, 50);
   if (c.stubble) {
-    ctx.fillStyle = lg(ctx, 0, 20, 0, 100, [[0, 'rgba(40,28,22,0)'], [0.4, 'rgba(40,28,22,.22)'], [1, 'rgba(40,28,22,.38)']]);
+    ctx.fillStyle = lg(ctx, 0, 20, 0, 100, [[0, 'rgba(40,28,22,0)'], [0.4, 'rgba(40,28,22,.34)'], [1, 'rgba(40,28,22,.55)']]);
     ctx.beginPath(); ctx.moveTo(-82, 10); ctx.bezierCurveTo(-60, 30, -30, 38, 0, 38); ctx.bezierCurveTo(30, 38, 60, 30, 82, 10); ctx.lineTo(82, 110); ctx.lineTo(-82, 110); ctx.fill();
-    const r = rng(11); ctx.fillStyle = 'rgba(30,20,16,.35)'; for (let i = 0; i < 90; i++) { const x = (r() - 0.5) * 120, y = 44 + r() * 46; if (Math.abs(x) < 22 && y < 62) continue; ctx.fillRect(x, y, 1.6, 1.6); }
+    const r = rng(11); ctx.fillStyle = 'rgba(30,20,16,.35)'; ctx.fillStyle = 'rgba(40,28,22,.16)'; ctx.beginPath(); ctx.ellipse(0, 45, 20, 3.6, 0, 0, TAU); ctx.fill(); ctx.fillStyle = 'rgba(30,20,16,.4)'; for (let i = 0; i < 170; i++) { const x = (r() - 0.5) * 140, y = 44 + r() * 46; if (Math.abs(x) < 22 && y < 62) continue; ctx.fillRect(x, y, 1.6, 1.6); }
   }
   ctx.restore();
   ctx.strokeStyle = rgba(shade(c.skin, -0.6), 0.5); ctx.lineWidth = 2.2; ctx.stroke(face);

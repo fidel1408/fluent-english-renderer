@@ -24,3 +24,15 @@ html = re.sub(r'<script src="([^"]+)"></script>', inline_js, html)
 html = sub_assets(html)
 out = root / 'love-speaking-club.html'; out.write_text(html)
 print(out.name, round(out.stat().st_size / 1048576, 2), 'MB')
+
+# ---- artifact variant: a fragment (no doctype/html/head/body) for hosts that wrap the page themselves ----
+import re as _re
+frag = html
+frag = _re.sub(r'<!doctype html>\s*', '', frag, flags=_re.I)
+frag = _re.sub(r'<html[^>]*>\s*', '', frag); frag = frag.replace('</html>', '')
+frag = _re.sub(r'<meta[^>]*>\s*', '', frag)
+frag = frag.replace('<head>', '').replace('</head>', '').replace('<body>', '').replace('</body>', '')
+frag = _re.sub(r'<title>.*?</title>', '<title>Love Speaking Club</title>', frag, count=1)
+frag = frag.replace('<style>\n', '<style>\n:root { color-scheme: dark; }\n', 1)
+(root / 'love-speaking-club.artifact.html').write_text(frag.strip() + '\n')
+print('artifact fragment', round((root / 'love-speaking-club.artifact.html').stat().st_size / 1048576, 2), 'MB')

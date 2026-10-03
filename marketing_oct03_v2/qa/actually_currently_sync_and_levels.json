@@ -1,5 +1,5 @@
 {
-  "file": "actually_currently_oct03_v2_REV3_single-host_narrated_QA-pending.mp4",
+  "file": "actually_currently_oct03_v2_REV4_single-host_narrated_QA-pending.mp4",
   "cues": [
     {
       "id": "c01",
@@ -75,12 +75,12 @@
     {
       "at": 11.75,
       "expect": "ON c04",
-      "creamPixels": 17942
+      "creamPixels": 17949
     },
     {
       "at": 13.66,
       "expect": "ON c05",
-      "creamPixels": 16896
+      "creamPixels": 16894
     },
     {
       "at": 18.28,
@@ -100,7 +100,7 @@
     {
       "at": 26.91,
       "expect": "ON c09",
-      "creamPixels": 17510
+      "creamPixels": 17508
     },
     {
       "at": 3.06,
@@ -145,9 +145,9 @@
   },
   "finalHold": {
     "from": 27.71,
-    "to": 31.1,
+    "to": 31.4,
     "noCueActiveInLastSeconds": true,
-    "staticSecondsAfterLastSpeech": 3.39
+    "staticSecondsAfterLastSpeech": 3.69
   },
   "pass": true
 }

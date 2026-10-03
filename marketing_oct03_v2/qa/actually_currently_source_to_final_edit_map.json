@@ -4,22 +4,29 @@
   "masterFile": "audio/originals/elevenlabs_actually_currently_z75a9iX0ZpKcMeXyR5za.mp3",
   "masterSha256": "456feb235cbc8d62d99ae544a2c6302fdd66b81b2615fcafe57e824103a42d98",
   "sampleRate": 44100,
-  "sourceSeconds": 24.922,
-  "finalDurationSeconds": 31.1,
-  "addedSilenceSeconds": 6.178,
+  "fullMasterSamples": 1099008,
+  "fullMasterSeconds": 24.920816327,
+  "retainedCueSamples": 1099008,
+  "retainedCueSeconds": 24.920816327,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 31.4,
+  "addedSilenceSeconds": 6.479184,
   "lead": 0.35,
-  "endHold": 3.6,
-  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold). Cues are contiguous source partitions (new tips) or silence-padded cuts (I AGREE).",
+  "endHold": 3.9,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
   "cues": [
     {
       "id": "c01",
       "text": "¿Actually significa actualmente?",
       "caption": "¿Actually significa actualmente?",
       "cueFile": "audio/cues/actually_currently_c01.wav",
+      "cueWavSamples": 112816,
       "sourceSampleRange": [
         0,
         112816
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 0,
       "sourceEndSeconds": 2.558186,
       "finalStart": 0.35,
@@ -36,10 +43,12 @@
       "text": "Actually suele significar en realidad o de hecho.",
       "caption": "Actually suele significar en realidad o de hecho.",
       "cueFile": "audio/cues/actually_currently_c02.wav",
+      "cueWavSamples": 178835,
       "sourceSampleRange": [
         112816,
         291651
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 2.558186,
       "sourceEndSeconds": 6.613401,
       "finalStart": 3.208,
@@ -56,10 +65,12 @@
       "text": "Currently significa actualmente.",
       "caption": "Currently significa actualmente.",
       "cueFile": "audio/cues/actually_currently_c03.wav",
+      "cueWavSamples": 136664,
       "sourceSampleRange": [
         291651,
         428315
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 6.613401,
       "sourceEndSeconds": 9.712358,
       "finalStart": 7.263,
@@ -76,10 +87,12 @@
       "text": "Do you live in London?",
       "caption": "Do you live in London?",
       "cueFile": "audio/cues/actually_currently_c04.wav",
+      "cueWavSamples": 71863,
       "sourceSampleRange": [
         428315,
         500178
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 9.712358,
       "sourceEndSeconds": 11.341905,
       "finalStart": 10.862,
@@ -96,10 +109,12 @@
       "text": "Actually, I live in Monterrey.",
       "caption": "Actually, I live in Monterrey.",
       "cueFile": "audio/cues/actually_currently_c05.wav",
+      "cueWavSamples": 104056,
       "sourceSampleRange": [
         500178,
         604234
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 11.341905,
       "sourceEndSeconds": 13.701451,
       "finalStart": 12.592,
@@ -116,10 +131,12 @@
       "text": "Para decir actualmente: I'm currently studying English.",
       "caption": "Para decir actualmente: I'm currently studying English.",
       "cueFile": "audio/cues/actually_currently_c06.wav",
+      "cueWavSamples": 210610,
       "sourceSampleRange": [
         604234,
         814844
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 13.701451,
       "sourceEndSeconds": 18.477188,
       "finalStart": 15.852,
@@ -136,10 +153,12 @@
       "text": "Ahora tú.",
       "caption": "Ahora tú.",
       "cueFile": "audio/cues/actually_currently_c07.wav",
+      "cueWavSamples": 57294,
       "sourceSampleRange": [
         814844,
         872138
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 18.477188,
       "sourceEndSeconds": 19.776372,
       "finalStart": 20.928,
@@ -156,10 +175,12 @@
       "text": "¿Cómo dirías: actualmente trabajo desde casa?",
       "caption": "¿Cómo dirías: actualmente trabajo desde casa?",
       "cueFile": "audio/cues/actually_currently_c08.wav",
+      "cueWavSamples": 162812,
       "sourceSampleRange": [
         872138,
         1034950
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 19.776372,
       "sourceEndSeconds": 23.468254,
       "finalStart": 22.227,
@@ -176,10 +197,12 @@
       "text": "Escribe tu versión.",
       "caption": "Escribe tu versión.",
       "cueFile": "audio/cues/actually_currently_c09.wav",
+      "cueWavSamples": 64058,
       "sourceSampleRange": [
         1034950,
         1099008
       ],
+      "rangeLengthMinusWavSamples": 0,
       "sourceStartSeconds": 23.468254,
       "sourceEndSeconds": 24.920816,
       "finalStart": 26.019,

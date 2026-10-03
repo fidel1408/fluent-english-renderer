@@ -3,7 +3,7 @@
   "title": "LOOKING FORWARD TO",
   "fps": 30,
   "lead": 0.35,
-  "endHold": 3.8,
+  "endHold": 4.1,
   "targetSeconds": [
     28,
     34
@@ -71,7 +71,7 @@
       "lang": "es+en",
       "text": "Ahora tú: I'm looking forward to...",
       "est": 2.0,
-      "gap": 1.0,
+      "gap": 1.5,
       "file": "audio/cues/looking_forward_to_c07.wav",
       "caption": "Ahora tú: I'm looking forward to…"
     },

@@ -1,5 +1,5 @@
 {
-  "file": "looking_forward_to_oct03_v2_REV3_single-host_narrated_QA-pending.mp4",
+  "file": "looking_forward_to_oct03_v2_REV4_single-host_narrated_QA-pending.mp4",
   "cues": [
     {
       "id": "c01",
@@ -40,13 +40,13 @@
     {
       "id": "c07",
       "text": "Ahora tú: I'm looking forward to...",
-      "correlation": 0.988,
+      "correlation": 1,
       "lagMs": 5
     },
     {
       "id": "c08",
       "text": "¿Cómo la completas?",
-      "correlation": 0.988,
+      "correlation": 1,
       "lagMs": 5
     }
   ],
@@ -59,37 +59,37 @@
     {
       "at": 5.25,
       "expect": "ON c02",
-      "creamPixels": 17470
+      "creamPixels": 17468
     },
     {
       "at": 7.3,
       "expect": "ON c03",
-      "creamPixels": 16868
+      "creamPixels": 16867
     },
     {
       "at": 11.34,
       "expect": "ON c04",
-      "creamPixels": 17730
+      "creamPixels": 17735
     },
     {
       "at": 14.13,
       "expect": "ON c05",
-      "creamPixels": 17188
+      "creamPixels": 17190
     },
     {
       "at": 17.42,
       "expect": "ON c06",
-      "creamPixels": 17598
+      "creamPixels": 17601
     },
     {
-      "at": 21.54,
+      "at": 22.04,
       "expect": "ON c07",
-      "creamPixels": 17219
+      "creamPixels": 17214
     },
     {
-      "at": 23.84,
+      "at": 24.34,
       "expect": "ON c08",
-      "creamPixels": 17344
+      "creamPixels": 17346
     },
     {
       "at": 4,
@@ -117,21 +117,21 @@
       "creamPixels": 0
     },
     {
-      "at": 19.61,
+      "at": 19.86,
       "expect": "OFF (gap c06-c07)",
       "creamPixels": 0
     }
   ],
   "loudness": {
     "integratedLUFS": -18.1,
-    "loudnessRangeLU": 6.3,
+    "loudnessRangeLU": 6.4,
     "truePeakdBTP": -3.6
   },
   "finalHold": {
-    "from": 24.56,
-    "to": 28.3,
+    "from": 25.06,
+    "to": 29.1,
     "noCueActiveInLastSeconds": true,
-    "staticSecondsAfterLastSpeech": 3.74
+    "staticSecondsAfterLastSpeech": 4.04
   },
   "pass": true
 }

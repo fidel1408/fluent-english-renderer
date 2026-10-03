@@ -3,7 +3,7 @@
   "title": "LOOKING FORWARD TO",
   "fps": 30,
   "lead": 0.35,
-  "endHold": 3.8,
+  "endHold": 4.1,
   "targetSeconds": [
     28,
     34
@@ -177,17 +177,17 @@
       "lang": "es+en",
       "text": "Ahora tú: I'm looking forward to...",
       "est": 2,
-      "gap": 1,
+      "gap": 1.5,
       "file": "audio/cues/looking_forward_to_c07.wav",
       "caption": "Ahora tú: I'm looking forward to…",
-      "start": 20.107,
-      "end": 22.945,
+      "start": 20.607,
+      "end": 23.445,
       "audio": "audio/cues/looking_forward_to_c07.wav",
       "audioSeconds": 2.838,
       "padHead": 0.247,
       "padTail": 0.22,
-      "cs": 20.354,
-      "ce": 22.725,
+      "cs": 20.854,
+      "ce": 23.225,
       "marks": {},
       "islands": [
         {
@@ -208,14 +208,14 @@
       "est": 2,
       "gap": 0.2,
       "file": "audio/cues/looking_forward_to_c08.wav",
-      "start": 23.145,
-      "end": 24.441,
+      "start": 23.645,
+      "end": 24.941,
       "audio": "audio/cues/looking_forward_to_c08.wav",
       "audioSeconds": 1.296,
       "padHead": 0.22,
       "padTail": 0.129,
-      "cs": 23.365,
-      "ce": 24.312,
+      "cs": 23.865,
+      "ce": 24.812,
       "marks": {},
       "islands": [
         {
@@ -306,7 +306,7 @@
       ]
     }
   },
-  "duration": 28.3,
+  "duration": 29.1,
   "status": "TIMED_FROM_SUPPLIED_AUDIO",
   "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/looking_forward_to.cues.json",
   "alignmentSource": {

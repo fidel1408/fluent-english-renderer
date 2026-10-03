@@ -1,0 +1,24 @@
+{
+  "video": "looking_forward_to",
+  "S": {
+    "framesChecked": 147,
+    "window": [
+      15.52,
+      20.42
+    ],
+    "contradictoryFrames": 0,
+    "firstBad": null,
+    "pass": true
+  },
+  "E": {
+    "plateauMintPixels": 15950,
+    "entranceStartsAt": 16.82,
+    "exitStartsAt": 20.02,
+    "longestStationaryFullOpacityRunSeconds": 2.93,
+    "runFrom": 17.13,
+    "runTo": 20.06,
+    "requirementSeconds": 2.5,
+    "pass": true
+  },
+  "pass": true
+}

@@ -37,15 +37,15 @@ window.VIDEO = (() => {
       // dialogue: the host reads both lines; role chips make that explicit
       if (t >= K.dlgIn && t < K.dlgOut + .3) {
         const o = out(t, K.dlgOut), ma = E.out(seg(t, K.dlgIn, K.dlgIn + .5)) * o;
-        c.save(); c.globalAlpha = ma; c.strokeStyle = 'rgba(114,216,198,.7)'; c.lineWidth = 6; c.setLineDash([2, 16]); c.lineCap = 'round'; c.beginPath(); c.moveTo(210, 570); c.quadraticCurveTo(CX, 370, 800, 570); c.stroke(); c.setLineDash([]);
-        const pu = (t - K.travelE) / .9; pin(c, 210, 570, 'London', C.mint, 0); pin(c, 800, 570, 'Monterrey', C.mint, t >= K.travelE && pu < 1 ? pu : 0);
-        const u = E.io(seg(t, K.travelS, K.travelE)), mx = (1 - u) * (1 - u) * 210 + 2 * u * (1 - u) * CX + u * u * 800, my = (1 - u) * (1 - u) * 570 + 2 * u * (1 - u) * 370 + u * u * 570 - 44 - Math.sin(u * 3.1416) * 20;
+        c.save(); c.globalAlpha = ma; c.strokeStyle = 'rgba(114,216,198,.7)'; c.lineWidth = 6; c.setLineDash([2, 16]); c.lineCap = 'round'; c.beginPath(); c.moveTo(210, 500); c.quadraticCurveTo(CX, 330, 800, 500); c.stroke(); c.setLineDash([]);
+        const pu = (t - K.travelE) / .9; pin(c, 210, 500, 'London', C.mint, 0); pin(c, 800, 500, 'Monterrey', C.mint, t >= K.travelE && pu < 1 ? pu : 0);
+        const u = E.io(seg(t, K.travelS, K.travelE)), mx = (1 - u) * (1 - u) * 210 + 2 * u * (1 - u) * CX + u * u * 800, my = (1 - u) * (1 - u) * 500 + 2 * u * (1 - u) * 330 + u * u * 500 - 44 - Math.sin(u * 3.1416) * 20;
         c.fillStyle = C.coral; c.beginPath(); c.arc(mx, my, 26, 0, 6.2832); c.fill(); c.fillStyle = C.cream; c.beginPath(); c.arc(mx, my, 9, 0, 6.2832); c.fill(); c.restore();
         const b1 = E.back(seg(t, K.b1, K.b1 + .4)) * o, b2 = E.back(seg(t, K.b2, K.b2 + .4)) * o, tr = E.out(seg(t, K.tr, K.tr + .5)) * o;
-        if (b1 > 0) { const m = Math.min(1, b1), f = fit(c, 'Do you live in London?', 780, 64); KIT.box(c, CARD_X, 715, CARD_W, 100, { a: m, sc: .85 + .15 * m, r: 46 }); c.save(); c.globalAlpha = m; text(c, 'Do you live in London?', CX, 785, f, C.navy); c.restore(); pill(c, CARD_X + 112, 704, 'Pregunta', C.cream, C.navy, 34, { a: m }); }
-        if (b2 > 0) { const m = Math.min(1, b2); KIT.box(c, CARD_X, 860, CARD_W, 170, { fill: C.mint, a: m, sc: .85 + .15 * m, r: 48 });
-          c.save(); c.globalAlpha = m; tokens(c, [{ t: 'Actually,', col: C.teal }, { t: 'I live' }], CX, 938, 66, C.navy); text(c, 'in Monterrey.', CX, 1010, 66, C.navy); c.restore(); pill(c, CARD_X + 124, 850, 'Respuesta', C.cream, C.navy, 34, { a: m }); }
-        if (tr > 0) { c.save(); c.translate(0, (1 - tr) * 20); text(c, 'En realidad, vivo en Monterrey.', CX, 1090, fit(c, 'En realidad, vivo en Monterrey.', 860, 52), C.mint, { a: tr }); c.restore(); }
+        if (b1 > 0) { const m = Math.min(1, b1), f = fit(c, 'Do you live in London?', 780, 64); KIT.box(c, CARD_X, 665, CARD_W, 120, { a: m, sc: .85 + .15 * m, r: 46 }); c.save(); c.globalAlpha = m; text(c, 'Do you live in London?', CX, 755, f, C.navy); c.restore(); KIT.tab(c, CARD_X + 24, 665, 'Pregunta', m); }
+        if (b2 > 0) { const m = Math.min(1, b2); KIT.box(c, CARD_X, 848, CARD_W, 176, { fill: C.mint, a: m, sc: .85 + .15 * m, r: 48 });
+          c.save(); c.globalAlpha = m; tokens(c, [{ t: 'Actually,', col: C.teal }, { t: 'I live' }], CX, 936, 64, C.navy); text(c, 'in Monterrey.', CX, 1000, 64, C.navy); c.restore(); KIT.tab(c, CARD_X + 24, 848, 'Respuesta', m); }
+        if (tr > 0) { c.save(); c.translate(0, (1 - tr) * 20); text(c, 'En realidad, vivo en Monterrey.', CX, 1078, fit(c, 'En realidad, vivo en Monterrey.', 860, 52), C.mint, { a: tr }); c.restore(); }
       }
       // present: "now" marker on a timeline
       if (t >= K.presIn && t < K.presOut + .3) {
@@ -68,10 +68,10 @@ window.VIDEO = (() => {
         c.save(); c.globalAlpha = a; text(c, 'Actualmente trabajo', CX, 625, fit(c, 'Actualmente trabajo', 780, 100), C.navy); text(c, 'desde casa.', CX, 755, 108, C.navy); c.restore();
         const qa = E.out(seg(t, K.q, K.q + .4)); if (qa > 0) { c.save(); c.translate(0, (1 - qa) * 18); text(c, 'Escribe tu versión.', CX, 925, 72, C.cream, { a: qa }); c.restore(); }
         KIT.commentBox(c, t, 960, E.out(seg(t, K.box, K.box + .5)), 'Escribe tu versión…');
-        const ca = E.out(seg(t, K.cta, K.cta + .5)); if (ca > 0) { c.save(); c.translate(0, (1 - ca) * 20); KIT.cta(c, 1100, ca); c.restore(); }
+        const ca = E.out(seg(t, K.cta + .25, K.cta + .75)); if (ca > 0) { c.save(); c.translate(0, (1 - ca) * 20); KIT.cta(c, 1095, ca); c.restore(); }   // starts after the host has slid away
       }
     });
-    if (t >= K.cta) KIT.logoBig(c, 440, 1250, E.out(seg(t, K.cta + .3, K.cta + .9)));
+    if (t >= K.cta) KIT.logoBig(c, 440, 1270, E.out(seg(t, K.cta + .35, K.cta + .95)));
     caption(c, t, cues);
   }
   return { draw };

@@ -21,15 +21,20 @@ const KIT = (() => {
     text(c, placeholder, CARD_X + 44, y + 72, 52, 'rgba(255,247,235,.62)', { weight: 500, align: 'left' });
     if (caret && Math.floor(t * 1.8) % 2 === 0) { c.fillStyle = C.mint; c.fillRect(CARD_X + 44 + measure(c, placeholder, 52, 500) + 10, y + 30, 6, 60); } c.restore();
   }
-  // discreet CTA block: factual text only
+  // role tab ("Pregunta", "Respuesta", ...) sitting on the top-left of a dialogue bubble. 60 px source type -> ~12.9 px at 270x480 after the 0.86 content group.
+  function tab(c, x, bubbleTop, label, a = 1) {
+    c.save(); c.globalAlpha *= a; c.font = `700 60px ${FONT}`; const w = c.measureText(label).width + 64, h = 87, y = bubbleTop - 57;
+    c.shadowColor = 'rgba(0,0,0,.28)'; c.shadowBlur = 14; c.shadowOffsetY = 5; c.fillStyle = C.cream; rr(c, x, y, w, h, 34); c.fill(); c.shadowColor = 'transparent';
+    c.fillStyle = C.navy; c.textAlign = 'center'; c.textBaseline = 'alphabetic'; c.fillText(label, x + w / 2, y + 61); c.restore(); return w;
+  }
+  // discreet CTA block (factual text only), reflowed into three short lines: 74 / 62 / 62 px source type -> 15.9 / 13.3 / 13.3 px at 270x480
   function cta(c, y, a) {
-    if (a <= 0) return; c.save(); c.globalAlpha *= a;
-    c.fillStyle = 'rgba(16,30,52,.92)'; rr(c, CARD_X, y, CARD_W, 190, 44); c.fill(); c.strokeStyle = 'rgba(114,216,198,.5)'; c.lineWidth = 3; rr(c, CARD_X, y, CARD_W, 190, 44); c.stroke();
-    text(c, 'Clases en línea', CX, y + 82, 66, C.cream);
-    c.font = `700 46px ${FONT}`; const pw = 214, w1 = c.measureText('Manda ').width, w2 = c.measureText(' por mensaje privado').width, tot = w1 + pw + 22 + w2, x0 = CX - tot / 2;
-    text(c, 'Manda', x0 + w1 / 2, y + 156, 46, C.cream);
-    c.fillStyle = C.coral; rr(c, x0 + w1, y + 110, pw, 60, 30); c.fill(); text(c, 'GRUPO', x0 + w1 + pw / 2, y + 155, 42, C.navy);
-    text(c, 'por mensaje privado', x0 + w1 + pw + 22 + w2 / 2, y + 156, 46, C.cream); c.restore();
+    if (a <= 0) return; c.save(); c.globalAlpha *= a; const h = 300;
+    c.fillStyle = 'rgba(16,30,52,.94)'; rr(c, CARD_X, y, CARD_W, h, 48); c.fill(); c.strokeStyle = 'rgba(114,216,198,.55)'; c.lineWidth = 3; rr(c, CARD_X, y, CARD_W, h, 48); c.stroke();
+    text(c, 'Clases en línea', CX, y + 90, 74, C.cream);
+    c.font = `700 62px ${FONT}`; const w1 = c.measureText('Manda').width, pw = 290, gap = 26, tot = w1 + gap + pw, x0 = CX - tot / 2;
+    text(c, 'Manda', x0 + w1 / 2, y + 180, 62, C.cream); c.fillStyle = C.coral; rr(c, x0 + w1 + gap, y + 124, pw, 78, 39); c.fill(); text(c, 'GRUPO', x0 + w1 + gap + pw / 2, y + 180, 58, C.navy);
+    text(c, 'por mensaje privado.', CX, y + 262, 62, C.cream); c.restore();
   }
   // 1 only while the educator is actually speaking: measured speech islands (silence padding excluded); whole speech window only for audio-pending previews
   function speaking(t, cues) {
@@ -47,5 +52,5 @@ const KIT = (() => {
   const toContent = (x, y) => ({ x: FE.CX + (x - FE.CX) / CT.K, y: CT.REF + (y - CT.Y0) / CT.K });
   const hostFor = (c, t, cues, cfg) => { const starts = []; cues.forEach(q => (q.islands || []).forEach(i => starts.push(q.start + i.s))); HOST.draw(c, t, Object.assign({ speaking: speaking(t, cues), starts }, cfg)); };
   const headTarget = () => toContent(FE.CX, HOST.headTopY() - 16);   // where every speech-bubble tail points: the host's head
-  return { content, toScreen, toContent, CT, hostFor, headTarget, speaking, clipRR, CARD_X, CARD_W, fit, logoSmall, logoBig, pair, box, commentBox, cta };
+  return { tab, content, toScreen, toContent, CT, hostFor, headTarget, speaking, clipRR, CARD_X, CARD_W, fit, logoSmall, logoBig, pair, box, commentBox, cta };
 })();

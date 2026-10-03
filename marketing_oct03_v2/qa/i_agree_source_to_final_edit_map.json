@@ -4,22 +4,29 @@
   "masterFile": "audio/originals/elevenlabs_i_agree_take1_n3PA7EMRxhL2yWI1CsiK.mp3",
   "masterSha256": "4eee4c8d2cee22c7acce5f09065004168692e38f054b831892ec6a7dbcba8dbd",
   "sampleRate": 44100,
-  "sourceSeconds": 17.475,
+  "fullMasterSamples": 859392,
+  "fullMasterSeconds": 19.487346939,
+  "retainedCueSamples": 770648,
+  "retainedCueSeconds": 17.475011338,
+  "masterSamplesNotInAnyCue": 88744,
   "finalDurationSeconds": 27.6,
-  "addedSilenceSeconds": 10.125,
+  "addedSilenceSeconds": 10.124989,
   "lead": 0.5,
   "endHold": 3.5,
-  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold). Cues are contiguous source partitions (new tips) or silence-padded cuts (I AGREE).",
+  "cutEndpoints": "APPROXIMATE: derived from rounded times (silence-padded cuts with 8 ms fades inside silence). Cue WAVs retain every speech sample bit-exactly (verified in the alignment report), but endpoints are NOT sample-exact partitions and differ from the actual cue WAV lengths by the amounts listed per cue.",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
   "cues": [
     {
       "id": "c01",
       "text": "¿Estás de acuerdo?",
       "caption": "¿Estás de acuerdo?",
       "cueFile": "audio/cues/i_agree_c01.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 46907,
+      "sourceSampleRangeApprox": [
         0,
         46922
       ],
+      "rangeLengthMinusWavSamples": 15,
       "sourceStartSeconds": 0,
       "sourceEndSeconds": 1.063991,
       "finalStart": 0.5,
@@ -36,10 +43,12 @@
       "text": "Evita: I am agree.",
       "caption": "Evita: I am agree.",
       "cueFile": "audio/cues/i_agree_c02.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 86309,
+      "sourceSampleRangeApprox": [
         57771,
         144075
       ],
+      "rangeLengthMinusWavSamples": -5,
       "sourceStartSeconds": 1.31,
       "sourceEndSeconds": 3.267007,
       "finalStart": 2.364,
@@ -56,10 +65,12 @@
       "text": "Di: I agree.",
       "caption": "Di: I agree.",
       "cueFile": "audio/cues/i_agree_c03.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 78686,
+      "sourceSampleRangeApprox": [
         152410,
         231084
       ],
+      "rangeLengthMinusWavSamples": -12,
       "sourceStartSeconds": 3.456009,
       "sourceEndSeconds": 5.24,
       "finalStart": 5.621,
@@ -76,10 +87,12 @@
       "text": "Agree ya es verbo; aquí no necesitas am.",
       "caption": "Agree ya es verbo; aquí no necesitas am.",
       "cueFile": "audio/cues/i_agree_c04.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 146009,
+      "sourceSampleRangeApprox": [
         242638,
         388653
       ],
+      "rangeLengthMinusWavSamples": 6,
       "sourceStartSeconds": 5.501995,
       "sourceEndSeconds": 8.812993,
       "finalStart": 7.755,
@@ -96,10 +109,12 @@
       "text": "I agree with you.",
       "caption": "I agree with you.",
       "cueFile": "audio/cues/i_agree_c05.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 55439,
+      "sourceSampleRangeApprox": [
         398708,
         454142
       ],
+      "rangeLengthMinusWavSamples": -5,
       "sourceStartSeconds": 9.040998,
       "sourceEndSeconds": 10.298005,
       "finalStart": 12.266,
@@ -116,10 +131,12 @@
       "text": "Estoy de acuerdo contigo.",
       "caption": "Estoy de acuerdo contigo.",
       "cueFile": "audio/cues/i_agree_c06.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 69343,
+      "sourceSampleRangeApprox": [
         460625,
         529994
       ],
+      "rangeLengthMinusWavSamples": 26,
       "sourceStartSeconds": 10.445011,
       "sourceEndSeconds": 12.018005,
       "finalStart": 13.923,
@@ -136,10 +153,12 @@
       "text": "¿Cómo dirías: no estoy de acuerdo?",
       "caption": "¿Cómo dirías: no estoy de acuerdo?",
       "cueFile": "audio/cues/i_agree_c07.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 112679,
+      "sourceSampleRangeApprox": [
         551559,
         664234
       ],
+      "rangeLengthMinusWavSamples": -4,
       "sourceStartSeconds": 12.507007,
       "sourceEndSeconds": 15.061995,
       "finalStart": 16.495,
@@ -156,10 +175,12 @@
       "text": "Comenta.",
       "caption": "Comenta.",
       "cueFile": "audio/cues/i_agree_c08.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 35796,
+      "sourceSampleRangeApprox": [
         667101,
         702910
       ],
+      "rangeLengthMinusWavSamples": 13,
       "sourceStartSeconds": 15.127007,
       "sourceEndSeconds": 15.939002,
       "finalStart": 19.35,
@@ -176,10 +197,12 @@
       "text": "Clases en línea: manda GRUPO por privado.",
       "caption": "Clases en línea: manda GRUPO por privado.",
       "cueFile": "audio/cues/i_agree_c09.wav",
-      "sourceSampleRange": [
+      "cueWavSamples": 139480,
+      "sourceSampleRangeApprox": [
         713847,
         853335
       ],
+      "rangeLengthMinusWavSamples": 8,
       "sourceStartSeconds": 16.187007,
       "sourceEndSeconds": 19.35,
       "finalStart": 20.862,

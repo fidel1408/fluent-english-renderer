@@ -7,12 +7,15 @@ Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via sup
 
 | Tip | Length | File | Status |
 |---|---|---|---|
-| I AGREE (REV3, single host) | 27.6 s | `out/i_agree_oct03_v2_REV3_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
-| ACTUALLY / CURRENTLY (REV3, single host) | 31.1 s | `out/actually_currently_oct03_v2_REV3_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
-| LOOKING FORWARD TO (REV3, single host) | 28.3 s | `out/looking_forward_to_oct03_v2_REV3_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
-| Earlier versions | | `out/*REV2*`, `out/*FINAL-CANDIDATE*`, `out/*PREVIEW_audio-pending*` | Preserved unchanged (older, two-avatar design or silent) |
+| I AGREE (REV3, single host; unchanged) | 27.6 s | `out/i_agree_oct03_v2_REV3_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
+| ACTUALLY / CURRENTLY (REV4) | 31.4 s | `out/actually_currently_oct03_v2_REV4_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
+| LOOKING FORWARD TO (REV4) | 29.1 s | `out/looking_forward_to_oct03_v2_REV4_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
+| Earlier versions | | `out/*REV3*` (the two new tips), `out/*REV2*`, `out/*FINAL-CANDIDATE*`, `out/*PREVIEW_audio-pending*` | Preserved unchanged in the repository |
 
-Full evidence, source-to-final edit maps and the list of checks NOT done: `qa/REV3_verification_report.md`.
+Evidence and the list of checks NOT done: `qa/REV4_verification_report.md` (current) and `qa/REV3_verification_report.md` (earlier).
+
+### REV4 (only Actually/Currently and Looking forward to)
+Looking's noun teaching state now changes as one coherent state (example + rule + Spanish translation) at the noun introduction with a 2.70 s stationary hold; dialogue role tabs enlarged to 12.9 px effective at 270x480; the secondary CTA reflowed into three short lines (13-16 px effective); the I AGREE edit map now distinguishes full-master from retained-cue durations and marks its old cut endpoints approximate.
 
 ### REV3: one adult male host, three tips
 Replaces the two small avatars with ONE clearly adult male host (`src/host.js`) for the supplied Luis voice; mouth only inside measured speech islands; he models quoted dialogue lines; scene content is drawn through a scaled group (`KIT.content`) so his head, shoulders and torso stay visible above the caption bar. New narrations for Actually/Currently and Looking forward to are cut at the handoff's explicit sample partitions (`build/partition_split.js`, bit-exact coverage proof, no fades/stretch). Burned captions now use the same text as SRT/VTT (`caption || text`).

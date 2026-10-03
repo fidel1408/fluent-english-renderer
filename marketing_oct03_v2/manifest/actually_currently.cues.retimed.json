@@ -3,7 +3,7 @@
   "title": "ACTUALLY / CURRENTLY",
   "fps": 30,
   "lead": 0.35,
-  "endHold": 3.6,
+  "endHold": 3.9,
   "targetSeconds": [
     28,
     34
@@ -334,7 +334,7 @@
       ]
     }
   },
-  "duration": 31.1,
+  "duration": 31.4,
   "status": "TIMED_FROM_SUPPLIED_AUDIO",
   "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/actually_currently.cues.json",
   "alignmentSource": {

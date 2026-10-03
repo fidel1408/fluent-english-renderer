@@ -14,11 +14,23 @@ m.status = found === m.cues.length ? 'TIMED_FROM_SUPPLIED_AUDIO' : (found ? 'PAR
 const [lo, hi] = m.targetSeconds, warn = []; if (m.duration < lo - 1 || m.duration > hi + 1) warn.push(`duration ${m.duration}s is outside the target ${lo}-${hi}s (not forced; review pacing/pauses with the owner)`);
 m.warnings = warn;
 // auditable source-to-final edit map: video_time(source_time) = final_cue_start + source_time - source_partition_start
+// Precision rules: durations are derived from SAMPLE COUNTS (never from summed millisecond-rounded cue seconds); the full master duration is kept separate
+// from the retained-cue duration; cut endpoints are called exact only when they are explicit integer sample partitions.
 if (found && al) {
-  const SRr = al.sampleRate || 44100, sum = m.cues.reduce((a, q) => a + (q.audioSeconds || 0), 0);
-  const map = { video: name, formula: 'video_time(source_time) = cue.finalStart + source_time - cue.sourceStart', masterFile: al.master, masterSha256: al.masterSha256, sampleRate: SRr, sourceSeconds: +sum.toFixed(6), finalDurationSeconds: m.duration, addedSilenceSeconds: +(m.duration - sum).toFixed(3), lead: m.lead, endHold: m.endHold,
-    note: 'Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold). Cues are contiguous source partitions (new tips) or silence-padded cuts (I AGREE).',
-    cues: m.cues.map(q => { const a = al.cues.find(x => x.id === q.id); const sr = a.sourceSampleRange || [Math.round(a.masterStart * SRr), Math.round(a.masterEnd * SRr)]; return { id: q.id, text: q.text, caption: q.caption || q.text, cueFile: q.audio, sourceSampleRange: sr, sourceStartSeconds: +(sr[0] / SRr).toFixed(6), sourceEndSeconds: +(sr[1] / SRr).toFixed(6), finalStart: q.start, finalEnd: q.end, offsetSeconds: +(q.start - sr[0] / SRr).toFixed(6), gapBeforeAdded: q.gap, speechActivityFinal: [q.cs, q.ce] }; }) };
+  const SRr = al.sampleRate || 44100, cp = require('child_process');
+  const wavSamples = f => (fs.statSync(f).size - 44) / 2;      // PCM16 mono WAV written by this pipeline (44-byte header)
+  const masterSamples = al.totalSamples || (cp.execFileSync('ffmpeg', ['-v', 'error', '-i', path.join(L.ROOT, al.master), '-ac', '1', '-ar', String(SRr), '-f', 's16le', '-'], { maxBuffer: 1 << 28 }).length / 2);
+  const rows = m.cues.map(q => { const a = al.cues.find(x => x.id === q.id), exact = !!a.sourceSampleRange, wavN = wavSamples(path.join(L.ROOT, q.audio));
+    const sr = exact ? a.sourceSampleRange : [Math.round(a.masterStart * SRr), Math.round(a.masterEnd * SRr)];
+    return { q, exact, wavN, sr }; });
+  const retained = rows.reduce((s2, r) => s2 + r.wavN, 0), allExact = rows.every(r => r.exact);
+  const map = { video: name, formula: 'video_time(source_time) = cue.finalStart + source_time - cue.sourceStart', masterFile: al.master, masterSha256: al.masterSha256, sampleRate: SRr,
+    fullMasterSamples: masterSamples, fullMasterSeconds: +(masterSamples / SRr).toFixed(9),
+    retainedCueSamples: retained, retainedCueSeconds: +(retained / SRr).toFixed(9), masterSamplesNotInAnyCue: masterSamples - retained,
+    finalDurationSeconds: m.duration, addedSilenceSeconds: +(m.duration - retained / SRr).toFixed(6), lead: m.lead, endHold: m.endHold,
+    cutEndpoints: allExact ? 'EXACT integer sample partitions (contiguous; every source sample retained exactly once)' : 'APPROXIMATE: derived from rounded times (silence-padded cuts with 8 ms fades inside silence). Cue WAVs retain every speech sample bit-exactly (verified in the alignment report), but endpoints are NOT sample-exact partitions and differ from the actual cue WAV lengths by the amounts listed per cue.',
+    note: 'Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).',
+    cues: rows.map(({ q, exact, wavN, sr }) => ({ id: q.id, text: q.text, caption: q.caption || q.text, cueFile: q.audio, cueWavSamples: wavN, [exact ? 'sourceSampleRange' : 'sourceSampleRangeApprox']: sr, rangeLengthMinusWavSamples: (sr[1] - sr[0]) - wavN, sourceStartSeconds: +(sr[0] / SRr).toFixed(6), sourceEndSeconds: +(sr[1] / SRr).toFixed(6), finalStart: q.start, finalEnd: q.end, offsetSeconds: +(q.start - sr[0] / SRr).toFixed(6), gapBeforeAdded: q.gap, speechActivityFinal: [q.cs, q.ce] })) };
   fs.mkdirSync(path.join(L.ROOT, 'qa'), { recursive: true }); fs.writeFileSync(path.join(L.ROOT, 'qa', `${name}_source_to_final_edit_map.json`), JSON.stringify(map, null, 2));
 }
 if (found) fs.writeFileSync(path.join(L.ROOT, 'manifest', `${name}.cues.retimed.json`), JSON.stringify(m, null, 2));

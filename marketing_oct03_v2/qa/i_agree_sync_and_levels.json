@@ -1,0 +1,152 @@
+{
+  "file": "i_agree_oct03_v2_FINAL-CANDIDATE_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Estás de acuerdo?",
+      "correlation": 0.989,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c02",
+      "text": "Evita: I am agree.",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "Di: I agree.",
+      "correlation": 0.993,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c04",
+      "text": "Agree ya es verbo; aquí no necesitas am.",
+      "correlation": 0.998,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "I agree with you.",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "Estoy de acuerdo contigo.",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "¿Cómo dirías: no estoy de acuerdo?",
+      "correlation": 0.997,
+      "lagMs": 5
+    },
+    {
+      "id": "c08",
+      "text": "Comenta.",
+      "correlation": 0.996,
+      "lagMs": 5
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea: manda GRUPO por privado.",
+      "correlation": 0.991,
+      "lagMs": 4.9
+    }
+  ],
+  "captions": [
+    {
+      "at": 0.94,
+      "expect": "ON c01",
+      "creamPixels": 10319
+    },
+    {
+      "at": 3.34,
+      "expect": "ON c02",
+      "creamPixels": 8671
+    },
+    {
+      "at": 6.51,
+      "expect": "ON c03",
+      "creamPixels": 5408
+    },
+    {
+      "at": 9.41,
+      "expect": "ON c04",
+      "creamPixels": 19647
+    },
+    {
+      "at": 12.89,
+      "expect": "ON c05",
+      "creamPixels": 8275
+    },
+    {
+      "at": 14.71,
+      "expect": "ON c06",
+      "creamPixels": 13539
+    },
+    {
+      "at": 17.77,
+      "expect": "ON c07",
+      "creamPixels": 17417
+    },
+    {
+      "at": 19.76,
+      "expect": "ON c08",
+      "creamPixels": 5137
+    },
+    {
+      "at": 22.44,
+      "expect": "ON c09",
+      "creamPixels": 22323
+    },
+    {
+      "at": 1.96,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 238
+    },
+    {
+      "at": 4.97,
+      "expect": "OFF (gap c02-c03)",
+      "creamPixels": 237
+    },
+    {
+      "at": 7.58,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 197
+    },
+    {
+      "at": 11.67,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 230
+    },
+    {
+      "at": 13.72,
+      "expect": "OFF (gap c05-c06)",
+      "creamPixels": 169
+    },
+    {
+      "at": 16,
+      "expect": "OFF (gap c06-c07)",
+      "creamPixels": 237
+    },
+    {
+      "at": 20.51,
+      "expect": "OFF (gap c08-c09)",
+      "creamPixels": 96
+    },
+    {
+      "at": 26.6,
+      "expect": "OFF (final CTA hold)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.2,
+    "loudnessRangeLU": 4.4,
+    "truePeakdBTP": -4.2
+  },
+  "pass": true
+}

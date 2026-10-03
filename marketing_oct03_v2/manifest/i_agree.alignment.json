@@ -1,0 +1,287 @@
+{
+  "video": "i_agree",
+  "master": "audio/originals/elevenlabs_i_agree_take1_n3PA7EMRxhL2yWI1CsiK.mp3",
+  "masterSha256": "4eee4c8d2cee22c7acce5f09065004168692e38f054b831892ec6a7dbcba8dbd",
+  "masterSeconds": 19.4873,
+  "method": "waveform silencedetect -38 dB / 120 ms + explicit script grouping; no ASR/forced aligner available (model hosts unreachable)",
+  "islands": [
+    {
+      "s": 0,
+      "e": 0.884
+    },
+    {
+      "s": 1.49,
+      "e": 2.033
+    },
+    {
+      "s": 2.336,
+      "e": 3.087
+    },
+    {
+      "s": 3.636,
+      "e": 3.96
+    },
+    {
+      "s": 4.351,
+      "e": 5.06
+    },
+    {
+      "s": 5.682,
+      "e": 6.1
+    },
+    {
+      "s": 6.223,
+      "e": 6.963
+    },
+    {
+      "s": 7.299,
+      "e": 8.633
+    },
+    {
+      "s": 9.221,
+      "e": 10.118
+    },
+    {
+      "s": 10.625,
+      "e": 11.838
+    },
+    {
+      "s": 12.687,
+      "e": 13.457
+    },
+    {
+      "s": 13.584,
+      "e": 14.882
+    },
+    {
+      "s": 15.307,
+      "e": 15.759
+    },
+    {
+      "s": 16.367,
+      "e": 17.24
+    },
+    {
+      "s": 17.611,
+      "e": 19.169
+    }
+  ],
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Estás de acuerdo?",
+      "file": "audio/cues/i_agree_c01.wav",
+      "masterStart": 0,
+      "masterEnd": 1.064,
+      "padHead": 0,
+      "padTail": 0.18,
+      "seconds": 1.064,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 0.884
+        }
+      ],
+      "internalPausesSec": []
+    },
+    {
+      "id": "c02",
+      "text": "Evita: I am agree.",
+      "file": "audio/cues/i_agree_c02.wav",
+      "masterStart": 1.31,
+      "masterEnd": 3.267,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 1.957,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 0.723
+        },
+        {
+          "s": 1.026,
+          "e": 1.777
+        }
+      ],
+      "internalPausesSec": [
+        0.303
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Di: I agree.",
+      "file": "audio/cues/i_agree_c03.wav",
+      "masterStart": 3.456,
+      "masterEnd": 5.24,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 1.784,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 0.504
+        },
+        {
+          "s": 0.895,
+          "e": 1.604
+        }
+      ],
+      "internalPausesSec": [
+        0.391
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Agree ya es verbo; aquí no necesitas am.",
+      "file": "audio/cues/i_agree_c04.wav",
+      "masterStart": 5.502,
+      "masterEnd": 8.813,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 3.311,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 0.598
+        },
+        {
+          "s": 0.721,
+          "e": 1.46
+        },
+        {
+          "s": 1.797,
+          "e": 3.131
+        }
+      ],
+      "internalPausesSec": [
+        0.124,
+        0.336
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "I agree with you.",
+      "file": "audio/cues/i_agree_c05.wav",
+      "masterStart": 9.041,
+      "masterEnd": 10.298,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 1.257,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 1.077
+        }
+      ],
+      "internalPausesSec": []
+    },
+    {
+      "id": "c06",
+      "text": "Estoy de acuerdo contigo.",
+      "file": "audio/cues/i_agree_c06.wav",
+      "masterStart": 10.445,
+      "masterEnd": 12.018,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 1.572,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 1.392
+        }
+      ],
+      "internalPausesSec": []
+    },
+    {
+      "id": "c07",
+      "text": "¿Cómo dirías: no estoy de acuerdo?",
+      "file": "audio/cues/i_agree_c07.wav",
+      "masterStart": 12.507,
+      "masterEnd": 15.062,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 2.555,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 0.95
+        },
+        {
+          "s": 1.077,
+          "e": 2.375
+        }
+      ],
+      "internalPausesSec": [
+        0.127
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Comenta.",
+      "file": "audio/cues/i_agree_c08.wav",
+      "masterStart": 15.127,
+      "masterEnd": 15.939,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 0.812,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 0.632
+        }
+      ],
+      "internalPausesSec": []
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea: manda GRUPO por privado.",
+      "file": "audio/cues/i_agree_c09.wav",
+      "masterStart": 16.187,
+      "masterEnd": 19.35,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "seconds": 3.163,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 1.053
+        },
+        {
+          "s": 1.424,
+          "e": 2.983
+        }
+      ],
+      "internalPausesSec": [
+        0.371
+      ]
+    }
+  ],
+  "rateSecPerSyllable": [
+    0.147,
+    0.216,
+    0.207,
+    0.192,
+    0.179,
+    0.152,
+    0.207,
+    0.151,
+    0.304
+  ],
+  "rateOutliers": [],
+  "speechSamplesChecked": 562852,
+  "speechSamplesDifferent": 0,
+  "allSpeechPreserved": true,
+  "marks": {
+    "c02": {
+      "badPhrase": 1.026
+    },
+    "c04": {
+      "aqui": 1.797
+    }
+  },
+  "confidence": {
+    "phraseBoundaries": "good (pause structure + 15/15 islands + plausible syllable rates)",
+    "wordLevel": "not measured",
+    "content": "speech content/pronunciation NOT verified (no ASR; no listening)"
+  }
+}

@@ -7,7 +7,7 @@ const a = process.argv.slice(2), name = a[0] && !a[0].startsWith('--') ? a[0] : 
 (async () => {
   const m = L.loadManifest(name), FPS = m.fps, from = +(opt('from') || 0), to = +(opt('to') || m.duration);
   const complete = m.status === 'TIMED_FROM_SUPPLIED_AUDIO';
-  const label = complete ? 'narrated' : 'PREVIEW_audio-pending';
+  const label = complete ? 'FINAL-CANDIDATE_narrated_QA-pending' : 'PREVIEW_audio-pending';
   const outFile = path.resolve(L.ROOT, opt('out') || `out/${name}_oct03_v2_${label}.mp4`); fs.mkdirSync(path.dirname(outFile), { recursive: true });
   cp.execFileSync('node', [path.join(__dirname, 'audio.js'), name], { stdio: 'inherit' });
   const mix = path.join(L.ROOT, 'build', 'tmp', `${name}_mix.wav`);
@@ -16,7 +16,7 @@ const a = process.argv.slice(2), name = a[0] && !a[0].startsWith('--') ? a[0] : 
   const S = await L.serve(); await page.goto(S.url + '/src/index.html?video=' + name); await page.evaluate(() => window.ready); await page.evaluate(c => window.setCues(c), m.cues);
   const ff = cp.spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'png', '-i', '-', '-ss', String(from), '-t', String(to - from), '-i', mix,
     '-c:v', 'libx264', '-preset', 'slow', '-crf', '15', '-profile:v', 'high', '-level', '4.0', '-pix_fmt', 'yuv420p', '-r', String(FPS), '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709',
-    '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart', '-metadata', `title=Fluent English - ${name} - ${label}`, '-metadata', `comment=${complete ? 'Narration from supplied files' : 'ANIMATION PREVIEW. Narration pending. Not publish-ready.'}`, '-shortest', outFile], { stdio: ['pipe', 'inherit', 'inherit'] });
+    '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart', '-metadata', `title=Fluent English - ${name} - ${label}`, '-metadata', `comment=${complete ? 'Narrated FINAL CANDIDATE: supplied ElevenLabs take; independent listening QA pending. Not published.' : 'ANIMATION PREVIEW. Narration pending. Not publish-ready.'}`, '-shortest', outFile], { stdio: ['pipe', 'inherit', 'inherit'] });
   const n0 = Math.round(from * FPS), n1 = Math.round(to * FPS); const t0 = Date.now();
   for (let n = n0; n < n1; n++) {
     const b64 = await page.evaluate(t => { window.renderFrame(t); return document.getElementById('c').toDataURL('image/png').slice(22); }, n / FPS);

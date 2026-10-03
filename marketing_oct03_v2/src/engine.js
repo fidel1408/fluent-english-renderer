@@ -104,8 +104,9 @@ const FE = (() => {
   }
 
   function caption(c, t, cues) {
-    const q = cues.find(k => t >= k.start - .05 && t <= k.end + .25); if (!q) return;
-    const a = Math.min(seg(t, q.start - .05, q.start + .12), 1 - seg(t, q.end + .05, q.end + .25));
+    const q = cues.find(k => t >= (k.cs ?? k.start) - .05 && t <= (k.ce ?? k.end) + .25); if (!q) return;
+    const s0 = q.cs ?? q.start, e0 = q.ce ?? q.end, a = Math.min(seg(t, s0 - .05, s0 + .12), 1 - seg(t, e0 + .05, e0 + .25));
+    const textShown = q.caption || q.text;
     c.save(); c.globalAlpha = a; c.font = `600 64px ${FONT}`; const maxW = 800, ws = q.text.split(' '), lines = []; let cur = '';
     ws.forEach(w => { const s = cur ? cur + ' ' + w : w; if (c.measureText(s).width > maxW && cur) { lines.push(cur); cur = w; } else cur = s; }); lines.push(cur);
     const lh = 80, h = lines.length * lh + 34, w = Math.min(maxW + 70, Math.max(...lines.map(l => c.measureText(l).width)) + 80), y = 1478 - h;

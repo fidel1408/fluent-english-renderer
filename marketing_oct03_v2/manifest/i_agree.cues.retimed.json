@@ -1,0 +1,333 @@
+{
+  "video": "i_agree",
+  "title": "I AGREE",
+  "fps": 30,
+  "lead": 0.5,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    30
+  ],
+  "note": "Cue times are COMPUTED: start = previous end + gap (first cue: lead); end = start + natural duration. Planned durations (est) are estimates for a preview only. build/retime.js replaces est with the measured duration of the supplied narration files. Total duration = last cue end + endHold. Audio is never sped up, trimmed or cut.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es",
+      "text": "¿Estás de acuerdo?",
+      "est": 1.5,
+      "gap": 0,
+      "file": "audio/cues/i_agree_c01.wav",
+      "start": 0.5,
+      "end": 1.564,
+      "audio": "audio/cues/i_agree_c01.wav",
+      "audioSeconds": 1.064,
+      "padHead": 0,
+      "padTail": 0.18,
+      "cs": 0.5,
+      "ce": 1.384,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0,
+          "e": 0.884
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Evita: I am agree.",
+      "est": 1.9,
+      "gap": 0.8,
+      "file": "audio/cues/i_agree_c02.wav",
+      "start": 2.364,
+      "end": 4.321,
+      "audio": "audio/cues/i_agree_c02.wav",
+      "audioSeconds": 1.957,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 2.544,
+      "ce": 4.141,
+      "marks": {
+        "badPhrase": 1.026
+      },
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 0.723
+        },
+        {
+          "s": 1.026,
+          "e": 1.777
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Di: I agree.",
+      "est": 1.3,
+      "gap": 1.3,
+      "file": "audio/cues/i_agree_c03.wav",
+      "start": 5.621,
+      "end": 7.405,
+      "audio": "audio/cues/i_agree_c03.wav",
+      "audioSeconds": 1.784,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 5.801,
+      "ce": 7.225,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 0.504
+        },
+        {
+          "s": 0.895,
+          "e": 1.604
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Agree ya es verbo; aquí no necesitas am.",
+      "est": 3.8,
+      "gap": 0.35,
+      "file": "audio/cues/i_agree_c04.wav",
+      "start": 7.755,
+      "end": 11.066,
+      "audio": "audio/cues/i_agree_c04.wav",
+      "audioSeconds": 3.311,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 7.935,
+      "ce": 10.886,
+      "marks": {
+        "aqui": 1.797
+      },
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 0.598
+        },
+        {
+          "s": 0.721,
+          "e": 1.46
+        },
+        {
+          "s": 1.797,
+          "e": 3.131
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "en",
+      "text": "I agree with you.",
+      "est": 1.5,
+      "gap": 1.2,
+      "file": "audio/cues/i_agree_c05.wav",
+      "start": 12.266,
+      "end": 13.523,
+      "audio": "audio/cues/i_agree_c05.wav",
+      "audioSeconds": 1.257,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 12.446,
+      "ce": 13.343,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 1.077
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Estoy de acuerdo contigo.",
+      "est": 1.9,
+      "gap": 0.4,
+      "file": "audio/cues/i_agree_c06.wav",
+      "start": 13.923,
+      "end": 15.495,
+      "audio": "audio/cues/i_agree_c06.wav",
+      "audioSeconds": 1.572,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 14.103,
+      "ce": 15.315,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 1.392
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es",
+      "text": "¿Cómo dirías: no estoy de acuerdo?",
+      "est": 3,
+      "gap": 1,
+      "file": "audio/cues/i_agree_c07.wav",
+      "start": 16.495,
+      "end": 19.05,
+      "audio": "audio/cues/i_agree_c07.wav",
+      "audioSeconds": 2.555,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 16.675,
+      "ce": 18.87,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 0.95
+        },
+        {
+          "s": 1.077,
+          "e": 2.375
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Comenta.",
+      "est": 0.8,
+      "gap": 0.3,
+      "file": "audio/cues/i_agree_c08.wav",
+      "start": 19.35,
+      "end": 20.162,
+      "audio": "audio/cues/i_agree_c08.wav",
+      "audioSeconds": 0.812,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 19.53,
+      "ce": 19.982,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 0.632
+        }
+      ]
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Clases en línea: manda GRUPO por privado.",
+      "est": 3.8,
+      "gap": 0.7,
+      "file": "audio/cues/i_agree_c09.wav",
+      "start": 20.862,
+      "end": 24.025,
+      "audio": "audio/cues/i_agree_c09.wav",
+      "audioSeconds": 3.163,
+      "padHead": 0.18,
+      "padTail": 0.18,
+      "cs": 21.042,
+      "ce": 23.845,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 1.053
+        },
+        {
+          "s": 1.424,
+          "e": 2.983
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "islandCount": 15,
+    "groups": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        12
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "syllables": [
+      6,
+      6,
+      5,
+      13,
+      5,
+      8,
+      10,
+      3,
+      8
+    ],
+    "marks": {
+      "badPhrase": [
+        "c02",
+        1
+      ],
+      "aqui": [
+        "c04",
+        2
+      ]
+    },
+    "note": "Islands in order: ¿Estás de acuerdo? | Evita: | I am agree. | Di: | I agree. | Agree | ya es verbo; | aquí no necesitas am. | I agree with you. | Estoy de acuerdo contigo. | ¿Cómo dirías: | no estoy de acuerdo? | Comenta. | Clases en línea: | manda GRUPO por privado. Island grouping is an assumption from pause structure + syllable counts; it could not be confirmed by speech recognition."
+  },
+  "duration": 27.6,
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/i_agree.cues.json",
+  "alignmentSource": {
+    "file": "manifest/i_agree.alignment.json",
+    "master": "audio/originals/elevenlabs_i_agree_take1_n3PA7EMRxhL2yWI1CsiK.mp3",
+    "masterSha256": "4eee4c8d2cee22c7acce5f09065004168692e38f054b831892ec6a7dbcba8dbd",
+    "method": "waveform silencedetect -38 dB / 120 ms + explicit script grouping; no ASR/forced aligner available (model hosts unreachable)",
+    "confidence": {
+      "phraseBoundaries": "good (pause structure + 15/15 islands + plausible syllable rates)",
+      "wordLevel": "not measured",
+      "content": "speech content/pronunciation NOT verified (no ASR; no listening)"
+    }
+  },
+  "warnings": []
+}

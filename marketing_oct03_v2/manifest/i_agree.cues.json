@@ -2,8 +2,8 @@
   "video": "i_agree",
   "title": "I AGREE",
   "fps": 30,
-  "lead": 0.35,
-  "endHold": 2.8,
+  "lead": 0.5,
+  "endHold": 3.5,
   "targetSeconds": [
     25,
     30
@@ -34,7 +34,7 @@
       "lang": "es+en",
       "text": "Di: I agree.",
       "est": 1.3,
-      "gap": 1.35,
+      "gap": 1.3,
       "file": "audio/cues/i_agree_c03.wav"
     },
     {
@@ -52,7 +52,7 @@
       "lang": "en",
       "text": "I agree with you.",
       "est": 1.5,
-      "gap": 1.1,
+      "gap": 1.2,
       "file": "audio/cues/i_agree_c05.wav"
     },
     {
@@ -61,7 +61,7 @@
       "lang": "es",
       "text": "Estoy de acuerdo contigo.",
       "est": 1.9,
-      "gap": 0.3,
+      "gap": 0.4,
       "file": "audio/cues/i_agree_c06.wav"
     },
     {
@@ -79,7 +79,7 @@
       "lang": "es",
       "text": "Comenta.",
       "est": 0.8,
-      "gap": 0.2,
+      "gap": 0.3,
       "file": "audio/cues/i_agree_c08.wav"
     },
     {
@@ -88,8 +88,68 @@
       "lang": "es",
       "text": "Clases en línea: manda GRUPO por privado.",
       "est": 3.8,
-      "gap": 0.6,
+      "gap": 0.7,
       "file": "audio/cues/i_agree_c09.wav"
     }
-  ]
+  ],
+  "alignment": {
+    "islandCount": 15,
+    "groups": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        12
+      ],
+      [
+        13,
+        14
+      ]
+    ],
+    "syllables": [
+      6,
+      6,
+      5,
+      13,
+      5,
+      8,
+      10,
+      3,
+      8
+    ],
+    "marks": {
+      "badPhrase": [
+        "c02",
+        1
+      ],
+      "aqui": [
+        "c04",
+        2
+      ]
+    },
+    "note": "Islands in order: ¿Estás de acuerdo? | Evita: | I am agree. | Di: | I agree. | Agree | ya es verbo; | aquí no necesitas am. | I agree with you. | Estoy de acuerdo contigo. | ¿Cómo dirías: | no estoy de acuerdo? | Comenta. | Clases en línea: | manda GRUPO por privado. Island grouping is an assumption from pause structure + syllable counts; it could not be confirmed by speech recognition."
+  }
 }

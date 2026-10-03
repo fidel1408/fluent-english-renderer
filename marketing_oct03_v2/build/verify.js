@@ -21,6 +21,6 @@ if (m.status === 'TIMED_FROM_SUPPLIED_AUDIO') {
   ck('narration_audible_in_every_cue_window (>=10 dB above SFX-only mix)', !weak.length, weak.length ? 'weak/silent: ' + weak.join(',') : 'all 9 windows');
   ck('narration_not_cut_off', m.cues.every(q => q.end <= m.duration - .3 && q.audioSeconds && Math.abs((q.end - q.start) - q.audioSeconds) < .01), 'last cue ends ' + m.cues[m.cues.length - 1].end);
 }
-R.label = m.status === 'TIMED_FROM_SUPPLIED_AUDIO' ? 'NARRATED (technical checks only; still needs human listen + frame review before publishing)' : 'PREVIEW – narration pending – NOT publish-ready';
+R.label = m.status === 'TIMED_FROM_SUPPLIED_AUDIO' ? 'NARRATED FINAL CANDIDATE – technical checks only; independent listening QA still required before publishing' : 'PREVIEW – narration pending – NOT publish-ready';
 R.pass = Object.values(R.checks).every(c => c.ok); fs.writeFileSync(path.join(L.ROOT, 'qa', path.basename(file, '.mp4') + '.verify.json'), JSON.stringify(R, null, 2));
 console.log(JSON.stringify(R, null, 1)); process.exit(R.pass ? 0 : 1);

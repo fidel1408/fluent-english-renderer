@@ -17,6 +17,8 @@ ElevenLabs only for short marketing/social videos via supplied files, never for 
   - `node build/render.js <video>`: deterministic frames -> H.264 High yuv420p, AAC 48 kHz, faststart. Output name is `*_PREVIEW_audio-pending.mp4` unless every cue file is present, then `*_narrated.mp4`.
   - `node build/captions.js <video> out/<prefix>`: SRT/VTT from the active manifest (planned timing until retimed).
   - `node build/verify.js out/<file>.mp4 <video>`: ffprobe, full decode, faststart, clipping, narration-above-SFX per cue.
+  - `node build/align_split.js <video> audio/originals/<master>.mp3`: for a continuous narration master, find speech islands, split only inside silences into cue WAVs, prove no speech was lost, write `manifest/<video>.alignment.json`.
+  - `node build/verify_sync.js out/<file>.mp4 <video>`: cue-vs-MP4 cross-correlation, burned-caption presence, loudness. Evidence only, not a listening test.
   - `node build/stills.js <video> <dir> t1 t2 ...`: PNG stills from the same renderer for visual review.
 - Logo: draw the original `assets/logo/fluent_english_logo_white.png` (crop transparent margin only). Never redraw or recolor it.
 - Palette: navy #101E34, cream #FFF7EB, mint #72D8C6, teal #0D625F, coral #F47558. Social UI reserve: right 140 px, bottom 420 px, top 200 px.

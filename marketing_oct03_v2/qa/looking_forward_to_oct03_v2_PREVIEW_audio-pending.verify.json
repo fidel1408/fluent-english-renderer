@@ -1,5 +1,5 @@
 {
-  "file": "i_agree_oct03_v2_PREVIEW_audio-pending.mp4",
+  "file": "looking_forward_to_oct03_v2_PREVIEW_audio-pending.mp4",
   "manifestStatus": "PLANNED_TIMING_NO_AUDIO",
   "checks": {
     "h264_high_yuv420p": {
@@ -16,11 +16,11 @@
     },
     "duration": {
       "ok": true,
-      "info": "28.400000"
+      "info": "30.000000"
     },
     "frames": {
       "ok": true,
-      "info": "852"
+      "info": "900"
     },
     "aac_audio": {
       "ok": true,
@@ -36,7 +36,7 @@
     },
     "no_clipping": {
       "ok": true,
-      "info": "peak -20.3 dBFS"
+      "info": "peak -20.4 dBFS"
     }
   },
   "label": "PREVIEW – narration pending – NOT publish-ready",

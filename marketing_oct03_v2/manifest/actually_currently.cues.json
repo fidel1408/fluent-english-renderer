@@ -1,0 +1,95 @@
+{
+  "video": "actually_currently",
+  "title": "ACTUALLY / CURRENTLY",
+  "fps": 30,
+  "lead": 0.35,
+  "endHold": 3.0,
+  "targetSeconds": [
+    28,
+    34
+  ],
+  "note": "Cue times are COMPUTED: start = previous end + gap (first cue: lead); end = start + natural duration. Planned durations (est) are estimates for a preview only. build/retime.js replaces est with the measured duration of the supplied narration files. Total duration = last cue end + endHold. Audio is never sped up, trimmed or cut.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "¿Actually significa actualmente?",
+      "est": 2.4,
+      "gap": 0,
+      "file": "audio/cues/actually_currently_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Actually suele significar en realidad o de hecho.",
+      "est": 3.4,
+      "gap": 0.9,
+      "file": "audio/cues/actually_currently_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Currently significa actualmente.",
+      "est": 2.2,
+      "gap": 0.5,
+      "file": "audio/cues/actually_currently_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "en",
+      "text": "Do you live in London?",
+      "est": 1.6,
+      "gap": 1.2,
+      "file": "audio/cues/actually_currently_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "en",
+      "text": "Actually, I live in Monterrey.",
+      "est": 2.0,
+      "gap": 0.6,
+      "file": "audio/cues/actually_currently_c05.wav"
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Para decir actualmente: I'm currently studying English.",
+      "est": 4.2,
+      "gap": 1.5,
+      "file": "audio/cues/actually_currently_c06.wav"
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Ahora tú.",
+      "est": 0.9,
+      "gap": 0.9,
+      "file": "audio/cues/actually_currently_c07.wav"
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es",
+      "text": "¿Cómo dirías: actualmente trabajo desde casa?",
+      "est": 3.4,
+      "gap": 0.3,
+      "file": "audio/cues/actually_currently_c08.wav"
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Escribe tu versión.",
+      "est": 1.4,
+      "gap": 0.3,
+      "file": "audio/cues/actually_currently_c09.wav"
+    }
+  ]
+}

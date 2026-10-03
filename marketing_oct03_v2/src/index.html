@@ -7,18 +7,19 @@
 body{margin:0;background:#000}canvas{display:block;width:540px;height:960px}
 </style></head><body><canvas id="c" width="1080" height="1920"></canvas>
 <script src="engine.js"></script>
+<script src="kit.js"></script>
 <script>
 // usage: index.html?video=i_agree   (preview: open in a browser and use window.renderFrame(t) or press play via ?play=1)
 const q = new URLSearchParams(location.search), name = q.get('video') || 'i_agree';
 const c = document.getElementById('c').getContext('2d');
-window.CUES = [];
-window.setCues = x => { window.CUES = x; };
+window.CUES = []; window.TL = {};
+window.setCues = x => { window.CUES = x; window.K = window.TL[name].plan(x).K; };
 window.ready = (async () => {
   await Promise.all([500, 600, 700].map(w => document.fonts.load(`${w} 60px Fredoka`, 'Aá¿«ñ')));
   window.LOGO = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = '../assets/logo/fluent_english_logo_white.png'; });
-  await new Promise((res, rej) => { const s = document.createElement('script'); s.src = `videos/${name}.js`; s.onload = res; s.onerror = rej; document.body.appendChild(s); });
-  window.renderFrame = t => { c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, 1080, 1920); window.VIDEO.draw(c, t, window.CUES); };
-  window.DURATION = window.VIDEO.duration; return true;
+  for (const f of [`timelines/${name}.js`, `videos/${name}.js`]) await new Promise((res, rej) => { const s = document.createElement('script'); s.src = f; s.onload = res; s.onerror = rej; document.body.appendChild(s); });
+  window.renderFrame = t => { c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, 1080, 1920); window.VIDEO.draw(c, t, window.CUES, window.K); };
+  return true;
 })();
-if (q.get('play')) window.ready.then(() => { const t0 = performance.now(); (function f() { const t = ((performance.now() - t0) / 1000) % (window.DURATION + 1); renderFrame(Math.min(t, window.DURATION)); requestAnimationFrame(f); })(); });
+if (q.get('play')) window.ready.then(() => { const t0 = performance.now(); (function f() { renderFrame(((performance.now() - t0) / 1000) % 40); requestAnimationFrame(f); })(); });
 </script></body></html>

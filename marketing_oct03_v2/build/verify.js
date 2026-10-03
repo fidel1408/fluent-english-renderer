@@ -8,7 +8,7 @@ ck('h264_high_yuv420p', v.codec_name === 'h264' && v.pix_fmt === 'yuv420p', `${v
 ck('1080x1920', v.width === 1080 && v.height === 1920, `${v.width}x${v.height}`);
 ck('30fps', v.r_frame_rate === '30/1', v.r_frame_rate);
 ck('duration', Math.abs(parseFloat(pj.format.duration) - m.duration) < .05, pj.format.duration);
-ck('frames', +v.nb_frames === m.duration * m.fps, v.nb_frames);
+ck('frames', +v.nb_frames === Math.round(m.duration * m.fps), v.nb_frames);
 ck('aac_audio', a && a.codec_name === 'aac', a && `${a.codec_name} ${a.sample_rate} Hz ${a.channels}ch`);
 const head = fs.readFileSync(file).subarray(0, 65536); ck('faststart', head.indexOf('moov') > 0 && head.indexOf('moov') < (head.indexOf('mdat') < 0 ? 1e9 : head.indexOf('mdat')), `moov@${head.indexOf('moov')}`);
 const dec = cp.spawnSync('ffmpeg', ['-v', 'error', '-i', file, '-f', 'null', '-']); ck('full_decode_no_errors', dec.status === 0 && dec.stderr.length === 0, dec.stderr.toString().slice(0, 200) || 'clean');

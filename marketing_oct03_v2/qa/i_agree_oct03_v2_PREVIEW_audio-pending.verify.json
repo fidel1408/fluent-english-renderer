@@ -1,0 +1,44 @@
+{
+  "file": "i_agree_oct03_v2_PREVIEW_audio-pending.mp4",
+  "manifestStatus": "PLANNED_TIMING_NO_AUDIO",
+  "checks": {
+    "h264_high_yuv420p": {
+      "ok": true,
+      "info": "h264/High/yuv420p"
+    },
+    "1080x1920": {
+      "ok": true,
+      "info": "1080x1920"
+    },
+    "30fps": {
+      "ok": true,
+      "info": "30/1"
+    },
+    "duration": {
+      "ok": true,
+      "info": "20.000000"
+    },
+    "frames": {
+      "ok": true,
+      "info": "600"
+    },
+    "aac_audio": {
+      "ok": true,
+      "info": "aac 48000 Hz 2ch"
+    },
+    "faststart": {
+      "ok": true,
+      "info": "moov@36"
+    },
+    "full_decode_no_errors": {
+      "ok": true,
+      "info": "clean"
+    },
+    "no_clipping": {
+      "ok": true,
+      "info": "peak -20.3 dBFS"
+    }
+  },
+  "label": "PREVIEW – narration pending – NOT publish-ready",
+  "pass": true
+}

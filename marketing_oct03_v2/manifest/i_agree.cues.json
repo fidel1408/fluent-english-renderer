@@ -1,0 +1,213 @@
+{
+  "video": "i_agree",
+  "duration": 20,
+  "fps": 30,
+  "status": "PLANNED_TIMING_NO_AUDIO",
+  "note": "Start/end are planned windows inside the scene windows of the brief. Once real narration files exist in audio/cues/, run build/retime.js: it measures each file and rewrites start/end from the real durations (never speeding audio). Captions and character mouth movement follow these times.",
+  "scenes": {
+    "hook": [
+      0,
+      2.4
+    ],
+    "incorrect": [
+      2.4,
+      5
+    ],
+    "correct": [
+      5,
+      9.4
+    ],
+    "example": [
+      9.4,
+      13.4
+    ],
+    "practice": [
+      13.4,
+      20
+    ]
+  },
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es",
+      "text": "¿Estás de acuerdo?",
+      "start": 0.35,
+      "end": 1.95,
+      "file": "audio/cues/i_agree_c01.wav",
+      "scene": "hook"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Evita: I am agree.",
+      "start": 2.65,
+      "end": 4.35,
+      "file": "audio/cues/i_agree_c02.wav",
+      "scene": "incorrect"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Di: I agree.",
+      "start": 5.25,
+      "end": 6.45,
+      "file": "audio/cues/i_agree_c03.wav",
+      "scene": "correct"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Agree ya es verbo; aquí no necesitas am.",
+      "start": 6.65,
+      "end": 9.15,
+      "file": "audio/cues/i_agree_c04.wav",
+      "scene": "correct"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "en",
+      "text": "I agree with you.",
+      "start": 9.65,
+      "end": 11.15,
+      "file": "audio/cues/i_agree_c05.wav",
+      "scene": "example"
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Estoy de acuerdo contigo.",
+      "start": 11.35,
+      "end": 13.15,
+      "file": "audio/cues/i_agree_c06.wav",
+      "scene": "example"
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "¿Cómo dirías: no estoy de acuerdo?",
+      "start": 13.7,
+      "end": 16.0,
+      "file": "audio/cues/i_agree_c07.wav",
+      "scene": "practice"
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Comenta.",
+      "start": 16.2,
+      "end": 16.85,
+      "file": "audio/cues/i_agree_c08.wav",
+      "scene": "practice"
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es",
+      "text": "Clases en línea: manda GRUPO por privado.",
+      "start": 17.05,
+      "end": 19.55,
+      "file": "audio/cues/i_agree_c09.wav",
+      "scene": "practice"
+    }
+  ],
+  "sfx": [
+    {
+      "type": "pop",
+      "at": 0.12
+    },
+    {
+      "type": "swish",
+      "at": 2.12
+    },
+    {
+      "type": "swish",
+      "at": 2.42
+    },
+    {
+      "type": "tick",
+      "at": 2.6
+    },
+    {
+      "type": "scratch",
+      "at": 3.6
+    },
+    {
+      "type": "thock",
+      "at": 4.15
+    },
+    {
+      "type": "sparkle",
+      "at": 4.2
+    },
+    {
+      "type": "ding",
+      "at": 4.78
+    },
+    {
+      "type": "tick",
+      "at": "c04.start-0.1"
+    },
+    {
+      "type": "tick",
+      "at": "c04.start+1.25"
+    },
+    {
+      "type": "swish",
+      "at": 9.1
+    },
+    {
+      "type": "swish",
+      "at": "c05.start-0.15"
+    },
+    {
+      "type": "tick",
+      "at": "c05.start+0.45"
+    },
+    {
+      "type": "tick",
+      "at": "c06.start-0.15"
+    },
+    {
+      "type": "swish",
+      "at": 13.1
+    },
+    {
+      "type": "pop",
+      "at": 13.42
+    },
+    {
+      "type": "swish",
+      "at": 16.1
+    },
+    {
+      "type": "tick",
+      "at": 16.55
+    },
+    {
+      "type": "pop",
+      "at": 17.25
+    }
+  ],
+  "audio_contract": {
+    "folder": "audio/cues/",
+    "accepted_extensions": [
+      ".wav",
+      ".mp3"
+    ],
+    "file_name_pattern": "i_agree_cNN.wav (or .mp3), NN = 01..09",
+    "format": "any sample rate; mono or stereo; one file per cue; speech only, no music, no leading silence longer than 0.1 s and no trailing silence longer than 0.3 s",
+    "rules": [
+      "Never time-stretched or sped up by the pipeline",
+      "Cue text must be spoken exactly as written in 'text' (Spanish punctuation is for captions only)",
+      "If a cue is longer than its window the retime step fails and reports it instead of cutting audio"
+    ]
+  }
+}

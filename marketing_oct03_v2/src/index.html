@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Fluent English render stage</title>
+<style>
+@font-face{font-family:'Fredoka';font-weight:500;src:url(../assets/fonts/fredoka-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Fredoka';font-weight:600;src:url(../assets/fonts/fredoka-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Fredoka';font-weight:700;src:url(../assets/fonts/fredoka-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+body{margin:0;background:#000}canvas{display:block;width:540px;height:960px}
+</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="engine.js"></script>
+<script>
+// usage: index.html?video=i_agree   (preview: open in a browser and use window.renderFrame(t) or press play via ?play=1)
+const q = new URLSearchParams(location.search), name = q.get('video') || 'i_agree';
+const c = document.getElementById('c').getContext('2d');
+window.CUES = [];
+window.setCues = x => { window.CUES = x; };
+window.ready = (async () => {
+  await Promise.all([500, 600, 700].map(w => document.fonts.load(`${w} 60px Fredoka`, 'Aá¿«ñ')));
+  window.LOGO = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = '../assets/logo/fluent_english_logo_white.png'; });
+  await new Promise((res, rej) => { const s = document.createElement('script'); s.src = `videos/${name}.js`; s.onload = res; s.onerror = rej; document.body.appendChild(s); });
+  window.renderFrame = t => { c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, 1080, 1920); window.VIDEO.draw(c, t, window.CUES); };
+  window.DURATION = window.VIDEO.duration; return true;
+})();
+if (q.get('play')) window.ready.then(() => { const t0 = performance.now(); (function f() { const t = ((performance.now() - t0) / 1000) % (window.DURATION + 1); renderFrame(Math.min(t, window.DURATION)); requestAnimationFrame(f); })(); });
+</script></body></html>

@@ -3,7 +3,7 @@ const KIT = (() => {
   const { CX, C, E, seg, text, tokens, pill, card, tail, avatar, caption, measure, rr, FONT } = FE;
   const CARD_X = 72, CARD_W = 868;
   const fit = (c, s, maxW, font, weight = 700) => Math.min(font, maxW / measure(c, s, 100, weight) * 100);
-  function logoSmall(c, a) { if (a <= 0 || !window.LOGO) return; const w = 330, h = w * 1181 / 2640; c.save(); c.globalAlpha *= a; c.drawImage(window.LOGO, 405, 348, 2640, 1181, 72, 205, w, h); c.restore(); }
+  function logoSmall(c, a) { if (a <= 0 || !window.LOGO) return; const w = 250, h = w * 1181 / 2640; c.save(); c.globalAlpha *= a; c.drawImage(window.LOGO, 405, 348, 2640, 1181, 72, 205, w, h); c.restore(); }
   function logoBig(c, w, cy, a) { if (a <= 0 || !window.LOGO) return; const h = w * 1181 / 2640; c.save(); c.globalAlpha *= a; c.drawImage(window.LOGO, 405, 348, 2640, 1181, CX - w / 2, cy, w, h); c.restore(); }
   // woman left / man right, peeking over the ledge. mood/talk per frame. y,sc let dense scenes use smaller heads.
   function pair(c, t, { enter = 1, out = 0, moodW = 'listen', moodM = 'listen', talkW = 0, talkM = 0, y = 1205, sc = 1.4 } = {}) {
@@ -40,5 +40,12 @@ const KIT = (() => {
     return 0;
   }
   function clipRR(c, x, y, w, h, r) { c.beginPath(); c.roundRect(x, y, w, h, r); c.clip(); }
-  return { speaking, clipRR, CARD_X, CARD_W, fit, logoSmall, logoBig, pair, box, commentBox, cta };
+  // Scene content is scaled/shifted as one group (x about CX, y from the original 440 line) to free room for the host's head/shoulders/torso below it.
+  const CT = { Y0: 362, K: 0.86, REF: 440 };
+  const content = (c, fn) => { c.save(); c.translate(FE.CX, CT.Y0); c.scale(CT.K, CT.K); c.translate(-FE.CX, -CT.REF); fn(); c.restore(); };
+  const toScreen = (x, y) => ({ x: FE.CX + (x - FE.CX) * CT.K, y: CT.Y0 + (y - CT.REF) * CT.K });
+  const toContent = (x, y) => ({ x: FE.CX + (x - FE.CX) / CT.K, y: CT.REF + (y - CT.Y0) / CT.K });
+  const hostFor = (c, t, cues, cfg) => { const starts = []; cues.forEach(q => (q.islands || []).forEach(i => starts.push(q.start + i.s))); HOST.draw(c, t, Object.assign({ speaking: speaking(t, cues), starts }, cfg)); };
+  const headTarget = () => toContent(FE.CX, HOST.headTopY() - 16);   // where every speech-bubble tail points: the host's head
+  return { content, toScreen, toContent, CT, hostFor, headTarget, speaking, clipRR, CARD_X, CARD_W, fit, logoSmall, logoBig, pair, box, commentBox, cta };
 })();

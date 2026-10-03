@@ -16,4 +16,7 @@ Do not overwrite existing videos or published artifacts; new work goes in a new,
 - Be truthful about status. A file without real narration is a **PREVIEW (audio pending)**, never final or publish-ready.
   List every check that was not done (for example a real listening pass).
 
+- **One narrator voice = one clearly adult on-screen presenter** (the supplied Luis Guillermo voice -> one adult male host with visible neck, shoulders and torso). No second character in single-narrator tips; the host models any quoted dialogue lines. Mouth moves only inside measured speech islands. A passing mouth-routing test does not prove the design reads correctly: check the actual frames.
+- Cuts of supplied narration use authoritative sample partitions (no fades, no speed change, no trimming); only silence may be added or removed to fit duration. ASR is never used as an audio cut point or as proof of pronunciation.
+
 Details, commands and the QA checklist: `.claude/skills/video-production/SKILL.md`.

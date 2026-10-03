@@ -10,8 +10,9 @@ const { chromium } = require(process.env.PLAYWRIGHT_PATH || '/opt/node-tools/nod
   const name = process.argv[2] || 'i_agree', m = L.loadManifest(name), { K } = L.plan(name, m.cues), S = await L.serve(), b = await chromium.launch(), p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   await p.goto(S.url + '/src/index.html?video=' + name); await p.evaluate(() => window.ready); await p.evaluate(c => { window.__FLAT = true; window.setCues(c); }, m.cues);
   // pixel counting happens inside the page (only a number leaves the browser)
+  const KK = 0.86, Y0 = 362, REF = 440, CXc = 506, TX = x => Math.round(CXc + (x - CXc) * KK), TY = y => Math.round(Y0 + (y - REF) * KK);   // content group transform used by the scenes
   const cnt = (t, x0, y0, x1, y1, kind) => p.evaluate(([t, x0, y0, x1, y1, kind]) => { window.renderFrame(t); const d = document.getElementById('c').getContext('2d').getImageData(x0, y0, x1 - x0, y1 - y0).data; let n = 0;
-    for (let i = 0; i < d.length; i += 4) { const r = d[i], g = d[i + 1], b = d[i + 2]; if (kind === 'coral' ? (Math.abs(r - 244) < 14 && Math.abs(g - 117) < 14 && Math.abs(b - 88) < 14) : (r < 55 && g < 60 && b < 80)) n++; } return n; }, [t, x0, y0, x1, y1, kind]);
+    for (let i = 0; i < d.length; i += 4) { const r = d[i], g = d[i + 1], b = d[i + 2]; if (kind === 'coral' ? (Math.abs(r - 244) < 14 && Math.abs(g - 117) < 14 && Math.abs(b - 88) < 14) : (r < 55 && g < 60 && b < 80)) n++; } return n; }, [t, TX(x0), TY(y0), TX(x1), TY(y1), kind]);
   const R = { video: name, T1: null, T2: null, T3: null };
   // T1
   let firstLabel = null, firstText = null; for (let k = Math.round((K.badIn - .05) * 30); k < Math.round((K.badIn + .8) * 30); k++) { const t = k / 30, lab = await cnt(t, 250, 400, 780, 500, 'coral'), tx = await cnt(t, 120, 560, 900, 700, 'navy');

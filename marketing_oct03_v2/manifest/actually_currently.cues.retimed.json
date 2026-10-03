@@ -1,0 +1,353 @@
+{
+  "video": "actually_currently",
+  "title": "ACTUALLY / CURRENTLY",
+  "fps": 30,
+  "lead": 0.35,
+  "endHold": 3.6,
+  "targetSeconds": [
+    28,
+    34
+  ],
+  "note": "Cue times are COMPUTED from the supplied narration partitions + added silence (gap). Only silence is ever added or removed; speech is never sped up, trimmed or cut.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "¿Actually significa actualmente?",
+      "est": 2,
+      "gap": 0,
+      "file": "audio/cues/actually_currently_c01.wav",
+      "start": 0.35,
+      "end": 2.908,
+      "audio": "audio/cues/actually_currently_c01.wav",
+      "audioSeconds": 2.558,
+      "padHead": 0.114,
+      "padTail": 0.311,
+      "cs": 0.464,
+      "ce": 2.597,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0,
+          "e": 2.247
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Actually suele significar en realidad o de hecho.",
+      "est": 2,
+      "gap": 0.3,
+      "file": "audio/cues/actually_currently_c02.wav",
+      "start": 3.208,
+      "end": 7.263,
+      "audio": "audio/cues/actually_currently_c02.wav",
+      "audioSeconds": 4.055,
+      "padHead": 0.311,
+      "padTail": 0.366,
+      "cs": 3.519,
+      "ce": 6.897,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.311,
+          "e": 1.844
+        },
+        {
+          "s": 2,
+          "e": 2.753
+        },
+        {
+          "s": 2.91,
+          "e": 3.689
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Currently significa actualmente.",
+      "est": 2,
+      "gap": 0,
+      "file": "audio/cues/actually_currently_c03.wav",
+      "start": 7.263,
+      "end": 10.362,
+      "audio": "audio/cues/actually_currently_c03.wav",
+      "audioSeconds": 3.099,
+      "padHead": 0.366,
+      "padTail": 0.405,
+      "cs": 7.629,
+      "ce": 9.957,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.366,
+          "e": 1.726
+        },
+        {
+          "s": 1.899,
+          "e": 2.694
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Do you live in London?",
+      "est": 2,
+      "gap": 0.5,
+      "file": "audio/cues/actually_currently_c04.wav",
+      "start": 10.862,
+      "end": 12.492,
+      "audio": "audio/cues/actually_currently_c04.wav",
+      "audioSeconds": 1.63,
+      "padHead": 0.405,
+      "padTail": 0.261,
+      "cs": 11.267,
+      "ce": 12.231,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.405,
+          "e": 1.369
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Actually, I live in Monterrey.",
+      "est": 2,
+      "gap": 0.1,
+      "file": "audio/cues/actually_currently_c05.wav",
+      "start": 12.592,
+      "end": 14.952,
+      "audio": "audio/cues/actually_currently_c05.wav",
+      "audioSeconds": 2.36,
+      "padHead": 0.261,
+      "padTail": 0.487,
+      "cs": 12.853,
+      "ce": 14.465,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.261,
+          "e": 1.873
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Para decir actualmente: I'm currently studying English.",
+      "est": 2,
+      "gap": 0.9,
+      "file": "audio/cues/actually_currently_c06.wav",
+      "start": 15.852,
+      "end": 20.628,
+      "audio": "audio/cues/actually_currently_c06.wav",
+      "audioSeconds": 4.776,
+      "padHead": 0.487,
+      "padTail": 0.398,
+      "cs": 16.339,
+      "ce": 20.23,
+      "marks": {
+        "englishStart": 2.463
+      },
+      "islands": [
+        {
+          "s": 0.487,
+          "e": 1.926
+        },
+        {
+          "s": 2.463,
+          "e": 4.378
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Ahora tú.",
+      "est": 2,
+      "gap": 0.3,
+      "file": "audio/cues/actually_currently_c07.wav",
+      "start": 20.928,
+      "end": 22.227,
+      "audio": "audio/cues/actually_currently_c07.wav",
+      "audioSeconds": 1.299,
+      "padHead": 0.398,
+      "padTail": 0.424,
+      "cs": 21.326,
+      "ce": 21.803,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.398,
+          "e": 0.875
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "¿Cómo dirías: actualmente trabajo desde casa?",
+      "est": 2,
+      "gap": 0,
+      "file": "audio/cues/actually_currently_c08.wav",
+      "start": 22.227,
+      "end": 25.919,
+      "audio": "audio/cues/actually_currently_c08.wav",
+      "audioSeconds": 3.692,
+      "padHead": 0.424,
+      "padTail": 0.337,
+      "cs": 22.651,
+      "ce": 25.582,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.424,
+          "e": 1.162
+        },
+        {
+          "s": 1.632,
+          "e": 3.355
+        }
+      ]
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Escribe tu versión.",
+      "est": 2,
+      "gap": 0.1,
+      "file": "audio/cues/actually_currently_c09.wav",
+      "start": 26.019,
+      "end": 27.472,
+      "audio": "audio/cues/actually_currently_c09.wav",
+      "audioSeconds": 1.453,
+      "padHead": 0.337,
+      "padTail": 0.016,
+      "cs": 26.356,
+      "ce": 27.456,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.337,
+          "e": 1.243
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "totalSamples": 1099008,
+    "partitions": [
+      [
+        0,
+        112816
+      ],
+      [
+        112816,
+        291651
+      ],
+      [
+        291651,
+        428315
+      ],
+      [
+        428315,
+        500178
+      ],
+      [
+        500178,
+        604234
+      ],
+      [
+        604234,
+        814844
+      ],
+      [
+        814844,
+        872138
+      ],
+      [
+        872138,
+        1034950
+      ],
+      [
+        1034950,
+        1099008
+      ]
+    ],
+    "handoffActivity": [
+      [
+        0.113855,
+        2.247098
+      ],
+      [
+        2.869252,
+        6.247551
+      ],
+      [
+        6.979274,
+        9.307279
+      ],
+      [
+        10.11746,
+        11.081156
+      ],
+      [
+        11.602653,
+        13.214558
+      ],
+      [
+        14.188322,
+        18.079138
+      ],
+      [
+        18.875238,
+        19.352132
+      ],
+      [
+        20.200612,
+        23.131701
+      ],
+      [
+        23.804785,
+        24.905034
+      ]
+    ],
+    "marks": {
+      "englishStart": [
+        "c06",
+        1
+      ]
+    }
+  },
+  "duration": 31.1,
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/actually_currently.cues.json",
+  "alignmentSource": {
+    "file": "manifest/actually_currently.alignment.json",
+    "master": "audio/originals/elevenlabs_actually_currently_z75a9iX0ZpKcMeXyR5za.mp3",
+    "masterSha256": "456feb235cbc8d62d99ae544a2c6302fdd66b81b2615fcafe57e824103a42d98",
+    "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+    "confidence": {
+      "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured",
+      "content": "pronunciation/content NOT verified (no listening)"
+    }
+  },
+  "warnings": []
+}

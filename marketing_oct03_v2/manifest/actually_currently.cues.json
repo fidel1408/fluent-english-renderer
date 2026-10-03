@@ -3,19 +3,19 @@
   "title": "ACTUALLY / CURRENTLY",
   "fps": 30,
   "lead": 0.35,
-  "endHold": 3.0,
+  "endHold": 3.6,
   "targetSeconds": [
     28,
     34
   ],
-  "note": "Cue times are COMPUTED: start = previous end + gap (first cue: lead); end = start + natural duration. Planned durations (est) are estimates for a preview only. build/retime.js replaces est with the measured duration of the supplied narration files. Total duration = last cue end + endHold. Audio is never sped up, trimmed or cut.",
+  "note": "Cue times are COMPUTED from the supplied narration partitions + added silence (gap). Only silence is ever added or removed; speech is never sped up, trimmed or cut.",
   "cues": [
     {
       "id": "c01",
       "who": "narrator",
       "lang": "es+en",
       "text": "¿Actually significa actualmente?",
-      "est": 2.4,
+      "est": 2.0,
       "gap": 0,
       "file": "audio/cues/actually_currently_c01.wav"
     },
@@ -24,8 +24,8 @@
       "who": "narrator",
       "lang": "es+en",
       "text": "Actually suele significar en realidad o de hecho.",
-      "est": 3.4,
-      "gap": 0.9,
+      "est": 2.0,
+      "gap": 0.3,
       "file": "audio/cues/actually_currently_c02.wav"
     },
     {
@@ -33,26 +33,26 @@
       "who": "narrator",
       "lang": "es+en",
       "text": "Currently significa actualmente.",
-      "est": 2.2,
-      "gap": 0.5,
+      "est": 2.0,
+      "gap": 0,
       "file": "audio/cues/actually_currently_c03.wav"
     },
     {
       "id": "c04",
       "who": "narrator",
-      "lang": "en",
+      "lang": "es+en",
       "text": "Do you live in London?",
-      "est": 1.6,
-      "gap": 1.2,
+      "est": 2.0,
+      "gap": 0.5,
       "file": "audio/cues/actually_currently_c04.wav"
     },
     {
       "id": "c05",
       "who": "narrator",
-      "lang": "en",
+      "lang": "es+en",
       "text": "Actually, I live in Monterrey.",
       "est": 2.0,
-      "gap": 0.6,
+      "gap": 0.1,
       "file": "audio/cues/actually_currently_c05.wav"
     },
     {
@@ -60,36 +60,121 @@
       "who": "narrator",
       "lang": "es+en",
       "text": "Para decir actualmente: I'm currently studying English.",
-      "est": 4.2,
-      "gap": 1.5,
+      "est": 2.0,
+      "gap": 0.9,
       "file": "audio/cues/actually_currently_c06.wav"
     },
     {
       "id": "c07",
       "who": "narrator",
-      "lang": "es",
+      "lang": "es+en",
       "text": "Ahora tú.",
-      "est": 0.9,
-      "gap": 0.9,
+      "est": 2.0,
+      "gap": 0.3,
       "file": "audio/cues/actually_currently_c07.wav"
     },
     {
       "id": "c08",
       "who": "narrator",
-      "lang": "es",
+      "lang": "es+en",
       "text": "¿Cómo dirías: actualmente trabajo desde casa?",
-      "est": 3.4,
-      "gap": 0.3,
+      "est": 2.0,
+      "gap": 0,
       "file": "audio/cues/actually_currently_c08.wav"
     },
     {
       "id": "c09",
       "who": "narrator",
-      "lang": "es",
+      "lang": "es+en",
       "text": "Escribe tu versión.",
-      "est": 1.4,
-      "gap": 0.3,
+      "est": 2.0,
+      "gap": 0.1,
       "file": "audio/cues/actually_currently_c09.wav"
     }
-  ]
+  ],
+  "alignment": {
+    "totalSamples": 1099008,
+    "partitions": [
+      [
+        0,
+        112816
+      ],
+      [
+        112816,
+        291651
+      ],
+      [
+        291651,
+        428315
+      ],
+      [
+        428315,
+        500178
+      ],
+      [
+        500178,
+        604234
+      ],
+      [
+        604234,
+        814844
+      ],
+      [
+        814844,
+        872138
+      ],
+      [
+        872138,
+        1034950
+      ],
+      [
+        1034950,
+        1099008
+      ]
+    ],
+    "handoffActivity": [
+      [
+        0.113855,
+        2.247098
+      ],
+      [
+        2.869252,
+        6.247551
+      ],
+      [
+        6.979274,
+        9.307279
+      ],
+      [
+        10.11746,
+        11.081156
+      ],
+      [
+        11.602653,
+        13.214558
+      ],
+      [
+        14.188322,
+        18.079138
+      ],
+      [
+        18.875238,
+        19.352132
+      ],
+      [
+        20.200612,
+        23.131701
+      ],
+      [
+        23.804785,
+        24.905034
+      ]
+    ],
+    "marks": {
+      "englishStart": [
+        "c06",
+        1
+      ]
+    }
+  }
 }

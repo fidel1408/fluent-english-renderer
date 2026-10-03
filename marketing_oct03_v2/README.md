@@ -5,13 +5,17 @@ Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via sup
 
 ## Status (truthful)
 
-| Video | Length | File | Status |
+| Tip | Length | File | Status |
 |---|---|---|---|
-| I AGREE (revision 2) | 27.6 s | `out/i_agree_oct03_v2_REV2_narrated_QA-pending.mp4` | **Narrated candidate, QA-pending. NOT final, NOT publish-ready: auditory approval has not happened.** |
-| I AGREE (previous candidate) | 27.6 s | `out/i_agree_oct03_v2_FINAL-CANDIDATE_narrated_QA-pending.mp4` | Preserved unchanged; superseded by REV2 (visual findings below) |
-| ACTUALLY / CURRENTLY | 31.1 s (estimate) | `out/actually_currently_oct03_v2_PREVIEW_audio-pending.mp4` | PREVIEW, narration pending |
-| LOOKING FORWARD TO | 30.0 s (estimate) | `out/looking_forward_to_oct03_v2_PREVIEW_audio-pending.mp4` | PREVIEW, narration pending |
-| (older) I AGREE | 28.4 s (estimate) | `out/i_agree_oct03_v2_PREVIEW_audio-pending.mp4` | Superseded silent-narration preview, kept as is |
+| I AGREE (REV3, single host) | 27.6 s | `out/i_agree_oct03_v2_REV3_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
+| ACTUALLY / CURRENTLY (REV3, single host) | 31.1 s | `out/actually_currently_oct03_v2_REV3_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
+| LOOKING FORWARD TO (REV3, single host) | 28.3 s | `out/looking_forward_to_oct03_v2_REV3_single-host_narrated_QA-pending.mp4` | **Narrated, QA-pending. NOT final, NOT publish-ready. Nobody has listened.** |
+| Earlier versions | | `out/*REV2*`, `out/*FINAL-CANDIDATE*`, `out/*PREVIEW_audio-pending*` | Preserved unchanged (older, two-avatar design or silent) |
+
+Full evidence, source-to-final edit maps and the list of checks NOT done: `qa/REV3_verification_report.md`.
+
+### REV3: one adult male host, three tips
+Replaces the two small avatars with ONE clearly adult male host (`src/host.js`) for the supplied Luis voice; mouth only inside measured speech islands; he models quoted dialogue lines; scene content is drawn through a scaled group (`KIT.content`) so his head, shoulders and torso stay visible above the caption bar. New narrations for Actually/Currently and Looking forward to are cut at the handoff's explicit sample partitions (`build/partition_split.js`, bit-exact coverage proof, no fades/stretch). Burned captions now use the same text as SRT/VTT (`caption || text`).
 
 ### REV2 changes (one bundled revision; audio cuts, narration, timeline, SFX levels, teaching content and CTA unchanged)
 1. Casting: the right male character is the single educator for all speech; the left woman is a silent listener (closed mouth, raised brows). The opening bubble tail points to the man. His mouth is driven only by the measured speech islands (not padding or whole cue windows).

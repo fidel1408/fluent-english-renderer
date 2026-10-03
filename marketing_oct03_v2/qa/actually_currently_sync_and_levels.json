@@ -1,0 +1,153 @@
+{
+  "file": "actually_currently_oct03_v2_REV3_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Actually significa actualmente?",
+      "correlation": 0.991,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "Actually suele significar en realidad o de hecho.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "Currently significa actualmente.",
+      "correlation": 0.986,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c04",
+      "text": "Do you live in London?",
+      "correlation": 0.995,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c05",
+      "text": "Actually, I live in Monterrey.",
+      "correlation": 0.991,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "Para decir actualmente: I'm currently studying English.",
+      "correlation": 0.998,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "Ahora tú.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo dirías: actualmente trabajo desde casa?",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c09",
+      "text": "Escribe tu versión.",
+      "correlation": 0.994,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.53,
+      "expect": "ON c01",
+      "creamPixels": 16575
+    },
+    {
+      "at": 5.21,
+      "expect": "ON c02",
+      "creamPixels": 17437
+    },
+    {
+      "at": 8.79,
+      "expect": "ON c03",
+      "creamPixels": 16841
+    },
+    {
+      "at": 11.75,
+      "expect": "ON c04",
+      "creamPixels": 17942
+    },
+    {
+      "at": 13.66,
+      "expect": "ON c05",
+      "creamPixels": 16896
+    },
+    {
+      "at": 18.28,
+      "expect": "ON c06",
+      "creamPixels": 17035
+    },
+    {
+      "at": 21.56,
+      "expect": "ON c07",
+      "creamPixels": 16981
+    },
+    {
+      "at": 24.12,
+      "expect": "ON c08",
+      "creamPixels": 16993
+    },
+    {
+      "at": 26.91,
+      "expect": "ON c09",
+      "creamPixels": 17510
+    },
+    {
+      "at": 3.06,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 7.26,
+      "expect": "OFF (gap c02-c03)",
+      "creamPixels": 0
+    },
+    {
+      "at": 10.61,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 15.4,
+      "expect": "OFF (gap c05-c06)",
+      "creamPixels": 0
+    },
+    {
+      "at": 20.78,
+      "expect": "OFF (gap c06-c07)",
+      "creamPixels": 0
+    },
+    {
+      "at": 22.23,
+      "expect": "OFF (gap c07-c08)",
+      "creamPixels": 0
+    },
+    {
+      "at": 25.97,
+      "expect": "OFF (gap c08-c09)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -16.5,
+    "loudnessRangeLU": 5.1,
+    "truePeakdBTP": -3.9
+  },
+  "finalHold": {
+    "from": 27.71,
+    "to": 31.1,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.39
+  },
+  "pass": true
+}

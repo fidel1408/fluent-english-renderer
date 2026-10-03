@@ -1,0 +1,372 @@
+{
+  "video": "actually_currently",
+  "master": "audio/originals/elevenlabs_actually_currently_z75a9iX0ZpKcMeXyR5za.mp3",
+  "masterSha256": "456feb235cbc8d62d99ae544a2c6302fdd66b81b2615fcafe57e824103a42d98",
+  "totalSamples": 1099008,
+  "sampleRate": 44100,
+  "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Actually significa actualmente?",
+      "file": "audio/cues/actually_currently_c01.wav",
+      "sourceSampleRange": [
+        0,
+        112816
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.558186,
+      "seconds": 2.558186,
+      "padHead": 0.114,
+      "padTail": 0.311,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 2.247
+        }
+      ],
+      "activityInCue": [
+        0,
+        2.247
+      ],
+      "handoffActivitySource": [
+        0.113855,
+        2.247098
+      ],
+      "activityVsHandoffMs": [
+        -114,
+        0
+      ],
+      "edgeSampleAbs": [
+        0,
+        20
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Actually suele significar en realidad o de hecho.",
+      "file": "audio/cues/actually_currently_c02.wav",
+      "sourceSampleRange": [
+        112816,
+        291651
+      ],
+      "sourceStart": 2.558186,
+      "sourceEnd": 6.613401,
+      "seconds": 4.055215,
+      "padHead": 0.311,
+      "padTail": 0.366,
+      "islandsInCue": [
+        {
+          "s": 0.311,
+          "e": 1.844
+        },
+        {
+          "s": 2,
+          "e": 2.753
+        },
+        {
+          "s": 2.91,
+          "e": 3.689
+        }
+      ],
+      "activityInCue": [
+        0.311,
+        3.689
+      ],
+      "handoffActivitySource": [
+        2.869252,
+        6.247551
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        19,
+        41
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Currently significa actualmente.",
+      "file": "audio/cues/actually_currently_c03.wav",
+      "sourceSampleRange": [
+        291651,
+        428315
+      ],
+      "sourceStart": 6.613401,
+      "sourceEnd": 9.712358,
+      "seconds": 3.098957,
+      "padHead": 0.366,
+      "padTail": 0.405,
+      "islandsInCue": [
+        {
+          "s": 0.366,
+          "e": 1.726
+        },
+        {
+          "s": 1.899,
+          "e": 2.694
+        }
+      ],
+      "activityInCue": [
+        0.366,
+        2.694
+      ],
+      "handoffActivitySource": [
+        6.979274,
+        9.307279
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        43,
+        24
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Do you live in London?",
+      "file": "audio/cues/actually_currently_c04.wav",
+      "sourceSampleRange": [
+        428315,
+        500178
+      ],
+      "sourceStart": 9.712358,
+      "sourceEnd": 11.341905,
+      "seconds": 1.629546,
+      "padHead": 0.405,
+      "padTail": 0.261,
+      "islandsInCue": [
+        {
+          "s": 0.405,
+          "e": 1.369
+        }
+      ],
+      "activityInCue": [
+        0.405,
+        1.369
+      ],
+      "handoffActivitySource": [
+        10.11746,
+        11.081156
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        28,
+        16
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Actually, I live in Monterrey.",
+      "file": "audio/cues/actually_currently_c05.wav",
+      "sourceSampleRange": [
+        500178,
+        604234
+      ],
+      "sourceStart": 11.341905,
+      "sourceEnd": 13.701451,
+      "seconds": 2.359546,
+      "padHead": 0.261,
+      "padTail": 0.487,
+      "islandsInCue": [
+        {
+          "s": 0.261,
+          "e": 1.873
+        }
+      ],
+      "activityInCue": [
+        0.261,
+        1.873
+      ],
+      "handoffActivitySource": [
+        11.602653,
+        13.214558
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        16,
+        24
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Para decir actualmente: I'm currently studying English.",
+      "file": "audio/cues/actually_currently_c06.wav",
+      "sourceSampleRange": [
+        604234,
+        814844
+      ],
+      "sourceStart": 13.701451,
+      "sourceEnd": 18.477188,
+      "seconds": 4.775737,
+      "padHead": 0.487,
+      "padTail": 0.398,
+      "islandsInCue": [
+        {
+          "s": 0.487,
+          "e": 1.926
+        },
+        {
+          "s": 2.463,
+          "e": 4.378
+        }
+      ],
+      "activityInCue": [
+        0.487,
+        4.378
+      ],
+      "handoffActivitySource": [
+        14.188322,
+        18.079138
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        26,
+        25
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Ahora tú.",
+      "file": "audio/cues/actually_currently_c07.wav",
+      "sourceSampleRange": [
+        814844,
+        872138
+      ],
+      "sourceStart": 18.477188,
+      "sourceEnd": 19.776372,
+      "seconds": 1.299184,
+      "padHead": 0.398,
+      "padTail": 0.424,
+      "islandsInCue": [
+        {
+          "s": 0.398,
+          "e": 0.875
+        }
+      ],
+      "activityInCue": [
+        0.398,
+        0.875
+      ],
+      "handoffActivitySource": [
+        18.875238,
+        19.352132
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        25,
+        19
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo dirías: actualmente trabajo desde casa?",
+      "file": "audio/cues/actually_currently_c08.wav",
+      "sourceSampleRange": [
+        872138,
+        1034950
+      ],
+      "sourceStart": 19.776372,
+      "sourceEnd": 23.468254,
+      "seconds": 3.691882,
+      "padHead": 0.424,
+      "padTail": 0.337,
+      "islandsInCue": [
+        {
+          "s": 0.424,
+          "e": 1.162
+        },
+        {
+          "s": 1.632,
+          "e": 3.355
+        }
+      ],
+      "activityInCue": [
+        0.424,
+        3.355
+      ],
+      "handoffActivitySource": [
+        20.200612,
+        23.131701
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        16,
+        31
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "Escribe tu versión.",
+      "file": "audio/cues/actually_currently_c09.wav",
+      "sourceSampleRange": [
+        1034950,
+        1099008
+      ],
+      "sourceStart": 23.468254,
+      "sourceEnd": 24.920816,
+      "seconds": 1.452562,
+      "padHead": 0.337,
+      "padTail": 0.016,
+      "islandsInCue": [
+        {
+          "s": 0.337,
+          "e": 1.243
+        }
+      ],
+      "activityInCue": [
+        0.337,
+        1.243
+      ],
+      "handoffActivitySource": [
+        23.804785,
+        24.905034
+      ],
+      "activityVsHandoffMs": [
+        0,
+        -194
+      ],
+      "edgeSampleAbs": [
+        29,
+        1
+      ]
+    }
+  ],
+  "marks": {
+    "c06": {
+      "englishStart": 2.463
+    }
+  },
+  "coverage": {
+    "partitionSamples": 1099008,
+    "totalSamples": 1099008,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 43
+  },
+  "confidence": {
+    "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured",
+    "content": "pronunciation/content NOT verified (no listening)"
+  }
+}

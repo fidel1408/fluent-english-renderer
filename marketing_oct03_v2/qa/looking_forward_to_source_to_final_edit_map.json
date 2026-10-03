@@ -1,0 +1,175 @@
+{
+  "video": "looking_forward_to",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/elevenlabs_looking_forward_to_oOm8KSHv1UWea0AWeoR2.mp3",
+  "masterSha256": "0ff9f2a771e642162ea868476c9d4ed7699297ca41676caba3d63ce582f4feb2",
+  "sampleRate": 44100,
+  "sourceSeconds": 18.991,
+  "finalDurationSeconds": 28.3,
+  "addedSilenceSeconds": 9.309,
+  "lead": 0.35,
+  "endHold": 3.8,
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold). Cues are contiguous source partitions (new tips) or silence-padded cuts (I AGREE).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Cómo dices: tengo muchas ganas de verte?",
+      "caption": "¿Cómo dices: tengo muchas ganas de verte?",
+      "cueFile": "audio/cues/looking_forward_to_c01.wav",
+      "sourceSampleRange": [
+        0,
+        141360
+      ],
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 3.205442,
+      "finalStart": 0.35,
+      "finalEnd": 3.555,
+      "offsetSeconds": 0.35,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.475,
+        3.338
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "See you on Saturday!",
+      "caption": "See you on Saturday!",
+      "cueFile": "audio/cues/looking_forward_to_c02.wav",
+      "sourceSampleRange": [
+        141360,
+        206847
+      ],
+      "sourceStartSeconds": 3.205442,
+      "sourceEndSeconds": 4.690408,
+      "finalStart": 4.455,
+      "finalEnd": 5.94,
+      "offsetSeconds": 1.249558,
+      "gapBeforeAdded": 0.9,
+      "speechActivityFinal": [
+        4.672,
+        5.821
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "I'm looking forward to seeing you.",
+      "caption": "I'm looking forward to seeing you.",
+      "cueFile": "audio/cues/looking_forward_to_c03.wav",
+      "sourceSampleRange": [
+        206847,
+        290619
+      ],
+      "sourceStartSeconds": 4.690408,
+      "sourceEndSeconds": 6.59,
+      "finalStart": 6.44,
+      "finalEnd": 8.34,
+      "offsetSeconds": 1.749592,
+      "gapBeforeAdded": 0.5,
+      "speechActivityFinal": [
+        6.559,
+        8.033
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Después de look forward to, usa un verbo en ing.",
+      "caption": "Después de look forward to, usa un verbo en -ing.",
+      "cueFile": "audio/cues/looking_forward_to_c04.wav",
+      "sourceSampleRange": [
+        290619,
+        452446
+      ],
+      "sourceStartSeconds": 6.59,
+      "sourceEndSeconds": 10.259546,
+      "finalStart": 9.44,
+      "finalEnd": 13.11,
+      "offsetSeconds": 2.85,
+      "gapBeforeAdded": 1.1,
+      "speechActivityFinal": [
+        9.747,
+        12.93
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Como seeing.",
+      "caption": "Como seeing.",
+      "cueFile": "audio/cues/looking_forward_to_c05.wav",
+      "sourceSampleRange": [
+        452446,
+        508230
+      ],
+      "sourceStartSeconds": 10.259546,
+      "sourceEndSeconds": 11.52449,
+      "finalStart": 13.51,
+      "finalEnd": 14.775,
+      "offsetSeconds": 3.250454,
+      "gapBeforeAdded": 0.4,
+      "speechActivityFinal": [
+        13.69,
+        14.575
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "O un sustantivo: I'm looking forward to the weekend.",
+      "caption": "O un sustantivo: I'm looking forward to the weekend.",
+      "cueFile": "audio/cues/looking_forward_to_c06.wav",
+      "sourceSampleRange": [
+        508230,
+        655182
+      ],
+      "sourceStartSeconds": 11.52449,
+      "sourceEndSeconds": 14.856735,
+      "finalStart": 15.775,
+      "finalEnd": 19.107,
+      "offsetSeconds": 4.25051,
+      "gapBeforeAdded": 1,
+      "speechActivityFinal": [
+        15.975,
+        18.86
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Ahora tú: I'm looking forward to...",
+      "caption": "Ahora tú: I'm looking forward to…",
+      "cueFile": "audio/cues/looking_forward_to_c07.wav",
+      "sourceSampleRange": [
+        655182,
+        780330
+      ],
+      "sourceStartSeconds": 14.856735,
+      "sourceEndSeconds": 17.694558,
+      "finalStart": 20.107,
+      "finalEnd": 22.945,
+      "offsetSeconds": 5.250265,
+      "gapBeforeAdded": 1,
+      "speechActivityFinal": [
+        20.354,
+        22.725
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo la completas?",
+      "caption": "¿Cómo la completas?",
+      "cueFile": "audio/cues/looking_forward_to_c08.wav",
+      "sourceSampleRange": [
+        780330,
+        837504
+      ],
+      "sourceStartSeconds": 17.694558,
+      "sourceEndSeconds": 18.99102,
+      "finalStart": 23.145,
+      "finalEnd": 24.441,
+      "offsetSeconds": 5.450442,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        23.365,
+        24.312
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "file": "looking_forward_to_oct03_v2_REV3_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Cómo dices: tengo muchas ganas de verte?",
+      "correlation": 0.989,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "See you on Saturday!",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "I'm looking forward to seeing you.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Después de look forward to, usa un verbo en ing.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "Como seeing.",
+      "correlation": 0.986,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "O un sustantivo: I'm looking forward to the weekend.",
+      "correlation": 0.996,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "Ahora tú: I'm looking forward to...",
+      "correlation": 0.988,
+      "lagMs": 5
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo la completas?",
+      "correlation": 0.988,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.91,
+      "expect": "ON c01",
+      "creamPixels": 17479
+    },
+    {
+      "at": 5.25,
+      "expect": "ON c02",
+      "creamPixels": 17470
+    },
+    {
+      "at": 7.3,
+      "expect": "ON c03",
+      "creamPixels": 16868
+    },
+    {
+      "at": 11.34,
+      "expect": "ON c04",
+      "creamPixels": 17730
+    },
+    {
+      "at": 14.13,
+      "expect": "ON c05",
+      "creamPixels": 17188
+    },
+    {
+      "at": 17.42,
+      "expect": "ON c06",
+      "creamPixels": 17598
+    },
+    {
+      "at": 21.54,
+      "expect": "ON c07",
+      "creamPixels": 17219
+    },
+    {
+      "at": 23.84,
+      "expect": "ON c08",
+      "creamPixels": 17344
+    },
+    {
+      "at": 4,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 6.19,
+      "expect": "OFF (gap c02-c03)",
+      "creamPixels": 0
+    },
+    {
+      "at": 8.89,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 13.31,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    },
+    {
+      "at": 15.27,
+      "expect": "OFF (gap c05-c06)",
+      "creamPixels": 0
+    },
+    {
+      "at": 19.61,
+      "expect": "OFF (gap c06-c07)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -18.1,
+    "loudnessRangeLU": 6.3,
+    "truePeakdBTP": -3.6
+  },
+  "finalHold": {
+    "from": 24.56,
+    "to": 28.3,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.74
+  },
+  "pass": true
+}

@@ -1,0 +1,325 @@
+{
+  "video": "looking_forward_to",
+  "title": "LOOKING FORWARD TO",
+  "fps": 30,
+  "lead": 0.35,
+  "endHold": 3.8,
+  "targetSeconds": [
+    28,
+    34
+  ],
+  "note": "Cue times are COMPUTED from the supplied narration partitions + added silence (gap). Only silence is ever added or removed; speech is never sped up, trimmed or cut.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "¿Cómo dices: tengo muchas ganas de verte?",
+      "est": 2,
+      "gap": 0,
+      "file": "audio/cues/looking_forward_to_c01.wav",
+      "start": 0.35,
+      "end": 3.555,
+      "audio": "audio/cues/looking_forward_to_c01.wav",
+      "audioSeconds": 3.205,
+      "padHead": 0.125,
+      "padTail": 0.217,
+      "cs": 0.475,
+      "ce": 3.338,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.125,
+          "e": 0.934
+        },
+        {
+          "s": 1.243,
+          "e": 2.989
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "See you on Saturday!",
+      "est": 2,
+      "gap": 0.9,
+      "file": "audio/cues/looking_forward_to_c02.wav",
+      "start": 4.455,
+      "end": 5.94,
+      "audio": "audio/cues/looking_forward_to_c02.wav",
+      "audioSeconds": 1.485,
+      "padHead": 0.217,
+      "padTail": 0.119,
+      "cs": 4.672,
+      "ce": 5.821,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.217,
+          "e": 1.366
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "I'm looking forward to seeing you.",
+      "est": 2,
+      "gap": 0.5,
+      "file": "audio/cues/looking_forward_to_c03.wav",
+      "start": 6.44,
+      "end": 8.34,
+      "audio": "audio/cues/looking_forward_to_c03.wav",
+      "audioSeconds": 1.9,
+      "padHead": 0.119,
+      "padTail": 0.307,
+      "cs": 6.559,
+      "ce": 8.033,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.119,
+          "e": 1.592
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Después de look forward to, usa un verbo en ing.",
+      "est": 2,
+      "gap": 1.1,
+      "file": "audio/cues/looking_forward_to_c04.wav",
+      "caption": "Después de look forward to, usa un verbo en -ing.",
+      "start": 9.44,
+      "end": 13.11,
+      "audio": "audio/cues/looking_forward_to_c04.wav",
+      "audioSeconds": 3.67,
+      "padHead": 0.307,
+      "padTail": 0.18,
+      "cs": 9.747,
+      "ce": 12.93,
+      "marks": {
+        "ingStart": 2.374
+      },
+      "islands": [
+        {
+          "s": 0.307,
+          "e": 2.11
+        },
+        {
+          "s": 2.374,
+          "e": 3.49
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Como seeing.",
+      "est": 2,
+      "gap": 0.4,
+      "file": "audio/cues/looking_forward_to_c05.wav",
+      "start": 13.51,
+      "end": 14.775,
+      "audio": "audio/cues/looking_forward_to_c05.wav",
+      "audioSeconds": 1.265,
+      "padHead": 0.18,
+      "padTail": 0.2,
+      "cs": 13.69,
+      "ce": 14.575,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.18,
+          "e": 1.064
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "O un sustantivo: I'm looking forward to the weekend.",
+      "est": 2,
+      "gap": 1,
+      "file": "audio/cues/looking_forward_to_c06.wav",
+      "start": 15.775,
+      "end": 19.107,
+      "audio": "audio/cues/looking_forward_to_c06.wav",
+      "audioSeconds": 3.332,
+      "padHead": 0.2,
+      "padTail": 0.247,
+      "cs": 15.975,
+      "ce": 18.86,
+      "marks": {
+        "nounStart": 1.397
+      },
+      "islands": [
+        {
+          "s": 0.201,
+          "e": 1.086
+        },
+        {
+          "s": 1.397,
+          "e": 3.085
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "Ahora tú: I'm looking forward to...",
+      "est": 2,
+      "gap": 1,
+      "file": "audio/cues/looking_forward_to_c07.wav",
+      "caption": "Ahora tú: I'm looking forward to…",
+      "start": 20.107,
+      "end": 22.945,
+      "audio": "audio/cues/looking_forward_to_c07.wav",
+      "audioSeconds": 2.838,
+      "padHead": 0.247,
+      "padTail": 0.22,
+      "cs": 20.354,
+      "ce": 22.725,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.247,
+          "e": 0.757
+        },
+        {
+          "s": 1.121,
+          "e": 2.618
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "text": "¿Cómo la completas?",
+      "est": 2,
+      "gap": 0.2,
+      "file": "audio/cues/looking_forward_to_c08.wav",
+      "start": 23.145,
+      "end": 24.441,
+      "audio": "audio/cues/looking_forward_to_c08.wav",
+      "audioSeconds": 1.296,
+      "padHead": 0.22,
+      "padTail": 0.129,
+      "cs": 23.365,
+      "ce": 24.312,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.22,
+          "e": 1.167
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "totalSamples": 837504,
+    "partitions": [
+      [
+        0,
+        141360
+      ],
+      [
+        141360,
+        206847
+      ],
+      [
+        206847,
+        290619
+      ],
+      [
+        290619,
+        452446
+      ],
+      [
+        452446,
+        508230
+      ],
+      [
+        508230,
+        655182
+      ],
+      [
+        655182,
+        780330
+      ],
+      [
+        780330,
+        837504
+      ]
+    ],
+    "handoffActivity": [
+      [
+        0.125283,
+        2.988844
+      ],
+      [
+        3.422063,
+        4.571315
+      ],
+      [
+        4.809501,
+        6.282676
+      ],
+      [
+        6.897324,
+        10.079909
+      ],
+      [
+        10.439184,
+        11.323991
+      ],
+      [
+        11.724989,
+        14.609456
+      ],
+      [
+        15.103991,
+        17.475011
+      ],
+      [
+        17.914127,
+        18.861859
+      ]
+    ],
+    "marks": {
+      "ingStart": [
+        "c04",
+        1
+      ],
+      "nounStart": [
+        "c06",
+        1
+      ]
+    }
+  },
+  "duration": 28.3,
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/looking_forward_to.cues.json",
+  "alignmentSource": {
+    "file": "manifest/looking_forward_to.alignment.json",
+    "master": "audio/originals/elevenlabs_looking_forward_to_oOm8KSHv1UWea0AWeoR2.mp3",
+    "masterSha256": "0ff9f2a771e642162ea868476c9d4ed7699297ca41676caba3d63ce582f4feb2",
+    "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+    "confidence": {
+      "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured",
+      "content": "pronunciation/content NOT verified (no listening)"
+    }
+  },
+  "warnings": []
+}

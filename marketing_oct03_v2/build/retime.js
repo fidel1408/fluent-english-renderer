@@ -13,5 +13,13 @@ m.alignmentSource = al ? { file: path.relative(L.ROOT, alF), master: al.master, 
 m.status = found === m.cues.length ? 'TIMED_FROM_SUPPLIED_AUDIO' : (found ? 'PARTIAL_AUDIO' : 'PLANNED_TIMING_NO_AUDIO');
 const [lo, hi] = m.targetSeconds, warn = []; if (m.duration < lo - 1 || m.duration > hi + 1) warn.push(`duration ${m.duration}s is outside the target ${lo}-${hi}s (not forced; review pacing/pauses with the owner)`);
 m.warnings = warn;
+// auditable source-to-final edit map: video_time(source_time) = final_cue_start + source_time - source_partition_start
+if (found && al) {
+  const SRr = al.sampleRate || 44100, sum = m.cues.reduce((a, q) => a + (q.audioSeconds || 0), 0);
+  const map = { video: name, formula: 'video_time(source_time) = cue.finalStart + source_time - cue.sourceStart', masterFile: al.master, masterSha256: al.masterSha256, sampleRate: SRr, sourceSeconds: +sum.toFixed(6), finalDurationSeconds: m.duration, addedSilenceSeconds: +(m.duration - sum).toFixed(3), lead: m.lead, endHold: m.endHold,
+    note: 'Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold). Cues are contiguous source partitions (new tips) or silence-padded cuts (I AGREE).',
+    cues: m.cues.map(q => { const a = al.cues.find(x => x.id === q.id); const sr = a.sourceSampleRange || [Math.round(a.masterStart * SRr), Math.round(a.masterEnd * SRr)]; return { id: q.id, text: q.text, caption: q.caption || q.text, cueFile: q.audio, sourceSampleRange: sr, sourceStartSeconds: +(sr[0] / SRr).toFixed(6), sourceEndSeconds: +(sr[1] / SRr).toFixed(6), finalStart: q.start, finalEnd: q.end, offsetSeconds: +(q.start - sr[0] / SRr).toFixed(6), gapBeforeAdded: q.gap, speechActivityFinal: [q.cs, q.ce] }; }) };
+  fs.mkdirSync(path.join(L.ROOT, 'qa'), { recursive: true }); fs.writeFileSync(path.join(L.ROOT, 'qa', `${name}_source_to_final_edit_map.json`), JSON.stringify(map, null, 2));
+}
 if (found) fs.writeFileSync(path.join(L.ROOT, 'manifest', `${name}.cues.retimed.json`), JSON.stringify(m, null, 2));
 console.log(`${found}/${m.cues.length} cue files -> ${m.status}; total ${m.duration}s`); m.cues.forEach(q => console.log(`  ${q.id} ${q.start.toFixed(2)}-${q.end.toFixed(2)}${q.audioSeconds ? ' (' + q.audioSeconds + 's audio)' : ' (estimate)'}`)); warn.forEach(w => console.log('  WARNING', w));

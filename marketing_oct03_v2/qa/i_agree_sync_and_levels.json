@@ -1,5 +1,5 @@
 {
-  "file": "i_agree_oct03_v2_REV2_narrated_QA-pending.mp4",
+  "file": "i_agree_oct03_v2_REV3_single-host_narrated_QA-pending.mp4",
   "cues": [
     {
       "id": "c01",
@@ -60,86 +60,81 @@
     {
       "at": 0.94,
       "expect": "ON c01",
-      "creamPixels": 10327
+      "creamPixels": 17498
     },
     {
       "at": 3.34,
       "expect": "ON c02",
-      "creamPixels": 8663
+      "creamPixels": 17553
     },
     {
       "at": 6.51,
       "expect": "ON c03",
-      "creamPixels": 5404
+      "creamPixels": 17047
     },
     {
       "at": 9.41,
       "expect": "ON c04",
-      "creamPixels": 19646
+      "creamPixels": 17099
     },
     {
       "at": 12.89,
       "expect": "ON c05",
-      "creamPixels": 8276
+      "creamPixels": 17489
     },
     {
       "at": 14.71,
       "expect": "ON c06",
-      "creamPixels": 13542
+      "creamPixels": 17252
     },
     {
       "at": 17.77,
       "expect": "ON c07",
-      "creamPixels": 17416
+      "creamPixels": 16886
     },
     {
       "at": 19.76,
       "expect": "ON c08",
-      "creamPixels": 5135
+      "creamPixels": 16843
     },
     {
       "at": 22.44,
       "expect": "ON c09",
-      "creamPixels": 22314
+      "creamPixels": 17463
     },
     {
       "at": 1.96,
       "expect": "OFF (gap c01-c02)",
-      "creamPixels": 235
+      "creamPixels": 0
     },
     {
       "at": 4.97,
       "expect": "OFF (gap c02-c03)",
-      "creamPixels": 240
+      "creamPixels": 0
     },
     {
       "at": 7.58,
       "expect": "OFF (gap c03-c04)",
-      "creamPixels": 196
+      "creamPixels": 0
     },
     {
       "at": 11.67,
       "expect": "OFF (gap c04-c05)",
-      "creamPixels": 229
+      "creamPixels": 0
     },
     {
       "at": 13.72,
       "expect": "OFF (gap c05-c06)",
-      "creamPixels": 170
+      "creamPixels": 0
     },
     {
       "at": 16,
       "expect": "OFF (gap c06-c07)",
-      "creamPixels": 237
+      "creamPixels": 0
     },
     {
       "at": 20.51,
       "expect": "OFF (gap c08-c09)",
-      "creamPixels": 100
-    },
-    {
-      "at": 26.6,
-      "expect": "OFF (final CTA hold)",
       "creamPixels": 0
     }
   ],
@@ -147,6 +142,12 @@
     "integratedLUFS": -17.2,
     "loudnessRangeLU": 4.4,
     "truePeakdBTP": -4.2
+  },
+  "finalHold": {
+    "from": 24.09,
+    "to": 27.6,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.51
   },
   "pass": true
 }

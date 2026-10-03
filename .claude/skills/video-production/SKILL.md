@@ -19,6 +19,7 @@ ElevenLabs only for short marketing/social videos via supplied files, never for 
   - `node build/verify.js out/<file>.mp4 <video>`: ffprobe, full decode, faststart, clipping, narration-above-SFX per cue.
   - `node build/align_split.js <video> audio/originals/<master>.mp3`: for a continuous narration master, find speech islands, split only inside silences into cue WAVs, prove no speech was lost, write `manifest/<video>.alignment.json`.
   - `node build/verify_sync.js out/<file>.mp4 <video>`: cue-vs-MP4 cross-correlation, burned-caption presence, loudness. Evidence only, not a listening test.
+  - `node build/partition_split.js <video> audio/originals/<master>.mp3`: split a master at explicit sample partitions (from an independent timing handoff) with bit-exact coverage proof, islands for mouth/captions, marks. `retime.js` also writes `qa/<video>_source_to_final_edit_map.json`.
   - `node build/verify_layout.js <video>`: flat-grey-background pixel tests (label before text, no coral above the card during the fix, no dark text below the example card). `node build/verify_mouth.js <mp4> <video>`: single-educator casting (open mouth only inside measured speech islands; listener never speaks).
   - `node build/stills.js <video> <dir> t1 t2 ...`: PNG stills from the same renderer for visual review.
 - Logo: draw the original `assets/logo/fluent_english_logo_white.png` (crop transparent margin only). Never redraw or recolor it.
@@ -33,3 +34,4 @@ ElevenLabs only for short marketing/social videos via supplied files, never for 
 5. Report which checks were not done. Keep PREVIEW status until narration and QA pass.
 
 6. Casting rule: one narrator voice = one on-screen presenter (the right male character for the Luis Guillermo recording); the other character is a silent listener. Mouth movement follows measured speech islands only.
+7. Presenter rule: one adult male host (src/host.js) for the Luis voice; scene content is drawn through `KIT.content` (scaled group) so the host's head/shoulders/torso stay visible above the caption bar. Frames, not labels, decide whether the casting reads correctly.

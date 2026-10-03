@@ -1,0 +1,195 @@
+{
+  "video": "actually_currently",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/elevenlabs_actually_currently_z75a9iX0ZpKcMeXyR5za.mp3",
+  "masterSha256": "456feb235cbc8d62d99ae544a2c6302fdd66b81b2615fcafe57e824103a42d98",
+  "sampleRate": 44100,
+  "sourceSeconds": 24.922,
+  "finalDurationSeconds": 31.1,
+  "addedSilenceSeconds": 6.178,
+  "lead": 0.35,
+  "endHold": 3.6,
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold). Cues are contiguous source partitions (new tips) or silence-padded cuts (I AGREE).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Actually significa actualmente?",
+      "caption": "¿Actually significa actualmente?",
+      "cueFile": "audio/cues/actually_currently_c01.wav",
+      "sourceSampleRange": [
+        0,
+        112816
+      ],
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.558186,
+      "finalStart": 0.35,
+      "finalEnd": 2.908,
+      "offsetSeconds": 0.35,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.464,
+        2.597
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Actually suele significar en realidad o de hecho.",
+      "caption": "Actually suele significar en realidad o de hecho.",
+      "cueFile": "audio/cues/actually_currently_c02.wav",
+      "sourceSampleRange": [
+        112816,
+        291651
+      ],
+      "sourceStartSeconds": 2.558186,
+      "sourceEndSeconds": 6.613401,
+      "finalStart": 3.208,
+      "finalEnd": 7.263,
+      "offsetSeconds": 0.649814,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        3.519,
+        6.897
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Currently significa actualmente.",
+      "caption": "Currently significa actualmente.",
+      "cueFile": "audio/cues/actually_currently_c03.wav",
+      "sourceSampleRange": [
+        291651,
+        428315
+      ],
+      "sourceStartSeconds": 6.613401,
+      "sourceEndSeconds": 9.712358,
+      "finalStart": 7.263,
+      "finalEnd": 10.362,
+      "offsetSeconds": 0.649599,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        7.629,
+        9.957
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Do you live in London?",
+      "caption": "Do you live in London?",
+      "cueFile": "audio/cues/actually_currently_c04.wav",
+      "sourceSampleRange": [
+        428315,
+        500178
+      ],
+      "sourceStartSeconds": 9.712358,
+      "sourceEndSeconds": 11.341905,
+      "finalStart": 10.862,
+      "finalEnd": 12.492,
+      "offsetSeconds": 1.149642,
+      "gapBeforeAdded": 0.5,
+      "speechActivityFinal": [
+        11.267,
+        12.231
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Actually, I live in Monterrey.",
+      "caption": "Actually, I live in Monterrey.",
+      "cueFile": "audio/cues/actually_currently_c05.wav",
+      "sourceSampleRange": [
+        500178,
+        604234
+      ],
+      "sourceStartSeconds": 11.341905,
+      "sourceEndSeconds": 13.701451,
+      "finalStart": 12.592,
+      "finalEnd": 14.952,
+      "offsetSeconds": 1.250095,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        12.853,
+        14.465
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Para decir actualmente: I'm currently studying English.",
+      "caption": "Para decir actualmente: I'm currently studying English.",
+      "cueFile": "audio/cues/actually_currently_c06.wav",
+      "sourceSampleRange": [
+        604234,
+        814844
+      ],
+      "sourceStartSeconds": 13.701451,
+      "sourceEndSeconds": 18.477188,
+      "finalStart": 15.852,
+      "finalEnd": 20.628,
+      "offsetSeconds": 2.150549,
+      "gapBeforeAdded": 0.9,
+      "speechActivityFinal": [
+        16.339,
+        20.23
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Ahora tú.",
+      "caption": "Ahora tú.",
+      "cueFile": "audio/cues/actually_currently_c07.wav",
+      "sourceSampleRange": [
+        814844,
+        872138
+      ],
+      "sourceStartSeconds": 18.477188,
+      "sourceEndSeconds": 19.776372,
+      "finalStart": 20.928,
+      "finalEnd": 22.227,
+      "offsetSeconds": 2.450812,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        21.326,
+        21.803
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo dirías: actualmente trabajo desde casa?",
+      "caption": "¿Cómo dirías: actualmente trabajo desde casa?",
+      "cueFile": "audio/cues/actually_currently_c08.wav",
+      "sourceSampleRange": [
+        872138,
+        1034950
+      ],
+      "sourceStartSeconds": 19.776372,
+      "sourceEndSeconds": 23.468254,
+      "finalStart": 22.227,
+      "finalEnd": 25.919,
+      "offsetSeconds": 2.450628,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        22.651,
+        25.582
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "Escribe tu versión.",
+      "caption": "Escribe tu versión.",
+      "cueFile": "audio/cues/actually_currently_c09.wav",
+      "sourceSampleRange": [
+        1034950,
+        1099008
+      ],
+      "sourceStartSeconds": 23.468254,
+      "sourceEndSeconds": 24.920816,
+      "finalStart": 26.019,
+      "finalEnd": 27.472,
+      "offsetSeconds": 2.550746,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        26.356,
+        27.456
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#000"><canvas id="c" width="1080" height="1920"></canvas>
+<script src="engine.js"></script><script src="host.js"></script>
+<script>
+const c=document.getElementById('c').getContext('2d'); const q=new URLSearchParams(location.search);
+window.draw=(t,gest,mood,speaking)=>{ c.clearRect(0,0,1080,1920); FE.background(c,1); HOST.draw(c,t,{enter:1,moodKeys:[{t:0,v:mood}],gestKeys:[{t:0,v:gest}],lookKeys:[{t:0,x:0,y:-.5}],speaking,starts:[]}); };
+window.ready=document.fonts.ready;
+</script>

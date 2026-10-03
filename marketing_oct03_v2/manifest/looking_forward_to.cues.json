@@ -3,37 +3,37 @@
   "title": "LOOKING FORWARD TO",
   "fps": 30,
   "lead": 0.35,
-  "endHold": 3.3,
+  "endHold": 3.8,
   "targetSeconds": [
     28,
     34
   ],
-  "note": "Cue times are COMPUTED: start = previous end + gap (first cue: lead); end = start + natural duration. Planned durations (est) are estimates for a preview only. build/retime.js replaces est with the measured duration of the supplied narration files. Total duration = last cue end + endHold. Audio is never sped up, trimmed or cut.",
+  "note": "Cue times are COMPUTED from the supplied narration partitions + added silence (gap). Only silence is ever added or removed; speech is never sped up, trimmed or cut.",
   "cues": [
     {
       "id": "c01",
       "who": "narrator",
-      "lang": "es",
+      "lang": "es+en",
       "text": "¿Cómo dices: tengo muchas ganas de verte?",
-      "est": 3.2,
+      "est": 2.0,
       "gap": 0,
       "file": "audio/cues/looking_forward_to_c01.wav"
     },
     {
       "id": "c02",
       "who": "narrator",
-      "lang": "en",
+      "lang": "es+en",
       "text": "See you on Saturday!",
-      "est": 1.5,
-      "gap": 1.0,
+      "est": 2.0,
+      "gap": 0.9,
       "file": "audio/cues/looking_forward_to_c02.wav"
     },
     {
       "id": "c03",
       "who": "narrator",
-      "lang": "en",
+      "lang": "es+en",
       "text": "I'm looking forward to seeing you.",
-      "est": 2.2,
+      "est": 2.0,
       "gap": 0.5,
       "file": "audio/cues/looking_forward_to_c03.wav"
     },
@@ -42,18 +42,18 @@
       "who": "narrator",
       "lang": "es+en",
       "text": "Después de look forward to, usa un verbo en ing.",
-      "est": 3.8,
-      "gap": 1.4,
-      "caption": "Después de look forward to, usa un verbo en -ing.",
-      "file": "audio/cues/looking_forward_to_c04.wav"
+      "est": 2.0,
+      "gap": 1.1,
+      "file": "audio/cues/looking_forward_to_c04.wav",
+      "caption": "Después de look forward to, usa un verbo en -ing."
     },
     {
       "id": "c05",
       "who": "narrator",
       "lang": "es+en",
       "text": "Como seeing.",
-      "est": 1.2,
-      "gap": 0.35,
+      "est": 2.0,
+      "gap": 0.4,
       "file": "audio/cues/looking_forward_to_c05.wav"
     },
     {
@@ -61,8 +61,8 @@
       "who": "narrator",
       "lang": "es+en",
       "text": "O un sustantivo: I'm looking forward to the weekend.",
-      "est": 4.0,
-      "gap": 1.4,
+      "est": 2.0,
+      "gap": 1.0,
       "file": "audio/cues/looking_forward_to_c06.wav"
     },
     {
@@ -70,19 +70,100 @@
       "who": "narrator",
       "lang": "es+en",
       "text": "Ahora tú: I'm looking forward to...",
-      "est": 2.6,
-      "gap": 1.3,
-      "caption": "Ahora tú: I'm looking forward to…",
-      "file": "audio/cues/looking_forward_to_c07.wav"
+      "est": 2.0,
+      "gap": 1.0,
+      "file": "audio/cues/looking_forward_to_c07.wav",
+      "caption": "Ahora tú: I'm looking forward to…"
     },
     {
       "id": "c08",
       "who": "narrator",
-      "lang": "es",
+      "lang": "es+en",
       "text": "¿Cómo la completas?",
-      "est": 1.6,
-      "gap": 0.3,
+      "est": 2.0,
+      "gap": 0.2,
       "file": "audio/cues/looking_forward_to_c08.wav"
     }
-  ]
+  ],
+  "alignment": {
+    "totalSamples": 837504,
+    "partitions": [
+      [
+        0,
+        141360
+      ],
+      [
+        141360,
+        206847
+      ],
+      [
+        206847,
+        290619
+      ],
+      [
+        290619,
+        452446
+      ],
+      [
+        452446,
+        508230
+      ],
+      [
+        508230,
+        655182
+      ],
+      [
+        655182,
+        780330
+      ],
+      [
+        780330,
+        837504
+      ]
+    ],
+    "handoffActivity": [
+      [
+        0.125283,
+        2.988844
+      ],
+      [
+        3.422063,
+        4.571315
+      ],
+      [
+        4.809501,
+        6.282676
+      ],
+      [
+        6.897324,
+        10.079909
+      ],
+      [
+        10.439184,
+        11.323991
+      ],
+      [
+        11.724989,
+        14.609456
+      ],
+      [
+        15.103991,
+        17.475011
+      ],
+      [
+        17.914127,
+        18.861859
+      ]
+    ],
+    "marks": {
+      "ingStart": [
+        "c04",
+        1
+      ],
+      "nounStart": [
+        "c06",
+        1
+      ]
+    }
+  }
 }

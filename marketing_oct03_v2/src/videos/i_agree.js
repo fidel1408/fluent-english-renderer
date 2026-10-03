@@ -5,15 +5,18 @@ window.VIDEO = (() => {
   function draw(c, t, cues, K) {
     const q = {}; cues.forEach(x => q[x.id] = x);
     background(c, t);
-    const moodW = t < K.hookEnd ? 'curious' : t < K.flip ? 'think' : t < K.qIn ? 'happy' : 'curious', moodM = t < K.hookEnd ? 'listen' : t < K.flip ? 'think' : t < K.qIn ? 'happy' : 'think';
-    KIT.pair(c, t, { enter: seg(t, 0, .7), out: seg(t, K.avOut, K.avOut + .5), moodW, moodM, talkW: 0, talkM: KIT.speaking(t, cues) });   // man = the one educator voice; woman = silent listener
-    ground(c); KIT.logoSmall(c, seg(t, .1, .6) * (1 - seg(t, K.avOut - .1, K.avOut + .3)));
-
+    // ONE adult male host (the supplied Luis voice). Mouth = measured speech islands only; he models every quoted line.
+    const gestK = [{ t: 0, v: 'both' }, { t: K.badIn, v: 'rest' }, { t: K.strikeS, v: 'pointR' }, { t: K.flip, v: 'both' }, { t: K.expA, v: 'presentR' }, { t: K.exOut, v: 'presentL' }, { t: K.tr, v: 'presentR' }, { t: K.qIn, v: 'both' }, { t: q.c08.cs, v: 'pointR' }];
+    const moodK = [{ t: 0, v: 'ask' }, { t: K.badIn, v: 'think' }, { t: K.flip, v: 'happy' }, { t: K.exLabel, v: 'warm' }, { t: K.qIn, v: 'ask' }];
+    KIT.hostFor(c, t, cues, { enter: seg(t, 0, .8), leave: seg(t, K.avOut, K.avOut + .5), moodKeys: moodK, gestKeys: gestK, lookKeys: [{ t: 0, x: 0, y: -.6 }, { t: K.qIn, x: 0, y: -.2 }] });
+    KIT.logoSmall(c, seg(t, .1, .6) * (1 - seg(t, K.avOut - .1, K.avOut + .3)));
+    const HT = KIT.headTarget();
+    KIT.content(c, () => {
     // hook
     if (t < K.hookEnd + .05) {
       const p = E.back(seg(t, .1, .6)), o = 1 - seg(t, K.hookEnd - .3, K.hookEnd), y = 470;
       if (o > 0) {
-        tail(c, 700, y + 426, 790, 1062, C.cream, Math.min(1, p) * o);   // bubble belongs to the educator (right)
+        tail(c, CX, y + 426, CX, HT.y, C.cream, Math.min(1, p) * o);   // bubble belongs to the host
         card(c, CARD_X, y, CARD_W, 430, { a: Math.min(1, p * 2) * o, sc: .7 + .3 * p });
         c.save(); c.globalAlpha = Math.min(1, p * 2) * o; c.translate(CX, y + 430); c.scale(.7 + .3 * p, .7 + .3 * p); c.translate(-CX, -(y + 430));
         text(c, '¿Estás de', CX, y + 170, 132, C.navy); text(c, 'acuerdo?', CX, y + 320, 132, C.navy); c.restore();
@@ -82,6 +85,7 @@ window.VIDEO = (() => {
       c.save(); c.translate(CX + 120, 1112); c.scale(g, g); c.globalAlpha = sa; c.fillStyle = C.coral; rr(c, -175, -55, 350, 110, 55); c.fill(); text(c, 'GRUPO', 0, 27, 72, C.navy); c.restore();
       text(c, 'por mensaje privado.', CX, 1235, 72, C.cream, { a: sa });
     }
+    });
     caption(c, t, cues);
   }
   return { draw };

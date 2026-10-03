@@ -69,7 +69,7 @@
   "cues": [
     {
       "id": "c01",
-      "text": "¿Estás de acuerdo?",
+      "text": "\u00bfEst\u00e1s de acuerdo?",
       "file": "audio/cues/i_agree_c01.wav",
       "masterStart": 0,
       "masterEnd": 1.064,
@@ -132,7 +132,7 @@
     },
     {
       "id": "c04",
-      "text": "Agree ya es verbo; aquí no necesitas am.",
+      "text": "Agree ya es verbo; aqu\u00ed no necesitas am.",
       "file": "audio/cues/i_agree_c04.wav",
       "masterStart": 5.502,
       "masterEnd": 8.813,
@@ -194,7 +194,7 @@
     },
     {
       "id": "c07",
-      "text": "¿Cómo dirías: no estoy de acuerdo?",
+      "text": "\u00bfC\u00f3mo dir\u00edas: no estoy de acuerdo?",
       "file": "audio/cues/i_agree_c07.wav",
       "masterStart": 12.507,
       "masterEnd": 15.062,
@@ -234,7 +234,7 @@
     },
     {
       "id": "c09",
-      "text": "Clases en línea: manda GRUPO por privado.",
+      "text": "Clases en l\u00ednea: manda GRUPO por privado.",
       "file": "audio/cues/i_agree_c09.wav",
       "masterStart": 16.187,
       "masterEnd": 19.35,
@@ -283,5 +283,6 @@
     "phraseBoundaries": "good (pause structure + 15/15 islands + plausible syllable rates)",
     "wordLevel": "not measured",
     "content": "speech content/pronunciation NOT verified (no ASR; no listening)"
-  }
+  },
+  "sampleRate": 44100
 }

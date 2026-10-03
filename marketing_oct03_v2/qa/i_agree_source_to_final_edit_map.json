@@ -1,0 +1,195 @@
+{
+  "video": "i_agree",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/elevenlabs_i_agree_take1_n3PA7EMRxhL2yWI1CsiK.mp3",
+  "masterSha256": "4eee4c8d2cee22c7acce5f09065004168692e38f054b831892ec6a7dbcba8dbd",
+  "sampleRate": 44100,
+  "sourceSeconds": 17.475,
+  "finalDurationSeconds": 27.6,
+  "addedSilenceSeconds": 10.125,
+  "lead": 0.5,
+  "endHold": 3.5,
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold). Cues are contiguous source partitions (new tips) or silence-padded cuts (I AGREE).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Estás de acuerdo?",
+      "caption": "¿Estás de acuerdo?",
+      "cueFile": "audio/cues/i_agree_c01.wav",
+      "sourceSampleRange": [
+        0,
+        46922
+      ],
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 1.063991,
+      "finalStart": 0.5,
+      "finalEnd": 1.564,
+      "offsetSeconds": 0.5,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.5,
+        1.384
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Evita: I am agree.",
+      "caption": "Evita: I am agree.",
+      "cueFile": "audio/cues/i_agree_c02.wav",
+      "sourceSampleRange": [
+        57771,
+        144075
+      ],
+      "sourceStartSeconds": 1.31,
+      "sourceEndSeconds": 3.267007,
+      "finalStart": 2.364,
+      "finalEnd": 4.321,
+      "offsetSeconds": 1.054,
+      "gapBeforeAdded": 0.8,
+      "speechActivityFinal": [
+        2.544,
+        4.141
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Di: I agree.",
+      "caption": "Di: I agree.",
+      "cueFile": "audio/cues/i_agree_c03.wav",
+      "sourceSampleRange": [
+        152410,
+        231084
+      ],
+      "sourceStartSeconds": 3.456009,
+      "sourceEndSeconds": 5.24,
+      "finalStart": 5.621,
+      "finalEnd": 7.405,
+      "offsetSeconds": 2.164991,
+      "gapBeforeAdded": 1.3,
+      "speechActivityFinal": [
+        5.801,
+        7.225
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Agree ya es verbo; aquí no necesitas am.",
+      "caption": "Agree ya es verbo; aquí no necesitas am.",
+      "cueFile": "audio/cues/i_agree_c04.wav",
+      "sourceSampleRange": [
+        242638,
+        388653
+      ],
+      "sourceStartSeconds": 5.501995,
+      "sourceEndSeconds": 8.812993,
+      "finalStart": 7.755,
+      "finalEnd": 11.066,
+      "offsetSeconds": 2.253005,
+      "gapBeforeAdded": 0.35,
+      "speechActivityFinal": [
+        7.935,
+        10.886
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "I agree with you.",
+      "caption": "I agree with you.",
+      "cueFile": "audio/cues/i_agree_c05.wav",
+      "sourceSampleRange": [
+        398708,
+        454142
+      ],
+      "sourceStartSeconds": 9.040998,
+      "sourceEndSeconds": 10.298005,
+      "finalStart": 12.266,
+      "finalEnd": 13.523,
+      "offsetSeconds": 3.225002,
+      "gapBeforeAdded": 1.2,
+      "speechActivityFinal": [
+        12.446,
+        13.343
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Estoy de acuerdo contigo.",
+      "caption": "Estoy de acuerdo contigo.",
+      "cueFile": "audio/cues/i_agree_c06.wav",
+      "sourceSampleRange": [
+        460625,
+        529994
+      ],
+      "sourceStartSeconds": 10.445011,
+      "sourceEndSeconds": 12.018005,
+      "finalStart": 13.923,
+      "finalEnd": 15.495,
+      "offsetSeconds": 3.477989,
+      "gapBeforeAdded": 0.4,
+      "speechActivityFinal": [
+        14.103,
+        15.315
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "¿Cómo dirías: no estoy de acuerdo?",
+      "caption": "¿Cómo dirías: no estoy de acuerdo?",
+      "cueFile": "audio/cues/i_agree_c07.wav",
+      "sourceSampleRange": [
+        551559,
+        664234
+      ],
+      "sourceStartSeconds": 12.507007,
+      "sourceEndSeconds": 15.061995,
+      "finalStart": 16.495,
+      "finalEnd": 19.05,
+      "offsetSeconds": 3.987993,
+      "gapBeforeAdded": 1,
+      "speechActivityFinal": [
+        16.675,
+        18.87
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Comenta.",
+      "caption": "Comenta.",
+      "cueFile": "audio/cues/i_agree_c08.wav",
+      "sourceSampleRange": [
+        667101,
+        702910
+      ],
+      "sourceStartSeconds": 15.127007,
+      "sourceEndSeconds": 15.939002,
+      "finalStart": 19.35,
+      "finalEnd": 20.162,
+      "offsetSeconds": 4.222993,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        19.53,
+        19.982
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea: manda GRUPO por privado.",
+      "caption": "Clases en línea: manda GRUPO por privado.",
+      "cueFile": "audio/cues/i_agree_c09.wav",
+      "sourceSampleRange": [
+        713847,
+        853335
+      ],
+      "sourceStartSeconds": 16.187007,
+      "sourceEndSeconds": 19.35,
+      "finalStart": 20.862,
+      "finalEnd": 24.025,
+      "offsetSeconds": 4.674993,
+      "gapBeforeAdded": 0.7,
+      "speechActivityFinal": [
+        21.042,
+        23.845
+      ]
+    }
+  ]
+}

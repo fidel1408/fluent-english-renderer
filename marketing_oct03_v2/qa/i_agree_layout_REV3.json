@@ -1,0 +1,26 @@
+{
+ "video": "i_agree",
+ "T1": {
+  "firstReadableLabel": {
+   "t": 2.1,
+   "coralPx": 21440
+  },
+  "firstPhraseText": {
+   "t": 2.3,
+   "navyPx": 26410
+  },
+  "pass": true
+ },
+ "T2": {
+  "framesChecked": 34,
+  "maxCoralPxAboveCard": 0,
+  "pass": true
+ },
+ "T3": {
+  "framesChecked": 57,
+  "worstDarkTextPxBelowCard": 0,
+  "atT": 0,
+  "pass": true
+ },
+ "pass": true
+}

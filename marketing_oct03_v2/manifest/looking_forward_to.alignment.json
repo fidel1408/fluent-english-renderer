@@ -1,0 +1,335 @@
+{
+  "video": "looking_forward_to",
+  "master": "audio/originals/elevenlabs_looking_forward_to_oOm8KSHv1UWea0AWeoR2.mp3",
+  "masterSha256": "0ff9f2a771e642162ea868476c9d4ed7699297ca41676caba3d63ce582f4feb2",
+  "totalSamples": 837504,
+  "sampleRate": 44100,
+  "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Cómo dices: tengo muchas ganas de verte?",
+      "file": "audio/cues/looking_forward_to_c01.wav",
+      "sourceSampleRange": [
+        0,
+        141360
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 3.205442,
+      "seconds": 3.205442,
+      "padHead": 0.125,
+      "padTail": 0.217,
+      "islandsInCue": [
+        {
+          "s": 0.125,
+          "e": 0.934
+        },
+        {
+          "s": 1.243,
+          "e": 2.989
+        }
+      ],
+      "activityInCue": [
+        0.125,
+        2.989
+      ],
+      "handoffActivitySource": [
+        0.125283,
+        2.988844
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "See you on Saturday!",
+      "file": "audio/cues/looking_forward_to_c02.wav",
+      "sourceSampleRange": [
+        141360,
+        206847
+      ],
+      "sourceStart": 3.205442,
+      "sourceEnd": 4.690408,
+      "seconds": 1.484966,
+      "padHead": 0.217,
+      "padTail": 0.119,
+      "islandsInCue": [
+        {
+          "s": 0.217,
+          "e": 1.366
+        }
+      ],
+      "activityInCue": [
+        0.217,
+        1.366
+      ],
+      "handoffActivitySource": [
+        3.422063,
+        4.571315
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        2,
+        12
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "I'm looking forward to seeing you.",
+      "file": "audio/cues/looking_forward_to_c03.wav",
+      "sourceSampleRange": [
+        206847,
+        290619
+      ],
+      "sourceStart": 4.690408,
+      "sourceEnd": 6.59,
+      "seconds": 1.899592,
+      "padHead": 0.119,
+      "padTail": 0.307,
+      "islandsInCue": [
+        {
+          "s": 0.119,
+          "e": 1.592
+        }
+      ],
+      "activityInCue": [
+        0.119,
+        1.592
+      ],
+      "handoffActivitySource": [
+        4.809501,
+        6.282676
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        11,
+        1
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Después de look forward to, usa un verbo en ing.",
+      "file": "audio/cues/looking_forward_to_c04.wav",
+      "sourceSampleRange": [
+        290619,
+        452446
+      ],
+      "sourceStart": 6.59,
+      "sourceEnd": 10.259546,
+      "seconds": 3.669546,
+      "padHead": 0.307,
+      "padTail": 0.18,
+      "islandsInCue": [
+        {
+          "s": 0.307,
+          "e": 2.11
+        },
+        {
+          "s": 2.374,
+          "e": 3.49
+        }
+      ],
+      "activityInCue": [
+        0.307,
+        3.49
+      ],
+      "handoffActivitySource": [
+        6.897324,
+        10.079909
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        1,
+        9
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Como seeing.",
+      "file": "audio/cues/looking_forward_to_c05.wav",
+      "sourceSampleRange": [
+        452446,
+        508230
+      ],
+      "sourceStart": 10.259546,
+      "sourceEnd": 11.52449,
+      "seconds": 1.264943,
+      "padHead": 0.18,
+      "padTail": 0.2,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 1.064
+        }
+      ],
+      "activityInCue": [
+        0.18,
+        1.064
+      ],
+      "handoffActivitySource": [
+        10.439184,
+        11.323991
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        9,
+        28
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "O un sustantivo: I'm looking forward to the weekend.",
+      "file": "audio/cues/looking_forward_to_c06.wav",
+      "sourceSampleRange": [
+        508230,
+        655182
+      ],
+      "sourceStart": 11.52449,
+      "sourceEnd": 14.856735,
+      "seconds": 3.332245,
+      "padHead": 0.2,
+      "padTail": 0.247,
+      "islandsInCue": [
+        {
+          "s": 0.201,
+          "e": 1.086
+        },
+        {
+          "s": 1.397,
+          "e": 3.085
+        }
+      ],
+      "activityInCue": [
+        0.201,
+        3.085
+      ],
+      "handoffActivitySource": [
+        11.724989,
+        14.609456
+      ],
+      "activityVsHandoffMs": [
+        1,
+        0
+      ],
+      "edgeSampleAbs": [
+        29,
+        3
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Ahora tú: I'm looking forward to...",
+      "file": "audio/cues/looking_forward_to_c07.wav",
+      "sourceSampleRange": [
+        655182,
+        780330
+      ],
+      "sourceStart": 14.856735,
+      "sourceEnd": 17.694558,
+      "seconds": 2.837823,
+      "padHead": 0.247,
+      "padTail": 0.22,
+      "islandsInCue": [
+        {
+          "s": 0.247,
+          "e": 0.757
+        },
+        {
+          "s": 1.121,
+          "e": 2.618
+        }
+      ],
+      "activityInCue": [
+        0.247,
+        2.618
+      ],
+      "handoffActivitySource": [
+        15.103991,
+        17.475011
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo la completas?",
+      "file": "audio/cues/looking_forward_to_c08.wav",
+      "sourceSampleRange": [
+        780330,
+        837504
+      ],
+      "sourceStart": 17.694558,
+      "sourceEnd": 18.99102,
+      "seconds": 1.296463,
+      "padHead": 0.22,
+      "padTail": 0.129,
+      "islandsInCue": [
+        {
+          "s": 0.22,
+          "e": 1.167
+        }
+      ],
+      "activityInCue": [
+        0.22,
+        1.167
+      ],
+      "handoffActivitySource": [
+        17.914127,
+        18.861859
+      ],
+      "activityVsHandoffMs": [
+        0,
+        0
+      ],
+      "edgeSampleAbs": [
+        2,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c04": {
+      "ingStart": 2.374
+    },
+    "c06": {
+      "nounStart": 1.397
+    }
+  },
+  "coverage": {
+    "partitionSamples": 837504,
+    "totalSamples": 837504,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 29
+  },
+  "confidence": {
+    "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured",
+    "content": "pronunciation/content NOT verified (no listening)"
+  }
+}

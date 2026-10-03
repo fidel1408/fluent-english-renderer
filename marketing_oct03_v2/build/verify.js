@@ -18,7 +18,7 @@ if (m.status === 'TIMED_FROM_SUPPLIED_AUDIO') {
   const meanOf = (f, w) => { const o = cp.spawnSync('ffmpeg', ['-v', 'info', '-ss', String(w[0]), '-t', String(w[1] - w[0]), '-i', f, '-vn', '-af', 'volumedetect', '-f', 'null', '-']).stderr.toString(); const mm = /mean_volume: (-?[\d.]+|-inf)/.exec(o); return mm && mm[1] !== '-inf' ? +mm[1] : -99; };
   const sfx = path.join(L.ROOT, 'build', 'tmp', `${name}_sfx.wav`);
   const weak = m.cues.filter(q => { const w = [q.start + .05, q.end - .05]; return meanOf(file, w) - meanOf(sfx, w) < 10 || meanOf(file, w) < -45; }).map(q => q.id);
-  ck('narration_audible_in_every_cue_window (>=10 dB above SFX-only mix)', !weak.length, weak.length ? 'weak/silent: ' + weak.join(',') : 'all 9 windows');
+  ck('narration_audible_in_every_cue_window (>=10 dB above SFX-only mix)', !weak.length, weak.length ? 'weak/silent: ' + weak.join(',') : 'all ' + m.cues.length + ' windows');
   ck('narration_not_cut_off', m.cues.every(q => q.end <= m.duration - .3 && q.audioSeconds && Math.abs((q.end - q.start) - q.audioSeconds) < .01), 'last cue ends ' + m.cues[m.cues.length - 1].end);
 }
 R.label = m.status === 'TIMED_FROM_SUPPLIED_AUDIO' ? 'NARRATED CANDIDATE – QA-pending, NOT final: technical checks only; auditory approval still required before publishing' : 'PREVIEW – narration pending – NOT publish-ready';

@@ -9,18 +9,19 @@ window.VIDEO = (() => {
     text(c, label, x, y + 76, 46, C.cream);
   }
   function draw(c, t, cues, K) {
-    const q = {}; cues.forEach(x => q[x.id] = x); const talking = x => t >= x.start && t <= x.end ? 1 : 0;
+    const q = {}; cues.forEach(x => q[x.id] = x);
     background(c, t);
     const dlg = t >= K.dlgIn && t < K.dlgOut + .3;
-    KIT.pair(c, t, { enter: seg(t, 0, .7), out: seg(t, K.avOut, K.avOut + .5), moodW: t < K.hookEnd ? 'ask' : 'listen', moodM: dlg ? 'happy' : 'listen', talkW: talking(q.c04) || talking(q.c01) * 0, talkM: talking(q.c05), y: 1245, sc: 1.05 });
+    KIT.pair(c, t, { enter: seg(t, 0, .7), out: seg(t, K.avOut, K.avOut + .5), moodW: t < K.hookEnd ? 'curious' : 'listen', moodM: dlg ? 'happy' : 'listen', talkW: 0, talkM: KIT.speaking(t, cues),   // one male educator voice; woman listens silently
+       y: 1245, sc: 1.05 });
     ground(c); KIT.logoSmall(c, seg(t, .1, .6) * (1 - seg(t, K.avOut, K.avOut + .4)));
 
     // hook
     if (t < K.hookEnd + .05) {
       const p = E.back(seg(t, .1, .6)), o = out(t, K.hookEnd - .3), a = Math.min(1, p * 2) * o;
-      if (a > 0) { card(c, CARD_X, 470, CARD_W, 520, { a, sc: .7 + .3 * p }); tail(c, 250, 986, 196, 1130, C.cream, Math.min(1, p) * o);
+      if (a > 0) { card(c, CARD_X, 470, CARD_W, 520, { a, sc: .7 + .3 * p }); tail(c, 700, 986, 790, 1130, C.cream, Math.min(1, p) * o);
         c.save(); c.globalAlpha = a; c.translate(CX, 990); c.scale(.7 + .3 * p, .7 + .3 * p); c.translate(-CX, -990);
-        tokens(c, [{ t: 'Actually', col: C.teal }], CX, 640, 128, C.navy); text(c, 'significa', CX, 780, 116, C.navy); text(c, 'actualmente?', CX, 920, 116, C.navy); c.restore(); }
+        tokens(c, [{ t: '¿Actually', col: C.teal }], CX, 640, 128, C.navy); text(c, 'significa', CX, 780, 116, C.navy); text(c, 'actualmente?', CX, 920, 116, C.navy); c.restore(); }
     }
     // compare
     if (t >= K.cmp1 - .1 && t < K.cmpOut + .3) {

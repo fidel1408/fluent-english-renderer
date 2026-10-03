@@ -1,5 +1,5 @@
 {
-  "file": "i_agree_oct03_v2_FINAL-CANDIDATE_narrated_QA-pending.mp4",
+  "file": "i_agree_oct03_v2_REV2_narrated_QA-pending.mp4",
   "cues": [
     {
       "id": "c01",
@@ -60,72 +60,72 @@
     {
       "at": 0.94,
       "expect": "ON c01",
-      "creamPixels": 10319
+      "creamPixels": 10327
     },
     {
       "at": 3.34,
       "expect": "ON c02",
-      "creamPixels": 8671
+      "creamPixels": 8663
     },
     {
       "at": 6.51,
       "expect": "ON c03",
-      "creamPixels": 5408
+      "creamPixels": 5404
     },
     {
       "at": 9.41,
       "expect": "ON c04",
-      "creamPixels": 19647
+      "creamPixels": 19646
     },
     {
       "at": 12.89,
       "expect": "ON c05",
-      "creamPixels": 8275
+      "creamPixels": 8276
     },
     {
       "at": 14.71,
       "expect": "ON c06",
-      "creamPixels": 13539
+      "creamPixels": 13542
     },
     {
       "at": 17.77,
       "expect": "ON c07",
-      "creamPixels": 17417
+      "creamPixels": 17416
     },
     {
       "at": 19.76,
       "expect": "ON c08",
-      "creamPixels": 5137
+      "creamPixels": 5135
     },
     {
       "at": 22.44,
       "expect": "ON c09",
-      "creamPixels": 22323
+      "creamPixels": 22314
     },
     {
       "at": 1.96,
       "expect": "OFF (gap c01-c02)",
-      "creamPixels": 238
+      "creamPixels": 235
     },
     {
       "at": 4.97,
       "expect": "OFF (gap c02-c03)",
-      "creamPixels": 237
+      "creamPixels": 240
     },
     {
       "at": 7.58,
       "expect": "OFF (gap c03-c04)",
-      "creamPixels": 197
+      "creamPixels": 196
     },
     {
       "at": 11.67,
       "expect": "OFF (gap c04-c05)",
-      "creamPixels": 230
+      "creamPixels": 229
     },
     {
       "at": 13.72,
       "expect": "OFF (gap c05-c06)",
-      "creamPixels": 169
+      "creamPixels": 170
     },
     {
       "at": 16,
@@ -135,7 +135,7 @@
     {
       "at": 20.51,
       "expect": "OFF (gap c08-c09)",
-      "creamPixels": 96
+      "creamPixels": 100
     },
     {
       "at": 26.6,

@@ -4,13 +4,13 @@ window.VIDEO = (() => {
   const { CARD_X, CARD_W, fit } = KIT; const out = (t, a) => 1 - seg(t, a, a + .3);
   const DAYS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
   function draw(c, t, cues, K) {
-    const q = {}; cues.forEach(x => q[x.id] = x); const talking = x => t >= x.start && t <= x.end ? 1 : 0;
+    const q = {}; cues.forEach(x => q[x.id] = x);
     background(c, t);
-    KIT.pair(c, t, { enter: seg(t, 0, .7), out: seg(t, K.avOut, K.avOut + .5), moodW: t < K.hookEnd ? 'ask' : 'happy', moodM: 'happy', talkW: talking(q.c02), talkM: talking(q.c03), y: 1245, sc: 1.05 });
+    KIT.pair(c, t, { enter: seg(t, 0, .7), out: seg(t, K.avOut, K.avOut + .5), moodW: t < K.hookEnd ? 'curious' : 'happy', moodM: 'happy', talkW: 0, talkM: KIT.speaking(t, cues), y: 1245, sc: 1.05 });
     ground(c); KIT.logoSmall(c, seg(t, .1, .6) * (1 - seg(t, K.avOut, K.avOut + .4)));
     if (t < K.hookEnd + .05) {
       const p = E.back(seg(t, .1, .6)), o = out(t, K.hookEnd - .3), a = Math.min(1, p * 2) * o;
-      if (a > 0) { card(c, CARD_X, 470, CARD_W, 520, { a, sc: .7 + .3 * p }); tail(c, 250, 986, 196, 1130, C.cream, Math.min(1, p) * o);
+      if (a > 0) { card(c, CARD_X, 470, CARD_W, 520, { a, sc: .7 + .3 * p }); tail(c, 700, 986, 790, 1130, C.cream, Math.min(1, p) * o);
         c.save(); c.globalAlpha = a; c.translate(CX, 990); c.scale(.7 + .3 * p, .7 + .3 * p); c.translate(-CX, -990);
         text(c, '¿Cómo dices:', CX, 610, 104, C.teal); text(c, 'tengo muchas', CX, 735, 112, C.navy); text(c, 'ganas de verte?', CX, 860, 112, C.navy); c.restore(); }
     }

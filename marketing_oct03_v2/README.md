@@ -7,10 +7,18 @@ Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via sup
 
 | Video | Length | File | Status |
 |---|---|---|---|
-| I AGREE | 27.6 s | `out/i_agree_oct03_v2_FINAL-CANDIDATE_narrated_QA-pending.mp4` | **Narrated FINAL CANDIDATE. Independent listening QA still required. Not published.** |
+| I AGREE (revision 2) | 27.6 s | `out/i_agree_oct03_v2_REV2_narrated_QA-pending.mp4` | **Narrated candidate, QA-pending. NOT final, NOT publish-ready: auditory approval has not happened.** |
+| I AGREE (previous candidate) | 27.6 s | `out/i_agree_oct03_v2_FINAL-CANDIDATE_narrated_QA-pending.mp4` | Preserved unchanged; superseded by REV2 (visual findings below) |
 | ACTUALLY / CURRENTLY | 31.1 s (estimate) | `out/actually_currently_oct03_v2_PREVIEW_audio-pending.mp4` | PREVIEW, narration pending |
 | LOOKING FORWARD TO | 30.0 s (estimate) | `out/looking_forward_to_oct03_v2_PREVIEW_audio-pending.mp4` | PREVIEW, narration pending |
 | (older) I AGREE | 28.4 s (estimate) | `out/i_agree_oct03_v2_PREVIEW_audio-pending.mp4` | Superseded silent-narration preview, kept as is |
+
+### REV2 changes (one bundled revision; audio cuts, narration, timeline, SFX levels, teaching content and CTA unchanged)
+1. Casting: the right male character is the single educator for all speech; the left woman is a silent listener (closed mouth, raised brows). The opening bubble tail points to the man. His mouth is driven only by the measured speech islands (not padding or whole cue windows).
+2. Labels: `EVITA ESTA FRASE` reaches full strength before the phrase text; `QUITA AM` (neutral) while "am" is being removed; `DI ASÍ` exactly when only the correct phrase remains (5.62 s). Label pop never starts below 85 % scale.
+3. The departing "am" travels inside the card (clipped to it); dust is clipped too, so nothing can cross the label.
+4. The example card finishes growing (12.12 s) before "with you." appears; all card content is clipped to the card.
+5. Other two tips (source only, not re-rendered): same single-educator/silent-listener rule; missing opening ¿ added to the Actually/Currently hook card.
 
 ### I AGREE narrated candidate: how it was made
 - Narration: the owner-supplied ElevenLabs **take 1** (`audio/originals/`, byte-identical to the upload, SHA256SUMS.txt). Take 2 is preserved untouched; nobody has listened to either, so take 1 was chosen only because it was requested (slower).
@@ -20,7 +28,7 @@ Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via sup
 - Pauses between phrases were lengthened (silence added) so the corrections and reading text have time: lead 0.5 s, gaps 0.3-1.3 s, 3.5 s end hold. Natural speech speed is untouched. Total 27.6 s.
 
 ### Evidence from the encoded MP4 (`qa/`)
-- ffprobe: H.264 High yuv420p bt709, 1080x1920, 30/1 fps, 828 frames, AAC LC 48 kHz stereo, 27.600 s, moov before mdat; full decode with no errors.
+- (REV2 and previous candidate share these numbers) ffprobe: H.264 High yuv420p bt709, 1080x1920, 30/1 fps, 828 frames, AAC LC 48 kHz stereo, 27.600 s, moov before mdat; full decode with no errors.
 - `verify_sync.js`: narration of all nine cues correlates 0.989-1.000 with the decoded MP4 audio at a uniform +5 ms lag; burned captions are present at every cue midpoint (5,137-22,323 cream-text pixels) and absent in every gap and in the final hold.
 - Levels: integrated -17.2 LUFS, LRA 4.4 LU, true peak -4.2 dBTP (mono master was -16.8 LUFS / -1.2 dBTP; the stereo upmix lowers it ~3 dB). No clipping.
 - Representative encoded frames at each cue midpoint, the "am" removal, the correction flip, the CTA entrance and the final hold were reviewed.

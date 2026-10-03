@@ -14,6 +14,7 @@ const FE = (() => {
   const rr = (c, x, y, w, h, r) => { c.beginPath(); c.roundRect(x, y, w, h, r); };
 
   function background(c, t) {
+    if (window.__FLAT) { c.fillStyle = '#8a8a8a'; c.fillRect(0, 0, W, H); return; }   // debug hook for build/verify_layout.js only
     const g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#13243f'); g.addColorStop(1, '#0b172a'); c.fillStyle = g; c.fillRect(0, 0, W, H);
     const blob = (x, y, r, col, a, k) => { c.globalAlpha = a; c.fillStyle = col; c.beginPath(); for (let i = 0; i <= 40; i++) { const an = i / 40 * 6.2832, rad = r * (1 + .1 * Math.sin(an * 3 + t * .5 + k) + .06 * Math.sin(an * 5 - t * .35 + k * 2)); c[i ? 'lineTo' : 'moveTo'](x + Math.cos(an) * rad, y + Math.sin(an) * rad); } c.fill(); c.globalAlpha = 1; };
     blob(120, 520 + Math.sin(t * .4) * 18, 380, C.teal, .55, 1); blob(960, 1000 + Math.cos(t * .35) * 22, 420, C.teal, .38, 2); blob(880, 330, 190, C.mint, .08, 3); blob(160, 1500, 260, C.mint, .07, 4);
@@ -87,7 +88,7 @@ const FE = (() => {
     else { c.moveTo(-60, -34); c.bezierCurveTo(-72, -106, 66, -118, 60, -32); c.bezierCurveTo(52, -62, 30, -78, 4, -76); c.bezierCurveTo(-20, -80, -48, -66, -60, -34); }
     c.fill();
     // face
-    const up = mood === 'ask' ? -9 : mood === 'happy' ? -3 : 0, tilt = mood === 'think' ? .03 : 0;
+    const up = (mood === 'ask' || mood === 'curious') ? -9 : mood === 'happy' ? -3 : 0, tilt = mood === 'think' ? .03 : 0;
     c.strokeStyle = woman ? C.hair1 : C.hair2; c.lineWidth = 7; c.lineCap = 'round';
     [-1, 1].forEach(s => { c.beginPath(); c.moveTo(s * 14, -38 + up + s * tilt * 20); c.lineTo(s * 40, -41 + up - s * tilt * 20); c.stroke(); });
     c.fillStyle = C.navyD; [-1, 1].forEach(s => { c.beginPath(); c.ellipse(s * 26, -20, 6.5, 8.5 * blink, 0, 0, 6.2832); c.fill(); });

@@ -31,5 +31,14 @@ const KIT = (() => {
     c.fillStyle = C.coral; rr(c, x0 + w1, y + 110, pw, 60, 30); c.fill(); text(c, 'GRUPO', x0 + w1 + pw / 2, y + 155, 42, C.navy);
     text(c, 'por mensaje privado', x0 + w1 + pw + 22 + w2 / 2, y + 156, 46, C.cream); c.restore();
   }
-  return { CARD_X, CARD_W, fit, logoSmall, logoBig, pair, box, commentBox, cta };
+  // 1 only while the educator is actually speaking: measured speech islands (silence padding excluded); whole speech window only for audio-pending previews
+  function speaking(t, cues) {
+    for (const q of cues) {
+      if (q.islands && q.islands.length) { for (const i of q.islands) if (t >= q.start + i.s && t <= q.start + i.e) return 1; }
+      else if (!q.audio && t >= (q.cs ?? q.start) && t <= (q.ce ?? q.end)) return 1;
+    }
+    return 0;
+  }
+  function clipRR(c, x, y, w, h, r) { c.beginPath(); c.roundRect(x, y, w, h, r); c.clip(); }
+  return { speaking, clipRR, CARD_X, CARD_W, fit, logoSmall, logoBig, pair, box, commentBox, cta };
 })();

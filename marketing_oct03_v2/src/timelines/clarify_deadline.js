@@ -12,7 +12,9 @@
     K.holds = [
       { id: 'clarify_example', from: K.clIn + .75, to: K.clOut, min: 2.5, rects: [[110, 710, 900, 1085]] },
       { id: 'confirm_example', from: K.cfIn + .75, to: K.cfOut, min: 2.5, rects: [[110, 710, 900, 1085]] },
-      { id: 'practice_unanswered', from: K.sentIn + .75, to: K.prOut, min: 3.0, rects: [[110, 505, 900, 1060]] },
+      // METADATA_REV2 bookkeeping: the complete blank (underline grown, '?' shown) is settled at about sentIn + 0.92 s (final 19.233 s, frame 577); the TEXT-ONLY entry (sentIn + 0.75 s) is NOT the full settled state. Measurement regions only; no animation or timing changed.
+      { id: 'practice_unanswered_full_blank', from: K.sentIn + .92, to: K.prOut, min: 3.0, rects: [[110, 505, 900, 1060]] },
+      { id: 'practice_text_only_stable (informational)', from: K.sentIn + .75, to: K.prOut, min: 0, rects: [[110, 790, 900, 895]] },
       { id: 'practice_after_question', from: E(c.c07), to: K.prOut, min: 3.0, rects: [[110, 505, 900, 1060]] },
       { id: 'cta', from: K.cta + .95, to: null, min: 3.0, rects: [[110, 490, 900, 830]] }];
     K.required = [['Could you clarify', S(c.c02) - .1, E(c.c02)], ['¿Podrías aclarar', S(c.c03) - .1, E(c.c03)], ['PEDIR UNA ACLARACIÓN', S(c.c02) - .1, E(c.c03)], ['PARA CONFIRMAR', S(c.c04) - .1, E(c.c06)], ['Do you mean', S(c.c05) - .1, E(c.c05)], ['¿Te refieres a', S(c.c06) - .1, E(c.c06)],

@@ -1,0 +1,73 @@
+BATCH2 — INDEPENDENT ACTUAL ENCODED VISUAL QA
+Verdict: VISUAL PASS within documented coverage. No required media correction found.
+Release is not cleared: actual audition/full AV/native-platform gates remain open; Clarify has an additional explicit por/for caption-agreement gate.
+
+Coverage:498distinct whole encoded frames visually inspected across full durations (Clarify164,More186,Private148),26native caption crops and11full native stills. Every narration cue appears at onset+0.15 and midpoint. All2892frames were decoded/extracted without errors; this is not human inspection of every frame.
+No actual hearing or real-time audiovisual playback was performed.
+
+Findings by video:
+
+clarify_deadline — VISUAL_PASS_CAPTION_EXACTNESS_PROVISIONAL
+- Two question models are sequential and correctly labelled PEDIR UNA ACLARACIÓN / PARA CONFIRMAR, with no fabricated reply. Examples/Spanish translations are coherent and grammatically correct. Native examples at 4.000s and 10.500s show generous badge/text clearance.
+- Practice presents the requested phrase substitution then an unanswered Could you clarify ___?; no completed sentence answer is revealed. Actual blank underline finishes later than text opacity: first conservative fully settled frame n577/19.233s, last n667/22.233s, 91 displayed frames = 3.033s. This passes the three-second requirement.
+- EMPRESA CTA is readable, offers online classes for a team and makes no promotion, hiring, financial or outcome promise.
+- All nine visible caption layouts fit the text reserve and remain clear of the host mouth. Cue c07 still displays the intended word por; actual por/for speech agreement is explicitly provisional. Inspect final 16.55049–17.55049s, corresponding to source14.2–15.2 plus c07 offset2.35049. Unprompted ASR is not a hearing determination.
+
+tell_me_more — VISUAL_PASS
+- That’s nice is not marked wrong. Quoted setup I tried a new restaurant is followed by RESPUESTA POSIBLE / PREGUNTA with Oh, nice! What was it like? / ¿Cómo estuvo?. OTRA OPCIÓN / INVITACIÓN correctly identifies Tell me more about it. / Cuéntame más.
+- Dense transition samples show coherent sequential replacement, no conflicting role/translation combination and no text overflowing a card. Native 7.500s and14.000s show badge, English, Spanish and role-chip clearance.
+- Movie practice is unanswered and retains 3.100s after the spoken-question activity ends (n667–759), with the complete question visible. No answer suggestion or previous restaurant reply remains in that state.
+- CLUB CTA visibly limits eligibility to intermedios y avanzados. It does not promise a beginner program or levels. All12 caption layouts fit the text reserve. Duration35.7s is above the nominal35s target but the brief explicitly prioritizes original speech and reading holds; this is not a defect.
+
+private_company — VISUAL_PASS_AGAINST_PROVIDED_OFFER_BRIEF
+- Actual settled private card shows PRIVADAS / 1–3 estudiantes / Mismo precio total dentro de este límite; company card shows EMPRESAS / En línea · 1–10 por clase / Mismo precio total dentro de este límite. Separate cards clearly scope the unchanged total to participant count within each service. There is no statement that both formats have the same price.
+- Three private icons and ten company icons are faceless capacity symbols; no second speaking character is introduced. Counts fill in the intended order. Capacity text is already present before count animation, preventing an intermediate icon count from becoming a false maximum.
+- Private content is fully readable by the4.433s sample, ahead of mapped source activity4.590s; company content by11.467s, ahead of activity11.630s. Private icons fill across6.033–7.533s; ten company icons fill across14.000–15.033s samples. This is visual timing against waveform/ASR/source mapping, not hearing.
+- Private complete reading hold n232–311=2.667s; company n460–540=2.700s. Native8.000/15.500s confirm legibility, count and scoped wording.
+- No numeric monetary amount, unconfirmed IVA total, free trial, in-person availability, assigned teacher or start-time claim appears. Por clase modifies capacity; price wording does not introduce a per-attended-class billing unit. CTA uses one private-message action with PRIVADO or EMPRESA. All five caption layouts fit the text reserve.
+
+Source/QA metadata notes (no media rerender required):
+- Creator timeline starts practice_unanswered at19.066s (text opacity) while the underline continues through19.216s; practice_after_question starts even earlier18.766s. Independent calculations correct both complete-state minima to n577/19.233s.
+  When freezing source QA metadata, base complete practice hold on sentIn+0.9 or the actual encoded settled frame, not sentIn+0.75 or instruction end. Actual video already retains3.033s, so no rerender is needed.
+- Production reports stale CanHave wording in confidence.wordLevel fields in batch2 cue/alignment manifests. The batch2 handoff and explicit Clarify caption status are accurate.
+  Replace the stale evidence description with batch2 provenance when finalizing metadata; this does not establish a media defect or require a rerender.
+
+Conservative complete-state reading holds (actual rendered first/middle/last corroboration):
+clarify_deadline: clarify_example, n107–n229, 4.100s, minimum2.5s.
+clarify_deadline: confirm_example, n263–n411, 4.967s, minimum2.5s.
+clarify_deadline: practice_unanswered, n577–n667, 3.033s, minimum3.0s.
+clarify_deadline: practice_after_question, n577–n667, 3.033s, minimum3.0s.
+clarify_deadline: cta, n707–n950, 8.133s, minimum3.0s.
+tell_me_more: setup_example, n104–n180, 2.567s, minimum2.5s.
+tell_me_more: question_bilingual, n214–n322, 3.633s, minimum2.5s.
+tell_me_more: alternative_bilingual, n356–n484, 4.300s, minimum2.5s.
+tell_me_more: practice_unanswered, n630–n759, 4.333s, minimum3.0s.
+tell_me_more: practice_after_question, n667–n759, 3.100s, minimum3.0s.
+tell_me_more: cta, n799–n1070, 9.067s, minimum3.0s.
+private_company: private_info, n232–n311, 2.667s, minimum2.5s.
+private_company: company_info, n460–n540, 2.700s, minimum2.5s.
+private_company: cta, n580–n869, 9.667s, minimum3.0s.
+
+Shared checks:
+One visibly adult male-presenting teacher remains the sole speaking face. Facial proportions, shoulders, torso and collared shirt support the appearance judgment; source gender labels were not used as proof. Actual mouth-open/closed states were inspected during each narration cue. No second speaker or ambiguous girl-presenter design is present.
+The large teaching text,≈12.9px phone-equivalent role labels and≈13.3px or larger secondary CTAs are readable in actual270x480 samples. Captions use54–58px source type (13.5–14.5px at270width), with no glyph outside the marked brief reserve in any of26native cue crops. No mouth obstruction or card/translation collision was observed.
+Offer accuracy was checked against the supplied brief. The comparison makes no new financial claim, price or tax total; it should remain free of an enterprise amount until the actual tax-inclusive total is confirmed.
+
+Evidence:
+periodic_*.jpg: every0.5s and final frame across each MP4.
+detail_*.jpg:0.1s scene replacement/count/practice transitions.
+cues_*.jpg: all26cues at onset+0.15 and midpoint.
+holds_*.jpg: selected hold first/middle/last. Clarify holds_correction_note.txt explains the intentionally retained source-boundary screenshot exposing the metadata correction.
+caption_native_crops_*.jpg: all26native caption crops with reserve guide.
+native_*.png:11full-resolution inspected stills.
+actual_review_coverage.json and per-video reviewed_frames.json: exact inspected whole-frame indices.
+actual_encoded_hold_pixel_analysis.json: every-frame region comparisons for five selected holds; not hearing or human full-frame review.
+qa_result.json: machine-readable verdict, gates and observations.
+
+Media SHA256 identities:
+FE261019-CLARIFY_batch2_single-host_narrated_QA-pending.mp4
+eda56cf5a4f75ce068e7f5372248e6644dbcc4776599366cf0d77c5f25fc4504
+FE261021-MORE_batch2_single-host_narrated_QA-pending.mp4
+1dd02ceccf8347fb394ba1ec4c7b8341ac927cd7bb743d6ef7a1a9cb419acd3a
+FE261023-PRIVATE_batch2_single-host_narrated_QA-pending.mp4
+a6cd1e900c7896f060eeb57d797fbab0b02b3e4e48135c60934605086b3845a4

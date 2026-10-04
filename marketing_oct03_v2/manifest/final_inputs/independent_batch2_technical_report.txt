@@ -1,0 +1,24 @@
+BATCH2 INDEPENDENT TECHNICAL/AUDIO-INTEGRITY QA
+2026-10-04. Actual downloaded MP4s checked. No genuine hearing performed.
+
+RESULT: PASS for format, decode, faststart, original/cue/sample identity, physical final audio placement and technical levels. This does NOT clear Clarify speech/caption exactness, subjective listening, final AV or native-platform checks.
+
+FE261019-CLARIFY_batch2_single-host_narrated_QA-pending.mp4
+SHA256 eda56cf5a4f75ce068e7f5372248e6644dbcc4776599366cf0d77c5f25fc4504
+31.7s; I=-17.5LUFS; true peak=-4.2dBTP; minimum cue correlation=0.998774; each cue final delay=+4.979ms, no drift.
+
+FE261021-MORE_batch2_single-host_narrated_QA-pending.mp4
+SHA256 1dd02ceccf8347fb394ba1ec4c7b8341ac927cd7bb743d6ef7a1a9cb419acd3a
+35.7s; I=-17.6LUFS; true peak=-5.2dBTP; minimum cue correlation=0.999310; each cue final delay=+4.979ms, no drift.
+
+FE261023-PRIVATE_batch2_single-host_narrated_QA-pending.mp4
+SHA256 a6cd1e900c7896f060eeb57d797fbab0b02b3e4e48135c60934605086b3845a4
+29.0s; I=-17.5LUFS; true peak=-4.4dBTP; minimum cue correlation=0.999614; each cue final delay=+4.979ms, no drift.
+
+All six originals match the provided files byte-for-byte. All preferred decoded samples occur exactly once in contiguous WAV cue partitions, with no omission/duplication. Each actual final AAC cue was independently correlated against its source resampled48kHz. All three are H264High/yuv420p1080x1920/30fps/AAC48kstereo with moov before mdat, full decode clean, no decoded full-scale sample. Cut-neighborhood20ms RMS is below-57dBFS (peak below-46dBFS), consistent with low-energy boundaries; that is not a listening or phonetic proof.
+
+Clarify remains explicitly provisional at the Spanish por/ASR for connector. The source14.2–15.2s review interval maps into approximately final16.55–17.55s (c07 offset≈+2.350s), with measured AAC delay+0.005s. Source ASR evidence cannot settle it. Delivered caption_status.txt and source cue metadata retain this issue. No generation/edit was performed locally.
+
+Visual review is by the independent encoded-frame reviewer; genuine listening and native target-app overlay/cover/playback checks remain unrun for these three. No scheduling/publication clearance.
+
+Metadata-only note: confidence.wordLevel in the current alignment/cue JSONs retains a CanHave example from the previous batch. The master hashes, batch2 phrase provenance and Clarify-specific provisional captionStatus are accurate. This inherited wording should be cleaned up in a future source/QA refresh, but it does not require a standalone media rerender.

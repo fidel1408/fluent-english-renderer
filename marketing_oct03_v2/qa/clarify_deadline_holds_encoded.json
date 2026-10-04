@@ -50,13 +50,13 @@
       ]
     },
     {
-      "id": "practice_unanswered",
+      "id": "practice_unanswered_full_blank",
       "plannedWindow": [
-        19.07,
+        19.24,
         22.25
       ],
       "requirementSeconds": 3,
-      "measuredStationarySeconds": 3.2,
+      "measuredStationarySeconds": 3.03,
       "ok": true,
       "rects": [
         {
@@ -66,10 +66,34 @@
             680,
             477
           ],
+          "frames": 92,
+          "longestStationaryRunSeconds": 3.03,
+          "maxMeanAbsDiffToPrevious": 8.66,
+          "maxMeanAbsDiffToFirst": 9.07
+        }
+      ]
+    },
+    {
+      "id": "practice_text_only_stable (informational)",
+      "plannedWindow": [
+        19.07,
+        22.25
+      ],
+      "requirementSeconds": 0,
+      "measuredStationarySeconds": 3.2,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            663,
+            680,
+            90
+          ],
           "frames": 96,
           "longestStationaryRunSeconds": 3.2,
-          "maxMeanAbsDiffToPrevious": 0.1,
-          "maxMeanAbsDiffToFirst": 0.63
+          "maxMeanAbsDiffToPrevious": 0.01,
+          "maxMeanAbsDiffToFirst": 0.02
         }
       ]
     },

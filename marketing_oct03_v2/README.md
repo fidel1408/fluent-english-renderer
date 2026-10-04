@@ -4,6 +4,9 @@ Isolated output folder. The 30 s `video/` project and the published artifact are
 Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via supplied files, never for long lessons) are in `/CLAUDE.md` and `/.claude/skills/video-production/SKILL.md`.
 
 
+## METADATA_REV2 (batch 2 + 3 metadata cleanup; media byte-identical)
+See `qa/batch2_METADATA_REV2_report.md` and `qa/batch3_METADATA_REV2_report.md`: inherited CanHave wording removed, batch3 provenance wording fixed, Clarify hold bookkeeping now counts the complete blank (19.233 s, 3.03 s). No media/audio/timing change; QA-status snapshot, not a scheduling receipt.
+
 ## October batch 3 (SINCEFOR / USED / TRIALFAQ) - QA-pending
 `out/FE261026-SINCEFOR|FE261028-USED|FE261030-TRIALFAQ_batch3_single-host_narrated_QA-pending.mp4`; sources since_for take1, used_to take2, trial_faq take2 (provisional, not an audition); TRIALFAQ is TikTok-only. Pipeline: `build/batch3_manifests.js` -> `partition_split.js` -> `retime.js` -> `build/render_batch3.sh`; evidence `qa/batch3_verification_report.md`, `build/verify_batch3_source.js`.
 

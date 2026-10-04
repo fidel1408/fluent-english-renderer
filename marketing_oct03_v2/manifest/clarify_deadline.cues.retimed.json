@@ -261,7 +261,7 @@
     "confidence": {
       "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
       "islands": "measured from waveform (-38 dB); not a linguistic detector",
-      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "wordLevel": "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals). Specific unresolved item: the Spanish connector 'por' in 'Ahora cambia the deadline por the next step' (source about 14.2-15.2 s, final about 16.55-17.55 s) is transcribed 'for' by several runs; this may be code-switch recognition bias, is NOT cleared, and caption exactness stays PROVISIONAL until a human listens",
       "content": "pronunciation/naturalness NOT verified (no listening)"
     },
     "totalSamples": 957312,
@@ -406,7 +406,7 @@
     "confidence": {
       "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
       "islands": "measured from waveform (-38 dB); not a linguistic detector",
-      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "wordLevel": "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals). Specific unresolved item: the Spanish connector 'por' in 'Ahora cambia the deadline por the next step' (source about 14.2-15.2 s, final about 16.55-17.55 s) is transcribed 'for' by several runs; this may be code-switch recognition bias, is NOT cleared, and caption exactness stays PROVISIONAL until a human listens",
       "content": "pronunciation/naturalness NOT verified (no listening)"
     }
   },

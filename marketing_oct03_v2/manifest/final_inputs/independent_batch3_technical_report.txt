@@ -1,0 +1,22 @@
+BATCH3 INDEPENDENT TECHNICAL/AUDIO-INTEGRITY QA
+2026-10-04. Actual downloaded outputs checked. No genuine listening performed.
+
+PASS: full-file decode, required format/faststart, exact original/cue/sample identity, physical final audio placement, technical levels. This is not a final release or hearing/subjective AV/native-app pass.
+
+FE261026-SINCEFOR_batch3_single-host_narrated_QA-pending.mp4
+SHA256 2111868a813c9d01bbe88396b9c16dd62f5c7502ca743c3ef68cf11351171c2f
+35.8s; I=-17.9LUFS; true peak=-4.0dBTP; minimum cue correlation=0.998100; every cue delay=+4.979ms with no drift.
+
+FE261028-USED_batch3_single-host_narrated_QA-pending.mp4
+SHA256 582b5220bd087ab42a2c8cdd2520d4fce337369f6185c4f095a54fbd92052346
+35.9s; I=-17.5LUFS; true peak=-4.3dBTP; minimum cue correlation=0.999353; every cue delay=+4.979ms with no drift.
+
+FE261030-TRIALFAQ_batch3_single-host_narrated_QA-pending.mp4
+SHA256 16b9f63876a09854f45fbc31f7119f6ff4ff00b32f181f636a470f74559a84fb
+31.2s; I=-17.5LUFS; true peak=-4.9dBTP; minimum cue correlation=0.999525; every cue delay=+4.979ms with no drift.
+
+All six original MP3s match the separately recovered Eleven files byte-for-byte. Every sample of the selected decoded44.1kmono sources occurs exactly once in contiguous WAV partitions, with no missing/duplicated samples. Actual final AAC cues independently correlated against48k-resampled source cues. Full decode clean, H264High/yuv420p1080x1920/30fps/AAC48kstereo, moov before mdat, no decoded full-scale samples. Cut-neighborhood20ms maximum RMS=-58.9dBFS/peak=-48.5dBFS, consistent with low-energy boundaries but not a phonetic/listening proof.
+
+Original-source unprompted small/medium ASR is preserved separately; no selected-take semantic omission was found by those automated checks. Same source identity and final placement are verified here, so no new recognition was needed. Homophone spelling, pronunciation/naturalness, actual listening/full AV and native-app playback/disclosure remain open.
+
+Metadata-only cleanup required in next source/QA refresh: batch3 confidence.phraseBoundaries wrongly says supplied with batch2 despite the correct batch3_inputs path; confidence.wordLevel retains unrelated CanHave por/for boilerplate. Actual master hashes and waveform provenance are correct. No standalone MP4 rerender is required for these documentation fixes.

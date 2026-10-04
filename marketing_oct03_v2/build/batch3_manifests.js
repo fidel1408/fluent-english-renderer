@@ -8,7 +8,7 @@
 // (reported as structural confidence, NOT verified by listening).
 const fs = require('fs'), path = require('path'), cp = require('child_process'), L = require('./lib'); const SR = 44100;
 const V = {
-  since_for: { id: 'FE261026-SINCEFOR', title: 'SINCE / FOR', master: 'audio/originals/since_for_take1.mp3', lead: .6, endHold: 3.5, target: [25, 40], total: 17,
+  since_for: { id: 'FE261026-SINCEFOR', title: 'SINCE / FOR', wordLevel: "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals); automated normalized agreement (medium 49/49 script words; small joins 'indica duración' and omits the accent in 'cuándo'); the spoken realization of 'twenty twenty-four' and homophone spellings are ASR-spelling limits, not pronunciation findings; the practice blank is intentional; not a hearing, pronunciation or naturalness check", master: 'audio/originals/since_for_take1.mp3', lead: .6, endHold: 3.5, target: [25, 40], total: 17,
     cues: [
       { id: 'c01', text: 'Esto empezó antes y sigue ahora.', g: [0], gap: 0 },
       { id: 'c02', text: 'I’ve lived here for two years.', g: [1], gap: .77 },
@@ -23,7 +23,7 @@ const V = {
       { id: 'c11', text: 'Clases en línea:', g: [15], gap: 3.5 },
       { id: 'c12', text: 'manda GRUPO por mensaje privado.', g: [16], gap: .2 }],
     marks: { forStart: ['c03', 0], durStart: ['c03', 1], sinceStart: ['c06', 0] }, anchors: {} },
-  used_to: { mixGainDb: -0.6, id: 'FE261028-USED', title: 'USED TO', master: 'audio/originals/used_to_take2.mp3', lead: .6, endHold: 3.5, target: [25, 40], total: 14,
+  used_to: { mixGainDb: -0.6, id: 'FE261028-USED', title: 'USED TO', wordLevel: "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals); automated normalized agreement (take2 small and medium each match 52/52 script words); the intentionally incomplete 'I used to...' practice is not an omission; not a hearing, pronunciation or naturalness check", master: 'audio/originals/used_to_take2.mp3', lead: .6, endHold: 3.5, target: [25, 40], total: 14,
     cues: [
       { id: 'c01', text: 'Piensa en algo que hacías antes.', g: [0], gap: 0 },
       { id: 'c02', text: 'I used to play soccer after school.', g: [1], gap: .7 },
@@ -36,7 +36,7 @@ const V = {
       { id: 'c09', text: 'Clases en línea:', g: [11], gap: 3.3 },
       { id: 'c10', text: 'manda GRUPO por mensaje privado.', g: [12, 13], gap: .2 }],
     marks: { usedToStart: ['c05', 1], playStart: ['c05', 3] }, anchors: {} },
-  trial_faq: { mixGainDb: -1.3, id: 'FE261030-TRIALFAQ', title: 'TRIAL FAQ', master: 'audio/originals/trial_faq_take2.mp3', lead: .6, endHold: 3.5, target: [25, 40], total: 8,
+  trial_faq: { mixGainDb: -1.3, id: 'FE261030-TRIALFAQ', title: 'TRIAL FAQ', wordLevel: "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals); automated normalized agreement (take2 medium 50/50 script words; small differs only in two written accents on 'continúas'); not a hearing, pronunciation or naturalness check", master: 'audio/originals/trial_faq_take2.mp3', lead: .6, endHold: 3.5, target: [25, 40], total: 8,
     cues: [
       { id: 'c01', text: '¿Qué pasa después de la semana de prueba?', g: [0], gap: 0 },
       { id: 'c02', text: 'En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.', g: [1], gap: .75 },
@@ -59,7 +59,7 @@ for (const [name, v] of Object.entries(V)) {
   const man = { video: name, contentId: v.id, title: v.title, fps: 30, lead: v.lead, endHold: v.endHold, targetSeconds: v.target, status: 'PLANNED', ...(v.mixGainDb ? { mixGainDb: v.mixGainDb } : {}),
     ...(v.cues.some(q => q.captionStatus) ? {} : {}), note: 'Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take choice (since_for take1, used_to take2, trial_faq take2) is a provisional editorial choice from independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.',
     cues: v.cues.map((q, i) => ({ id: q.id, who: 'narrator', lang: 'es+en', capFit: true, ...(q.captionStatus ? { captionStatus: q.captionStatus } : {}), text: q.text, ...(q.caption ? { caption: q.caption } : {}), est: +((parts[i][1] - parts[i][0]) / SR).toFixed(3), gap: q.gap, file: `audio/cues/${name}_${q.id}.wav` })),
-    alignment: { anchors: v.anchors, method: 'cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff', confidence: { phraseBoundaries: 'waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: 'not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)', content: 'pronunciation/naturalness NOT verified (no listening)' }, totalSamples: N, partitions: parts, islandsMeasured: isl.map(x => [+x.s.toFixed(3), +x.e.toFixed(3)]), islandGroups: v.cues.map(q => q.g), marks: v.marks } };
+    alignment: { anchors: v.anchors, method: 'cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff', confidence: { phraseBoundaries: 'waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 3, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: v.wordLevel, content: 'pronunciation/naturalness NOT verified (no listening)' }, totalSamples: N, partitions: parts, islandsMeasured: isl.map(x => [+x.s.toFixed(3), +x.e.toFixed(3)]), islandGroups: v.cues.map(q => q.g), marks: v.marks } };
   fs.writeFileSync(path.join(L.ROOT, 'manifest', `${name}.cues.json`), JSON.stringify(man, null, 2));
   console.log(name, 'islands', isl.map(x => x.s.toFixed(2) + '-' + x.e.toFixed(2)).join(' '), '\n  partitions', parts.map(p => p.join('-')).join(' '));
 }

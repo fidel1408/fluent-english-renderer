@@ -81,9 +81,9 @@
     },
     "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
     "confidence": {
-      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 3, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
       "islands": "measured from waveform (-38 dB); not a linguistic detector",
-      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "wordLevel": "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals); automated normalized agreement (take2 medium 50/50 script words; small differs only in two written accents on 'continúas'); not a hearing, pronunciation or naturalness check",
       "content": "pronunciation/naturalness NOT verified (no listening)"
     },
     "totalSamples": 844416,

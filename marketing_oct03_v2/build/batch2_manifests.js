@@ -8,7 +8,7 @@
 // (reported as structural confidence, NOT verified by listening).
 const fs = require('fs'), path = require('path'), cp = require('child_process'), L = require('./lib'); const SR = 44100;
 const V = {
-  clarify_deadline: { mixGainDb: -0.4, id: 'FE261019-CLARIFY', title: 'CLARIFY THE DEADLINE', master: 'audio/originals/clarify_deadline_take1.mp3', lead: .6, endHold: 3.5, target: [25, 35], total: 12,
+  clarify_deadline: { mixGainDb: -0.4, id: 'FE261019-CLARIFY', title: 'CLARIFY THE DEADLINE', wordLevel: "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals). Specific unresolved item: the Spanish connector 'por' in 'Ahora cambia the deadline por the next step' (source about 14.2-15.2 s, final about 16.55-17.55 s) is transcribed 'for' by several runs; this may be code-switch recognition bias, is NOT cleared, and caption exactness stays PROVISIONAL until a human listens", master: 'audio/originals/clarify_deadline_take1.mp3', lead: .6, endHold: 3.5, target: [25, 35], total: 12,
     cues: [
       { id: 'c01', text: '¿Necesitas que te aclaren una fecha?', g: [0], gap: 0 },
       { id: 'c02', text: 'Could you clarify the deadline?', g: [1], gap: .75 },
@@ -20,7 +20,7 @@ const V = {
       { id: 'c08', text: 'Clases en línea para tu equipo:', g: [9], gap: 3.9 },
       { id: 'c09', text: 'manda EMPRESA por mensaje privado.', g: [10, 11], gap: .2 }],
     marks: { porStart: ['c07', 1], nextStart: ['c07', 2] }, anchors: {} },
-  tell_me_more: { mixGainDb: -1.5, id: 'FE261021-MORE', title: 'TELL ME MORE', master: 'audio/originals/tell_me_more_take1.mp3', lead: .6, endHold: 3.5, target: [25, 36], total: 15,
+  tell_me_more: { mixGainDb: -1.5, id: 'FE261021-MORE', title: 'TELL ME MORE', wordLevel: "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals); automated normalized content agreement only (take1 small and medium each match 50/50 script words); not a hearing, pronunciation or naturalness check", master: 'audio/originals/tell_me_more_take1.mp3', lead: .6, endHold: 3.5, target: [25, 36], total: 15,
     cues: [
       { id: 'c01', text: '¿Y después de That’s nice?', g: [0, 1], gap: 0 },
       { id: 'c02', text: 'I tried a new restaurant.', g: [2], gap: .9 },
@@ -35,7 +35,7 @@ const V = {
       { id: 'c11', text: 'Speaking Club para intermedios y avanzados:', g: [11], gap: 3.4 },
       { id: 'c12', text: 'manda CLUB por mensaje privado.', g: [12, 13, 14], gap: .2 }],
     marks: {}, anchors: {} },
-  private_company: { mixGainDb: -0.5, id: 'FE261023-PRIVATE', title: 'PRIVATE / COMPANY', master: 'audio/originals/private_company_take1.mp3', lead: .6, endHold: 3.5, target: [25, 35], total: 11,
+  private_company: { mixGainDb: -0.5, id: 'FE261023-PRIVATE', title: 'PRIVATE / COMPANY', wordLevel: "not measured by this build; independent small/medium ASR word estimates are approximate (model spread, not confidence intervals); automated normalized content agreement only (take1 small and medium each match 44/44 script words); the waveform activity near source 3.09 s and 6.96 s precedes ASR onset estimates; not a hearing, pronunciation or naturalness check", master: 'audio/originals/private_company_take1.mp3', lead: .6, endHold: 3.5, target: [25, 35], total: 11,
     cues: [
       { id: 'c01', text: '¿Buscas una clase privada o clases para tu equipo?', g: [0], gap: 0 },
       { id: 'c02', text: 'Las privadas pueden ser para una, dos o tres personas.', g: [1], gap: .9 },
@@ -57,7 +57,7 @@ for (const [name, v] of Object.entries(V)) {
   const man = { video: name, contentId: v.id, title: v.title, fps: 30, lead: v.lead, endHold: v.endHold, targetSeconds: v.target, status: 'PLANNED', ...(v.mixGainDb ? { mixGainDb: v.mixGainDb } : {}),
     ...(v.cues.some(q => q.captionStatus) ? {} : {}), note: 'Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take 1 is a provisional editorial choice based on independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.',
     cues: v.cues.map((q, i) => ({ id: q.id, who: 'narrator', lang: 'es+en', capFit: true, ...(q.captionStatus ? { captionStatus: q.captionStatus } : {}), text: q.text, ...(q.caption ? { caption: q.caption } : {}), est: +((parts[i][1] - parts[i][0]) / SR).toFixed(3), gap: q.gap, file: `audio/cues/${name}_${q.id}.wav` })),
-    alignment: { anchors: v.anchors, method: 'cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff', confidence: { phraseBoundaries: 'waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: 'not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)', content: 'pronunciation/naturalness NOT verified (no listening)' }, totalSamples: N, partitions: parts, islandsMeasured: isl.map(x => [+x.s.toFixed(3), +x.e.toFixed(3)]), islandGroups: v.cues.map(q => q.g), marks: v.marks } };
+    alignment: { anchors: v.anchors, method: 'cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff', confidence: { phraseBoundaries: 'waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: v.wordLevel, content: 'pronunciation/naturalness NOT verified (no listening)' }, totalSamples: N, partitions: parts, islandsMeasured: isl.map(x => [+x.s.toFixed(3), +x.e.toFixed(3)]), islandGroups: v.cues.map(q => q.g), marks: v.marks } };
   fs.writeFileSync(path.join(L.ROOT, 'manifest', `${name}.cues.json`), JSON.stringify(man, null, 2));
   console.log(name, 'islands', isl.map(x => x.s.toFixed(2) + '-' + x.e.toFixed(2)).join(' '), '\n  partitions', parts.map(p => p.join('-')).join(' '));
 }

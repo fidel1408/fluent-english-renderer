@@ -1,0 +1,299 @@
+{
+  "title": "Fluent English October2026 current12-video media and QA index",
+  "as_of_utc": "2026-10-04T03:33:38Z",
+  "current_videos": [
+    {
+      "content_id": "FE261003-AGREE",
+      "title": "I agree",
+      "revision": "REV3",
+      "filename": "i_agree_oct03_v2_REV3_single-host_narrated_QA-pending.mp4",
+      "sha256": "7c2f91402db95e7bf67eb90c865d91758cfa6ad6f418c367b3569453e05ceee7",
+      "bytes": 5332555,
+      "duration_seconds": 27.6,
+      "drive_file_id": "1bapjtmBkrmqHuSPbU7vp35ep_ivGFo8b",
+      "drive_url": "https://drive.google.com/file/d/1bapjtmBkrmqHuSPbU7vp35ep_ivGFo8b/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS within documented coverage",
+      "genuine_listening": "UNRUN",
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261005-ACTUALLY",
+      "title": "Actually / Currently",
+      "revision": "REV4",
+      "filename": "actually_currently_oct03_v2_REV4_single-host_narrated_QA-pending.mp4",
+      "sha256": "9ed2d6088793b8d4bc2f743aac654ff56b32541fff05aebdff6c19a9164f857e",
+      "bytes": 6095452,
+      "duration_seconds": 31.4,
+      "drive_file_id": "1BobG_2KizXCPdLtURjwtrihGtuINXw0t",
+      "drive_url": "https://drive.google.com/file/d/1BobG_2KizXCPdLtURjwtrihGtuINXw0t/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS within documented coverage",
+      "genuine_listening": "UNRUN",
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261007-FORWARD",
+      "title": "Looking forward to",
+      "revision": "REV4",
+      "filename": "looking_forward_to_oct03_v2_REV4_single-host_narrated_QA-pending.mp4",
+      "sha256": "9818666cd3a8bd52584036cc21e1c1fbbbc49fd4068a426f5f74fb9a35e43dc0",
+      "bytes": 5418424,
+      "duration_seconds": 29.1,
+      "drive_file_id": "1L_tWLDgkwqFtnLJM9_z82PqS5QTtCBBp",
+      "drive_url": "https://drive.google.com/file/d/1L_tWLDgkwqFtnLJM9_z82PqS5QTtCBBp/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS within documented coverage",
+      "genuine_listening": "UNRUN",
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261012-CANHAVE",
+      "title": "Pedir algo con please",
+      "revision": "batch1 REV2",
+      "filename": "FE261012-CANHAVE_batch1_REV2_single-host_narrated_QA-pending.mp4",
+      "sha256": "6451267aadd9578bb3a715ad599f2be887d5727c4d7af6fa6ed780a12449dac3",
+      "bytes": 5076318,
+      "duration_seconds": 25.5,
+      "drive_file_id": "1qxyj-kr4Up_bpHxilKOfzEpmsTVJZqIx",
+      "drive_url": "https://drive.google.com/file/d/1qxyj-kr4Up_bpHxilKOfzEpmsTVJZqIx/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261014-BORROW",
+      "title": "Borrow y lend",
+      "revision": "batch1 REV2",
+      "filename": "FE261014-BORROW_batch1_REV2_single-host_narrated_QA-pending.mp4",
+      "sha256": "519cc6605a1d6d3337cefd75c8eacb64b2485e4d46da5669183f27e5a75e6f2b",
+      "bytes": 6313456,
+      "duration_seconds": 34.9,
+      "drive_file_id": "1d0meL0ug13O5iQEvkmnoUb7TNAc8Z3eh",
+      "drive_url": "https://drive.google.com/file/d/1d0meL0ug13O5iQEvkmnoUb7TNAc8Z3eh/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261016-SCHEDULE",
+      "title": "Un horario para tu semana",
+      "revision": "batch1 REV2",
+      "filename": "FE261016-SCHEDULE_batch1_REV2_single-host_narrated_QA-pending.mp4",
+      "sha256": "2d2e5b4b3add8c5644ef748354c9ab57f8629cadf229e693872bdd8a029fe62c",
+      "bytes": 5207078,
+      "duration_seconds": 26.1,
+      "drive_file_id": "1IekIpDZltfgcqNdL2ffDL_zKGXN9jJy6",
+      "drive_url": "https://drive.google.com/file/d/1IekIpDZltfgcqNdL2ffDL_zKGXN9jJy6/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261019-CLARIFY",
+      "title": "Pedir una aclaración",
+      "revision": "batch2 v1",
+      "filename": "FE261019-CLARIFY_batch2_single-host_narrated_QA-pending.mp4",
+      "sha256": "eda56cf5a4f75ce068e7f5372248e6644dbcc4776599366cf0d77c5f25fc4504",
+      "bytes": 5546738,
+      "duration_seconds": 31.7,
+      "drive_file_id": "1R70YjZsPyfHiDu-0zFAe1qdIYwaUz8tW",
+      "drive_url": "https://drive.google.com/file/d/1R70YjZsPyfHiDu-0zFAe1qdIYwaUz8tW/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": "por/for actual speech/caption agreement at final16.55–17.55s unresolved",
+      "publication_hold": "Specific por/for check pending"
+    },
+    {
+      "content_id": "FE261021-MORE",
+      "title": "Mantener una conversación",
+      "revision": "batch2 v1",
+      "filename": "FE261021-MORE_batch2_single-host_narrated_QA-pending.mp4",
+      "sha256": "1dd02ceccf8347fb394ba1ec4c7b8341ac927cd7bb743d6ef7a1a9cb419acd3a",
+      "bytes": 6459516,
+      "duration_seconds": 35.7,
+      "drive_file_id": "1JOicMRSnSBcGhJVDEONnZyvbbofCn0E1",
+      "drive_url": "https://drive.google.com/file/d/1JOicMRSnSBcGhJVDEONnZyvbbofCn0E1/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261023-PRIVATE",
+      "title": "Privadas o clases para empresas",
+      "revision": "batch2 v1",
+      "filename": "FE261023-PRIVATE_batch2_single-host_narrated_QA-pending.mp4",
+      "sha256": "a6cd1e900c7896f060eeb57d797fbab0b02b3e4e48135c60934605086b3845a4",
+      "bytes": 5159129,
+      "duration_seconds": 29.0,
+      "drive_file_id": "1p1srkQAUntHFXhdsA1ADuxN9fIZJUn6g",
+      "drive_url": "https://drive.google.com/file/d/1p1srkQAUntHFXhdsA1ADuxN9fIZJUn6g/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261026-SINCEFOR",
+      "title": "Since y for",
+      "revision": "batch3 v1",
+      "filename": "FE261026-SINCEFOR_batch3_single-host_narrated_QA-pending.mp4",
+      "sha256": "2111868a813c9d01bbe88396b9c16dd62f5c7502ca743c3ef68cf11351171c2f",
+      "bytes": 6399241,
+      "duration_seconds": 35.8,
+      "drive_file_id": "1WefGOig0eSp_r91_LDicR6QMXz83stiG",
+      "drive_url": "https://drive.google.com/file/d/1WefGOig0eSp_r91_LDicR6QMXz83stiG/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261028-USED",
+      "title": "Hablar de hábitos de antes",
+      "revision": "batch3 v1",
+      "filename": "FE261028-USED_batch3_single-host_narrated_QA-pending.mp4",
+      "sha256": "582b5220bd087ab42a2c8cdd2520d4fce337369f6185c4f095a54fbd92052346",
+      "bytes": 6382271,
+      "duration_seconds": 35.9,
+      "drive_file_id": "1NldPv7rUG0GxguBwuJwc4Zi0WRhk1TGk",
+      "drive_url": "https://drive.google.com/file/d/1NldPv7rUG0GxguBwuJwc4Zi0WRhk1TGk/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    },
+    {
+      "content_id": "FE261030-TRIALFAQ",
+      "title": "Cómo funciona la primera semana",
+      "revision": "batch3 v1",
+      "filename": "FE261030-TRIALFAQ_batch3_single-host_narrated_QA-pending.mp4",
+      "sha256": "16b9f63876a09854f45fbc31f7119f6ff4ff00b32f181f636a470f74559a84fb",
+      "bytes": 5516974,
+      "duration_seconds": 31.2,
+      "drive_file_id": "14uWHrploVgx9y9kgR3VFP3yW3ZXVrBi8",
+      "drive_url": "https://drive.google.com/file/d/14uWHrploVgx9y9kgR3VFP3yW3ZXVrBi8/view?usp=drivesdk",
+      "drive_owner_only": true,
+      "raw_readback_verified": true,
+      "platform_scope": [
+        "TikTok"
+      ],
+      "visual_qa": "PASS within documented independent actual-frame coverage",
+      "technical_qa": "PASS measured decode/source/physical sync/levels",
+      "genuine_listening": "UNRUN",
+      "specific_open_issue": null,
+      "publication_hold": "Instagram native AI disclosure hold; Facebook/TikTok queue managed separately by parent"
+    }
+  ],
+  "media_count": 12,
+  "global_limits": [
+    "Independent visual and technical review is not an actual listening/full AV pass.",
+    "Owner said the voice sounds good; this is owner feedback, not a completed assistant hearing audit of all12.",
+    "Clarify por/for around final16.55–17.55s remains unresolved.",
+    "Native-platform checks are partial per video. Instagram native AI disclosure is held; scheduling receipts live separately.",
+    "Do not add IPA or rerender the current12 videos."
+  ],
+  "independent_review_coverage": {
+    "batch1_REV2": {
+      "whole_frames": 501,
+      "native_caption_crops": 21,
+      "native_whole_stills": 4
+    },
+    "batch2_v1": {
+      "whole_frames": 498,
+      "native_caption_crops": 26,
+      "native_whole_stills": 11
+    },
+    "batch3_v1": {
+      "whole_frames": 510,
+      "native_caption_crops": 28,
+      "native_whole_stills": 12
+    }
+  },
+  "references_are_not_fetch_authority": "Drive preview URLs are supplied only for the readable owner index; do not fetch them or access any unrelated files."
+}

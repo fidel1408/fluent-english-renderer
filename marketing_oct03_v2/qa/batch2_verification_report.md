@@ -1,3 +1,5 @@
+> **HISTORICAL - SUPERSEDED by `qa/batch2_METADATA_REV2_report.md` (metadata/hold-bookkeeping corrections only; media unchanged).** The creator figures below are kept as originally written; independent results are recorded in the METADATA_REV2 report.
+
 # October batch 2 - verification report (CLARIFY / MORE / PRIVATE)
 
 **All three files: NARRATED, QA-PENDING. Not final, not publish-ready, not scheduled. Nobody has listened. ASR is not listening.** Sonnet 5.5, High, Fast off; no TTS, external service, purchase, key, PR or publication.

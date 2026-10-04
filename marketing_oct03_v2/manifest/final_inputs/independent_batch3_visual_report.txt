@@ -1,0 +1,65 @@
+Fluent English October batch 3 independent visual QA
+
+Result: VISUAL PASS within the documented coverage. No required media correction was found. Genuine listening, exact auditory caption agreement, full AV playback and native target-app preview remain unrun. This is not release approval.
+
+Scope and method
+The reviewed files are the actual downloaded 1080x1920, 30 fps MP4s. I visually inspected 510 distinct whole frames across the complete durations at 270x480, 28 native caption crops and 12 native whole stills. The coverage includes every half-second plus the final frame, every narration cue onset+0.15 s and midpoint, all scene replacements at 0.1 s spacing, key emphasis changes and hold boundaries. All 3,087 encoded frames decoded without FFmpeg errors. Decoding all frames is not individual visual review of all frames. Source code/timing maps supplement the actual images.
+
+The proof includes 20 periodic contact sheets, 21 transition/detail sheets, five cue sheets, five hold sheets and five native-caption sheets. Frame numbers are zero-based; frame n is displayed at n/30 seconds. actual_review_coverage.json records the exact frames and viewed image files. The complete 270x480 decode cache is omitted from archival copies because the evidence sheets contain the reviewed frames.
+
+Since and For
+The opening is readable at 0.5 s and says Empezó antes y sigue ahora. The quoted FOR example reads I’ve lived here for two years / Vivo aquí desde hace dos años, with FOR + duración. A coral span covers the time from the start point to AHORA. The SINCE state coherently replaces English, Spanish and rule: I’ve lived here since 2024 / Vivo aquí desde 2024 / SINCE + inicio. The 2024 flag points to the start and the arrow reaches AHORA. No exact current month/date or real personal-history claim appears. Native stills at 7.5 and 15 s verify badge and line clearance.
+
+The FOR-to-SINCE replacement around 9.83–10.93 s clears the outgoing words before the new card and text appear. The SINCE-to-practice replacement around 17.72–18.9 s clears both solved example and timeline. The practice stays I’ve studied English ___ six months, followed by ¿Since o for? with neither choice marked. It is still unanswered at 27.8 s. The CTA is one action: Clases en línea, Manda GRUPO, por mensaje privado.
+
+Used To
+The opening soccer-ball/backpack vignette is marked ANTES, while the same present-day adult host stays outside it. The quoted example and translation are correct: I used to play soccer after school / Antes jugaba fútbol después de la escuela. The later card explicitly says Un hábito de antes que ya cambió, with USED TO + verbo base and play. It describes a changed routine without stating soccer is impossible now, that used to has no other uses, or teaching be/get used to + -ing. ANTES and AHORA are distinct from the example text.
+
+The example clears around 8.64–9.73 s before the rule settles. The solved play and old scene clear around 18.63–19.8 s. The new I used to ___ completion stays blank throughout practice; no answer is leaked in captions or CTA. Native stills at 4.5 and 16.5 s verify rule/example/translation and badge clearance; 25 s confirms the unanswered prompt.
+
+Trial FAQ
+The opening scopes this offer to Grupos y Speaking Club. At 3.63–10.4 s the card says Primera semana sin pago adelantado and Si no continúas, no pagas. At 11.53 s the entire continuation condition is readable together: Si continúas, el pago cubre las cuatro semanas completas, incluida la primera. Exactly four numbered blocks share one bracket; the first remains inside when it is emphasized around 15.4–15.8 s. There is no fifth block or offer of an additional week. Native 4.5 and 16.5 s stills confirm the numbers and conditional copy.
+
+The detail card is fully settled from frame 591 at 19.700 s through frame 722 at 24.067 s, a 4.400 s display interval. It reads Precios y condiciones en la descripción, Club: intermedios y avanzados, Grupos: máx.10, Club: máx.6. Native 21 s confirms readable separation. The end CTA is one private-message action using either GRUPO or CLUB, with Clases en línea. No private/company trial, unconditional free claim, numeric price, reserved place, future opening or payment link is shown.
+
+No numeric public price is embedded in these MP4s. The approved Trial TikTok caption supplies 2000/2500 MXN groups and 2400/3000 Club, person/four-week units, IVA included, maximum capacities and Club without levels. The publisher still needs to recheck the current Guide and the actual entered post description immediately before release. This visual review neither changes nor approves publication text. Trial FAQ is TikTok-only.
+
+Host, captions and phone readability
+The pixels show one clearly adult male-presenting educator with visible shoulders, torso, collared shirt and subtle stubble. There is only one speaking face. Illustrations add no implied second voice or child narrator. The host’s mouth stays clear of captions in the inspected voiced intervals. Source character labels were not used as the sole evidence of casting.
+
+All 28 caption crops show glyphs inside the brief’s x100–860/y180–1420 reserve. The bottom caption box may extend beyond the horizontal text reserve, but the essential glyphs fit. The three-line Trial captions remain legible and below the mouth. Role chips, teaching translations and secondary CTA lines are legible at actual 270x480; source typography corroborates approximately 12.9 px role labels, 13.8 px secondary CTA and 13.5–14.5 px captions. Native stills confirm no clipped letters, badge collisions or mixed old/new teaching content. This is not proof against platform overlays; actual target-app preview remains outstanding.
+
+Measured reading holds
+Conservative full-opacity/settled starts were selected from the timing source, then checked against rendered boundary and interior frames. Every encoded frame in the selected key hold ROIs was also compared numerically. Background and compression can vary; the numerical checks support continuity, not perfect pixel identity or human review of every frame.
+
+since_for
+- for_example: n214–n295, 7.133–9.833 s frame timestamps, 2.733 s displayed. Minimum 2.5 s: PASS.
+- since_example: n427–n531, 14.233–17.700 s frame timestamps, 3.500 s displayed. Minimum 2.5 s: PASS.
+- practice_after_question: n740–n834, 24.667–27.800 s frame timestamps, 3.167 s displayed. Minimum 3.0 s: PASS.
+- cta: n874–n1073, 29.133–35.767 s frame timestamps, 6.667 s displayed. Minimum 3.0 s: PASS.
+
+used_to
+- example_bilingual: n108–n259, 3.600–8.633 s frame timestamps, 5.067 s displayed. Minimum 2.5 s: PASS.
+- rule_card: n478–n558, 15.933–18.600 s frame timestamps, 2.700 s displayed. Minimum 2.5 s: PASS.
+- practice_after_question: n731–n824, 24.367–27.467 s frame timestamps, 3.133 s displayed. Minimum 3.0 s: PASS.
+- cta: n864–n1076, 28.800–35.867 s frame timestamps, 7.100 s displayed. Minimum 3.0 s: PASS.
+
+trial_faq
+- trial_state: n109–n312, 3.633–10.400 s frame timestamps, 6.800 s displayed. Minimum 2.5 s: PASS.
+- continuation_state: n479–n557, 15.967–18.567 s frame timestamps, 2.633 s displayed. Minimum 2.5 s: PASS.
+- details_card: n591–n722, 19.700–24.067 s frame timestamps, 4.400 s displayed. Minimum 4.0 s: PASS.
+- cta: n762–n935, 25.400–31.167 s frame timestamps, 5.800 s displayed. Minimum 3.0 s: PASS.
+
+The early practice_unanswered measure refers to the blank card before the follow-up question has entered. The stricter practice_after_question intervals above include the complete question, and both exceed 3 s. FOR/SINCE and Used To run slightly above the nominal 35 s target; this is explicitly permitted by the brief to preserve narration and reading time.
+
+Remaining gates and metadata
+Production separately reports sample-exact source preservation and cue sync, with correlations>=0.9981 and a uniform+4.979 ms delay. That technical result is not listening. I did not hear these files, assess pronunciation/naturalness/emotional delivery, watch them in real time with audio, or preview them inside a target app. Those gates remain UNRUN, with parent-controlled release and scheduling.
+
+Production identified inherited batch2/CanHave wording in confidence metadata. Correct the provenance text without rerendering these visually passed MP4s. No new media change is requested by this audit.
+
+Actual media identities
+since_for: 35.8 s; 1074 frames; SHA256 2111868a813c9d01bbe88396b9c16dd62f5c7502ca743c3ef68cf11351171c2f
+used_to: 35.9 s; 1077 frames; SHA256 582b5220bd087ab42a2c8cdd2520d4fce337369f6185c4f095a54fbd92052346
+trial_faq: 31.2 s; 936 frames; SHA256 16b9f63876a09854f45fbc31f7119f6ff4ff00b32f181f636a470f74559a84fb
+
+Evidence scope and exact frame numbers are in actual_review_coverage.json; hold interval metadata is in each topic/hold_measurement.json. Selected all-frame numerical results are in actual_encoded_hold_pixel_analysis.json. References are frozen copies of the approved brief, source and timing maps as inspected. No external service was changed by the visual audit.

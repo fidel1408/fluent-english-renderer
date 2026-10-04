@@ -1,11 +1,11 @@
 {
- "label": "fixed",
+ "label": "checkpoint1",
  "html": "should-for-advice.html",
- "bytes": 8075090,
- "sha256": "0b7056797bc4e864e97f3081dcf335816e19284cef6b015deb3b0ed22c0ae90e",
- "date": "2026-10-04T07:05:05.619Z",
+ "bytes": 8075100,
+ "sha256": "dc56a36bd387982f47483ee42b475757e9febae35247b52e95a0d757c8563120",
+ "date": "2026-10-04T07:07:15.683Z",
  "total": 42,
- "passed": 41,
+ "passed": 42,
  "results": [
   {
    "id": "1.checkForm.table",
@@ -145,7 +145,7 @@
    "item": 5,
    "name": "replay after a branch choice restarts the example cleanly (no leftover choice audio)",
    "pass": true,
-   "detail": "{\"afterReplay\":{\"local\":0.3,\"cur\":null},\"strayChoice\":0}"
+   "detail": "{\"afterReplay\":{\"local\":0.3001000000000931,\"cur\":null},\"strayChoice\":0}"
   },
   {
    "id": "6.read.phone-portrait-390x844.words",
@@ -249,8 +249,8 @@
    "id": "6.read.desktop-1600x900.targets",
    "item": 6,
    "name": "desktop-1600x900: controls ≥ 32 px",
-   "pass": false,
-   "detail": "{\"n\":49,\"sample\":[\"__start__:Lesson timeline:402x24\",\"1.2:pause timer:28x34\",\"1.2:more time:28x34\",\"1.2:hint:28x34\",\"1.2:show answer:28x34\",\"1.2:Lesson timeline:402x24\"]}"
+   "pass": true,
+   "detail": "{\"n\":0,\"sample\":[]}"
   },
   {
    "id": "6.read.desktop-1600x900.noHScroll",
@@ -292,7 +292,7 @@
    "item": 8,
    "name": "class-time clock stops when the lesson is finished",
    "pass": true,
-   "detail": "{\"finished\":true,\"a\":0.092,\"b\":0.092,\"froze\":true}"
+   "detail": "{\"finished\":true,\"a\":0.091,\"b\":0.091,\"froze\":true}"
   },
   {
    "id": "8.clock.explainsPlannedVsActual",

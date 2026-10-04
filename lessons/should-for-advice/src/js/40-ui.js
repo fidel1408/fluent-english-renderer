@@ -45,7 +45,13 @@
     const app = (UI.app = h('div', { id: 'app' }));
     const vp = (UI.vp = h('div', { id: 'viewport' }));
     const stage = (UI.stage = h('div', { id: 'stage' }));
-    vp.appendChild(stage);
+    /* wide layout: the artbox fills the viewport and the 1920x1080 stage is scaled into it.
+       compact layout (small screens): artbox = scaled cinematic art; capdock + dock = readable captions and interaction at native size */
+    const art = (UI.artbox = h('div', { id: 'artbox' })); art.appendChild(stage);
+    UI.capdock = h('div', { id: 'capdock', 'aria-live': 'off' });
+    vp.appendChild(h('div', { id: 'leftcol' }, [art, UI.capdock]));
+    UI.dockhead = h('div', { id: 'dockhead' }); UI.dockbar = h('div', { id: 'dockbar' }); UI.dockbody = h('div', { id: 'dockbody' }, [UI.dockhead]);
+    vp.appendChild(h('div', { id: 'dock' }, [UI.dockbar, UI.dockbody]));
     const mk = (id, cls) => { const d = h('div', { id, class: 'layer ' + (cls || '') }); stage.appendChild(d); return d; };
     const back = mk('envBack'), actorsL = mk('actorsL'), front = mk('envFront'), propsL = mk('propsL'), ui = mk('ui');
     actorsL.innerHTML = '<svg viewBox="0 0 1920 1080"><g id="actorsG"></g></svg>'; propsL.innerHTML = '<svg viewBox="0 0 1920 1080"><g id="propsG"></g></svg>';
@@ -103,7 +109,7 @@
       pop.appendChild(h('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } }, [mb, h('span', { html: UB(label), style: { minWidth: '90px' } }), rng]));
     });
     app.appendChild(pop);
-    UI.soundBtn = ib('vol', 'sound', () => { pop.classList.toggle('on'); const r = UI.soundBtn.getBoundingClientRect(); pop.style.left = Math.max(6, Math.min(innerWidth - 260, r.left - 100)) + 'px'; });
+    UI.soundBtn = ib('vol', 'sound', () => { pop.classList.toggle('on'); const r = UI.soundBtn.getBoundingClientRect(); pop.style.left = Math.max(6, Math.min(innerWidth - 260, r.left - 100)) + 'px'; if (UI.compact) pop.style.bottom = Math.round(innerHeight - UI.bar.getBoundingClientRect().top + 8) + 'px'; });
     UI.ccBtn = h('button', { class: 'tgl', type: 'button', text: 'CC', 'aria-pressed': 'false', onclick: () => UI.setCC(!UI.cc) }); withTip(UI.ccBtn, 'captions');
     UI.ipaBtn = h('button', { class: 'tgl', type: 'button', text: 'IPA', 'aria-pressed': 'true', onclick: () => UI.setIPA(!UI.ipa) }); withTip(UI.ipaBtn, 'show pronunciation');
     bar.append(UI.ccBtn, UI.ipaBtn, UI.soundBtn, ib('notes', 'teacher notes', () => UI.toggleNotes()), UI.fsBtn = ib('full', 'full screen', () => UI.fullscreen()), ib('flag', 'restart lesson', () => UI.confirmRestart()));
@@ -120,17 +126,28 @@
     quick.append(UI.ccBtn2, UI.ipaBtn2);
     stage.appendChild(h('div', { id: 'cc', 'aria-live': 'off' }));
     app.append(vp, bar, show, quick, tip); root.appendChild(app);
-    try { UI.cc = localStorage.getItem('fe-should-cc') === '1'; UI.ipa = localStorage.getItem('fe-should-ipa') !== '0'; } catch (e) { UI.cc = false; UI.ipa = true; }
+    try { const sc = localStorage.getItem('fe-should-cc'); UI.cc = sc == null ? UI.layoutMode() !== 'wide' : sc === '1'; UI.ipa = localStorage.getItem('fe-should-ipa') !== '0'; } catch (e) { UI.cc = UI.layoutMode() !== 'wide'; UI.ipa = true; }
     UI.setCC(UI.cc); UI.setIPA(UI.ipa);
     document.body.classList.toggle('reduced', FE.reduced());
 
     // fitting
     const fit = () => {
-      const r = vp.getBoundingClientRect(); const s = Math.min(r.width / 1920, r.height / 1080);
-      UI.scale = s; stage.style.transform = `scale(${s})`;
-      stage.style.left = Math.round((r.width - 1920 * s) / 2) + 'px'; stage.style.top = Math.round((r.height - 1080 * s) / 2) + 'px';
+      if (UI.applyLayout) UI.applyLayout(UI.layoutMode());
+      const r = vp.getBoundingClientRect();
+      if (!UI.compact) {
+        art.style.width = art.style.height = ''; UI.leftcol && (UI.leftcol.style.width = '');
+        const s = Math.min(r.width / 1920, r.height / 1080);
+        UI.scale = s; stage.style.transform = `scale(${s})`;
+        stage.style.left = Math.round((r.width - 1920 * s) / 2) + 'px'; stage.style.top = Math.round((r.height - 1080 * s) / 2) + 'px';
+      } else {
+        const side = UI.orient === 'side';
+        const aw = side ? Math.min(Math.round(r.width * 0.47), Math.round((r.height - 118) * 16 / 9)) : Math.round(r.width), ah = Math.round(aw * 9 / 16);
+        art.style.width = aw + 'px'; art.style.height = ah + 'px'; UI.leftcol.style.width = aw + 'px';
+        UI.scale = aw / 1920; stage.style.transform = `scale(${UI.scale})`; stage.style.left = '0px'; stage.style.top = '0px';
+      }
     };
     UI.fit = fit;
+    UI.leftcol = $('#leftcol', vp); if (UI.compactInit) UI.compactInit();
     new ResizeObserver(fit).observe(vp); window.addEventListener('resize', fit); fit();
     document.addEventListener('fullscreenchange', () => { fit(); UI.fsBtn.classList.toggle('on', !!document.fullscreenElement); });
 
@@ -167,6 +184,7 @@
   };
   UI.showCC = function (ln) {
     UI.ccLine = ln; UI.ccSeg = E.seg && E.seg.idx;
+    if (UI.caption) UI.caption(ln);
     if (!UI.cc || ln.who !== 'narr') return;
     const el = $('#cc'); el.innerHTML = UB(ln.text); el.classList.add('on');
   };
@@ -183,8 +201,8 @@
   /* end of lesson: the class clock is frozen and the difference between the planned 60:00 and real time is explained */
   UI.showFinish = function () {
     const n = $('#finishNote'), plan = FE.TOTAL, act = E.actual(), d = Math.round(act - plan);
-    const cmp = Math.abs(d) < 30 ? 'about the same as the plan' : d > 0 ? FE.fmtTime(d) + ' longer than the plan' : FE.fmtTime(-d) + ' shorter than the plan';
-    n.innerHTML = `<h4>${UB('The lesson is finished')}</h4><p>${UB('Planned time: ' + FE.fmtTime(plan) + '. Class time: ' + FE.fmtTime(act) + ', ' + cmp + '.')}</p><p class="small">${UB('The plan is 60 minutes of lesson time. Class time is real time, so it also counts pauses, extra minutes, and waiting at each activity. It stopped when the lesson ended.')}</p>`;
+    const mins = Math.round(Math.abs(d) / 60), cmp = Math.abs(d) < 30 ? 'about the same as the plan' : (mins <= 1 ? 'about one minute' : 'about ' + mins + ' minutes') + (d > 0 ? ' longer' : ' shorter') + ' than the plan';
+    n.innerHTML = `<h4>${UB('The lesson is finished')}</h4><p>${UB('Planned time:')} <b class="num">${FE.fmtTime(plan)}</b> &nbsp; ${UB('Class time:')} <b class="num">${FE.fmtTime(act)}</b></p><p>${UB('Class time was ' + cmp + '.')}</p><p class="small">${UB('The plan is sixty minutes of lesson time. Class time is real time, so it also counts pauses, extra minutes, and waiting at each activity. It stopped when the lesson ended.')}</p>`;
     n.classList.add('on');
   };
   UI.confirmRestart = function () {
@@ -216,13 +234,13 @@
           <button class="mode" type="button" data-m="demo"><h3>${UB('Demo mode')}</h3><div class="d">${UB('Follows the sixty minute plan by itself.')}</div></button>
         </div>
         <div class="tips"><span class="kbd">H</span><div>${UB('Hide or show the controls. A small button stays in the corner.')}</div></div>
-        <div class="tips tips2"><div>${UB('The plan is 60 minutes. Class time is real time: it also counts pauses and waiting.')}</div></div>
+        <div class="tips tips2"><div>${UB('The plan is sixty minutes. Class time is real time. It also counts pauses and waiting.')}</div></div>
         <button class="btn bigstart" id="startBtn" type="button">${UI.svgIcon('play').replace('<svg', '<svg style="width:46px;height:46px"')}${UB('Start the lesson')}</button>
       </div>
       <div class="ptr" style="left:1700px;top:900px;font-size:26px;text-align:center;width:210px">${UB('Controls are here')}<div style="font-size:60px;line-height:1">&#8595;</div></div>`;
     s.querySelector('#startTitle').innerHTML = U('Should for Advice');
     s.querySelectorAll('.mode').forEach((b) => b.addEventListener('click', () => { s.querySelectorAll('.mode').forEach((x) => x.classList.toggle('sel', x === b)); E.mode = b.dataset.m; UI.renderMode(); }));
-    s.querySelector('#startBtn').addEventListener('click', () => { UI.hideStart(); E.start(E.mode); UI.setBar(true, false); UI.toast('Press H to show the controls', 4500); });
+    s.querySelector('#startBtn').addEventListener('click', () => { UI.hideStart(); E.start(E.mode); UI.setBar(true, false); UI.toast(UI.compact ? 'Tap the button in the corner to show the controls' : 'Press H to show the controls', 4500); });
     UI.startEl = s; return s;
   };
   UI.hideStart = function () { UI.startEl.style.display = 'none'; };
@@ -243,7 +261,7 @@
   UI.renderSeg = function () {
     const s = E.seg; if (!s) return;
     const c = FE.chapters[s.ch - 1];
-    $('#hudCh').innerHTML = `<span class="chn">${s.ch}</span>${UB(c.title)}`;
+    $('#hudCh').innerHTML = `<span class="chn">${s.ch}</span><span class="chtitle">${UB(c.title)}</span>`; $('#hudCh').title = c.title;
     $('#hudSeg').innerHTML = UB(s.title);
     $('#chips').innerHTML = FE.chapters.map((x) => `<i class="${x.n < s.ch ? 'done' : x.n === s.ch ? 'cur' : ''}" data-n="${x.n}"></i>`).join('');
     UI.renderNotes();
@@ -278,7 +296,7 @@
   };
 
   UI.bindEngine = function () {
-    E.on('seg', () => { UI.ccLine = null; $('#cc').classList.remove('on'); $('#finishNote').classList.remove('on'); UI.renderSeg(); UI.renderClocks(); UI.renderReveal(); });
+    E.on('seg', () => { UI.ccLine = null; if (UI.caption) UI.caption(null); if (UI.compact) { UI.sync(); UI.dockbody.scrollTop = 0; } $('#cc').classList.remove('on'); $('#finishNote').classList.remove('on'); UI.renderSeg(); UI.renderClocks(); UI.renderReveal(); });
     E.on('revealstate', () => UI.renderReveal());
     E.on('line', (ln) => UI.showCC(ln));
     E.on('state', UI.renderState); E.on('mode', () => { UI.renderMode(); });

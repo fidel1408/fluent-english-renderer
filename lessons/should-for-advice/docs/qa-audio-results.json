@@ -1,5 +1,5 @@
 {
- "date": "2026-10-01T22:56:22.777Z",
+ "date": "2026-10-04T07:08:33.341Z",
  "results": [
   {
    "name": "narration clips begin in step with the planned timeline (≤0.35 s late)",
@@ -34,7 +34,7 @@
   {
    "name": "animation frame time in a dialogue scene (headless software rendering)",
    "ok": true,
-   "info": "median 16.7 ms, p95 16.8 ms"
+   "info": "median 16.7 ms, p95 16.7 ms"
   },
   {
    "name": "rendering loop stops while paused",

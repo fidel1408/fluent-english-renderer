@@ -2,7 +2,7 @@
 import { chromium } from 'playwright-core';
 import path from 'node:path'; import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const [,, t='0', out='/tmp/dev.png', js='', w='1920', h='1080', start='1'] = process.argv;
+const [,, t='0', out='dev.png', js='', w='1920', h='1080', start='1'] = process.argv;
 const b = await chromium.launch({ executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args:['--no-sandbox','--autoplay-policy=no-user-gesture-required'] });
 const p = await b.newPage({ viewport:{ width:+w, height:+h } });
 p.on('console', m => { if (['error','warning'].includes(m.type())) console.log('[console]', m.type(), m.text().slice(0,400)); });

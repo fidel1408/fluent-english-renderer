@@ -172,12 +172,12 @@ const br = await ev(() => {
     document.querySelectorAll('.panel .cards .opt')[n2].click();
     const f2 = [...document.querySelectorAll('.tok')].map((el) => el.innerHTML.includes('✓')).join(',');
     const all = [...document.querySelectorAll('.panel')].map(words).join(' | ');
-    return { f1, f2, note1: note1.slice(0, 60), res: all.includes('Your two steps') ? 'good' : all.includes('same kind') ? 'same' : 'none', mood: E.scene.actors[0].exprName };
+    return { f1, f2, note1: note1.slice(0, 60), res: all.includes('Your two steps') ? 'good' : all.includes('still open') ? 'open' : 'none', mood: E.scene.actors[0].exprName };
   };
   return { a: run(0, 0), b: run(0, 1), c: run(1, 2), d: run(2, 1), e: run(1, 0) };
 });
 t('mission: different first choices produce different scene states and different outcome narration', new Set([br.a.f1, br.c.f1, br.d.f1]).size === 3 && new Set([br.a.note1, br.c.note1, br.d.note1]).size === 3, JSON.stringify([br.a.f1, br.c.f1, br.d.f1]));
-t('mission: revised advice changes the final state (complementary steps = "good", repeated step = "same")', br.a.res === 'good' && br.b.res === 'same' && br.c.res === 'same' && br.d.res === 'good' && br.e.res === 'good' && br.a.f2 !== br.b.f2, JSON.stringify([br.a.res, br.b.res, br.c.res, br.d.res, br.e.res]));
+t('mission: closing comment follows the FINAL facts (two or more true lamps = "good"; otherwise "still open"; a stale first step no longer counts)', br.a.res === 'good' && br.b.res === 'open' && br.c.res === 'open' && br.d.res === 'open' && br.e.res === 'good' && br.a.f2 !== br.b.f2, JSON.stringify([br.a.res, br.b.res, br.c.res, br.d.res, br.e.res]));
 t('mission: the character\'s mood follows the state (two steps = relief, one = think)', br.a.mood === 'relief' && br.b.mood === 'think', JSON.stringify([br.a.mood, br.b.mood]));
 
 

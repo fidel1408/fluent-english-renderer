@@ -25,7 +25,7 @@
     return gEl;
   };
   C.badge = function (S, n, x, y) { // numbered round badge, digit only
-    return S.ui(String(n), 'anim', { position: 'absolute', left: x + 'px', top: y + 'px', width: '64px', height: '64px', borderRadius: '50%', background: '#ffb540', color: '#2a1a00', fontWeight: 800, fontSize: '40px', textAlign: 'center', lineHeight: '64px', boxShadow: '0 6px 16px rgba(0,0,0,.4)', zIndex: 15 });
+    return S.ui(String(n), 'anim badge', { position: 'absolute', left: x + 'px', top: y + 'px', width: '64px', height: '64px', borderRadius: '50%', background: '#ffb540', color: '#2a1a00', fontWeight: 800, fontSize: '40px', textAlign: 'center', lineHeight: '64px', boxShadow: '0 6px 16px rgba(0,0,0,.4)', zIndex: 15 });
   };
   /* Plain label with word-over-IPA, white caption pill */
   C.caption = function (S, text, x, y, o) {
@@ -60,7 +60,7 @@
   };
   /* word tiles that slide between two orders (statement -> question) */
   C.sortChips = function (S, cfg) {
-    const root = S.ui('', '', { position: 'absolute', left: cfg.x + 'px', top: cfg.y + 'px', height: (cfg.h || 150) + 'px', width: (cfg.w || 1200) + 'px', fontSize: (cfg.size || 70) + 'px', zIndex: 14 });
+    const root = S.ui('', 'sortroot', { position: 'absolute', left: cfg.x + 'px', top: cfg.y + 'px', height: (cfg.h || 150) + 'px', width: (cfg.w || 1200) + 'px', fontSize: (cfg.size || 70) + 'px', zIndex: 14 });
     const els = cfg.items.map((it) => {
       const b = document.createElement('div'); b.className = 'tile t-' + (it.role || 'o'); b.style.cssText = `font-size:${cfg.size || 70}px;position:absolute;left:0;top:0;transition:left .9s cubic-bezier(.4,0,.2,1),top .9s cubic-bezier(.4,0,.2,1),opacity .5s;cursor:default`;
       b.innerHTML = '<span class="tile-in">' + U(it.role ? `{${it.role}|${it.t}}` : it.t) + '</span>'; root.appendChild(b); return b;
@@ -71,6 +71,7 @@
       let x = 0; const gap = cfg.gap || 18;
       order.forEach((i) => { const e = els[i]; e.style.transition = S.fast ? 'none' : ''; e.style.left = x + 'px'; e.style.top = (row || 0) * (cfg.rowH || 0) + 'px'; e.style.opacity = 1; x += e.offsetWidth + gap; });
       els.forEach((e, i) => { if (!order.includes(i)) e.style.opacity = 0; });
+      if (FE.ui && FE.ui.compact) { order.forEach((i) => { els[i].style.display = ''; root.appendChild(els[i]); }); els.forEach((e, i) => { if (!order.includes(i)) e.style.display = 'none'; }); } // small screens: tiles reflow in the new order
     };
     return ctl;
   };

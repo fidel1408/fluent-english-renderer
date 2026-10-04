@@ -199,7 +199,10 @@ const seg = (id) => `FE.segs.find((s) => s.id === '${id}')`;
   const viewports = [['phone-portrait-390x844', { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 }], ['phone-landscape-844x390', { viewport: { width: 844, height: 390 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 }], ['desktop-1600x900', { viewport: { width: 1600, height: 900 } }]];
   for (const [name, ctx] of viewports) {
     const p = await open({ ctx });
-    const stats = await p.evaluate(() => {
+    const mobile = name.startsWith('phone');
+    // substantive thresholds per input type (touch phones: 16/11/40 px; desktop pointer: 13/9.5/32 px — the wide layout is the unchanged 1920x1080 design scaled)
+    const TH = mobile ? { w: 16, p: 11, t: 40 } : { w: 13, p: 9.5, t: 32 };
+    const stats = await p.evaluate((TH) => {
       const E = FE.engine; const min = { w: 1e9, p: 1e9, wid: '', pid: '' }; const small = []; const targets = []; let overflow = [];
       const vw = window.innerWidth;
       const eff = (el) => { const cs = parseFloat(getComputedStyle(el).fontSize); const r = el.getBoundingClientRect(); const ratio = el.offsetWidth ? r.width / el.offsetWidth : 1; return cs * (ratio || 1); };
@@ -208,17 +211,16 @@ const seg = (id) => `FE.segs.find((s) => s.id === '${id}')`;
       const bad = { w: [], p: [], t: [], x: [] };
       for (const id of ['__start__', ...sample]) {
         if (id === '__start__') { document.getElementById('start').style.display = ''; } else { document.getElementById('start').style.display = 'none'; const s = FE.segs.find((x) => x.id === id); E.goto(s.start + Math.min(s.dur - 1, Math.max(14, s.dur * 0.55))); E.scene.doReveal(); }
-        document.querySelectorAll('.u .w').forEach((w) => { if (!visible(w)) return; const e = eff(w); if (e < min.w) { min.w = e; min.wid = id + ':' + w.textContent; } if (e < 16) bad.w.push(id + ':' + w.textContent + ':' + e.toFixed(1)); });
-        document.querySelectorAll('.u .p').forEach((q) => { if (!visible(q)) return; const e = eff(q); if (e < min.p) { min.p = e; min.pid = id + ':' + q.textContent; } if (e < 11) bad.p.push(id + ':' + q.textContent + ':' + e.toFixed(1)); });
-        document.querySelectorAll('button, input, .opt, .tile, .btn, .tbtn').forEach((b) => { if (!visible(b)) return; const r = b.getBoundingClientRect(); if (b.closest('#tip')) return; if (r.height < 40 || r.width < 40) bad.t.push(id + ':' + (b.getAttribute('aria-label') || b.textContent.slice(0, 20)) + ':' + Math.round(r.width) + 'x' + Math.round(r.height)); });
+        document.querySelectorAll('.u .w').forEach((w) => { if (!visible(w)) return; const e = eff(w); if (e < min.w) { min.w = e; min.wid = id + ':' + w.textContent; } if (e < TH.w) bad.w.push(id + ':' + w.textContent + ':' + e.toFixed(1)); });
+        document.querySelectorAll('.u .p').forEach((q) => { if (!visible(q)) return; const e = eff(q); if (e < min.p) { min.p = e; min.pid = id + ':' + q.textContent; } if (e < TH.p) bad.p.push(id + ':' + q.textContent + ':' + e.toFixed(1)); });
+        document.querySelectorAll('button, input, .opt, .tile, .btn, .tbtn').forEach((b) => { if (!visible(b)) return; const r = b.getBoundingClientRect(); if (b.closest('#tip')) return; if (r.height < TH.t || r.width < TH.t) bad.t.push(id + ':' + (b.getAttribute('aria-label') || b.textContent.slice(0, 20)) + ':' + Math.round(r.width) + 'x' + Math.round(r.height)); });
         if (document.documentElement.scrollWidth > vw + 2) bad.x.push(id + ':' + document.documentElement.scrollWidth);
       }
       return { min, nW: bad.w.length, nP: bad.p.length, nT: bad.t.length, nX: bad.x.length, w: bad.w.slice(0, 4), p: bad.p.slice(0, 4), t: [...new Set(bad.t)].slice(0, 6), x: bad.x.slice(0, 3) };
-    });
-    const mobile = name.startsWith('phone');
-    rec('6.read.' + name + '.words', 6, `${name}: every visible word ≥ 16 px effective (min ${stats.min.w.toFixed(1)} px)`, !mobile ? stats.nW === 0 || true : stats.nW === 0, { min: stats.min.w, n: stats.nW, sample: stats.w });
-    rec('6.read.' + name + '.ipa', 6, `${name}: every visible IPA line ≥ 11 px effective (min ${stats.min.p.toFixed(1)} px)`, !mobile ? true : stats.nP === 0, { min: stats.min.p, n: stats.nP, sample: stats.p });
-    rec('6.read.' + name + '.targets', 6, `${name}: touch targets ≥ 40 px`, !mobile ? true : stats.nT === 0, { n: stats.nT, sample: stats.t });
+    }, TH);
+    rec('6.read.' + name + '.words', 6, `${name}: every visible word ≥ ${TH.w} px effective (min ${stats.min.w.toFixed(1)} px)`, stats.nW === 0, { min: stats.min.w, n: stats.nW, sample: stats.w });
+    rec('6.read.' + name + '.ipa', 6, `${name}: every visible IPA line ≥ ${TH.p} px effective (min ${stats.min.p.toFixed(1)} px)`, stats.nP === 0, { min: stats.min.p, n: stats.nP, sample: stats.p });
+    rec('6.read.' + name + '.targets', 6, `${name}: controls ≥ ${TH.t} px`, stats.nT === 0, { n: stats.nT, sample: stats.t });
     rec('6.read.' + name + '.noHScroll', 6, `${name}: no horizontal page overflow`, stats.nX === 0, stats.x);
     if (mobile) {
       const show = await p.evaluate(() => { FE.ui.setBar(true, false); const b = document.getElementById('showBtn'); const r = b.getBoundingClientRect(); const cs = getComputedStyle(b); return { disp: cs.display, w: r.width, h: r.height, inView: r.right <= innerWidth && r.bottom <= innerHeight && r.left >= 0 && r.top >= 0 }; });

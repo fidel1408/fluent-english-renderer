@@ -12,7 +12,7 @@ await p.goto('file://' + root + '/dist/should-for-advice.html'); await p.waitFor
 await p.evaluate(() => { FE.qa = true; document.getElementById('startBtn').click(); FE.engine.setPlaying(false); });
 const ids = await p.evaluate(() => FE.segs.map((s) => [s.id, s.start, s.dur, s.title]));
 const report = [];
-fs.mkdirSync('/tmp/shots', { recursive: true });
+const SHOTS = path.join(root, 'evidence', 'crawl'); fs.mkdirSync(SHOTS, { recursive: true });
 for (const [id, start, dur] of ids) {
   if (only && id !== only) continue;
   const r = await p.evaluate(async ([id, start, dur]) => {
@@ -28,7 +28,7 @@ for (const [id, start, dur] of ids) {
     } catch (e) { out.errs.push(e.message + ' ' + (e.stack || '').split('\n')[1]); }
     return out;
   }, [id, start, dur]);
-  if (shots) { await p.evaluate(([s, d]) => FE.engine.goto(s + d * 0.55), [start, dur]); await p.waitForTimeout(350); await p.screenshot({ path: `/tmp/shots/${id}.png` }); }
+  if (shots) { await p.evaluate(([s, d]) => FE.engine.goto(s + d * 0.55), [start, dur]); await p.waitForTimeout(350); await p.screenshot({ path: path.join(SHOTS, `${id}.png`) }); }
   report.push(r);
 }
 const missing = await p.evaluate(() => [...FE.missing]);

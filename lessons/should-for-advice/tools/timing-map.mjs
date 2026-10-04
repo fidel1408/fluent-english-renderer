@@ -8,4 +8,4 @@ const f = (x) => String(Math.floor(x / 60)).padStart(2, '0') + ':' + String(Math
 let md = '| Seg | Planned start | Planned length | Title | Narration | Silent/response time |\n|---|---|---|---|---|---|\n';
 for (const r of rows) { console.log(r.id.padEnd(5), f(r.start), String(r.dur).padStart(4), 'speech', r.speech.toFixed(0).padStart(3), 'end', r.speechEnd.toFixed(0).padStart(3), 'timer', String(Math.round(r.timer)).padStart(3), r.title); md += `| ${r.id} | ${f(r.start)} | ${r.dur} s | ${r.title} | ${r.speech.toFixed(0)} s | ${(r.dur - r.speech).toFixed(0)} s |\n`; }
 const tot = rows.reduce((a, r) => a + r.speech, 0); console.log('total speech', tot.toFixed(0), 's of 3600 s');
-fs.writeFileSync('/tmp/timing.md', md); await b.close();
+fs.writeFileSync(new URL('../docs/timing.md', import.meta.url), md); await b.close();

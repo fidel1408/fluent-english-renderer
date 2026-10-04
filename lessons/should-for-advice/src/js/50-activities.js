@@ -400,7 +400,7 @@
 
   /* ---------------------------------------------------------------- CHIPS: colour + label + position grammar formula */
   act.chips = function (S, cfg) {
-    const root = S.ui('', '', { left: cfg.x + 'px', top: cfg.y + 'px', position: 'absolute', display: 'flex', alignItems: 'flex-start', gap: '14px', zIndex: 12, fontSize: (cfg.size || 66) + 'px', transform: cfg.center ? 'translateX(-50%)' : '' });
+    const root = S.ui('', 'chiproot', { left: cfg.x + 'px', top: cfg.y + 'px', position: 'absolute', display: 'flex', alignItems: 'flex-start', gap: '14px', zIndex: 12, fontSize: (cfg.size || 66) + 'px', transform: cfg.center ? 'translateX(-50%)' : '' });
     const els = [];
     cfg.items.forEach((it, i) => {
       if (it.plus) { const p = h('div', { class: 'anim', style: { alignSelf: 'flex-start', marginTop: '0.35em' }, html: U('+') }); p.querySelector('.u').style.setProperty('--ipa', '#bfcbea'); root.appendChild(p); els.push(p); return; }

@@ -119,12 +119,16 @@
   };
   Bubble.prototype.show = function (fast) {
     this.shown = true; const el = this.el;
+    if (FE.ui && FE.ui.compact && !this.spec.say) { // small screens: a thought/speech bubble that is not a spoken line becomes a readable card
+      if (!this.card) { this.card = FE.h('div', { class: 'panel bubblecard anim', html: el.querySelector('.txt').innerHTML }); this.S.ui_.appendChild(this.card); }
+      this.S.in(this.card); }
     if (!this.w && !(FE.ui && FE.ui.compact)) { this.measure(); } el.classList.toggle('fast', !!fast);
     this.update(true);
     if (fast) el.classList.add('in'); else requestAnimationFrame(() => { if (this.shown) { el.classList.add('in'); FE.ui && FE.ui.ensureVisible && FE.ui.ensureVisible(el); } });
     if (this.actor) FE.Loop.hooks.add(this.hook || (this.hook = () => this.update(false)));
   };
   Bubble.prototype.hide = function (fast) {
+    if (this.card) this.S.out(this.card);
     this.shown = false;
     this.el.classList.toggle('fast', !!fast); this.el.classList.remove('in');
     if (this.hook) FE.Loop.hooks.delete(this.hook);
@@ -216,7 +220,7 @@
   P.say = function (key, spec) {
     const ln = this.L[key]; if (!ln) throw new Error('unknown line ' + key);
     const text = spec.text != null ? spec.text : ln.text;
-    const b = this.bubble(Object.assign({ id: key, text }, spec));
+    const b = this.bubble(Object.assign({ id: key, text, say: true }, spec));
     const words = FE.tokenize(text).filter((t) => t.type === 'word');
     const wts = words.map((w) => 2 + (FE.ipaOf(w.text) || w.text).length), tot = wts.reduce((a, c) => a + c, 0);
     const a = spec.actor, group = spec.group;
@@ -237,7 +241,7 @@
     this.actors.forEach((a) => FE.Loop.remove(a));
     FE.Loop.hooks.clear();
     const l = this.layers; l.back.innerHTML = ''; l.front.innerHTML = ''; l.actors.innerHTML = ''; l.props.innerHTML = ''; l.ui.innerHTML = '';
-    this.bubbles = []; this.actors = [];
+    this.bubbles = []; this.actors = []; if (FE.ui && FE.ui.clearDock) FE.ui.clearDock();
   };
   FE.Scene = function (seg, L, layers) { const s = new Scene(seg, L, layers); s.groups = {}; return s; };
 })(window);

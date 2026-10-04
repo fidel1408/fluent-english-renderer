@@ -1,5 +1,5 @@
 {
- "date": "2026-10-01T23:15:04.258Z",
+ "date": "2026-10-04T07:07:35.461Z",
  "results": [
   {
    "name": "title is exactly \"Should for Advice\"",
@@ -217,9 +217,9 @@
    "info": "[\"true,false,false\",\"false,true,false\",\"false,false,true\"]"
   },
   {
-   "name": "mission: revised advice changes the final state (complementary steps = \"good\", repeated step = \"same\")",
+   "name": "mission: closing comment follows the FINAL facts (two or more true lamps = \"good\"; otherwise \"still open\"; a stale first step no longer counts)",
    "ok": true,
-   "info": "[\"good\",\"same\",\"same\",\"good\",\"good\"]"
+   "info": "[\"good\",\"open\",\"open\",\"open\",\"good\"]"
   },
   {
    "name": "mission: the character's mood follows the state (two steps = relief, one = think)",
@@ -379,7 +379,7 @@
   {
    "name": "every displayed English word is a word-over-IPA unit with non-empty IPA",
    "ok": true,
-   "info": "7791 units checked; bad: []"
+   "info": "11300 units checked; bad: []"
   },
   {
    "name": "no English words displayed outside word-over-IPA units (stage content)",
@@ -404,69 +404,69 @@
   {
    "name": "DOM size stays bounded over the full simulated hour",
    "ok": true,
-   "info": "max nodes 1804, last {\"T\":3600,\"nodes\":1622,\"actors\":2,\"hooks\":0,\"heap\":16}"
+   "info": "max nodes 2033, last {\"T\":3600,\"nodes\":1848,\"actors\":2,\"hooks\":0,\"heap\":16}"
   }
  ],
  "memorySamples": [
   {
    "T": 400,
-   "nodes": 1685,
+   "nodes": 1934,
    "actors": 2,
    "hooks": 3,
    "heap": 16
   },
   {
    "T": 800,
-   "nodes": 1487,
+   "nodes": 1716,
    "actors": 1,
    "hooks": 0,
    "heap": 16
   },
   {
    "T": 1200,
-   "nodes": 1338,
+   "nodes": 1567,
    "actors": 1,
    "hooks": 0,
    "heap": 16
   },
   {
    "T": 1600,
-   "nodes": 1384,
+   "nodes": 1613,
    "actors": 1,
    "hooks": 0,
    "heap": 16
   },
   {
    "T": 2000,
-   "nodes": 1278,
+   "nodes": 1507,
    "actors": 1,
    "hooks": 0,
    "heap": 16
   },
   {
    "T": 2400,
-   "nodes": 1350,
+   "nodes": 1579,
    "actors": 3,
    "hooks": 0,
    "heap": 16
   },
   {
    "T": 2800,
-   "nodes": 1804,
+   "nodes": 2033,
    "actors": 2,
    "hooks": 0,
    "heap": 16
   },
   {
    "T": 3200,
-   "nodes": 1484,
+   "nodes": 1713,
    "actors": 1,
    "hooks": 0,
    "heap": 16
   },
   {
    "T": 3600,
-   "nodes": 1622,
+   "nodes": 1848,
    "actors": 2,
    "hooks": 0,
    "heap": 16

@@ -99,7 +99,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #actTimer.low{border-color:#ff6f86}#actTimer.low .tm{color:#ff9aa8}
 #actTimer.over .tm{color:#ffb540}
 #actTimer .tl{font-size:20px}
-.tbtn{width:44px;height:44px;border-radius:14px;border:1.5px solid var(--line);background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;padding:0}
+.tbtn{flex:none;width:44px;height:44px;border-radius:14px;border:1.5px solid var(--line);background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;padding:0}
 .tbtn:hover{background:rgba(255,255,255,.18)}
 .tbtn svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;color:#fff}
 #actTimer .bar{position:absolute;left:14px;right:14px;bottom:3px;height:4px;border-radius:3px;background:rgba(255,255,255,.14);overflow:hidden}
@@ -190,6 +190,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #tip .u .w{font-weight:700}#tip .u .p{font-size:12px}
 #finishNote{position:absolute;left:50%;top:300px;transform:translateX(-50%);width:1200px;z-index:65;display:none;font-size:36px;text-align:center}
 #finishNote.on{display:block}
+#finishNote .num{font-variant-numeric:tabular-nums;font-size:1.2em;color:#fff}
 #finishNote h4{margin:0 0 10px;font-family:var(--disp);font-weight:400;font-size:56px;color:#ffd48a}
 #finishNote p{margin:8px 0}#finishNote p.small{font-size:28px;color:#dfe7fb}
 #start .tips2{font-size:25px;margin-top:12px}
@@ -207,7 +208,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .ib.big svg{fill:currentColor;stroke:none}
 .sep{flex:none;width:1px;height:28px;background:#2b3858;margin:0 4px}
 .tl{flex:1 1 220px;min-width:140px;display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums;font-size:13px;color:#cdd8f2}
-.tl input[type=range]{flex:1;min-width:80px;accent-color:#ffb540;height:24px;margin:0}
+.tl input[type=range]{flex:1;min-width:80px;accent-color:#ffb540;height:34px;margin:0}
 .tl .tk{position:relative;flex:1;height:34px;display:flex;align-items:center}
 .tl .tk input{position:relative;z-index:2;width:100%;background:transparent}
 .tl .ticks{position:absolute;left:8px;right:8px;top:3px;height:6px;pointer-events:none}
@@ -259,3 +260,132 @@ body.no-ipa .u{margin-bottom:.02em}
 #quick .tgl[aria-pressed="true"]{background:#ffb540;border-color:#ffb540}
 #cc{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);max-width:1560px;z-index:36;display:none;padding:8px 26px 12px;border-radius:22px;background:rgba(6,9,18,.9);border:1.5px solid rgba(255,255,255,.2);font-size:38px;text-align:center;pointer-events:none}
 #cc.on{display:block}
+
+/* ================= adaptive layout (see src/js/45-compact.js) =================
+   wide: artbox fills the viewport, capdock/dock are not used.
+   compact (.compact .stack | .side): art scaled in #artbox; captions + interaction at native size. */
+#leftcol{position:absolute;inset:0}
+#artbox{position:absolute;inset:0;overflow:hidden}
+#capdock,#dock{display:none}
+.compact #viewport{display:flex;background:#070b14}
+.compact.stack #viewport{flex-direction:column}
+.compact.side #viewport{flex-direction:row}
+.compact #leftcol{position:relative;inset:auto;flex:none;display:flex;flex-direction:column;min-height:0}
+.compact.stack #leftcol{width:100%}
+.compact #artbox{position:relative;inset:auto;flex:none}
+.compact #capdock{display:block;position:relative;flex:none;background:#0b1222;border-top:1px solid #2b3858;border-bottom:1px solid #2b3858;padding:6px 10px 8px 58px;font-size:17px;line-height:1.15;overflow-y:auto;min-height:84px;color:#fff;user-select:text}
+.compact.stack #capdock{height:96px}
+.compact.side #capdock{flex:1 1 auto;min-height:0}
+.compact #capdock .capreplay{position:absolute;left:6px;top:6px;width:44px;height:44px;border-radius:50%;border:0;background:#ffb540;color:#2a1a00;display:flex;align-items:center;justify-content:center;padding:0}
+.compact #capdock .capreplay svg{width:22px;height:22px}
+.compact #capdock .capwho{color:#ffd48a;font-weight:800;font-size:17px;margin-bottom:2px}
+.compact #capdock .u .p{font-size:max(.5em,12px)}
+.compact #dock{display:flex;flex-direction:column;flex:1 1 auto;min-width:0;min-height:0}
+.compact #dockbar{flex:none}
+.compact #dockbar:empty{display:none}
+.compact #dockbar #actTimer{position:relative;right:auto;top:auto;margin:6px 10px 0;justify-content:center;padding:2px 8px 6px;gap:8px;border-radius:16px}
+.compact #dockhead{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding:2px 2px 10px;border-bottom:1px solid #2b3858;margin-bottom:10px}
+.compact #dockhead #hudTitle{position:static;width:auto;flex:1 1 180px;min-width:0}
+.compact #dockhead #hudCh{font-size:17px;gap:6px;align-items:center}
+.compact #dockhead #hudCh .chn{font-size:18px;padding:1px 9px 3px;border-radius:9px;margin-right:4px}
+.compact #dockhead #hudSeg{font-size:20px}
+.compact #dockhead #hudSeg .u .p{font-size:max(.5em,12px)}
+.compact #dockhead #hudRight{position:static;gap:6px}
+.compact #dockhead .clock{min-width:0;padding:2px 8px 3px;border-radius:10px}
+.compact #dockhead .clock b{font-size:17px}
+.compact #dockhead .clock .u{font-size:17px}
+.compact #dockhead .clock .u .p{font-size:12px}
+.compact #actTimer .tbtn{width:44px;height:44px}
+.compact #actTimer .tm{font-size:26px;min-width:76px}
+.compact #actTimer .tl{font-size:17px}
+.compact #dockbody{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;padding:10px 10px 84px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;font-size:17px}
+.compact #cc{display:none!important}
+.compact #hud{height:90px}
+.compact #hud .logo-card{pointer-events:none}
+.compact .bubble{display:none}
+.compact .badge{display:none}
+.compact .u .p{font-size:max(.5em,12px)}
+.compact #bar .u .p,.compact .pop .u .p,.compact #tip .u .p{font-size:12px}
+.compact #bar .u,.compact .pop .u{font-size:17px}
+/* docked items: flow layout, uniform zoom (set by JS), hidden-until-shown items take no space */
+.indock{position:relative!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;width:auto!important;max-width:100%;height:auto!important;transform:none!important;margin:0 0 10px!important;z-index:auto!important;pointer-events:auto}
+.indock.anim:not(.on){display:none!important}
+.indock.anim.on{animation:dockin .35s ease}
+@keyframes dockin{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.reduced .indock.anim.on{animation:none}
+.indock .u .p{font-size:max(.5em,calc(12px / var(--z,1)))}
+.indock .opt,.indock .tile,.indock .btn,.indock button,.indock .tbtn{min-height:calc(44px / var(--z,1))}
+.indock .opt{min-width:0}
+.indock .tile{min-width:calc(44px / var(--z,1))}
+.indock .tok{display:inline-block!important;vertical-align:top;margin:0 6px 10px!important}
+.indock.hintcard{width:auto!important}
+.indock.dimveil{display:none!important}
+.indock.forkroot{height:auto!important;display:flex!important;flex-direction:column;gap:10px}
+.indock.forkroot>svg{display:none}
+.indock .forknode,.indock .forklab,.indock .forkcard{position:relative!important;left:auto!important;top:auto!important;transform:none!important}
+.indock .forknode{align-self:center}
+.indock .forklab{width:auto!important}
+.indock .forkcard{width:auto!important;height:auto!important;min-height:calc(76px / var(--z,1))}
+.indock.sortroot{display:flex!important;flex-wrap:wrap;gap:8px;justify-content:center}
+.indock.sortroot .tile{position:relative!important;left:auto!important;top:auto!important}
+.indock.chiproot{flex-wrap:wrap}
+.indock .slots{min-height:calc(72px / var(--z,1))}
+.bubblecard{font-size:30px;color:#121b33;background:var(--paper);--ipa:#4f5d7d}
+/* overlays that live in the stage on wide screens become native-size panels on small screens */
+.compact #gate{position:absolute;left:8px;right:8px;bottom:8px;top:auto;transform:none;flex-wrap:wrap;justify-content:center;gap:8px;padding:10px 12px;font-size:17px;border-radius:22px;z-index:60}
+.compact.bar-hidden #gate{bottom:68px}
+.compact #gate .btn{font-size:17px;min-height:44px;padding:8px 14px;border-radius:14px}
+.compact #notes{position:absolute;left:8px;right:8px;top:auto;bottom:8px;width:auto;max-height:64%;font-size:17px;z-index:62;border-radius:20px;padding:14px 16px}
+.compact #notes h4{font-size:22px}
+.compact #toast{position:absolute;left:50%;top:10px;max-width:92%;font-size:17px;padding:8px 14px;border-radius:16px;z-index:64;text-align:center}
+.compact #modal{position:absolute;inset:0;z-index:70;padding:10px}
+.compact #modal .panel{position:relative;font-size:19px;padding:16px;max-width:100%}
+.compact #modal .btn{min-height:44px;font-size:18px}
+.compact #finishNote{position:absolute;left:10px;right:10px;top:10px;width:auto;transform:none;max-height:86%;overflow:auto;font-size:17px;z-index:65;padding:14px 16px}
+.compact #finishNote h4{font-size:26px}
+.compact #finishNote p.small{font-size:17px}
+.compact #start{position:fixed;inset:0;z-index:100;display:block;overflow-y:auto;padding:14px 14px 90px}
+.compact #start>*{position:static!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;margin:12px 0 0!important}
+.compact #start .ptr{display:none}
+.compact #start .logo-card{display:flex!important;width:200px!important;height:106px!important;border-radius:16px!important}
+.compact #start [style*="font-size"]{font-size:17px!important}
+.compact #start .box h1{font-size:40px!important;line-height:1.05}
+.compact #start h1 .u .p{font-size:max(.42em,13px)}
+.compact #start .box .lab{font-size:17px!important}
+.compact #start .modes{flex-direction:column;gap:10px}
+.compact #start .mode{padding:10px 14px 12px;font-size:17px}
+.compact #start .mode h3{font-size:24px}
+.compact #start .mode .d{font-size:17px}
+.compact #start .tips{font-size:17px;padding:8px 12px;gap:10px}
+.compact #start .tips2{font-size:17px}
+.compact #start .kbd{font-size:20px;padding:0 10px}
+.compact #start .bigstart{font-size:22px;padding:12px 22px;min-height:56px;width:100%;justify-content:center}
+.compact #start .bigstart svg{width:28px!important;height:28px!important}
+/* control bar: wraps (nothing clipped), 44 px targets, timeline on its own row */
+.compact #bar{height:auto;flex-wrap:wrap;overflow:visible;padding:6px 8px;gap:6px;justify-content:center;align-content:center}
+.compact .ib{width:44px;height:44px}.compact .ib.big{width:48px;height:48px}
+.compact .tgl,.compact .modeb,.compact .hidebtn{height:44px;min-width:44px}
+.compact .modeb .u,.compact .hidebtn .u{font-size:17px}
+.compact .sep{display:none}
+.compact .tl{flex:1 1 100%;order:-1;min-width:0}
+.compact .tl .tk{height:44px}
+.compact .tl input[type=range]{height:44px}
+.compact .pop{position:fixed;left:8px!important;right:8px;min-width:0;font-size:17px}
+.compact #quick .tgl{height:48px;min-width:52px;opacity:.85}
+.compact #showBtn{opacity:.85}
+.compact .ib.spent{opacity:.45}
+
+/* inline flex rows built for 1920 px wrap on small screens; fixed-width columns shrink instead of overflowing */
+.indock [style*="display:flex"]:not([style*="column"]),.indock [style*="display: flex"]:not([style*="column"]){flex-wrap:wrap}
+.indock [style*="flex:1"],.indock [style*="flex: 1"]{flex:1 1 auto!important;min-width:0}
+.indock [style*="width:"]:not(svg):not(.ico){max-width:100%}
+.indock img,.indock svg.ico{max-width:100%}
+.indock [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important}
+.compact.stack #capdock{height:118px}
+.indock.tokrow{display:flex;gap:6px;align-items:flex-start;justify-content:space-between}
+.indock.tokrow .tok{display:block!important;flex:1 1 0;min-width:0;margin:0!important}
+.indock.tokrow:empty{display:none}
+.compact #dockhead #hudCh .chtitle{display:none}
+.compact #dockhead #hudCh{flex:none}
+.compact #dockhead #hudTitle{display:flex;flex-direction:row;align-items:center;gap:8px}
+.compact #actTimer .tl{display:none}

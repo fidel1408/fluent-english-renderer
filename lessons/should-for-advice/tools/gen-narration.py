@@ -6,7 +6,7 @@ import json, sys, subprocess, pathlib, tempfile, os
 import numpy as np, soundfile as sf
 from kokoro_onnx import Kokoro
 root = pathlib.Path(__file__).resolve().parent.parent
-md = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '/tmp/kk')
+md = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else os.environ.get('KOKORO_DIR', str(root/'tools'/'models')))
 k = Kokoro(str(md/'kokoro-v1.0.onnx'), str(md/'voices-v1.0.bin'))
 script = json.loads((root/'narration/script.json').read_text())
 out = root/'narration/clips'; out.mkdir(parents=True, exist_ok=True)

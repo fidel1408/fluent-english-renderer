@@ -1,0 +1,71 @@
+{
+ "file": "fluent-english-be-lesson.html",
+ "pass": 24,
+ "fail": 0,
+ "failures": [],
+ "report": {
+  "phone-portrait-390x844": {
+   "beats": 100,
+   "minStageHeightPx": 597,
+   "minStageAt": "1.1",
+   "controlsChecked": 272,
+   "horizontalOverflow": [],
+   "thinStage": [],
+   "dockButtonsUnreachable": 0,
+   "stageControlsOffscreen": 0,
+   "stageControlsCovered": 0,
+   "contentBehindRibbon": 0,
+   "ipaBelow12px": 0,
+   "examples": {
+    "dock": [],
+    "off": [],
+    "covered": [],
+    "behind": [],
+    "thin": [],
+    "ipaSmall": []
+   }
+  },
+  "phone-landscape-844x390": {
+   "beats": 100,
+   "minStageHeightPx": 308,
+   "minStageAt": "1.1",
+   "controlsChecked": 272,
+   "horizontalOverflow": [],
+   "thinStage": [],
+   "dockButtonsUnreachable": 0,
+   "stageControlsOffscreen": 0,
+   "stageControlsCovered": 0,
+   "contentBehindRibbon": 0,
+   "ipaBelow12px": 0,
+   "examples": {
+    "dock": [],
+    "off": [],
+    "covered": [],
+    "behind": [],
+    "thin": [],
+    "ipaSmall": []
+   }
+  },
+  "desktop-1280x720": {
+   "beats": 100,
+   "minStageHeightPx": 483,
+   "minStageAt": "1.1",
+   "controlsChecked": 272,
+   "horizontalOverflow": [],
+   "thinStage": [],
+   "dockButtonsUnreachable": 0,
+   "stageControlsOffscreen": 0,
+   "stageControlsCovered": 0,
+   "contentBehindRibbon": 0,
+   "ipaBelow12px": 0,
+   "examples": {
+    "dock": [],
+    "off": [],
+    "covered": [],
+    "behind": [],
+    "thin": [],
+    "ipaSmall": []
+   }
+  }
+ }
+}

@@ -1,0 +1,1 @@
+inventory: 9 activities, 100 steps, 180 narration lines (~6.7-9.8 min of speech, estimate), 3600 s facilitation plan, 2100 s planned learner speaking

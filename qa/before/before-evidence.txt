@@ -1,0 +1,16 @@
+BEFORE (v4 baseline) — defect demonstrations
+  1 word bank: I + am + a student →                              Start with a pronoun: I, you, he, she, it, we, or they.
+  2 quiz Q4 options that are contractions (should be exactly 1)  They’re friends. | They aren’t friends.
+  3 quiz Q4 prompt                                               Which sentence uses a contraction?
+  3b Q6 prompt                                                   Which one is the question?
+  3c Q8 prompt                                                   Look at the picture. Which short answer?
+  3d Q3 extension                                                Say: We are … (class, ready, here).
+  6 Skip timer: actual elapsed before → after (seconds)          2.2 → 300.0
+  8 jumped to last screen of activity 4: marked completed?       true
+  7 after Hide: show-button exists?                              false (only the H key restores)
+  9 IPA.line("Please repeat and speak aloud")                    /Please repeat ænd speak aloud/
+  9b IPA.line("The answer is B.")                                /ðə ˈænsər ɪz B/
+  9c IPA.line("Short form A")                                    /ʃɔːrt fɔːrm eɪ/
+  10 narration contains "I is the speaker"                       true
+  export keys per mode                                           answered, firstAttemptScore, retryCorrect, retryAttempted, missedOnFirst, scoreAfterRetry, outOf, label (no per-question answers)
+  14 resumed old save: settings.vMusic                           undefined (undefined → AudioParam non-finite error)

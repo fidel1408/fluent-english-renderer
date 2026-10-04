@@ -1,0 +1,87 @@
+# structure
+  ok   IPA dictionary uses only sound-chart symbols (+ stress marks)
+  ok   GOAT vowel written əʊ as on the chart
+  ok   default activity minutes total exactly 60
+  ok   nine activities
+  ok   planned learner speaking = 35.0 min
+  ok   ten MCQ items, 4 distinct options, one key each
+   answer key: BDACBDACBD
+  ok   correct answers match the specification
+  ok   each item has exactly one option equal to its key
+# sound chart
+  ok   Sound chart button opens the chart
+  ok   chart image loads
+# start / audio unlock
+  ok   no AudioContext before Start
+  ok   AudioContext created after Start click
+   opening theme peak 0.118
+  ok   opening theme audible and not clipping
+  ok   Begin Activity 1 enters A1 step 1
+  ok   A1 title shown
+# timer / pause / extend / skip
+  ok   timer runs while playing
+  ok   timer stops while paused
+  ok   paused badge shown
+  ok   +1 min extends activity 1 by 60 s
+  ok   +30 s adds 30 s
+  ok   class clock shows plan 60:00 → now 61:30
+  ok   skip timer zeroes remaining
+  ok   time-up banner appears (no auto-advance)
+  ok   lesson did not advance by itself
+# navigation
+  ok   Step ▶ advances
+  ok   Step ◀ goes back
+  ok   Next activity
+  ok   revisiting activity 1 keeps its time used
+  ok   chapter menu jumps to activity 6 step 4
+  ok   keyboard → works
+# reveal / spanish / cc
+  ok   answer hidden by default
+  ok   Reveal answer shows it
+  ok   Hide answer hides it again
+  ok   Spanish help opens
+  ok   CC/IPA cycles off → captions → IPA → off → …
+  ok   IPA mode sets body flag
+  ok   IPA visible under teaching text
+  ok   back to captions
+# interactive build (A3)
+  ok   wrong tile gives explanatory feedback
+  ok   sentence completes and explanation appears
+# ten-question check
+  ok   Q1: correct option hidden before submit
+  ok   Q2: correct option hidden before submit
+  ok   Q3: correct option hidden before submit
+  ok   Q4: correct option hidden before submit
+  ok   wrong answer shows correct + chosen after submit
+  ok   Q5: correct option hidden before submit
+  ok   Q6: correct option hidden before submit
+  ok   Q7: correct option hidden before submit
+  ok   Q8: correct option hidden before submit
+  ok   Q9: correct option hidden before submit
+  ok   Q10: correct option hidden before submit
+  ok   results screen after 10 questions
+  ok   first-attempt score 8/10
+  ok   shared mode labeled "Class activity score"
+  ok   retry jumps to first missed question
+  ok   next missed question
+  ok   retry kept separate: first 8, retry 2/2, after 10
+  ok   first-attempt record unchanged after retry
+  ok   individual mode scores stored separately
+# checklist / export
+  ok   participation checklist stores locally with anonymous label
+  ok   JSON export has first-attempt and retry scores
+  ok   export contains no emails/credentials
+  ok   CSV export works
+# resume after refresh
+  ok   resume offered after refresh
+  ok   resumed at A4 step 3 with timers and scores intact
+  ok   storage keys recorded
+# reset with confirmation
+  ok   reset asks for confirmation
+  ok   reset clears progress
+# individual mode label
+  ok   individual mode clearly labeled
+
+console/page errors: 0
+
+69 passed, 0 failed

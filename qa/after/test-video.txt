@@ -1,0 +1,10 @@
+  ok   Sound chart video button visible in the dock
+   video {"dur":120.008,"rs":4,"t":2.403814,"paused":false,"err":false}
+  ok   video loads (120 s)
+  ok   lesson paused while video is open
+  ok   timer does not run during video
+  ok   closing the video resumes the lesson
+  ok   video modal removed
+  ok   chart panel has a Watch the video button
+errors 0
+7 passed, 0 failed

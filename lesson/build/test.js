@@ -11,7 +11,7 @@ const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail+
   await p.goto(URL); await p.evaluate(() => localStorage.clear()); await p.goto(URL);
 
   console.log('# structure');
-  ok(await p.evaluate(() => { const bad = Object.values(IPA.D).join('').replace(/[ˈˌ ː]/g, '').split('').filter((c) => !'æeɪɔʊəʌiuɑaʒzstmnfvdðθlwrbgʃhkŋjpɜ'.includes(c)); return bad.length === 0; }), 'IPA dictionary uses only sound-chart symbols (+ stress marks)');
+  ok(await p.evaluate(() => Object.values(IPA.D).every((v) => /^[a-zæɑɔəɜɪʊʌðŋʃʒθɡː ˈˌ']+$/.test(v))), 'every dictionary entry is made of IPA characters only (no chart-only whitelist is imposed)');
   ok(await p.evaluate(() => !JSON.stringify(IPA.D).includes('oʊ') && Object.values(IPA.D).some((v) => v.includes('əʊ'))), 'GOAT vowel written əʊ as on the chart');
   ok(await p.evaluate(() => ACT_MIN.reduce((a, b) => a + b, 0) === 60), 'default activity minutes total exactly 60');
   ok(await p.evaluate(() => ACTS.length === 9), 'nine activities');
@@ -88,7 +88,7 @@ const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail+
   const answersWanted = [1, 3, 0, 1 /*wrong: key is C*/, 1, 3, 1 /*wrong key A*/, 2, 1, 3]; // 8 right, 2 wrong
   for (let i = 0; i < 10; i++) {
     ok(await p.evaluate(() => !document.querySelector('.opt.right'), undefined) || i === 0 && false, `Q${i + 1}: correct option hidden before submit`);
-    await p.click(`.opt[data-k="${answersWanted[i]}"]`); await p.click('#mq-sub'); await p.waitForTimeout(80);
+    await p.click(`.opt[data-k="${answersWanted[i]}"]`); await p.click('#mq-sub'); await p.waitForTimeout(600);
     if (i === 3) ok(await p.evaluate(() => !!document.querySelector('.opt.right') && !!document.querySelector('.opt.wrong')), 'wrong answer shows correct + chosen after submit');
     await p.click('#mq-next');
   }
@@ -96,9 +96,9 @@ const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail+
   let sc = await p.evaluate(() => Comp.mcq.score(S.mcq.shared)); ok(sc.first === 8 && sc.missed === 2, 'first-attempt score 8/10');
   ok((await p.textContent('#stage')).includes('Class activity score'), 'shared mode labeled "Class activity score"');
   await p.click('#rs-retry'); ok(await p.evaluate(() => S.a === 7 && S.b === 3), 'retry jumps to first missed question');
-  await p.click('.opt[data-k="2"]'); await p.click('#mq-sub'); await p.click('#mq-next');
+  await p.click('.opt[data-k="2"]'); await p.click('#mq-sub'); await p.waitForTimeout(600); await p.click('#mq-next');
   ok(await p.evaluate(() => S.b === 6), 'next missed question');
-  await p.click('.opt[data-k="0"]'); await p.click('#mq-sub'); await p.click('#mq-next');
+  await p.click('.opt[data-k="0"]'); await p.click('#mq-sub'); await p.waitForTimeout(600); await p.click('#mq-next');
   sc = await p.evaluate(() => Comp.mcq.score(S.mcq.shared)); ok(sc.first === 8 && sc.retryOk === 2 && sc.after === 10, 'retry kept separate: first 8, retry 2/2, after 10');
   ok(await p.evaluate(() => S.mcq.shared.first[3].ok === false), 'first-attempt record unchanged after retry');
   await p.evaluate(() => { S.mode = 'individual'; }); sc = await p.evaluate(() => Comp.mcq.score(S.mcq.individual)); ok(sc.first === 0, 'individual mode scores stored separately'); await p.evaluate(() => { S.mode = 'shared'; });

@@ -1,0 +1,156 @@
+
+# A. Word bank: I am … and every pronoun (valid, invalid, incomplete)
+  ok   all 189 pronoun × be × phrase combinations agree with the explicit grammar table
+  ok   "I am a student" accepted (upper/lower-case "I", mixed case)
+  ok   "I is a student" rejected with the correct form "am"
+  ok   I: wrong be (is, are) flagged as agreement
+  ok   you: wrong be (am, is) flagged as agreement
+  ok   he: wrong be (am, are) flagged as agreement
+  ok   she: wrong be (am, are) flagged as agreement
+  ok   it: wrong be (am, are) flagged as agreement
+  ok   we: wrong be (am, is) flagged as agreement
+  ok   they: wrong be (am, is) flagged as agreement
+  ok   empty answer is incomplete
+  ok   "I" alone is incomplete and asks for am
+  ok   "I am" is incomplete
+  ok   starting with be is rejected
+  ok   extra words rejected
+  ok   unknown finishing word rejected
+  ok   UI: clicking I + am + a student shows "Pattern OK" (original bug)
+  ok   UI: feedback states it does not judge pronunciation
+  ok   UI: they + is gives agreement hint
+  ok   UI: word-bank feedback carries an IPA line
+
+# B. Ten-question check: exactly one valid option per question (independent oracle)
+  ok   Q1: oracle finds exactly one valid option and it is the key (I)
+  ok   Q2: oracle finds exactly one valid option and it is the key (is)
+  ok   Q3: oracle finds exactly one valid option and it is the key (are)
+  ok   Q4: oracle finds exactly one valid option and it is the key (They’re friends.)
+  ok   Q5: oracle finds exactly one valid option and it is the key (I’m not tired.)
+  ok   Q6: oracle finds exactly one valid option and it is the key (Is he a teacher?)
+  ok   Q7: oracle finds exactly one valid option and it is the key (Yes, I am.)
+  ok   Q8: oracle finds exactly one valid option and it is the key (No, she isn’t.)
+  ok   Q9: oracle finds exactly one valid option and it is the key (is)
+  ok   Q10: oracle finds exactly one valid option and it is the key (We are students.)
+  ok   every question has 4 distinct options
+  ok   answer positions balanced {"A":2,"B":3,"C":2,"D":3}
+  ok   Q4 prompt asks for the contraction of "They are" (not "which uses a contraction")
+  ok   Q6 asks explicitly for the standard inverted yes/no form
+  ok   Q8 states the fictional fact that Maya has one job: doctor
+  ok   Q3 extension no longer invites "We are class"
+
+# C. Answer sheet, attempts, exports, CSV safety
+   sheet rows 4
+  ok   answer sheet has diagnostic + Q1 + Q4 first + Q4 retry = 4 rows
+  ok   Q4 keeps its attempt history (first wrong, retry-1 correct)
+  ok   attempt numbers increase per question
+  ok   row has prompt, 4 options, selected and correct answer
+  ok   every row has an ISO timestamp
+  ok   diagnostic row is marked ungraded
+  ok   existing summary fields are preserved
+  ok   JSON export contains answer_sheet and the split time fields
+  ok   answer-sheet CSV has the required columns and 4 data rows
+  ok   full CSV keeps summaries and includes answer_sheet rows
+  ok   CSV neutralises a spreadsheet formula typed into notes
+  ok   export contains no URLs other than the teacher-typed note
+  ok   fresh state has an empty answer log
+
+# D. Skip timer keeps actual time; completion; Hide/Show controls; keyboard
+  ok   Skip leaves actual elapsed time alone (2.3s → 2.3s, not 300s)
+  ok   Skip moves the unused remainder into "skipped"
+  ok   a second Skip does not skip more
+  ok   +30 s after a skip gives ~30 s again
+  ok   class clock labels actual elapsed time
+  ok   results table separates actual / added / skipped
+  ok   jumping to the last screen of an activity does not mark it completed
+  ok   pressing Step ▶ past the last screen marks it completed
+  ok   Hide controls shows a visible "Show controls" button
+  ok   Show controls restores the dock
+  ok   H also restores the controls
+  ok   Space after a mouse click pauses; it does not re-click the focused button
+  ok   P toggles pause/play
+
+# E. Dialogs: Escape closes only the top one; focus stays inside; chart modal
+  ok   dialog opens
+  ok   two stacked dialogs
+  ok   Escape closes only the top-most dialog
+  ok   second Escape closes the next
+  ok   Tab keeps focus inside the Sound chart dialog
+  ok   Sound chart image loads and has alt text
+  ok   chart dialog records the əʊ / OALD NAmE / Advanced-American convention note
+  ok   video dialog cannot be opened twice
+  ok   closing the video resumes (was playing)
+  ok   video opened while paused stays paused after closing
+
+# F. IPA: coverage, notation, honesty labels
+  ok   no /oʊ/ notation anywhere in the dictionary (chart/OALD NAmE əʊ kept)
+  ok   əʊ used in 31 entries
+  ok   boat /bəʊt/, no /nəʊ/, go /ɡəʊ/ present exactly as supplied evidence
+  ok   only 3 of 416 entries are marked source-verified; the rest are hand-entered
+  ok   letter names (A, B) get letter-name IPA; article "A group" keeps schwa
+  ok   unknown words are marked [?word], never shown as plain spelling
+  ok   exhaustive corpus run: 1785 strings, 0 with missing words
+  ok   every visible .tx text has a non-empty IPA line
+  ok   all IPA lines well-formed
+  ok   stage IPA note labels lines as assembled and states how few entries are verified
+  ok   no "Oxford-style" overclaim anywhere in the delivered HTML
+
+# G. No claim that the lesson assesses spoken pronunciation
+  ok   every mention of pronunciation/recognition is a disclaimer
+  ok   no statement praising or grading pronunciation
+
+# H. Retry and scoring audit
+  ok   skip counts as missed: first attempt 6/10
+  ok   retry starts at first missed question (Q7)
+  ok   Next goes to next missed question (Q8)
+  ok   switching mode mid-retry keeps scores separate
+  ok   retry kept separate: first 6, retry 3/4, after 9 (got 6/3/9)
+  ok   results screen renders after retry
+  ok   a second retry round clears retry answers and increments the round
+  ok   round-1 retry attempts remain in the answer log
+  ok   no retry button when nothing was missed
+  ok   perfect score shown
+
+# I. Repeated clicks / rapid input
+  ok   double-clicking Submit records one answer
+  ok   double-click did not skip ahead to the next question
+  ok   double-clicking tiles places each once
+  ok   Reveal toggles cleanly on repeated clicks
+  ok   40 rapid Step ▶ then 40 Step ◀ without errors
+  ok   position stays valid
+  ok   rapid chapter-chip clicks end on the last chip clicked
+
+# J. Pause / resume / replay / stale narration (mock speechSynthesis)
+  ok   after 12 rapid steps only the final screen's lines are spoken (1 lines)
+  ok   never two voices at once during rapid navigation
+  ok   navigating while paused speaks nothing
+  ok   paused navigation shows the finished visual state, not a half-built screen
+  ok   Play after paused navigation narrates the new screen
+  ok   Replay while paused resumes and replays
+  ok   a Repeat click mid-narration fast-forwards the screen to its finished state (no half-built rows)
+  ok   no overlap after Repeat
+  ok   no page errors during the async tests
+
+# K. Speaker voices (best-effort name heuristics) and on-device filtering
+  ok   male characters get a male-named voice, female a female-named voice (Microsoft David / Microsoft Aria Online (Natural))
+  ok   Alex's line is spoken with the male-named voice
+  ok   on-device-only setting never selects an online voice
+  ok   settings label online voices and explain the privacy difference
+  ok   with one voice only, pitch shifts slightly per speaker (not a real voice change)
+
+# L. 390 px phone: no sideways overflow, IPA kept and readable
+   min IPA font on phone: 12.6px
+  ok   no horizontal overflow on any of 100 screens
+  ok   no visible IPA line below 12 px
+  ok   every picture label has its full text + IPA in the legend (none suppressed)
+
+# M. Chapter navigation, resume, old saved state
+  ok   chapter menu lists 9 activities + 100 steps (109)
+  ok   chapter menu jumps to a step
+  ok   header chip follows
+  ok   all 100 steps load without errors
+  ok   a v4-era save (no skipped/answerLog) resumes cleanly with defaults filled in
+  ok   old settings merge with new defaults
+  ok   no errors resuming an old save
+
+126 passed, 0 failed

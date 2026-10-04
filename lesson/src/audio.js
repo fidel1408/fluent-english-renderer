@@ -131,57 +131,64 @@ const Sound = (() => {
 const Speech = (() => {
   const supported = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
   let voices = [], token = 0, onCaption = () => {}, onSpeakState = () => {};
-  const cfg = { en: '', es: '', rate: 0.9, volume: 1, mute: false };
+  const cfg = { en: '', male: '', female: '', es: '', rate: 0.9, volume: 1, mute: false, localOnly: false };
   let curDone = null;
-
-  function load() {
-    if (!supported) return;
-    voices = speechSynthesis.getVoices() || [];
-    onVoices && onVoices(voices);
-  }
+  function load() { if (!supported) return; voices = speechSynthesis.getVoices() || []; onVoices && onVoices(voices); }
   let onVoices = null;
   if (supported) {
     load();
     speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', load);
     let n = 0; const iv = setInterval(() => { load(); if (voices.length || ++n > 12) clearInterval(iv); }, 400);
   }
+  /* Voice classification is a best-effort guess from the voice NAME only; browsers do not expose gender. Not listening-verified. */
+  const MALE = /\b(david|mark|guy|alex|daniel|fred|aaron|evan|ryan|tom|james|george|richard|christopher|eric|roger|steffan|davis|jason|brian|male|rishi|arthur|gordon|oliver|thomas|junior|ralph|bruce|lee)\b/i;
+  const FEMALE = /\b(zira|aria|jenny|samantha|allison|ava|karen|susan|victoria|female|serena|moira|tessa|fiona|kate|emma|michelle|nicky|joanna|ivy|kendra|kimberly|salli|amy|libby|sonia|hazel|catherine|linda|heather|jessa|monica|paulina|helena|sabina)\b/i;
+  const isMale = (v) => MALE.test(v.name) && !FEMALE.test(v.name);
+  const isFemale = (v) => FEMALE.test(v.name) && !MALE.test(v.name);
+  const remote = (v) => !v.localService;            // online voices may send the spoken text to a remote service
   const rank = (v) => {
     let s = 0; const n = v.name.toLowerCase();
     if (/en[-_]us/i.test(v.lang)) s += 50;
-    if (/natural|online|neural/.test(n)) s += 30;
-    if (/google us english|samantha|aria|jenny|ava|allison|zira|guy|evan|nicky/.test(n)) s += 20;
-    if (v.localService) s += 2;
+    if (/natural|online|neural/.test(n)) s += 8;
+    if (/google us english|samantha|aria|jenny|ava|allison|zira|guy|evan|nicky/.test(n)) s += 6;
+    if (v.localService) s += 12;                      // prefer on-device voices
     return s;
   };
+  const pool = () => voices.filter((v) => /^en/i.test(v.lang) && (!cfg.localOnly || v.localService)).sort((a, b) => rank(b) - rank(a));
   function enVoices() { return voices.filter((v) => /^en/i.test(v.lang)).sort((a, b) => rank(b) - rank(a)); }
-  function esVoices() { return voices.filter((v) => /^es/i.test(v.lang)).sort((a, b) => (/es[-_](us|mx)/i.test(b.lang) - /es[-_](us|mx)/i.test(a.lang))); }
-  function pick(lang) {
-    const list = lang === 'es' ? esVoices() : enVoices();
-    const want = lang === 'es' ? cfg.es : cfg.en;
-    return list.find((v) => v.name === want) || list[0] || null;
+  function esVoices() { return voices.filter((v) => /^es/i.test(v.lang) && (!cfg.localOnly || v.localService)).sort((a, b) => (/es[-_](us|mx)/i.test(b.lang) - /es[-_](us|mx)/i.test(a.lang))); }
+  /** role: 'male' | 'female' | undefined (narrator). Returns {voice, pitch}. */
+  function pick(lang, role) {
+    if (lang === 'es') { const l = esVoices(); return { voice: l.find((v) => v.name === cfg.es) || l[0] || null, pitch: 1 }; }
+    const p = pool(), find = (name) => (name ? voices.find((v) => v.name === name) : null);
+    const narr = find(cfg.en) || p.find((v) => /en[-_]us/i.test(v.lang) && !isMale(v)) || p[0] || null;
+    if (!role) return { voice: narr, pitch: 1 };
+    const chosen = find(role === 'male' ? cfg.male : cfg.female);
+    const auto = p.find((v) => /en[-_]us/i.test(v.lang) && (role === 'male' ? isMale(v) : isFemale(v) && v !== narr)) || p.find((v) => role === 'male' ? isMale(v) : isFemale(v) && v !== narr);
+    const voice = chosen || auto || narr;
+    // if no distinct voice exists, shift pitch a little so speakers still sound different (a rough cue, not a real voice change)
+    const distinct = voice && narr && voice.name !== narr.name;
+    return { voice, pitch: distinct ? 1 : (role === 'male' ? 0.82 : 1.15) };
   }
   const est = (text, rate) => Math.max(800, text.length * 62 / Math.max(0.5, rate));
-
-  function speakOne(text, lang, rate) {
+  function speakOne(text, lang, rate, role) {
     return new Promise((res) => {
-      let done = false;
+      let done = false, tm = null;
       const fin = () => { if (done) return; done = true; clearTimeout(tm); curDone = null; res(); };
       curDone = fin;
-      if (!supported || cfg.mute || !pick(lang)) { var tm = setTimeout(fin, est(text, 1.3)); return; } // no voice: captions-only timing
+      const pk = supported && !cfg.mute ? pick(lang, role) : { voice: null, pitch: 1 };
+      if (!supported || cfg.mute || !pk.voice) { tm = setTimeout(fin, est(text, 1.3)); return; } // no voice: captions-only timing
       const u = new SpeechSynthesisUtterance(text);
-      const v = pick(lang);
-      if (v) { u.voice = v; u.lang = v.lang; } else u.lang = lang === 'es' ? 'es-MX' : 'en-US';
-      u.rate = Math.min(1.5, Math.max(0.5, rate)); u.volume = cfg.volume; u.pitch = 1;
+      u.voice = pk.voice; u.lang = pk.voice.lang;
+      u.rate = Math.min(1.5, Math.max(0.5, rate)); u.volume = cfg.volume; u.pitch = pk.pitch;
       u.onend = fin; u.onerror = fin;
-      var tm = setTimeout(fin, est(text, rate) + 6000); // safety net if a browser never fires onend
+      tm = setTimeout(fin, est(text, rate) + 6000); // safety net if a browser never fires onend
       try { speechSynthesis.speak(u); } catch (e) { fin(); }
     });
   }
-  function norm(items) {
-    return (Array.isArray(items) ? items : [items]).filter(Boolean).map((i) => (typeof i === 'string' ? { t: i } : i));
-  }
+  const norm = (items) => (Array.isArray(items) ? items : [items]).filter(Boolean).map((i) => (typeof i === 'string' ? { t: i } : i));
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  /** Speak a list; a new call or stop() cancels it (no overlapping voices). Resolves true if finished. */
+  /** Speak a list; a new call or stop() cancels it (no overlapping voices). Resolves true if finished. opts.role = 'male'|'female' */
   async function say(items, opts = {}) {
     const my = ++token;
     hardStop();
@@ -192,23 +199,19 @@ const Speech = (() => {
       const lang = it.lang || 'en';
       const rate = cfg.rate * (it.rate || 1);
       if (!opts.noCaption) onCaption(it.cap || it.t, lang);
-      await speakOne(it.t, lang, rate);
+      await speakOne(it.t, lang, rate, it.role || opts.role);
       if (my !== token) { ok = false; break; }
       await sleep(it.pause != null ? it.pause : 260);
     }
     if (my === token) { onSpeakState(false, opts); }
     return ok;
   }
-  function hardStop() {
-    if (curDone) curDone();
-    if (supported) try { speechSynthesis.cancel(); } catch (e) {}
-  }
+  function hardStop() { if (curDone) curDone(); if (supported) try { speechSynthesis.cancel(); } catch (e) {} }
   function stop() { token++; hardStop(); onSpeakState(false, {}); onCaption('', 'en'); }
   return {
-    supported, cfg, say, stop,
-    enVoices, esVoices,
+    supported, cfg, say, stop, enVoices, esVoices, isMale, isFemale, remote,
     set onCaption(f) { onCaption = f; }, set onSpeakState(f) { onSpeakState = f; }, set onVoices(f) { onVoices = f; load(); },
     get hasEn() { return enVoices().length > 0; },
-    current(lang) { return pick(lang || 'en'); },
+    current(lang, role) { return pick(lang || 'en', role); },
   };
 })();

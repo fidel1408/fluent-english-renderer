@@ -1,0 +1,41 @@
+
+# phone-portrait-390x844
+   100 steps, 271 in-stage controls scrolled to; smallest visible stage 469px at step 6.15
+  ok   phone-portrait-390x844: no horizontal overflow
+  ok   phone-portrait-390x844: stage keeps ≥ 200px visible height on every step
+  ok   phone-portrait-390x844: every teacher control can be scrolled to and clicked
+  ok   phone-portrait-390x844: every in-stage control can be scrolled fully into view
+  ok   phone-portrait-390x844: no in-stage control is covered by another element after scrolling
+  ok   phone-portrait-390x844: bottom of content is not hidden behind the ribbon
+  FAIL phone-portrait-390x844: no visible IPA below 12px
+  ok   phone-portrait-390x844: no page errors
+
+# phone-landscape-844x390
+   100 steps, 271 in-stage controls scrolled to; smallest visible stage 0px at step 6.15
+  ok   phone-landscape-844x390: no horizontal overflow
+  FAIL phone-landscape-844x390: stage keeps ≥ 120px visible height on every step — 1.1:35,1.2:35,1.3:35,1.4:35
+  ok   phone-landscape-844x390: every teacher control can be scrolled to and clicked
+  FAIL phone-landscape-844x390: every in-stage control can be scrolled fully into view — 1.5 card,1.5 card,1.5 card
+  ok   phone-landscape-844x390: no in-stage control is covered by another element after scrolling
+  ok   phone-landscape-844x390: bottom of content is not hidden behind the ribbon
+  FAIL phone-landscape-844x390: no visible IPA below 12px
+  ok   phone-landscape-844x390: no page errors
+
+# desktop-1280x720
+   100 steps, 271 in-stage controls scrolled to; smallest visible stage 453px at step 1.1
+  ok   desktop-1280x720: no horizontal overflow
+  ok   desktop-1280x720: stage keeps ≥ 280px visible height on every step
+  ok   desktop-1280x720: every teacher control can be scrolled to and clicked
+  ok   desktop-1280x720: every in-stage control can be scrolled fully into view
+  ok   desktop-1280x720: no in-stage control is covered by another element after scrolling
+  ok   desktop-1280x720: bottom of content is not hidden behind the ribbon
+  FAIL desktop-1280x720: no visible IPA below 12px
+  ok   desktop-1280x720: no page errors
+
+19 passed, 5 failed
+FAILED:
+ - phone-portrait-390x844: no visible IPA below 12px
+ - phone-landscape-844x390: stage keeps ≥ 120px visible height on every step — 1.1:35,1.2:35,1.3:35,1.4:35
+ - phone-landscape-844x390: every in-stage control can be scrolled fully into view — 1.5 card,1.5 card,1.5 card
+ - phone-landscape-844x390: no visible IPA below 12px
+ - desktop-1280x720: no visible IPA below 12px

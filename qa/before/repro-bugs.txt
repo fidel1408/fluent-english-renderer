@@ -1,0 +1,15 @@
+{
+ "I_am_a_student": "Start with a pronoun: I, you, he, she, it, we, or they./Start wɪð ə ˈprəʊnaʊn aɪ juː hiː ʃiː ɪt wiː ɔːr ðeɪ/",
+ "she_is_happy": "Pattern OK: she + is. (This only checks pronoun + be, not meaning.)/Pattern OK ʃiː ɪz ðɪs ˈəʊnli checks ˈprəʊnaʊn biː nɑːt ˈmiːnɪŋ/",
+ "q4": "[\"They’s friends.\",\"Their friends.\",\"They’re friends.\",\"They aren’t friends.\"] | Which sentence uses a contraction?",
+ "exportKeys": [
+  "answered",
+  "firstAttemptScore",
+  "retryCorrect",
+  "retryAttempted",
+  "missedOnFirst",
+  "scoreAfterRetry",
+  "outOf",
+  "label"
+ ]
+}

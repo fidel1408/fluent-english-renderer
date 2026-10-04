@@ -1,0 +1,33 @@
+{
+ "ambient": {
+  "peak": 0.0359,
+  "rms": 0.00356
+ },
+ "ambientDuckedBySpeech": {
+  "peak": 0.0083,
+  "rms": 0.0013
+ },
+ "ambientQuiet": {
+  "peak": 0.0007,
+  "rms": 0.00006
+ },
+ "sfx_whoosh": 0.0166,
+ "sfx_join": 0.083,
+ "sfx_pop": 0.0555,
+ "sfx_click": 0.0389,
+ "sfx_correct": 0.1005,
+ "sfx_gentle": 0.0554,
+ "sfx_reveal": 0.0695,
+ "sfx_timeup": 0.0644,
+ "sfx_turn": 0.0401,
+ "sfx_save": 0.0396,
+ "ending": {
+  "peak": 0.1018,
+  "rms": 0.01332
+ },
+ "opening": {
+  "peak": 0.1125,
+  "rms": 0.02107
+ }
+}
+errors 0

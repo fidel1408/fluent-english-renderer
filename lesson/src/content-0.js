@@ -4,8 +4,8 @@ const NAMEC = (who) => Art.CAST[who];
 const prCls = (who) => (NAMEC(who).pr.startsWith('he') ? 'he' : 'she');
 /** Overlay name tag: "Alex / he/him" at svg coords (x, y). */
 const tagY = (y) => (y >= 480 ? [446, ' tagtop'] : [y, '']);
-const NT = (who, x, y = 508, id) => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${prCls(who)}">${tx(NAMEC(who).name)}<small>${tx(NAMEC(who).pr)}</small></div>` }; };
-const TG = (title, sub, x, y, id, cls = '') => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${cls}">${tx(title)}${sub ? `<small>${tx(sub)}</small>` : ''}</div>` }; };
+const NT = (who, x, y = 508, id) => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${prCls(who)}">${tx(`${NAMEC(who).name} · ${NAMEC(who).pr}`)}</div>` }; };   // one text line + one IPA line, so it fits under the picture
+const TG = (title, sub, x, y, id, cls = '') => { const [yy, c] = tagY(y); return { x, y: yy, id, cls: (id ? 'fadein' : '') + c, html: `<div class="tag ${cls}">${tx(sub ? `${title} · ${sub}` : title)}</div>` }; };
 const PILL = (text, x, y, id, color = 'coral', mv) => ({ x, y, id, cls: (mv ? 'mv ' : '') + 'fadein', html: `<span class="bigpill ${color}">${tx(text)}</span>` });
 const BUB = (id, x, y, text) => ({ id, x, y, html: tx(text, { be: 0 }) });
 const RING = (id, x, y, w, h, cls = '') => ({ id, x, y, w, h, cls });
@@ -29,8 +29,10 @@ const cut = (s) => s.replace(/\s+/g, ' ').trim();
 function promptBeat(o) {
   const lab = !!o.lab;
   return {
+    inv: { kind: 'prompt', instruction: o.instr, statementOrQuestion: o.frame || null, facts: o.facts || null, answerKey: o.sentence.split(' / '), verdict: o.big || null, explanation: o.why || null, starters: o.starters || null, extraChallenge: o.extra || null, speakerRole: o.lab ? 'teacher chooses learner' : null },
     title: o.title, sub: o.sub, talk: o.talk, turn: o.turn, es: o.es, quiet: o.quiet, ansSay: o.ansSay || (o.sentence ? [o.sentence.split(' / ')[0]] : null),
     render: () => cols(o.scene(), `
+      ${o.facts ? `<div class="card" style="border-left:6px solid var(--violet)"><b class="pill violet">${tx('Facts')}</b><div class="mid-sentence" style="margin-top:.3rem">${tx(o.facts)}</div></div>` : ''}
       <div class="card"><div class="instr">${tx(o.instr)}</div>${o.frame ? `<div class="big-sentence" style="margin:.5rem 0">${tx(o.frame, { be: 0 })}</div>` : ''}</div>
       ${o.starters ? `<div class="card" data-starters><b class="pill gold">${tx('Sentence starters')}</b><div class="mid-sentence" style="margin-top:.35rem">${o.starters.map((s) => `<div>${tx(s)}</div>`).join('')}</div></div>` : ''}
       ${o.extra ? `<div class="row"><button class="btn alt sm" data-extra aria-pressed="false">Extra challenge</button></div><div class="card" data-extra-box style="display:none;border-color:var(--violet)"><b class="pill violet">${tx('Extra challenge')}</b><div class="instr" style="margin-top:.3rem">${tx(o.extra)}</div></div>` : ''}
@@ -97,7 +99,7 @@ ACTS.push({
     (() => {
       const words = [['ready', 'maya', 'smile', 'ready = I am in the right state to start.'], ['happy', 'omar', 'happy', 'happy = a good feeling.'], ['tired', 'lena', 'tired', 'tired = I need rest.']];
       return {
-        title: 'Complete the sentence: I’m …', talk: 90, es: 'Elige una palabra: ready, happy o tired, y di la frase completa: "I’m ___". "Ready" es un estado (cómo estamos), no una emoción como "happy".',
+        inv: { kind: 'choice-ungraded', options: words.map((w) => w[0]), note: 'any choice is acceptable' }, title: 'Complete the sentence: I’m …', talk: 90, es: 'Elige una palabra: ready, happy o tired, y di la frase completa: "I’m ___". "Ready" es un estado (cómo estamos), no una emoción como "happy".',
         render: () => `<div class="cols narrow-left"><div class="stack"><div class="card center" style="min-height:7rem"><div class="big-sentence" id="feel-s">${tx("I'm ___.")}</div></div>
           <div class="meaning">${tx('*ready* is a state: how we are now. *happy* and *tired* are feelings.')}</div>
           <div class="small-note" id="feel-t"></div></div>
@@ -116,17 +118,18 @@ ACTS.push({
     })(),
     ...[
       { q: '___ is a teacher.', opts: ['He', 'She', 'They'], ok: 'She', sc: () => SC({ alt: 'Maya holds a book.', ppl: [['maya', 480, { s: 1, poseL: 'hold', held: { L: 'book' }, expr: 'smile' }]], tags: [NT('maya', 480)] }), es: 'Mini prueba 1 de 3 (sin nota). Maya es "she/her". Elige el pronombre.' },
-      { q: 'We ___ in class.', opts: ['am', 'is', 'are'], ok: 'are', sc: () => SC({ alt: 'Alex and Maya in class. Alex is speaking.', ppl: [['alex', 380, { poseR: 'present', gaze: 0.5 }], ['maya', 580, { gaze: -0.5 }]], tags: [NT('alex', 380), NT('maya', 580), TG('Alex is speaking', null, 380, 120)], rings: [RING('rg1', 480, 330, 400, 340, 'coral')] }), es: 'Mini prueba 2 de 3 (sin nota). Alex habla de él y Maya: "we".' },
-      { q: 'I ___ happy.', opts: ['am', 'is', 'are'], ok: 'am', sc: () => SC({ alt: 'Alex is smiling and speaking.', ppl: [['alex', 480, { s: 1, expr: 'happy', poseL: 'chest' }]], tags: [NT('alex', 480), TG('Alex is speaking', null, 480, 110)] }), es: 'Mini prueba 3 de 3 (sin nota). Alex habla de sí mismo: "I".' },
+      { q: 'We ___ in class.', opts: ['am', 'is', 'are'], ok: 'are', sc: () => SC({ alt: 'Alex and Maya in class. Alex is speaking.', ppl: [['alex', 380, { poseR: 'present', gaze: 0.5 }], ['maya', 580, { gaze: -0.5 }]], tags: [NT('alex', 380), NT('maya', 580), TG('Alex is speaking', null, 380, 88)], rings: [RING('rg1', 480, 330, 400, 340, 'coral')] }), es: 'Mini prueba 2 de 3 (sin nota). Alex habla de él y Maya: "we".' },
+      { q: 'I ___ happy.', opts: ['am', 'is', 'are'], ok: 'am', sc: () => SC({ alt: 'Alex is smiling and speaking.', ppl: [['alex', 480, { s: 1, expr: 'happy', poseL: 'chest' }]], tags: [NT('alex', 480), TG('Alex is speaking', null, 480, 88)] }), es: 'Mini prueba 3 de 3 (sin nota). Alex habla de sí mismo: "I".' },
     ].map((d, i) => ({
-      title: 'Quick check (not graded)', sub: `${i + 1} of 3`, talk: 0, es: d.es,
-      render: () => cols(d.sc(), `<div class="card"><div class="big-sentence">${tx(d.q)}</div></div><div class="stack" id="dg">${d.opts.map((o) => `<button class="opt" data-o="${o}" aria-pressed="${S.diag['d' + (i + 1)] && S.diag['d' + (i + 1)].choice === o}"><span class="mid-sentence">${tx(o)}</span></button>`).join('')}</div><div class="small-note" id="dg-note" aria-live="polite">${S.diag['d' + (i + 1)] ? 'Recorded for your teacher. No score is shown now.' : 'Teacher: click the answer the class chooses. It is saved locally and not graded here.'}</div>`),
+      inv: { kind: 'diagnostic-ungraded', id: 'D' + (i + 1), prompt: d.q, options: d.opts, answerKey: d.ok }, title: 'Quick check (not graded)', sub: `${i + 1} of 3`, talk: 0, es: d.es,
+      render: () => cols(d.sc(), `<div class="card"><div class="big-sentence">${tx(d.q)}</div></div><div class="stack" id="dg">${d.opts.map((o) => `<button class="opt" data-o="${o}" aria-pressed="${S.diag['d' + (i + 1)] && S.diag['d' + (i + 1)].choice === o}"><span class="mid-sentence">${tx(o)}</span></button>`).join('')}</div><div class="small-note" id="dg-note" aria-live="polite">${S.diag['d' + (i + 1)] ? tx('Recorded for your teacher. No score is shown now.') : tx('Teacher: click the answer the class chooses. It is saved locally and not graded here.')}</div>`),
       seq: [{ t: i === 0 ? 'A quick check. No score now. Choose the best word.' : 'Choose the best word.' }],
       bind: (A) => {
         $$('[data-o]', A.root).forEach((b) => b.addEventListener('click', () => {
           S.diag['d' + (i + 1)] = { item: d.q, choice: b.dataset.o }; save();
+          logAnswer({ qid: 'D' + (i + 1), ungraded: true, mode: 'diagnostic', prompt: d.q, options: d.opts, selected: d.opts.indexOf(b.dataset.o), correct: d.opts.indexOf(d.ok), attempt: attemptCount('D' + (i + 1), 'diagnostic') + 1, attemptType: 'diagnostic', ok: null });
           $$('[data-o]', A.root).forEach((x) => x.setAttribute('aria-pressed', x === b));
-          $('#dg-note', A.root).textContent = 'Recorded for your teacher. No score is shown now.'; Sound.sfx('save');
+          $('#dg-note', A.root).innerHTML = tx('Recorded for your teacher. No score is shown now.'); Sound.sfx('save');
         }));
       },
     })),

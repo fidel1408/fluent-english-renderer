@@ -283,13 +283,16 @@ details summary{cursor:pointer}
   .scene{border-radius:12px}
 }
 .scene{container-type:inline-size}
+.scene-legend{display:none}
 @media (max-width:700px){
-  /* labels inside the picture scale with the picture; their IPA stays in the caption bar and side cards */
-  .scene .tag{font-size:3.3cqw;padding:.1em .45em;border-width:1.5px}
-  .scene .tag small{font-size:.85em}
-  .scene .tag .ipa,.scene .bubble .ipa{display:none!important}
-  .scene .bubble{font-size:3.9cqw;white-space:normal;width:max-content;max-width:62cqw;padding:.25em .6em}
-  .scene .bigpill{font-size:5cqw}
+  /* name tags and speech bubbles move out of the small picture into a legend at full reading size, with their IPA */
+  .scene .tag,.scene .bubble{display:none}
+  .scene-legend{display:flex;flex-wrap:wrap;gap:.45rem .6rem;margin:.5rem 0 .2rem;align-items:flex-start}
+  .scene-legend .tag{box-shadow:0 1px 4px rgba(0,0,0,.2)}
+  .scene-legend .lg-say{background:#fff;border-radius:14px;padding:.3rem .7rem;font-family:var(--serif);font-weight:600;font-size:1.1rem;box-shadow:0 1px 4px rgba(0,0,0,.2);color:var(--ink)}
+  .scene-legend .lg-k{font:700 1.6rem var(--serif);color:var(--teal-700);margin-right:.2rem;line-height:0}
+  .scene .bigpill{font-size:6cqw}
+}
 }
 #dock .grp{flex-wrap:wrap}
 @media (max-width:700px){.turn{position:static;margin-top:.6rem}.pane:has(.turn){padding-bottom:1rem}}
@@ -298,3 +301,36 @@ details summary{cursor:pointer}
   #dock .grp{flex-wrap:nowrap;flex:none}
   #caption{max-height:26vh}
 }
+
+#show-dock{display:none;position:fixed;right:.8rem;bottom:.8rem;z-index:45;font-size:1rem;padding:.6rem 1.1rem;box-shadow:var(--shadow)}
+body.nodock #show-dock{display:block}
+.scene-legend .tag{white-space:normal;text-align:left;max-width:100%}
+
+/* ---- landscape phones / short windows: compact chrome so the lesson keeps most of the height ---- */
+@media (max-height:520px){
+  html{font-size:calc(max(12px,3.4vh) * var(--tscale))}
+  #top{padding:.2rem .6rem;gap:.5rem}
+  #top .brand small,#chapters,#clock small{display:none}
+  #top .brand img{height:1.9rem;width:1.9rem}
+  #clock .big{font-size:1.2rem;min-width:0}#clock .bar{width:4rem}
+  #stage,#caption,#dock{margin-left:.3rem;margin-right:.3rem}
+  .pane{padding:.5rem .8rem .8rem;gap:.4rem}
+  .head h1{font-size:1.35rem}
+  #dock{flex-wrap:nowrap;overflow-x:auto;padding:.25rem .4rem}
+  #dock .grp{flex-wrap:nowrap;flex:none;border:0;padding-right:0}
+  #dock .hint{display:none}
+  #caption{font-size:1.15rem;max-height:20vh;padding:.25rem .6rem}
+  #caption:empty:before{content:"";}
+  .turn{position:static;margin-top:.4rem}.pane:has(.turn){padding-bottom:.8rem}
+}
+@media (max-height:520px) and (min-width:700px){
+  .cols,.cols.even,.cols.narrow-left{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+}
+@media (max-width:700px), (max-height:520px){
+  .scene .tag,.scene .bubble{display:none}
+  .scene-legend{display:flex;flex-wrap:wrap;gap:.45rem .6rem;margin:.5rem 0 .2rem;align-items:flex-start}
+  .scene-legend .tag{box-shadow:0 1px 4px rgba(0,0,0,.2);white-space:normal;text-align:left;max-width:100%}
+  .scene-legend .lg-say{background:#fff;border-radius:14px;padding:.3rem .7rem;font-family:var(--serif);font-weight:600;font-size:1.1rem;box-shadow:0 1px 4px rgba(0,0,0,.2);color:var(--ink)}
+  .scene-legend .lg-k{font:700 1.6rem var(--serif);color:var(--teal-700);margin-right:.2rem;line-height:0}
+}
+.pill .tx .ipa,.chip .tx .ipa,.bigpill .tx .ipa,.tile .tx .ipa,.opt .tx .ipa,.tag .tx .ipa,.bubble .tx .ipa{font-size:max(.8em,12px)!important}

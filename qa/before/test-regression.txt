@@ -1,0 +1,13 @@
+
+# A. Word bank: I am … and every pronoun (valid, invalid, incomplete)
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.evaluate: ReferenceError: checkPattern is not defined
+    at eval (eval at evaluate (:290:30), <anonymous>:1:109)
+    at UtilityScript.evaluate (<anonymous>:292:16)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+    at /home/user/fluent-english-renderer/lesson/build/test-regression.js:44:26
+
+Node.js v22.22.0

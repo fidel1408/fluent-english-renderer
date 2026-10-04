@@ -1,0 +1,1 @@
+beats 100 | text without IPA: 0 | empty/unknown IPA: 0 | IPA hidden on screen: 0

@@ -1,0 +1,23 @@
+# speech sequencing (mock speechSynthesis)
+   spoken so far: ["Activity 1. Visual warm-up: people, things, and me.","Look at the picture.","Two people. Alex and Maya.","A group.","And a book."]
+  ok   activity 1 narration plays in order
+  ok   order preserved
+  ok   no overlapping voices
+  ok   American English voice chosen automatically
+# pause stops speech and timer; resume continues
+  ok   nothing is spoken while paused
+  ok   speech resumes after Play
+  ok   still no overlap after resume
+# changing activity stops queued speech
+  ok   old beat lines are not spoken after navigating away
+  ok   no overlap across navigation
+# Spanish help only on demand
+  ok   no Spanish speech by default
+  ok   Spanish read-aloud uses the Spanish voice
+# mute narration
+  ok   muted narration speaks nothing (captions still run)
+  ok   caption text still shown while muted
+# reduced motion
+  ok   reduced-motion class applied
+errors: 0 []
+14 passed, 0 failed

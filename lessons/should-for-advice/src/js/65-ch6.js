@@ -16,7 +16,7 @@
       n1: [
         { icon: 'doc', t: 'finish the outline first', flag: 0, line: ['o1a', 'Maya finishes the outline. She feels calmer, but the phone still buzzes, and the room is still a question.'], ex: 'You should finish the outline first, because it is the biggest problem.' },
         { icon: 'mute', t: 'silence the notifications', flag: 1, line: ['o1b', 'The phone is quiet. Maya can think clearly, but the outline still needs work, and the room is still a question.'], ex: 'I think you should silence your phone, because it breaks your focus.' },
-        { icon: 'calendar', t: 'confirm the meeting room', flag: 2, line: ['o1c', 'Maya checks the invitation and finds the building. She knows where to go, but the outline is still unfinished.'], ex: 'You should check the invitation, because you need the right room.' },
+        { icon: 'calendar', t: 'confirm the meeting room', flag: 2, stale: true, line: ['o1c', 'Maya checks the invitation and finds the building. She knows where to go, but the outline is still unfinished.'], ex: 'You should check the invitation, because you need the right room.' },
       ],
       twist: { icon: 'clock', o: { h: [-6, -20], m: [18, -10] }, t: 'meeting moved earlier', line: ['tw', 'New information! The manager moved the meeting thirty minutes earlier, and the room has changed.'], rev: ['rv', 'Does your advice still work? Listen to Maya\'s needs, and revise your recommendation.'] },
       n2: [
@@ -24,7 +24,7 @@
         { icon: 'slides', t: 'make the talk shorter', flag: 0, line: ['o2b', 'Maya shortens the presentation. The outline is ready, and the shorter version fits the new time.'], ex: 'I think you should make the talk shorter, because the meeting starts earlier.' },
         { icon: 'mute', t: 'turn off the phone and work', flag: 1, line: ['o2c', 'Maya turns off her phone and works faster. She is focused, though other questions remain.'], ex: 'You should turn off your phone, because you need to focus now.' },
       ],
-      fin: [['f1', 'Your two steps work together. Maya feels prepared. Nothing is guaranteed, but she has a clear plan.'], ['f2', 'You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.']],
+      fin: [['f1', 'Your two steps work together. Maya feels prepared. Nothing is guaranteed, but she has a clear plan.'], ['f2', 'Maya improved something, but other problems are still open. Another step might help.']],
       model: [0, 0], tw: { a: 'dusk' },
     },
     trip: {
@@ -37,15 +37,15 @@
       n1: [
         { icon: 'ticket', t: 'buy the tickets today', flag: 0, line: ['o1a', 'The tickets are bought. Everyone can board, but the meeting time and the plan are still unclear.'], ex: 'You should buy the tickets today, because prices may go up.' },
         { icon: 'clock', t: 'meet at the station early', flag: 1, line: ['o1b', 'The friends agree to arrive early. There is time to adapt, but the tickets are still not bought.'], ex: 'I think we should meet early, because the train leaves early.' },
-        { icon: 'chat', t: 'share the plan in a group message', flag: 2, line: ['o1c', 'The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.'], ex: 'You should send a group message, because everyone lives far away.' },
+        { icon: 'chat', t: 'share the plan in a group message', flag: 2, stale: true, line: ['o1c', 'The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.'], ex: 'You should send a group message, because everyone lives far away.' },
       ],
       twist: { icon: 'train', t: 'the train is late', line: ['tw', 'New information! The train is delayed by forty minutes, and Marcus is still at home.'], rev: ['rv', 'Does your advice still work? Listen to the group\'s needs, and revise your recommendation.'] },
       n2: [
         { icon: 'chat', t: 'send a new message to the group', flag: 2, line: ['o2a', 'Hana sends a message. Marcus sees it and leaves a little later. That might reduce stress for everyone.'], ex: 'You should send a new message, because Marcus does not know about the delay.' },
         { icon: 'coffee', t: 'wait at a café near the station', flag: 1, line: ['o2b', 'Priya and Hana wait at a café near the station. The delay feels shorter, though Marcus still needs to know.'], ex: 'I think we should wait at a café, because it is warm there.' },
-        { icon: 'ticket', t: 'check a later train in the app', flag: 0, line: ['o2c', 'Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.'], ex: 'You should check the app, because there may be a later train.' },
+        { icon: 'ticket', t: 'check a later train in the app', flag: 0, lamp: false, line: ['o2c', 'Priya checks the app and finds a later train. It helps, but the group still needs one clear plan.'], ex: 'You should check the app, because there may be a later train.' },
       ],
-      fin: [['f1', 'Your two steps cover different problems. The group has a clearer plan for the delay. Delays can still surprise us, so stay flexible.'], ['f2', 'You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.']],
+      fin: [['f1', 'Your two steps cover different problems. The group has a clearer plan for the delay. Delays can still surprise us, so stay flexible.'], ['f2', 'The trip improved a little, but other problems are still open. Another step might help.']],
       model: [2, 1],
     },
     flat: {
@@ -62,11 +62,11 @@
       ],
       twist: { icon: 'calendar', t: 'concert on Saturday', line: ['tw', 'New information! Theo has a concert on Saturday. He needs to practice every evening this week.'], rev: ['rv', 'Does your advice still work? Listen to both people\'s needs, and revise your recommendation.'] },
       n2: [
-        { icon: 'calendar', t: 'agree on quiet hours after ten', flag: 1, line: ['o2a', 'They agree: music until ten, and headphones after that. Both people have a plan.'], ex: 'You should agree on quiet hours, because you both have needs.' },
+        { icon: 'calendar', t: 'agree on quiet hours after ten', flag: 1, also: [0], line: ['o2a', 'They agree: music until ten, and headphones after that. Both people have a plan.'], ex: 'You should agree on quiet hours, because you both have needs.' },
         { icon: 'coffee', t: 'invite Theo for coffee to talk', flag: 0, line: ['o2b', 'Over coffee, Theo explains the concert, and Hana explains her mornings. They understand each other better.'], ex: 'I think you should invite him for coffee, because a friendly talk helps.' },
-        { icon: 'clock', t: 'ask Theo to practice earlier', flag: 2, line: ['o2c', 'Theo practices earlier in the evening. Hana can rest, though they still need a clear agreement.'], ex: 'You should ask him to practice earlier, because you start work early.' },
+        { icon: 'clock', t: 'ask Theo to practice earlier', flag: 2, also: [0], line: ['o2c', 'Theo practices earlier in the evening. Hana can rest, though they still need a clear agreement.'], ex: 'You should ask him to practice earlier, because you start work early.' },
       ],
-      fin: [['f1', 'Your steps cover different needs. Hana and Theo can work out a clearer plan. It still depends on both people, so keep talking.'], ['f2', 'Your steps were similar. Some things improved, but one need is still open. Another step might help.']],
+      fin: [['f1', 'Your steps cover different needs. Hana and Theo can work out a clearer plan. It still depends on both people, so keep talking.'], ['f2', 'Some things improved, but at least one need is still open. Another step might help.']],
       model: [0, 0],
     },
   };
@@ -74,15 +74,24 @@
   const KEYS = ['pres', 'trip', 'flat'];
   const st = (id) => (E.mission[id] = E.mission[id] || { prio: null, n1: null, n2: null, auto1: false, auto2: false });
   const eff = (id, which) => { const s = st(id); if (s[which] != null) return s[which]; return SC[id].model[which === 'n1' ? 0 : 1]; };
-  function flagsOf(id, upto) {
-    const f = [false, false, false]; const sc = SC[id], s = st(id);
-    if (s.n1 != null) f[sc.n1[s.n1].flag] = true;
-    if (upto !== 1 && s.n2 != null) f[sc.n2[s.n2].flag] = true;
-    return f;
+  /* Facts model. A lamp is true only if the fact is true in the story after ALL steps so far.
+     stage 'r1' = after the first step; 'twist' = after the new information (steps marked stale are now out of date);
+     'final' = after the revised step as well. `real` = use only choices the learners actually made; otherwise the example path fills in. */
+  function factsOf(id, stage, real) {
+    const sc = SC[id], s = st(id), on = [false, false, false], old = [false, false, false];
+    const i1 = real ? s.n1 : eff(id, 'n1'), i2 = real ? s.n2 : eff(id, 'n2');
+    const o1 = i1 != null ? sc.n1[i1] : null, o2 = stage === 'final' && i2 != null ? sc.n2[i2] : null;
+    if (o1) { if (stage !== 'r1' && o1.stale) old[o1.flag] = true; else on[o1.flag] = true; }
+    if (o2) { if (o2.lamp !== false) on[o2.flag] = true; (o2.also || []).forEach((k) => { on[k] = true; }); }
+    on.forEach((v, k) => { if (v) old[k] = false; });
+    return { on, old };
   }
+  const flagsOf = (id, upto) => factsOf(id, upto === 1 ? 'r1' : 'final', true).on;
+  /* closing comment follows the actual final facts: two or more true lamps = steps work together */
+  const finIx = (on) => (on.filter(Boolean).length >= 2 ? 0 : 1);
   const count = (f) => f.filter(Boolean).length;
   const moodOf = (n) => (n >= 2 ? 'relief' : n === 1 ? 'think' : 'stress');
-  FE.mission_flags = flagsOf;
+  FE.mission_flags = flagsOf; FE.mission_facts = factsOf;
 
   /* ------------------------------------------------------------------ shared builders */
   function envFor(S, sc, mood) { S.env(sc.env[0], Object.assign({}, sc.env[1], mood ? { mood } : {})); }
@@ -101,23 +110,17 @@
     });
     return els;
   }
-  function setToken(S, els, i, on, sc) {
-    const el = els[i]; const src = on ? sc.flags[i] : sc.problems[i]; el._paint(i);
-    const f = on; // repaint with status
-    const prev = el.innerHTML; // placeholder to keep API simple
-    el._on = on; el.innerHTML = el.innerHTML; // no-op
-  }
   /* repaint tokens from a flag array */
-  function refresh(els, sc, flags, S, pulse) {
+  function refresh(els, sc, flags, S, pulse, old) {
     els.forEach((el, k) => {
-      const on = flags[k]; const src = on ? sc.flags[k] : sc.problems[k]; const size = el.style.fontSize === '30px' ? 130 : 96;
-      el.innerHTML = `<div style="position:relative;display:inline-block;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))">${FE.iconSVG(src.icon, size, src.o || {})}${on ? '<span style="position:absolute;right:-8px;top:-6px;width:44px;height:44px;border-radius:50%;background:#2fa36b;color:#fff;font-size:30px;line-height:44px;font-weight:800;border:3px solid #fff">&#10003;</span>' : ''}</div><div style="margin-top:4px;padding:2px 10px 6px;border-radius:14px;background:rgba(10,16,30,.8)">${UB(src.t)}</div>`;
-      if (pulse === k && S && !S.fast) { el.style.transition = 'transform .4s'; el.style.transform = 'scale(1.22)'; setTimeout(() => { el.style.transform = ''; }, 500); }
+      const on = flags[k], stale = !!(old && old[k]); const src = on || stale ? sc.flags[k] : sc.problems[k]; const size = el.style.fontSize === '30px' ? 130 : 96;
+      el.innerHTML = `<div style="position:relative;display:inline-block;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45));${stale ? 'opacity:.5' : ''}">${FE.iconSVG(src.icon, size, src.o || {})}${stale ? '<span class="stale" style="position:absolute;right:-8px;top:-6px;width:44px;height:44px;border-radius:50%;background:#ffb540;color:#2a1a00;font-size:30px;line-height:44px;font-weight:800;border:3px solid #fff">!</span>' : ''}${on ? '<span style="position:absolute;right:-8px;top:-6px;width:44px;height:44px;border-radius:50%;background:#2fa36b;color:#fff;font-size:30px;line-height:44px;font-weight:800;border:3px solid #fff">&#10003;</span>' : ''}</div><div style="margin-top:4px;padding:2px 10px 6px;border-radius:14px;background:rgba(10,16,30,.8)">${UB(src.t)}${stale ? `<div style="font-size:.8em;color:#ffd48a">${UB('out of date')}</div>` : ''}</div>`;
+      if (pulse === k && S && !S.fast) { el.style.transition = 'transform .4s'; el.style.transform = 'scale(1.22)'; S.later(() => { el.style.transform = ''; }, 500); }
     });
   }
   function react(actors, sc, n, S) {
     const hero = actors[sc.hero]; hero.expr(moodOf(n));
-    if (n >= 2) { hero.arm('R', 'heart'); setTimeout(() => hero.arm('R', 'rest'), 1400); } else if (n === 0) hero.arm('L', 'chin'); else hero.arm('L', 'rest');
+    if (n >= 2) { hero.arm('R', 'heart'); S.later(() => hero.arm('R', 'rest'), 1400); } else if (n === 0) hero.arm('L', 'chin'); else hero.arm('L', 'rest');
     actors.forEach((a, i) => { if (i !== sc.hero && n >= 1) a.expr('smile'); });
   }
   function speakLine(S, sc, key) { if (S.seg.C[key]) C.playClip(S, key); }
@@ -170,6 +173,7 @@
     const sc = SC[k];
     FE.seg({
       id: '6.' + (5 + idx), ch: 6, title: 'Pair round ' + ['one', 'two', 'three'][idx], dur: 100, music: 'off', lead: 0.6, gate: true, timer: {}, revealAt: 86,
+      reset() { const s = st(k); s.n1 = null; s.auto1 = false; },
       lines: [[sc.round[0], sc.round[1]]],
       clips: sc.n1.map((o) => [o.line[0], o.line[1]]),
       build(S, L) {
@@ -195,7 +199,7 @@
           if (st(k).n1 != null && !auto && st(k).n1 === i && st(k).lock) return;
           const s2 = st(k); s2.n1 = i; s2.auto1 = !!auto; S.sfx('ok');
           btns.forEach((b, j) => { b.classList.toggle('ok', j === i); b.classList.toggle('dim', j !== i); b.querySelector('.ick').textContent = j === i ? '✓' : String(j + 1); });
-          const f = flagsOf(k, 1); refresh(els, sc, f, S, sc.n1[i].flag);
+          const f = factsOf(k, 'r1', true).on; refresh(els, sc, f, S, sc.n1[i].flag);
           react(actors, sc, count(f), S);
           sc.n1[i].anim && sc.n1[i].anim(S, actors);
           C.playClip(S, sc.n1[i].line[0]);
@@ -218,26 +222,30 @@
     const sc = SC[k];
     FE.seg({
       id: '6.' + (8 + idx), ch: 6, title: 'New information: ' + ['the presentation', 'the group trip', 'the apartment'][idx], dur: 80, music: 'off', lead: 10.5, gate: true, timer: { at: 27 }, revealAt: 66,
+      reset() { const s = st(k); s.n2 = null; s.auto2 = false; s.done = false; },
       lines: [[sc.twist.line[0], sc.twist.line[1]], [sc.twist.rev[0], sc.twist.rev[1], { gap: 1.2 }]],
       clips: [...sc.n1.map((o) => ['r' + o.line[0], o.line[1]]), ...sc.n2.map((o) => [o.line[0], o.line[1]]), sc.fin[0], sc.fin[1]],
       build(S, L) {
-        const pre = flagsOf(k, 1); const s = st(k);
+        const s = st(k); const pre = factsOf(k, 'r1', false).on;
         envFor(S, sc, null); C.dim(S, 0.5, 'linear-gradient(90deg,rgba(6,9,18,.1),rgba(6,9,18,.5) 40%,rgba(6,9,18,.82))');
         const actors = actorsFor(S, sc, 1);
         const els = tokens(S, sc, 'compact', pre); els.forEach((e) => S.in(e)); refresh(els, sc, pre);
         react(actors, sc, count(pre), S);
+        /* what is true right now: before the twist = first step; after it = outdated facts removed; once revised = final facts */
+        const showFacts = (stage) => { const F = factsOf(k, stage, false); refresh(els, sc, F.on, S, null, F.old); return F; };
+        const stageNow = () => (st(k).done && st(k).n2 != null ? 'final' : 'twist');
         // recap of the earlier choice (spoken, example path if none was chosen)
         const n1 = eff(k, 'n1'); if (s.n1 == null) s.auto1 = true;
         const recap = S.ui(`<div class="lab">${UB(s.auto1 && s.n1 == null ? 'Example path so far' : 'Your first step')}</div><div style="display:flex;align-items:center;gap:14px">${FE.iconSVG(sc.n1[n1].icon, 60, sc.n1[n1].o || {})}<div style="font-size:32px">${UB(sc.n1[n1].t)}</div></div>`, 'panel anim', { left: '830px', top: '185px', width: '1050px', zIndex: 15, padding: '12px 22px 14px' });
         S.at(0.5, () => { S.in(recap); C.playClip(S, 'r' + sc.n1[n1].line[0]); });
         if (s.n1 == null) S.at(0.4, () => { if (!st(k).n1 && st(k).n1 !== 0) { /* example state is shown but not stored as a learner choice */ } });
         // flags shown during recap use the example path when nothing was chosen
-        if (s.n1 == null) { const f = [false, false, false]; f[sc.n1[n1].flag] = true; refresh(els, sc, f); }
+        showFacts('r1');
         // twist
         const tw = S.ui(`<div style="display:flex;align-items:center;gap:18px">${FE.iconSVG(sc.twist.icon, 96, sc.twist.o || {})}<div><div class="lab" style="color:#ff9aa8;font-size:30px">${UB('New information')}</div><div style="font-size:42px">${UB(sc.twist.t)}</div></div></div>`, 'panel anim', { left: '830px', top: '300px', width: '1050px', zIndex: 15, borderColor: '#ff9aa8' });
         const tint = S.ui('', 'anim', { position: 'absolute', left: 0, top: 0, width: '1920px', height: '1080px', background: 'radial-gradient(ellipse at 60% 40%,rgba(255,120,90,.0),rgba(80,40,110,.38))', pointerEvents: 'none', zIndex: 6 });
         S.at(sc.twist.line[0], () => { S.in(tw); S.in(tint); S.sfx('ping'); actors.forEach((a) => a.expr('surprise')); S.out(recap); });
-        S.at(sc.twist.line[0] + '>', () => { actors.forEach((a) => a.expr('worry')); });
+        S.at(sc.twist.line[0] + '>', () => { actors.forEach((a) => a.expr('worry')); const F = showFacts(stageNow()); if (F.old.some(Boolean) && !S.fast) S.sfx('no'); });
         S.at(sc.twist.rev[0], () => { actors[sc.hero].expr('think'); });
         // revised options
         const P = S.ui('', 'panel', { left: '830px', top: '470px', width: '1050px', zIndex: 15, padding: '14px 22px 16px', display: 'none' });
@@ -250,23 +258,22 @@
         function choose(i, auto) {
           const s2 = st(k); if (s2.n2 != null && s2.done) return; s2.n2 = i; s2.auto2 = !!auto; s2.done = true; S.sfx('ok');
           btns.forEach((b, j) => { b.classList.toggle('ok', j === i); b.classList.toggle('dim', j !== i); b.disabled = true; b.querySelector('.ick').textContent = j === i ? '✓' : String(j + 1); });
-          // flags: the example n1 (if none chosen) + chosen n2
-          const f = [false, false, false]; f[sc.n1[eff(k, 'n1')].flag] = true; f[sc.n2[i].flag] = true;
-          refresh(els, sc, f, S, sc.n2[i].flag);
+          // facts after BOTH steps: outdated facts stay off unless the revised step renews them
+          const F = factsOf(k, 'final', false), f = F.on;
+          refresh(els, sc, f, S, sc.n2[i].flag, F.old);
           S.out(tint); const n = count(f); react(actors, sc, n, S);
-          const same = sc.n1[eff(k, 'n1')].flag === sc.n2[i].flag;
-          const finKey = sc.fin[same ? 1 : 0][0];
-          C.playClip(S, sc.n2[i].line[0]);
-          const d = (S.seg.C[sc.n2[i].line[0]] || { dur: 6 }).dur;
-          if (!S.fast) S.timeout(() => C.playClip(S, finKey), (d + 0.6) * 1000);
-          res.innerHTML = `<span style="color:#7a5cd0;font-weight:800;background:#fbf8f1;border-radius:10px;padding:0 10px">${UB('maybe')}</span> ${UB(sc.n2[i].line[1])}<div style="margin-top:8px;color:#ffd48a">${UB(sc.fin[same ? 1 : 0][1])}</div>` + (auto ? `<div style="font-size:24px;margin-top:6px">${UB('This is an example path.')}</div>` : '');
+          const fi = finIx(f);
+          const finKey = sc.fin[fi][0];
+          // consequence, then the closing comment, as one ordered audio chain (pause/seek/replay cancel it; a later click replaces the whole chain)
+          C.playSeq(S, [sc.n2[i].line[0], finKey]);
+          res.innerHTML = `<span style="color:#7a5cd0;font-weight:800;background:#fbf8f1;border-radius:10px;padding:0 10px">${UB('maybe')}</span> ${UB(sc.n2[i].line[1])}<div style="margin-top:8px;color:#ffd48a">${UB(sc.fin[fi][1])}</div>` + (auto ? `<div style="font-size:24px;margin-top:6px">${UB('This is an example path.')}</div>` : '');
           S.in(res);
         }
         S.onReveal(() => {
           ex.style.display = 'block'; ex.innerHTML = `<div class="lab">${UB('Example advice')}</div>` + sc.n2.map((o) => `<div class="paper card" style="position:relative;margin:4px 0;padding:5px 14px 7px;font-size:27px;border-radius:14px;text-align:left">${UB(o.ex)}</div>`).join('');
           if (st(k).n2 == null) choose(sc.model[1], true); S.sfx('reveal');
         });
-        if (s.n2 != null && s.done) { P.style.display = 'block'; }
+        if (s.n2 != null && s.done) { P.style.display = 'block'; btns.forEach((b, j) => { b.classList.toggle('ok', j === s.n2); b.classList.toggle('dim', j !== s.n2); b.disabled = true; }); }
         C.notes(S, ['New information changes the situation. Ask: Does your first advice still work?', 'Learners listen to the person\'s needs and revise. They should not repeat a memorized sentence.']);
       },
     });
@@ -280,12 +287,12 @@
       S.env('cowork', { laptop: false }); C.dim(S, 0.74);
       KEYS.forEach((k, ci) => {
         const sc = SC[k], s = st(k), n1 = eff(k, 'n1'), n2 = eff(k, 'n2');
-        const f = [false, false, false]; f[sc.n1[n1].flag] = true; f[sc.n2[n2].flag] = true;
+        const F = factsOf(k, 'final', false), f = F.on;
         const star = s.prio != null ? `<div style="font-size:26px;color:#ffd48a">&#9733; ${UB(sc.problems[s.prio].t)}</div>` : '';
         const el = S.ui(`<div class="lab" style="text-align:center">${UB(sc.name)}</div>${star}
           <div style="margin-top:8px;display:flex;align-items:center;gap:10px;font-size:28px">${FE.iconSVG(sc.n1[n1].icon, 48, sc.n1[n1].o || {})}${UB(sc.n1[n1].t)}${s.n1 == null ? '<span style="color:#ffd48a">*</span>' : ''}</div>
           <div style="margin-top:6px;display:flex;align-items:center;gap:10px;font-size:28px">${FE.iconSVG(sc.n2[n2].icon, 48, sc.n2[n2].o || {})}${UB(sc.n2[n2].t)}${s.n2 == null ? '<span style="color:#ffd48a">*</span>' : ''}</div>
-          <div style="display:flex;gap:10px;margin-top:10px;justify-content:center">${sc.flags.map((fl, i) => `<span style="opacity:${f[i] ? 1 : 0.28}">${FE.iconSVG(fl.icon, 54, fl.o || {})}</span>`).join('')}</div>`, 'panel anim', { left: 60 + ci * 610 + 'px', top: '175px', width: '580px', zIndex: 14, padding: '16px 20px 18px' });
+          <div style="display:flex;gap:10px;margin-top:10px;justify-content:center">${sc.flags.map((fl, i) => `<span style="opacity:${f[i] ? 1 : 0.28}">${FE.iconSVG(fl.icon, 54, fl.o || {})}</span>`).join('')}</div>${F.old.some(Boolean) ? `<div style="text-align:center;font-size:24px;color:#ffd48a;margin-top:6px">! ${UB(F.old.map((o, i) => o ? sc.flags[i].t : '').filter(Boolean).join(', ') + ': out of date')}</div>` : ''}`, 'panel anim', { left: 60 + ci * 610 + 'px', top: '175px', width: '580px', zIndex: 14, padding: '16px 20px 18px' });
         S.at(1 + ci * 0.5, () => S.in(el));
       });
       const q = S.ui(['Which path did you choose?', 'Why? Use because.', 'Do you agree with another pair?'].map((t, i) => `<div class="paper card" style="position:relative;margin:6px 0;padding:8px 20px 10px;font-size:34px;border-radius:18px;text-align:left"><span style="display:inline-block;width:42px;height:42px;border-radius:50%;background:#ffb540;text-align:center;line-height:42px;font-weight:800;margin-right:12px">${i + 1}</span>${UB(t)}</div>`).join('') + `<div style="font-size:24px;margin-top:6px;color:#ffd48a">* ${UB('example path')}</div>`, 'panel anim', { left: '60px', top: '640px', width: '1800px', zIndex: 14, display: 'flex', gap: '24px', alignItems: 'center', flexWrap: 'wrap' });

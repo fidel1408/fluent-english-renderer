@@ -13,6 +13,12 @@
     });
   };
   C.playClip = function (S, key) { if (!S.fast && !FE.qa && S.seg.C[key]) FE.audio.play(S.seg.C[key].id, 0, S.seg.C[key].who); };
+  /* play clips in order as one chain: a later clip never replaces an earlier one that is still speaking (and pause/seek/replay cancel the whole chain) */
+  C.playSeq = function (S, keys) {
+    if (S.fast || FE.qa) return;
+    const cl = keys.map((k) => S.seg.C[k]).filter(Boolean).map((c) => ({ id: c.id, who: c.who }));
+    if (cl.length) FE.audio.play(cl[0].id, 0, cl[0].who, cl.slice(1));
+  };
   /* big labelled prop floating over the scene */
   C.prop = function (S, name, x, y, s, o) {
     const gEl = S.svg(`<g class="pv"><g transform="translate(${x} ${y}) scale(${s || 2})" filter="url(#fe-sh)">${FE.icon(name, o || {})}</g></g>`, 'anim');
@@ -39,7 +45,8 @@
     const R = 54, circ = 2 * Math.PI * R;
     const el = S.ui(`<svg width="130" height="130" viewBox="-65 -65 130 130" style="position:absolute;left:0;top:0"><circle r="${R}" fill="rgba(10,16,30,.85)" stroke="rgba(255,255,255,.2)" stroke-width="9"/><circle class="tr" r="${R}" fill="none" stroke="#ffb540" stroke-width="9" stroke-linecap="round" transform="rotate(-90)" stroke-dasharray="${circ}" stroke-dashoffset="0"/></svg><div style="position:absolute;left:-30px;top:132px;width:190px;text-align:center;font-size:30px;color:#ffd48a;font-weight:800">${UB(label || 'Think')}</div>`, 'anim', { position: 'absolute', left: x + 'px', top: y + 'px', width: '130px', height: '130px', zIndex: 16 });
     const t0 = S.t(ref); if (t0 + secs > S.seg.dur - 0.3) FE.layoutIssues.push(`segment ${S.seg.id}: ring ends ${(t0 + secs).toFixed(1)}s > ${S.seg.dur}s`);
-    S.at(t0, () => { if (S.fast) return; S.in(el); const tr = el.querySelector('.tr'); tr.style.transition = `stroke-dashoffset ${secs}s linear`; requestAnimationFrame(() => { tr.style.strokeDashoffset = String(R * 2 * Math.PI); }); });
+    // the ring is driven by the scene clock (not a CSS transition) so pause freezes it
+    S.at(t0, () => { if (S.fast) return; S.in(el); const tr = el.querySelector('.tr'); let el_t = 0; S.ticker((dt) => { el_t += dt; tr.style.strokeDashoffset = String(Math.min(1, el_t / secs) * circ); }); });
     S.at(t0 + secs, () => { S.out(el); });
     return el;
   };

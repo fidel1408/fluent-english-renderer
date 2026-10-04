@@ -106,7 +106,7 @@
         S.at(r[3], () => { S.in(wrap); });
         S.at(r[3] + '>+1.6', () => {
           const ln = wrap.querySelector('.ln'); const xs = ln.querySelectorAll('.r-x'); xs.forEach((u) => u.classList.add('gone')); S.sfx('swipe');
-          S.timeout(() => { ln.innerHTML = UB(r[1]); wrap.querySelector('.bd').innerHTML = '&#10003;'; wrap.querySelector('.bd').style.color = '#55dc95'; S.sfx('ok'); }, S.fast ? 0 : 700);
+          S.later(() => { ln.innerHTML = UB(r[1]); wrap.querySelector('.bd').innerHTML = '&#10003;'; wrap.querySelector('.bd').style.color = '#55dc95'; S.sfx('ok'); }, S.fast ? 0 : 700);
           if (S.fast) { ln.innerHTML = UB(r[1]); wrap.querySelector('.bd').innerHTML = '&#10003;'; wrap.querySelector('.bd').style.color = '#55dc95'; }
         });
       });

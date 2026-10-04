@@ -33,8 +33,9 @@
   function Bubble(S, spec) {
     this.S = S; this.spec = spec; this.actor = spec.actor || null; this.think = !!spec.think; this.seed = FE.hash(spec.id || spec.text || 'b');
     const el = (this.el = h('div', { class: 'bubble' + (this.think ? ' think' : '') }));
+    const spkName = spec.who || (spec.actor && FE.CHARS[spec.actor.key] ? FE.CHARS[spec.actor.key].name : '');
     el.innerHTML = '<svg class="bg" aria-hidden="true"><g class="sh"><path class="tail-fill" d=""/><path class="blob" d=""/><path class="tail-fill2" d=""/></g><g class="dots"></g></svg><div class="txt">' +
-      (spec.who ? '<div class="who">' + FE.U(spec.who) + '</div>' : '') + '<div class="line">' + (spec.html || FE.U(spec.text, { idx: true })) + '</div></div>';
+      (spkName ? '<div class="who' + (spec.who ? '' : ' auto') + '">' + FE.U(spkName) + '</div>' : '') + '<div class="line">' + (spec.html || FE.U(spec.text, { idx: true })) + '</div></div>';
     el.style.left = '0px'; el.style.top = '0px';
     if (spec.w) el.querySelector('.txt').style.width = spec.w + 'px';
     if (spec.size) el.querySelector('.txt').style.fontSize = spec.size + 'px';
@@ -46,6 +47,7 @@
   }
   Bubble.prototype.measure = function () {
     const el = this.el, txt = el.querySelector('.txt');
+    if (!txt.offsetWidth) { this.w = 0; return; } // hidden (compact layout): measured again when shown on a wide layout
     this.w = txt.offsetWidth; this.h = txt.offsetHeight;
     const sp = this.spec;
     this.x0 = Math.max(24, Math.min(1896 - this.w, Math.round(sp.x - this.w / 2))); this.y0 = Math.max(142, Math.round(sp.y - this.h / 2));
@@ -75,6 +77,7 @@
     return a;
   };
   Bubble.prototype.update = function (force) {
+    if (!this.w) return;
     const a = this.anchorPt();
     if (!a) return;
     if (!force && this.lastA && Math.abs(a.x - this.lastA.x) < 0.4 && Math.abs(a.y - this.lastA.y) < 0.4) return;
@@ -115,9 +118,10 @@
     el.querySelector('.tail-fill2').setAttribute('d', `M${(p1[0] + tx * 1.5).toFixed(1)} ${(p1[1] + ty * 1.5).toFixed(1)}L${(p2[0] - tx * 1.5).toFixed(1)} ${(p2[1] - ty * 1.5).toFixed(1)}L${i2[0].toFixed(1)} ${i2[1].toFixed(1)}L${i1[0].toFixed(1)} ${i1[1].toFixed(1)}Z`);
   };
   Bubble.prototype.show = function (fast) {
-    this.shown = true; const el = this.el; el.classList.toggle('fast', !!fast);
+    this.shown = true; const el = this.el;
+    if (!this.w && !(FE.ui && FE.ui.compact)) { this.measure(); } el.classList.toggle('fast', !!fast);
     this.update(true);
-    if (fast) el.classList.add('in'); else requestAnimationFrame(() => { if (this.shown) el.classList.add('in'); });
+    if (fast) el.classList.add('in'); else requestAnimationFrame(() => { if (this.shown) { el.classList.add('in'); FE.ui && FE.ui.ensureVisible && FE.ui.ensureVisible(el); } });
     if (this.actor) FE.Loop.hooks.add(this.hook || (this.hook = () => this.update(false)));
   };
   Bubble.prototype.hide = function (fast) {
@@ -133,7 +137,7 @@
   /* ---------- Scene ---------- */
   function Scene(seg, L, layers) {
     this.seg = seg; this.L = L; this.layers = layers; this.fast = false;
-    this.cues = []; this.actors = []; this.bubbles = []; this.timeouts = []; this.hints = []; this.hintIx = 0; this.revealFns = []; this.notesHTML = ''; this.cleanup = [];
+    this.cues = []; this.actors = []; this.bubbles = []; this.timers = []; this.tickers = []; this.hints = []; this.hintIx = 0; this.revealFns = []; this.notesHTML = ''; this.cleanup = []; this.ctls = [];
     this.ui_ = layers.ui; this.revealed = false; this.state = {};
   }
   const P = Scene.prototype;
@@ -163,15 +167,27 @@
     const d = h('div', { class: cls || '', html: html }); if (style) Object.assign(d.style, style); this.ui_.appendChild(d); return d;
   };
   P.bubble = function (spec) { return new Bubble(this, spec); };
-  P.timeout = function (fn, ms) { const id = setTimeout(fn, ms); this.timeouts.push(id); return id; };
+  /* Delayed work runs on the SCENE clock, which only advances while the lesson is playing (pause freezes it, seek/replay/destroy cancel it). */
+  P.timeout = function (fn, ms) { const t = { left: Math.max(0, ms) / 1000, fn, dead: false }; this.timers.push(t); return t; };
+  /* UI feedback (not lesson sequencing): real time, so a paused teacher still sees an answer's result; cancelled when the scene is destroyed */
+  P.later = function (fn, ms) { const id = setTimeout(() => { this.rt = (this.rt || []).filter((x) => x !== id); fn(); }, ms); (this.rt = this.rt || []).push(id); return id; };
+  P.cancel = function (t) { if (t) t.dead = true; };
+  P.ticker = function (fn) { const k = { fn, dead: false }; this.tickers.push(k); return k; };
+  P.tick = function (dt) {
+    for (let i = 0; i < this.timers.length; i++) { const t = this.timers[i]; if (t.dead) continue; t.left -= dt; if (t.left <= 0) { t.dead = true; try { t.fn(); } catch (e) { console.error('timer', e); } } }
+    this.timers = this.timers.filter((t) => !t.dead);
+    for (let i = 0; i < this.tickers.length; i++) { const k = this.tickers[i]; if (!k.dead) { try { k.fn(dt); } catch (e) { k.dead = true; } } }
+    this.tickers = this.tickers.filter((k) => !k.dead);
+  };
+  P.reg = function (ctl) { this.ctls.push(ctl); return ctl; };
   P.sfx = function (n) { if (!this.fast) FE.audio.sfx(n); };
   /* reveal / vanish with classes (CSS transition); respects fast mode */
   P.in = function (el, delay) {
     if (!el) return;
     el.classList.add('anim'); el.classList.toggle('notr', this.fast);
     if (this.fast) el.classList.add('on');
-    else if (!delay) requestAnimationFrame(() => { if (el.isConnected) el.classList.add('on'); });
-    else this.timeout(() => el.classList.add('on'), delay * 1000);
+    else if (!delay) requestAnimationFrame(() => { if (el.isConnected) { el.classList.add('on'); FE.ui && FE.ui.ensureVisible && FE.ui.ensureVisible(el); } });
+    else this.timeout(() => { el.classList.add('on'); FE.ui && FE.ui.ensureVisible && FE.ui.ensureVisible(el); }, delay * 1000);
   };
   P.out = function (el) { if (!el) return; el.classList.toggle('notr', this.fast); el.classList.remove('on'); };
   /* smoothly move an SVG/HTML wrapper element (CSS transform) */
@@ -188,8 +204,10 @@
   };
   P.at = function (ref, fn) { this.cues.push({ t: this.t(ref), fn, done: false }); return this; };
   P.hint = function (fn) { this.hints.push(fn); };
-  P.onReveal = function (fn) { this.revealFns.push(fn); };
-  P.doReveal = function () { if (this.revealed) return; this.revealed = true; this.revealFns.forEach((f) => f()); };
+  /* A reveal handler is item-scoped: it may be called any number of times and must be idempotent; can() says whether something is still hidden. */
+  P.onReveal = function (fn, can) { const r = { fn, can: can || null, used: false }; this.revealFns.push(r); return r; };
+  P.canReveal = function () { return this.revealFns.some((r) => (r.can ? !!r.can() : !r.used)); };
+  P.doReveal = function () { let any = false; this.revealFns.forEach((r) => { if (r.can ? r.can() : !r.used) { r.used = true; any = true; r.fn(); } }); if (any && FE.engine) FE.engine.emit('revealstate'); return any; };
   P.doHint = function () { if (!this.hints.length) return false; const f = this.hints[Math.min(this.hintIx++, this.hints.length - 1)]; f(); return true; };
   P.notes = function (html) { this.notesHTML = html; };
   P.lineTime = function (k) { return this.L[k]; };
@@ -214,7 +232,7 @@
   };
   P.groups = null;
   P.destroy = function () {
-    this.timeouts.forEach(clearTimeout); this.timeouts = [];
+    this.timers.forEach((t) => { t.dead = true; }); this.timers = []; this.tickers = []; (this.rt || []).forEach(clearTimeout); this.rt = [];
     this.cleanup.forEach((f) => { try { f(); } catch (e) { /* ignore */ } });
     this.actors.forEach((a) => FE.Loop.remove(a));
     FE.Loop.hooks.clear();

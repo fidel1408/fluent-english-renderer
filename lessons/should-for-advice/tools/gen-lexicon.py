@@ -8,7 +8,7 @@ root = pathlib.Path(__file__).resolve().parent.parent
 words = json.loads((root/'src/generated/words.json').read_text())
 manual = json.loads((root/'tools/lexicon-manual.json').read_text()) if (root/'tools/lexicon-manual.json').exists() else {}
 cmu = cmudict.dict()
-V = {'AA':'ɑː','AE':'æ','AH':'ʌ','AO':'ɔː','AW':'aʊ','AY':'aɪ','EH':'e','ER':'ɜːr','EY':'eɪ','IH':'ɪ','IY':'iː','OW':'oʊ','OY':'ɔɪ','UH':'ʊ','UW':'uː'}
+V = {'AA':'ɑː','AE':'æ','AH':'ʌ','AO':'ɔː','AW':'aʊ','AY':'aɪ','EH':'e','ER':'ɜːr','EY':'eɪ','IH':'ɪ','IY':'iː','OW':'əʊ','OY':'ɔɪ','UH':'ʊ','UW':'uː'}
 CN = {'B':'b','CH':'tʃ','D':'d','DH':'ð','F':'f','G':'ɡ','HH':'h','JH':'dʒ','K':'k','L':'l','M':'m','N':'n','NG':'ŋ','P':'p','R':'r','S':'s','SH':'ʃ','T':'t','TH':'θ','V':'v','W':'w','Y':'j','Z':'z','ZH':'ʒ'}
 ONSETS = {('P','R'),('P','L'),('B','R'),('B','L'),('T','R'),('D','R'),('K','R'),('K','L'),('G','R'),('G','L'),('F','R'),('F','L'),('TH','R'),('SH','R'),('S','P'),('S','T'),('S','K'),('S','M'),('S','N'),('S','L'),('S','W'),('K','W'),('T','W'),('D','W'),('S','F'),('HH','Y'),('M','Y'),('N','Y'),('F','Y'),('P','Y'),('B','Y'),('K','Y'),('V','Y')}
 def conv(phs):

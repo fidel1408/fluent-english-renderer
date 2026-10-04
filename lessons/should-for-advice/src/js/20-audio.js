@@ -61,7 +61,8 @@
     A.applyVol();
   };
   /* play clip id from offset seconds. Only one narration clip can ever exist: starting one cancels the previous. */
-  A.play = function (id, offset, who) {
+  /* `chain` = [{id, who}, ...]: clips that follow in order, only when this one ends naturally (any other play/stop cancels them) */
+  A.play = function (id, offset, who, chain) {
     A.stop();
     const url = urlFor(id); if (!url || !A.el) return false;
     const tok = ++A.token, el = A.el;
@@ -69,7 +70,7 @@
     el.src = url;
     const go = () => { if (tok !== A.token) return; try { if (offset > 0.05) el.currentTime = offset; } catch (e) { /* ignore */ } A.narrating = true; A.applyVol(); if (!A.paused) { const p = el.play(); if (p && p.catch) p.catch(() => {}); } };
     if (el.readyState >= 1) go(); else el.addEventListener('loadedmetadata', go, { once: true });
-    el.onended = () => { if (tok === A.token) { A.narrating = false; A.cur = null; A.applyVol(); } };
+    el.onended = () => { if (tok === A.token) { A.narrating = false; A.cur = null; A.applyVol(); if (chain && chain.length) { const n = chain[0]; A.play(n.id, 0, n.who, chain.slice(1)); } } };
     return true;
   };
   A.pause = function () { A.paused = true; if (A.el) A.el.pause(); if (A.ctx && A.ctx.state === 'running') A.ctx.suspend(); };

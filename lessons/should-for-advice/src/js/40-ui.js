@@ -70,6 +70,7 @@
     stage.appendChild(h('div', { id: 'gate' }));
     stage.appendChild(h('div', { id: 'notes', class: 'panel' }));
     stage.appendChild(h('div', { id: 'toast' }));
+    stage.appendChild(h('div', { id: 'finishNote', class: 'panel', role: 'status' }));
     stage.appendChild(h('div', { id: 'modal' }));
     stage.appendChild(UI.buildStart());
 
@@ -87,7 +88,8 @@
     UI.slider.addEventListener('input', () => { UI.seeking = true; UI.tCur.textContent = FE.fmtTime(+UI.slider.value); });
     UI.slider.addEventListener('change', () => { UI.seeking = false; E.goto(+UI.slider.value); });
     bar.appendChild(h('span', { class: 'sep' }));
-    bar.append(ib('hint', 'hint', () => UI.hint()), ib('eye', 'show answer', () => UI.reveal()));
+    UI.revealBtn = ib('eye', 'show answer', () => UI.reveal());
+    bar.append(ib('hint', 'hint', () => UI.hint()), UI.revealBtn);
     bar.append(UI.tPause = ib('tpause', 'pause timer', () => E.toggle()), ib('trestart', 'restart timer', () => E.restartTimer()), ib('tskip', 'skip', () => E.skipTimer()), ib('tplus', 'more time', () => E.extend(60)));
     bar.appendChild(h('span', { class: 'sep' }));
     UI.modeBtn = h('button', { class: 'modeb', type: 'button', onclick: () => E.setMode(E.mode === 'class' ? 'demo' : 'class') });
@@ -169,8 +171,22 @@
     const el = $('#cc'); el.innerHTML = UB(ln.text); el.classList.add('on');
   };
   UI.hint = function () { if (E.scene && !E.scene.doHint()) UI.toast('no hint here'); };
-  UI.reveal = function () { if (E.scene) { if (E.scene.revealFns.length) E.scene.doReveal(); else UI.toast('nothing to reveal'); } };
+  UI.reveal = function () { if (!E.scene) return; if (E.scene.canReveal()) E.scene.doReveal(); else UI.toast(E.scene.revealFns.length ? 'everything is already shown' : 'nothing to reveal'); UI.renderReveal(); };
+  /* the eye buttons follow what is still hidden for the CURRENT item (reveal is item-scoped) */
+  UI.renderReveal = function () {
+    const can = !!(E.scene && E.scene.canReveal());
+    const tr = $('#tmReveal'); if (tr) tr.style.display = E.scene && E.scene.revealFns.length ? '' : 'none';
+    [tr, UI.revealBtn].forEach((b) => { if (b) { b.classList.toggle('spent', !can); b.setAttribute('aria-disabled', String(!can)); } });
+    const gr = $('#gReveal'); if (gr) gr.style.display = can ? '' : 'none';
+  };
   UI.toast = function (label, ms) { const t = $('#toast'); t.innerHTML = UB(label); t.classList.add('on'); clearTimeout(UI._tt); UI._tt = setTimeout(() => t.classList.remove('on'), ms || 1800); };
+  /* end of lesson: the class clock is frozen and the difference between the planned 60:00 and real time is explained */
+  UI.showFinish = function () {
+    const n = $('#finishNote'), plan = FE.TOTAL, act = E.actual(), d = Math.round(act - plan);
+    const cmp = Math.abs(d) < 30 ? 'about the same as the plan' : d > 0 ? FE.fmtTime(d) + ' longer than the plan' : FE.fmtTime(-d) + ' shorter than the plan';
+    n.innerHTML = `<h4>${UB('The lesson is finished')}</h4><p>${UB('Planned time: ' + FE.fmtTime(plan) + '. Class time: ' + FE.fmtTime(act) + ', ' + cmp + '.')}</p><p class="small">${UB('The plan is 60 minutes of lesson time. Class time is real time, so it also counts pauses, extra minutes, and waiting at each activity. It stopped when the lesson ended.')}</p>`;
+    n.classList.add('on');
+  };
   UI.confirmRestart = function () {
     const m = $('#modal'); m.classList.add('on');
     m.innerHTML = `<div class="panel"><div>${UB('Restart the lesson from the beginning?')}</div><div style="margin-top:26px;display:flex;gap:20px;justify-content:center"><button class="btn" id="mYes" type="button">${UB('Restart')}</button><button class="btn ghost" id="mNo" type="button">${UB('Cancel')}</button></div></div>`;
@@ -200,6 +216,7 @@
           <button class="mode" type="button" data-m="demo"><h3>${UB('Demo mode')}</h3><div class="d">${UB('Follows the sixty minute plan by itself.')}</div></button>
         </div>
         <div class="tips"><span class="kbd">H</span><div>${UB('Hide or show the controls. A small button stays in the corner.')}</div></div>
+        <div class="tips tips2"><div>${UB('The plan is 60 minutes. Class time is real time: it also counts pauses and waiting.')}</div></div>
         <button class="btn bigstart" id="startBtn" type="button">${UI.svgIcon('play').replace('<svg', '<svg style="width:46px;height:46px"')}${UB('Start the lesson')}</button>
       </div>
       <div class="ptr" style="left:1700px;top:900px;font-size:26px;text-align:center;width:210px">${UB('Controls are here')}<div style="font-size:60px;line-height:1">&#8595;</div></div>`;
@@ -240,7 +257,7 @@
     const ti = E.timerInfo(), at = $('#actTimer');
     if (ti && (ti.started || ti.gate)) {
       at.classList.add('on'); const rem = Math.ceil(ti.rem - 0.001);
-      $('#tmHint').style.display = E.scene.hints.length ? '' : 'none'; $('#tmReveal').style.display = E.scene.revealFns.length ? '' : 'none';
+      $('#tmHint').style.display = E.scene.hints.length ? '' : 'none'; UI.renderReveal();
       $('#tmVal').textContent = FE.fmtTime(rem); $('#tmBar').style.setProperty('--p', Math.min(100, 100 * ti.rem / ti.total) + '%');
       at.classList.toggle('low', rem <= 10 && rem > 0); at.classList.toggle('over', E.gate);
     } else at.classList.remove('on');
@@ -249,25 +266,26 @@
   UI.renderGate = function (on) {
     const gt = $('#gate');
     if (!on) { gt.classList.remove('on'); return; }
-    const s = E.scene, canRev = s && s.revealFns.length && !s.revealed;
+    const s = E.scene, canRev = s && s.canReveal();
     gt.innerHTML = `<div>${UB('Time is up. Continue when you are ready.')}</div>` +
       (canRev ? `<button class="btn ghost" id="gReveal" type="button">${UB('Show answer')}</button>` : '') +
       `<button class="btn ghost" id="gMore" type="button">${UB('More time')}</button><button class="btn" id="gGo" type="button">${UB('Continue')}</button>`;
     gt.classList.add('on');
-    const gr = $('#gReveal'); if (gr) gr.onclick = () => { s.doReveal(); gr.remove(); };
+    const gr = $('#gReveal'); if (gr) gr.onclick = () => { s.doReveal(); UI.renderReveal(); };
     $('#gMore').onclick = () => { E.gate = false; gt.classList.remove('on'); E.ext = 60; E.local = E.seg.dur; };
     $('#gGo').onclick = () => E.continueGate(); $('#gGo').focus({ preventScroll: true });
     A.sfx('bell');
   };
 
   UI.bindEngine = function () {
-    E.on('seg', () => { UI.ccLine = null; $('#cc').classList.remove('on'); UI.renderSeg(); UI.renderClocks(); });
+    E.on('seg', () => { UI.ccLine = null; $('#cc').classList.remove('on'); $('#finishNote').classList.remove('on'); UI.renderSeg(); UI.renderClocks(); UI.renderReveal(); });
+    E.on('revealstate', () => UI.renderReveal());
     E.on('line', (ln) => UI.showCC(ln));
     E.on('state', UI.renderState); E.on('mode', () => { UI.renderMode(); });
     E.on('gate', (on) => UI.renderGate(on));
     E.on('toast', (l) => { if (l === 'extend') UI.toast('One more minute'); });
-    E.on('restarted', () => { UI.renderSeg(); });
-    E.on('finish', () => UI.toast('The lesson is finished'));
+    E.on('restarted', () => { UI.renderSeg(); $('#finishNote').classList.remove('on'); });
+    E.on('finish', () => { UI.renderClocks(); UI.showFinish(); });
     let last = 0;
     E.on('tick', () => { const n = performance.now(); if (n - last > 200) { last = n; UI.renderClocks(); if (UI.ccLine && E.local > UI.ccLine.end + 0.6) $('#cc').classList.remove('on'); } });
     setInterval(() => { if (E.started) UI.renderClocks(); }, 1000);

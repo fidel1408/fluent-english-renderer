@@ -188,6 +188,12 @@ button{font:inherit;color:inherit;cursor:pointer}
 #modal .panel{position:relative;max-width:1100px;font-size:36px;text-align:center}
 #tip{position:fixed;z-index:90;pointer-events:none;background:#fbf8f1;color:#121b33;border-radius:12px;padding:6px 12px 8px;font-size:16px;box-shadow:0 8px 24px rgba(0,0,0,.5);display:none;--ipa:#4f5d7d;white-space:nowrap}
 #tip .u .w{font-weight:700}#tip .u .p{font-size:12px}
+#finishNote{position:absolute;left:50%;top:300px;transform:translateX(-50%);width:1200px;z-index:65;display:none;font-size:36px;text-align:center}
+#finishNote.on{display:block}
+#finishNote h4{margin:0 0 10px;font-family:var(--disp);font-weight:400;font-size:56px;color:#ffd48a}
+#finishNote p{margin:8px 0}#finishNote p.small{font-size:28px;color:#dfe7fb}
+#start .tips2{font-size:25px;margin-top:12px}
+.ib.spent{opacity:.45}
 #toast{position:absolute;left:50%;top:150px;transform:translateX(-50%);z-index:60;background:rgba(10,16,30,.92);border:2px solid #ffb540;border-radius:22px;padding:10px 24px;font-size:30px;opacity:0;pointer-events:none;transition:opacity .3s}
 #toast.on{opacity:1}
 

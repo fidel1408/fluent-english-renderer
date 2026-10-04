@@ -117,6 +117,8 @@
   E.advance = function (dt) {
     if (!E.scene || E.finished) return;
     const s = E.seg, S = E.scene;
+    S.tick(dt); // scene clock: delayed work only runs while the lesson is playing
+    if (S !== E.scene) return;
     if (E.gate) { return; }
     if (E.ext > 0 && E.local >= s.dur) { E.ext = Math.max(0, E.ext - dt); if (E.ext <= 0) E.afterExt(); E.emit('tick'); return; }
     const prev = E.local;
@@ -149,7 +151,7 @@
     if (i >= FE.segs.length) { E.finish(); return; }
     E.enter(FE.segs[i], 0);
   };
-  E.finish = function () { E.finished = true; E.setPlaying(false); E.emit('finish'); };
+  E.finish = function () { E.finished = true; E.endedAt = Date.now(); E.setPlaying(false); E.emit('finish'); };
   E.continueGate = function () { if (E.gate) E.next(); };
   E.extend = function (sec) {
     sec = sec || 60;
@@ -163,6 +165,7 @@
   };
   E.restartTimer = function () {
     const s = E.seg; if (!s || !s.timer) return;
+    if (s.reset) s.reset(); // an activity that stores learner choices starts fresh
     E.enter(s, s.timerAt);
   };
 
@@ -183,7 +186,7 @@
   };
   E.toggle = () => E.setPlaying(!E.playing);
   E.seek = (d) => { E.goto(E.T + d); };
-  E.replay = () => { if (E.seg) E.goto(E.seg.start); };
+  E.replay = () => { if (E.seg) { if (E.seg.reset) E.seg.reset(); E.goto(E.seg.start); } };
   E.chapterJump = function (dir) {
     const c = E.chapterOf(E.T);
     if (dir > 0) { const n = FE.chapters[c.n]; if (n) E.goto(n.a); else E.goto(FE.TOTAL - 0.02); }
@@ -191,13 +194,14 @@
   };
   E.setMode = function (m) { E.mode = m; if (E.scene) E.scene.mode = m; if (m === 'demo' && E.gate) E.next(); E.emit('mode', m); };
   E.restart = function () {
-    E.mission = {}; E.visited = {}; E.finished = false;
+    E.mission = {}; E.visited = {}; E.finished = false; E.endedAt = 0;
     E.startedAt = Date.now(); E.goto(0); E.setPlaying(false); E.emit('restarted');
   };
   E.start = function (mode) {
-    E.mode = mode || E.mode; E.started = true; E.startedAt = Date.now();
+    E.mode = mode || E.mode; E.started = true; E.endedAt = 0; E.startedAt = Date.now();
     FE.audio.init();
     E.goto(0); E.setPlaying(true); E.emit('started');
   };
-  E.actual = () => (E.started ? (Date.now() - E.startedAt) / 1000 : 0);
+  /* wall-clock class time: freezes when the class ends (the planned timeline is 3600 s; class pauses/extensions make actual time differ) */
+  E.actual = () => (E.started ? ((E.finished && E.endedAt ? E.endedAt : Date.now()) - E.startedAt) / 1000 : 0);
 })(window);

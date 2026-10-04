@@ -15,17 +15,17 @@
    "who": "narr"
   },
   {
-   "id": "67098503",
-   "voice": "af_heart",
-   "sp": 0.98,
-   "spoken": "You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.",
-   "who": "narr"
-  },
-  {
    "id": "73190828",
    "voice": "af_heart",
    "sp": 0.98,
    "spoken": "Exit check, part three. Your friend has too many emails and feels stressed. Give your own recommendation, and explain why.",
+   "who": "narr"
+  },
+  {
+   "id": "81492989",
+   "voice": "af_heart",
+   "sp": 0.98,
+   "spoken": "The trip improved a little, but other problems are still open. Another step might help.",
    "who": "narr"
   },
   {
@@ -1611,10 +1611,10 @@
    "who": "narr"
   },
   {
-   "id": "fa97a2c8",
+   "id": "18aa83d4",
    "voice": "af_heart",
    "sp": 0.98,
-   "spoken": "You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.",
+   "spoken": "Maya improved something, but other problems are still open. Another step might help.",
    "who": "narr"
   },
   {
@@ -1646,10 +1646,10 @@
    "who": "narr"
   },
   {
-   "id": "8ac1b833",
+   "id": "e7376cb9",
    "voice": "af_heart",
    "sp": 0.98,
-   "spoken": "Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.",
+   "spoken": "Priya checks the app and finds a later train. It helps, but the group still needs one clear plan.",
    "who": "narr"
   },
   {
@@ -1702,10 +1702,10 @@
    "who": "narr"
   },
   {
-   "id": "7a2f9863",
+   "id": "f10f6fb1",
    "voice": "af_heart",
    "sp": 0.98,
-   "spoken": "Your steps were similar. Some things improved, but one need is still open. Another step might help.",
+   "spoken": "Some things improved, but at least one need is still open. Another step might help.",
    "who": "narr"
   },
   {
@@ -4930,9 +4930,9 @@
      "who": "narr",
      "voice": "af_heart",
      "sp": 0.98,
-     "text": "You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.",
-     "spoken": "You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.",
-     "id": "fa97a2c8"
+     "text": "Maya improved something, but other problems are still open. Another step might help.",
+     "spoken": "Maya improved something, but other problems are still open. Another step might help.",
+     "id": "18aa83d4"
     }
    ]
   },
@@ -5019,9 +5019,9 @@
      "who": "narr",
      "voice": "af_heart",
      "sp": 0.98,
-     "text": "Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.",
-     "spoken": "Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.",
-     "id": "8ac1b833"
+     "text": "Priya checks the app and finds a later train. It helps, but the group still needs one clear plan.",
+     "spoken": "Priya checks the app and finds a later train. It helps, but the group still needs one clear plan.",
+     "id": "e7376cb9"
     },
     {
      "k": "f1",
@@ -5037,9 +5037,9 @@
      "who": "narr",
      "voice": "af_heart",
      "sp": 0.98,
-     "text": "You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.",
-     "spoken": "You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.",
-     "id": "67098503"
+     "text": "The trip improved a little, but other problems are still open. Another step might help.",
+     "spoken": "The trip improved a little, but other problems are still open. Another step might help.",
+     "id": "81492989"
     }
    ]
   },
@@ -5144,9 +5144,9 @@
      "who": "narr",
      "voice": "af_heart",
      "sp": 0.98,
-     "text": "Your steps were similar. Some things improved, but one need is still open. Another step might help.",
-     "spoken": "Your steps were similar. Some things improved, but one need is still open. Another step might help.",
-     "id": "7a2f9863"
+     "text": "Some things improved, but at least one need is still open. Another step might help.",
+     "spoken": "Some things improved, but at least one need is still open. Another step might help.",
+     "id": "f10f6fb1"
     }
    ]
   },

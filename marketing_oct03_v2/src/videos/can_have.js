@@ -69,7 +69,7 @@ window.VIDEO = (() => {
           const wW = measure(c, 'water', f), pW = measure(c, ', please?', f), x0 = CX - (wW + pW) / 2, by = 655 + 208, hl = E.out(seg(t, K.waterHl, K.waterHl + .35)), ex = E.in(seg(t, K.waterOut, K.waterOut + .45));
           if (hl > 0 && ex < 1) { c.fillStyle = 'rgba(244,117,88,.28)'; rr(c, x0 - 14, by - f * .82, (wW + 28) * hl, f * 1.08, 28); c.fill(); }
           if (ex < 1) { c.save(); c.globalAlpha *= 1 - ex; c.translate(x0 + wW / 2, by - f * .3); c.rotate(-ex * .25); c.scale(1 - .4 * ex, 1 - .4 * ex); c.translate(-(x0 + wW / 2), -(by - f * .3)); text(c, 'water', x0 + wW / 2, by, f, C.navy); c.restore(); }
-          const bl = E.out(seg(t, K.waterOut + .15, K.waterOut + .5)); c.strokeStyle = C.teal; c.lineWidth = 9; c.lineCap = 'round'; c.beginPath(); c.moveTo(x0, by + 10); c.lineTo(x0 + wW * bl, by + 10); c.stroke();
+          const bl = E.out(seg(t, K.waterOut + .15, K.waterOut + .5)); if (bl > 0) { c.strokeStyle = C.teal; c.lineWidth = 9; c.lineCap = 'round'; c.beginPath(); c.moveTo(x0, by + 10); c.lineTo(x0 + wW * bl, by + 10); c.stroke(); }   // never a zero-length round-capped dot
           text(c, ', please?', x0 + wW + pW / 2, by, f, C.navy); c.restore();
           const ji = E.back(seg(t, K.juiceIn, K.juiceIn + .5)) * o; if (ji > 0) { const jm = Math.min(1, ji); card(c, CARD_X, 935, CARD_W, 150, { a: jm, sc: .85 + .15 * jm, stroke: C.mint }); P.glass(c, 290, 1058, .56, { kind: 'juice', t: 0, a: jm }); text(c, 'juice', 600, 1038, 92, C.navy, { a: jm }); }
         }

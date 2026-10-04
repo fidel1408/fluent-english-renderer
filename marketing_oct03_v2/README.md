@@ -4,8 +4,10 @@ Isolated output folder. The 30 s `video/` project and the published artifact are
 Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via supplied files, never for long lessons) are in `/CLAUDE.md` and `/.claude/skills/video-production/SKILL.md`.
 
 
-## October batch 1 (CANHAVE / BORROW / SCHEDULE) - QA-pending
-Three new narrated tips built from the owner-supplied Luis take-2 masters (SHA256 verified against `manifest/batch1_inputs/production_manifest.json`; all six originals preserved in `audio/originals/`). Same single adult male host, `src/engine.js`/`kit.js`/`host.js` unchanged; new `src/props.js` (glass, pitcher, hand, pen, charger, trays, arrow, clock, pin, level bars) and `src/kit_b1.js` (keyword CTA). Previous media untouched.
+## October batch 1 (CANHAVE / BORROW / SCHEDULE) - REV2 QA-pending
+Current files are `out/FE26*_batch1_REV2_single-host_narrated_QA-pending.mp4` (evidence: `qa/batch1_REV2_verification_report.md`; the first batch-1 MP4s are kept unchanged). REV2: corrected Spanish role forms (YO RECIBO/TÚ PRESTAS, YO PRESTO/TÚ RECIBES), badge clearance, caption reserve x100-860/y180-1420, no stray underline dot, Schedule weekend title readable at the ASR sábado range, Schedule mix -3 dB, corrected provenance (waveform-derived cuts; take 2 = provisional longer alternative; ASR = corroboration only, not listening).
+
+Three new narrated tips built from the owner-supplied Luis take-2 masters (take 2 = provisional longer alternative selected during production, not an owner audition) (SHA256 verified against `manifest/batch1_inputs/production_manifest.json`; all six originals preserved in `audio/originals/`). Same single adult male host, `src/engine.js`/`kit.js`/`host.js` unchanged; new `src/props.js` (glass, pitcher, hand, pen, charger, trays, arrow, clock, pin, level bars) and `src/kit_b1.js` (keyword CTA). Previous media untouched.
 
 | Content ID | Length | File |
 |---|---|---|

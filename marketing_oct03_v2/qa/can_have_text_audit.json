@@ -105,7 +105,15 @@
     "ok": true
   },
   "distinctStringsMeasured": 29,
-  "captionTextTopMinY": 1291.8,
+  "captionGlyphBounds": {
+    "xMin": 116.5,
+    "xMax": 843.5,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
   "captionClearsMouth": true,
   "pass": true
 }

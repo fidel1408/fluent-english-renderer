@@ -1,0 +1,27 @@
+1
+00:00:00,400 --> 00:00:02,201
+Una frase para practicar en casa.
+
+2
+00:00:03,294 --> 00:00:04,648
+Can I have some water, please?
+
+3
+00:00:05,729 --> 00:00:07,340
+¿Me das un poco de agua, por favor?
+
+4
+00:00:08,444 --> 00:00:09,021
+Here you go.
+
+5
+00:00:09,769 --> 00:00:10,511
+Aquí tienes.
+
+6
+00:00:12,223 --> 00:00:14,731
+Ahora cambia water por juice.
+
+7
+00:00:18,633 --> 00:00:21,903
+Mamás y papás: manden NIÑOS por mensaje privado.

@@ -30,7 +30,7 @@ const V = {
       { id: 'c08', text: 'Ahora tú: Can I... your charger? ¿Qué palabra falta?', caption: 'Ahora tú: Can I… your charger? ¿Qué palabra falta?', g: [10, 11, 12, 13], gap: 1.4 },
       { id: 'c09', text: 'Clases en línea: manda GRUPO por mensaje privado.', g: [14, 15], gap: 2.9 }],
     marks: { recibirStart: ['c04', 1], prestarStart: ['c07', 1], canIStart: ['c08', 1], yourChargerStart: ['c08', 2], queStart: ['c08', 3], mandaStart: ['c09', 1] } },
-  schedule_options: { id: 'FE261016-SCHEDULE', title: 'SCHEDULE OPTIONS', master: 'audio/originals/schedule_options_take2.mp3', lead: .4, endHold: 3.4, target: [25, 35], total: 6,
+  schedule_options: { mixGainDb: -3.0, id: 'FE261016-SCHEDULE', title: 'SCHEDULE OPTIONS', master: 'audio/originals/schedule_options_take2.mp3', lead: .4, endHold: 3.4, target: [25, 35], total: 6,
     cues: [
       { id: 'c01', text: '¿Una hora entre semana o un bloque de fin de semana?', g: [0], gap: 0 },
       { id: 'c02', text: 'Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.', g: [1, 2], gap: .4 },
@@ -49,10 +49,10 @@ for (const [name, v] of Object.entries(V)) {
   const used = v.cues.flatMap(q => q.g); if (used.join() !== [...Array(v.total).keys()].join()) throw new Error(name + ': cue groups must cover islands in order');
   const parts = []; let prev = 0;
   v.cues.forEach((q, i) => { const last = isl[q.g[q.g.length - 1]], next = v.cues[i + 1] ? isl[v.cues[i + 1].g[0]] : null; const end = next ? Math.round(((last.e + next.s) / 2) * SR) : N; parts.push([prev, end]); prev = end; });
-  const man = { video: name, contentId: v.id, title: v.title, fps: 30, lead: v.lead, endHold: v.endHold, targetSeconds: v.target, status: 'PLANNED',
-    note: 'Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences; semantic mapping to script phrases is structural (no ASR offline) and unverified by ear.',
+  const man = { video: name, contentId: v.id, title: v.title, fps: 30, lead: v.lead, endHold: v.endHold, targetSeconds: v.target, status: 'PLANNED', ...(v.mixGainDb ? { mixGainDb: v.mixGainDb } : {}),
+    note: 'Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take 2 is a provisional longer alternative selected during production (not an owner audition or owner selection).',
     cues: v.cues.map((q, i) => ({ id: q.id, who: 'narrator', lang: 'es+en', capFit: true, text: q.text, ...(q.caption ? { caption: q.caption } : {}), est: +((parts[i][1] - parts[i][0]) / SR).toFixed(3), gap: q.gap, file: `audio/cues/${name}_${q.id}.wav` })),
-    alignment: { totalSamples: N, partitions: parts, islandsMeasured: isl.map(x => [+x.s.toFixed(3), +x.e.toFixed(3)]), islandGroups: v.cues.map(q => q.g), marks: v.marks } };
+    alignment: { method: 'cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff', confidence: { phraseBoundaries: 'waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied later, see manifest/batch1_inputs/asr_handoff) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: 'not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)', content: 'pronunciation/naturalness NOT verified (no listening)' }, totalSamples: N, partitions: parts, islandsMeasured: isl.map(x => [+x.s.toFixed(3), +x.e.toFixed(3)]), islandGroups: v.cues.map(q => q.g), marks: v.marks } };
   fs.writeFileSync(path.join(L.ROOT, 'manifest', `${name}.cues.json`), JSON.stringify(man, null, 2));
   console.log(name, 'islands', isl.map(x => x.s.toFixed(2) + '-' + x.e.toFixed(2)).join(' '), '\n  partitions', parts.map(p => p.join('-')).join(' '));
 }

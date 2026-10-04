@@ -13,7 +13,7 @@
     K.pracIn = S(c.c08) - .5; K.canI = mk(c.c08, 'canIStart', S(c.c08) + 1.1); K.charger = mk(c.c08, 'yourChargerStart', S(c.c08) + 2.3); K.que = mk(c.c08, 'queStart', S(c.c08) + 3.7);
     K.pracOut = S(c.c09) - .75; K.cta = S(c.c09) - .35; K.avOut = 1e9; K.end = E(c.c09) + 3.6;
     K.scenes = [{ id: 'hook', in: .1, end: K.hookEnd }, { id: 'borrow', in: K.bIn, end: K.bOut + .3 }, { id: 'lend', in: K.lIn, end: K.lOut + .3 }, { id: 'practice', in: K.pracIn, end: K.pracOut + .3 }, { id: 'cta', in: K.cta, end: K.end + 1 }];
-    const ST = [[90, 465, 500, 580], [525, 465, 925, 580], [90, 603, 925, 770], [110, 850, 900, 1080]];   // trays, lane (arrow + pen + ownership tag), bilingual example card
+    const ST = [[90, 465, 500, 555], [515, 465, 925, 555], [90, 577, 925, 738], [110, 815, 900, 1095]];   // trays, lane (arrow + pen + ownership tag), bilingual example card
     K.holds = [
       { id: 'borrow_complete_state', from: K.bArrowE + .1, to: K.bOut, min: 2.5, rects: ST },
       { id: 'lend_complete_state', from: K.lArrowE + .1, to: K.lOut, min: 2.5, rects: ST },

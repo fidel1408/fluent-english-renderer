@@ -4,7 +4,7 @@
   "masterSha256": "894d781de770c73a4b10ff0b8cf2997af69fff777dfd7af944c8599540a51421",
   "totalSamples": 731520,
   "sampleRate": 44100,
-  "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
   "cues": [
     {
       "id": "c01",
@@ -246,9 +246,9 @@
     "maxAbsSampleAtAnyCut": 33
   },
   "confidence": {
-    "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+    "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied later, see manifest/batch1_inputs/asr_handoff) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
     "islands": "measured from waveform (-38 dB); not a linguistic detector",
-    "wordLevel": "not measured",
-    "content": "pronunciation/content NOT verified (no listening)"
+    "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+    "content": "pronunciation/naturalness NOT verified (no listening)"
   }
 }

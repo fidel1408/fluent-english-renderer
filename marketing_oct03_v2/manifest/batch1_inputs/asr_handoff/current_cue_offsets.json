@@ -1,0 +1,279 @@
+{
+  "formula": "current_video_time = current_video_cue_start + source_time - sourceSampleRange[0]/44100",
+  "precision_note": "Source sample ranges are exact integers. Current finalStart values are copied at the precision recorded in the renderer map. recordedOffsetSeconds preserves the renderer map value; it is not ASR precision.",
+  "videos": [
+    {
+      "video": "can_have",
+      "master_sha256": "894d781de770c73a4b10ff0b8cf2997af69fff777dfd7af944c8599540a51421",
+      "sample_rate": 44100,
+      "cues": [
+        {
+          "id": "c01",
+          "sourceSampleRange": [
+            0,
+            96913
+          ],
+          "sourceStartSeconds": 0,
+          "sourceEndSeconds": 2.197574,
+          "currentVideoStart": 0.4,
+          "currentVideoEnd": 2.598,
+          "recordedOffsetSeconds": 0.4
+        },
+        {
+          "id": "c02",
+          "sourceSampleRange": [
+            96913,
+            191290
+          ],
+          "sourceStartSeconds": 2.197574,
+          "sourceEndSeconds": 4.337642,
+          "currentVideoStart": 2.898,
+          "currentVideoEnd": 5.038,
+          "recordedOffsetSeconds": 0.700426
+        },
+        {
+          "id": "c03",
+          "sourceSampleRange": [
+            191290,
+            297322
+          ],
+          "sourceStartSeconds": 4.337642,
+          "sourceEndSeconds": 6.741995,
+          "currentVideoStart": 5.338,
+          "currentVideoEnd": 7.742,
+          "recordedOffsetSeconds": 1.000358
+        },
+        {
+          "id": "c04",
+          "sourceSampleRange": [
+            297322,
+            354781
+          ],
+          "sourceStartSeconds": 6.741995,
+          "sourceEndSeconds": 8.044921,
+          "currentVideoStart": 8.042,
+          "currentVideoEnd": 9.345,
+          "recordedOffsetSeconds": 1.300005
+        },
+        {
+          "id": "c05",
+          "sourceSampleRange": [
+            354781,
+            413090
+          ],
+          "sourceStartSeconds": 8.044921,
+          "sourceEndSeconds": 9.36712,
+          "currentVideoStart": 9.445,
+          "currentVideoEnd": 10.767,
+          "recordedOffsetSeconds": 1.400079
+        },
+        {
+          "id": "c06",
+          "sourceSampleRange": [
+            413090,
+            557093
+          ],
+          "sourceStartSeconds": 9.36712,
+          "sourceEndSeconds": 12.632494,
+          "currentVideoStart": 11.967,
+          "currentVideoEnd": 15.232,
+          "recordedOffsetSeconds": 2.59988
+        },
+        {
+          "id": "c07",
+          "sourceSampleRange": [
+            557093,
+            731520
+          ],
+          "sourceStartSeconds": 12.632494,
+          "sourceEndSeconds": 16.587755,
+          "currentVideoStart": 18.132,
+          "currentVideoEnd": 22.087,
+          "recordedOffsetSeconds": 5.499506
+        }
+      ]
+    },
+    {
+      "video": "borrow_lend",
+      "master_sha256": "6ec2a46e11a2472fadc0b77ae16a9f26f8c6ce197d595727cb31fb6a7bf4e24d",
+      "sample_rate": 44100,
+      "cues": [
+        {
+          "id": "c01",
+          "sourceSampleRange": [
+            0,
+            91035
+          ],
+          "sourceStartSeconds": 0,
+          "sourceEndSeconds": 2.064286,
+          "currentVideoStart": 0.4,
+          "currentVideoEnd": 2.464,
+          "recordedOffsetSeconds": 0.4
+        },
+        {
+          "id": "c02",
+          "sourceSampleRange": [
+            91035,
+            165361
+          ],
+          "sourceStartSeconds": 2.064286,
+          "sourceEndSeconds": 3.749683,
+          "currentVideoStart": 2.664,
+          "currentVideoEnd": 4.349,
+          "recordedOffsetSeconds": 0.599714
+        },
+        {
+          "id": "c03",
+          "sourceSampleRange": [
+            165361,
+            233743
+          ],
+          "sourceStartSeconds": 3.749683,
+          "sourceEndSeconds": 5.300295,
+          "currentVideoStart": 4.549,
+          "currentVideoEnd": 6.1,
+          "recordedOffsetSeconds": 0.799317
+        },
+        {
+          "id": "c04",
+          "sourceSampleRange": [
+            233743,
+            365451
+          ],
+          "sourceStartSeconds": 5.300295,
+          "sourceEndSeconds": 8.286871,
+          "currentVideoStart": 6.3,
+          "currentVideoEnd": 9.287,
+          "recordedOffsetSeconds": 0.999705
+        },
+        {
+          "id": "c05",
+          "sourceSampleRange": [
+            365451,
+            448319
+          ],
+          "sourceStartSeconds": 8.286871,
+          "sourceEndSeconds": 10.165964,
+          "currentVideoStart": 10.787,
+          "currentVideoEnd": 12.666,
+          "recordedOffsetSeconds": 2.500129
+        },
+        {
+          "id": "c06",
+          "sourceSampleRange": [
+            448319,
+            527354
+          ],
+          "sourceStartSeconds": 10.165964,
+          "sourceEndSeconds": 11.958141,
+          "currentVideoStart": 12.866,
+          "currentVideoEnd": 14.658,
+          "recordedOffsetSeconds": 2.700036
+        },
+        {
+          "id": "c07",
+          "sourceSampleRange": [
+            527354,
+            665888
+          ],
+          "sourceStartSeconds": 11.958141,
+          "sourceEndSeconds": 15.099501,
+          "currentVideoStart": 14.858,
+          "currentVideoEnd": 17.999,
+          "recordedOffsetSeconds": 2.899859
+        },
+        {
+          "id": "c08",
+          "sourceSampleRange": [
+            665888,
+            902407
+          ],
+          "sourceStartSeconds": 15.099501,
+          "sourceEndSeconds": 20.462744,
+          "currentVideoStart": 19.399,
+          "currentVideoEnd": 24.762,
+          "recordedOffsetSeconds": 4.299499
+        },
+        {
+          "id": "c09",
+          "sourceSampleRange": [
+            902407,
+            1059840
+          ],
+          "sourceStartSeconds": 20.462744,
+          "sourceEndSeconds": 24.032653,
+          "currentVideoStart": 27.662,
+          "currentVideoEnd": 31.232,
+          "recordedOffsetSeconds": 7.199256
+        }
+      ]
+    },
+    {
+      "video": "schedule_options",
+      "master_sha256": "d3fe80fb45faea05e6db191619fce56c2003bec892d2362b435e09950b405565",
+      "sample_rate": 44100,
+      "cues": [
+        {
+          "id": "c01",
+          "sourceSampleRange": [
+            0,
+            130988
+          ],
+          "sourceStartSeconds": 0,
+          "sourceEndSeconds": 2.970249,
+          "currentVideoStart": 0.4,
+          "currentVideoEnd": 3.37,
+          "recordedOffsetSeconds": 0.4
+        },
+        {
+          "id": "c02",
+          "sourceSampleRange": [
+            130988,
+            372993
+          ],
+          "sourceStartSeconds": 2.970249,
+          "sourceEndSeconds": 8.457891,
+          "currentVideoStart": 3.77,
+          "currentVideoEnd": 9.258,
+          "recordedOffsetSeconds": 0.799751
+        },
+        {
+          "id": "c03",
+          "sourceSampleRange": [
+            372993,
+            469967
+          ],
+          "sourceStartSeconds": 8.457891,
+          "sourceEndSeconds": 10.656848,
+          "currentVideoStart": 12.458,
+          "currentVideoEnd": 14.657,
+          "recordedOffsetSeconds": 4.000109
+        },
+        {
+          "id": "c04",
+          "sourceSampleRange": [
+            469967,
+            611003
+          ],
+          "sourceStartSeconds": 10.656848,
+          "sourceEndSeconds": 13.854943,
+          "currentVideoStart": 14.957,
+          "currentVideoEnd": 18.155,
+          "recordedOffsetSeconds": 4.300152
+        },
+        {
+          "id": "c05",
+          "sourceSampleRange": [
+            611003,
+            774144
+          ],
+          "sourceStartSeconds": 13.854943,
+          "sourceEndSeconds": 17.554286,
+          "currentVideoStart": 18.955,
+          "currentVideoEnd": 22.654,
+          "recordedOffsetSeconds": 5.100057
+        }
+      ]
+    }
+  ]
+}

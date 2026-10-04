@@ -1,5 +1,5 @@
 {
-  "file": "FE261014-BORROW_batch1_single-host_narrated_QA-pending.mp4",
+  "file": "FE261014-BORROW_batch1_REV2_single-host_narrated_QA-pending.mp4",
   "cues": [
     {
       "id": "c01",
@@ -60,47 +60,47 @@
     {
       "at": 1.39,
       "expect": "ON c01",
-      "creamPixels": 17723
+      "creamPixels": 5825
     },
     {
       "at": 3.52,
       "expect": "ON c02",
-      "creamPixels": 17678
+      "creamPixels": 5910
     },
     {
       "at": 5.28,
       "expect": "ON c03",
-      "creamPixels": 17274
+      "creamPixels": 5662
     },
     {
       "at": 7.77,
       "expect": "ON c04",
-      "creamPixels": 16707
+      "creamPixels": 5840
     },
     {
       "at": 11.82,
       "expect": "ON c05",
-      "creamPixels": 17549
+      "creamPixels": 5759
     },
     {
       "at": 13.68,
       "expect": "ON c06",
-      "creamPixels": 17461
+      "creamPixels": 5747
     },
     {
       "at": 16.44,
       "expect": "ON c07",
-      "creamPixels": 17151
+      "creamPixels": 5918
     },
     {
       "at": 22.03,
       "expect": "ON c08",
-      "creamPixels": 18321
+      "creamPixels": 5292
     },
     {
       "at": 29.55,
       "expect": "ON c09",
-      "creamPixels": 17329
+      "creamPixels": 5655
     },
     {
       "at": 2.56,

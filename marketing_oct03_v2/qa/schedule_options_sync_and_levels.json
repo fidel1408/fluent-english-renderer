@@ -1,5 +1,5 @@
 {
-  "file": "FE261016-SCHEDULE_batch1_single-host_narrated_QA-pending.mp4",
+  "file": "FE261016-SCHEDULE_batch1_REV2_single-host_narrated_QA-pending.mp4",
   "cues": [
     {
       "id": "c01",
@@ -36,27 +36,27 @@
     {
       "at": 1.74,
       "expect": "ON c01",
-      "creamPixels": 16887
+      "creamPixels": 5913
     },
     {
       "at": 6.51,
       "expect": "ON c02",
-      "creamPixels": 17711
+      "creamPixels": 5580
     },
     {
       "at": 13.55,
       "expect": "ON c03",
-      "creamPixels": 16891
+      "creamPixels": 5803
     },
     {
       "at": 16.59,
       "expect": "ON c04",
-      "creamPixels": 17493
+      "creamPixels": 5862
     },
     {
       "at": 20.83,
       "expect": "ON c05",
-      "creamPixels": 16742
+      "creamPixels": 5824
     },
     {
       "at": 3.57,
@@ -80,9 +80,9 @@
     }
   ],
   "loudness": {
-    "integratedLUFS": -14.5,
-    "loudnessRangeLU": 7.4,
-    "truePeakdBTP": -3.9
+    "integratedLUFS": -17.5,
+    "loudnessRangeLU": 7.5,
+    "truePeakdBTP": -6.9
   },
   "finalHold": {
     "from": 22.72,

@@ -10,7 +10,7 @@
     35
   ],
   "status": "PLANNED",
-  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences; semantic mapping to script phrases is structural (no ASR offline) and unverified by ear.",
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take 2 is a provisional longer alternative selected during production (not an owner audition or owner selection).",
   "cues": [
     {
       "id": "c01",
@@ -105,6 +105,13 @@
     }
   ],
   "alignment": {
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied later, see manifest/batch1_inputs/asr_handoff) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
     "totalSamples": 1059840,
     "partitions": [
       [

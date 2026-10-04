@@ -81,8 +81,8 @@ const PROPS = (() => {
   // zone tray: title (YO / TÚ) left, role chip right
   function tray(c, x, y, w, h, title, { chip = null, chipCol = C.mint, chipA = 0, a = 1, hl = false } = {}) {
     if (a <= 0) return; c.save(); c.globalAlpha *= a; c.fillStyle = C.navy2; rr(c, x, y, w, h, 40); c.fill(); c.strokeStyle = hl ? chipCol : 'rgba(114,216,198,.5)'; c.lineWidth = hl ? 6 : 4; rr(c, x + 2, y + 2, w - 4, h - 4, 38); c.stroke();
-    text(c, title, x + 30, y + h / 2 + 23, 66, C.cream, { align: 'left' });
-    if (chip && chipA > 0) { c.font = `700 60px ${FONT}`; const cw = c.measureText(chip).width + 44, ch = 80, sc = .75 + .25 * Math.min(1, chipA); c.save(); c.globalAlpha *= Math.min(1, chipA * 1.6); c.translate(x + w - 18 - cw / 2, y + h / 2); c.scale(sc, sc); c.fillStyle = chipCol; rr(c, -cw / 2, -ch / 2, cw, ch, ch / 2); c.fill(); c.fillStyle = C.navy; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(chip, 0, 3); c.restore(); }
+    text(c, title, x + 28, y + h / 2 + 22, 62, C.cream, { align: 'left' });
+    if (chip && chipA > 0) { c.font = `700 60px ${FONT}`; const cw = c.measureText(chip).width + 38, ch = 78, sc = .75 + .25 * Math.min(1, chipA); c.save(); c.globalAlpha *= Math.min(1, chipA * 1.6); c.translate(x + w - 14 - cw / 2, y + h / 2); c.scale(sc, sc); c.fillStyle = chipCol; rr(c, -cw / 2, -ch / 2, cw, ch, ch / 2); c.fill(); c.fillStyle = C.navy; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(chip, 0, 3); c.restore(); }
     c.restore();
   }
   function clock(c, cx, cy, r, { ring = 1, a = 1, hand = 1 } = {}) {

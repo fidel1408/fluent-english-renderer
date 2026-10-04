@@ -1,5 +1,5 @@
 {
-  "file": "FE261012-CANHAVE_batch1_single-host_narrated_QA-pending.mp4",
+  "file": "FE261012-CANHAVE_batch1_REV2_single-host_narrated_QA-pending.mp4",
   "holds": [
     {
       "id": "request_bilingual",
@@ -45,7 +45,7 @@
           "frames": 79,
           "longestStationaryRunSeconds": 2.63,
           "maxMeanAbsDiffToPrevious": 0.02,
-          "maxMeanAbsDiffToFirst": 0.03
+          "maxMeanAbsDiffToFirst": 0.02
         }
       ]
     },
@@ -68,8 +68,8 @@
           ],
           "frames": 96,
           "longestStationaryRunSeconds": 3.17,
-          "maxMeanAbsDiffToPrevious": 12.25,
-          "maxMeanAbsDiffToFirst": 12.22
+          "maxMeanAbsDiffToPrevious": 12.26,
+          "maxMeanAbsDiffToFirst": 12.24
         },
         {
           "rect": [
@@ -81,7 +81,7 @@
           "frames": 96,
           "longestStationaryRunSeconds": 3.17,
           "maxMeanAbsDiffToPrevious": 12.13,
-          "maxMeanAbsDiffToFirst": 12.13
+          "maxMeanAbsDiffToFirst": 12.14
         }
       ]
     },
@@ -105,7 +105,7 @@
           "frames": 190,
           "longestStationaryRunSeconds": 6.33,
           "maxMeanAbsDiffToPrevious": 0.32,
-          "maxMeanAbsDiffToFirst": 0.46
+          "maxMeanAbsDiffToFirst": 0.47
         }
       ]
     }

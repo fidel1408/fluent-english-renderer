@@ -1,5 +1,5 @@
 {
-  "file": "FE261014-BORROW_batch1_single-host_narrated_QA-pending.mp4",
+  "file": "FE261014-BORROW_batch1_REV2_single-host_narrated_QA-pending.mp4",
   "holds": [
     {
       "id": "borrow_complete_state",
@@ -16,48 +16,48 @@
             148,
             384,
             353,
-            98
+            77
           ],
           "frames": 84,
           "longestStationaryRunSeconds": 2.77,
-          "maxMeanAbsDiffToPrevious": 6.37,
-          "maxMeanAbsDiffToFirst": 6.37
+          "maxMeanAbsDiffToPrevious": 7.84,
+          "maxMeanAbsDiffToFirst": 7.83
         },
         {
           "rect": [
-            522,
+            514,
             384,
-            344,
-            98
+            352,
+            77
           ],
           "frames": 84,
           "longestStationaryRunSeconds": 2.77,
-          "maxMeanAbsDiffToPrevious": 5.2,
-          "maxMeanAbsDiffToFirst": 5.19
+          "maxMeanAbsDiffToPrevious": 6.48,
+          "maxMeanAbsDiffToFirst": 6.64
         },
         {
           "rect": [
             148,
-            502,
+            480,
             718,
-            144
+            138
           ],
           "frames": 84,
           "longestStationaryRunSeconds": 2.77,
-          "maxMeanAbsDiffToPrevious": 4.1,
-          "maxMeanAbsDiffToFirst": 4.12
+          "maxMeanAbsDiffToPrevious": 4.65,
+          "maxMeanAbsDiffToFirst": 4.64
         },
         {
           "rect": [
             165,
-            715,
+            685,
             680,
-            197
+            240
           ],
           "frames": 84,
           "longestStationaryRunSeconds": 2.77,
-          "maxMeanAbsDiffToPrevious": 12,
-          "maxMeanAbsDiffToFirst": 11.92
+          "maxMeanAbsDiffToPrevious": 13.28,
+          "maxMeanAbsDiffToFirst": 13.24
         }
       ]
     },
@@ -76,48 +76,48 @@
             148,
             384,
             353,
-            98
+            77
           ],
           "frames": 81,
           "longestStationaryRunSeconds": 2.7,
-          "maxMeanAbsDiffToPrevious": 0.29,
-          "maxMeanAbsDiffToFirst": 0.59
+          "maxMeanAbsDiffToPrevious": 0.49,
+          "maxMeanAbsDiffToFirst": 0.63
         },
         {
           "rect": [
-            522,
+            514,
             384,
-            344,
-            98
+            352,
+            77
           ],
           "frames": 81,
           "longestStationaryRunSeconds": 2.7,
-          "maxMeanAbsDiffToPrevious": 0.29,
-          "maxMeanAbsDiffToFirst": 0.32
+          "maxMeanAbsDiffToPrevious": 0.47,
+          "maxMeanAbsDiffToFirst": 0.55
         },
         {
           "rect": [
             148,
-            502,
+            480,
             718,
-            144
+            138
           ],
           "frames": 81,
           "longestStationaryRunSeconds": 2.7,
-          "maxMeanAbsDiffToPrevious": 0.15,
-          "maxMeanAbsDiffToFirst": 0.15
+          "maxMeanAbsDiffToPrevious": 0.19,
+          "maxMeanAbsDiffToFirst": 0.19
         },
         {
           "rect": [
             165,
-            715,
+            685,
             680,
-            197
+            240
           ],
           "frames": 81,
           "longestStationaryRunSeconds": 2.7,
-          "maxMeanAbsDiffToPrevious": 0.35,
-          "maxMeanAbsDiffToFirst": 0.35
+          "maxMeanAbsDiffToPrevious": 0.29,
+          "maxMeanAbsDiffToFirst": 0.29
         }
       ]
     },
@@ -140,8 +140,8 @@
           ],
           "frames": 93,
           "longestStationaryRunSeconds": 3.07,
-          "maxMeanAbsDiffToPrevious": 2.58,
-          "maxMeanAbsDiffToFirst": 2.64
+          "maxMeanAbsDiffToPrevious": 2.67,
+          "maxMeanAbsDiffToFirst": 2.72
         }
       ]
     },
@@ -165,7 +165,7 @@
           "frames": 186,
           "longestStationaryRunSeconds": 6.2,
           "maxMeanAbsDiffToPrevious": 0.28,
-          "maxMeanAbsDiffToFirst": 0.38
+          "maxMeanAbsDiffToFirst": 0.39
         }
       ]
     }

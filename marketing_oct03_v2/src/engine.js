@@ -108,6 +108,15 @@ const FE = (() => {
     const q = cues.find(k => t >= (k.cs ?? k.start) - .05 && t <= (k.ce ?? k.end) + .25); if (!q) return;
     const s0 = q.cs ?? q.start, e0 = q.ce ?? q.end, a = Math.min(seg(t, s0 - .05, s0 + .12), 1 - seg(t, e0 + .05, e0 + .25));
     const textShown = q.caption || q.text;   // wrapping AND drawing both use the (possibly overridden) caption text
+    if (q.capFit) {   // batch 1 REV2: glyphs inside the conservative essential reserve x100-860 / y180-1420, <= 3 lines, bar top >= 1210 (clear of the host's chin/mouth), >= 54 px type (13.5 px at 270x480)
+      c.save(); c.globalAlpha = a; const CXc = 480, MAXW = 760; let fontPx = 54, lines = [], lh = 60, h = 200;
+      for (const fp of [58, 56, 54]) { fontPx = fp; lh = fp * 1.11; c.font = `600 ${fp}px ${FONT}`; lines = []; let cur = '';
+        textShown.split(' ').forEach(w => { const s2 = cur ? cur + ' ' + w : w; if (c.measureText(s2).width > MAXW && cur) { lines.push(cur); cur = w; } else cur = s2; }); lines.push(cur);
+        h = lines.length * lh + 20; if (lines.length <= 3 && 1410 - h >= 1210) break; }
+      const w = Math.min(MAXW + 48, Math.max(...lines.map(l => c.measureText(l).width)) + 56), y = 1410 - h;
+      c.fillStyle = 'rgba(10,20,36,.92)'; rr(c, CXc - w / 2, y, w, h, 36); c.fill(); c.strokeStyle = 'rgba(114,216,198,.45)'; c.lineWidth = 3; rr(c, CXc - w / 2, y, w, h, 36); c.stroke();
+      c.fillStyle = C.cream; c.textAlign = 'center'; c.textBaseline = 'middle'; lines.forEach((l, i) => c.fillText(l, CXc, y + 10 + lh * (i + .5) + 2)); c.restore(); return;
+    }
     c.save(); c.globalAlpha = a; const tries = q.capFit ? [[64, 800], [58, 860], [54, 900]] : [[64, 800]];   // capFit (batch 1 cues): shrink slightly so the bar never exceeds 3 lines and never covers the host's mouth
     let fontPx = 64, maxW = 800, lines = [];
     for (const [fp, mw] of tries) { fontPx = fp; maxW = mw; c.font = `600 ${fp}px ${FONT}`; const ws = textShown.split(' '); lines = []; let cur = '';

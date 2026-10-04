@@ -1,0 +1,29 @@
+OCTOBER BATCH 1 REV2 CORRECTION BRIEF
+
+Use the existing Claude Code project, Sonnet 5.5, High, Fast off. This is one bundled correction of the three batch1 videos, not new narration or new topics. Preserve every original MP3 and its exact sample partitions. Keep I agree REV3 and Actually/Looking REV4 byte-identical. No TTS, regeneration, extra services, credits, PR, publishing or scheduling.
+
+1. BORROW teaching labels, required major correction
+The encoded video says YO RECIBE / TÚ PRESTA during borrow and YO PRESTA / TÚ RECIBE during lend. These Spanish subject/verb forms are incorrect.
+Correct to YO RECIBO / TÚ PRESTAS, then YO PRESTO / TÚ RECIBES.
+Keep fixed YO/TÚ zones, ownership tu pluma / mi pluma, correct arrow/object direction and single adult male presenter. Recheck all four chip widths and phone legibility after longer labels.
+
+2. BORROW example badge clearance, required
+At native frames240 (8.0s) and510 (17.0s), the EJEMPLO badge lower edge/shadow touches or covers the top of the English line. Reflow the card with at least12px actual1080-output clearance between the badge/shadow and the English glyph bounds. Keep English/Spanish/definition hierarchy, font sizes and face clearance; expand the card if necessary before text enters.
+
+3. ALL THREE captions must respect the manifest's conservative essential reserve
+This is a measured contract mismatch, not a claim of native app occlusion. Required essential glyph reserve in final1080x1920 output: x100–860,y180–1420. Current Schedule c02 at5.5s has glyph bounds aboutx81–932,y1258–1455; CanHave parent CTA at20s reachesx901/y1455; Borrow c08/c09 reachy1442–1455.
+Recenter/narrow/reflow captions and their padding while preserving at least13px effective type at270x480 and keeping the speaking mouth clear. Three lines of about54px actual output type may fit, but measure the actual encoded glyphs; do not simply shrink below the minimum or cover the host's face. Prefer intact phrase captions; if any temporal caption split is necessary, use the attached ASR evidence and explicit uncertainty, not arbitrary character timing. Scope shared changes behind the batch1 flag so previous media/source behavior is preserved.
+
+4. Practice underline polish in CANHAVE and BORROW
+At CanHave~12.1–14.0s and Borrow~19.7–20.7s, a zero-length round-capped stroke looks like a stray dot before the blank line grows. Skip drawing when progress is zero, or display the full blank from the outset. Keep the practice answer hidden and the settled response hold>=3s.
+
+5. SCHEDULE narration-to-visual timing
+Independent local unprompted ASR is now available. See attached timing handoff, raw model evidence is separately preserved. Across full-file/cue and multilingual models, sábado onset is estimated at final7.630–7.830s. Current weekend entrance K.wk=8.313s is late. Align the actually readable SÁBADO O DOMINGO title/options with the spoken sábado onset range7.63–7.83s, not merely the entrance of an empty card. Current KB.txt adds~0.35–0.55s delay after K.wkIn, so a key change alone is insufficient. Rework the short sequential transition: the end of viernes is estimated across models at7.48–7.77s, and the sábado onset at7.63–7.83s; these overlap as model uncertainty, not as a certified sample gap. Aim for the weekend title to be clearly readable near7.73s through a brief coherent sequential transition, without overlap or text outside an expanding card. A simple option is to keep the full-size cream panel and sequentially replace its contents, avoiding an unnecessary new empty-card expansion before the weekend title. The readable-title requirement here refines the ASR handoff’s earlier general entrance-anchor suggestion; do not merely set K.wkIn to7.60 and retain its long text delay. Keep the source audio and existing cue partitions unchanged. Shorten the decorative weekday clock entrance as needed so the actual fully settled weekday card still holds>=2.5s before exit; measure the real encoded frames, not an assumed metric. Do not add a new mid-sentence audio cut based only on ASR word timestamps. Preserve >=2.5s weekend/context holds and all accurate public schedule/eligibility facts.
+
+6. SCHEDULE final level matching
+Independent EBU measurements are CanHave-17.6LUFS, Borrow-17.4LUFS, Schedule-14.5LUFS. Lower only Schedule's final mix about3dB to target-17.5±0.5LUFS and retain safe true peaks; do not boost the quieter originals. Preserve unprocessed originals/cue WAVs, pitch, speed and timing. Recheck final encoded levels and narration/SFX balance technically; listening remains unrun.
+
+7. Correct batch1 provenance/limits
+The original uploaded package provided MP3 hashes and scripts, not authoritative sample-cut handoffs. Batch1 alignment metadata currently says explicit sample partitions from independent timing handoff / authoritative cuts from handoff. Correct it to waveform-derived cut positions from this build, then separately record this newly supplied independent ASR corroboration and its estimated timing uncertainty. Describe take2 as a provisional longer alternative selected during production, not an owner audition or owner selection. ASR is not listening and does not prove naturalness/pronunciation; preserve that open gate, including the por/for code-switch recognition disagreement noted in the handoff.
+
+Deliver all three REV2 MP4s plus current source, exact originals, cues, revised caption files, maps, evidence and SHA256 list in a current-batch ZIP below30MiB. Keep prior MP4 versions in repo but omit duplicates from current ZIP. Audit actual encoded boundaries, phone typography, all glyph bounds, all corrected Spanish forms, speaker mouth, holds, decode and source preservation. Keep files QA-pending pending independent recheck and genuine audition/target-app playback; no claimed release pass.

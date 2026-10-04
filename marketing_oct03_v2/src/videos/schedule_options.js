@@ -10,7 +10,7 @@ window.VIDEO = (() => {
     background(c, t);
     KIT.hostFor(c, t, cues, { enter: seg(t, 0, .8), leave: 0,
       moodKeys: [{ t: 0, v: 'ask' }, { t: S(q.c02) - .3, v: 'warm' }, { t: S(q.c04) - .3, v: 'serious' }, { t: S(q.c05) - .3, v: 'warm' }],
-      gestKeys: [{ t: 0, v: 'both' }, { t: S(q.c02) - .3, v: 'presentL' }, { t: K.wk - .3, v: 'presentR' }, { t: S(q.c03) - .3, v: 'both' }, { t: S(q.c04) - .3, v: 'pointR' }, { t: S(q.c05) - .3, v: 'both' }],
+      gestKeys: [{ t: 0, v: 'both' }, { t: S(q.c02) - .3, v: 'presentL' }, { t: K.sab - .5, v: 'presentR' }, { t: S(q.c03) - .3, v: 'both' }, { t: S(q.c04) - .3, v: 'pointR' }, { t: S(q.c05) - .3, v: 'both' }],
       lookKeys: [{ t: 0, x: 0, y: -.6 }, { t: S(q.c02), x: 0, y: -.2 }] });
     KIT.logoSmall(c, seg(t, .1, .6));
     const HT = KIT.headTarget();
@@ -28,29 +28,27 @@ window.VIDEO = (() => {
           c.restore();
         }
       }
-      // 2 WEEKDAYS: five blocks, one hour each (ring sweeps once per day), starts on the hour 7 a. m. to 9 p. m.
-      if (t >= K.wdIn && t < K.wdOut + .4) {
-        const o = out(t, K.wdOut), wI = inn(t, K.wdIn), m = Math.min(1, wI) * o, ta = txt(t, K.wdIn) * o;
+      // 2-3 ONE persistent cream card: weekday contents (title, five one-hour clocks, starts) are replaced SEQUENTIALLY by the weekend contents. The title is readable at the estimated sábado onset (K.sab); no empty-card expansion.
+      if (t >= K.wdIn && t < K.wkOut + .4) {
+        const o = out(t, K.wkOut), wI = inn(t, K.wdIn), m = Math.min(1, wI) * o;
         if (m > 0) {
-          card(c, CARD_X, 450, CARD_W, 640, { a: m, sc: .92 + .08 * m }); c.save(); c.globalAlpha = ta;
-          c.font = `700 64px ${FE.FONT}`; const hw = c.measureText('LUNES A VIERNES').width + 80; c.fillStyle = C.mint; rr(c, CX - hw / 2, 462, hw, 88, 44); c.fill(); text(c, 'LUNES A VIERNES', CX, 462 + 62, 64, C.navy);
-          [0, 1, 2, 3, 4].forEach(i => { const bx = 116 + i * 160, ring = E.io(seg(t, K.wdIn + .55 + i * .12, K.wdIn + 1.05 + i * .12)); c.fillStyle = 'rgba(16,30,52,.07)'; rr(c, bx, 568, 140, 178, 34); c.fill(); text(c, DAYS[i], bx + 70, 568 + 60, 62, C.navy); P.clock(c, bx + 70, 568 + 118, 38, { ring }); });
-          text(c, 'Una hora al día', CX, 818, 78, C.navy); text(c, 'Inicios en punto:', CX, 886, 62, C.teal); text(c, '7 a. m. a 9 p. m.', CX, 976, 92, C.navy); mtyChip(c, CX, 1044, 1); c.restore();
-        }
-      }
-      // 3 WEEKEND: Saturday OR Sunday (alternatives), either morning block OR afternoon block
-      if (t >= K.wkIn && t < K.wkOut + .4) {
-        const o = out(t, K.wkOut), wI = inn(t, K.wkIn), m = Math.min(1, wI) * o, ta = txt(t, K.wkIn) * o;
-        if (m > 0) {
-          card(c, CARD_X, 450, CARD_W, 640, { a: m, sc: .92 + .08 * m }); c.save(); c.globalAlpha = ta;
-          c.font = `700 64px ${FE.FONT}`; const hw = c.measureText('SÁBADO O DOMINGO').width + 80; c.fillStyle = C.coral; rr(c, CX - hw / 2, 462, hw, 88, 44); c.fill(); text(c, 'SÁBADO O DOMINGO', CX, 462 + 62, 64, C.navy);
-          [['SÁBADO', 100], ['DOMINGO', 558]].forEach(([n, x], i) => { const pp = E.back(seg(t, K.wkIn + .35 + i * .12, K.wkIn + .8 + i * .12)); c.save(); c.translate(x + 177, 641); c.scale(Math.max(.01, pp), Math.max(.01, pp)); c.translate(-(x + 177), -641);
-            c.fillStyle = 'rgba(16,30,52,.07)'; rr(c, x, 566, 354, 150, 36); c.fill(); c.fillStyle = C.coral; c.beginPath(); c.roundRect(x, 566, 354, 68, [36, 36, 0, 0]); c.fill(); text(c, n, x + 177, 566 + 50, 60, C.navy); sun(c, x + 177, 678, 17, 0); c.restore(); });
-          const oc = E.back(seg(t, K.wkIn + .5, K.wkIn + .9)); c.save(); c.translate(CX, 641); c.scale(Math.max(.01, oc), Math.max(.01, oc)); c.fillStyle = C.navy; c.beginPath(); c.arc(0, 0, 46, 0, 6.2832); c.fill(); text(c, 'o', 0, 20, 62, C.cream); c.restore();
-          const pa = E.out(seg(t, K.wkIn + .6, K.wkIn + .9)); c.font = `700 70px ${FE.FONT}`; const aw = c.measureText('7 a. m.–12 p. m.').width + 70; c.save(); c.globalAlpha *= pa; c.fillStyle = C.mint; rr(c, CX - aw / 2, 736, aw, 90, 45); c.fill(); text(c, '7 a. m.–12 p. m.', CX, 736 + 65, 70, C.navy); text(c, 'o', CX, 886, 62, C.teal);
-          const bw = c.measureText('1–6 p. m.').width + 70; c.fillStyle = C.mint; rr(c, CX - bw / 2, 904, bw, 90, 45); c.fill(); text(c, '1–6 p. m.', CX, 904 + 65, 70, C.navy); c.restore();
-          c.restore();
-          if (ta > .5) { c.save(); c.globalAlpha *= ta; mtyChip(c, CX, 1048, 1); c.restore(); }
+          card(c, CARD_X, 450, CARD_W, 640, { a: m, sc: .92 + .08 * m });
+          const wd = E.out(seg(t, K.wdIn + .35, K.wdIn + .7)) * (1 - seg(t, K.wdOut, K.wdOut + .15)) * o;   // weekday state
+          if (wd > 0) { c.save(); c.globalAlpha = wd;
+            c.font = `700 64px ${FE.FONT}`; const hw = c.measureText('LUNES A VIERNES').width + 80; c.fillStyle = C.mint; rr(c, CX - hw / 2, 462, hw, 88, 44); c.fill(); text(c, 'LUNES A VIERNES', CX, 462 + 62, 64, C.navy);
+            [0, 1, 2, 3, 4].forEach(i => { const bx = 116 + i * 160, ring = E.io(seg(t, K.wdIn + .4 + i * .07, K.wdIn + .75 + i * .07)); c.fillStyle = 'rgba(16,30,52,.07)'; rr(c, bx, 568, 140, 178, 34); c.fill(); text(c, DAYS[i], bx + 70, 568 + 60, 62, C.navy); P.clock(c, bx + 70, 568 + 118, 38, { ring }); });
+            text(c, 'Una hora al día', CX, 818, 78, C.navy); text(c, 'Inicios en punto:', CX, 886, 62, C.teal); text(c, '7 a. m. a 9 p. m.', CX, 976, 92, C.navy); mtyChip(c, CX, 1044, 1); c.restore(); }
+          if (t >= K.wkIn) {
+            const u = t - K.sab, tit = E.out(seg(t, K.wkIn, K.sab)) * o, ex = o;   // title: 0 -> 1 across [sab-0.2, sab]
+            c.save(); c.globalAlpha = tit; c.font = `700 64px ${FE.FONT}`; const hw = c.measureText('SÁBADO O DOMINGO').width + 80; c.fillStyle = C.coral; rr(c, CX - hw / 2, 462, hw, 88, 44); c.fill(); text(c, 'SÁBADO O DOMINGO', CX, 462 + 62, 64, C.navy); c.restore();
+            [['SÁBADO', 100], ['DOMINGO', 558]].forEach(([n, x], i) => { const pp = E.out(seg(u, .08 + i * .1, .38 + i * .1)) * ex; if (pp <= 0) return; c.save(); c.globalAlpha = pp; c.translate(0, (1 - pp) * 16);
+              c.fillStyle = 'rgba(16,30,52,.07)'; rr(c, x, 566, 354, 150, 36); c.fill(); c.fillStyle = C.coral; c.beginPath(); c.roundRect(x, 566, 354, 68, [36, 36, 0, 0]); c.fill(); text(c, n, x + 177, 566 + 50, 60, C.navy); sun(c, x + 177, 678, 17, 0); c.restore(); });
+            const oc = E.out(seg(u, .28, .5)) * ex; if (oc > 0) { c.save(); c.globalAlpha = oc; c.translate(CX, 641); c.fillStyle = C.navy; c.beginPath(); c.arc(0, 0, 46, 0, 6.2832); c.fill(); text(c, 'o', 0, 20, 62, C.cream); c.restore(); }
+            const pa = E.out(seg(u, .5, .8)) * ex, pb = E.out(seg(u, .68, .98)) * ex; c.font = `700 70px ${FE.FONT}`; const aw = c.measureText('7 a. m.–12 p. m.').width + 70, bw = c.measureText('1–6 p. m.').width + 70;
+            if (pa > 0) { c.save(); c.globalAlpha = pa; c.fillStyle = C.mint; rr(c, CX - aw / 2, 736, aw, 90, 45); c.fill(); text(c, '7 a. m.–12 p. m.', CX, 736 + 65, 70, C.navy); c.restore(); }
+            if (pb > 0) { c.save(); c.globalAlpha = pb; text(c, 'o', CX, 886, 62, C.teal); c.fillStyle = C.mint; rr(c, CX - bw / 2, 904, bw, 90, 45); c.fill(); text(c, '1–6 p. m.', CX, 904 + 65, 70, C.navy); c.restore(); }
+            const mc = E.out(seg(u, .9, 1.15)) * ex; if (mc > 0) { c.save(); c.globalAlpha = mc; mtyChip(c, CX, 1048, 1); c.restore(); }
+          }
         }
       }
       // 4 CONTEXT: Monterrey time (clock + pin), then Club level (stationary text); both stay together until the CTA

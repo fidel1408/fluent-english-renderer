@@ -8,7 +8,7 @@ const mix = path.join(tmp, `${name}_mix.wav`), args = ['-y', '-v', 'error', '-i'
 files.forEach(x => args.push('-i', x.f));
 let fc = '[0:a]aresample=48000,aformat=channel_layouts=stereo[s]';
 files.forEach((x, i) => { const ms = Math.round(x.q.start * 1000); fc += `;[${i + 1}:a]aresample=48000,aformat=channel_layouts=stereo,adelay=${ms}|${ms}[n${i}]`; });
-fc += `;[s]${files.map((_, i) => `[n${i}]`).join('')}amix=inputs=${files.length + 1}:normalize=0:duration=longest[m];[m]alimiter=limit=0.89:level=false,atrim=0:${m.duration},apad=whole_dur=${m.duration}[o]`;
+fc += `;[s]${files.map((_, i) => `[n${i}]`).join('')}amix=inputs=${files.length + 1}:normalize=0:duration=longest[m];[m]alimiter=limit=0.89:level=false${m.mixGainDb ? `,volume=${m.mixGainDb}dB` : ''},atrim=0:${m.duration},apad=whole_dur=${m.duration}[o]`;
 args.push('-filter_complex', fc, '-map', '[o]', '-ar', '48000', '-ac', '2', '-c:a', 'pcm_s16le', mix);
 cp.execFileSync('ffmpeg', args, { stdio: 'inherit' });
 console.log(JSON.stringify({ mix: path.relative(L.ROOT, mix), narrationFiles: files.length, sfxPeakDbFS: +peakDb.toFixed(1) }));

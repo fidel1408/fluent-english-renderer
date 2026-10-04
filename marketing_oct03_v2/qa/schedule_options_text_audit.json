@@ -8,80 +8,80 @@
     {
       "text": "LUNES A VIERNES",
       "window": [
-        5.05,
-        8.01
+        4.7,
+        7.35
       ],
-      "framesChecked": 88,
+      "framesChecked": 80,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
     {
       "text": "Una hora al día",
       "window": [
-        5.05,
-        8.01
+        4.7,
+        7.35
       ],
-      "framesChecked": 88,
+      "framesChecked": 80,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
     {
       "text": "7 a. m. a 9 p. m.",
       "window": [
-        5.05,
-        8.01
+        4.7,
+        7.35
       ],
-      "framesChecked": 88,
+      "framesChecked": 80,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
     {
       "text": "Hora de Monterrey",
       "window": [
-        5.05,
-        8.01
+        4.7,
+        7.35
       ],
-      "framesChecked": 88,
+      "framesChecked": 80,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
     {
       "text": "SÁBADO O DOMINGO",
       "window": [
-        9.31,
+        7.77,
         11.9
       ],
-      "framesChecked": 78,
+      "framesChecked": 124,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
     {
       "text": "7 a. m.–12 p. m.",
       "window": [
-        9.31,
+        8.93,
         11.9
       ],
-      "framesChecked": 78,
+      "framesChecked": 89,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
     {
       "text": "1–6 p. m.",
       "window": [
-        9.31,
+        8.93,
         11.9
       ],
-      "framesChecked": 78,
+      "framesChecked": 89,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
     {
       "text": "Hora de Monterrey",
       "window": [
-        9.31,
+        8.93,
         11.9
       ],
-      "framesChecked": 78,
+      "framesChecked": 89,
       "framesMissingAtFullOpacity": 0,
       "ok": true
     },
@@ -130,8 +130,16 @@
     "framesShowingCtaTextBeforeEntry": 0,
     "ok": true
   },
-  "distinctStringsMeasured": 42,
-  "captionTextTopMinY": 1211.8,
+  "distinctStringsMeasured": 41,
+  "captionGlyphBounds": {
+    "xMin": 107.5,
+    "xMax": 852.5,
+    "yBottomMax": 1399,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1225.2,
   "captionClearsMouth": true,
   "pass": true
 }

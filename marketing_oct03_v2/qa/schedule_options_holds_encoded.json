@@ -1,35 +1,11 @@
 {
-  "file": "FE261016-SCHEDULE_batch1_single-host_narrated_QA-pending.mp4",
+  "file": "FE261016-SCHEDULE_batch1_REV2_single-host_narrated_QA-pending.mp4",
   "holds": [
     {
       "id": "weekday_options",
       "plannedWindow": [
-        5.05,
-        8.01
-      ],
-      "requirementSeconds": 2.5,
-      "measuredStationarySeconds": 2.97,
-      "ok": true,
-      "rects": [
-        {
-          "rect": [
-            165,
-            379,
-            680,
-            533
-          ],
-          "frames": 89,
-          "longestStationaryRunSeconds": 2.97,
-          "maxMeanAbsDiffToPrevious": 0,
-          "maxMeanAbsDiffToFirst": 0.02
-        }
-      ]
-    },
-    {
-      "id": "weekend_options",
-      "plannedWindow": [
-        9.26,
-        11.9
+        4.7,
+        7.35
       ],
       "requirementSeconds": 2.5,
       "measuredStationarySeconds": 2.67,
@@ -42,8 +18,32 @@
             680,
             533
           ],
-          "frames": 80,
+          "frames": 81,
           "longestStationaryRunSeconds": 2.67,
+          "maxMeanAbsDiffToPrevious": 5.32,
+          "maxMeanAbsDiffToFirst": 5.31
+        }
+      ]
+    },
+    {
+      "id": "weekend_options",
+      "plannedWindow": [
+        8.93,
+        11.9
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 3,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            379,
+            680,
+            533
+          ],
+          "frames": 90,
+          "longestStationaryRunSeconds": 3,
           "maxMeanAbsDiffToPrevious": 0,
           "maxMeanAbsDiffToFirst": 0.01
         }

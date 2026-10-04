@@ -16,6 +16,46 @@
       "ok": true
     },
     {
+      "text": "RECIBO",
+      "window": [
+        7.74,
+        10.38
+      ],
+      "framesChecked": 79,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "PRESTAS",
+      "window": [
+        7.74,
+        10.38
+      ],
+      "framesChecked": 79,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "PRESTO",
+      "window": [
+        16.33,
+        18.9
+      ],
+      "framesChecked": 77,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "RECIBES",
+      "window": [
+        16.33,
+        18.9
+      ],
+      "framesChecked": 77,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
       "text": "LEND = prestar",
       "window": [
         16.33,
@@ -68,6 +108,12 @@
   ],
   "forbidden": [
     {
+      "rule": "/^(RECIBE|PRESTA)$/",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
       "rule": "/seguir|follow|like|guarda|link|https?:|www\\.|\\.com|precio|gratis/i",
       "anywhere": true,
       "firstHit": null,
@@ -93,7 +139,19 @@
     "ok": true
   },
   "distinctStringsMeasured": 35,
-  "captionTextTopMinY": 1211.8,
+  "captionGlyphBounds": {
+    "xMin": 103.5,
+    "xMax": 856.5,
+    "yBottomMax": 1398.9,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": {
+    "minGapPxAt1080": 16.2,
+    "required": 12,
+    "ok": true
+  },
+  "captionTextTopMinY": 1276.4,
   "captionClearsMouth": true,
   "pass": true
 }

@@ -15,7 +15,7 @@ const so = cp.spawnSync('ffmpeg', ['-hide_banner', '-nostats', '-i', master, '-a
 for (const ln of so.split('\n')) { let m; if ((m = /silence_start: ([\d.]+)/.exec(ln))) cur = { s: +m[1] }; if ((m = /silence_end: ([\d.]+)/.exec(ln)) && cur) { cur.e = +m[1]; sil.push(cur); cur = null; } } if (cur) { cur.e = N / SR; sil.push(cur); }
 let isl = []; let t = 0; sil.forEach(s => { if (s.s > t + 0.01) isl.push({ s: t, e: s.s }); t = s.e; }); if (t < N / SR - 0.01) isl.push({ s: t, e: N / SR });
 isl = isl.filter(x => x.e - x.s >= 0.06);   // drop <60 ms blips (tail noise), they are not speech
-const rep = { video: name, master: path.relative(L.ROOT, master), masterSha256: crypto.createHash('sha256').update(fs.readFileSync(master)).digest('hex'), totalSamples: N, sampleRate: SR, method: 'explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch', cues: [], marks: {} };
+const rep = { video: name, master: path.relative(L.ROOT, master), masterSha256: crypto.createHash('sha256').update(fs.readFileSync(master)).digest('hex'), totalSamples: N, sampleRate: SR, method: (spec.method || 'explicit sample partitions from independent timing handoff') + '; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch', cues: [], marks: {} };
 const recon = new Int16Array(N); let maxEdge = 0;
 P.forEach(([a, b], i) => {
   const cue = man.cues[i], seg = pcm.slice(a, b); recon.set(seg, a);
@@ -30,6 +30,6 @@ P.forEach(([a, b], i) => {
 if (spec.marks) Object.entries(spec.marks).forEach(([k, [cid, idx]]) => { const c = rep.cues.find(x => x.id === cid); rep.marks[cid] = rep.marks[cid] || {}; rep.marks[cid][k] = c.islandsInCue[idx].s; });
 let diff = 0; for (let i = 0; i < N; i++) if (recon[i] !== pcm[i]) diff++;
 rep.coverage = { partitionSamples: P.reduce((s, [a, b]) => s + (b - a), 0), totalSamples: N, reconstructedDifferingSamples: diff, allSamplesRetainedOnce: diff === 0 && P.reduce((s, [a, b]) => s + (b - a), 0) === N, maxAbsSampleAtAnyCut: maxEdge };
-rep.confidence = { phraseBoundaries: 'authoritative sample cuts from handoff (silence midpoints)', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: 'not measured', content: 'pronunciation/content NOT verified (no listening)' };
+rep.confidence = spec.confidence || { phraseBoundaries: 'authoritative sample cuts from handoff (silence midpoints)', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: 'not measured', content: 'pronunciation/content NOT verified (no listening)' };
 fs.writeFileSync(path.join(L.ROOT, 'manifest', `${name}.alignment.json`), JSON.stringify(rep, null, 2));
 console.log(JSON.stringify({ coverage: rep.coverage, cues: rep.cues.map(c => `${c.id} ${c.seconds}s islands=${c.islandsInCue.length} act=${c.activityInCue} vsHandoffMs=${c.activityVsHandoffMs}`), marks: rep.marks }, null, 1)); process.exit(rep.coverage.allSamplesRetainedOnce ? 0 : 3);

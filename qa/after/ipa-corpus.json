@@ -7340,8 +7340,8 @@
   },
   {
    "src": "5.8 [visible]",
-   "text": "The bag is red.",
-   "ipa": "/ðə bæɡ ɪz red/",
+   "text": "The bag is red. It is not blue.",
+   "ipa": "/ðə bæɡ ɪz red ɪt ɪz nɑːt bluː/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -7492,8 +7492,8 @@
   },
   {
    "src": "5.9 [visible]",
-   "text": "The apple is green. The chair is blue.",
-   "ipa": "/ðə ˈæpl ɪz ɡriːn ðə tʃer ɪz bluː/",
+   "text": "The apple is green and nothing else. The chair is blue and nothing else.",
+   "ipa": "/ðə ˈæpl ɪz ɡriːn ænd ˈnʌθɪŋ els ðə tʃer ɪz bluː ænd ˈnʌθɪŋ els/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -7682,8 +7682,8 @@
   },
   {
    "src": "5.10 [visible]",
-   "text": "Alex is a student. Maya is a teacher. Neither of them is tired.",
-   "ipa": "/ˈælɪks ɪz ə ˈstuːdnt ˈmaɪə ɪz ə ˈtiːtʃər ˈniːðər əv ðem ɪz ˈtaɪərd/",
+   "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student. Neither of them is tired.",
+   "ipa": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt ˈniːðər əv ðem ɪz ˈtaɪərd/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -10096,8 +10096,8 @@
   },
   {
    "src": "6.14 [visible]",
-   "text": "The bag is red.",
-   "ipa": "/ðə bæɡ ɪz red/",
+   "text": "The bag is red. It is not blue.",
+   "ipa": "/ðə bæɡ ɪz red ɪt ɪz nɑːt bluː/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -12327,8 +12327,8 @@
   },
   {
    "src": "7.12 [visible]",
-   "text": "The apple is green.",
-   "ipa": "/ðə ˈæpl ɪz ɡriːn/",
+   "text": "The apple is green. It is not red.",
+   "ipa": "/ðə ˈæpl ɪz ɡriːn ɪt ɪz nɑːt red/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -13959,10 +13959,11 @@
   },
   {
    "src": "9.2 [answer-narration]",
-   "text": "She is happy.",
-   "ipa": "/ʃiː ɪz ˈhæpi/",
+   "text": "She is a teacher.",
+   "ipa": "/ʃiː ɪz ə ˈtiːtʃər/",
    "unk": false,
    "words": [
+    "hand",
     "hand",
     "hand",
     "hand"
@@ -14018,24 +14019,40 @@
   },
   {
    "src": "9.2 [visible]",
-   "text": "Say one affirmative sentence with am, is, or are.",
-   "ipa": "/seɪ wʌn əˈfɜːrmətɪv ˈsentəns wɪð æm ɪz ɔːr ɑːr/",
+   "text": "Facts",
+   "ipa": "/fækts/",
    "unk": false,
    "emptyIpa": false,
    "words": []
   },
   {
    "src": "9.2 [visible]",
-   "text": "She is happy.",
-   "ipa": "/ʃiː ɪz ˈhæpi/",
+   "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+   "ipa": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
    "unk": false,
    "emptyIpa": false,
    "words": []
   },
   {
    "src": "9.2 [visible]",
-   "text": "He’s a teacher.",
-   "ipa": "/hiːz ə ˈtiːtʃər/",
+   "text": "Use the facts or your own life. Say one affirmative sentence with am, is, or are.",
+   "ipa": "/juːz ðə fækts ɔːr jɔːr əʊn laɪf seɪ wʌn əˈfɜːrmətɪv ˈsentəns wɪð æm ɪz ɔːr ɑːr/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.2 [visible]",
+   "text": "She is a teacher.",
+   "ipa": "/ʃiː ɪz ə ˈtiːtʃər/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.2 [visible]",
+   "text": "He’s a student.",
+   "ipa": "/hiːz ə ˈstuːdnt/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -14112,10 +14129,11 @@
   },
   {
    "src": "9.3 [answer-narration]",
-   "text": "He isn't tired.",
-   "ipa": "/hiː ˈɪznt ˈtaɪərd/",
+   "text": "He isn't a teacher.",
+   "ipa": "/hiː ˈɪznt ə ˈtiːtʃər/",
    "unk": false,
    "words": [
+    "hand",
     "hand",
     "hand",
     "hand"
@@ -14171,6 +14189,22 @@
   },
   {
    "src": "9.3 [visible]",
+   "text": "Facts",
+   "ipa": "/fækts/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.3 [visible]",
+   "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+   "ipa": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.3 [visible]",
    "text": "Say one negative sentence with be.",
    "ipa": "/seɪ wʌn ˈneɡətɪv ˈsentəns wɪð biː/",
    "unk": false,
@@ -14179,8 +14213,16 @@
   },
   {
    "src": "9.3 [visible]",
-   "text": "He isn’t tired.",
-   "ipa": "/hiː ˈɪznt ˈtaɪərd/",
+   "text": "He isn’t a teacher.",
+   "ipa": "/hiː ˈɪznt ə ˈtiːtʃər/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.3 [visible]",
+   "text": "She isn’t a student.",
+   "ipa": "/ʃiː ˈɪznt ə ˈstuːdnt/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -14189,14 +14231,6 @@
    "src": "9.3 [visible]",
    "text": "I’m not late.",
    "ipa": "/aɪm nɑːt leɪt/",
-   "unk": false,
-   "emptyIpa": false,
-   "words": []
-  },
-  {
-   "src": "9.3 [visible]",
-   "text": "They aren’t students.",
-   "ipa": "/ðeɪ ɑːrnt ˈstuːdnts/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -14320,6 +14354,22 @@
    "src": "9.4 [visible]",
    "text": "Sofia · she/her",
    "ipa": "/səʊˈfiːə ʃiː hɜːr/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.4 [visible]",
+   "text": "Facts",
+   "ipa": "/fækts/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.4 [visible]",
+   "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+   "ipa": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -14485,6 +14535,22 @@
   },
   {
    "src": "9.5 [visible]",
+   "text": "Facts",
+   "ipa": "/fækts/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.5 [visible]",
+   "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+   "ipa": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+   "unk": false,
+   "emptyIpa": false,
+   "words": []
+  },
+  {
+   "src": "9.5 [visible]",
    "text": "Answer a question with a short answer.",
    "ipa": "/ˈænsər ə ˈkwestʃən wɪð ə ʃɔːrt ˈænsər/",
    "unk": false,
@@ -14509,8 +14575,8 @@
   },
   {
    "src": "9.5 [visible]",
-   "text": "Yes, they are.",
-   "ipa": "/jes ðeɪ ɑːr/",
+   "text": "Yes, he is.",
+   "ipa": "/jes hiː ɪz/",
    "unk": false,
    "emptyIpa": false,
    "words": []
@@ -16922,7 +16988,7 @@
  ],
  "missing": [],
  "stats": {
-  "entries": 416,
+  "entries": 417,
   "verified": 3
  },
  "errors": []

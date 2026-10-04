@@ -1,9 +1,9 @@
 // Drives every screen and interaction branch in a headless browser and records every English string shown or narrated,
 // with its assembled IPA line, so missing/malformed IPA can be audited exhaustively. Output: JSON (path in argv[2]).
-const { chromium } = require('/opt/node22/lib/node_modules/playwright'); const path = require('path'); const fs = require('fs');
-const file = path.resolve(__dirname, '../fluent-english-be-lesson.html'); const outFile = process.argv[2] || '/tmp/corpus.json';
+const { chromium, launchOpts } = require('./pw'); const path = require('path'); const fs = require('fs');
+const file = process.argv[3] ? path.resolve(process.argv[3]) : path.resolve(__dirname, '../fluent-english-be-lesson.html'); const outFile = process.argv[2] || path.join(require('os').tmpdir(), 'fluent-corpus.json');
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const b = await chromium.launch({ ...launchOpts });
   const p = await b.newPage({ viewport: { width: 1280, height: 800 } }); const errs = []; p.on('pageerror', (e) => errs.push(e.message));
   await p.goto('file://' + file); await p.evaluate(() => localStorage.clear()); await p.goto('file://' + file);
   const res = await p.evaluate(async () => {

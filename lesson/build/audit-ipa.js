@@ -1,10 +1,10 @@
 // DOM audit: every English text node in the teaching stage should sit inside a .tx (which carries an IPA line).
 // Excluded (documented in QA report): control bar/header chrome, modals, button labels, timers, Spanish help, talk-time chip.
-const { chromium } = require('/opt/node22/lib/node_modules/playwright'); const path = require('path'); const fs = require('fs');
+const { chromium, launchOpts } = require('./pw'); const path = require('path'); const fs = require('fs');
 const file = process.argv[2] || path.resolve(__dirname, '../fluent-english-be-lesson.html'); const out = process.argv[3];
 const W = +(process.env.W || 1280), H = +(process.env.H || 760);
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' }); const p = await b.newPage({ viewport: { width: W, height: H } });
+  const b = await chromium.launch({ ...launchOpts }); const p = await b.newPage({ viewport: { width: W, height: H } });
   await p.goto('file://' + file); await p.evaluate(() => localStorage.clear()); await p.goto('file://' + file);
   const res = await p.evaluate(async (W) => {
     S.started = true; document.getElementById('start').hidden = true; S.settings.cc = 'ipa'; S.settings.mute = true; applySettings();

@@ -1,7 +1,7 @@
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium, launchOpts } = require('./pw');
 const path = require('path');
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
+  const b = await chromium.launch({ ...launchOpts, args: ['--autoplay-policy=no-user-gesture-required'] });
   const p = await b.newPage(); const errs = []; p.on('pageerror', (e) => errs.push(e.message));
   await p.goto('file://' + path.resolve(__dirname, '../fluent-english-be-lesson.html'));
   const out = await p.evaluate(async () => {

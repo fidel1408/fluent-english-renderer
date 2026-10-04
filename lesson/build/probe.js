@@ -1,8 +1,8 @@
 // Visits every beat of every activity, collects console errors and IPA words missing from the dictionary.
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium, launchOpts } = require('./pw');
 const path = require('path');
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
+  const b = await chromium.launch({ ...launchOpts, args: ['--autoplay-policy=no-user-gesture-required'] });
   const p = await b.newPage({ viewport: { width: 1280, height: 800 } });
   const errs = [];
   p.on('pageerror', (e) => errs.push('PAGEERR ' + e.message)); p.on('console', (m) => { if (m.type() === 'error') errs.push('CONSOLE ' + m.text()); });

@@ -1,8 +1,8 @@
 /* Regression suite for the improvement pass. Run: node build/test-regression.js [path-to-html]
    Independent oracles (explicit sentence tables, written separately from the lesson code) check the word bank and every quiz item. */
-const { chromium } = require('/opt/node22/lib/node_modules/playwright'); const path = require('path'); const fs = require('fs');
+const { chromium, launchOpts } = require('./pw'); const path = require('path'); const fs = require('fs');
 const FILE = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(__dirname, '../fluent-english-be-lesson.html'); const URL = 'file://' + FILE;
-const EXE = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
+
 let pass = 0, fail = 0; const failures = [];
 const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail++; failures.push(m); console.log('  FAIL', m); } };
 const sec = (t) => console.log('\n# ' + t);
@@ -26,7 +26,7 @@ async function fresh(browser, o = {}) {
 const go = (p, a, b) => p.evaluate(([a, b]) => { __lesson.enter(a, b, { noIntro: true, tr: false, instant: true }); }, [a, b]);
 
 (async () => {
-  const browser = await chromium.launch({ executablePath: EXE, args: ['--autoplay-policy=no-user-gesture-required'] });
+  const browser = await chromium.launch({ ...launchOpts, args: ['--autoplay-policy=no-user-gesture-required'] });
 
   /* ------------------------------------------------------------------ A. word bank */
   sec('A. Word bank: I am … and every pronoun (valid, invalid, incomplete)');
@@ -85,6 +85,35 @@ const go = (p, a, b) => p.evaluate(([a, b]) => { __lesson.enter(a, b, { noIntro:
   ok(/standard yes\/no question/.test(Q[5].ctx) && /move is before he/.test(Q[5].ctx), 'Q6 asks explicitly for the standard inverted yes/no form');
   ok(/one job/.test(Q[7].ctx) && /doctor/.test(Q[7].ctx), 'Q8 states the fictional fact that Maya has one job: doctor');
   ok(/We are ready/.test(await p.evaluate(() => MCQ_ITEMS[2].ext)) && !/class, ready, here/.test(await p.evaluate(() => MCQ_ITEMS[2].ext)), 'Q3 extension no longer invites "We are class"');
+  await p.context().close();
+
+  /* ------------------------------------------------------------------ B2. model answers are supported by their stated premises */
+  sec('B2. Facts cards support every negative model answer (roles can overlap, so they must be stated)');
+  p = await fresh(browser);
+  const prompts = await p.evaluate(() => ACTS.flatMap((a, ai) => a.beats.map((b, bi) => ({ id: `${ai + 1}.${bi + 1}`, title: b.title, inv: b.inv })).filter((x) => x.inv && x.inv.kind === 'prompt')));
+  const NEG = /(isn't|aren't|'m not|'s not|'re not|is not|are not|No, )/i;
+  const hasNeg = (x) => x.inv.answerKey.some((a) => NEG.test(a.replace(/’/g, "'")));
+  const unsupported = prompts.filter((x) => x.inv.mode === 'facts' && hasNeg(x) && !(x.inv.facts && /\b(not|only|one job|neither|nothing else)\b/i.test(x.inv.facts)));
+  const modes = prompts.reduce((m, x) => { m[x.inv.mode] = (m[x.inv.mode] || 0) + 1; return m; }, {});
+  ok(prompts.every((x) => ['facts', 'personal', 'transform'].includes(x.inv.mode)), 'every prompt declares a mode (facts | personal | transform): ' + JSON.stringify(modes));
+  const tr = prompts.filter((x) => x.inv.mode === 'transform'), pe = prompts.filter((x) => x.inv.mode === 'personal');
+  ok(tr.length === 4 && tr.every((x) => x.inv.facts && x.inv.verdict !== undefined), 'transform items (Lab B) are 4 and each shows the facts: ' + tr.map((x) => x.id));
+  ok(pe.length === 2 && pe.every((x) => x.inv.answerKey.every((a) => /\b(I|you)\b/i.test(a))), 'personal items are 2 (6.11, 7.13) and every answer is first/second person only: ' + pe.map((x) => x.id));
+  const exits = prompts.filter((x) => x.id.startsWith('9.') && /^Exit task/.test(x.title));
+  ok(exits.length === 4 && exits.every((x) => /Alex is a student\. He is not a teacher\. Maya is a teacher\. She is not a student\./.test(x.inv.facts)), 'four exit tasks (9.2–9.5) carry the Alex/Maya role facts: ' + exits.map((x) => x.id));
+  ok(exits.every((x) => !x.inv.answerKey.some((a) => /\b(tired|doctor)\b.*\.$/i.test(a) && !/\?$/.test(a))), 'exit answers do not assert tiredness or doctor status');
+  ok(unsupported.length === 0, `every prompt with a negative model answer has a Facts card containing an explicit negative/exclusive premise (${prompts.length} prompts checked)` + (unsupported.length ? ' — ' + unsupported.map((u) => u.id).join(', ') : ''));
+  const a5 = prompts.find((x) => x.title === 'Your negative sentence 2'), f5 = a5.inv.facts;
+  ok(a5.id === '5.10', 'found Activity 5 step 10 "Your negative sentence 2" (' + a5.id + ')');
+  ok(/Alex is a student\. He is not a teacher\./.test(f5) && /Maya is a teacher\. She is not a student\./.test(f5) && /Neither of them is tired/.test(f5), 'A5.10 states: Alex is not a teacher, Maya is not a student, neither is tired');
+  const claim = (ans) => { const t = ans.replace(/’/g, "'"); let m;
+    if ((m = t.match(/^He isn't (an? )?(\w+)\.$/))) return new RegExp(`Alex is a student\\. He is not ${m[1] || ''}${m[2]}`).test(f5);
+    if ((m = t.match(/^She isn't (an? )?(\w+)\.$/))) return new RegExp(`Maya is a teacher\\. She is not ${m[1] || ''}${m[2]}`).test(f5);
+    if ((m = t.match(/^They aren't (\w+)\.$/))) return new RegExp(`Neither of them is ${m[1]}`).test(f5);
+    return null; };
+  const checked = a5.inv.answerKey.map((a) => [a, claim(a)]);
+  ok(checked.length === 3 && checked.every(([, c]) => c === true), 'each A5.10 model answer is entailed by the facts: ' + JSON.stringify(checked));
+  ok(await p.evaluate(() => !/matches? the facts/i.test(document.title)), 'no blanket claim');   // keep the check cheap and non-vacuous: title unchanged
   await p.context().close();
 
   /* ------------------------------------------------------------------ C. answer sheet / exports */
@@ -167,7 +196,9 @@ const go = (p, a, b) => p.evaluate(([a, b]) => { __lesson.enter(a, b, { noIntro:
   ok(lines.vs.slice(0, 3).every((x) => x === 'verified') && lines.ver.verified === 3 && lines.ver.entries > 300, `only ${lines.ver.verified} of ${lines.ver.entries} entries are marked source-verified; the rest are hand-entered`);
   ok(/eɪ/.test(lines.roundA) && /biː/.test(lines.ansB) && /^\/ə /.test(lines.artA) && /eɪ/.test(lines.form), 'letter names (A, B) get letter-name IPA; article "A group" keeps schwa');
   ok(/\[\?zzqx\]/.test(lines.unk), 'unknown words are marked [?word], never shown as plain spelling');
-  const corpus = JSON.parse(fs.readFileSync('/tmp/corpus.json', 'utf8'));
+  // the corpus is generated here, from the file under test, so the suite is self-contained (no pre-existing /tmp file)
+  const corpusPath = path.join(require('os').tmpdir(), `fluent-corpus-${process.pid}.json`); require('child_process').execFileSync('node', [path.join(__dirname, 'corpus-run.js'), corpusPath, FILE], { stdio: 'pipe' });
+  const corpus = JSON.parse(fs.readFileSync(corpusPath, 'utf8')); if (process.env.QA_CORPUS_OUT) fs.copyFileSync(corpusPath, process.env.QA_CORPUS_OUT);
   ok(corpus.missing.length === 0 && corpus.strings.every((s) => !s.unk), `exhaustive corpus run: ${corpus.strings.length} strings, 0 with missing words`);
   ok(corpus.strings.every((s) => !s.emptyIpa), 'every visible .tx text has a non-empty IPA line');
   const okChars = /^\/[a-zæɑɔəɜɪʊʌðŋʃʒθɡː ˈˌ_'\[\]?]*\/$/;
@@ -199,7 +230,13 @@ const go = (p, a, b) => p.evaluate(([a, b]) => { __lesson.enter(a, b, { noIntro:
   await go(p, 7, 8); await p.click(`.opt[data-k="${key[8]}"]`); await p.click('#mq-sub');
   await go(p, 7, 9); await p.click(`.opt[data-k="${key[9]}"]`); await p.click('#mq-sub');
   sc = await p.evaluate(() => Comp.mcq.score(S.mcq.shared)); ok(sc.first === 6 && sc.retryOk === 3 && sc.after === 9, `retry kept separate: first 6, retry 3/4, after 9 (got ${sc.first}/${sc.retryOk}/${sc.after})`);
-  await go(p, 7, 10); ok(await p.evaluate(() => !S.retry.active) === false || true, 'results screen renders after retry'); // retry round bookkeeping below
+  await go(p, 7, 10);
+  const st = await p.evaluate(() => ({ active: S.retry.active, first: Object.entries(S.mcq.shared.first).map(([i, a]) => [+i, a.ok]), retryKeys: Object.keys(S.mcq.shared.retry).map(Number).sort((a, b) => a - b), retryOk: Object.entries(S.mcq.shared.retry).map(([i, a]) => [+i, a.ok]), txt: document.getElementById('stage').textContent }));
+  ok(st.active === false, 'retry mode ends once every missed question has been retried (S.retry.active false on the results screen)');
+  ok(JSON.stringify(st.retryKeys) === '[6,7,8,9]', 'retry answers exist for exactly the four missed questions (Q7–Q10)');
+  ok(st.first.length === 10 && st.first.every(([i, o]) => o === (i < 6)), 'first-attempt records are unchanged by the retry (Q1–Q6 correct, Q7–Q10 missed)');
+  ok(st.retryOk.filter(([, o]) => o).length === 3 && st.retryOk.find(([i]) => i === 7)[1] === false, 'retry records: Q7, Q9, Q10 correct and Q8 still wrong');
+  ok(/6 \/ 10/.test(st.txt) && /3 \/ 4/.test(st.txt) && /9 \/ 10/.test(st.txt), 'results screen shows first attempt 6 / 10, retry 3 / 4 and after retry 9 / 10');
   await p.click('#rs-retry'); ok(await p.evaluate(() => S.retryRound === 2 && Object.keys(S.mcq.shared.retry).length === 0), 'a second retry round clears retry answers and increments the round');
   ok(await p.evaluate(() => S.answerLog.filter((x) => x.attemptType === 'retry-1').length === 4), 'round-1 retry attempts remain in the answer log');
   await p.context().close();
@@ -253,6 +290,61 @@ const go = (p, a, b) => p.evaluate(([a, b]) => { __lesson.enter(a, b, { noIntro:
   p = await fresh(browser, { mock: true });   // single voice -> pitch fallback
   ok(await p.evaluate(() => Speech.current('en', 'male').pitch < 1 && Speech.current('en', 'female').pitch > 1 && Speech.current('en').pitch === 1), 'with one voice only, pitch shifts slightly per speaker (not a real voice change)'); await p.context().close();
 
+  /* ------------------------------------------------------------------ K2. on-device-only privacy */
+  sec('K2. "On-device voices only": explicit/saved online selections, all three roles, no-local case');
+  const MIX = [{ name: 'Online Narrator Aria (Natural)', lang: 'en-US', localService: false }, { name: 'Online Male David', lang: 'en-US', localService: false }, { name: 'Local Mark', lang: 'en-US', localService: true }, { name: 'Local Zira', lang: 'en-US', localService: true }, { name: 'Online Female Jenny', lang: 'en-US', localService: false }, { name: 'Local Sabina', lang: 'es-MX', localService: true }, { name: 'Online Paulina', lang: 'es-MX', localService: false }];
+  const ALL_ONLINE = MIX.filter((v) => !v.localService);
+  const cur = (pg) => pg.evaluate(() => { const r = (x) => (x.voice ? { n: x.voice.name, local: x.voice.localService === true } : null); return { nar: r(Speech.current('en')), male: r(Speech.current('en', 'male')), female: r(Speech.current('en', 'female')), es: r(Speech.current('es')) }; });
+  const never = (c) => ['nar', 'male', 'female', 'es'].every((k) => c[k] === null || c[k].local === true);
+  p = await fresh(browser, { mock: true, voices: MIX });
+  await p.evaluate(() => { Object.assign(S.settings, { voice: 'Online Narrator Aria (Natural)', voiceMale: 'Online Male David', voiceFemale: 'Online Female Jenny', voiceEs: 'Online Paulina', rate: 0.75, vMusic: 0.3, vSfx: 0.4, ts: 2, localOnly: false }); applyAudio(); });
+  let c0 = await cur(p);
+  ok(c0.nar.n === 'Online Narrator Aria (Natural)' && c0.male.n === 'Online Male David' && c0.female.n === 'Online Female Jenny' && c0.es.n === 'Online Paulina' && !c0.nar.local, 'precondition: with the toggle off, the selected online voices ARE used (so the next checks are meaningful)');
+  await p.evaluate(() => { S.settings.localOnly = true; applyAudio(); });
+  let c1 = await cur(p);
+  ok(never(c1) && c1.nar && c1.male && c1.female && c1.es, 'after enabling on-device-only, narrator, male, female and Spanish voices are all on-device (' + [c1.nar.n, c1.male.n, c1.female.n, c1.es.n].join(' / ') + ')');
+  ok(await p.evaluate(() => S.settings.voice === '' && S.settings.voiceMale === '' && S.settings.voiceFemale === '' && S.settings.voiceEs === ''), 'saved online selections are cleared');
+  ok(await p.evaluate(() => S.settings.rate === 0.75 && S.settings.vMusic === 0.3 && S.settings.vSfx === 0.4 && S.settings.ts === 2 && S.settings.cc === 'cap'), 'other settings (rate, volumes, text size, captions) are preserved');
+  ok(await p.evaluate(() => Speech.enVoices().every((v) => v.localService) && Speech.esVoices().every((v) => v.localService)), 'online voices are no longer offered in the voice lists');
+  await p.evaluate(() => { enter(0, 1, { noIntro: true, tr: false }); }); await sleep(2300); await p.evaluate(() => { enter(0, 2, { noIntro: true, tr: false }); }); await sleep(2300);
+  await p.click('#b-es'); await p.click('#es-read'); await sleep(400);
+  const used = await p.evaluate(() => __sp.uses.map((u) => u.v)); ok(used.length >= 3 && used.every((v) => /^Local /.test(v)), `every utterance actually spoken used an on-device voice (${[...new Set(used)].join(', ')})`);
+  await p.evaluate(() => { S.settings.localOnly = false; applyAudio(); }); ok(await p.evaluate(() => S.settings.rate === 0.75 && S.settings.ts === 2), 'turning the setting off again keeps the other settings');
+  await p.context().close();
+  for (const role of ['narrator', 'male', 'female']) {   // each role on its own: only that role has an online selection
+    p = await fresh(browser, { mock: true, voices: MIX });
+    const key = { narrator: 'voice', male: 'voiceMale', female: 'voiceFemale' }[role], onl = { narrator: 'Online Narrator Aria (Natural)', male: 'Online Male David', female: 'Online Female Jenny' }[role];
+    await p.evaluate(([k, v]) => { S.settings[k] = v; S.settings.localOnly = false; applyAudio(); }, [key, onl]);
+    const before = await p.evaluate((r) => { const x = Speech.current('en', r === 'narrator' ? undefined : r); return x.voice && x.voice.name; }, role); await p.evaluate(() => { S.settings.localOnly = true; applyAudio(); });
+    const after = await p.evaluate((r) => { const x = Speech.current('en', r === 'narrator' ? undefined : r); return x.voice && { n: x.voice.name, local: x.voice.localService }; }, role);
+    ok(before === onl && after && after.local === true, `${role}: online choice honoured before the toggle (${before}), on-device after (${after && after.n})`);
+    await p.context().close();
+  }
+  {   // persisted presets: a save made earlier, containing online voices and local-only already on
+    const ctx3 = await browser.newContext({ viewport: { width: 1280, height: 780 } });
+    await ctx3.addInitScript((voices) => { window.__sp = { log: [], uses: [], cur: null, active: 0, overlap: 0 }; class U { constructor(t) { this.text = t; this.rate = 1; this.pitch = 1; } } window.SpeechSynthesisUtterance = U; Object.defineProperty(window, 'speechSynthesis', { configurable: true, value: { getVoices: () => voices, addEventListener() {}, speak(u) { __sp.log.push(u.text); __sp.uses.push({ t: u.text, v: u.voice && u.voice.name }); setTimeout(() => u.onend && u.onend(), 60); }, cancel() {} } });
+      localStorage.setItem('fluent-english-be-lesson-v1', JSON.stringify({ v: 1, started: true, a: 0, b: 1, spent: [0, 0, 0, 0, 0, 0, 0, 0, 0], extra: [0, 0, 0, 0, 0, 0, 0, 0, 0], visited: {}, done: {}, diag: {}, mode: 'shared', mcq: { shared: { first: {}, retry: {} }, individual: { first: {}, retry: {} } }, retry: { active: false }, settings: { cc: 'cap', voice: 'Online Narrator Aria (Natural)', voiceMale: 'Online Male David', voiceFemale: 'Online Female Jenny', voiceEs: 'Online Paulina', localOnly: true, rate: 0.8, vMusic: 0.2, vSpeech: 0.9, vSfx: 0.5, mute: false, rm: true, ts: 1 } })); }, MIX);
+    p = await ctx3.newPage(); p.errs = []; p.on('pageerror', (e) => p.errs.push(e.message)); await p.goto(URL); await p.click('#b-resume'); await sleep(2800);
+    const c3 = await cur(p); ok(never(c3) && c3.nar && c3.male && c3.female, 'persisted preset with online voices + on-device-only: every role resolves to an on-device voice (' + [c3.nar && c3.nar.n, c3.male && c3.male.n, c3.female && c3.female.n].join(' / ') + ')');
+    ok(await p.evaluate(() => S.settings.voice === '' && S.settings.voiceMale === '' && S.settings.voiceFemale === '' && S.settings.voiceEs === '' && S.settings.rate === 0.8 && S.settings.vMusic === 0.2 && S.settings.localOnly === true), 'persisted online selections cleared; rate/volume/local-only kept');
+    const used3 = await p.evaluate(() => __sp.uses.map((u) => u.v)); ok(used3.length > 0 && used3.every((v) => /^Local /.test(v)), 'narration after resuming a persisted online preset uses only on-device voices (' + [...new Set(used3)].join(', ') + ')'); ok(p.errs.length === 0, 'no errors');
+    await ctx3.close();
+  }
+  p = await fresh(browser, { mock: true, voices: ALL_ONLINE });   // no on-device voice exists at all
+  await p.evaluate(() => { Object.assign(S.settings, { voice: 'Online Narrator Aria (Natural)', voiceMale: 'Online Male David', voiceFemale: 'Online Female Jenny', localOnly: false, rate: 0.7 }); applyAudio(); });
+  await p.evaluate(() => { S.settings.localOnly = true; applyAudio(); });
+  const c4 = await cur(p); ok(c4.nar === null && c4.male === null && c4.female === null && c4.es === null, 'no on-device voice exists: narrator, male, female and Spanish all resolve to NO voice (never an online one)');
+  ok(await p.evaluate(() => Speech.status() === 'no-local-voice'), 'status reports no-local-voice');
+  await p.evaluate(() => { enter(0, 1, { noIntro: true, tr: false }); }); await sleep(2600);
+  ok(await p.evaluate(() => __sp.log.length === 0), 'nothing is spoken (no utterance is ever sent to a voice) while no on-device voice exists');
+  ok((await p.textContent('#caption')).length > 0 || await p.evaluate(() => document.getElementById('caption').innerHTML.length > 0), 'captions still run (silent / manual-narration fallback)');
+  ok(/No on-device voice/.test(await p.textContent('#toast')), 'a clear notice explains the narration is silent');
+  await p.evaluate(() => { openSettings(); }); ok(/narration is silent/.test(await p.textContent('.modal')) && !/ONLINE/.test(await p.textContent('.modal select')), 'settings dialog explains the silent fallback and lists no online voice'); await p.keyboard.press('Escape');
+  await p.evaluate(() => { S.settings.localOnly = false; applyAudio(); window.__n = __sp.log.length; enter(0, 2, { noIntro: true, tr: false }); }); await sleep(2000);
+  ok(await p.evaluate(() => __sp.log.length > __n && S.settings.rate === 0.7), 'turning the setting off allows online voices again, with other settings intact');
+  ok(await p.evaluate(() => __sp.uses.slice(window.__n).every((u) => /^Online /.test(u.v))), 'with the setting off, the online voice is the one used (confirms the mock distinguishes voices)');
+  await p.context().close();
+
   /* ------------------------------------------------------------------ L. phone layout */
   sec('L. 390 px phone: no sideways overflow, IPA kept and readable');
   p = await fresh(browser, { w: 390, h: 844, cc: 'ipa' });
@@ -264,6 +356,14 @@ const go = (p, a, b) => p.evaluate(([a, b]) => { __lesson.enter(a, b, { noIntro:
   ok(ph.over.length === 0, `no horizontal overflow on any of ${ph.beats} screens` + (ph.over.length ? ' — ' + ph.over.slice(0, 4) : ''));
   ok(ph.small.length === 0, 'no visible IPA line below 12 px' + (ph.small.length ? ' — ' + ph.small.slice(0, 3).join('; ') : ''));
   ok(ph.noLegend.length === 0, 'every picture label has its full text + IPA in the legend (none suppressed)' + (ph.noLegend.length ? ' — ' + ph.noLegend.slice(0, 4) : ''));
+  await p.context().close();
+
+  /* ------------------------------------------------------------------ L2. nothing stuck invisible */
+  sec('L2. No element is left permanently invisible (found: negatives table rows)');
+  p = await fresh(browser);
+  const stuck = await p.evaluate(async () => { const out = []; for (let a = 0; a < ACTS.length; a++) for (let b = 0; b < ACTS[a].beats.length; b++) { __lesson.enter(a, b, { noIntro: true, tr: false, instant: true }); await new Promise((r) => setTimeout(r, 30)); document.querySelectorAll('#stage .fadein:not(.on), #stage .fly:not(.on)').forEach((e) => { if (e.closest('.ans') || e.id === 'tg-book') return; out.push(`${a + 1}.${b + 1} ${e.id || e.tagName}`); }); } return out; });
+  ok(stuck.length === 0, 'after each step finishes, every fade-in / fly-in element has been shown' + (stuck.length ? ' — ' + stuck.slice(0, 4) : ''));
+  await go(p, 4, 2); await sleep(800); ok(await p.evaluate(() => Array.from(document.querySelectorAll('table.t tr.fadein')).every((r) => r.classList.contains('on') && getComputedStyle(r).opacity === '1') && document.querySelectorAll('table.t tr.fadein').length === 7), 'negatives table: all 7 rows are visible (shown and fully opaque)');
   await p.context().close();
 
   /* ------------------------------------------------------------------ M. navigation + resume + old saves */

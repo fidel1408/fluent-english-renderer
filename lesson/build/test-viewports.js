@@ -1,12 +1,12 @@
 /* Real-viewport reachability test: portrait phone 390x844, landscape phone 844x390, desktop 1280x720.
    NOT expanded-height: it checks what a user can actually see and reach by scrolling at the true device size. */
-const { chromium } = require('/opt/node22/lib/node_modules/playwright'); const path = require('path'); const fs = require('fs');
+const { chromium, launchOpts } = require('./pw'); const path = require('path'); const fs = require('fs');
 const FILE = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(__dirname, '../fluent-english-be-lesson.html'); const URL = 'file://' + FILE;
 const VPS = [{ n: 'phone-portrait-390x844', w: 390, h: 844, minStage: 200 }, { n: 'phone-landscape-844x390', w: 844, h: 390, minStage: 120 }, { n: 'desktop-1280x720', w: 1280, h: 720, minStage: 280 }];
 let pass = 0, fail = 0; const failures = [], report = {};
 const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail++; failures.push(m); console.log('  FAIL', m); } };
 (async () => {
-  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const browser = await chromium.launch({ ...launchOpts });
   for (const vp of VPS) {
     console.log(`\n# ${vp.n}`);
     const ctx = await browser.newContext({ viewport: { width: vp.w, height: vp.h } }); const p = await ctx.newPage(); const errs = []; p.on('pageerror', (e) => errs.push(e.message));

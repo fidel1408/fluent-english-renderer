@@ -334,3 +334,4 @@ body.nodock #show-dock{display:block}
   .scene-legend .lg-k{font:700 1.6rem var(--serif);color:var(--teal-700);margin-right:.2rem;line-height:0}
 }
 .pill .tx .ipa,.chip .tx .ipa,.bigpill .tx .ipa,.tile .tx .ipa,.opt .tx .ipa,.tag .tx .ipa,.bubble .tx .ipa{font-size:max(.8em,12px)!important}
+.scene.crowd .tag{font-size:min(.95rem,2.15cqw);padding:.1em .4em}

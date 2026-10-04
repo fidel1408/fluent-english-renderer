@@ -1,9 +1,9 @@
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium, launchOpts } = require('./pw');
 const path = require('path'), fs = require('fs');
 const list = process.argv.slice(2).length ? process.argv.slice(2) : ['start', '0:0', '0:1', '1:0'];
 const cc = process.env.CC || 'cap'; const W = +(process.env.W || 1280), H = +(process.env.H || 760); const wait = +(process.env.WAIT || 6000);
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
+  const b = await chromium.launch({ ...launchOpts, args: ['--autoplay-policy=no-user-gesture-required'] });
   const p = await b.newPage({ viewport: { width: W, height: H } });
   p.on('pageerror', (e) => console.log('PAGEERR', e.message));
   await p.goto('file://' + path.resolve(__dirname, '../fluent-english-be-lesson.html'));

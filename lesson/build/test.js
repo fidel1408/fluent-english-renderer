@@ -1,10 +1,10 @@
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium, launchOpts } = require('./pw');
 const path = require('path'), fs = require('fs');
 const URL = 'file://' + path.resolve(__dirname, '../fluent-english-be-lesson.html');
 let pass = 0, fail = 0;
 const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail++; console.log('  FAIL', m); } };
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
+  const b = await chromium.launch({ ...launchOpts, args: ['--autoplay-policy=no-user-gesture-required'] });
   const ctx = await b.newContext({ viewport: { width: 1280, height: 780 }, acceptDownloads: true });
   const p = await ctx.newPage(); const errs = [];
   p.on('pageerror', (e) => errs.push(e.message)); p.on('console', (m) => { if (m.type() === 'error') errs.push(m.text()); });
@@ -87,7 +87,7 @@ const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail+
   await p.evaluate(() => { S.mode = 'shared'; S.mcq = fresh().mcq; S.retry = { active: false }; enter(7, 0, { noIntro: true }); }); await p.waitForTimeout(200);
   const answersWanted = [1, 3, 0, 1 /*wrong: key is C*/, 1, 3, 1 /*wrong key A*/, 2, 1, 3]; // 8 right, 2 wrong
   for (let i = 0; i < 10; i++) {
-    ok(await p.evaluate(() => !document.querySelector('.opt.right'), undefined) || i === 0 && false, `Q${i + 1}: correct option hidden before submit`);
+    ok(await p.evaluate(() => !document.querySelector('.opt.right') && !document.querySelector('.opt.wrong')), `Q${i + 1}: correct/wrong marks hidden before submit`);
     await p.click(`.opt[data-k="${answersWanted[i]}"]`); await p.click('#mq-sub'); await p.waitForTimeout(600);
     if (i === 3) ok(await p.evaluate(() => !!document.querySelector('.opt.right') && !!document.querySelector('.opt.wrong')), 'wrong answer shows correct + chosen after submit');
     await p.click('#mq-next');
@@ -120,7 +120,7 @@ const ok = (c, m) => { if (c) { pass++; console.log('  ok  ', m); } else { fail+
   ok(await p.isVisible('#b-resume'), 'resume offered after refresh');
   await p.click('#b-resume'); await p.waitForTimeout(500);
   ok(await p.evaluate(() => S.a === 3 && S.b === 2 && S.extra[0] === 90 && S.mcq.shared.first[0].ok), 'resumed at A4 step 3 with timers and scores intact');
-  ok(await p.evaluate(() => !JSON.stringify(localStorage).match(/name|email/i) || true), 'storage keys recorded');
+  ok(await p.evaluate(() => { const j = JSON.parse(localStorage.getItem(KEY)); const keys = JSON.stringify(Object.keys(j)); return !/name|email|mail/i.test(keys) && !/@/.test(JSON.stringify(j)); }), 'saved state has no name/email fields and no e-mail-like text');
 
   console.log('# reset with confirmation');
   await p.click('#b-reset'); ok(await p.isVisible('#cfm-ok'), 'reset asks for confirmation');

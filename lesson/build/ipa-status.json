@@ -479,6 +479,11 @@
   "status": "hand",
   "source": "hand-entered; notation follows uploaded Sound Chart / OALD NAmE conventions; not word-level checked"
  },
+ "else": {
+  "ipa": "els",
+  "status": "hand",
+  "source": "hand-entered; notation follows uploaded Sound Chart / OALD NAmE conventions; not word-level checked"
+ },
  "end": {
   "ipa": "end",
   "status": "hand",

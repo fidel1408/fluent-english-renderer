@@ -93,7 +93,8 @@ ACTS.push({
 
 /* ================= ACTIVITY 9 ================= */
 const exitScene = () => SC({ alt: 'Alex, Maya, Daniel and Sofia smile.', bg: 'class', ppl: [['alex', 150, { expr: 'smile' }], ['maya', 330, { expr: 'happy' }], ['daniel', 580, {}], ['sofia', 780, { expr: 'happy' }]], tags: [NT('alex', 150), NT('maya', 330), NT('daniel', 580), NT('sofia', 780)] });
-const exitTask = (n, title, instr, examples, es, extraSay) => promptBeat({ title, sub: `${n} of 4`, talk: 45, quiet: true, es, scene: exitScene, instr, sentence: examples.join(' / '), why: 'These are examples only. Your own sentence is just as good.', say: [{ t: extraSay }], ansSay: [examples[0]], turn: 'Speak with little help.' });
+const exitFacts = 'Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.';
+const exitTask = (n, title, instr, examples, es, extraSay) => promptBeat({ facts: exitFacts, mode: 'facts', title, sub: `${n} of 4`, talk: 45, quiet: true, es, scene: exitScene, instr, sentence: examples.join(' / '), why: 'These are examples only. Your own sentence is just as good.', say: [{ t: extraSay }], ansSay: [examples[0]], turn: 'Speak with little help.' });
 
 ACTS.push({
   n: 9, title: 'Exit Speaking and Recap', spoken: 'Exit speaking and recap',
@@ -103,10 +104,10 @@ ACTS.push({
       render: () => `<div class="cols even" style="grid-template-columns:repeat(4,1fr)">${[['1', 'An affirmative sentence', 'coral'], ['2', 'A negative sentence', 'teal'], ['3', 'A question with be', 'violet'], ['4', 'A short answer', 'gold']].map(([n, t, c]) => `<div class="card fadein" id="ex${n}"><span class="pill ${c === 'teal' ? '' : c}">${n}</span><div class="mid-sentence" style="margin-top:.4rem">${tx(t)}</div></div>`).join('')}</div>
         ${exitScene()}<div class="meaning">${tx('Talk about the pictures, about you, or use invented details.')}</div>`,
       seq: [{ t: 'Four short tasks. Use the pictures, your own life, or invented details.' }, ...[1, 2, 3, 4].map((n) => ({ pre: (A) => { A.on('ex' + n); A.sfx('pop'); }, wait: 450 }))] },
-    exitTask(1, 'Exit task: affirmative', 'Say one affirmative sentence with am, is, or are.', ['She is happy.', "He's a teacher.", 'We are in class.'], 'Tarea 1: una frase afirmativa con am, is o are.', 'Say one affirmative sentence.'),
-    exitTask(2, 'Exit task: negative', 'Say one negative sentence with be.', ["He isn't tired.", "I'm not late.", "They aren't students."], 'Tarea 2: una frase negativa con be.', 'Say one negative sentence.'),
+    exitTask(1, 'Exit task: affirmative', 'Use the facts or your own life. Say one affirmative sentence with am, is, or are.', ['She is a teacher.', "He's a student.", 'We are in class.'], 'Tarea 1: una frase afirmativa con am, is o are.', 'Say one affirmative sentence.'),
+    exitTask(2, 'Exit task: negative', 'Say one negative sentence with be.', ["He isn't a teacher.", "She isn't a student.", "I'm not late."], 'Tarea 2: una frase negativa con be.', 'Say one negative sentence.'),
     exitTask(3, 'Exit task: question', 'Ask one question with be.', ['Is she a doctor?', 'Are you ready?', 'Are they friends?'], 'Tarea 3: una pregunta con be (no uses do/does).', 'Ask one question with be.'),
-    exitTask(4, 'Exit task: short answer', 'Answer a question with a short answer.', ['Yes, I am.', "No, she isn't.", 'Yes, they are.'], 'Tarea 4: una respuesta corta apropiada (Yes, I am. / No, she isn’t.).', 'A partner asks a question. Give a short answer.'),
+    exitTask(4, 'Exit task: short answer', 'Answer a question with a short answer.', ['Yes, I am.', "No, she isn't.", 'Yes, he is.'], 'Tarea 4: una respuesta corta apropiada (Yes, I am. / No, she isn’t.).', 'A partner asks a question. Give a short answer.'),
     { title: 'Teacher checklist', talk: 0, quiet: true, es: 'Lista opcional para el profesor: elección del sujeto, concordancia de be, orden de palabras y producción independiente. No hay puntuación automática de pronunciación.',
       render: () => `<div class="meaning">${tx('Optional. Use anonymous labels. This is your observation — the lesson does not score speech.')}</div><div id="chk-ex"></div>`,
       seq: [{ t: 'Optional teacher checklist.' }], bind: (A) => renderChecklist('exit', $('#chk-ex', A.root)) },

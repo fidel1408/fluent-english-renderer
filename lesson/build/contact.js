@@ -1,10 +1,10 @@
 // Screenshots of every step + every answer/feedback state at one viewport width. Usage: node build/contact.js desktop|phone OUTDIR
-const { chromium } = require('/opt/node22/lib/node_modules/playwright'); const path = require('path'); const fs = require('fs');
+const { chromium, launchOpts } = require('./pw'); const path = require('path'); const fs = require('fs');
 const mode = process.argv[2] || 'desktop', OUT = process.argv[3] || '/tmp/shots'; const REAL = !!process.env.REAL; const W = +(process.env.VW || (mode === 'phone' ? 390 : 1280)), H0 = +(process.env.VH || (mode === 'phone' ? 844 : 720));
 const FILE = path.resolve(__dirname, '../fluent-english-be-lesson.html'); fs.mkdirSync(OUT, { recursive: true });
 const index = []; let n = 0;
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
+  const b = await chromium.launch({ ...launchOpts, args: ['--autoplay-policy=no-user-gesture-required'] });
   const ctx = await b.newContext({ viewport: { width: W, height: H0 }, acceptDownloads: true });
   await ctx.addInitScript(() => { const voices = [{ name: 'Microsoft Aria Online (Natural)', lang: 'en-US', localService: false }, { name: 'Microsoft David', lang: 'en-US', localService: true }, { name: 'Microsoft Zira', lang: 'en-US', localService: true }, { name: 'Microsoft Sabina', lang: 'es-MX', localService: true }];
     class U { constructor(t) { this.text = t; } } window.SpeechSynthesisUtterance = U; Object.defineProperty(window, 'speechSynthesis', { configurable: true, value: { getVoices: () => voices, addEventListener() {}, speak(u) { setTimeout(() => u.onend && u.onend(), 50); }, cancel() {} } }); });
@@ -29,7 +29,7 @@ const index = []; let n = 0;
   }
   /* ---- interactive states ---- */
   await boot();
-  const click = (sel) => p.click(sel); const S_ = 'states';
+  const click = (sel) => p.click(sel, { force: true, timeout: 8000 }); const S_ = 'states';
   await enter(2, 9); await click('.tile[data-t="am"]'); await shot(S_, 'build wrong tile feedback', 'A3 build: wrong tile → explanatory feedback');
   await click('.tile[data-t="He"]'); await shot(S_, 'build wrong pronoun feedback', 'A3 build: second wrong tile');
   for (const t of ['She', 'is', 'a']) await click(`.tile[data-t="${t}"]`); await shot(S_, 'build partial', 'A3 build: partly built');

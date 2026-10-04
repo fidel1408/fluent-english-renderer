@@ -1,10 +1,10 @@
 // Downscales the supplied Fluent English logo into small embeddable data URIs (uses Chromium canvas).
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium, launchOpts } = require('./pw');
 const fs = require('fs'), path = require('path');
 (async () => {
   const root = path.resolve(__dirname, '../..');
   const b64 = fs.readFileSync(path.join(root, 'fluent_english_logo.png')).toString('base64');
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const b = await chromium.launch({ ...launchOpts });
   const p = await b.newPage();
   const out = await p.evaluate(async (b64) => {
     const img = new Image(); img.src = 'data:image/png;base64,' + b64; await img.decode();

@@ -17,3 +17,9 @@ html = html.split('__LOGO_FULL__').join(assets.full).split('__LOGO_GLOBE__').joi
 const out = path.join(__dirname, '../fluent-english-be-lesson.html');
 fs.writeFileSync(out, html);
 console.log('built', out, (html.length / 1024).toFixed(0) + ' KB');
+
+// Private-preview variant for the Claude artifact viewer: the viewer wraps pages in its own skeleton, so strip the document tags and use a name-style title.
+let prev = html.replace(/<!doctype html>\s*/i, '').replace(/<html[^>]*>\s*/i, '').replace(/<head>\s*/i, '').replace(/<meta[^>]*>\s*/gi, '').replace(/<title>[^<]*<\/title>/i, '<title>Fluent English Pronouns and Be</title>').replace(/<\/head>\s*/i, '').replace(/<body[^>]*>\s*/i, '').replace(/<\/body>\s*/i, '').replace(/<\/html>\s*/i, '');
+fs.mkdirSync(path.join(__dirname, '../preview'), { recursive: true });
+fs.writeFileSync(path.join(__dirname, '../preview/fluent-english-be-lesson.artifact.html'), prev);
+console.log('built preview variant', (prev.length / 1024).toFixed(0) + ' KB');

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-04T06:52:57.169Z",
+ "generatedAt": "2026-10-04T07:26:55.945Z",
  "file": "fluent-english-be-lesson.html",
  "narrationEstimate": {
   "narrationLines": 180,
@@ -279,9 +279,9 @@
  },
  "ipa": {
   "notation": "Uploaded Fluent English Sound Chart notation; agrees with current Oxford Learner’s (OALD) NAmE for GOAT /əʊ/. Oxford Advanced American /oʊ/ is a different transcription standard and is not mixed in.",
-  "entries": 416,
+  "entries": 417,
   "sourceVerifiedEntries": 3,
-  "handEnteredEntries": 413,
+  "handEnteredEntries": 414,
   "verifiedWords": {
    "no": {
     "ipa": "nəʊ",
@@ -1872,7 +1872,8 @@
       "explanation": "Alex is one man (he/him), so we use *he*.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Desafío 1: Hablamos de Alex (he/him): \"He is Alex.\"",
      "silentMusicMode": true
@@ -2007,7 +2008,8 @@
       "explanation": "The speaker uses *I* for herself.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Desafío 2: Maya habla de sí misma: \"I am Maya.\"",
      "silentMusicMode": true
@@ -2152,7 +2154,8 @@
       "explanation": "Alex is the listener, so Maya says *you*.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Desafío 3: Maya habla con Alex: para él usa \"you\".",
      "silentMusicMode": true
@@ -2277,7 +2280,8 @@
       "explanation": "One thing: *it*.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Desafío 4: Una cosa: \"It is a phone.\"",
      "silentMusicMode": true
@@ -2422,7 +2426,8 @@
       "explanation": "Alex is in the group, so we use *we*.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Desafío 5: Alex habla de Alex y Maya: \"We are friends.\"",
      "silentMusicMode": true
@@ -2577,7 +2582,8 @@
       "explanation": "Daniel and Sofia are other people, not Alex: *they*.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Desafío 6: Alex habla de Daniel y Sofia: \"They are friends.\"",
      "silentMusicMode": true
@@ -6153,7 +6159,8 @@
       "explanation": "Change three things: they → it, are → is, phones → a phone.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Falso: hay un solo teléfono. Cambia 3 cosas: they→it, are→is, phones→a phone.",
      "silentMusicMode": true
@@ -6308,7 +6315,8 @@
       "explanation": "Maya’s only job is doctor, so she is not a teacher.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Falso: Maya es doctora. Corrige: She isn’t a teacher. She’s a doctor.",
      "silentMusicMode": true
@@ -6473,7 +6481,8 @@
       "explanation": "The facts say neither person is tired, so the sentence is false.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Falso: los dos sonríen. Corrige: They aren’t tired. They’re happy.",
      "silentMusicMode": true
@@ -6519,8 +6528,8 @@
        "state": "initial"
       },
       {
-       "text": "The bag is red.",
-       "ipaLine": "/ðə bæɡ ɪz red/",
+       "text": "The bag is red. It is not blue.",
+       "ipaLine": "/ðə bæɡ ɪz red ɪt ɪz nɑːt bluː/",
        "state": "initial"
       },
       {
@@ -6569,8 +6578,8 @@
        "state": "revealed"
       },
       {
-       "text": "The bag is red.",
-       "ipaLine": "/ðə bæɡ ɪz red/",
+       "text": "The bag is red. It is not blue.",
+       "ipaLine": "/ðə bæɡ ɪz red ɪt ɪz nɑːt bluː/",
        "state": "revealed"
       },
       {
@@ -6609,7 +6618,7 @@
       "kind": "prompt",
       "instruction": "True or false? If it is false, say the correct sentence.",
       "statementOrQuestion": "It is red.",
-      "facts": "The bag is red.",
+      "facts": "The bag is red. It is not blue.",
       "answerKey": [
        "It is red.",
        "It isn't blue."
@@ -6618,7 +6627,8 @@
       "explanation": "The bag is red. Add a true negative sentence too.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Verdadero. Añade una negativa verdadera: It isn’t blue.",
      "silentMusicMode": true
@@ -6669,8 +6679,8 @@
        "state": "initial"
       },
       {
-       "text": "The apple is green. The chair is blue.",
-       "ipaLine": "/ðə ˈæpl ɪz ɡriːn ðə tʃer ɪz bluː/",
+       "text": "The apple is green and nothing else. The chair is blue and nothing else.",
+       "ipaLine": "/ðə ˈæpl ɪz ɡriːn ænd ˈnʌθɪŋ els ðə tʃer ɪz bluː ænd ˈnʌθɪŋ els/",
        "state": "initial"
       },
       {
@@ -6749,8 +6759,8 @@
        "state": "revealed"
       },
       {
-       "text": "The apple is green. The chair is blue.",
-       "ipaLine": "/ðə ˈæpl ɪz ɡriːn ðə tʃer ɪz bluː/",
+       "text": "The apple is green and nothing else. The chair is blue and nothing else.",
+       "ipaLine": "/ðə ˈæpl ɪz ɡriːn ænd ˈnʌθɪŋ els ðə tʃer ɪz bluː ænd ˈnʌθɪŋ els/",
        "state": "revealed"
       },
       {
@@ -6814,7 +6824,7 @@
       "kind": "prompt",
       "instruction": "Talk about the green apple. It = the apple. Say one negative sentence with it.",
       "statementOrQuestion": null,
-      "facts": "The apple is green. The chair is blue.",
+      "facts": "The apple is green and nothing else. The chair is blue and nothing else.",
       "answerKey": [
        "It isn't blue.",
        "It isn't red.",
@@ -6827,7 +6837,8 @@
        "It's not …"
       ],
       "extraChallenge": "Now talk about the chair. It = the chair. Say: It isn't green.",
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Habla de la manzana (it) con una frase negativa. La manzana es verde, así que \"It isn’t blue\" es verdadera.",
      "silentMusicMode": true
@@ -6878,8 +6889,8 @@
        "state": "initial"
       },
       {
-       "text": "Alex is a student. Maya is a teacher. Neither of them is tired.",
-       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt ˈmaɪə ɪz ə ˈtiːtʃər ˈniːðər əv ðem ɪz ˈtaɪərd/",
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student. Neither of them is tired.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt ˈniːðər əv ðem ɪz ˈtaɪərd/",
        "state": "initial"
       },
       {
@@ -6953,8 +6964,8 @@
        "state": "revealed"
       },
       {
-       "text": "Alex is a student. Maya is a teacher. Neither of them is tired.",
-       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt ˈmaɪə ɪz ə ˈtiːtʃər ˈniːðər əv ðem ɪz ˈtaɪərd/",
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student. Neither of them is tired.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt ˈniːðər əv ðem ɪz ˈtaɪərd/",
        "state": "revealed"
       },
       {
@@ -7013,7 +7024,7 @@
       "kind": "prompt",
       "instruction": "Use the facts. Talk about the people. Say one negative sentence.",
       "statementOrQuestion": null,
-      "facts": "Alex is a student. Maya is a teacher. Neither of them is tired.",
+      "facts": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student. Neither of them is tired.",
       "answerKey": [
        "He isn't a teacher.",
        "She isn't a student.",
@@ -7027,7 +7038,8 @@
        "They aren't …"
       ],
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Lee los datos y habla de Alex y Maya con una frase negativa.",
      "silentMusicMode": true
@@ -8730,7 +8742,8 @@
       "explanation": "One learner answers about *I*. Use *am* in the positive answer.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "personal"
      },
      "spanishHelp": "Un estudiante responde sobre sí mismo: Yes, I am. / No, I’m not.",
      "silentMusicMode": true
@@ -8875,7 +8888,8 @@
       "explanation": "Maya is she/her. The fact says she is a doctor.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Maya es doctora: Yes, she is.",
      "silentMusicMode": true
@@ -9041,7 +9055,8 @@
       "explanation": "The facts say they are engineers and not students.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Son ingenieros: No, they aren’t.",
      "silentMusicMode": true
@@ -9098,8 +9113,8 @@
        "state": "initial"
       },
       {
-       "text": "The bag is red.",
-       "ipaLine": "/ðə bæɡ ɪz red/",
+       "text": "The bag is red. It is not blue.",
+       "ipaLine": "/ðə bæɡ ɪz red ɪt ɪz nɑːt bluː/",
        "state": "initial"
       },
       {
@@ -9148,8 +9163,8 @@
        "state": "revealed"
       },
       {
-       "text": "The bag is red.",
-       "ipaLine": "/ðə bæɡ ɪz red/",
+       "text": "The bag is red. It is not blue.",
+       "ipaLine": "/ðə bæɡ ɪz red ɪt ɪz nɑːt bluː/",
        "state": "revealed"
       },
       {
@@ -9188,7 +9203,7 @@
       "kind": "prompt",
       "instruction": "Use the facts. Answer with a short answer.",
       "statementOrQuestion": "Is it blue?",
-      "facts": "The bag is red.",
+      "facts": "The bag is red. It is not blue.",
       "answerKey": [
        "No, it isn't.",
        "No, it's not."
@@ -9197,7 +9212,8 @@
       "explanation": "The bag is red, so it is not blue.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "La bolsa es roja: No, it isn’t.",
      "silentMusicMode": true
@@ -9625,7 +9641,8 @@
        "She's …"
       ],
       "extraChallenge": "Say a second sentence: She isn't a …",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "facts"
      },
      "spanishHelp": "Ronda A: elige un pronombre y describe la imagen: She is a student.",
      "silentMusicMode": true
@@ -9803,7 +9820,8 @@
        "He's …"
       ],
       "extraChallenge": "Say it with a contraction and add one more sentence about Omar.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "facts"
      },
      "spanishHelp": "Ronda A: Omar parece cansado: He is tired.",
      "silentMusicMode": true
@@ -9961,7 +9979,8 @@
        "They're …"
       ],
       "extraChallenge": "Say a negative sentence: They aren't …",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "facts"
      },
      "spanishHelp": "Tres tazas: They are cups.",
      "silentMusicMode": true
@@ -10139,7 +10158,8 @@
        "We're …"
       ],
       "extraChallenge": "Ask a question about Ken and Rosa. Use Are they …?",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "facts"
      },
      "spanishHelp": "Ken habla de Ken y Rosa: We are friends.",
      "silentMusicMode": true
@@ -10348,7 +10368,8 @@
        "I’m not …"
       ],
       "extraChallenge": "Say the negative. Then give a true sentence about the picture.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "transform"
      },
      "spanishHelp": "Cambia a negativo: He isn’t an artist. ¿Coincide con la imagen? No: es artista.",
      "silentMusicMode": true
@@ -10567,7 +10588,8 @@
        "I’m not …"
       ],
       "extraChallenge": "Say the negative. Then give a true sentence about the picture.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "transform"
      },
      "spanishHelp": "They aren’t tired: coincide con la imagen (están felices).",
      "silentMusicMode": true
@@ -10776,7 +10798,8 @@
        "I’m not …"
       ],
       "extraChallenge": "Say the negative. Then give a true sentence about the picture.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "transform"
      },
      "spanishHelp": "It isn’t a phone: coincide (es una laptop).",
      "silentMusicMode": true
@@ -10984,7 +11007,8 @@
        "I’m not …"
       ],
       "extraChallenge": "Say the negative. Then give a true sentence about the picture.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "transform"
      },
      "spanishHelp": "Lena habla de sí misma: I’m not a doctor. Coincide con la imagen.",
      "silentMusicMode": true
@@ -11194,7 +11218,8 @@
        "No, … isn’t/aren’t."
       ],
       "extraChallenge": "Ask and answer without the starters. Then add one more sentence.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "facts"
      },
      "spanishHelp": "Pregunta: Is he a student? Respuesta corta: Yes, he is.",
      "silentMusicMode": true
@@ -11414,7 +11439,8 @@
        "No, … isn’t/aren’t."
       ],
       "extraChallenge": "Ask and answer without the starters. Then add one more sentence.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "facts"
      },
      "spanishHelp": "Pregunta: Are they engineers? Yes, they are.",
      "silentMusicMode": true
@@ -11460,8 +11486,8 @@
        "state": "initial"
       },
       {
-       "text": "The apple is green.",
-       "ipaLine": "/ðə ˈæpl ɪz ɡriːn/",
+       "text": "The apple is green. It is not red.",
+       "ipaLine": "/ðə ˈæpl ɪz ɡriːn ɪt ɪz nɑːt red/",
        "state": "initial"
       },
       {
@@ -11540,8 +11566,8 @@
        "state": "revealed"
       },
       {
-       "text": "The apple is green.",
-       "ipaLine": "/ðə ˈæpl ɪz ɡriːn/",
+       "text": "The apple is green. It is not red.",
+       "ipaLine": "/ðə ˈæpl ɪz ɡriːn ɪt ɪz nɑːt red/",
        "state": "revealed"
       },
       {
@@ -11610,7 +11636,7 @@
       "kind": "prompt",
       "instruction": "Ask a question. Another learner gives a short answer.",
       "statementOrQuestion": "Ask: Is it red?",
-      "facts": "The apple is green.",
+      "facts": "The apple is green. It is not red.",
       "answerKey": [
        "Is it red?",
        "No, it isn't."
@@ -11624,7 +11650,8 @@
        "No, … isn’t/aren’t."
       ],
       "extraChallenge": "Ask and answer without the starters. Then add one more sentence.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "facts"
      },
      "spanishHelp": "Pregunta: Is it red? No, it isn’t.",
      "silentMusicMode": true
@@ -11835,7 +11862,8 @@
        "No, … isn’t/aren’t."
       ],
       "extraChallenge": "Ask and answer without the starters. Then add one more sentence.",
-      "speakerRole": "teacher chooses learner"
+      "speakerRole": "teacher chooses learner",
+      "mode": "personal"
      },
      "spanishHelp": "Pregunta a un compañero: Are you tired? Responde con una respuesta corta (puede ser inventada).",
      "silentMusicMode": true
@@ -13454,7 +13482,7 @@
       }
      ],
      "answerNarration": [
-      "She is happy."
+      "She is a teacher."
      ],
      "learnerTurnPrompt": "Speak with little help.",
      "onScreenText": [
@@ -13489,18 +13517,28 @@
        "state": "initial"
       },
       {
-       "text": "Say one affirmative sentence with am, is, or are.",
-       "ipaLine": "/seɪ wʌn əˈfɜːrmətɪv ˈsentəns wɪð æm ɪz ɔːr ɑːr/",
+       "text": "Facts",
+       "ipaLine": "/fækts/",
        "state": "initial"
       },
       {
-       "text": "She is happy.",
-       "ipaLine": "/ʃiː ɪz ˈhæpi/",
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
        "state": "initial"
       },
       {
-       "text": "He’s a teacher.",
-       "ipaLine": "/hiːz ə ˈtiːtʃər/",
+       "text": "Use the facts or your own life. Say one affirmative sentence with am, is, or are.",
+       "ipaLine": "/juːz ðə fækts ɔːr jɔːr əʊn laɪf seɪ wʌn əˈfɜːrmətɪv ˈsentəns wɪð æm ɪz ɔːr ɑːr/",
+       "state": "initial"
+      },
+      {
+       "text": "She is a teacher.",
+       "ipaLine": "/ʃiː ɪz ə ˈtiːtʃər/",
+       "state": "initial"
+      },
+      {
+       "text": "He’s a student.",
+       "ipaLine": "/hiːz ə ˈstuːdnt/",
        "state": "initial"
       },
       {
@@ -13549,18 +13587,28 @@
        "state": "revealed"
       },
       {
-       "text": "Say one affirmative sentence with am, is, or are.",
-       "ipaLine": "/seɪ wʌn əˈfɜːrmətɪv ˈsentəns wɪð æm ɪz ɔːr ɑːr/",
+       "text": "Facts",
+       "ipaLine": "/fækts/",
        "state": "revealed"
       },
       {
-       "text": "She is happy.",
-       "ipaLine": "/ʃiː ɪz ˈhæpi/",
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
        "state": "revealed"
       },
       {
-       "text": "He’s a teacher.",
-       "ipaLine": "/hiːz ə ˈtiːtʃər/",
+       "text": "Use the facts or your own life. Say one affirmative sentence with am, is, or are.",
+       "ipaLine": "/juːz ðə fækts ɔːr jɔːr əʊn laɪf seɪ wʌn əˈfɜːrmətɪv ˈsentəns wɪð æm ɪz ɔːr ɑːr/",
+       "state": "revealed"
+      },
+      {
+       "text": "She is a teacher.",
+       "ipaLine": "/ʃiː ɪz ə ˈtiːtʃər/",
+       "state": "revealed"
+      },
+      {
+       "text": "He’s a student.",
+       "ipaLine": "/hiːz ə ˈstuːdnt/",
        "state": "revealed"
       },
       {
@@ -13579,22 +13627,23 @@
        "state": "revealed"
       }
      ],
-     "revealedAnswerText": "She is happy./ʃiː ɪz ˈhæpi/He’s a teacher./hiːz ə ˈtiːtʃər/We are in class./wiː ɑːr ɪn klæs/These are examples only. Your own sentence is just as good./ðiːz ɑːr ɪɡˈzæmplz ˈəʊnli jɔːr əʊn ˈsentəns ɪz dʒʌst æz ɡʊd/",
+     "revealedAnswerText": "She is a teacher./ʃiː ɪz ə ˈtiːtʃər/He’s a student./hiːz ə ˈstuːdnt/We are in class./wiː ɑːr ɪn klæs/These are examples only. Your own sentence is just as good./ðiːz ɑːr ɪɡˈzæmplz ˈəʊnli jɔːr əʊn ˈsentəns ɪz dʒʌst æz ɡʊd/",
      "exercise": {
       "kind": "prompt",
-      "instruction": "Say one affirmative sentence with am, is, or are.",
+      "instruction": "Use the facts or your own life. Say one affirmative sentence with am, is, or are.",
       "statementOrQuestion": null,
-      "facts": null,
+      "facts": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
       "answerKey": [
-       "She is happy.",
-       "He's a teacher.",
+       "She is a teacher.",
+       "He's a student.",
        "We are in class."
       ],
       "verdict": null,
       "explanation": "These are examples only. Your own sentence is just as good.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Tarea 1: una frase afirmativa con am, is o are.",
      "silentMusicMode": true
@@ -13620,7 +13669,7 @@
       }
      ],
      "answerNarration": [
-      "He isn't tired."
+      "He isn't a teacher."
      ],
      "learnerTurnPrompt": "Speak with little help.",
      "onScreenText": [
@@ -13655,23 +13704,33 @@
        "state": "initial"
       },
       {
+       "text": "Facts",
+       "ipaLine": "/fækts/",
+       "state": "initial"
+      },
+      {
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+       "state": "initial"
+      },
+      {
        "text": "Say one negative sentence with be.",
        "ipaLine": "/seɪ wʌn ˈneɡətɪv ˈsentəns wɪð biː/",
        "state": "initial"
       },
       {
-       "text": "He isn’t tired.",
-       "ipaLine": "/hiː ˈɪznt ˈtaɪərd/",
+       "text": "He isn’t a teacher.",
+       "ipaLine": "/hiː ˈɪznt ə ˈtiːtʃər/",
+       "state": "initial"
+      },
+      {
+       "text": "She isn’t a student.",
+       "ipaLine": "/ʃiː ˈɪznt ə ˈstuːdnt/",
        "state": "initial"
       },
       {
        "text": "I’m not late.",
        "ipaLine": "/aɪm nɑːt leɪt/",
-       "state": "initial"
-      },
-      {
-       "text": "They aren’t students.",
-       "ipaLine": "/ðeɪ ɑːrnt ˈstuːdnts/",
        "state": "initial"
       },
       {
@@ -13715,23 +13774,33 @@
        "state": "revealed"
       },
       {
+       "text": "Facts",
+       "ipaLine": "/fækts/",
+       "state": "revealed"
+      },
+      {
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+       "state": "revealed"
+      },
+      {
        "text": "Say one negative sentence with be.",
        "ipaLine": "/seɪ wʌn ˈneɡətɪv ˈsentəns wɪð biː/",
        "state": "revealed"
       },
       {
-       "text": "He isn’t tired.",
-       "ipaLine": "/hiː ˈɪznt ˈtaɪərd/",
+       "text": "He isn’t a teacher.",
+       "ipaLine": "/hiː ˈɪznt ə ˈtiːtʃər/",
+       "state": "revealed"
+      },
+      {
+       "text": "She isn’t a student.",
+       "ipaLine": "/ʃiː ˈɪznt ə ˈstuːdnt/",
        "state": "revealed"
       },
       {
        "text": "I’m not late.",
        "ipaLine": "/aɪm nɑːt leɪt/",
-       "state": "revealed"
-      },
-      {
-       "text": "They aren’t students.",
-       "ipaLine": "/ðeɪ ɑːrnt ˈstuːdnts/",
        "state": "revealed"
       },
       {
@@ -13745,22 +13814,23 @@
        "state": "revealed"
       }
      ],
-     "revealedAnswerText": "He isn’t tired./hiː ˈɪznt ˈtaɪərd/I’m not late./aɪm nɑːt leɪt/They aren’t students./ðeɪ ɑːrnt ˈstuːdnts/These are examples only. Your own sentence is just as good./ðiːz ɑːr ɪɡˈzæmplz ˈəʊnli jɔːr əʊn ˈsentəns ɪz dʒʌst æz ɡʊd/",
+     "revealedAnswerText": "He isn’t a teacher./hiː ˈɪznt ə ˈtiːtʃər/She isn’t a student./ʃiː ˈɪznt ə ˈstuːdnt/I’m not late./aɪm nɑːt leɪt/These are examples only. Your own sentence is just as good./ðiːz ɑːr ɪɡˈzæmplz ˈəʊnli jɔːr əʊn ˈsentəns ɪz dʒʌst æz ɡʊd/",
      "exercise": {
       "kind": "prompt",
       "instruction": "Say one negative sentence with be.",
       "statementOrQuestion": null,
-      "facts": null,
+      "facts": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
       "answerKey": [
-       "He isn't tired.",
-       "I'm not late.",
-       "They aren't students."
+       "He isn't a teacher.",
+       "She isn't a student.",
+       "I'm not late."
       ],
       "verdict": null,
       "explanation": "These are examples only. Your own sentence is just as good.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Tarea 2: una frase negativa con be.",
      "silentMusicMode": true
@@ -13821,6 +13891,16 @@
        "state": "initial"
       },
       {
+       "text": "Facts",
+       "ipaLine": "/fækts/",
+       "state": "initial"
+      },
+      {
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+       "state": "initial"
+      },
+      {
        "text": "Ask one question with be.",
        "ipaLine": "/æsk wʌn ˈkwestʃən wɪð biː/",
        "state": "initial"
@@ -13881,6 +13961,16 @@
        "state": "revealed"
       },
       {
+       "text": "Facts",
+       "ipaLine": "/fækts/",
+       "state": "revealed"
+      },
+      {
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+       "state": "revealed"
+      },
+      {
        "text": "Ask one question with be.",
        "ipaLine": "/æsk wʌn ˈkwestʃən wɪð biː/",
        "state": "revealed"
@@ -13916,7 +14006,7 @@
       "kind": "prompt",
       "instruction": "Ask one question with be.",
       "statementOrQuestion": null,
-      "facts": null,
+      "facts": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
       "answerKey": [
        "Is she a doctor?",
        "Are you ready?",
@@ -13926,7 +14016,8 @@
       "explanation": "These are examples only. Your own sentence is just as good.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Tarea 3: una pregunta con be (no uses do/does).",
      "silentMusicMode": true
@@ -13987,6 +14078,16 @@
        "state": "initial"
       },
       {
+       "text": "Facts",
+       "ipaLine": "/fækts/",
+       "state": "initial"
+      },
+      {
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+       "state": "initial"
+      },
+      {
        "text": "Answer a question with a short answer.",
        "ipaLine": "/ˈænsər ə ˈkwestʃən wɪð ə ʃɔːrt ˈænsər/",
        "state": "initial"
@@ -14002,8 +14103,8 @@
        "state": "initial"
       },
       {
-       "text": "Yes, they are.",
-       "ipaLine": "/jes ðeɪ ɑːr/",
+       "text": "Yes, he is.",
+       "ipaLine": "/jes hiː ɪz/",
        "state": "initial"
       },
       {
@@ -14047,6 +14148,16 @@
        "state": "revealed"
       },
       {
+       "text": "Facts",
+       "ipaLine": "/fækts/",
+       "state": "revealed"
+      },
+      {
+       "text": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
+       "ipaLine": "/ˈælɪks ɪz ə ˈstuːdnt hiː ɪz nɑːt ə ˈtiːtʃər ˈmaɪə ɪz ə ˈtiːtʃər ʃiː ɪz nɑːt ə ˈstuːdnt/",
+       "state": "revealed"
+      },
+      {
        "text": "Answer a question with a short answer.",
        "ipaLine": "/ˈænsər ə ˈkwestʃən wɪð ə ʃɔːrt ˈænsər/",
        "state": "revealed"
@@ -14062,8 +14173,8 @@
        "state": "revealed"
       },
       {
-       "text": "Yes, they are.",
-       "ipaLine": "/jes ðeɪ ɑːr/",
+       "text": "Yes, he is.",
+       "ipaLine": "/jes hiː ɪz/",
        "state": "revealed"
       },
       {
@@ -14077,22 +14188,23 @@
        "state": "revealed"
       }
      ],
-     "revealedAnswerText": "Yes, I am./jes aɪ æm/No, she isn’t./nəʊ ʃiː ˈɪznt/Yes, they are./jes ðeɪ ɑːr/These are examples only. Your own sentence is just as good./ðiːz ɑːr ɪɡˈzæmplz ˈəʊnli jɔːr əʊn ˈsentəns ɪz dʒʌst æz ɡʊd/",
+     "revealedAnswerText": "Yes, I am./jes aɪ æm/No, she isn’t./nəʊ ʃiː ˈɪznt/Yes, he is./jes hiː ɪz/These are examples only. Your own sentence is just as good./ðiːz ɑːr ɪɡˈzæmplz ˈəʊnli jɔːr əʊn ˈsentəns ɪz dʒʌst æz ɡʊd/",
      "exercise": {
       "kind": "prompt",
       "instruction": "Answer a question with a short answer.",
       "statementOrQuestion": null,
-      "facts": null,
+      "facts": "Alex is a student. He is not a teacher. Maya is a teacher. She is not a student.",
       "answerKey": [
        "Yes, I am.",
        "No, she isn't.",
-       "Yes, they are."
+       "Yes, he is."
       ],
       "verdict": null,
       "explanation": "These are examples only. Your own sentence is just as good.",
       "starters": null,
       "extraChallenge": null,
-      "speakerRole": null
+      "speakerRole": null,
+      "mode": "facts"
      },
      "spanishHelp": "Tarea 4: una respuesta corta apropiada (Yes, I am. / No, she isn’t.).",
      "silentMusicMode": true

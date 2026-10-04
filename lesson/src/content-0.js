@@ -13,7 +13,7 @@ const RING = (id, x, y, w, h, cls = '') => ({ id, x, y, w, h, cls });
 const GROUND = 46; // everything sits this much higher so tag + IPA lines fit underneath
 function SC(o) {
   return Art.scene({
-    bg: o.bg || 'class', alt: o.alt || '', cls: o.cls,
+    bg: o.bg || 'class', alt: o.alt || '', cls: ((o.cls || '') + ((o.ppl || []).length >= 3 ? ' crowd' : '')).trim(),
     people: (o.ppl || []).map(([who, x, p = {}]) => Object.assign({ who, x, s: o.s || 0.95, id: who }, p, { y: (p.y || 470) - GROUND })),
     objs: (o.objs || []).map((a) => (a.raw ? { raw: `<g transform="translate(0 ${-GROUND})">${a.raw}</g>` } : Object.assign({}, a, { y: a.y - GROUND }))),
     ov: o.tags, bubbles: o.bub, rings: (o.rings || []).map((r) => Object.assign({}, r, { y: r.y - 30 })), back: o.back,
@@ -29,7 +29,7 @@ const cut = (s) => s.replace(/\s+/g, ' ').trim();
 function promptBeat(o) {
   const lab = !!o.lab;
   return {
-    inv: { kind: 'prompt', instruction: o.instr, statementOrQuestion: o.frame || null, facts: o.facts || null, answerKey: o.sentence.split(' / '), verdict: o.big || null, explanation: o.why || null, starters: o.starters || null, extraChallenge: o.extra || null, speakerRole: o.lab ? 'teacher chooses learner' : null },
+    inv: { kind: 'prompt', instruction: o.instr, statementOrQuestion: o.frame || null, facts: o.facts || null, answerKey: o.sentence.split(' / '), verdict: o.big || null, explanation: o.why || null, starters: o.starters || null, extraChallenge: o.extra || null, speakerRole: o.lab ? 'teacher chooses learner' : null, mode: o.mode || 'facts' },
     title: o.title, sub: o.sub, talk: o.talk, turn: o.turn, es: o.es, quiet: o.quiet, ansSay: o.ansSay || (o.sentence ? [o.sentence.split(' / ')[0]] : null),
     render: () => cols(o.scene(), `
       ${o.facts ? `<div class="card" style="border-left:6px solid var(--violet)"><b class="pill violet">${tx('Facts')}</b><div class="mid-sentence" style="margin-top:.3rem">${tx(o.facts)}</div></div>` : ''}

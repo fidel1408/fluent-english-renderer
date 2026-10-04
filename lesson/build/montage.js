@@ -1,11 +1,11 @@
 // Builds labeled PNG contact sheets from the screenshots written by contact.js. Usage: node build/montage.js SHOTDIR OUTDIR
-const { chromium } = require('/opt/node22/lib/node_modules/playwright'); const fs = require('fs'), path = require('path');
+const { chromium, launchOpts } = require('./pw'); const fs = require('fs'), path = require('path');
 const [dir, out] = [path.resolve(process.argv[2]), path.resolve(process.argv[3])]; fs.mkdirSync(out, { recursive: true });
 const idx = JSON.parse(fs.readFileSync(path.join(dir, 'index.json'), 'utf8')); const phone = idx.width < 700, land = idx.width >= 700 && idx.width < 1000;
 const COLS = phone ? 6 : land ? 2 : 3, TW = phone ? 300 : land ? 760 : 620; const label = phone ? `phone-390x${idx.height}${idx.real ? '-REAL' : '-expanded'}` : land ? `phone-landscape-${idx.width}x${idx.height}-REAL` : `desktop-1280${idx.real ? '-REAL' : ''}`;   // thumbnail width
 const groups = {}; idx.shots.forEach((s) => { (groups[s.group] = groups[s.group] || []).push(s); });
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' }); const p = await b.newPage({ viewport: { width: COLS * (TW + 14) + 20, height: 800 } });
+  const b = await chromium.launch({ ...launchOpts }); const p = await b.newPage({ viewport: { width: COLS * (TW + 14) + 20, height: 800 } });
   const made = [];
   for (const [g, shots] of Object.entries(groups)) {
     const per = phone ? 12 : 12, pages = Math.ceil(shots.length / per);

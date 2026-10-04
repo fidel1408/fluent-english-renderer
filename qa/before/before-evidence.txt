@@ -13,4 +13,5 @@ BEFORE (v4 baseline) — defect demonstrations
   9c IPA.line("Short form A")                                    /ʃɔːrt fɔːrm eɪ/
   10 narration contains "I is the speaker"                       true
   export keys per mode                                           answered, firstAttemptScore, retryCorrect, retryAttempted, missedOnFirst, scoreAfterRetry, outOf, label (no per-question answers)
+  15 negatives table (A5 step 3): rows with opacity 1 after 6.5 s 0 of 7 (rows never fade in)
   14 resumed old save: settings.vMusic                           undefined (undefined → AudioParam non-finite error)

@@ -9,6 +9,7 @@ Speech.onSpeakState = (on) => {
   clearTimeout(duckT);
   if (on) Sound.setSpeaking(true); else duckT = setTimeout(() => Sound.setSpeaking(false), 500);
 };
+Speech.onSilent = () => toast('No on-device voice is available, so narration stays silent (captions still run). Turn off “On-device voices only” to allow an online voice, which may send spoken text to its vendor.', 7000);
 Speech.onCaption = (text, lang) => {
   const c = $('#caption'); if (!c) return;
   if (!text) { c.innerHTML = ''; return; }
@@ -254,7 +255,9 @@ function scheduleIpaFloor() { clearTimeout(ipaFloorT); ipaFloorT = setTimeout(()
 function applyTS() { const t = TS[S.settings.ts] || TS[1]; document.documentElement.style.setProperty('--tscale', t[1]); scheduleIpaFloor(); const b = $('#b-ts'); if (b) b.innerHTML = `Text: <b>${t[0]}</b>`; }
 function applyRM() { document.body.classList.toggle('rm', !!S.settings.rm); document.body.classList.toggle('rm-off', !S.settings.rm); }
 function applyAudio() {
-  const st = S.settings; Speech.cfg.rate = st.rate; Speech.cfg.volume = st.vSpeech; Speech.cfg.mute = st.mute; Speech.cfg.en = st.voice; Speech.cfg.male = st.voiceMale; Speech.cfg.female = st.voiceFemale; Speech.cfg.es = st.voiceEs; Speech.cfg.localOnly = !!st.localOnly;
+  const st = S.settings;
+  Speech.cfg.localOnly = !!st.localOnly; if (Speech.sanitize(st)) save();   // drop saved online-voice choices when on-device-only is on
+  Speech.cfg.rate = st.rate; Speech.cfg.volume = st.vSpeech; Speech.cfg.mute = st.mute; Speech.cfg.en = st.voice; Speech.cfg.male = st.voiceMale; Speech.cfg.female = st.voiceFemale; Speech.cfg.es = st.voiceEs; Speech.cfg.localOnly = !!st.localOnly;
   Sound.setVol('music', st.vMusic); Sound.setVol('sfx', st.vSfx);
   const m = $('#b-mute'); m.setAttribute('aria-pressed', st.mute); m.innerHTML = st.mute ? 'Narration muted' : 'Mute narration';
 }
@@ -287,13 +290,13 @@ function openSettings() {
     <div class="row" style="margin-top:.6rem"><label style="margin:0"><input type="checkbox" id="c-rm" ${st.rm ? 'checked' : ''}> Reduce motion</label>
     <label style="margin:0 0 0 1rem"><input type="checkbox" id="c-ind" ${S.mode === 'individual' ? 'checked' : ''}> Individual mode (someone using their own copy)</label></div>
     <p class="small-note">Individual mode only changes how the ten-question check is labeled and stored. On a shared screen, leave it off: the lesson cannot collect separate answers from remote learners.</p>`, { label: 'Settings' });
-  const none = () => { $('#v-none', m.el).textContent = Speech.supported ? (Speech.hasEn ? '' : 'No English voices found yet. Captions still work; some browsers load voices a moment after opening.') : 'This browser has no speech synthesis. Captions still work.'; };
+  const none = () => { const stt = Speech.status(); $('#v-none', m.el).textContent = !Speech.supported ? 'This browser has no speech synthesis. Captions still work.' : stt === 'no-local-voice' ? 'On-device only is on and no on-device English voice was found: narration is silent (captions still work). Turn the setting off to allow an online voice.' : (Speech.hasEn ? '' : 'No English voices found yet. Captions still work; some browsers load voices a moment after opening.'); };
   none();
   Speech.onVoices = () => { if (!document.body.contains(m.el)) return; ['en', 'male', 'female'].forEach((k) => { $('#v-' + k, m.el).innerHTML = voiceOptions(Speech.enVoices(), S.settings[{ en: 'voice', male: 'voiceMale', female: 'voiceFemale' }[k]]); }); $('#v-es', m.el).innerHTML = voiceOptions(Speech.esVoices(), S.settings.voiceEs); none(); };
   $('#v-en', m.el).onchange = (e) => { st.voice = e.target.value; applyAudio(); save(); };
   $('#v-male', m.el).onchange = (e) => { st.voiceMale = e.target.value; applyAudio(); save(); };
   $('#v-female', m.el).onchange = (e) => { st.voiceFemale = e.target.value; applyAudio(); save(); };
-  $('#c-local', m.el).onchange = (e) => { st.localOnly = e.target.checked; applyAudio(); save(); toast(st.localOnly ? 'On-device voices only.' : 'Online voices allowed (they may send spoken text to the browser vendor).'); };
+  $('#c-local', m.el).onchange = (e) => { st.localOnly = e.target.checked; Speech.resetSilentNotice(); applyAudio(); save(); ['en', 'male', 'female'].forEach((k) => { $('#v-' + k, m.el).innerHTML = voiceOptions(Speech.enVoices(), st[{ en: 'voice', male: 'voiceMale', female: 'voiceFemale' }[k]]); }); $('#v-es', m.el).innerHTML = voiceOptions(Speech.esVoices(), st.voiceEs); none(); toast(st.localOnly ? 'On-device voices only.' : 'Online voices allowed (they may send spoken text to the browser vendor).'); };
   $('#v-es', m.el).onchange = (e) => { st.voiceEs = e.target.value; applyAudio(); save(); };
   $('#v-prev', m.el).onclick = () => { Speech.say([{ t: "Narrator: I'm ready. You're here. It's a book." }, { t: "I'm Alex. You're Maya.", role: 'male' }, { t: "I'm Maya. You're Alex.", role: 'female' }], {}); };
   $('#r-rate', m.el).oninput = (e) => { st.rate = +e.target.value; $('#r-rate-v', m.el).textContent = st.rate.toFixed(2); applyAudio(); save(); };
@@ -421,6 +424,7 @@ function init() {
   document.addEventListener('visibilitychange', () => save(true));
   new MutationObserver(scheduleIpaFloor).observe(document.getElementById('stage'), { childList: true, subtree: true });
   window.addEventListener('resize', scheduleIpaFloor);
+  Speech.addVoicesListener(() => { applyAudio(); });
   applySettings(); setInterval(tick, 250); lastTick = performance.now();
   $('#b-play').innerHTML = `${ICON.pause}<span>Pause</span>`;
   showStart();

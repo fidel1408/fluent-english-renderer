@@ -1,9 +1,9 @@
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium, launchOpts } = require('./pw');
 const path = require('path');
 const URL = 'file://' + path.resolve(__dirname, '../fluent-english-be-lesson.html');
 let pass = 0, fail = 0; const ok = (c, m) => { c ? pass++ : fail++; console.log(c ? '  ok  ' : '  FAIL', m); };
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--autoplay-policy=no-user-gesture-required'] });
+  const b = await chromium.launch({ ...launchOpts, args: ['--autoplay-policy=no-user-gesture-required'] });
   const ctx = await b.newContext({ viewport: { width: 1280, height: 780 } });
   await ctx.addInitScript(() => {
     const voices = [{ name: 'Mock Voice US', lang: 'en-US', localService: true }, { name: 'Mock Voz MX', lang: 'es-MX', localService: true }, { name: 'Mock Voice GB', lang: 'en-GB', localService: true }];

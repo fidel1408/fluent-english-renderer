@@ -1,20 +1,20 @@
 {
  "ambient": {
-  "peak": 0.0359,
-  "rms": 0.00356
+  "peak": 0.041,
+  "rms": 0.00409
  },
  "ambientDuckedBySpeech": {
-  "peak": 0.0083,
-  "rms": 0.0013
+  "peak": 0.0088,
+  "rms": 0.00143
  },
  "ambientQuiet": {
   "peak": 0.0007,
-  "rms": 0.00006
+  "rms": 0.00011
  },
- "sfx_whoosh": 0.0166,
- "sfx_join": 0.083,
- "sfx_pop": 0.0555,
- "sfx_click": 0.0389,
+ "sfx_whoosh": 0.0147,
+ "sfx_join": 0.0834,
+ "sfx_pop": 0.0556,
+ "sfx_click": 0.0391,
  "sfx_correct": 0.1005,
  "sfx_gentle": 0.0554,
  "sfx_reveal": 0.0695,
@@ -27,7 +27,7 @@
  },
  "opening": {
   "peak": 0.1125,
-  "rms": 0.02107
+  "rms": 0.02103
  }
 }
 errors 0

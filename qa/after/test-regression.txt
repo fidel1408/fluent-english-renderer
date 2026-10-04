@@ -39,6 +39,18 @@
   ok   Q8 states the fictional fact that Maya has one job: doctor
   ok   Q3 extension no longer invites "We are class"
 
+# B2. Facts cards support every negative model answer (roles can overlap, so they must be stated)
+  ok   every prompt declares a mode (facts | personal | transform): {"facts":26,"personal":2,"transform":4}
+  ok   transform items (Lab B) are 4 and each shows the facts: 7.6,7.7,7.8,7.9
+  ok   personal items are 2 (6.11, 7.13) and every answer is first/second person only: 6.11,7.13
+  ok   four exit tasks (9.2–9.5) carry the Alex/Maya role facts: 9.2,9.3,9.4,9.5
+  ok   exit answers do not assert tiredness or doctor status
+  ok   every prompt with a negative model answer has a Facts card containing an explicit negative/exclusive premise (32 prompts checked)
+  ok   found Activity 5 step 10 "Your negative sentence 2" (5.10)
+  ok   A5.10 states: Alex is not a teacher, Maya is not a student, neither is tired
+  ok   each A5.10 model answer is entailed by the facts: [["He isn't a teacher.",true],["She isn't a student.",true],["They aren't tired.",true]]
+  ok   no blanket claim
+
 # C. Answer sheet, attempts, exports, CSV safety
    sheet rows 4
   ok   answer sheet has diagnostic + Q1 + Q4 first + Q4 retry = 4 rows
@@ -86,10 +98,10 @@
   ok   no /oʊ/ notation anywhere in the dictionary (chart/OALD NAmE əʊ kept)
   ok   əʊ used in 31 entries
   ok   boat /bəʊt/, no /nəʊ/, go /ɡəʊ/ present exactly as supplied evidence
-  ok   only 3 of 416 entries are marked source-verified; the rest are hand-entered
+  ok   only 3 of 417 entries are marked source-verified; the rest are hand-entered
   ok   letter names (A, B) get letter-name IPA; article "A group" keeps schwa
   ok   unknown words are marked [?word], never shown as plain spelling
-  ok   exhaustive corpus run: 1785 strings, 0 with missing words
+  ok   exhaustive corpus run: 1793 strings, 0 with missing words
   ok   every visible .tx text has a non-empty IPA line
   ok   all IPA lines well-formed
   ok   stage IPA note labels lines as assembled and states how few entries are verified
@@ -105,7 +117,11 @@
   ok   Next goes to next missed question (Q8)
   ok   switching mode mid-retry keeps scores separate
   ok   retry kept separate: first 6, retry 3/4, after 9 (got 6/3/9)
-  ok   results screen renders after retry
+  ok   retry mode ends once every missed question has been retried (S.retry.active false on the results screen)
+  ok   retry answers exist for exactly the four missed questions (Q7–Q10)
+  ok   first-attempt records are unchanged by the retry (Q1–Q6 correct, Q7–Q10 missed)
+  ok   retry records: Q7, Q9, Q10 correct and Q8 still wrong
+  ok   results screen shows first attempt 6 / 10, retry 3 / 4 and after retry 9 / 10
   ok   a second retry round clears retry answers and increments the round
   ok   round-1 retry attempts remain in the answer log
   ok   no retry button when nothing was missed
@@ -138,11 +154,39 @@
   ok   settings label online voices and explain the privacy difference
   ok   with one voice only, pitch shifts slightly per speaker (not a real voice change)
 
+# K2. "On-device voices only": explicit/saved online selections, all three roles, no-local case
+  ok   precondition: with the toggle off, the selected online voices ARE used (so the next checks are meaningful)
+  ok   after enabling on-device-only, narrator, male, female and Spanish voices are all on-device (Local Zira / Local Mark / Local Zira / Local Sabina)
+  ok   saved online selections are cleared
+  ok   other settings (rate, volumes, text size, captions) are preserved
+  ok   online voices are no longer offered in the voice lists
+  ok   every utterance actually spoken used an on-device voice (Local Mark, Local Zira, Local Sabina)
+  ok   turning the setting off again keeps the other settings
+  ok   narrator: online choice honoured before the toggle (Online Narrator Aria (Natural)), on-device after (Local Zira)
+  ok   male: online choice honoured before the toggle (Online Male David), on-device after (Local Mark)
+  ok   female: online choice honoured before the toggle (Online Female Jenny), on-device after (Local Zira)
+  ok   persisted preset with online voices + on-device-only: every role resolves to an on-device voice (Local Zira / Local Mark / Local Zira)
+  ok   persisted online selections cleared; rate/volume/local-only kept
+  ok   narration after resuming a persisted online preset uses only on-device voices (Local Mark, Local Zira)
+  ok   no errors
+  ok   no on-device voice exists: narrator, male, female and Spanish all resolve to NO voice (never an online one)
+  ok   status reports no-local-voice
+  ok   nothing is spoken (no utterance is ever sent to a voice) while no on-device voice exists
+  ok   captions still run (silent / manual-narration fallback)
+  ok   a clear notice explains the narration is silent
+  ok   settings dialog explains the silent fallback and lists no online voice
+  ok   turning the setting off allows online voices again, with other settings intact
+  ok   with the setting off, the online voice is the one used (confirms the mock distinguishes voices)
+
 # L. 390 px phone: no sideways overflow, IPA kept and readable
-   min IPA font on phone: 12.6px
+   min IPA font on phone: 12.0px
   ok   no horizontal overflow on any of 100 screens
   ok   no visible IPA line below 12 px
   ok   every picture label has its full text + IPA in the legend (none suppressed)
+
+# L2. No element is left permanently invisible (found: negatives table rows)
+  ok   after each step finishes, every fade-in / fly-in element has been shown
+  ok   negatives table: all 7 rows are visible (shown and fully opaque)
 
 # M. Chapter navigation, resume, old saved state
   ok   chapter menu lists 9 activities + 100 steps (109)
@@ -153,4 +197,4 @@
   ok   old settings merge with new defaults
   ok   no errors resuming an old save
 
-126 passed, 0 failed
+164 passed, 0 failed

@@ -8,7 +8,7 @@ node build/corpus-run.js $A/ipa-corpus.json > $A/ipa-corpus-summary.txt 2>&1
 node build/audit-ipa.js "$PWD/fluent-english-be-lesson.html" $A/ipa-audit-desktop.json > $A/ipa-audit-desktop.txt 2>&1
 W=390 H=844 node build/audit-ipa.js "$PWD/fluent-english-be-lesson.html" $A/ipa-audit-phone.json > $A/ipa-audit-phone.txt 2>&1
 node build/inventory.js $A/inventory.json > $A/inventory-summary.txt 2>&1
-QA_OUT=$A/regression-summary.json node build/test-regression.js > $A/test-regression.txt 2>&1
+QA_CORPUS_OUT=$A/ipa-corpus.json QA_OUT=$A/regression-summary.json node build/test-regression.js > $A/test-regression.txt 2>&1
 QA_OUT=$A/viewports-summary.json node build/test-viewports.js > $A/test-viewports.txt 2>&1
 node build/test.js > $A/test-main.txt 2>&1
 node build/test-speech.js > $A/test-speech.txt 2>&1

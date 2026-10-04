@@ -133,8 +133,8 @@ const Speech = (() => {
   let voices = [], token = 0, onCaption = () => {}, onSpeakState = () => {};
   const cfg = { en: '', male: '', female: '', es: '', rate: 0.9, volume: 1, mute: false, localOnly: false };
   let curDone = null;
-  function load() { if (!supported) return; voices = speechSynthesis.getVoices() || []; onVoices && onVoices(voices); }
-  let onVoices = null;
+  function load() { if (!supported) return; voices = speechSynthesis.getVoices() || []; voiceListeners.forEach((f) => { try { f(voices); } catch (e) {} }); onVoices && onVoices(voices); }
+  let onVoices = null; const voiceListeners = [];
   if (supported) {
     load();
     speechSynthesis.addEventListener && speechSynthesis.addEventListener('voiceschanged', load);
@@ -155,12 +155,14 @@ const Speech = (() => {
     return s;
   };
   const pool = () => voices.filter((v) => /^en/i.test(v.lang) && (!cfg.localOnly || v.localService)).sort((a, b) => rank(b) - rank(a));
-  function enVoices() { return voices.filter((v) => /^en/i.test(v.lang)).sort((a, b) => rank(b) - rank(a)); }
+  /** English voices offered to the teacher. With "on-device only" the online voices are not offered at all. */
+  function enVoices() { return pool(); }
   function esVoices() { return voices.filter((v) => /^es/i.test(v.lang) && (!cfg.localOnly || v.localService)).sort((a, b) => (/es[-_](us|mx)/i.test(b.lang) - /es[-_](us|mx)/i.test(a.lang))); }
-  /** role: 'male' | 'female' | undefined (narrator). Returns {voice, pitch}. */
+  /** role: 'male' | 'female' | undefined (narrator). Returns {voice, pitch}. A saved/explicit choice is honoured ONLY if it is inside the
+   *  allowed pool, so with "on-device only" an online voice can never be returned; with no allowed voice, voice is null (silent, captions only). */
   function pick(lang, role) {
     if (lang === 'es') { const l = esVoices(); return { voice: l.find((v) => v.name === cfg.es) || l[0] || null, pitch: 1 }; }
-    const p = pool(), find = (name) => (name ? voices.find((v) => v.name === name) : null);
+    const p = pool(), find = (name) => (name ? p.find((v) => v.name === name) || null : null);
     const narr = find(cfg.en) || p.find((v) => /en[-_]us/i.test(v.lang) && !isMale(v)) || p[0] || null;
     if (!role) return { voice: narr, pitch: 1 };
     const chosen = find(role === 'male' ? cfg.male : cfg.female);
@@ -168,8 +170,17 @@ const Speech = (() => {
     const voice = chosen || auto || narr;
     // if no distinct voice exists, shift pitch a little so speakers still sound different (a rough cue, not a real voice change)
     const distinct = voice && narr && voice.name !== narr.name;
-    return { voice, pitch: distinct ? 1 : (role === 'male' ? 0.82 : 1.15) };
+    return { voice, pitch: voice ? (distinct ? 1 : (role === 'male' ? 0.82 : 1.15)) : 1 };
   }
+  /** Forget saved choices that point at online voices (used when "on-device only" is on). Returns true if anything changed. */
+  function sanitize(settings) {
+    if (!settings.localOnly) return false; let changed = false;
+    [['voice', 'en'], ['voiceMale', 'male'], ['voiceFemale', 'female'], ['voiceEs', 'es']].forEach(([k]) => { const v = settings[k] && voices.find((x) => x.name === settings[k]); if (v && !v.localService) { settings[k] = ''; changed = true; } });
+    return changed;
+  }
+  let silentCb = null, silentTold = false;
+  /** 'ok' | 'muted' | 'no-local-voice' | 'no-voice' — why narration would not be spoken right now */
+  function status() { const hasEn = voices.some((v) => /^en/i.test(v.lang)); if (!supported || cfg.mute) return cfg.mute ? 'muted' : 'no-voice'; if (pool().length) return 'ok'; return cfg.localOnly && hasEn ? 'no-local-voice' : 'no-voice'; }
   const est = (text, rate) => Math.max(800, text.length * 62 / Math.max(0.5, rate));
   function speakOne(text, lang, rate, role) {
     return new Promise((res) => {
@@ -177,7 +188,7 @@ const Speech = (() => {
       const fin = () => { if (done) return; done = true; clearTimeout(tm); curDone = null; res(); };
       curDone = fin;
       const pk = supported && !cfg.mute ? pick(lang, role) : { voice: null, pitch: 1 };
-      if (!supported || cfg.mute || !pk.voice) { tm = setTimeout(fin, est(text, 1.3)); return; } // no voice: captions-only timing
+      if (!supported || cfg.mute || !pk.voice) { if (supported && !cfg.mute && !pk.voice && cfg.localOnly && !silentTold && silentCb) { silentTold = true; silentCb(); } tm = setTimeout(fin, est(text, 1.3)); return; } // no allowed voice: silent, captions-only timing (never falls back to an online voice)
       const u = new SpeechSynthesisUtterance(text);
       u.voice = pk.voice; u.lang = pk.voice.lang;
       u.rate = Math.min(1.5, Math.max(0.5, rate)); u.volume = cfg.volume; u.pitch = pk.pitch;
@@ -209,7 +220,7 @@ const Speech = (() => {
   function hardStop() { if (curDone) curDone(); if (supported) try { speechSynthesis.cancel(); } catch (e) {} }
   function stop() { token++; hardStop(); onSpeakState(false, {}); onCaption('', 'en'); }
   return {
-    supported, cfg, say, stop, enVoices, esVoices, isMale, isFemale, remote,
+    supported, cfg, say, stop, enVoices, esVoices, isMale, isFemale, remote, sanitize, status, resetSilentNotice() { silentTold = false; }, set onSilent(f) { silentCb = f; }, addVoicesListener(f) { voiceListeners.push(f); },
     set onCaption(f) { onCaption = f; }, set onSpeakState(f) { onSpeakState = f; }, set onVoices(f) { onVoices = f; load(); },
     get hasEn() { return enVoices().length > 0; },
     current(lang, role) { return pick(lang || 'en', role); },

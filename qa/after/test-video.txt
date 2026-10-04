@@ -1,5 +1,5 @@
   ok   Sound chart video button visible in the dock
-   video {"dur":120.008,"rs":4,"t":2.403814,"paused":false,"err":false}
+   video {"dur":120.008,"rs":4,"t":2.386241,"paused":false,"err":false}
   ok   video loads (120 s)
   ok   lesson paused while video is open
   ok   timer does not run during video

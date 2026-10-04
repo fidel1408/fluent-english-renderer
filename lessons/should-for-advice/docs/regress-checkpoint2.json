@@ -1,0 +1,711 @@
+{
+ "label": "checkpoint2",
+ "html": "should-for-advice.html",
+ "bytes": 8086827,
+ "sha256": "829d981b06b4643fb78a52be90b84a5b5049d186fba3b2dd7fb4eeaea6b46949",
+ "date": "2026-10-04T07:59:59.686Z",
+ "total": 100,
+ "passed": 100,
+ "results": [
+  {
+   "id": "1.checkForm.table",
+   "item": 1,
+   "name": "checkForm classifies 75 sentences (ok / bad / neutral-teacher-review) correctly",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "id": "1.checkForm.shouldHeCalls",
+   "item": 1,
+   "name": "\"Should he calls her?\" is never shown green",
+   "pass": true,
+   "detail": "{\"msgs\":[{\"tone\":\"bad\",\"t\":\"After the subject use the base verb: call. (Should he call her?)\"},{\"tone\":\"note\",\"t\":\"This checks the should / shouldn't pattern only. Meaning, politeness and usefulness are for the teacher to judge.\"}],\"formOk\":false,\"kind\":\"question\",\"confidence\":\"error\"}"
+  },
+  {
+   "id": "1.checkForm.shouldIHappy",
+   "item": 1,
+   "name": "\"Should I happy?\" is never shown green",
+   "pass": true,
+   "detail": "{\"msgs\":[{\"tone\":\"note\",\"t\":\"I cannot find a base verb after the subject. If \\\"happy\\\" is not a verb, the sentence may need be (Should I be happy?). Teacher: check by eye.\"},{\"tone\":\"note\",\"t\":\"This checks the should / shouldn't pattern only. Meaning, politeness and usefulness are for the teacher to judge.\"}],\"formOk\":null,\"kind\":\"question\",\"confidence\":\"review\"}"
+  },
+  {
+   "id": "1.checkForm.iAmNotHappy",
+   "item": 1,
+   "name": "\"I am not happy.\" is never shown green",
+   "pass": true,
+   "detail": "{\"msgs\":[{\"tone\":\"note\",\"t\":\"I cannot find should or shouldn't. Other advice phrases can be fine, but this checker only looks at should.\"}],\"formOk\":null,\"kind\":\"\",\"confidence\":\"review\"}"
+  },
+  {
+   "id": "1.checkForm.neutralWording",
+   "item": 1,
+   "name": "unprovable constructions get neutral teacher-review wording (no green tick, no false \"looks correct\")",
+   "pass": true,
+   "detail": "note:I cannot find a base verb after the subject. If \"happy\" is not a verb, the sentence may need be (Should I be happy?). Teacher: check by eye. | note:This checks the should / shouldn't pattern only. Meaning, politeness and usefulness are for the teacher to judge."
+  },
+  {
+   "id": "2.reveal.5.2",
+   "item": 2,
+   "name": "CLASS: reveal works on every item of 5.2 (reveal → Next → reveal)",
+   "pass": true,
+   "detail": "[{\"item\":0,\"before\":false,\"after\":true},{\"item\":1,\"before\":false,\"after\":true}]"
+  },
+  {
+   "id": "2.reveal.5.3",
+   "item": 2,
+   "name": "CLASS: reveal works on every item of 5.3 (reveal → Next → reveal)",
+   "pass": true,
+   "detail": "[{\"item\":0,\"before\":false,\"after\":true},{\"item\":1,\"before\":false,\"after\":true},{\"item\":2,\"before\":false,\"after\":true}]"
+  },
+  {
+   "id": "2.reveal.5.4",
+   "item": 2,
+   "name": "CLASS: reveal works on every item of 5.4 (reveal → Next → reveal)",
+   "pass": true,
+   "detail": "[{\"item\":0,\"before\":false,\"after\":true},{\"item\":1,\"before\":false,\"after\":true},{\"item\":2,\"before\":false,\"after\":true},{\"item\":3,\"before\":false,\"after\":true},{\"item\":4,\"before\":false,\"after\":true}]"
+  },
+  {
+   "id": "2.reveal.5.5",
+   "item": 2,
+   "name": "CLASS: reveal works on every item of 5.5 (reveal → Next → reveal)",
+   "pass": true,
+   "detail": "[{\"item\":0,\"before\":false,\"after\":true},{\"item\":1,\"before\":false,\"after\":true},{\"item\":2,\"before\":false,\"after\":true}]"
+  },
+  {
+   "id": "2.reveal.5.6",
+   "item": 2,
+   "name": "CLASS: reveal works on every item of 5.6 (reveal → Next → reveal)",
+   "pass": true,
+   "detail": "[{\"item\":0,\"before\":false,\"after\":true},{\"item\":1,\"before\":false,\"after\":true}]"
+  },
+  {
+   "id": "2.reveal.5.7",
+   "item": 2,
+   "name": "CLASS: reveal works on every item of 5.7 (reveal → Next → reveal)",
+   "pass": true,
+   "detail": "[{\"item\":0,\"before\":false,\"after\":true},{\"item\":1,\"before\":false,\"after\":true}]"
+  },
+  {
+   "id": "2.reveal.gateButton",
+   "item": 2,
+   "name": "gate banner offers Show answer again after Next (item 2)",
+   "pass": true,
+   "detail": "{\"gate\":true,\"showAtItem1\":true,\"showAtItem2\":true}"
+  },
+  {
+   "id": "3.build.clearFresh",
+   "item": 3,
+   "name": "Clear after a completed answer gives a real fresh attempt (tiles live, slots empty, no stale state)",
+   "pass": true,
+   "detail": "{\"first\":true,\"afterClear\":{\"slots\":0,\"trayEnabled\":7,\"cls\":\"slots\",\"fb\":\"none\"},\"placed\":5,\"second\":true,\"wrongJudged\":true}"
+  },
+  {
+   "id": "4.facts.allCombos",
+   "item": 4,
+   "name": "final lamps match the hand-written fact table for all 27 scenario combinations (twist invalidates outdated facts; later train does not create tickets)",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "id": "4.facts.twistInvalidates",
+   "item": 4,
+   "name": "after the room-change twist, \"room known\" from the earlier check turns off",
+   "pass": true,
+   "detail": "{\"before\":[0,0,1],\"after\":[0,0,0]}"
+  },
+  {
+   "id": "5.pause.consequenceKeptWhilePaused",
+   "item": 5,
+   "name": "pause mid consequence line: the paused clip is not replaced by the delayed follow-on",
+   "pass": true,
+   "detail": "{\"consId\":\"53db254d\",\"whilePaused\":\"53db254d\"}"
+  },
+  {
+   "id": "5.pause.sequenceAfterResume",
+   "item": 5,
+   "name": "after resume: consequence finishes, then exactly one follow-on plays (no skip, no duplicate)",
+   "pass": true,
+   "detail": "[\"53db254d\",\"ba2c09b6\"]"
+  },
+  {
+   "id": "5.pause.seekCancelsFollowOn",
+   "item": 5,
+   "name": "seeking away cancels delayed consequences (no stray clip in the new segment)",
+   "pass": true,
+   "detail": "{\"stray\":[]}"
+  },
+  {
+   "id": "5.pause.repeatedClicks",
+   "item": 5,
+   "name": "rapid repeated branch clicks end with exactly the last choice playing, one audio element",
+   "pass": true,
+   "detail": "{\"last\":\"63b109e8\",\"want\":\"63b109e8\",\"mission\":\"{\\\"prio\\\":null,\\\"n1\\\":2,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false}\",\"n\":0}"
+  },
+  {
+   "id": "5.pause.replayResets",
+   "item": 5,
+   "name": "replay after a branch choice restarts the example cleanly (no leftover choice audio)",
+   "pass": true,
+   "detail": "{\"afterReplay\":{\"local\":0.33879999999981375,\"cur\":null},\"strayChoice\":0}"
+  },
+  {
+   "id": "6.read.phone-portrait-390x844.words",
+   "item": 6,
+   "name": "phone-portrait-390x844: every visible word ≥ 16 px effective (min 16.3 px)",
+   "pass": true,
+   "detail": "{\"min\":16.25625,\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.phone-portrait-390x844.ipa",
+   "item": 6,
+   "name": "phone-portrait-390x844: every visible IPA line ≥ 11 px effective (min 11.7 px)",
+   "pass": true,
+   "detail": "{\"min\":11.729166666666668,\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.phone-portrait-390x844.targets",
+   "item": 6,
+   "name": "phone-portrait-390x844: controls ≥ 40 px",
+   "pass": true,
+   "detail": "{\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.phone-portrait-390x844.noHScroll",
+   "item": 6,
+   "name": "phone-portrait-390x844: no horizontal page overflow",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "id": "6.read.phone-portrait-390x844.showControls",
+   "item": 6,
+   "name": "phone-portrait-390x844: persistent Show controls button visible, ≥44 px, inside the viewport",
+   "pass": true,
+   "detail": "{\"disp\":\"flex\",\"w\":48,\"h\":48,\"inView\":true}"
+  },
+  {
+   "id": "6.read.phone-portrait-390x844.barReach",
+   "item": 6,
+   "name": "phone-portrait-390x844: control-bar buttons are reachable (wrap or scroll; none clipped off-screen)",
+   "pass": true,
+   "detail": "{\"n\":20,\"unreachable\":0,\"wraps\":true,\"h\":261}"
+  },
+  {
+   "id": "6.read.phone-landscape-844x390.words",
+   "item": 6,
+   "name": "phone-landscape-844x390: every visible word ≥ 16 px effective (min 16.3 px)",
+   "pass": true,
+   "detail": "{\"min\":16.25625,\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.phone-landscape-844x390.ipa",
+   "item": 6,
+   "name": "phone-landscape-844x390: every visible IPA line ≥ 11 px effective (min 11.7 px)",
+   "pass": true,
+   "detail": "{\"min\":11.729166666666668,\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.phone-landscape-844x390.targets",
+   "item": 6,
+   "name": "phone-landscape-844x390: controls ≥ 40 px",
+   "pass": true,
+   "detail": "{\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.phone-landscape-844x390.noHScroll",
+   "item": 6,
+   "name": "phone-landscape-844x390: no horizontal page overflow",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "id": "6.read.phone-landscape-844x390.showControls",
+   "item": 6,
+   "name": "phone-landscape-844x390: persistent Show controls button visible, ≥44 px, inside the viewport",
+   "pass": true,
+   "detail": "{\"disp\":\"flex\",\"w\":48,\"h\":48,\"inView\":true}"
+  },
+  {
+   "id": "6.read.phone-landscape-844x390.barReach",
+   "item": 6,
+   "name": "phone-landscape-844x390: control-bar buttons are reachable (wrap or scroll; none clipped off-screen)",
+   "pass": true,
+   "detail": "{\"n\":20,\"unreachable\":0,\"wraps\":true,\"h\":161}"
+  },
+  {
+   "id": "6.read.desktop-1600x900.words",
+   "item": 6,
+   "name": "desktop-1600x900: every visible word ≥ 13 px effective (min 13.8 px)",
+   "pass": true,
+   "detail": "{\"min\":13.803879310344827,\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.desktop-1600x900.ipa",
+   "item": 6,
+   "name": "desktop-1600x900: every visible IPA line ≥ 9.5 px effective (min 10.0 px)",
+   "pass": true,
+   "detail": "{\"min\":10.023148148148149,\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.desktop-1600x900.targets",
+   "item": 6,
+   "name": "desktop-1600x900: controls ≥ 32 px",
+   "pass": true,
+   "detail": "{\"n\":0,\"sample\":[]}"
+  },
+  {
+   "id": "6.read.desktop-1600x900.noHScroll",
+   "item": 6,
+   "name": "desktop-1600x900: no horizontal page overflow",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "id": "7.ipa.allTextHasIPA",
+   "item": 7,
+   "name": "every narration/dialogue line, title, answer, hint, reveal, branch outcome and note has IPA for every word (incl. n’t, Priya’s, role-play, Maya’s)",
+   "pass": true,
+   "detail": "{\"miss\":[],\"missN\":0,\"bad\":[],\"badN\":0,\"loose\":[]}"
+  },
+  {
+   "id": "7.ipa.convention",
+   "item": 7,
+   "name": "lexicon follows the Oxford Learner’s NAmE convention stated by the owner (/əʊ/ in go, no, boat; no stray /oʊ/)",
+   "pass": true,
+   "detail": "{\"wrong\":[],\"withOuN\":0,\"withOu\":[]}"
+  },
+  {
+   "id": "7.ipa.phonemeGrouping",
+   "item": 7,
+   "name": "phoneme diagram groups sh → /ʃ/ and ou → /ʊ/ once each (l silent, d /d/); no repeated sound per letter",
+   "pass": true,
+   "detail": "{\"n\":4,\"snd\":[\"ʃ:sh\",\"ʊ:ou\",\"silent:l\",\"d:d\"],\"dup\":[]}"
+  },
+  {
+   "id": "8.echo.specifiesInvertedQuestion",
+   "item": 8,
+   "name": "rejecting \"I should call?\" names the standard yes/no form \"Should I call?\" (and says why)",
+   "pass": true,
+   "detail": "{\"optionExplains\":\"That is statement order. A yes or no question puts should before the subject: Should I call?\",\"checkForm\":\"A standard yes/no question puts should first: Should I call? (Rising intonation can make an echo question in speech, but this lesson teaches the standard inverted form.) This checks the should / shouldn't pattern only. Meaning, politeness and usefulness are for the teacher to judge.\"}"
+  },
+  {
+   "id": "8.clock.freezesAtFinish",
+   "item": 8,
+   "name": "class-time clock stops when the lesson is finished",
+   "pass": true,
+   "detail": "{\"finished\":true,\"a\":0.096,\"b\":0.096,\"froze\":true}"
+  },
+  {
+   "id": "8.clock.explainsPlannedVsActual",
+   "item": 8,
+   "name": "finish card explains planned 3600 s vs actual class time (pauses, replays, gates, extra time)",
+   "pass": true,
+   "detail": "{\"has\":true,\"t\":\"The lesson is finished Planned time: Class time: Class time was about minutes shorter than the plan. The plan is sixty minutes of lesson time. Class time is real time, so it also counts pauses, extra minutes, and waiting at each activity. It stopped when the lesson ended.\"}"
+  },
+  {
+   "id": "9.phone.optionTappable",
+   "item": 9,
+   "name": "390 px: a 5.4 answer option is inside the dock, ≥44 px tall, not covered by another element, tappable",
+   "pass": true,
+   "detail": "{\"found\":true,\"w\":324.21875,\"h\":118.90625,\"reachable\":true,\"inViewport\":true}"
+  },
+  {
+   "id": "9.phone.feedbackInDock",
+   "item": 9,
+   "name": "390 px: tapping an answer shows its feedback inside the dock",
+   "pass": true,
+   "detail": "{\"text\":\"✓After/ˈæftər/should,/ʃʊd/use/juːz/the/ð\",\"inDock\":true}"
+  },
+  {
+   "id": "9.phone.branchChoice",
+   "item": 9,
+   "name": "390 px: choosing a path in the dock stores the choice and lights the right fact (\"room known\")",
+   "pass": true,
+   "detail": "{\"n\":3,\"mission\":2,\"lamps\":\"001\"}"
+  },
+  {
+   "id": "9.phone.caption",
+   "item": 9,
+   "name": "390 px: a spoken dialogue line is captioned with speaker name, word-over-IPA and a ≥44 px replay button",
+   "pass": true,
+   "detail": "{\"has\":true,\"who\":\"Hana/ˈhɑːnə/\",\"units\":13,\"ipa\":true,\"replayH\":44}"
+  },
+  {
+   "id": "9.phone.gateButtons",
+   "item": 9,
+   "name": "390 px: the \"time is up\" banner appears with ≥44 px buttons fully inside the screen",
+   "pass": true,
+   "detail": "{\"on\":true,\"bs\":[{\"h\":50.59375,\"w\":147.75,\"inV\":true},{\"h\":50.59375,\"w\":120.53125,\"inV\":true},{\"h\":48.59375,\"w\":107.171875,\"inV\":true}]}"
+  },
+  {
+   "id": "9.phone.notesReadable",
+   "item": 9,
+   "name": "390 px: teacher notes open as a readable panel (every word ≥16 px, inside the screen)",
+   "pass": true,
+   "detail": "{\"n\":13,\"min\":16.765024038461537,\"inV\":true}"
+  },
+  {
+   "id": "9.phone.rotate",
+   "item": 9,
+   "name": "rotating portrait → landscape keeps segment and time, switches layout, content stays docked",
+   "pass": true,
+   "detail": "{\"before\":{\"id\":\"3.4\",\"T\":990},\"after\":{\"id\":\"3.4\",\"T\":990,\"orient\":\"side\",\"docked\":3}}"
+  },
+  {
+   "id": "9.phone.backToWide",
+   "item": 9,
+   "name": "growing back to desktop returns every element to the stage (nothing left docked or zoomed)",
+   "pass": true,
+   "detail": "{\"id\":\"3.4\",\"orient\":\"wide\",\"docked\":0,\"inStage\":6,\"zoomLeft\":0}"
+  },
+  {
+   "id": "9.phone.ipaDefaultOn",
+   "item": 9,
+   "name": "IPA is on by default on phones (never silently dropped)",
+   "pass": true,
+   "detail": "{\"ipaPressed\":true,\"hidden\":false,\"shown\":15}"
+  },
+  {
+   "id": "10.switch.build.mid.wide-first.paused",
+   "item": 10,
+   "name": "build mid-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"verdict\\\":\\\"slots\\\",\\\"fb\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.build.mid.wide-first.playing",
+   "item": 10,
+   "name": "build mid-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"verdict\\\":\\\"slots\\\",\\\"fb\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0.599999999999909,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2000999999995656,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.build.post.wide-first.paused",
+   "item": 10,
+   "name": "build post-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call#off\\\",\\\"her?#off\\\",\\\"Do#off\\\",\\\"to#off\\\"],\\\"verdict\\\":\\\"slots no\\\",\\\"fb\\\":\\\"✗Do/duː/not/nɑː\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.build.post.wide-first.playing",
+   "item": 10,
+   "name": "build post-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call#off\\\",\\\"her?#off\\\",\\\"Do#off\\\",\\\"to#off\\\"],\\\"verdict\\\":\\\"slots no\\\",\\\"fb\\\":\\\"✗Do/duː/not/nɑː\",\"flips\":[{\"same\":true,\"dT\":0.6001000000005661,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.250100000000657,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.build.mid.phone-first.paused",
+   "item": 10,
+   "name": "build mid-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"verdict\\\":\\\"slots\\\",\\\"fb\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.build.mid.phone-first.playing",
+   "item": 10,
+   "name": "build mid-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"verdict\\\":\\\"slots\\\",\\\"fb\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0.6001000000005661,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2001000000009299,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.build.post.phone-first.paused",
+   "item": 10,
+   "name": "build post-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call#off\\\",\\\"her?#off\\\",\\\"Do#off\\\",\\\"to#off\\\"],\\\"verdict\\\":\\\"slots no\\\",\\\"fb\\\":\\\"✗Do/duː/not/nɑː\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.build.post.phone-first.playing",
+   "item": 10,
+   "name": "build post-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"slots\\\":[\\\"I\\\",\\\"Should\\\",\\\"call\\\",\\\"her?\\\",\\\"Do\\\",\\\"to\\\"],\\\"tray\\\":[\\\"Should#off\\\",\\\"I#off\\\",\\\"call#off\\\",\\\"her?#off\\\",\\\"Do#off\\\",\\\"to#off\\\"],\\\"verdict\\\":\\\"slots no\\\",\\\"fb\\\":\\\"✗Do/duː/not/nɑː\",\"flips\":[{\"same\":true,\"dT\":0.5999000000006163,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2001000000004751,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.mid.wide-first.paused",
+   "item": 10,
+   "name": "repair mid-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗Should/ʃʊd/never/ˈnevər/takes/teɪks/s./es/\\\",\\\"sent\\\":\\\"She/ʃiː/should/ʃʊd/calls/kɔːlz/him./hɪm/\\\",\\\"item\\\":\\\"1 / 5\\\",\\\"playing\\\"\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.mid.wide-first.playing",
+   "item": 10,
+   "name": "repair mid-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗Should/ʃʊd/never/ˈnevər/takes/teɪks/s./es/\\\",\\\"sent\\\":\\\"She/ʃiː/should/ʃʊd/calls/kɔːlz/him./hɪm/\\\",\\\"item\\\":\\\"1 / 5\\\",\\\"playing\\\"\",\"flips\":[{\"same\":true,\"dT\":0.599999999999909,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2000999999995656,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.post.wide-first.paused",
+   "item": 10,
+   "name": "repair post-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓After/ˈæftər/should,/ʃʊd/use/juːz/the/ðə/base/beɪs/verb:/vɜːrb/call./kɔːl/The/ðə/verb/vɜːrb/does/dʌ\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.post.wide-first.playing",
+   "item": 10,
+   "name": "repair post-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓After/ˈæftər/should,/ʃʊd/use/juːz/the/ðə/base/beɪs/verb:/vɜːrb/call./kɔːl/The/ðə/verb/vɜːrb/does/dʌ\",\"flips\":[{\"same\":true,\"dT\":0.6000000000001364,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2000000000000455,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.mid.phone-first.paused",
+   "item": 10,
+   "name": "repair mid-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗Should/ʃʊd/never/ˈnevər/takes/teɪks/s./es/\\\",\\\"sent\\\":\\\"She/ʃiː/should/ʃʊd/calls/kɔːlz/him./hɪm/\\\",\\\"item\\\":\\\"1 / 5\\\",\\\"playing\\\"\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.mid.phone-first.playing",
+   "item": 10,
+   "name": "repair mid-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗Should/ʃʊd/never/ˈnevər/takes/teɪks/s./es/\\\",\\\"sent\\\":\\\"She/ʃiː/should/ʃʊd/calls/kɔːlz/him./hɪm/\\\",\\\"item\\\":\\\"1 / 5\\\",\\\"playing\\\"\",\"flips\":[{\"same\":true,\"dT\":0.5999000000003889,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2000000000000455,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.post.phone-first.paused",
+   "item": 10,
+   "name": "repair post-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓After/ˈæftər/should,/ʃʊd/use/juːz/the/ðə/base/beɪs/verb:/vɜːrb/call./kɔːl/The/ðə/verb/vɜːrb/does/dʌ\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair.post.phone-first.playing",
+   "item": 10,
+   "name": "repair post-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓After/ˈæftər/should,/ʃʊd/use/juːz/the/ðə/base/beɪs/verb:/vɜːrb/call./kɔːl/The/ðə/verb/vɜːrb/does/dʌ\",\"flips\":[{\"same\":true,\"dT\":0.6004000000004908,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2007000000003245,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.mid.wide-first.paused",
+   "item": 10,
+   "name": "repair2 mid-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗To/tuː/does/dʌz/not/nɑːt/belong/bɪˈlɔːŋ/in/ɪn/this/ðɪs/pattern./ˈpætərn/\\\",\\\"sent\\\":\\\"You/juː/should/ʃʊd/to/tuː/ask./æsk/\\\"\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.mid.wide-first.playing",
+   "item": 10,
+   "name": "repair2 mid-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗To/tuː/does/dʌz/not/nɑːt/belong/bɪˈlɔːŋ/in/ɪn/this/ðɪs/pattern./ˈpætərn/\\\",\\\"sent\\\":\\\"You/juː/should/ʃʊd/to/tuː/ask./æsk/\\\"\",\"flips\":[{\"same\":true,\"dT\":0.5999000000003889,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.199900000000298,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.post.wide-first.paused",
+   "item": 10,
+   "name": "repair2 post-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓Remove/riˈmuːv/to./tuː/We/wiː/say/seɪ/should/ʃʊd/plus/plʌs/the/ðə/base/beɪs/verb:/vɜːrb/ask./æsk/\\\",\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.post.wide-first.playing",
+   "item": 10,
+   "name": "repair2 post-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓Remove/riˈmuːv/to./tuː/We/wiː/say/seɪ/should/ʃʊd/plus/plʌs/the/ðə/base/beɪs/verb:/vɜːrb/ask./æsk/\\\",\",\"flips\":[{\"same\":true,\"dT\":0.5999000000003889,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.25,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.mid.phone-first.paused",
+   "item": 10,
+   "name": "repair2 mid-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗To/tuː/does/dʌz/not/nɑːt/belong/bɪˈlɔːŋ/in/ɪn/this/ðɪs/pattern./ˈpætərn/\\\",\\\"sent\\\":\\\"You/juː/should/ʃʊd/to/tuː/ask./æsk/\\\"\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.mid.phone-first.playing",
+   "item": 10,
+   "name": "repair2 mid-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt\\\",\\\"opt no#off\\\",\\\"opt\\\"],\\\"fb\\\":\\\"✗To/tuː/does/dʌz/not/nɑːt/belong/bɪˈlɔːŋ/in/ɪn/this/ðɪs/pattern./ˈpætərn/\\\",\\\"sent\\\":\\\"You/juː/should/ʃʊd/to/tuː/ask./æsk/\\\"\",\"flips\":[{\"same\":true,\"dT\":0.599999999999909,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2000999999995656,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.post.phone-first.paused",
+   "item": 10,
+   "name": "repair2 post-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓Remove/riˈmuːv/to./tuː/We/wiː/say/seɪ/should/ʃʊd/plus/plʌs/the/ðə/base/beɪs/verb:/vɜːrb/ask./æsk/\\\",\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.repair2.post.phone-first.playing",
+   "item": 10,
+   "name": "repair2 post-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"opts\\\":[\\\"opt ok#off\\\",\\\"opt no dim#off\\\",\\\"opt dim#off\\\"],\\\"fb\\\":\\\"✓Remove/riˈmuːv/to./tuː/We/wiː/say/seɪ/should/ʃʊd/plus/plʌs/the/ðə/base/beɪs/verb:/vɜːrb/ask./æsk/\\\",\",\"flips\":[{\"same\":true,\"dT\":0.5997999999997319,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.1998999999993885,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.mid.wide-first.paused",
+   "item": 10,
+   "name": "branch mid-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":null,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"000\\\",\\\"cards\\\":[\\\"opt\\\",\\\"opt\\\",\\\"opt\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.mid.wide-first.playing",
+   "item": 10,
+   "name": "branch mid-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":null,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"000\\\",\\\"cards\\\":[\\\"opt\\\",\\\"opt\\\",\\\"opt\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0.599999999999909,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2000000000002728,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.post.wide-first.paused",
+   "item": 10,
+   "name": "branch post-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":2,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"001\\\",\\\"cards\\\":[\\\"opt dim\\\",\\\"opt dim\\\",\\\"opt ok\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.post.wide-first.playing",
+   "item": 10,
+   "name": "branch post-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":2,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"001\\\",\\\"cards\\\":[\\\"opt dim\\\",\\\"opt dim\\\",\\\"opt ok\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0.6001000000005661,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2002000000002226,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.mid.phone-first.paused",
+   "item": 10,
+   "name": "branch mid-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":null,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"000\\\",\\\"cards\\\":[\\\"opt\\\",\\\"opt\\\",\\\"opt\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.mid.phone-first.playing",
+   "item": 10,
+   "name": "branch mid-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":null,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"000\\\",\\\"cards\\\":[\\\"opt\\\",\\\"opt\\\",\\\"opt\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0.599999999999909,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.2000000000002728,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.post.phone-first.paused",
+   "item": 10,
+   "name": "branch post-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":2,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"001\\\",\\\"cards\\\":[\\\"opt dim\\\",\\\"opt dim\\\",\\\"opt ok\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.branch.post.phone-first.playing",
+   "item": 10,
+   "name": "branch post-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"mission\\\":{\\\"prio\\\":null,\\\"n1\\\":2,\\\"n2\\\":null,\\\"auto1\\\":false,\\\"auto2\\\":false},\\\"lamps\\\":\\\"001\\\",\\\"cards\\\":[\\\"opt dim\\\",\\\"opt dim\\\",\\\"opt ok\\\"]}\",\"flips\":[{\"same\":true,\"dT\":0.5998999999997068,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.249899999999343,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.mid.wide-first.paused",
+   "item": 10,
+   "name": "typed mid-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.mid.wide-first.playing",
+   "item": 10,
+   "name": "typed mid-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0.5992999999998574,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.1993000000002212,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.post.wide-first.paused",
+   "item": 10,
+   "name": "typed post-answer, wide→phone→wide, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"Checked:/tʃekt/a/ə/definite/ˈdefənət/should/ʃʊd/error/ˈerər/was/wʌz/found./faʊnd/✗After/ˈæftər/should,/ʃʊd/us\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.post.wide-first.playing",
+   "item": 10,
+   "name": "typed post-answer, wide→phone→wide, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"Checked:/tʃekt/a/ə/definite/ˈdefənət/should/ʃʊd/error/ˈerər/was/wʌz/found./faʊnd/✗After/ˈæftər/should,/ʃʊd/us\",\"flips\":[{\"same\":true,\"dT\":0.599999999999909,\"orient\":\"stack\",\"snapEqual\":true},{\"same\":true,\"dT\":1.1998999999996158,\"orient\":\"wide\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.mid.phone-first.paused",
+   "item": 10,
+   "name": "typed mid-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.mid.phone-first.playing",
+   "item": 10,
+   "name": "typed mid-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"\\\"}\",\"flips\":[{\"same\":true,\"dT\":0.599800000000414,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.199999999999818,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.post.phone-first.paused",
+   "item": 10,
+   "name": "typed post-answer, phone→wide→phone, lesson paused: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"Checked:/tʃekt/a/ə/definite/ˈdefənət/should/ʃʊd/error/ˈerər/was/wʌz/found./faʊnd/✗After/ˈæftər/should,/ʃʊd/us\",\"flips\":[{\"same\":true,\"dT\":0,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":0,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "10.switch.typed.post.phone-first.playing",
+   "item": 10,
+   "name": "typed post-answer, phone→wide→phone, lesson playing: same scene object, same attempt state after each switch, controls still work afterwards",
+   "pass": true,
+   "detail": "{\"before\":\"{\\\"v\\\":\\\"You should call and she should waits\\\",\\\"res\\\":\\\"Checked:/tʃekt/a/ə/definite/ˈdefənət/should/ʃʊd/error/ˈerər/was/wʌz/found./faʊnd/✗After/ˈæftər/should,/ʃʊd/us\",\"flips\":[{\"same\":true,\"dT\":0.599999999999909,\"orient\":\"wide\",\"snapEqual\":true},{\"same\":true,\"dT\":1.1998999999996158,\"orient\":\"stack\",\"snapEqual\":true}],\"alive\":true}"
+  },
+  {
+   "id": "11.checkForm.fuzzInvalidNeverGreen",
+   "item": 11,
+   "name": "1810 generated invalid constructions (stacked modals, not-should, repeated should, to, inflected verbs in either clause, bare determiner subject) are never formOk:true",
+   "pass": true,
+   "detail": "{\"n\":1810,\"green\":[],\"nGreen\":0,\"nValid\":200,\"rejected\":[],\"nRejected\":0}"
+  },
+  {
+   "id": "11.checkForm.fuzzValidAccepted",
+   "item": 11,
+   "name": "200 generated valid constructions (multiword subjects, adverbs, two should clauses) are accepted",
+   "pass": true,
+   "detail": "{\"n\":1810,\"green\":[],\"nGreen\":0,\"nValid\":200,\"rejected\":[],\"nRejected\":0}"
+  },
+  {
+   "id": "12.delayed.repairNextInsideDelay",
+   "item": 12,
+   "name": "repair: correct answer on item 1, Next within the delay → item 2 keeps ITS sentence, incorrect badge and empty feedback; item 1 stays recorded as done",
+   "pass": true,
+   "detail": "{\"midPhase\":true,\"item2Bad\":\"You should to ask.\",\"sentAfterNext\":\"You should to ask.\",\"sentLater\":\"You should to ask.\",\"badge\":\"✗ incorrect/ˌɪnkərˈekt/\",\"fbIsEmpty\":true,\"doneState\":\"{\\\"0\\\":true}\",\"item\":\"2 / 5\"}"
+  },
+  {
+   "id": "12.delayed.pausedNoWallClock",
+   "item": 12,
+   "name": "repair answered while paused: result is complete at once and no timer is left pending",
+   "pass": true,
+   "detail": "{\"immediate\":true,\"pendingTimers\":0,\"rtTimers\":0}"
+  },
+  {
+   "id": "13.gate.showAnswerFollowsItem.wide",
+   "item": 13,
+   "name": "wide: item 1 revealed before the gate → no Show answer then; after Next the button is visible, unobstructed, works, and disappears when item 2 is revealed",
+   "pass": true,
+   "detail": "{\"gateOn\":true,\"item1ButtonVisible\":false,\"canRevealItem1\":false,\"canRevealItem2\":true,\"item2ButtonVisible\":true,\"item2Revealed\":true,\"buttonGoneAfter\":true}"
+  },
+  {
+   "id": "13.gate.showAnswerFollowsItem.phone",
+   "item": 13,
+   "name": "phone: item 1 revealed before the gate → no Show answer then; after Next the button is visible, unobstructed, works, and disappears when item 2 is revealed",
+   "pass": true,
+   "detail": "{\"gateOn\":true,\"item1ButtonVisible\":false,\"canRevealItem1\":false,\"canRevealItem2\":true,\"item2ButtonVisible\":true,\"item2Revealed\":true,\"buttonGoneAfter\":true}"
+  },
+  {
+   "id": "14.freeText.matrix",
+   "item": 14,
+   "name": "adversarial matrix of 38 sentences: positive → confident, definite errors → confident error, unsupported/complex → \"needs teacher review\"",
+   "pass": true,
+   "detail": "{\"n\":38,\"wrong\":[],\"nFalseGreen\":0,\"nFalseRed\":0}"
+  },
+  {
+   "id": "14.freeText.noFalseGreenNoFalseRed",
+   "item": 14,
+   "name": "no unsupported/complex sentence is ever shown as a green pass or a red error",
+   "pass": true,
+   "detail": "{\"n\":38,\"wrong\":[],\"nFalseGreen\":0,\"nFalseRed\":0}"
+  },
+  {
+   "id": "14.freeText.confidenceVisible",
+   "item": 14,
+   "name": "typed checker shows a visible confidence label for ok / error / needs-teacher-review and a standing limitation note",
+   "pass": true,
+   "detail": "{\"ok\":\"conf conf-confident\",\"bad\":\"conf conf-error\",\"review\":\"conf conf-review\",\"note\":true}"
+  }
+ ]
+}

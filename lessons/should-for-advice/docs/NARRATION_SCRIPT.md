@@ -392,7 +392,7 @@ Generated from the lesson source by `tools/make-docs.mjs`. Every line below is a
   - Narrator (af_heart) — Maya shortens the presentation. The outline is ready, and the shorter version fits the new time.
   - Narrator (af_heart) — Maya turns off her phone and works faster. She is focused, though other questions remain.
   - Narrator (af_heart) — Your two steps work together. Maya feels prepared. Nothing is guaranteed, but she has a clear plan.
-  - Narrator (af_heart) — You used the same kind of step twice. Maya improved one thing, but other problems are still open. Another step might help.
+  - Narrator (af_heart) — Maya improved something, but other problems are still open. Another step might help.
 
 ### 6.9 · New information: the group trip  _(planned 48:20–49:40, 80 s, learner activity with countdown, CLASS-mode gate)_
 
@@ -405,9 +405,9 @@ Generated from the lesson source by `tools/make-docs.mjs`. Every line below is a
   - Narrator (af_heart) — The group message shows the plan. Everyone knows the meeting point, but the tickets are still not bought.
   - Narrator (af_heart) — Hana sends a message. Marcus sees it and leaves a little later. That might reduce stress for everyone.
   - Narrator (af_heart) — Priya and Hana wait at a café near the station. The delay feels shorter, though Marcus still needs to know.
-  - Narrator (af_heart) — Priya checks the app and keeps the tickets flexible. It helps, but the group still needs one clear plan.
+  - Narrator (af_heart) — Priya checks the app and finds a later train. It helps, but the group still needs one clear plan.
   - Narrator (af_heart) — Your two steps cover different problems. The group has a clearer plan for the delay. Delays can still surprise us, so stay flexible.
-  - Narrator (af_heart) — You repeated one kind of step. The trip improved a little, but other timing problems remain. Another step might help.
+  - Narrator (af_heart) — The trip improved a little, but other problems are still open. Another step might help.
 
 ### 6.10 · New information: the apartment  _(planned 49:40–51:00, 80 s, learner activity with countdown, CLASS-mode gate)_
 
@@ -422,7 +422,7 @@ Generated from the lesson source by `tools/make-docs.mjs`. Every line below is a
   - Narrator (af_heart) — Over coffee, Theo explains the concert, and Hana explains her mornings. They understand each other better.
   - Narrator (af_heart) — Theo practices earlier in the evening. Hana can rest, though they still need a clear agreement.
   - Narrator (af_heart) — Your steps cover different needs. Hana and Theo can work out a clearer plan. It still depends on both people, so keep talking.
-  - Narrator (af_heart) — Your steps were similar. Some things improved, but one need is still open. Another step might help.
+  - Narrator (af_heart) — Some things improved, but at least one need is still open. Another step might help.
 
 ### 6.11 · Share and compare your reasons  _(planned 51:00–53:00, 120 s, learner activity with countdown, CLASS-mode gate)_
 

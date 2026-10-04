@@ -1,11 +1,11 @@
 {
- "label": "fixed",
+ "label": "final",
  "html": "should-for-advice.html",
- "bytes": 8075090,
- "sha256": "0b7056797bc4e864e97f3081dcf335816e19284cef6b015deb3b0ed22c0ae90e",
- "date": "2026-10-04T07:05:05.619Z",
- "total": 42,
- "passed": 41,
+ "bytes": 8075100,
+ "sha256": "dc56a36bd387982f47483ee42b475757e9febae35247b52e95a0d757c8563120",
+ "date": "2026-10-04T07:18:23.367Z",
+ "total": 51,
+ "passed": 51,
  "results": [
   {
    "id": "1.checkForm.table",
@@ -145,7 +145,7 @@
    "item": 5,
    "name": "replay after a branch choice restarts the example cleanly (no leftover choice audio)",
    "pass": true,
-   "detail": "{\"afterReplay\":{\"local\":0.3,\"cur\":null},\"strayChoice\":0}"
+   "detail": "{\"afterReplay\":{\"local\":0.29989999999990685,\"cur\":null},\"strayChoice\":0}"
   },
   {
    "id": "6.read.phone-portrait-390x844.words",
@@ -249,8 +249,8 @@
    "id": "6.read.desktop-1600x900.targets",
    "item": 6,
    "name": "desktop-1600x900: controls ≥ 32 px",
-   "pass": false,
-   "detail": "{\"n\":49,\"sample\":[\"__start__:Lesson timeline:402x24\",\"1.2:pause timer:28x34\",\"1.2:more time:28x34\",\"1.2:hint:28x34\",\"1.2:show answer:28x34\",\"1.2:Lesson timeline:402x24\"]}"
+   "pass": true,
+   "detail": "{\"n\":0,\"sample\":[]}"
   },
   {
    "id": "6.read.desktop-1600x900.noHScroll",
@@ -292,7 +292,7 @@
    "item": 8,
    "name": "class-time clock stops when the lesson is finished",
    "pass": true,
-   "detail": "{\"finished\":true,\"a\":0.092,\"b\":0.092,\"froze\":true}"
+   "detail": "{\"finished\":true,\"a\":0.148,\"b\":0.148,\"froze\":true}"
   },
   {
    "id": "8.clock.explainsPlannedVsActual",
@@ -300,6 +300,69 @@
    "name": "finish card explains planned 3600 s vs actual class time (pauses, replays, gates, extra time)",
    "pass": true,
    "detail": "{\"has\":true,\"t\":\"The lesson is finished Planned time: Class time: Class time was about minutes shorter than the plan. The plan is sixty minutes of lesson time. Class time is real time, so it also counts pauses, extra minutes, and waiting at each activity. It stopped when the lesson ended.\"}"
+  },
+  {
+   "id": "9.phone.optionTappable",
+   "item": 9,
+   "name": "390 px: a 5.4 answer option is inside the dock, ≥44 px tall, not covered by another element, tappable",
+   "pass": true,
+   "detail": "{\"found\":true,\"w\":324.21875,\"h\":118.90625,\"reachable\":true,\"inViewport\":true}"
+  },
+  {
+   "id": "9.phone.feedbackInDock",
+   "item": 9,
+   "name": "390 px: tapping an answer shows its feedback inside the dock",
+   "pass": true,
+   "detail": "{\"text\":\"●Look/lʊk/at/æt/the/ðə/verb/vɜːrb/after/\",\"inDock\":true}"
+  },
+  {
+   "id": "9.phone.branchChoice",
+   "item": 9,
+   "name": "390 px: choosing a path in the dock stores the choice and lights the right fact (\"room known\")",
+   "pass": true,
+   "detail": "{\"n\":3,\"mission\":2,\"lamps\":\"001\"}"
+  },
+  {
+   "id": "9.phone.caption",
+   "item": 9,
+   "name": "390 px: a spoken dialogue line is captioned with speaker name, word-over-IPA and a ≥44 px replay button",
+   "pass": true,
+   "detail": "{\"has\":true,\"who\":\"Hana/ˈhɑːnə/\",\"units\":13,\"ipa\":true,\"replayH\":44}"
+  },
+  {
+   "id": "9.phone.gateButtons",
+   "item": 9,
+   "name": "390 px: the \"time is up\" banner appears with ≥44 px buttons fully inside the screen",
+   "pass": true,
+   "detail": "{\"on\":true,\"bs\":[{\"h\":50.59375,\"w\":147.75,\"inV\":true},{\"h\":50.59375,\"w\":120.53125,\"inV\":true},{\"h\":48.59375,\"w\":107.171875,\"inV\":true}]}"
+  },
+  {
+   "id": "9.phone.notesReadable",
+   "item": 9,
+   "name": "390 px: teacher notes open as a readable panel (every word ≥16 px, inside the screen)",
+   "pass": true,
+   "detail": "{\"n\":13,\"min\":16.765024038461537,\"inV\":true}"
+  },
+  {
+   "id": "9.phone.rotate",
+   "item": 9,
+   "name": "rotating portrait → landscape keeps segment and time, switches layout, content stays docked",
+   "pass": true,
+   "detail": "{\"before\":{\"id\":\"3.4\",\"T\":990},\"after\":{\"id\":\"3.4\",\"T\":990,\"orient\":\"side\",\"docked\":3}}"
+  },
+  {
+   "id": "9.phone.backToWide",
+   "item": 9,
+   "name": "growing back to desktop returns every element to the stage (nothing left docked or zoomed)",
+   "pass": true,
+   "detail": "{\"id\":\"3.4\",\"orient\":\"wide\",\"docked\":0,\"inStage\":6,\"zoomLeft\":0}"
+  },
+  {
+   "id": "9.phone.ipaDefaultOn",
+   "item": 9,
+   "name": "IPA is on by default on phones (never silently dropped)",
+   "pass": true,
+   "detail": "{\"ipaPressed\":true,\"hidden\":false,\"shown\":15}"
   }
  ]
 }

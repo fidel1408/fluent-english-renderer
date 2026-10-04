@@ -57,7 +57,7 @@ Learners answer **aloud, in pairs, or in Zoom chat**. You click for them. The le
 Full timing map: `docs/CHAPTER_TIMING.md`. Full narration and dialogue script: `docs/NARRATION_SCRIPT.md`. Quality-control report: `docs/QC_REPORT.md`.
 
 ## Narration voices (what they are)
-Locally synthesized with **Kokoro-82M** (Apache-2.0, free, runs offline on CPU, no API key). Narrator: `af_heart`; dialogue voices: Maya `af_bella`, Daniel `am_michael`, Priya `af_sarah`, Marcus `am_eric`, Hana `af_sky`, Theo `am_liam`. They are good neural voices, not human recordings; the QC report explains how they were chosen and what could not be verified. Every line is a separate replaceable MP3 (`narration/clips/<id>.mp3`, listed in `narration/script.json`).
+Locally synthesized with **Kokoro-82M** (model/voices declare Apache-2.0; the `kokoro-onnx` 0.6.1 wrapper is MIT; the phoneme tools have their own, separate licences — see `docs/MEDIA_PROVENANCE.md`; no commercial clearance is claimed). Free, runs offline on CPU, no API key. Narrator: `af_heart`; dialogue voices: Maya `af_bella`, Daniel `am_michael`, Priya `af_sarah`, Marcus `am_eric`, Hana `af_sky`, Theo `am_liam`. They are good neural voices, not human recordings; the QC report explains how they were chosen and what could not be verified. Every line is a separate replaceable MP3 (`narration/clips/<id>.mp3`, listed in `narration/script.json`).
 
 ## Rebuilding / editing (optional)
 Source is plain JavaScript/CSS in `src/`. No bundler is needed:

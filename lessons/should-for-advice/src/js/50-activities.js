@@ -21,7 +21,8 @@
     const pr = $('.pr', P), vis = $('.vis', P), os = $('.os', P), fb = $('.feedback', P), ft = $('.ft', P);
     pr.style.cssText = `font-size:${cfg.promptSize || 40}px;margin:6px 0 12px;text-align:center`;
     os.style.cssText = `display:grid;grid-template-columns:repeat(${cfg.cols || 1},1fr);gap:${cfg.gap || 12}px`;
-    function render(i, fast) {
+    function render(i, fast) { try { return render0(i, fast); } finally { if (FE.engine) FE.engine.emit('revealstate'); } }
+    function render0(i, fast) {
       ctl.i = i; const it = items[i]; const multi = it.multi != null ? it.multi : cfg.multi;
       pr.innerHTML = it.prompt ? UB(it.prompt) : ''; vis.innerHTML = it.visual || '';
       os.innerHTML = ''; ctl.sel[i] = ctl.sel[i] || new Set();
@@ -88,7 +89,8 @@
     let placed = [];
     const tileHTML = (tk) => { const [w, r] = tk.split(':'); return `<span class="tile-in">${U(r && r !== 'd' ? `{${r}|${w}}` : w)}</span>`; };
     const roleOf = (tk) => { const r = tk.split(':')[1]; return !r || r === 'd' ? 'o' : r; };
-    function render(i) {
+    function render(i) { try { return render0(i); } finally { if (FE.engine) FE.engine.emit('revealstate'); } }
+    function render0(i) {
       ctl.i = i; const it = items[i]; placed = [];
       pr.innerHTML = it.prompt ? UB(it.prompt) : ''; pr.style.fontSize = (cfg.promptSize || 34) + 'px';
       slots.className = 'slots'; line.innerHTML = ''; feedback(fb, 'note', '');
@@ -143,6 +145,7 @@
     const sent = $('.sent', P), os = $('.os', P), fb = $('.feedback', P), ft = $('.ft', P), bad = $('.bad', P), badge = $('.badge', P);
     os.style.cssText = 'display:grid;grid-template-columns:1fr;gap:10px';
     function render(i) {
+      if (ctl.pending) { S.cancel(ctl.pending); ctl.pending = null; } // a delayed result belongs to the item that was answered, never to the next one
       ctl.i = i; const it = items[i];
       bad.style.borderColor = '#ff6f86'; bad.style.background = 'rgba(214,51,79,.16)'; badge.innerHTML = '&#10007; ' + UB('incorrect'); badge.style.color = '#ff8a9b';
       sent.innerHTML = it.bad.map((w) => U(w)).join(''); os.innerHTML = ''; feedback(fb, 'note', '');
@@ -150,6 +153,7 @@
       ft.innerHTML = '';
       if (items.length > 1) { ft.append(h('span', { class: 'lab', text: i + 1 + ' / ' + items.length }), h('span', { style: { flex: 1 } })); if (i < items.length - 1) ft.append(h('button', { class: 'btn sm ghost', type: 'button', html: UB('Next'), onclick: () => render(i + 1) })); }
       if (ctl.done[i]) applyRepair(true);
+      if (FE.engine) FE.engine.emit('revealstate');
     }
     function pick(j, b) {
       const it = items[ctl.i]; if (ctl.done[ctl.i]) return; S.sfx('click');
@@ -157,18 +161,21 @@
       else { b.classList.add('no', 'shake'); b.disabled = true; b.querySelector('.ick').textContent = '✗'; S.sfx('no'); res(S, false); feedback(fb, 'bad', noIcon + UB(it.options[j].why || 'That is not the best repair. Try again.')); setTimeout(() => b.classList.remove('shake'), 400); }
     }
     function applyRepair(instant) {
-      const it = items[ctl.i]; ctl.done[ctl.i] = true;
+      const idx = ctl.i, it = items[idx]; ctl.done[idx] = true;
       os.querySelectorAll('.opt').forEach((b, j) => { b.disabled = true; if (it.options[j].ok) { b.classList.add('ok'); b.querySelector('.ick').textContent = '✓'; } else b.classList.add('dim'); });
       // show the changed words, then replace them
       const units = sent.querySelectorAll('.u');
       it.edit.del.forEach((d) => units[d] && units[d].classList.add('r-x'));
       const finish = () => {
+        if (ctl.i !== idx) return; // item-scoped: the learner already moved on; item idx is stored as done and is drawn complete when shown again
+        ctl.pending = null;
         sent.innerHTML = it.good.map((w, k) => U(w)).join('');
         sent.querySelectorAll('.u').forEach((u, k) => { if (it.edit.add.includes(k)) u.classList.add('r-g'); });
         bad.style.borderColor = '#55dc95'; bad.style.background = 'rgba(47,163,107,.18)'; badge.innerHTML = '&#10003; ' + UB('correct'); badge.style.color = '#7ff0b0';
         feedback(fb, 'good', okIcon + UB(it.why));
       };
-      if (instant || S.fast) finish(); else { feedback(fb, 'note', infoIcon + UB(it.spot || 'Look at the marked words.')); S.later(finish, 1400); }
+      // delayed second phase runs on the pausable scene clock; with the lesson paused it is shown at once (no wall-clock callback can fire later)
+      if (instant || S.fast || !(FE.engine && FE.engine.playing)) finish(); else { feedback(fb, 'note', infoIcon + UB(it.spot || 'Look at the marked words.')); ctl.pending = S.timeout(finish, 1400); }
     }
     ctl.reveal = function () { if (ctl.revealed[ctl.i] || ctl.done[ctl.i]) return false; ctl.revealed[ctl.i] = true; applyRepair(S.fast); S.sfx('reveal'); return true; };
     ctl.goto = (i) => { render(i); if (FE.engine) FE.engine.emit('revealstate'); }; ctl.panel = P; render(0);
@@ -244,6 +251,48 @@
   const verbish = (t) => V.has(t) || t === 'to' || !!baseOf(t);
   const stripAdv = (a) => { a = a.slice(); while (a.length && ADV.has(a[0])) a.shift(); return a; };
 
+  const MODALS = new Set(['can', 'could', 'will', 'would', 'must', 'may', 'might', 'shall', 'ought', 'cannot', "can't", "won't", "wouldn't", "couldn't", "mustn't", "shan't", "needn't", 'need']);
+  const OBJP = new Set(['me', 'him', 'them', 'us']);
+  const COORD = new Set(['and', 'but', 'or', 'so', 'because', 'if', 'when', 'while', 'that', 'then', 'although', 'though', 'since', 'unless']);
+  const DISC = new Set(['yes', 'no', 'well', 'then', 'maybe', 'perhaps', 'also', 'honestly', 'personally', 'actually', 'anyway', 'sometimes']);
+  const THINK = [['i', 'think'], ['i', 'believe'], ['i', 'suppose'], ['i', 'guess'], ['i', 'feel'], ['i', "don't", 'think'], ['i', 'do', 'not', 'think'], ["i", "don't", 'believe'], ['we', 'think'], ['we', 'believe'], ['i', 'also', 'think'], ['do', 'you', 'think'], ['do', 'you', 'believe'], ['do', 'we', 'think'], ['do', 'they', 'think']];
+  const INDEF = new Set(['everyone', 'everybody', 'someone', 'somebody', 'anyone', 'anybody', 'nobody', 'noone', 'nothing', 'something', 'everything', 'anything', 'there', 'people', 'both', 'all', 'many', 'few', 'most', 'others', 'one', 'here', 'what', 'who']);
+  const isShould = (t) => t === 'should' || t === "shouldn't" || t === 'shouldnt';
+  /* number of leading words that are discourse markers / "I think"-type frames (not part of the subject) */
+  function prefixLen(S) {
+    let n = 0, again = true;
+    while (again) {
+      again = false; const rest = S.slice(n);
+      if (rest.length && DISC.has(rest[0])) { n++; again = true; continue; }
+      for (const ph of THINK) if (ph.length < rest.length && ph.every((w, i) => rest[i] === w)) { n += ph.length; again = true; break; }
+    }
+    return n;
+  }
+  /* subject noun phrase: 'ok' (proven), 'unsure' (cannot prove), {bad}, or {det} (a lone determiner such as "the") */
+  function parseNP(S, SO, inQ) {
+    if (!S.length) return { bad: 'Add a subject before should: You should call her.' };
+    const parts = []; let cur = [], curO = [];
+    S.forEach((t, i) => { if (t === 'and' && cur.length) { parts.push([cur, curO]); cur = []; curO = []; } else { cur.push(t); curO.push(SO[i]); } });
+    parts.push([cur, curO]);
+    let unsure = false;
+    for (const [q, qo] of parts) {
+      if (!q.length) return { bad: 'Add a subject before should: You should call her.' };
+      if (q.some((t) => MODALS.has(t) || isShould(t))) return { bad: 'Do not put two modal verbs together. Use only should: You should call her.' };
+      if (q.includes('not')) { if (inQ) { unsure = true; continue; } return { bad: 'Put not after should: He should not call her. Or use shouldn\'t.' }; }
+      if (q.length === 1 && PRON.has(q[0])) continue;
+      if (q.length === 1 && OBJP.has(q[0])) return { bad: `Use a subject pronoun (he, she, we, they), not "${q[0]}": He should call her.` };
+      if (DET.has(q[0])) {
+        if (q.length === 1) return { det: true };
+        if (q.length > 4 || q.slice(1).some((t) => DET.has(t) || V.has(t) || t === 'to' || baseOf(t))) { unsure = true; continue; }
+        continue; // determiner + 1-3 plain words: "the team", "my new manager"
+      }
+      if (qo.every((w) => /^[A-Z]/.test(w)) && q.length <= 3 && !q.some((t) => PRON.has(t) || WH.includes(t) || INDEF.has(t) || V.has(t) || ADV.has(t) || baseOf(t))) continue; // names: Maya, Daniel Lee
+      if (/^[A-Z][a-z]*'s$/.test(qo[0]) && q.length >= 2 && q.length <= 3) continue; // Maya's sister
+      unsure = true;
+    }
+    return unsure ? 'unsure' : 'ok';
+  }
+
   /* Form-only checker for typed advice (e.g. a learner's chat message the teacher types in).
      formOk === true   : the whole should/shouldn't pattern is PROVEN (pronoun/determiner/name subject, known base verb)
      formOk === false  : a definite pattern error was found
@@ -257,10 +306,11 @@
       if (res.formOk === false) { /* already flagged */ }
       else if (ok) { res.formOk = true; add('good', 'The pattern checks out: should or shouldn\'t with a base verb.'); }
       else res.formOk = null;
+      res.confidence = res.formOk === true ? 'confident' : res.formOk === false ? 'error' : 'review';
       add('note', 'This checks the should / shouldn\'t pattern only. Meaning, politeness and usefulness are for the teacher to judge.');
       return res;
     };
-    if (!txt0) { add('note', 'Type a sentence first.'); return res; }
+    if (!txt0) { add('note', 'Type a sentence first.'); res.confidence = 'review'; return res; }
     const isQ = /\?\s*$/.test(txt0);
     const body = txt0.replace(/[.!?]+$/, '');
     const orig = body.split(/[\s,]+/).filter(Boolean), tk = orig.map((w) => w.toLowerCase());
@@ -268,7 +318,7 @@
     const ix = tk.findIndex((w) => w === 'should' || w === "shouldn't" || w === 'shouldnt');
     if (ix < 0) {
       if (tk.some((w) => /^shoulds$|^shoulded$|^shoulding$/.test(w))) { bad('Should never takes -s or -ed. Use should.'); return finish(false); }
-      add('note', 'I cannot find should or shouldn\'t. Other advice phrases can be fine, but this checker only looks at should.'); res.formOk = null; return res;
+      add('note', 'I cannot find should or shouldn\'t. Other advice phrases can be fine, but this checker only looks at should.'); res.formOk = null; res.confidence = 'review'; return res;
     }
     if (tk[ix] === 'shouldnt') { bad('Write shouldn\'t with an apostrophe: shouldn\'t (or should not).'); return finish(false); }
     const before = tk.slice(0, ix), after = tk.slice(ix + 1), neg = tk[ix] === "shouldn't";
@@ -303,31 +353,78 @@
       if (j === 0) { bad('Add a subject after should: Should I call?'); return finish(false); }
       let subj = rest.slice(0, j); const subjOrig = orig.slice(ix + 1, ix + 1 + j);
       while (subj.length > 1 && ADV.has(subj[subj.length - 1])) { subj.pop(); subjOrig.pop(); }
+      if (subj.some((t) => isShould(t))) { bad('Use should only once in a question: Should the team call her?'); return finish(false); }
       const v = rest[j];
       if (v === 'to') { bad('No to after the subject. Use the base verb: Should I call?'); return finish(false); }
       if (!V.has(v)) { bad(`After the subject use the base verb: ${baseOf(v)}. (Should he call her?)`); return finish(false); }
-      const subjOk = (subj.length === 1 && PRON.has(subj[0])) || (subj.length >= 2 && DET.has(subj[0]) && !DET.has(subj[subj.length - 1])) || (subj.length === 1 && /^[A-Z]/.test(subjOrig[0]) && !PRON.has(subj[0]));
-      if (!subjOk) { add('note', 'I cannot be sure what the subject is here. Teacher: check by eye that the order is should + subject + base verb.'); return finish(false); }
+      const np = parseNP(subj, subjOrig, true);
+      if (np && np.bad) { bad(np.bad); return finish(false); }
+      if (np !== 'ok') { add('note', 'I cannot be sure what the subject is here. Teacher: check by eye that the order is should + subject + base verb.'); return finish(false); }
+      // the rest of the question after the base verb may contain more clauses: if it holds another should, or another verb after a joining word, it is not proven
+      const tail = rest.slice(j + 1);
+      if (tail.some(isShould)) { add('note', 'There is more than one should. This checker proves one simple question only. Teacher: check each clause by eye.'); return finish(false); }
+      if (tail.some((t, i) => COORD.has(t) && tail.slice(i + 1).some(verbish))) { add('note', 'The first part is a correct should question. The rest of the sentence is for the teacher to check.'); return finish(false); }
       return finish(true);
     }
-    /* ---- statements ---- */
-    res.kind = 'statement';
+    /* ---- statements: every should clause is validated; nothing outside the supported grammar is ever called correct ---- */
+    res.kind = isQ ? 'question' : 'statement';
+    if (whFirst && before.length > 1 && before.some((w) => ['do', 'does', 'did'].includes(w))) { add('note', 'This is a longer question (for example: What do you think I should do?). The checker does not judge it. Teacher: check by eye.'); return finish(false); }
     if (whFirst && before.length > 1) { bad('Put should right after the question word: What should I do?'); return finish(false); }
-    if (isQ && before.length === 1) {
-      bad('A standard yes/no question puts should first: Should I call? (Rising intonation can make an echo question in speech, but this lesson teaches the standard inverted form.)'); return finish(false);
+    const framed = isQ && ['do', 'does', 'did'].includes(tk[0]); // "Do you think I should call her?" is a real question; the should clause inside is checked below
+    if (isQ && !framed) {
+      bad(before.length === 1 ? 'A standard yes/no question puts should first: Should I call? (Rising intonation can make an echo question in speech, but this lesson teaches the standard inverted form.)'
+        : 'A yes or no question puts should before the subject: Should + subject + base verb. For example: Should the team call her?'); return finish(false);
     }
-    let a = after.slice();
-    if (!neg && a[0] === 'not') a = a.slice(1);
-    if (a[0] === 'to') { bad('No to after should. Say: You should ask.'); return finish(false); }
-    a = stripAdv(a);
-    const v = a[0];
-    if (!v) { bad('Add a base verb after should: You should call her.'); return finish(false); }
-    if (!V.has(v)) {
-      const b = baseOf(v);
-      if (b) { bad(`After should, use the base verb: ${b}. The verb never takes -s, -ed or -ing here.`); return finish(false); }
-      add('note', `I cannot prove that "${v}" is a base verb. If it is an adjective or a noun the sentence may need be (You should be ${v}). Teacher: check by eye.`);
-      return finish(false);
+    // commas / semicolons are clause boundaries
+    const brk = []; { let k = -1; txt0.replace(/[.!?]+$/, '').split(/\s+/).filter(Boolean).forEach((w) => { const m = w.match(/^(.*?)([,;:]*)$/); if (m[1]) { k++; } if (m[2] && m[1]) brk[k + 1] = true; }); }
+    const sIx = []; tk.forEach((t, i) => { if (isShould(t)) sIx.push(i); });
+    const clauses = []; let prevEnd = 0, hardBad = null, unsure = false, firstNote = '';
+    for (const i of sIx) {
+      if (tk[i] === 'shouldnt') { hardBad = hardBad || 'Write shouldn\'t with an apostrophe: shouldn\'t (or should not).'; break; }
+      // two modals / not before should / determiner directly before should
+      let pi = i - 1; while (pi >= prevEnd && ADV.has(tk[pi])) pi--;
+      let ni = i + 1; while (ni < tk.length && (tk[ni] === 'not' || ADV.has(tk[ni]))) ni++;
+      if (pi >= 0 && MODALS.has(tk[pi])) { hardBad = hardBad || 'Do not put two modal verbs together. Use only should: You should call her.'; break; }
+      if (ni < tk.length && (MODALS.has(tk[ni]) || isShould(tk[ni]))) { hardBad = hardBad || 'Do not put two modal verbs together. After should use a base verb: You should call her.'; break; }
+      if (pi >= 0 && tk[pi] === 'not') { hardBad = hardBad || 'Put not after should: He should not call her. Or use shouldn\'t.'; break; }
+      if (tk[i] === "shouldn't" && tk[i + 1] === 'not') { hardBad = hardBad || 'Do not make a double negative: shouldn\'t already means should not.'; break; }
+      // clause start = after the last joining word / comma before should
+      let start = prevEnd, joined = false;
+      for (let j = i - 1; j >= prevEnd; j--) { if (COORD.has(tk[j])) { start = j + 1; joined = true; break; } if (brk[j]) { start = j; joined = true; break; } }
+      const full = tk.slice(start, i), fullO = orig.slice(start, i);
+      let k = full.length; while (k > 0 && ADV.has(full[k - 1])) k--;              // "My manager probably should ..."
+      const S = full.slice(0, k), SO = fullO.slice(0, k);
+      const strip = start === 0 || clauses.length === 0 ? prefixLen(S) : 0;
+      const subj = S.slice(strip), subjO = SO.slice(strip);
+      let np;
+      if (subj.length === 0 && joined && clauses.length) np = 'ok';                // "You should call and should wait" (shared subject)
+      else np = parseNP(subj, subjO);
+      if (np && np.bad) { hardBad = hardBad || np.bad; break; }
+      if (np && np.det) { hardBad = hardBad || `Add a noun after "${subj[0]}": The team should call her.`; break; }
+      if (np === 'unsure') { unsure = true; firstNote = firstNote || 'I cannot prove that the subject is correct. Teacher: check by eye.'; }
+      // the verb after should
+      let n = i + 1; if (tk[i] === 'should' && tk[n] === 'not') n++;
+      while (n < tk.length && ADV.has(tk[n])) n++;
+      const v = tk[n];
+      if (!v || COORD.has(v)) { hardBad = hardBad || 'Add a base verb after should: You should call her.'; break; }
+      if (v === 'to') { hardBad = hardBad || 'No to after should. Say: You should ask.'; break; }
+      if (!V.has(v)) {
+        const bv = baseOf(v);
+        if (bv) { hardBad = hardBad || `After should, use the base verb: ${bv}. The verb never takes -s, -ed or -ing here.`; break; }
+        unsure = true; firstNote = firstNote || `I cannot prove that "${v}" is a base verb. If it is an adjective or a noun the sentence may need be (You should be ${v}). Teacher: check by eye.`;
+      }
+      clauses.push({ i, start, strip, v: n }); prevEnd = n + 1;
     }
+    if (hardBad) { bad(hardBad); return finish(false); }
+    // everything outside the validated clauses: a new verb after a joining word is a clause this checker does not prove
+    const cov = new Array(tk.length).fill(false); clauses.forEach((c) => { for (let q = c.start; q <= c.v; q++) cov[q] = true; });
+    let afterVerb = false;
+    for (let q = 0; q < tk.length; q++) {
+      if (cov[q]) { afterVerb = clauses.some((c) => c.v === q); continue; }
+      if (COORD.has(tk[q]) || brk[q]) { afterVerb = false; continue; }
+      if (!afterVerb && verbish(tk[q]) && !isShould(tk[q])) { unsure = true; firstNote = firstNote || 'The should part is checked, but the rest of the sentence has another verb or clause that this checker cannot prove. Teacher: check it by eye.'; }
+    }
+    if (unsure) { add('note', firstNote); return finish(false); }
     return finish(true);
   };
 
@@ -350,9 +447,11 @@
     if (cfg.typed) {
       const row = h('div', { style: { display: 'flex', gap: '10px', width: '100%', marginTop: '6px', alignItems: 'center' } });
       const inp = h('input', { type: 'text', 'aria-label': 'Type a sentence to check its form', placeholder: 'Type a learner sentence', style: { flex: 1, fontSize: '30px', padding: '10px 16px', borderRadius: '16px', border: '2px solid #4a6bb5', background: '#fff', color: '#121b33', fontFamily: 'var(--ui)' } });
-      const go = () => { const r = FE.checkForm(inp.value); feedback(fb, r.formOk === true ? 'good' : r.formOk === false ? 'bad' : 'note', r.msgs.map((m) => (m.tone === 'good' ? okIcon : m.tone === 'bad' ? noIcon : infoIcon) + UB(m.t)).join('<br>')); };
+      const CONF = { confident: ['Checked: this simple should sentence has the correct form.', 'good'], error: ['Checked: a definite should error was found.', 'bad'], review: ['Needs teacher review: this checker cannot judge this sentence.', 'note'] };
+      const go = () => { const r = FE.checkForm(inp.value); const c = CONF[r.confidence] || CONF.review; feedback(fb, r.formOk === true ? 'good' : r.formOk === false ? 'bad' : 'note', `<div class="conf conf-${r.confidence}" style="font-weight:800;margin-bottom:6px">${UB(c[0])}</div>` + r.msgs.map((m) => (m.tone === 'good' ? okIcon : m.tone === 'bad' ? noIcon : infoIcon) + UB(m.t)).join('<br>')); };
       inp.addEventListener('keydown', (e) => { e.stopPropagation(); if (e.key === 'Enter') go(); });
       row.append(inp, h('button', { class: 'btn sm', type: 'button', html: UB('Check form'), onclick: go })); ft.appendChild(row);
+      ft.appendChild(h('div', { class: 'conf-note', style: { flex: '1 1 100%', fontSize: '24px', color: '#ffd48a' }, html: UB('This checker is limited. It judges only simple should and shouldn\'t sentences. Anything else needs teacher review.') }));
     }
     ctl.reveal = () => { if (ctl.shown) return false; ctl.shown = true; mod.style.display = 'block'; S.sfx('reveal'); return true; };
     if (cfg.models) S.onReveal(() => ctl.reveal(), () => !ctl.shown);

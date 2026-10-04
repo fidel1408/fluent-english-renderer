@@ -1,5 +1,5 @@
 {
- "date": "2026-10-04T07:07:35.461Z",
+ "date": "2026-10-04T08:04:41.957Z",
  "results": [
   {
    "name": "title is exactly \"Should for Advice\"",
@@ -379,7 +379,7 @@
   {
    "name": "every displayed English word is a word-over-IPA unit with non-empty IPA",
    "ok": true,
-   "info": "11300 units checked; bad: []"
+   "info": "11347 units checked; bad: []"
   },
   {
    "name": "no English words displayed outside word-over-IPA units (stage content)",
@@ -404,7 +404,7 @@
   {
    "name": "DOM size stays bounded over the full simulated hour",
    "ok": true,
-   "info": "max nodes 2033, last {\"T\":3600,\"nodes\":1848,\"actors\":2,\"hooks\":0,\"heap\":16}"
+   "info": "max nodes 2033, last {\"T\":3600,\"nodes\":1848,\"actors\":2,\"hooks\":0,\"heap\":17}"
   }
  ],
  "memorySamples": [
@@ -413,63 +413,63 @@
    "nodes": 1934,
    "actors": 2,
    "hooks": 3,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 800,
    "nodes": 1716,
    "actors": 1,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 1200,
    "nodes": 1567,
    "actors": 1,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 1600,
    "nodes": 1613,
    "actors": 1,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 2000,
    "nodes": 1507,
    "actors": 1,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 2400,
    "nodes": 1579,
    "actors": 3,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 2800,
    "nodes": 2033,
    "actors": 2,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 3200,
    "nodes": 1713,
    "actors": 1,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   },
   {
    "T": 3600,
    "nodes": 1848,
    "actors": 2,
    "hooks": 0,
-   "heap": 16
+   "heap": 17
   }
  ]
 }

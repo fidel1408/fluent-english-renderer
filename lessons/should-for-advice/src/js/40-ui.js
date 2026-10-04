@@ -195,7 +195,7 @@
     const can = !!(E.scene && E.scene.canReveal());
     const tr = $('#tmReveal'); if (tr) tr.style.display = E.scene && E.scene.revealFns.length ? '' : 'none';
     [tr, UI.revealBtn].forEach((b) => { if (b) { b.classList.toggle('spent', !can); b.setAttribute('aria-disabled', String(!can)); } });
-    const gr = $('#gReveal'); if (gr) gr.style.display = can ? '' : 'none';
+    const gr = $('#gReveal'); if (gr) { gr.hidden = !can; gr.style.display = can ? '' : 'none'; } // the gate's button always reflects the CURRENT item
   };
   UI.toast = function (label, ms) { const t = $('#toast'); t.innerHTML = UB(label); t.classList.add('on'); clearTimeout(UI._tt); UI._tt = setTimeout(() => t.classList.remove('on'), ms || 1800); };
   /* end of lesson: the class clock is frozen and the difference between the planned 60:00 and real time is explained */
@@ -286,10 +286,11 @@
     if (!on) { gt.classList.remove('on'); return; }
     const s = E.scene, canRev = s && s.canReveal();
     gt.innerHTML = `<div>${UB('Time is up. Continue when you are ready.')}</div>` +
-      (canRev ? `<button class="btn ghost" id="gReveal" type="button">${UB('Show answer')}</button>` : '') +
+      `<button class="btn ghost" id="gReveal" type="button"${canRev ? '' : ' hidden'}>${UB('Show answer')}</button>` +
       `<button class="btn ghost" id="gMore" type="button">${UB('More time')}</button><button class="btn" id="gGo" type="button">${UB('Continue')}</button>`;
     gt.classList.add('on');
     const gr = $('#gReveal'); if (gr) gr.onclick = () => { s.doReveal(); UI.renderReveal(); };
+    UI.renderReveal();
     $('#gMore').onclick = () => { E.gate = false; gt.classList.remove('on'); E.ext = 60; E.local = E.seg.dur; };
     $('#gGo').onclick = () => E.continueGate(); $('#gGo').focus({ preventScroll: true });
     A.sfx('bell');

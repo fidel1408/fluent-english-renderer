@@ -389,3 +389,4 @@ body.no-ipa .u{margin-bottom:.02em}
 .compact #dockhead #hudCh{flex:none}
 .compact #dockhead #hudTitle{display:flex;flex-direction:row;align-items:center;gap:8px}
 .compact #actTimer .tl{display:none}
+[hidden]{display:none!important}

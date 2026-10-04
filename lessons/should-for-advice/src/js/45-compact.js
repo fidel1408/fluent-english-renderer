@@ -49,8 +49,17 @@
       restore();
       UI.capdock.innerHTML = '';
     }
-    // the same segment is re-entered at the same moment so every element is built for the new layout
-    if (wasCompact !== UI.compact && E.started && E.scene) { const playing = E.playing; E.goto(E.T); if (playing !== E.playing) E.setPlaying(playing); }
+    // The running scene is NOT rebuilt: the same elements move between stage and dock, so answers, tiles, typed text, branch choices,
+    // timers and audio all survive an orientation change or a resize across the breakpoint.
+    const S = E.scene;
+    if (S && wasCompact !== UI.compact) {
+      S.bubbles.forEach((b) => {
+        if (UI.compact) { if (b.shown && !b.spec.say && !b.card) b.show(true); }                      // free-standing bubble -> readable card
+        else { if (b.card) { b.card.remove(); b.card = null; } b.w = 0; b.measure(); if (b.shown) b.update(true); } // measured now that it is visible
+      });
+      E.layers.ui.querySelectorAll('.sortroot .tile').forEach((t) => { t.style.display = ''; });
+      if (UI.compact) UI.caption(UI.ccLine);
+    }
     E.emit('layout', mode);
   };
   UI.layers = () => E.layers;

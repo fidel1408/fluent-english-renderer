@@ -1,0 +1,1097 @@
+{
+  "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch3/audio/since_for_take2.mp3",
+  "sha256": "ba23e28d3ff8729572b00090dd977429739592af9a41f0bd9cea5e78e7e60c1e",
+  "model": "small",
+  "implementation": "faster-whisper 1.2.1",
+  "parameters": {
+    "language": null,
+    "task": "transcribe",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "multilingual": true,
+    "initial_prompt": null,
+    "prefix": null,
+    "hotwords": null,
+    "condition_on_previous_text": false,
+    "vad_filter": false
+  },
+  "info": {
+    "language": "es",
+    "language_probability": 0.9591315984725952,
+    "duration": 23.40575,
+    "duration_after_vad": 23.40575,
+    "all_language_probs": [
+      [
+        "es",
+        0.9591315984725952
+      ],
+      [
+        "en",
+        0.03803273290395737
+      ],
+      [
+        "pt",
+        0.0007145099807530642
+      ],
+      [
+        "it",
+        0.0005467867595143616
+      ],
+      [
+        "ja",
+        0.00024803023552522063
+      ],
+      [
+        "la",
+        0.00024781838874332607
+      ],
+      [
+        "pl",
+        0.0002467463200446218
+      ],
+      [
+        "ko",
+        0.00016036837769206613
+      ],
+      [
+        "gl",
+        0.00011694016575347632
+      ],
+      [
+        "hi",
+        8.224081102525815e-05
+      ],
+      [
+        "haw",
+        7.407240627799183e-05
+      ],
+      [
+        "id",
+        4.7001456550788134e-05
+      ],
+      [
+        "nn",
+        4.5020002289675176e-05
+      ],
+      [
+        "fr",
+        3.1246720027411357e-05
+      ],
+      [
+        "tl",
+        2.5783205273910426e-05
+      ],
+      [
+        "ar",
+        2.4361579562537372e-05
+      ],
+      [
+        "el",
+        2.066951128654182e-05
+      ],
+      [
+        "sn",
+        1.7384669263265096e-05
+      ],
+      [
+        "vi",
+        1.4435603588935919e-05
+      ],
+      [
+        "zh",
+        1.365131902275607e-05
+      ],
+      [
+        "jw",
+        1.3209311873652041e-05
+      ],
+      [
+        "eu",
+        1.2977153346582782e-05
+      ],
+      [
+        "km",
+        1.2462784070521593e-05
+      ],
+      [
+        "sa",
+        1.1586895197979175e-05
+      ],
+      [
+        "ro",
+        1.1391548468964174e-05
+      ],
+      [
+        "cy",
+        1.068099845724646e-05
+      ],
+      [
+        "de",
+        9.259558282792568e-06
+      ],
+      [
+        "tr",
+        7.742281923128758e-06
+      ],
+      [
+        "ru",
+        7.590491350129014e-06
+      ],
+      [
+        "ml",
+        7.5884581747232005e-06
+      ],
+      [
+        "oc",
+        6.12781605013879e-06
+      ],
+      [
+        "th",
+        4.98280132887885e-06
+      ],
+      [
+        "te",
+        4.329144758230541e-06
+      ],
+      [
+        "ca",
+        4.2366955312900245e-06
+      ],
+      [
+        "mi",
+        3.830774858215591e-06
+      ],
+      [
+        "bn",
+        3.3856058507808484e-06
+      ],
+      [
+        "ms",
+        2.9773702863167273e-06
+      ],
+      [
+        "br",
+        2.568034688010812e-06
+      ],
+      [
+        "sv",
+        2.494646878403728e-06
+      ],
+      [
+        "ur",
+        2.253293814646895e-06
+      ],
+      [
+        "nl",
+        1.6033166048146086e-06
+      ],
+      [
+        "fi",
+        1.5616269593010657e-06
+      ],
+      [
+        "sw",
+        1.4946692772355163e-06
+      ],
+      [
+        "cs",
+        1.4939595303076203e-06
+      ],
+      [
+        "hu",
+        1.3014266642130679e-06
+      ],
+      [
+        "yo",
+        1.2529968671515235e-06
+      ],
+      [
+        "ta",
+        1.1295619515294675e-06
+      ],
+      [
+        "si",
+        1.1003482995874947e-06
+      ],
+      [
+        "he",
+        8.528730859325151e-07
+      ],
+      [
+        "sk",
+        8.21266041839408e-07
+      ],
+      [
+        "sl",
+        7.253753437908017e-07
+      ],
+      [
+        "fa",
+        4.5103240609023487e-07
+      ],
+      [
+        "ht",
+        4.412418945776153e-07
+      ],
+      [
+        "hr",
+        4.0100732690007135e-07
+      ],
+      [
+        "my",
+        3.8709973182449176e-07
+      ],
+      [
+        "as",
+        1.7752387293512584e-07
+      ],
+      [
+        "bg",
+        1.7496140003459004e-07
+      ],
+      [
+        "uk",
+        1.4177010143612279e-07
+      ],
+      [
+        "mn",
+        1.3475430193921056e-07
+      ],
+      [
+        "sd",
+        1.231887978292434e-07
+      ],
+      [
+        "ne",
+        1.1548239342573652e-07
+      ],
+      [
+        "mr",
+        1.0528076899163352e-07
+      ],
+      [
+        "lo",
+        1.0392548688287206e-07
+      ],
+      [
+        "bs",
+        9.940423950638433e-08
+      ],
+      [
+        "mk",
+        7.662341516834204e-08
+      ],
+      [
+        "no",
+        7.252276645886013e-08
+      ],
+      [
+        "yi",
+        6.348525261046234e-08
+      ],
+      [
+        "bo",
+        6.207355340848153e-08
+      ],
+      [
+        "is",
+        5.7060848490664284e-08
+      ],
+      [
+        "fo",
+        5.593457075292463e-08
+      ],
+      [
+        "be",
+        5.3649117148779624e-08
+      ],
+      [
+        "da",
+        4.428722988336631e-08
+      ],
+      [
+        "hy",
+        4.064195380237834e-08
+      ],
+      [
+        "kn",
+        2.9253541811158357e-08
+      ],
+      [
+        "sr",
+        2.7991978512886817e-08
+      ],
+      [
+        "pa",
+        2.505478491343638e-08
+      ],
+      [
+        "af",
+        2.376899388423226e-08
+      ],
+      [
+        "mt",
+        2.2042470959604543e-08
+      ],
+      [
+        "sq",
+        1.5378413209532482e-08
+      ],
+      [
+        "ps",
+        1.294174900579037e-08
+      ],
+      [
+        "et",
+        1.2577904939803375e-08
+      ],
+      [
+        "ln",
+        1.001933913613584e-08
+      ],
+      [
+        "az",
+        6.016142695131066e-09
+      ],
+      [
+        "lv",
+        4.4565737766788516e-09
+      ],
+      [
+        "gu",
+        3.21979132245076e-09
+      ],
+      [
+        "lt",
+        3.153873606720481e-09
+      ],
+      [
+        "kk",
+        2.934741782922856e-09
+      ],
+      [
+        "so",
+        1.6480755649084244e-09
+      ],
+      [
+        "ka",
+        1.1962787427322041e-09
+      ],
+      [
+        "am",
+        6.133907270999828e-10
+      ],
+      [
+        "tg",
+        6.783322514802848e-11
+      ],
+      [
+        "ba",
+        3.1729608523933805e-11
+      ],
+      [
+        "su",
+        3.1486469681540896e-11
+      ],
+      [
+        "tk",
+        2.5710666234912694e-11
+      ],
+      [
+        "tt",
+        1.1889393115860347e-11
+      ],
+      [
+        "ha",
+        8.941863742506495e-12
+      ],
+      [
+        "mg",
+        6.951270722227454e-12
+      ],
+      [
+        "lb",
+        5.2775969358598296e-12
+      ],
+      [
+        "uz",
+        1.109739904137097e-12
+      ]
+    ],
+    "transcription_options": {
+      "beam_size": 5,
+      "best_of": 5,
+      "patience": 1,
+      "length_penalty": 1,
+      "repetition_penalty": 1,
+      "no_repeat_ngram_size": 0,
+      "log_prob_threshold": -1.0,
+      "no_speech_threshold": 0.6,
+      "compression_ratio_threshold": 2.4,
+      "condition_on_previous_text": false,
+      "prompt_reset_on_temperature": 0.5,
+      "temperatures": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "initial_prompt": null,
+      "prefix": null,
+      "suppress_blank": true,
+      "suppress_tokens": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        90,
+        91,
+        92,
+        93,
+        359,
+        503,
+        522,
+        542,
+        873,
+        893,
+        902,
+        918,
+        922,
+        931,
+        1350,
+        1853,
+        1982,
+        2460,
+        2627,
+        3246,
+        3253,
+        3268,
+        3536,
+        3846,
+        3961,
+        4183,
+        4667,
+        6585,
+        6647,
+        7273,
+        9061,
+        9383,
+        10428,
+        10929,
+        11938,
+        12033,
+        12331,
+        12562,
+        13793,
+        14157,
+        14635,
+        15265,
+        15618,
+        16553,
+        16604,
+        18362,
+        18956,
+        20075,
+        21675,
+        22520,
+        26130,
+        26161,
+        26435,
+        28279,
+        29464,
+        31650,
+        32302,
+        32470,
+        36865,
+        42863,
+        47425,
+        49870,
+        50254,
+        50258,
+        50358,
+        50359,
+        50360,
+        50361,
+        50362
+      ],
+      "without_timestamps": false,
+      "max_initial_timestamp": 1.0,
+      "word_timestamps": true,
+      "prepend_punctuations": "\"'“¿([{-",
+      "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+      "multilingual": true,
+      "max_new_tokens": null,
+      "clip_timestamps": [
+        0.0
+      ],
+      "hallucination_silence_threshold": null,
+      "hotwords": null
+    },
+    "vad_options": null
+  },
+  "segments": [
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.2,
+      "text": " Esto empezó antes y sigue ahora.",
+      "tokens": [
+        50364,
+        20880,
+        18730,
+        812,
+        11014,
+        288,
+        34532,
+        9923,
+        13,
+        50497
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.3,
+          "word": " Esto",
+          "probability": 0.8977664709091187
+        },
+        {
+          "start": 0.3,
+          "end": 0.74,
+          "word": " empezó",
+          "probability": 0.9944543540477753
+        },
+        {
+          "start": 0.74,
+          "end": 1.04,
+          "word": " antes",
+          "probability": 0.9967604279518127
+        },
+        {
+          "start": 1.04,
+          "end": 1.48,
+          "word": " y",
+          "probability": 0.926905632019043
+        },
+        {
+          "start": 1.48,
+          "end": 1.82,
+          "word": " sigue",
+          "probability": 0.9983459711074829
+        },
+        {
+          "start": 1.82,
+          "end": 2.2,
+          "word": " ahora.",
+          "probability": 0.995057225227356
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 2.86,
+      "end": 4.38,
+      "text": " I've lived here for two years.",
+      "tokens": [
+        50497,
+        286,
+        600,
+        5152,
+        510,
+        337,
+        732,
+        924,
+        13,
+        50609
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 2.86,
+          "end": 3.06,
+          "word": " I've",
+          "probability": 0.4737116605974734
+        },
+        {
+          "start": 3.06,
+          "end": 3.24,
+          "word": " lived",
+          "probability": 0.9929214119911194
+        },
+        {
+          "start": 3.24,
+          "end": 3.52,
+          "word": " here",
+          "probability": 0.9976412057876587
+        },
+        {
+          "start": 3.52,
+          "end": 3.72,
+          "word": " for",
+          "probability": 0.9892844557762146
+        },
+        {
+          "start": 3.72,
+          "end": 3.96,
+          "word": " two",
+          "probability": 0.647142767906189
+        },
+        {
+          "start": 3.96,
+          "end": 4.38,
+          "word": " years.",
+          "probability": 0.9975233674049377
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 5.22,
+      "end": 6.52,
+      "text": " Four indica duración.",
+      "tokens": [
+        50609,
+        7451,
+        1016,
+        2262,
+        4861,
+        3482,
+        13,
+        50715
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 5.22,
+          "end": 5.32,
+          "word": " Four",
+          "probability": 0.32002195715904236
+        },
+        {
+          "start": 5.32,
+          "end": 6.04,
+          "word": " indica",
+          "probability": 0.8052121996879578
+        },
+        {
+          "start": 6.04,
+          "end": 6.52,
+          "word": " duración.",
+          "probability": 0.9934802055358887
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 7.14,
+      "end": 7.62,
+      "text": " Two years.",
+      "tokens": [
+        50715,
+        4453,
+        924,
+        13,
+        50775
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 7.14,
+          "end": 7.28,
+          "word": " Two",
+          "probability": 0.8632036447525024
+        },
+        {
+          "start": 7.28,
+          "end": 7.62,
+          "word": " years.",
+          "probability": 0.9966727495193481
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 8.36,
+      "end": 10.0,
+      "text": " I've lived here since 2024.",
+      "tokens": [
+        50775,
+        286,
+        600,
+        5152,
+        510,
+        1670,
+        45237,
+        13,
+        50897
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 8.36,
+          "end": 8.5,
+          "word": " I've",
+          "probability": 0.9893716871738434
+        },
+        {
+          "start": 8.5,
+          "end": 8.66,
+          "word": " lived",
+          "probability": 0.9974048733711243
+        },
+        {
+          "start": 8.66,
+          "end": 8.96,
+          "word": " here",
+          "probability": 0.9973345994949341
+        },
+        {
+          "start": 8.96,
+          "end": 9.2,
+          "word": " since",
+          "probability": 0.9939606189727783
+        },
+        {
+          "start": 9.2,
+          "end": 10.0,
+          "word": " 2024.",
+          "probability": 0.9748959541320801
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 10.74,
+      "end": 12.84,
+      "text": " Since señala cuando empezó.",
+      "tokens": [
+        50897,
+        4162,
+        13830,
+        5159,
+        7767,
+        18730,
+        812,
+        13,
+        51027
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 10.74,
+          "end": 11.16,
+          "word": " Since",
+          "probability": 0.7248120307922363
+        },
+        {
+          "start": 11.16,
+          "end": 11.86,
+          "word": " señala",
+          "probability": 0.8549084961414337
+        },
+        {
+          "start": 11.86,
+          "end": 12.18,
+          "word": " cuando",
+          "probability": 0.6892659664154053
+        },
+        {
+          "start": 12.18,
+          "end": 12.84,
+          "word": " empezó.",
+          "probability": 0.9990608990192413
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 13.34,
+      "end": 13.9,
+      "text": " 2024.",
+      "tokens": [
+        51027,
+        45237,
+        13,
+        51100
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 13.34,
+          "end": 13.9,
+          "word": " 2024.",
+          "probability": 0.9010998606681824
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 14.86,
+      "end": 15.3,
+      "text": " Ahora tú.",
+      "tokens": [
+        51100,
+        18840,
+        15056,
+        13,
+        51150
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 14.86,
+          "end": 15.04,
+          "word": " Ahora",
+          "probability": 0.9857621192932129
+        },
+        {
+          "start": 15.04,
+          "end": 15.3,
+          "word": " tú.",
+          "probability": 0.9580346345901489
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 9,
+      "seek": 0,
+      "start": 15.86,
+      "end": 18.06,
+      "text": " I've studied English six months.",
+      "tokens": [
+        51150,
+        286,
+        600,
+        9454,
+        3669,
+        2309,
+        2493,
+        13,
+        51295
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 15.86,
+          "end": 16.04,
+          "word": " I've",
+          "probability": 0.993732362985611
+        },
+        {
+          "start": 16.04,
+          "end": 16.32,
+          "word": " studied",
+          "probability": 0.9966942071914673
+        },
+        {
+          "start": 16.32,
+          "end": 16.96,
+          "word": " English",
+          "probability": 0.9617218375205994
+        },
+        {
+          "start": 16.96,
+          "end": 17.74,
+          "word": " six",
+          "probability": 0.6032208800315857
+        },
+        {
+          "start": 17.74,
+          "end": 18.06,
+          "word": " months.",
+          "probability": 0.9984074234962463
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 10,
+      "seek": 0,
+      "start": 18.62,
+      "end": 19.72,
+      "text": " Since or for?",
+      "tokens": [
+        51295,
+        4162,
+        420,
+        337,
+        30,
+        51377
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 18.62,
+          "end": 19.08,
+          "word": " Since",
+          "probability": 0.9737093448638916
+        },
+        {
+          "start": 19.08,
+          "end": 19.48,
+          "word": " or",
+          "probability": 0.3002537488937378
+        },
+        {
+          "start": 19.48,
+          "end": 19.72,
+          "word": " for?",
+          "probability": 0.8077180981636047
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 11,
+      "seek": 0,
+      "start": 20.22,
+      "end": 21.04,
+      "text": " Clases en línea.",
+      "tokens": [
+        51377,
+        2033,
+        1957,
+        465,
+        37452,
+        13,
+        51435
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 20.22,
+          "end": 20.62,
+          "word": " Clases",
+          "probability": 0.8058978319168091
+        },
+        {
+          "start": 20.62,
+          "end": 20.78,
+          "word": " en",
+          "probability": 0.9881271719932556
+        },
+        {
+          "start": 20.78,
+          "end": 21.04,
+          "word": " línea.",
+          "probability": 0.9945244789123535
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 12,
+      "seek": 0,
+      "start": 21.46,
+      "end": 23.18,
+      "text": " Manda grupo por mensaje privado.",
+      "tokens": [
+        51435,
+        376,
+        5575,
+        20190,
+        1515,
+        10923,
+        11153,
+        2915,
+        1573,
+        13,
+        51535
+      ],
+      "avg_logprob": -0.3346613664576348,
+      "compression_ratio": 1.3897435897435897,
+      "no_speech_prob": 0.023741792887449265,
+      "words": [
+        {
+          "start": 21.46,
+          "end": 21.76,
+          "word": " Manda",
+          "probability": 0.9604186415672302
+        },
+        {
+          "start": 21.76,
+          "end": 22.0,
+          "word": " grupo",
+          "probability": 0.9382532238960266
+        },
+        {
+          "start": 22.0,
+          "end": 22.3,
+          "word": " por",
+          "probability": 0.9970210194587708
+        },
+        {
+          "start": 22.3,
+          "end": 22.72,
+          "word": " mensaje",
+          "probability": 0.9981865882873535
+        },
+        {
+          "start": 22.72,
+          "end": 23.18,
+          "word": " privado.",
+          "probability": 0.9989351630210876
+        }
+      ],
+      "temperature": 0.0
+    }
+  ],
+  "seconds_elapsed": 7.539437669000108,
+  "transcript": "Esto empezó antes y sigue ahora. I've lived here for two years. Four indica duración. Two years. I've lived here since 2024. Since señala cuando empezó. 2024. Ahora tú. I've studied English six months. Since or for? Clases en línea. Manda grupo por mensaje privado.",
+  "limitations": "Automated recognition, not human listening. Word timestamps and probabilities are model estimates, not calibrated quality scores."
+}

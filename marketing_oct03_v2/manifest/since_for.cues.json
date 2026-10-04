@@ -1,0 +1,324 @@
+{
+  "video": "since_for",
+  "contentId": "FE261026-SINCEFOR",
+  "title": "SINCE / FOR",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    40
+  ],
+  "status": "PLANNED",
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take choice (since_for take1, used_to take2, trial_faq take2) is a provisional editorial choice from independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Esto empezó antes y sigue ahora.",
+      "est": 2.591,
+      "gap": 0,
+      "file": "audio/cues/since_for_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I’ve lived here for two years.",
+      "est": 2.29,
+      "gap": 0.77,
+      "file": "audio/cues/since_for_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "For indica duración:",
+      "est": 2.053,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "two years.",
+      "est": 1.295,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I’ve lived here since twenty twenty-four.",
+      "est": 2.595,
+      "gap": 0.95,
+      "file": "audio/cues/since_for_c05.wav"
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Since señala cuándo empezó:",
+      "est": 2.851,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c06.wav"
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "twenty twenty-four.",
+      "est": 1.584,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c07.wav"
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Ahora tú:",
+      "est": 1.109,
+      "gap": 0.68,
+      "file": "audio/cues/since_for_c08.wav"
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I’ve studied English… six months.",
+      "est": 3.113,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c09.wav"
+    },
+    {
+      "id": "c10",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Since o for?",
+      "est": 2.018,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c10.wav"
+    },
+    {
+      "id": "c11",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Clases en línea:",
+      "est": 1.442,
+      "gap": 3.5,
+      "file": "audio/cues/since_for_c11.wav"
+    },
+    {
+      "id": "c12",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "manda GRUPO por mensaje privado.",
+      "est": 2.057,
+      "gap": 0.2,
+      "file": "audio/cues/since_for_c12.wav"
+    }
+  ],
+  "alignment": {
+    "anchors": {},
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 1102464,
+    "partitions": [
+      [
+        0,
+        114258
+      ],
+      [
+        114258,
+        215262
+      ],
+      [
+        215262,
+        305804
+      ],
+      [
+        305804,
+        362918
+      ],
+      [
+        362918,
+        477374
+      ],
+      [
+        477374,
+        603120
+      ],
+      [
+        603120,
+        672979
+      ],
+      [
+        672979,
+        721875
+      ],
+      [
+        721875,
+        859161
+      ],
+      [
+        859161,
+        948157
+      ],
+      [
+        948157,
+        1011751
+      ],
+      [
+        1011751,
+        1102464
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        2.324
+      ],
+      [
+        2.858,
+        4.625
+      ],
+      [
+        5.138,
+        5.612
+      ],
+      [
+        5.76,
+        6.686
+      ],
+      [
+        7.183,
+        7.893
+      ],
+      [
+        8.566,
+        10.537
+      ],
+      [
+        11.113,
+        11.741
+      ],
+      [
+        11.88,
+        12.353
+      ],
+      [
+        12.514,
+        13.384
+      ],
+      [
+        13.969,
+        14.951
+      ],
+      [
+        15.569,
+        16.042
+      ],
+      [
+        16.697,
+        18.052
+      ],
+      [
+        18.393,
+        19.254
+      ],
+      [
+        19.71,
+        20.313
+      ],
+      [
+        20.58,
+        21.048
+      ],
+      [
+        21.953,
+        22.776
+      ],
+      [
+        23.108,
+        24.808
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        15
+      ],
+      [
+        16
+      ]
+    ],
+    "marks": {
+      "forStart": [
+        "c03",
+        0
+      ],
+      "durStart": [
+        "c03",
+        1
+      ],
+      "sinceStart": [
+        "c06",
+        0
+      ]
+    }
+  }
+}

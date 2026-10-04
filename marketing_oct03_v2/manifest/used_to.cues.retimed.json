@@ -1,0 +1,458 @@
+{
+  "video": "used_to",
+  "contentId": "FE261028-USED",
+  "title": "USED TO",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    40
+  ],
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "mixGainDb": -0.6,
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take choice (since_for take1, used_to take2, trial_faq take2) is a provisional editorial choice from independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Piensa en algo que hacías antes.",
+      "est": 2.136,
+      "gap": 0,
+      "file": "audio/cues/used_to_c01.wav",
+      "start": 0.6,
+      "end": 2.736,
+      "audio": "audio/cues/used_to_c01.wav",
+      "audioSeconds": 2.136,
+      "padHead": 0.144,
+      "padTail": 0.301,
+      "cs": 0.744,
+      "ce": 2.435,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.144,
+          "e": 1.835
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I used to play soccer after school.",
+      "est": 2.477,
+      "gap": 0.7,
+      "file": "audio/cues/used_to_c02.wav",
+      "start": 3.436,
+      "end": 5.913,
+      "audio": "audio/cues/used_to_c02.wav",
+      "audioSeconds": 2.477,
+      "padHead": 0.301,
+      "padTail": 0.395,
+      "cs": 3.737,
+      "ce": 5.518,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.301,
+          "e": 2.082
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Antes jugaba fútbol después de la escuela.",
+      "est": 3.03,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c03.wav",
+      "start": 6.013,
+      "end": 9.043,
+      "audio": "audio/cues/used_to_c03.wav",
+      "audioSeconds": 3.03,
+      "padHead": 0.395,
+      "padTail": 0.454,
+      "cs": 6.408,
+      "ce": 8.589,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.395,
+          "e": 2.576
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Para un hábito de antes que ya cambió,",
+      "est": 2.735,
+      "gap": 0.39,
+      "file": "audio/cues/used_to_c04.wav",
+      "start": 9.433,
+      "end": 12.168,
+      "audio": "audio/cues/used_to_c04.wav",
+      "audioSeconds": 2.735,
+      "padHead": 0.453,
+      "padTail": 0.152,
+      "cs": 9.886,
+      "ce": 12.016,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.453,
+          "e": 2.583
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "usa used to más verbo base: play.",
+      "est": 3.843,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c05.wav",
+      "start": 12.268,
+      "end": 16.111,
+      "audio": "audio/cues/used_to_c05.wav",
+      "audioSeconds": 3.843,
+      "padHead": 0.152,
+      "padTail": 0.372,
+      "cs": 12.42,
+      "ce": 15.739,
+      "marks": {
+        "usedToStart": 0.684,
+        "playStart": 3.107
+      },
+      "islands": [
+        {
+          "s": 0.152,
+          "e": 0.534
+        },
+        {
+          "s": 0.684,
+          "e": 1.437
+        },
+        {
+          "s": 1.707,
+          "e": 2.645
+        },
+        {
+          "s": 3.107,
+          "e": 3.471
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Ahora tú:",
+      "est": 1.216,
+      "gap": 3.4,
+      "file": "audio/cues/used_to_c06.wav",
+      "start": 19.511,
+      "end": 20.727,
+      "audio": "audio/cues/used_to_c06.wav",
+      "audioSeconds": 1.216,
+      "padHead": 0.372,
+      "padTail": 0.37,
+      "cs": 19.883,
+      "ce": 20.357,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.372,
+          "e": 0.846
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I used to…",
+      "est": 1.853,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c07.wav",
+      "start": 20.827,
+      "end": 22.68,
+      "audio": "audio/cues/used_to_c07.wav",
+      "audioSeconds": 1.853,
+      "padHead": 0.37,
+      "padTail": 0.304,
+      "cs": 21.197,
+      "ce": 22.376,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.37,
+          "e": 1.549
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Cómo completarías la frase?",
+      "est": 2.121,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c08.wav",
+      "start": 22.78,
+      "end": 24.901,
+      "audio": "audio/cues/used_to_c08.wav",
+      "audioSeconds": 2.121,
+      "padHead": 0.305,
+      "padTail": 0.546,
+      "cs": 23.085,
+      "ce": 24.355,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.305,
+          "e": 1.575
+        }
+      ]
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Clases en línea:",
+      "est": 1.537,
+      "gap": 3.3,
+      "file": "audio/cues/used_to_c09.wav",
+      "start": 28.201,
+      "end": 29.738,
+      "audio": "audio/cues/used_to_c09.wav",
+      "audioSeconds": 1.537,
+      "padHead": 0.546,
+      "padTail": 0.182,
+      "cs": 28.747,
+      "ce": 29.556,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.546,
+          "e": 1.355
+        }
+      ]
+    },
+    {
+      "id": "c10",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "manda GRUPO por mensaje privado.",
+      "est": 2.381,
+      "gap": 0.2,
+      "file": "audio/cues/used_to_c10.wav",
+      "start": 29.938,
+      "end": 32.319,
+      "audio": "audio/cues/used_to_c10.wav",
+      "audioSeconds": 2.381,
+      "padHead": 0.181,
+      "padTail": 0.252,
+      "cs": 30.119,
+      "ce": 32.067,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.181,
+          "e": 1.015
+        },
+        {
+          "s": 1.147,
+          "e": 2.129
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "anchors": {},
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 1028736,
+    "partitions": [
+      [
+        0,
+        94186
+      ],
+      [
+        94186,
+        203422
+      ],
+      [
+        203422,
+        337023
+      ],
+      [
+        337023,
+        457641
+      ],
+      [
+        457641,
+        627113
+      ],
+      [
+        627113,
+        680723
+      ],
+      [
+        680723,
+        762460
+      ],
+      [
+        762460,
+        855977
+      ],
+      [
+        855977,
+        923745
+      ],
+      [
+        923745,
+        1028736
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0.144,
+        1.835
+      ],
+      [
+        2.437,
+        4.218
+      ],
+      [
+        5.007,
+        7.189
+      ],
+      [
+        8.096,
+        10.225
+      ],
+      [
+        10.529,
+        10.911
+      ],
+      [
+        11.062,
+        11.814
+      ],
+      [
+        12.084,
+        13.022
+      ],
+      [
+        13.484,
+        13.848
+      ],
+      [
+        14.592,
+        15.066
+      ],
+      [
+        15.806,
+        16.985
+      ],
+      [
+        17.594,
+        18.864
+      ],
+      [
+        19.956,
+        20.765
+      ],
+      [
+        21.128,
+        21.962
+      ],
+      [
+        22.094,
+        23.076
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "marks": {
+      "usedToStart": [
+        "c05",
+        1
+      ],
+      "playStart": [
+        "c05",
+        3
+      ]
+    }
+  },
+  "duration": 35.9,
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/used_to.cues.json",
+  "alignmentSource": {
+    "file": "manifest/used_to.alignment.json",
+    "master": "audio/originals/used_to_take2.mp3",
+    "masterSha256": "898c618a8cc2dc945bc1f70e509a451d5852effc7aea27215e9edb88302857c7",
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    }
+  },
+  "warnings": []
+}

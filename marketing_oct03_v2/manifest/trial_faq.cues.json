@@ -1,0 +1,179 @@
+{
+  "video": "trial_faq",
+  "contentId": "FE261030-TRIALFAQ",
+  "title": "TRIAL FAQ",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    40
+  ],
+  "status": "PLANNED",
+  "mixGainDb": -1.3,
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take choice (since_for take1, used_to take2, trial_faq take2) is a provisional editorial choice from independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Qué pasa después de la semana de prueba?",
+      "est": 2.126,
+      "gap": 0,
+      "file": "audio/cues/trial_faq_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.",
+      "est": 4.834,
+      "gap": 0.75,
+      "file": "audio/cues/trial_faq_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Si no continúas, no pagas.",
+      "est": 2.16,
+      "gap": 0.1,
+      "file": "audio/cues/trial_faq_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Si continúas, el pago cubre las cuatro semanas completas, incluida la primera.",
+      "est": 5.409,
+      "gap": 0.9,
+      "file": "audio/cues/trial_faq_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Consulta los precios en la descripción.",
+      "est": 2.099,
+      "gap": 2.7,
+      "file": "audio/cues/trial_faq_c05.wav"
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Manda GRUPO o CLUB por privado.",
+      "est": 2.521,
+      "gap": 3.45,
+      "file": "audio/cues/trial_faq_c06.wav"
+    }
+  ],
+  "alignment": {
+    "anchors": {
+      "fourWeeks": 11.2,
+      "week1": 13
+    },
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 844416,
+    "partitions": [
+      [
+        0,
+        93735
+      ],
+      [
+        93735,
+        306895
+      ],
+      [
+        306895,
+        402133
+      ],
+      [
+        402133,
+        640678
+      ],
+      [
+        640678,
+        733229
+      ],
+      [
+        733229,
+        844416
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        1.851
+      ],
+      [
+        2.401,
+        6.723
+      ],
+      [
+        7.195,
+        8.13
+      ],
+      [
+        8.294,
+        8.919
+      ],
+      [
+        9.319,
+        14.262
+      ],
+      [
+        14.794,
+        16.426
+      ],
+      [
+        16.827,
+        18.136
+      ],
+      [
+        18.27,
+        18.855
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "marks": {
+      "noPayStart": [
+        "c03",
+        1
+      ]
+    }
+  }
+}

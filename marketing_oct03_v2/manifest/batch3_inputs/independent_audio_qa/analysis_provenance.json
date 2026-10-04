@@ -1,0 +1,28 @@
+{
+  "date_utc": "2026-10-04",
+  "manifest_sha256": "a3b57cef98da68b04684df73dfb9cffff3c0ef2992840443b2d6aecf1a108f2a",
+  "scope": "Offline examination of six existing MP3 originals. No browser, paid service, network, voice generation, video generation or original-file editing.",
+  "framework": "faster-whisper 1.2.1",
+  "compute": "CPU int8, 6 threads, locally cached official SYSTRAN models",
+  "small_revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "medium_revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+  "full_file_small": [
+    "since_for_take1",
+    "since_for_take2",
+    "used_to_take1",
+    "used_to_take2",
+    "trial_faq_take1",
+    "trial_faq_take2"
+  ],
+  "full_file_medium": [
+    "since_for_take1",
+    "since_for_take2",
+    "used_to_take2",
+    "trial_faq_take2"
+  ],
+  "bounded_span_runs": [],
+  "bounded_span_reason": "Selected takes have corroborated intended content; further snippets would not replace genuine listening or resolve homophone spelling reliably.",
+  "asr_input": "Decoded mono 16000 Hz float32 audio only; expected script never supplied to decoders. Auto language, transcribe, multilingual, beam 5, no prompt/prefix/hotwords, no VAD, no prior-text conditioning.",
+  "tools": "Python 3.12.14; FFmpeg 7.1.5",
+  "hearing": "Unavailable; automated recognition and measurements are not auditory or subjective quality review."
+}

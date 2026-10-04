@@ -1,0 +1,403 @@
+{
+  "campaign_id": "FE-ORG-2026-10",
+  "prepared_utc": "2026-10-04T02:15:30Z",
+  "source_manifest_library_id": "libfile_327365883ee88191aed255e2f6a81621",
+  "already_produced": [
+    {
+      "id": "FE261003-AGREE",
+      "revision": "REV3",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING",
+      "reschedule_required": true
+    },
+    {
+      "id": "FE261005-ACTUALLY",
+      "revision": "REV4",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING"
+    },
+    {
+      "id": "FE261007-FORWARD",
+      "revision": "REV4",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING"
+    }
+  ],
+  "remaining_counts": {
+    "main_teaching": 2,
+    "tiktok_only_adaptations": 1
+  },
+  "shared_production_contract": {
+    "creator": "Claude Code only",
+    "project": "fluent-english-renderer / existing session_01XZseF1db4UWZjECgbkDe4T",
+    "model": "Sonnet5.5",
+    "effort": "Medium routine setup; High complex integration and final QA",
+    "fast": false,
+    "base": "Use current corrected single adult male host and safe caption system. Preserve all previously delivered actual MP4s and originals byte-for-byte, including batch1 REV2 and completed batch2 once available.",
+    "casting": "One adult male teacher, same Luis voice, adult facial proportions/visible torso/collared shirt/subtle stubble. Sole speaking mouth; all example text is labelled quoted demonstration. No second face, child narrator, caricature beard or alternating speaker assignment.",
+    "design": "Navy #101E34, cream #FFF7EB, mint #72D8C6, teal #0D625F, coral #F47558; original logo. One distinct meaningful mini-illustration per topic. Retain purposeful gestures/reacting movement; no lifeless slideshow.",
+    "format": "1080x1920,30fps,H264yuv420p,AAC48kstereo,faststart. Target25–35s but true audio/reading holds govern. Never time-stretch narration.",
+    "safe_zone": "Essential x100–860,y180–1420 conservative reserve; verify actual target-app overlays and covers later.",
+    "typography": "Actual270x480 legibility. At least≈13px effective role labels and secondaryCTA, larger teaching text; do not trust sourcefont alone.",
+    "timing": "Actual generated audio drives cue timings. Caption text = actual speech. Rule/example/translation switch as a coherent unit, sequential and non-overlapping; cards expand before wrapping text enters. Every solved bilingual example >=2.5s full-opacity settled hold; unansweredpractice>=3s; CTA>=3s after entry. Add silence/readhold rather than speeding.",
+    "audio": "Luis Guillermo Warm and Engaging, existing paid stock voice and current Elevenv4 standard settings. Do not generate until current UIcost and included balance checked. No purchases/extra credits/cloning/keys. One full narration per video; sample-exact sourcecuepartitions; only silence gaps added. NoEleven forlonglessons.",
+    "cta": "One marketing action at end, native DM, no external link, no extra Follow/Like/Save. Learning prompt can precede but should not demand public contact information. No fake clickable UI.",
+    "inventory": "The final three exact narration prompts were absent from recent campaign Eleven history before generation; all9priorprompts were visible. Inspect repository by content IDs/themes to reuse appropriate visual primitives, not unrelated narration.",
+    "qa": "Actual downloaded MP4/sourceZIP required. Independent visual+technical+source/sync QA; explicitly retain unrun real-listening and target-app playback gates. Never count the creator self-evaluation as release.",
+    "disclosure": "At scheduling, inspect required native realistic-AI-audio disclosure and TikTok own-brand promotional disclosure; no paid partnership/ads. Parent owns scheduling.",
+    "source_precedence": "Current narration, scenes, captions and shared contract in this manifest override older campaign storyboards and marketing CTAs. Answer references are internal and must not leak into unanswered practice."
+  },
+  "videos": [
+    {
+      "content_id": "FE261026-SINCEFOR",
+      "date": "2026-10-26",
+      "title": "Since y for",
+      "format": "Video corto",
+      "audience": "Adolescentes 13+ y adultos",
+      "goal": "Práctica guardable",
+      "hook": "Esto empezó antes y sigue ahora.",
+      "caption_fb_ig": "Para una situación que empezó antes y continúa ahora:\n\n“I’ve lived here for two years.” = “Vivo aquí desde hace dos años.”\n“I’ve lived here since 2024.” = “Vivo aquí desde 2024.”\n\nFor indica duración; since señala cuándo empezó.\n\nAhora tú: “I’ve studied English ___ six months.”\n\nPara conocer las clases en línea, manda “GRUPO” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #InglésEnLínea",
+      "caption_tiktok": "Para una situación que empezó antes y continúa ahora:\n\n“I’ve lived here for two years.” = “Vivo aquí desde hace dos años.”\n“I’ve lived here since 2024.” = “Vivo aquí desde 2024.”\n\nFor indica duración; since señala cuándo empezó.\n\nAhora tú: “I’ve studied English ___ six months.”\n\nPara conocer las clases en línea, manda “GRUPO” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #EnglishTips",
+      "cta": "Para conocer las clases en línea, manda “GRUPO” por mensaje privado.",
+      "offer_reference": "EDU",
+      "narration": "Esto empezó antes y sigue ahora. I’ve lived here for two years. For indica duración: two years. I’ve lived here since twenty twenty-four. Since señala cuándo empezó: twenty twenty-four. Ahora tú: I’ve studied English... six months. ¿Since o for? Clases en línea: manda GRUPO por mensaje privado.",
+      "storyboard": [
+        {
+          "id": "context",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Original apartment key/door illustration with timeline ending at AHORA.",
+          "on_screen": "Empezó antes y sigue ahora"
+        },
+        {
+          "id": "duration",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Highlight timeline length, not just start point.",
+          "on_screen": "I’ve lived here for two years.\nVivo aquí desde hace dos años.\nFOR + duración"
+        },
+        {
+          "id": "start",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Full coherent replacement of rule/example/translation; highlight start2024 through NOW. Do not label exact current year/month.",
+          "on_screen": "I’ve lived here since 2024.\nVivo aquí desde 2024.\nSINCE + inicio"
+        },
+        {
+          "id": "practice",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Clear solved examples before blank; keep no active for/since highlighted. At least3s settled.",
+          "on_screen": "I’ve studied English ___ six months.\n¿Since o for?"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Timeline clears before CTA.",
+          "on_screen": "Clases en línea\nManda GRUPO\npor mensaje privado."
+        }
+      ],
+      "answer_reference": "for",
+      "content_qa": "Contextualizar al present perfect de situaciones que siguen. El ejemplo en primera persona es didáctico, no experiencia real del propietario.",
+      "reuse_requirement": "Inventory existing repository/session artifacts by content ID and theme, then reuse appropriate source with the current single-host system. Do not assume old media passes.",
+      "status": "NARRATION_RECOVERED_ASR_AND_INTEGRATION_PENDING",
+      "slug": "since_for",
+      "batch": "teaching",
+      "narration_cues": [
+        "Esto empezó antes y sigue ahora.",
+        "I’ve lived here for two years. For indica duración: two years.",
+        "I’ve lived here since twenty twenty-four. Since señala cuándo empezó: twenty twenty-four.",
+        "Ahora tú: I’ve studied English... six months. ¿Since o for?",
+        "Clases en línea: manda GRUPO por mensaje privado."
+      ],
+      "narration_character_count": 295,
+      "primary_cta": {
+        "destination": "native private message on viewing platform",
+        "keyword": "GRUPO",
+        "no_other_marketing_cta": true
+      },
+      "scenes": [
+        {
+          "id": "context",
+          "visual": "Original apartment key/door illustration with timeline ending at AHORA.",
+          "on_screen": "Empezó antes y sigue ahora"
+        },
+        {
+          "id": "duration",
+          "visual": "Highlight timeline length, not just start point.",
+          "on_screen": "I’ve lived here for two years.\nVivo aquí desde hace dos años.\nFOR + duración"
+        },
+        {
+          "id": "start",
+          "visual": "Full coherent replacement of rule/example/translation; highlight start2024 through NOW. Do not label exact current year/month.",
+          "on_screen": "I’ve lived here since 2024.\nVivo aquí desde 2024.\nSINCE + inicio"
+        },
+        {
+          "id": "practice",
+          "visual": "Clear solved examples before blank; keep no active for/since highlighted. At least3s settled.",
+          "on_screen": "I’ve studied English ___ six months.\n¿Since o for?"
+        },
+        {
+          "id": "cta",
+          "visual": "Timeline clears before CTA.",
+          "on_screen": "Clases en línea\nManda GRUPO\npor mensaje privado."
+        }
+      ],
+      "qa_requirements": [
+        "Continue-to-now present-perfect context must be visible/spoken inside standalone video.",
+        "Do not imply for is only used with present perfect or since has only one meaning.",
+        "2024 is an illustrative starting year, not an owner autobiographical claim.",
+        "Audio says twenty twenty-four; visible numeral2024. No ellipsis pronounced as a word."
+      ],
+      "production_delta": "Standalone context and clear example roles; one native-DM marketing CTA; same adult male educator.",
+      "narration_sha256": "f681f3d239a2fbbf98720966fd748de59404fbedf7e41468768196396daa58c9",
+      "teaching_verification": {
+        "status": "PASS_WITH_APPLIED_REVISIONS",
+        "reviewed_utc": "2026-10-03T23:26:44Z",
+        "primary_sources": [
+          "https://dictionary.cambridge.org/grammar/british-grammar/for-or-since"
+        ]
+      },
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "tts_input": "[warmly] Esto empezó antes y sigue ahora. I’ve lived here for two years. For indica duración: two years. I’ve lived here since twenty twenty-four. Since señala cuándo empezó: twenty twenty-four. Ahora tú: I’ve studied English... six months. ¿Since o for? Clases en línea: manda GRUPO por mensaje privado.",
+      "tts_input_character_count": 304
+    },
+    {
+      "content_id": "FE261028-USED",
+      "date": "2026-10-28",
+      "title": "Hablar de hábitos de antes",
+      "format": "Video corto",
+      "audience": "Adultos y adolescentes 13+",
+      "goal": "Práctica y autoconfianza sin promesas",
+      "hook": "Algo que hacías antes",
+      "caption_fb_ig": "Para hablar de un hábito de antes que ya cambió:\n\n“I used to play soccer after school.” = “Antes jugaba fútbol después de la escuela.”\n\nEn esta estructura: used to + verbo base, como play.\n\nAhora tú: “I used to ___.”\n\nPara conocer las clases en línea, manda “GRUPO” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #InglésEnLínea",
+      "caption_tiktok": "Para hablar de un hábito de antes que ya cambió:\n\n“I used to play soccer after school.” = “Antes jugaba fútbol después de la escuela.”\n\nEn esta estructura: used to + verbo base, como play.\n\nAhora tú: “I used to ___.”\n\nPara conocer las clases en línea, manda “GRUPO” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #EnglishTips",
+      "cta": "Para conocer las clases en línea, manda “GRUPO” por mensaje privado.",
+      "offer_reference": "EDU",
+      "narration": "Piensa en algo que hacías antes. I used to play soccer after school. Antes jugaba fútbol después de la escuela. Para un hábito de antes que ya cambió, usa used to más verbo base: play. Ahora tú: I used to... ¿Cómo completarías la frase? Clases en línea: manda GRUPO por mensaje privado.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Original soccer ball and backpack in an ANTES vignette; same present-day adult host outside memory scene.",
+          "on_screen": "Algo que hacías antes"
+        },
+        {
+          "id": "example",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Quoted example and translation; no fabricated real student.",
+          "on_screen": "I used to play soccer after school.\nAntes jugaba fútbol después de la escuela."
+        },
+        {
+          "id": "rule",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Show old routine changed, without claiming soccer can never happen now. Synchronize rule+base highlight.",
+          "on_screen": "Un hábito de antes que ya cambió\nUSED TO + verbo base\nplay"
+        },
+        {
+          "id": "practice",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Solved example exits completely; hold blank at least3s.",
+          "on_screen": "I used to ___.\n¿Cómo completarías la frase?"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Soccer vignette shrinks to corner, text uncluttered.",
+          "on_screen": "Clases en línea\nManda GRUPO\npor mensaje privado."
+        }
+      ],
+      "answer_reference": "play video games; walk to school; study at night. Admitir ejemplos correctos y respetuosos.",
+      "content_qa": "No confundir used to + base con be used to + -ing. No afirmar que sólo describe hábitos: el video muestra un uso, no toda la gramática.",
+      "reuse_requirement": "Inventory existing repository/session artifacts by content ID and theme, then reuse appropriate source with the current single-host system. Do not assume old media passes.",
+      "status": "NARRATION_RECOVERED_ASR_AND_INTEGRATION_PENDING",
+      "slug": "used_to",
+      "batch": "teaching",
+      "narration_cues": [
+        "Piensa en algo que hacías antes.",
+        "I used to play soccer after school. Antes jugaba fútbol después de la escuela.",
+        "Para un hábito de antes que ya cambió, usa used to más verbo base: play.",
+        "Ahora tú: I used to... ¿Cómo completarías la frase?",
+        "Clases en línea: manda GRUPO por mensaje privado."
+      ],
+      "narration_character_count": 286,
+      "primary_cta": {
+        "destination": "native private message on viewing platform",
+        "keyword": "GRUPO",
+        "no_other_marketing_cta": true
+      },
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "Original soccer ball and backpack in an ANTES vignette; same present-day adult host outside memory scene.",
+          "on_screen": "Algo que hacías antes"
+        },
+        {
+          "id": "example",
+          "visual": "Quoted example and translation; no fabricated real student.",
+          "on_screen": "I used to play soccer after school.\nAntes jugaba fútbol después de la escuela."
+        },
+        {
+          "id": "rule",
+          "visual": "Show old routine changed, without claiming soccer can never happen now. Synchronize rule+base highlight.",
+          "on_screen": "Un hábito de antes que ya cambió\nUSED TO + verbo base\nplay"
+        },
+        {
+          "id": "practice",
+          "visual": "Solved example exits completely; hold blank at least3s.",
+          "on_screen": "I used to ___.\n¿Cómo completarías la frase?"
+        },
+        {
+          "id": "cta",
+          "visual": "Soccer vignette shrinks to corner, text uncluttered.",
+          "on_screen": "Clases en línea\nManda GRUPO\npor mensaje privado."
+        }
+      ],
+      "qa_requirements": [
+        "Standalone piece must establish changed/no-longer-current routine.",
+        "This is one use of used to; it can also describe past states. Do not claim habits only.",
+        "Do not confuse used to+base with be/get used to+ing.",
+        "No Halloween promotion or other invented seasonal promise."
+      ],
+      "production_delta": "Standalone context and clear example roles; one native-DM marketing CTA; same adult male educator.",
+      "narration_sha256": "1b21586c961f62630b4ae749b9ed047d73054b1b72bd84f6c177ada877aa5823",
+      "teaching_verification": {
+        "status": "PASS_WITH_APPLIED_REVISIONS",
+        "reviewed_utc": "2026-10-03T23:26:44Z",
+        "primary_sources": [
+          "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2-grammar/past-habits-used-to-would-past-simple?page=0"
+        ]
+      },
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "tts_input": "[warmly] Piensa en algo que hacías antes. I used to play soccer after school. Antes jugaba fútbol después de la escuela. Para un hábito de antes que ya cambió, usa used to más verbo base: play. Ahora tú: I used to... ¿Cómo completarías la frase? Clases en línea: manda GRUPO por mensaje privado.",
+      "tts_input_character_count": 295
+    },
+    {
+      "content_id": "FE261030-TRIALFAQ",
+      "date": "2026-10-30",
+      "title": "Cómo funciona la primera semana",
+      "format": "Carrusel 5 tarjetas + adaptación TikTok",
+      "audience": "Nuevos interesados en grupos y Speaking Club",
+      "goal": "Consultas y solicitudes verificables de prueba",
+      "hook": "¿Qué pasa después de la semana de prueba?",
+      "caption_fb_ig": "¿Cómo funciona la primera semana en grupos y Speaking Club?\n\nPuedes probarla sin pagar por adelantado. Si decides no continuar, no pagas nada.\n\nSi continúas, el pago cubre el primer periodo completo de cuatro semanas, incluida la semana que ya tomaste:\n• Grupos: $2,000 MXN por persona. Precio regular: $2,500 MXN por persona por nivel de cuatro semanas. Máximo 10 personas por grupo.\n• Speaking Club: $2,400 MXN por persona. Precio regular: $3,000 MXN por persona por periodo de cuatro semanas. Para intermedios y avanzados, máximo 6 personas por grupo y sin niveles.\n\nAmbos precios incluyen IVA. La prueba no añade una quinta semana.\n\nEscríbenos “GRUPO” o “CLUB” por mensaje privado para conocer el siguiente paso y las opciones de horario.\n\n#FluentEnglish #InglésEnLínea #HablarInglés",
+      "caption_tiktok": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado. Si no continúas, no pagas. Si continúas: grupos $2,000 MXN por persona por el primer nivel de 4 semanas (regular $2,500); Club $2,400 por persona por el primer periodo de 4 semanas (regular $3,000). IVA incluido. La semana de prueba está dentro de esas 4 semanas. Club: intermedios y avanzados, máximo 6, sin niveles. Grupos: máximo 10. Manda GRUPO o CLUB por privado.\n\n#FluentEnglish #InglésEnLínea #HablarInglés",
+      "cta": "GRUPO o CLUB por privado",
+      "offer_reference": "G1+C1",
+      "narration": "¿Qué pasa después de la semana de prueba? En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado. Si no continúas, no pagas. Si continúas, el pago cubre las cuatro semanas completas, incluida la primera. Consulta los precios en la descripción. Manda GRUPO o CLUB por privado.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Adult teacher and four connected week blocks.",
+          "on_screen": "¿Qué pasa después de la semana de prueba?\nGrupos y Speaking Club"
+        },
+        {
+          "id": "trial",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Only week1 highlighted; no fifth block.",
+          "on_screen": "Primera semana sin pago adelantado\nSi no continúas, no pagas"
+        },
+        {
+          "id": "continue",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "All four weeks within one bracket; week1 stays inside.",
+          "on_screen": "Si continúas, el pago cubre\nlas cuatro semanas completas,\nincluida la primera"
+        },
+        {
+          "id": "details",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Bilingual-free concise Spanish offer context, eligibility and caption pointer; allow extra read time.",
+          "on_screen": "Precios y condiciones en la descripción\nClub: intermedios y avanzados\nGrupos: máx.10 · Club: máx.6"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "One DM action, no claim of available future opening.",
+          "on_screen": "Manda GRUPO o CLUB\npor mensaje privado.\nClases en línea"
+        }
+      ],
+      "answer_reference": "",
+      "content_qa": "No decir gratis sin condiciones. Releer tarifas justo antes de publicar. No prometer apertura en noviembre, lugar reservado ni enlace de pago.",
+      "reuse_requirement": "Adaptación del concepto del domingo 4, con nueva estructura de preguntas frecuentes y ambos formatos. No reutilizar el mismo anuncio ni duplicar programaciones.",
+      "status": "NARRATION_RECOVERED_ASR_AND_INTEGRATION_PENDING",
+      "slug": "trial_faq",
+      "batch": "tiktok_adaptation",
+      "platforms": [
+        "TikTok only"
+      ],
+      "narration_character_count": 297,
+      "primary_cta": {
+        "destination": "native TikTok private message",
+        "keyword": "GRUPO o CLUB",
+        "no_other_marketing_cta": true
+      },
+      "qa_requirements": [
+        "Week1 belongs inside the four-week period; never draw five blocks.",
+        "If stopping aftertrial, no payment; ifcontinuing, allfourweeks paidincludingfirst.",
+        "Club intermediate/advanced, maximum6, nolevels; groupsmaximum10.",
+        "Recheck prices just before release; current publiccaption2000/2500groups,2400/3000Club,MXNperperson,IVAincluded.",
+        "No invented next-month opening or reserved place."
+      ],
+      "narration_sha256": "f8fe2ad24459c2c28ae9c6f94ea1f4ee6a2c05675a44ccde5551b50b9222ad47",
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "Adult teacher and four connected week blocks.",
+          "on_screen": "¿Qué pasa después de la semana de prueba?\nGrupos y Speaking Club"
+        },
+        {
+          "id": "trial",
+          "visual": "Only week1 highlighted; no fifth block.",
+          "on_screen": "Primera semana sin pago adelantado\nSi no continúas, no pagas"
+        },
+        {
+          "id": "continue",
+          "visual": "All four weeks within one bracket; week1 stays inside.",
+          "on_screen": "Si continúas, el pago cubre\nlas cuatro semanas completas,\nincluida la primera"
+        },
+        {
+          "id": "details",
+          "visual": "Bilingual-free concise Spanish offer context, eligibility and caption pointer; allow extra read time.",
+          "on_screen": "Precios y condiciones en la descripción\nClub: intermedios y avanzados\nGrupos: máx.10 · Club: máx.6"
+        },
+        {
+          "id": "cta",
+          "visual": "One DM action, no claim of available future opening.",
+          "on_screen": "Manda GRUPO o CLUB\npor mensaje privado.\nClases en línea"
+        }
+      ],
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "caption_fb_ig_usage": "Historical source-family context only. No new Facebook or Instagram video placement; existing carousels remain owned by scheduler.",
+      "tts_input": "[warmly] ¿Qué pasa después de la semana de prueba? En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado. Si no continúas, no pagas. Si continúas, el pago cubre las cuatro semanas completas, incluida la primera. Consulta los precios en la descripción. Manda GRUPO o CLUB por privado.",
+      "tts_input_character_count": 306
+    }
+  ],
+  "grammar_verification": "Independent six-topic review PASS after applied used-to meaning, continuing-now context, and clarification-role fixes.",
+  "current_browser": "Final narration recovered and privately preserved; Claude integration waits for batch2 completion and source-ASR handoff.",
+  "audio_planning": {
+    "generation_status": "GENERATED_ONCE_PER_SCRIPT_TWO_TAKES_EACH",
+    "last_verified_credit_balance": 36508,
+    "balance_as_of": "2026-10-04T02:13:39Z",
+    "must_recheck_live_cost": true
+  },
+  "release_gates": [
+    "Actual narrated MP4 generated in Claude Code",
+    "Independent decode/format/source cue identity and sync checks",
+    "Independent full-duration visual review with dense transition checks",
+    "Genuine auditory listening/subjective full AV check, or owner direction addressing unresolved gate",
+    "Actual target-app cover/overlay/audio playback checks",
+    "Required native AI/own-brand disclosures",
+    "No duplicate published/scheduled items; verified native schedule receipt"
+  ],
+  "production_batches": [
+    {
+      "batch": 3,
+      "ids": [
+        "FE261026-SINCEFOR",
+        "FE261028-USED",
+        "FE261030-TRIALFAQ"
+      ]
+    }
+  ],
+  "final_consistency_review": {
+    "status": "PASS_AFTER_BILLING_UNIT_FIX",
+    "reviewed_utc": "2026-10-03T23:30:54Z",
+    "scope": "All nine CTAs, storyboards versus scenes, and business-claim wording; six revised teaching narrations and captions.",
+    "correction": "Removed per-class billing wording from private/company reference caption. No scheduled post changed."
+  },
+  "active_scope": "Batch3 only"
+}

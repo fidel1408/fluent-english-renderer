@@ -1,0 +1,284 @@
+{
+  "video": "since_for",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/since_for_take1.mp3",
+  "masterSha256": "cf0dddd6d55d0844be1801ca26745aa243c80945dead31e402708febb1c41d5b",
+  "sampleRate": 44100,
+  "fullMasterSamples": 1102464,
+  "fullMasterSeconds": 24.999183673,
+  "retainedCueSamples": 1102464,
+  "retainedCueSeconds": 24.999183673,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 35.8,
+  "addedSilenceSeconds": 10.800816,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Esto empezó antes y sigue ahora.",
+      "caption": "Esto empezó antes y sigue ahora.",
+      "cueFile": "audio/cues/since_for_c01.wav",
+      "cueWavSamples": 114258,
+      "sourceSampleRange": [
+        0,
+        114258
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.590884,
+      "finalStart": 0.6,
+      "finalEnd": 3.191,
+      "offsetSeconds": 0.6,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.6,
+        2.924
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "I’ve lived here for two years.",
+      "caption": "I’ve lived here for two years.",
+      "cueFile": "audio/cues/since_for_c02.wav",
+      "cueWavSamples": 101004,
+      "sourceSampleRange": [
+        114258,
+        215262
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.590884,
+      "sourceEndSeconds": 4.881224,
+      "finalStart": 3.961,
+      "finalEnd": 6.251,
+      "offsetSeconds": 1.370116,
+      "gapBeforeAdded": 0.77,
+      "speechActivityFinal": [
+        4.228,
+        5.995
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "For indica duración:",
+      "caption": "For indica duración:",
+      "cueFile": "audio/cues/since_for_c03.wav",
+      "cueWavSamples": 90542,
+      "sourceSampleRange": [
+        215262,
+        305804
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 4.881224,
+      "sourceEndSeconds": 6.934331,
+      "finalStart": 6.351,
+      "finalEnd": 8.404,
+      "offsetSeconds": 1.469776,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        6.607,
+        8.156
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "two years.",
+      "caption": "two years.",
+      "cueFile": "audio/cues/since_for_c04.wav",
+      "cueWavSamples": 57114,
+      "sourceSampleRange": [
+        305804,
+        362918
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 6.934331,
+      "sourceEndSeconds": 8.229433,
+      "finalStart": 8.504,
+      "finalEnd": 9.799,
+      "offsetSeconds": 1.569669,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        8.753,
+        9.463
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "I’ve lived here since twenty twenty-four.",
+      "caption": "I’ve lived here since twenty twenty-four.",
+      "cueFile": "audio/cues/since_for_c05.wav",
+      "cueWavSamples": 114456,
+      "sourceSampleRange": [
+        362918,
+        477374
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 8.229433,
+      "sourceEndSeconds": 10.824807,
+      "finalStart": 10.749,
+      "finalEnd": 13.344,
+      "offsetSeconds": 2.519567,
+      "gapBeforeAdded": 0.95,
+      "speechActivityFinal": [
+        11.085,
+        13.057
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Since señala cuándo empezó:",
+      "caption": "Since señala cuándo empezó:",
+      "cueFile": "audio/cues/since_for_c06.wav",
+      "cueWavSamples": 125746,
+      "sourceSampleRange": [
+        477374,
+        603120
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 10.824807,
+      "sourceEndSeconds": 13.67619,
+      "finalStart": 13.444,
+      "finalEnd": 16.295,
+      "offsetSeconds": 2.619193,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        13.732,
+        16.003
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "twenty twenty-four.",
+      "caption": "twenty twenty-four.",
+      "cueFile": "audio/cues/since_for_c07.wav",
+      "cueWavSamples": 69859,
+      "sourceSampleRange": [
+        603120,
+        672979
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 13.67619,
+      "sourceEndSeconds": 15.260295,
+      "finalStart": 16.395,
+      "finalEnd": 17.979,
+      "offsetSeconds": 2.71881,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        16.688,
+        17.67
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú:",
+      "caption": "Ahora tú:",
+      "cueFile": "audio/cues/since_for_c08.wav",
+      "cueWavSamples": 48896,
+      "sourceSampleRange": [
+        672979,
+        721875
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 15.260295,
+      "sourceEndSeconds": 16.369048,
+      "finalStart": 18.659,
+      "finalEnd": 19.768,
+      "offsetSeconds": 3.398705,
+      "gapBeforeAdded": 0.68,
+      "speechActivityFinal": [
+        18.968,
+        19.44
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "I’ve studied English… six months.",
+      "caption": "I’ve studied English… six months.",
+      "cueFile": "audio/cues/since_for_c09.wav",
+      "cueWavSamples": 137286,
+      "sourceSampleRange": [
+        721875,
+        859161
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 16.369048,
+      "sourceEndSeconds": 19.482109,
+      "finalStart": 19.868,
+      "finalEnd": 22.981,
+      "offsetSeconds": 3.498952,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        20.195,
+        22.753
+      ]
+    },
+    {
+      "id": "c10",
+      "text": "¿Since o for?",
+      "caption": "¿Since o for?",
+      "cueFile": "audio/cues/since_for_c10.wav",
+      "cueWavSamples": 88996,
+      "sourceSampleRange": [
+        859161,
+        948157
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 19.482109,
+      "sourceEndSeconds": 21.500159,
+      "finalStart": 23.081,
+      "finalEnd": 25.099,
+      "offsetSeconds": 3.598891,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        23.309,
+        24.646
+      ]
+    },
+    {
+      "id": "c11",
+      "text": "Clases en línea:",
+      "caption": "Clases en línea:",
+      "cueFile": "audio/cues/since_for_c11.wav",
+      "cueWavSamples": 63594,
+      "sourceSampleRange": [
+        948157,
+        1011751
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 21.500159,
+      "sourceEndSeconds": 22.9422,
+      "finalStart": 28.599,
+      "finalEnd": 30.041,
+      "offsetSeconds": 7.098841,
+      "gapBeforeAdded": 3.5,
+      "speechActivityFinal": [
+        29.052,
+        29.875
+      ]
+    },
+    {
+      "id": "c12",
+      "text": "manda GRUPO por mensaje privado.",
+      "caption": "manda GRUPO por mensaje privado.",
+      "cueFile": "audio/cues/since_for_c12.wav",
+      "cueWavSamples": 90713,
+      "sourceSampleRange": [
+        1011751,
+        1102464
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 22.9422,
+      "sourceEndSeconds": 24.999184,
+      "finalStart": 30.241,
+      "finalEnd": 32.298,
+      "offsetSeconds": 7.2988,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        30.407,
+        32.107
+      ]
+    }
+  ]
+}

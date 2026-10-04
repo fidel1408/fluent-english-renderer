@@ -1,0 +1,152 @@
+{
+  "video": "trial_faq",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/trial_faq_take2.mp3",
+  "masterSha256": "7c489dd1eba4e25ef29a51f727b867d1425875d7821a9d83e77cc404088a90d7",
+  "sampleRate": 44100,
+  "fullMasterSamples": 844416,
+  "fullMasterSeconds": 19.147755102,
+  "retainedCueSamples": 844416,
+  "retainedCueSeconds": 19.147755102,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 31.2,
+  "addedSilenceSeconds": 12.052245,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Qué pasa después de la semana de prueba?",
+      "caption": "¿Qué pasa después de la semana de prueba?",
+      "cueFile": "audio/cues/trial_faq_c01.wav",
+      "cueWavSamples": 93735,
+      "sourceSampleRange": [
+        0,
+        93735
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.12551,
+      "finalStart": 0.6,
+      "finalEnd": 2.726,
+      "offsetSeconds": 0.6,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.6,
+        2.451
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.",
+      "caption": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.",
+      "cueFile": "audio/cues/trial_faq_c02.wav",
+      "cueWavSamples": 213160,
+      "sourceSampleRange": [
+        93735,
+        306895
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.12551,
+      "sourceEndSeconds": 6.95907,
+      "finalStart": 3.476,
+      "finalEnd": 8.31,
+      "offsetSeconds": 1.35049,
+      "gapBeforeAdded": 0.75,
+      "speechActivityFinal": [
+        3.751,
+        8.074
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Si no continúas, no pagas.",
+      "caption": "Si no continúas, no pagas.",
+      "cueFile": "audio/cues/trial_faq_c03.wav",
+      "cueWavSamples": 95238,
+      "sourceSampleRange": [
+        306895,
+        402133
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 6.95907,
+      "sourceEndSeconds": 9.118662,
+      "finalStart": 8.41,
+      "finalEnd": 10.57,
+      "offsetSeconds": 1.45093,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        8.646,
+        10.37
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Si continúas, el pago cubre las cuatro semanas completas, incluida la primera.",
+      "caption": "Si continúas, el pago cubre las cuatro semanas completas, incluida la primera.",
+      "cueFile": "audio/cues/trial_faq_c04.wav",
+      "cueWavSamples": 238545,
+      "sourceSampleRange": [
+        402133,
+        640678
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 9.118662,
+      "sourceEndSeconds": 14.527846,
+      "finalStart": 11.47,
+      "finalEnd": 16.879,
+      "offsetSeconds": 2.351338,
+      "gapBeforeAdded": 0.9,
+      "speechActivityFinal": [
+        11.67,
+        16.613
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Consulta los precios en la descripción.",
+      "caption": "Consulta los precios en la descripción.",
+      "cueFile": "audio/cues/trial_faq_c05.wav",
+      "cueWavSamples": 92551,
+      "sourceSampleRange": [
+        640678,
+        733229
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 14.527846,
+      "sourceEndSeconds": 16.626508,
+      "finalStart": 19.579,
+      "finalEnd": 21.678,
+      "offsetSeconds": 5.051154,
+      "gapBeforeAdded": 2.7,
+      "speechActivityFinal": [
+        19.845,
+        21.477
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Manda GRUPO o CLUB por privado.",
+      "caption": "Manda GRUPO o CLUB por privado.",
+      "cueFile": "audio/cues/trial_faq_c06.wav",
+      "cueWavSamples": 111187,
+      "sourceSampleRange": [
+        733229,
+        844416
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 16.626508,
+      "sourceEndSeconds": 19.147755,
+      "finalStart": 25.128,
+      "finalEnd": 27.649,
+      "offsetSeconds": 8.501492,
+      "gapBeforeAdded": 3.45,
+      "speechActivityFinal": [
+        25.329,
+        27.357
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# October batch 3 - verification report (SINCEFOR / USED / TRIALFAQ)
+
+**All three files: NARRATED, QA-PENDING. Not final, not publish-ready, not scheduled. Nobody has listened. ASR is not listening.** Sonnet 5.5, High, Fast off; no TTS, external service, purchase, key, PR or publication.
+
+| ID | Source | File | Duration | SHA256 |
+|---|---|---|---|---|
+| FE261026-SINCEFOR | since_for_take1.mp3 | `out/FE261026-SINCEFOR_batch3_single-host_narrated_QA-pending.mp4` | 35.8 s | 2111868a813c9d01bbe88396b9c16dd62f5c7502ca743c3ef68cf11351171c2f |
+| FE261028-USED | used_to_take2.mp3 | `out/FE261028-USED_batch3_single-host_narrated_QA-pending.mp4` | 35.9 s | 582b5220bd087ab42a2c8cdd2520d4fce337369f6185c4f095a54fbd92052346 |
+| FE261030-TRIALFAQ | trial_faq_take2.mp3 | `out/FE261030-TRIALFAQ_batch3_single-host_narrated_QA-pending.mp4` | 31.2 s | 16b9f63876a09854f45fbc31f7119f6ff4ff00b32f181f636a470f74559a84fb |
+
+Preserved byte-identical (re-hashed): batch2 and batch1 REV2/first-version MP4s, I AGREE REV3, Actually REV4, Looking REV4.
+
+## Sources and edit method
+- Chosen originals (provisional, from independent small/medium ASR + measured phrase spacing; not an audition): since_for_take1 (cf0dddd6...), used_to_take2 (898c618a...), trial_faq_take2 (7c489dd1...). All six MP3 hashes = inventory; alternatives preserved in `audio/originals/`.
+- Cue WAVs concatenated are bit-identical to each decoded master (1,102,464 / 1,028,736 / 844,416 samples, 44.1 kHz mono): every sample once, in order; no stretch, pitch change, fade or trim (`qa/batch3_source_identity.json`). Cuts are integer sample midpoints of waveform-measured silences by this build (island counts 17 / 14 / 8 = the scripts' pause structure; the build fails otherwise). ASR word times were NOT used as cuts; the handoff anchors (FOR/SINCE emphasis, "four weeks" 11.2 s, "primera" 13.0 s) are approximate visual hints mapped through each cue's final start. Edit maps: `qa/*_source_to_final_edit_map.json`.
+- Every card finishes entering >= 0.2 s before its phrase's waveform start (private/handoff settle targets are met or earlier: e.g. FOR example card settled before source 2.75 s, SINCE before 8.45 s, practice before 15.40 s, CTA before 21.75 s; USED example before 2.25 s, rule before 7.80 s, practice before 14.40 s, CTA before 19.60 s; TRIAL first card before 2.20 s, conditional card before 9.10 s, details before 14.55 s, CTA before 16.65 s). Each state leaves only after its speech ends. The hook is fully in at 0.5 s; first words start >= 0.6 s (no opening fade).
+- Added silence only after complete phrases: reading holds for the settled examples, ~3.4 s after each practice question (unanswered >= 3 s), and ~3.7 s for the dense TRIAL details card.
+
+## Content
+- **SINCE/FOR:** apartment door/key + timeline ending at AHORA, visible from the opening. FOR: coral bracket over the duration span + "I've lived here for two years." / "Vivo aquí desde hace dos años." / FOR + duración as one state. SINCE: full replacement; 2024 flag and arrow to AHORA, "since 2024." / "Vivo aquí desde 2024." / SINCE + inicio. No current month/year is shown. Practice clears solved examples and highlights; blank stays empty ("I've studied English ____ six months." / "¿Since o for?"); no answer is shown.
+- **USED TO:** memory vignette (ANTES: soccer ball + backpack) beside a present-day host. Example + translation, then the rule card (Un hábito de antes que ya cambió / USED TO + verbo base / play) while the vignette dims and an AHORA chip appears (no prohibition sign; not "never again"). Practice "I used to ____." stays blank; the CTA shows the ball as a small corner icon.
+- **TRIAL FAQ (TikTok-only):** exactly four connected week blocks inside one bracket in every state, no fifth block. First card: Primera semana sin pago adelantado / Si no continúas, no pagas. Continuation card shows the whole condition together (Si continúas, el pago cubre las cuatro semanas completas, incluida la primera) while all four weeks, including week 1, sit inside the bracket. Details card: Precios y condiciones en la descripción / Club: intermedios y avanzados / Grupos: máx. 10, Club: máx. 6 - no prices on screen, no reserved place, next-month opening, private/company trial or "free" claim (audit of every frame). Recheck prices/conditions in the caption before publishing.
+- One native private-message CTA each (GRUPO / GRUPO / GRUPO o CLUB); one adult host; quoted lines are labelled demonstrations (EJEMPLO: FOR / EJEMPLO: SINCE / EJEMPLO / REGLA / SEMANA DE PRUEBA / SI CONTINÚAS).
+
+## Encoded-file evidence
+- **FE261026-SINCEFOR**: min cue correlation 0.985 at +5 ms; -17.9 LUFS, true peak -4 dBTP; mouth open 519/519 island frames, 0 outside; added silence 10.800816 s; encoded holds: for_example 2.77 s (min 2.5); since_example 3.5 s (min 2.5); practice_unanswered 8.97 s (min 3); practice_after_question 3.2 s (min 3); cta 6.7 s (min 3); caption glyph bounds x 111.5-848.5, y bottom 1398.8; smallest settled text 12.9 px; encoded caption-reserve samples 61, leaks 0
+- **FE261028-USED**: min cue correlation 0.991 at +5 ms; -17.5 LUFS, true peak -4.3 dBTP; mouth open 473/473 island frames, 0 outside; added silence 12.572653 s; encoded holds: example_bilingual 5.07 s (min 2.5); rule_card 2.73 s (min 2.5); practice_unanswered 4.53 s (min 3); practice_after_question 3.13 s (min 3); cta 7.1 s (min 3); caption glyph bounds x 106-854, y bottom 1398.8; smallest settled text 12.9 px; encoded caption-reserve samples 57, leaks 0
+- **FE261030-TRIALFAQ**: min cue correlation 0.992 at +5 ms; -17.5 LUFS, true peak -4.9 dBTP; mouth open 481/481 island frames, 0 outside; added silence 12.052245 s; encoded holds: trial_state 6.83 s (min 2.5); continuation_state 2.63 s (min 2.5); details_card 4.4 s (min 4); cta 5.83 s (min 3); caption glyph bounds x 110.5-849.5, y bottom 1399; smallest settled text 12.9 px; encoded caption-reserve samples 59, leaks 0
+
+- ffprobe/decode: H.264 High, yuv420p, 1080x1920, 30/1 fps, exact frame counts, AAC 48 kHz stereo, faststart, whole-file decode clean, no clipping (`qa/FE26*_batch3_ffprobe.json`, `qa/*batch3*verify.json`).
+- Levels: -17.9 / -17.5 / -17.5 LUFS; true peaks -4.0 / -4.3 / -4.9 dBTP. Only attenuation was applied to the final mixes (0 / -0.6 / -1.3 dB via `mixGainDb`); no boost; originals and cue WAVs untouched.
+- Text audit of every frame: required strings at full opacity before/through their phrases; no text overlaps; settled text >= 12.9 px at 270x480; caption glyph bounds inside x100-860 / y180-1420; forbidden strings absent; practice windows contain no solved answer.
+- Frames: `qa/batch3_frames/` transition sheets at every boundary (reviewed: sequential, empty card before text, no overlap, no contradictory label); hold sheets stay in the repo.
+
+## NOT done (open gates)
+1. Real listening (since/for, used to, spoken 2024, tone, naturalness, clipping at cue edges, SFX balance; FOR/four spellings are ASR homophone issues, not pronunciation findings). 2. Target-app playback/overlay/cover checks (TRIAL FAQ is TikTok-only). 3. Native-speaker read of the copy; AI-audio and own-brand disclosures; price recheck before publishing. 4. ElevenLabs plan/licence (owner). 5. Independent actual-media recheck; this is creator evidence only.

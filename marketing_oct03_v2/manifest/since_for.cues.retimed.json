@@ -1,0 +1,544 @@
+{
+  "video": "since_for",
+  "contentId": "FE261026-SINCEFOR",
+  "title": "SINCE / FOR",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    40
+  ],
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take choice (since_for take1, used_to take2, trial_faq take2) is a provisional editorial choice from independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Esto empezó antes y sigue ahora.",
+      "est": 2.591,
+      "gap": 0,
+      "file": "audio/cues/since_for_c01.wav",
+      "start": 0.6,
+      "end": 3.191,
+      "audio": "audio/cues/since_for_c01.wav",
+      "audioSeconds": 2.591,
+      "padHead": 0,
+      "padTail": 0.267,
+      "cs": 0.6,
+      "ce": 2.924,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0,
+          "e": 2.324
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I’ve lived here for two years.",
+      "est": 2.29,
+      "gap": 0.77,
+      "file": "audio/cues/since_for_c02.wav",
+      "start": 3.961,
+      "end": 6.251,
+      "audio": "audio/cues/since_for_c02.wav",
+      "audioSeconds": 2.29,
+      "padHead": 0.267,
+      "padTail": 0.256,
+      "cs": 4.228,
+      "ce": 5.995,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.267,
+          "e": 2.034
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "For indica duración:",
+      "est": 2.053,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c03.wav",
+      "start": 6.351,
+      "end": 8.404,
+      "audio": "audio/cues/since_for_c03.wav",
+      "audioSeconds": 2.053,
+      "padHead": 0.256,
+      "padTail": 0.248,
+      "cs": 6.607,
+      "ce": 8.156,
+      "marks": {
+        "forStart": 0.256,
+        "durStart": 0.879
+      },
+      "islands": [
+        {
+          "s": 0.256,
+          "e": 0.731
+        },
+        {
+          "s": 0.879,
+          "e": 1.805
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "two years.",
+      "est": 1.295,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c04.wav",
+      "start": 8.504,
+      "end": 9.799,
+      "audio": "audio/cues/since_for_c04.wav",
+      "audioSeconds": 1.295,
+      "padHead": 0.249,
+      "padTail": 0.336,
+      "cs": 8.753,
+      "ce": 9.463,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.249,
+          "e": 0.959
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I’ve lived here since twenty twenty-four.",
+      "est": 2.595,
+      "gap": 0.95,
+      "file": "audio/cues/since_for_c05.wav",
+      "start": 10.749,
+      "end": 13.344,
+      "audio": "audio/cues/since_for_c05.wav",
+      "audioSeconds": 2.595,
+      "padHead": 0.336,
+      "padTail": 0.287,
+      "cs": 11.085,
+      "ce": 13.057,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.336,
+          "e": 2.308
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Since señala cuándo empezó:",
+      "est": 2.851,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c06.wav",
+      "start": 13.444,
+      "end": 16.295,
+      "audio": "audio/cues/since_for_c06.wav",
+      "audioSeconds": 2.851,
+      "padHead": 0.288,
+      "padTail": 0.292,
+      "cs": 13.732,
+      "ce": 16.003,
+      "marks": {
+        "sinceStart": 0.288
+      },
+      "islands": [
+        {
+          "s": 0.288,
+          "e": 0.916
+        },
+        {
+          "s": 1.055,
+          "e": 1.529
+        },
+        {
+          "s": 1.689,
+          "e": 2.559
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "twenty twenty-four.",
+      "est": 1.584,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c07.wav",
+      "start": 16.395,
+      "end": 17.979,
+      "audio": "audio/cues/since_for_c07.wav",
+      "audioSeconds": 1.584,
+      "padHead": 0.293,
+      "padTail": 0.309,
+      "cs": 16.688,
+      "ce": 17.67,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.293,
+          "e": 1.275
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Ahora tú:",
+      "est": 1.109,
+      "gap": 0.68,
+      "file": "audio/cues/since_for_c08.wav",
+      "start": 18.659,
+      "end": 19.768,
+      "audio": "audio/cues/since_for_c08.wav",
+      "audioSeconds": 1.109,
+      "padHead": 0.309,
+      "padTail": 0.328,
+      "cs": 18.968,
+      "ce": 19.44,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.309,
+          "e": 0.781
+        }
+      ]
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I’ve studied English… six months.",
+      "est": 3.113,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c09.wav",
+      "start": 19.868,
+      "end": 22.981,
+      "audio": "audio/cues/since_for_c09.wav",
+      "audioSeconds": 3.113,
+      "padHead": 0.327,
+      "padTail": 0.228,
+      "cs": 20.195,
+      "ce": 22.753,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.327,
+          "e": 1.682
+        },
+        {
+          "s": 2.024,
+          "e": 2.885
+        }
+      ]
+    },
+    {
+      "id": "c10",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Since o for?",
+      "est": 2.018,
+      "gap": 0.1,
+      "file": "audio/cues/since_for_c10.wav",
+      "start": 23.081,
+      "end": 25.099,
+      "audio": "audio/cues/since_for_c10.wav",
+      "audioSeconds": 2.018,
+      "padHead": 0.228,
+      "padTail": 0.453,
+      "cs": 23.309,
+      "ce": 24.646,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.228,
+          "e": 0.831
+        },
+        {
+          "s": 1.098,
+          "e": 1.565
+        }
+      ]
+    },
+    {
+      "id": "c11",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Clases en línea:",
+      "est": 1.442,
+      "gap": 3.5,
+      "file": "audio/cues/since_for_c11.wav",
+      "start": 28.599,
+      "end": 30.041,
+      "audio": "audio/cues/since_for_c11.wav",
+      "audioSeconds": 1.442,
+      "padHead": 0.453,
+      "padTail": 0.166,
+      "cs": 29.052,
+      "ce": 29.875,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.453,
+          "e": 1.276
+        }
+      ]
+    },
+    {
+      "id": "c12",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "manda GRUPO por mensaje privado.",
+      "est": 2.057,
+      "gap": 0.2,
+      "file": "audio/cues/since_for_c12.wav",
+      "start": 30.241,
+      "end": 32.298,
+      "audio": "audio/cues/since_for_c12.wav",
+      "audioSeconds": 2.057,
+      "padHead": 0.166,
+      "padTail": 0.191,
+      "cs": 30.407,
+      "ce": 32.107,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.166,
+          "e": 1.866
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "anchors": {},
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 1102464,
+    "partitions": [
+      [
+        0,
+        114258
+      ],
+      [
+        114258,
+        215262
+      ],
+      [
+        215262,
+        305804
+      ],
+      [
+        305804,
+        362918
+      ],
+      [
+        362918,
+        477374
+      ],
+      [
+        477374,
+        603120
+      ],
+      [
+        603120,
+        672979
+      ],
+      [
+        672979,
+        721875
+      ],
+      [
+        721875,
+        859161
+      ],
+      [
+        859161,
+        948157
+      ],
+      [
+        948157,
+        1011751
+      ],
+      [
+        1011751,
+        1102464
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        2.324
+      ],
+      [
+        2.858,
+        4.625
+      ],
+      [
+        5.138,
+        5.612
+      ],
+      [
+        5.76,
+        6.686
+      ],
+      [
+        7.183,
+        7.893
+      ],
+      [
+        8.566,
+        10.537
+      ],
+      [
+        11.113,
+        11.741
+      ],
+      [
+        11.88,
+        12.353
+      ],
+      [
+        12.514,
+        13.384
+      ],
+      [
+        13.969,
+        14.951
+      ],
+      [
+        15.569,
+        16.042
+      ],
+      [
+        16.697,
+        18.052
+      ],
+      [
+        18.393,
+        19.254
+      ],
+      [
+        19.71,
+        20.313
+      ],
+      [
+        20.58,
+        21.048
+      ],
+      [
+        21.953,
+        22.776
+      ],
+      [
+        23.108,
+        24.808
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        15
+      ],
+      [
+        16
+      ]
+    ],
+    "marks": {
+      "forStart": [
+        "c03",
+        0
+      ],
+      "durStart": [
+        "c03",
+        1
+      ],
+      "sinceStart": [
+        "c06",
+        0
+      ]
+    }
+  },
+  "duration": 35.8,
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/since_for.cues.json",
+  "alignmentSource": {
+    "file": "manifest/since_for.alignment.json",
+    "master": "audio/originals/since_for_take1.mp3",
+    "masterSha256": "cf0dddd6d55d0844be1801ca26745aa243c80945dead31e402708febb1c41d5b",
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    }
+  },
+  "warnings": []
+}

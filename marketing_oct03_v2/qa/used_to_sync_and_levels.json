@@ -1,0 +1,164 @@
+{
+  "file": "FE261028-USED_batch3_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Piensa en algo que hacías antes.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "I used to play soccer after school.",
+      "correlation": 0.998,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "Antes jugaba fútbol después de la escuela.",
+      "correlation": 0.997,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Para un hábito de antes que ya cambió,",
+      "correlation": 0.997,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "usa used to más verbo base: play.",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "Ahora tú:",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "I used to…",
+      "correlation": 0.991,
+      "lagMs": 5
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo completarías la frase?",
+      "correlation": 0.993,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea:",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c10",
+      "text": "manda GRUPO por mensaje privado.",
+      "correlation": 0.995,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.59,
+      "expect": "ON c01",
+      "creamPixels": 6146
+    },
+    {
+      "at": 4.63,
+      "expect": "ON c02",
+      "creamPixels": 6036
+    },
+    {
+      "at": 7.5,
+      "expect": "ON c03",
+      "creamPixels": 5659
+    },
+    {
+      "at": 10.95,
+      "expect": "ON c04",
+      "creamPixels": 5726
+    },
+    {
+      "at": 14.08,
+      "expect": "ON c05",
+      "creamPixels": 6151
+    },
+    {
+      "at": 20.12,
+      "expect": "ON c06",
+      "creamPixels": 5704
+    },
+    {
+      "at": 21.79,
+      "expect": "ON c07",
+      "creamPixels": 5686
+    },
+    {
+      "at": 23.72,
+      "expect": "ON c08",
+      "creamPixels": 6252
+    },
+    {
+      "at": 29.15,
+      "expect": "ON c09",
+      "creamPixels": 5804
+    },
+    {
+      "at": 31.09,
+      "expect": "ON c10",
+      "creamPixels": 5955
+    },
+    {
+      "at": 3.09,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 5.96,
+      "expect": "OFF (gap c02-c03)",
+      "creamPixels": 0
+    },
+    {
+      "at": 9.24,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 17.81,
+      "expect": "OFF (gap c05-c06)",
+      "creamPixels": 0
+    },
+    {
+      "at": 20.78,
+      "expect": "OFF (gap c06-c07)",
+      "creamPixels": 0
+    },
+    {
+      "at": 22.73,
+      "expect": "OFF (gap c07-c08)",
+      "creamPixels": 0
+    },
+    {
+      "at": 26.55,
+      "expect": "OFF (gap c08-c09)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.5,
+    "loudnessRangeLU": 13.4,
+    "truePeakdBTP": -4.3
+  },
+  "finalHold": {
+    "from": 32.32,
+    "to": 35.9,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.58
+  },
+  "pass": true
+}

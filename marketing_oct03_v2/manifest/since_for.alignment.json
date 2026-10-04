@@ -1,0 +1,412 @@
+{
+  "video": "since_for",
+  "master": "audio/originals/since_for_take1.mp3",
+  "masterSha256": "cf0dddd6d55d0844be1801ca26745aa243c80945dead31e402708febb1c41d5b",
+  "totalSamples": 1102464,
+  "sampleRate": 44100,
+  "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Esto empezó antes y sigue ahora.",
+      "file": "audio/cues/since_for_c01.wav",
+      "sourceSampleRange": [
+        0,
+        114258
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.590884,
+      "seconds": 2.590884,
+      "padHead": 0,
+      "padTail": 0.267,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 2.324
+        }
+      ],
+      "activityInCue": [
+        0,
+        2.324
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "I’ve lived here for two years.",
+      "file": "audio/cues/since_for_c02.wav",
+      "sourceSampleRange": [
+        114258,
+        215262
+      ],
+      "sourceStart": 2.590884,
+      "sourceEnd": 4.881224,
+      "seconds": 2.29034,
+      "padHead": 0.267,
+      "padTail": 0.256,
+      "islandsInCue": [
+        {
+          "s": 0.267,
+          "e": 2.034
+        }
+      ],
+      "activityInCue": [
+        0.267,
+        2.034
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        13,
+        30
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "For indica duración:",
+      "file": "audio/cues/since_for_c03.wav",
+      "sourceSampleRange": [
+        215262,
+        305804
+      ],
+      "sourceStart": 4.881224,
+      "sourceEnd": 6.934331,
+      "seconds": 2.053107,
+      "padHead": 0.256,
+      "padTail": 0.248,
+      "islandsInCue": [
+        {
+          "s": 0.256,
+          "e": 0.731
+        },
+        {
+          "s": 0.879,
+          "e": 1.805
+        }
+      ],
+      "activityInCue": [
+        0.256,
+        1.805
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        31,
+        6
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "two years.",
+      "file": "audio/cues/since_for_c04.wav",
+      "sourceSampleRange": [
+        305804,
+        362918
+      ],
+      "sourceStart": 6.934331,
+      "sourceEnd": 8.229433,
+      "seconds": 1.295102,
+      "padHead": 0.249,
+      "padTail": 0.336,
+      "islandsInCue": [
+        {
+          "s": 0.249,
+          "e": 0.959
+        }
+      ],
+      "activityInCue": [
+        0.249,
+        0.959
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        7,
+        27
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "I’ve lived here since twenty twenty-four.",
+      "file": "audio/cues/since_for_c05.wav",
+      "sourceSampleRange": [
+        362918,
+        477374
+      ],
+      "sourceStart": 8.229433,
+      "sourceEnd": 10.824807,
+      "seconds": 2.595374,
+      "padHead": 0.336,
+      "padTail": 0.287,
+      "islandsInCue": [
+        {
+          "s": 0.336,
+          "e": 2.308
+        }
+      ],
+      "activityInCue": [
+        0.336,
+        2.308
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        26,
+        7
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Since señala cuándo empezó:",
+      "file": "audio/cues/since_for_c06.wav",
+      "sourceSampleRange": [
+        477374,
+        603120
+      ],
+      "sourceStart": 10.824807,
+      "sourceEnd": 13.67619,
+      "seconds": 2.851383,
+      "padHead": 0.288,
+      "padTail": 0.292,
+      "islandsInCue": [
+        {
+          "s": 0.288,
+          "e": 0.916
+        },
+        {
+          "s": 1.055,
+          "e": 1.529
+        },
+        {
+          "s": 1.689,
+          "e": 2.559
+        }
+      ],
+      "activityInCue": [
+        0.288,
+        2.559
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        8,
+        23
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "twenty twenty-four.",
+      "file": "audio/cues/since_for_c07.wav",
+      "sourceSampleRange": [
+        603120,
+        672979
+      ],
+      "sourceStart": 13.67619,
+      "sourceEnd": 15.260295,
+      "seconds": 1.584104,
+      "padHead": 0.293,
+      "padTail": 0.309,
+      "islandsInCue": [
+        {
+          "s": 0.293,
+          "e": 1.275
+        }
+      ],
+      "activityInCue": [
+        0.293,
+        1.275
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        23,
+        17
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú:",
+      "file": "audio/cues/since_for_c08.wav",
+      "sourceSampleRange": [
+        672979,
+        721875
+      ],
+      "sourceStart": 15.260295,
+      "sourceEnd": 16.369048,
+      "seconds": 1.108753,
+      "padHead": 0.309,
+      "padTail": 0.328,
+      "islandsInCue": [
+        {
+          "s": 0.309,
+          "e": 0.781
+        }
+      ],
+      "activityInCue": [
+        0.309,
+        0.781
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        18,
+        23
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "I’ve studied English… six months.",
+      "file": "audio/cues/since_for_c09.wav",
+      "sourceSampleRange": [
+        721875,
+        859161
+      ],
+      "sourceStart": 16.369048,
+      "sourceEnd": 19.482109,
+      "seconds": 3.113061,
+      "padHead": 0.327,
+      "padTail": 0.228,
+      "islandsInCue": [
+        {
+          "s": 0.327,
+          "e": 1.682
+        },
+        {
+          "s": 2.024,
+          "e": 2.885
+        }
+      ],
+      "activityInCue": [
+        0.327,
+        2.885
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        20,
+        13
+      ]
+    },
+    {
+      "id": "c10",
+      "text": "¿Since o for?",
+      "file": "audio/cues/since_for_c10.wav",
+      "sourceSampleRange": [
+        859161,
+        948157
+      ],
+      "sourceStart": 19.482109,
+      "sourceEnd": 21.500159,
+      "seconds": 2.01805,
+      "padHead": 0.228,
+      "padTail": 0.453,
+      "islandsInCue": [
+        {
+          "s": 0.228,
+          "e": 0.831
+        },
+        {
+          "s": 1.098,
+          "e": 1.565
+        }
+      ],
+      "activityInCue": [
+        0.228,
+        1.565
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        15,
+        28
+      ]
+    },
+    {
+      "id": "c11",
+      "text": "Clases en línea:",
+      "file": "audio/cues/since_for_c11.wav",
+      "sourceSampleRange": [
+        948157,
+        1011751
+      ],
+      "sourceStart": 21.500159,
+      "sourceEnd": 22.9422,
+      "seconds": 1.442041,
+      "padHead": 0.453,
+      "padTail": 0.166,
+      "islandsInCue": [
+        {
+          "s": 0.453,
+          "e": 1.276
+        }
+      ],
+      "activityInCue": [
+        0.453,
+        1.276
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        27,
+        13
+      ]
+    },
+    {
+      "id": "c12",
+      "text": "manda GRUPO por mensaje privado.",
+      "file": "audio/cues/since_for_c12.wav",
+      "sourceSampleRange": [
+        1011751,
+        1102464
+      ],
+      "sourceStart": 22.9422,
+      "sourceEnd": 24.999184,
+      "seconds": 2.056984,
+      "padHead": 0.166,
+      "padTail": 0.191,
+      "islandsInCue": [
+        {
+          "s": 0.166,
+          "e": 1.866
+        }
+      ],
+      "activityInCue": [
+        0.166,
+        1.866
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        15,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c03": {
+      "forStart": 0.256,
+      "durStart": 0.879
+    },
+    "c06": {
+      "sinceStart": 0.288
+    }
+  },
+  "coverage": {
+    "partitionSamples": 1102464,
+    "totalSamples": 1102464,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 31
+  },
+  "confidence": {
+    "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+    "content": "pronunciation/naturalness NOT verified (no listening)"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "video": "trial_faq",
+  "master": "audio/originals/trial_faq_take2.mp3",
+  "masterSha256": "7c489dd1eba4e25ef29a51f727b867d1425875d7821a9d83e77cc404088a90d7",
+  "totalSamples": 844416,
+  "sampleRate": 44100,
+  "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Qué pasa después de la semana de prueba?",
+      "file": "audio/cues/trial_faq_c01.wav",
+      "sourceSampleRange": [
+        0,
+        93735
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.12551,
+      "seconds": 2.12551,
+      "padHead": 0,
+      "padTail": 0.275,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 1.851
+        }
+      ],
+      "activityInCue": [
+        0,
+        1.851
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        42
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.",
+      "file": "audio/cues/trial_faq_c02.wav",
+      "sourceSampleRange": [
+        93735,
+        306895
+      ],
+      "sourceStart": 2.12551,
+      "sourceEnd": 6.95907,
+      "seconds": 4.83356,
+      "padHead": 0.275,
+      "padTail": 0.236,
+      "islandsInCue": [
+        {
+          "s": 0.275,
+          "e": 4.598
+        }
+      ],
+      "activityInCue": [
+        0.275,
+        4.598
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        45,
+        13
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Si no continúas, no pagas.",
+      "file": "audio/cues/trial_faq_c03.wav",
+      "sourceSampleRange": [
+        306895,
+        402133
+      ],
+      "sourceStart": 6.95907,
+      "sourceEnd": 9.118662,
+      "seconds": 2.159592,
+      "padHead": 0.236,
+      "padTail": 0.2,
+      "islandsInCue": [
+        {
+          "s": 0.236,
+          "e": 1.171
+        },
+        {
+          "s": 1.335,
+          "e": 1.96
+        }
+      ],
+      "activityInCue": [
+        0.236,
+        1.96
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        14,
+        17
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Si continúas, el pago cubre las cuatro semanas completas, incluida la primera.",
+      "file": "audio/cues/trial_faq_c04.wav",
+      "sourceSampleRange": [
+        402133,
+        640678
+      ],
+      "sourceStart": 9.118662,
+      "sourceEnd": 14.527846,
+      "seconds": 5.409184,
+      "padHead": 0.2,
+      "padTail": 0.266,
+      "islandsInCue": [
+        {
+          "s": 0.2,
+          "e": 5.143
+        }
+      ],
+      "activityInCue": [
+        0.2,
+        5.143
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        27,
+        10
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Consulta los precios en la descripción.",
+      "file": "audio/cues/trial_faq_c05.wav",
+      "sourceSampleRange": [
+        640678,
+        733229
+      ],
+      "sourceStart": 14.527846,
+      "sourceEnd": 16.626508,
+      "seconds": 2.098662,
+      "padHead": 0.266,
+      "padTail": 0.201,
+      "islandsInCue": [
+        {
+          "s": 0.266,
+          "e": 1.898
+        }
+      ],
+      "activityInCue": [
+        0.266,
+        1.898
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        8,
+        32
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Manda GRUPO o CLUB por privado.",
+      "file": "audio/cues/trial_faq_c06.wav",
+      "sourceSampleRange": [
+        733229,
+        844416
+      ],
+      "sourceStart": 16.626508,
+      "sourceEnd": 19.147755,
+      "seconds": 2.521247,
+      "padHead": 0.201,
+      "padTail": 0.292,
+      "islandsInCue": [
+        {
+          "s": 0.201,
+          "e": 1.509
+        },
+        {
+          "s": 1.643,
+          "e": 2.229
+        }
+      ],
+      "activityInCue": [
+        0.201,
+        2.229
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        25,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c03": {
+      "noPayStart": 1.335
+    },
+    "c04": {
+      "fourWeeks": 2.081,
+      "week1": 3.881
+    }
+  },
+  "coverage": {
+    "partitionSamples": 844416,
+    "totalSamples": 844416,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 45
+  },
+  "confidence": {
+    "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+    "content": "pronunciation/naturalness NOT verified (no listening)"
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "video": "used_to",
+  "master": "audio/originals/used_to_take2.mp3",
+  "masterSha256": "898c618a8cc2dc945bc1f70e509a451d5852effc7aea27215e9edb88302857c7",
+  "totalSamples": 1028736,
+  "sampleRate": 44100,
+  "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Piensa en algo que hacías antes.",
+      "file": "audio/cues/used_to_c01.wav",
+      "sourceSampleRange": [
+        0,
+        94186
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.135737,
+      "seconds": 2.135737,
+      "padHead": 0.144,
+      "padTail": 0.301,
+      "islandsInCue": [
+        {
+          "s": 0.144,
+          "e": 1.835
+        }
+      ],
+      "activityInCue": [
+        0.144,
+        1.835
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        5
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "I used to play soccer after school.",
+      "file": "audio/cues/used_to_c02.wav",
+      "sourceSampleRange": [
+        94186,
+        203422
+      ],
+      "sourceStart": 2.135737,
+      "sourceEnd": 4.612744,
+      "seconds": 2.477007,
+      "padHead": 0.301,
+      "padTail": 0.395,
+      "islandsInCue": [
+        {
+          "s": 0.301,
+          "e": 2.082
+        }
+      ],
+      "activityInCue": [
+        0.301,
+        2.082
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        2
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Antes jugaba fútbol después de la escuela.",
+      "file": "audio/cues/used_to_c03.wav",
+      "sourceSampleRange": [
+        203422,
+        337023
+      ],
+      "sourceStart": 4.612744,
+      "sourceEnd": 7.642245,
+      "seconds": 3.029501,
+      "padHead": 0.395,
+      "padTail": 0.454,
+      "islandsInCue": [
+        {
+          "s": 0.395,
+          "e": 2.576
+        }
+      ],
+      "activityInCue": [
+        0.395,
+        2.576
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        9
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Para un hábito de antes que ya cambió,",
+      "file": "audio/cues/used_to_c04.wav",
+      "sourceSampleRange": [
+        337023,
+        457641
+      ],
+      "sourceStart": 7.642245,
+      "sourceEnd": 10.377347,
+      "seconds": 2.735102,
+      "padHead": 0.453,
+      "padTail": 0.152,
+      "islandsInCue": [
+        {
+          "s": 0.453,
+          "e": 2.583
+        }
+      ],
+      "activityInCue": [
+        0.453,
+        2.583
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        8,
+        25
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "usa used to más verbo base: play.",
+      "file": "audio/cues/used_to_c05.wav",
+      "sourceSampleRange": [
+        457641,
+        627113
+      ],
+      "sourceStart": 10.377347,
+      "sourceEnd": 14.220249,
+      "seconds": 3.842902,
+      "padHead": 0.152,
+      "padTail": 0.372,
+      "islandsInCue": [
+        {
+          "s": 0.152,
+          "e": 0.534
+        },
+        {
+          "s": 0.684,
+          "e": 1.437
+        },
+        {
+          "s": 1.707,
+          "e": 2.645
+        },
+        {
+          "s": 3.107,
+          "e": 3.471
+        }
+      ],
+      "activityInCue": [
+        0.152,
+        3.471
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        27,
+        23
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Ahora tú:",
+      "file": "audio/cues/used_to_c06.wav",
+      "sourceSampleRange": [
+        627113,
+        680723
+      ],
+      "sourceStart": 14.220249,
+      "sourceEnd": 15.435896,
+      "seconds": 1.215646,
+      "padHead": 0.372,
+      "padTail": 0.37,
+      "islandsInCue": [
+        {
+          "s": 0.372,
+          "e": 0.846
+        }
+      ],
+      "activityInCue": [
+        0.372,
+        0.846
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        20,
+        6
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "I used to…",
+      "file": "audio/cues/used_to_c07.wav",
+      "sourceSampleRange": [
+        680723,
+        762460
+      ],
+      "sourceStart": 15.435896,
+      "sourceEnd": 17.289342,
+      "seconds": 1.853447,
+      "padHead": 0.37,
+      "padTail": 0.304,
+      "islandsInCue": [
+        {
+          "s": 0.37,
+          "e": 1.549
+        }
+      ],
+      "activityInCue": [
+        0.37,
+        1.549
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo completarías la frase?",
+      "file": "audio/cues/used_to_c08.wav",
+      "sourceSampleRange": [
+        762460,
+        855977
+      ],
+      "sourceStart": 17.289342,
+      "sourceEnd": 19.409909,
+      "seconds": 2.120567,
+      "padHead": 0.305,
+      "padTail": 0.546,
+      "islandsInCue": [
+        {
+          "s": 0.305,
+          "e": 1.575
+        }
+      ],
+      "activityInCue": [
+        0.305,
+        1.575
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        14,
+        4
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea:",
+      "file": "audio/cues/used_to_c09.wav",
+      "sourceSampleRange": [
+        855977,
+        923745
+      ],
+      "sourceStart": 19.409909,
+      "sourceEnd": 20.946599,
+      "seconds": 1.536689,
+      "padHead": 0.546,
+      "padTail": 0.182,
+      "islandsInCue": [
+        {
+          "s": 0.546,
+          "e": 1.355
+        }
+      ],
+      "activityInCue": [
+        0.546,
+        1.355
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        8,
+        18
+      ]
+    },
+    {
+      "id": "c10",
+      "text": "manda GRUPO por mensaje privado.",
+      "file": "audio/cues/used_to_c10.wav",
+      "sourceSampleRange": [
+        923745,
+        1028736
+      ],
+      "sourceStart": 20.946599,
+      "sourceEnd": 23.327347,
+      "seconds": 2.380748,
+      "padHead": 0.181,
+      "padTail": 0.252,
+      "islandsInCue": [
+        {
+          "s": 0.181,
+          "e": 1.015
+        },
+        {
+          "s": 1.147,
+          "e": 2.129
+        }
+      ],
+      "activityInCue": [
+        0.181,
+        2.129
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        24,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c05": {
+      "usedToStart": 0.684,
+      "playStart": 3.107
+    }
+  },
+  "coverage": {
+    "partitionSamples": 1028736,
+    "totalSamples": 1028736,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 27
+  },
+  "confidence": {
+    "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+    "content": "pronunciation/naturalness NOT verified (no listening)"
+  }
+}

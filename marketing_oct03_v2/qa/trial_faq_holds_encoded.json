@@ -1,0 +1,126 @@
+{
+  "file": "FE261030-TRIALFAQ_batch3_single-host_narrated_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "trial_state",
+      "plannedWindow": [
+        3.6,
+        10.42
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 6.83,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            148,
+            375,
+            718,
+            125
+          ],
+          "frames": 206,
+          "longestStationaryRunSeconds": 6.87,
+          "maxMeanAbsDiffToPrevious": 0.3,
+          "maxMeanAbsDiffToFirst": 0.3
+        },
+        {
+          "rect": [
+            165,
+            558,
+            680,
+            363
+          ],
+          "frames": 206,
+          "longestStationaryRunSeconds": 6.83,
+          "maxMeanAbsDiffToPrevious": 8.65,
+          "maxMeanAbsDiffToFirst": 8.7
+        }
+      ]
+    },
+    {
+      "id": "continuation_state",
+      "plannedWindow": [
+        15.95,
+        18.59
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 2.63,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            148,
+            375,
+            718,
+            125
+          ],
+          "frames": 80,
+          "longestStationaryRunSeconds": 2.63,
+          "maxMeanAbsDiffToPrevious": 1.54,
+          "maxMeanAbsDiffToFirst": 1.68
+        },
+        {
+          "rect": [
+            165,
+            558,
+            680,
+            363
+          ],
+          "frames": 80,
+          "longestStationaryRunSeconds": 2.63,
+          "maxMeanAbsDiffToPrevious": 2.92,
+          "maxMeanAbsDiffToFirst": 2.96
+        }
+      ]
+    },
+    {
+      "id": "details_card",
+      "plannedWindow": [
+        19.7,
+        24.08
+      ],
+      "requirementSeconds": 4,
+      "measuredStationarySeconds": 4.4,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            379,
+            680,
+            538
+          ],
+          "frames": 132,
+          "longestStationaryRunSeconds": 4.4,
+          "maxMeanAbsDiffToPrevious": 0.02,
+          "maxMeanAbsDiffToFirst": 0.03
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "plannedWindow": [
+        25.38,
+        31.2
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 5.83,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            405,
+            680,
+            353
+          ],
+          "frames": 175,
+          "longestStationaryRunSeconds": 5.83,
+          "maxMeanAbsDiffToPrevious": 0,
+          "maxMeanAbsDiffToFirst": 0.16
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PROVISIONAL_INTEGRATION_SELECTION_HEARING_PENDING",
+  "chosen_takes": {
+    "since_for": "since_for_take1.mp3",
+    "used_to": "used_to_take2.mp3",
+    "trial_faq": "trial_faq_take2.mp3"
+  },
+  "selected_medium_normalized_exact_words": {
+    "since_for": 49,
+    "used_to": 52,
+    "trial_faq": 50
+  },
+  "selection_basis": "Unprompted content recognition plus measured scene-transition spacing, not duration alone. No subjective voice-performance ranking.",
+  "hearing_capability_available": false,
+  "release_cleared": false,
+  "details": "CLAUDE_INTEGRATION_HANDOFF.md",
+  "audio_originals_modified": false
+}

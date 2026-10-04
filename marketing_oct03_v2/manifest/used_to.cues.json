@@ -1,0 +1,274 @@
+{
+  "video": "used_to",
+  "contentId": "FE261028-USED",
+  "title": "USED TO",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    40
+  ],
+  "status": "PLANNED",
+  "mixGainDb": -0.6,
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take choice (since_for take1, used_to take2, trial_faq take2) is a provisional editorial choice from independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Piensa en algo que hacías antes.",
+      "est": 2.136,
+      "gap": 0,
+      "file": "audio/cues/used_to_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I used to play soccer after school.",
+      "est": 2.477,
+      "gap": 0.7,
+      "file": "audio/cues/used_to_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Antes jugaba fútbol después de la escuela.",
+      "est": 3.03,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Para un hábito de antes que ya cambió,",
+      "est": 2.735,
+      "gap": 0.39,
+      "file": "audio/cues/used_to_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "usa used to más verbo base: play.",
+      "est": 3.843,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c05.wav"
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Ahora tú:",
+      "est": 1.216,
+      "gap": 3.4,
+      "file": "audio/cues/used_to_c06.wav"
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I used to…",
+      "est": 1.853,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c07.wav"
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Cómo completarías la frase?",
+      "est": 2.121,
+      "gap": 0.1,
+      "file": "audio/cues/used_to_c08.wav"
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Clases en línea:",
+      "est": 1.537,
+      "gap": 3.3,
+      "file": "audio/cues/used_to_c09.wav"
+    },
+    {
+      "id": "c10",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "manda GRUPO por mensaje privado.",
+      "est": 2.381,
+      "gap": 0.2,
+      "file": "audio/cues/used_to_c10.wav"
+    }
+  ],
+  "alignment": {
+    "anchors": {},
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 1028736,
+    "partitions": [
+      [
+        0,
+        94186
+      ],
+      [
+        94186,
+        203422
+      ],
+      [
+        203422,
+        337023
+      ],
+      [
+        337023,
+        457641
+      ],
+      [
+        457641,
+        627113
+      ],
+      [
+        627113,
+        680723
+      ],
+      [
+        680723,
+        762460
+      ],
+      [
+        762460,
+        855977
+      ],
+      [
+        855977,
+        923745
+      ],
+      [
+        923745,
+        1028736
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0.144,
+        1.835
+      ],
+      [
+        2.437,
+        4.218
+      ],
+      [
+        5.007,
+        7.189
+      ],
+      [
+        8.096,
+        10.225
+      ],
+      [
+        10.529,
+        10.911
+      ],
+      [
+        11.062,
+        11.814
+      ],
+      [
+        12.084,
+        13.022
+      ],
+      [
+        13.484,
+        13.848
+      ],
+      [
+        14.592,
+        15.066
+      ],
+      [
+        15.806,
+        16.985
+      ],
+      [
+        17.594,
+        18.864
+      ],
+      [
+        19.956,
+        20.765
+      ],
+      [
+        21.128,
+        21.962
+      ],
+      [
+        22.094,
+        23.076
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "marks": {
+      "usedToStart": [
+        "c05",
+        1
+      ],
+      "playStart": [
+        "c05",
+        3
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+source_file,phrase_id,indexed_phrase,start_min,start_max,end_min,end_max
+since_for_take1.mp3,hook,Esto empezó antes y sigue ahora,0.0,0.0,2.2,2.5
+since_for_take1.mp3,duration_example,I've lived here for two years,2.94,3.0,4.5,4.82
+since_for_take1.mp3,duration_rule,For indica duración,5.2,5.44,6.56,6.86
+since_for_take1.mp3,duration_repeat,two years,7.24,7.32,7.7,7.9
+since_for_take1.mp3,start_example,I've lived here since 2024,8.6,8.62,10.28,10.44
+since_for_take1.mp3,start_rule,Since señala cuándo empezó,11.2,11.5,13.36,13.82
+since_for_take1.mp3,start_repeat,2024,13.96,14.2,14.5,14.94
+since_for_take1.mp3,practice_lead,Ahora tú,15.6,15.7,16.0,16.14
+since_for_take1.mp3,practice_prefix,I've studied English,16.74,16.74,17.74,17.86
+since_for_take1.mp3,practice_duration,six months,17.74,17.86,18.94,19.14
+since_for_take1.mp3,practice_question,Since o for,19.64,19.9,20.92,21.16
+since_for_take1.mp3,cta_offer,Clases en línea,21.9,22.02,22.64,22.8
+since_for_take1.mp3,cta_action,Manda grupo por mensaje privado,23.14,23.22,24.76,24.88
+used_to_take2.mp3,hook,Piensa en algo que hacías antes,0.0,0.0,1.62,2.0
+used_to_take2.mp3,example,I used to play soccer after school,2.36,2.54,4.14,4.3
+used_to_take2.mp3,translation,Antes jugaba fútbol después de la escuela,4.8,5.08,7.04,7.2
+used_to_take2.mp3,changed_habit,Para un hábito de antes que ya cambió,8.1,8.28,10.28,10.52
+used_to_take2.mp3,structure,usa used to más verbo base,10.58,10.82,12.88,13.04
+used_to_take2.mp3,base_word,play,13.34,13.52,13.74,13.94
+used_to_take2.mp3,practice_lead,Ahora tú,14.56,14.7,15.04,15.28
+used_to_take2.mp3,practice_fragment,I used to,15.8,15.86,17.48,17.6
+used_to_take2.mp3,practice_question,Cómo completarías la frase,17.48,17.6,18.68,18.84
+used_to_take2.mp3,cta_offer,Clases en línea,19.78,19.98,20.66,20.84
+used_to_take2.mp3,cta_action,Manda grupo por mensaje privado,21.14,21.22,23.06,23.16
+trial_faq_take2.mp3,hook,Qué pasa después de la semana de prueba,0.0,0.0,1.68,1.82
+trial_faq_take2.mp3,trial,En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado,2.36,2.4,6.74,6.88
+trial_faq_take2.mp3,stop_condition,Si no continúas no pagas,7.16,7.3,8.9,9.04
+trial_faq_take2.mp3,continue_condition,Si continúas el pago cubre las cuatro semanas completas incluida la primera,9.28,9.36,14.14,14.28
+trial_faq_take2.mp3,four_weeks,las cuatro semanas completas,11.2,11.28,13.0,13.18
+trial_faq_take2.mp3,week1_included,incluida la primera,13.0,13.18,14.14,14.28
+trial_faq_take2.mp3,details,Consulta los precios en la descripción,14.72,14.8,16.48,16.64
+trial_faq_take2.mp3,cta,Manda grupo o club por privado,16.82,16.9,18.84,18.9

@@ -1,0 +1,161 @@
+{
+  "video": "used_to",
+  "frames": 1077,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "Algo que",
+      "window": [
+        0.6,
+        2.49
+      ],
+      "framesChecked": 57,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "I used to play",
+      "window": [
+        3.64,
+        8.59
+      ],
+      "framesChecked": 149,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "soccer after school.",
+      "window": [
+        3.64,
+        8.59
+      ],
+      "framesChecked": 149,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Antes jugaba fútbol",
+      "window": [
+        3.64,
+        8.59
+      ],
+      "framesChecked": 149,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "EJEMPLO",
+      "window": [
+        3.64,
+        8.59
+      ],
+      "framesChecked": 149,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Un hábito de antes",
+      "window": [
+        9.79,
+        15.74
+      ],
+      "framesChecked": 178,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "que ya cambió",
+      "window": [
+        9.79,
+        15.74
+      ],
+      "framesChecked": 178,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "USED TO + verbo base",
+      "window": [
+        9.79,
+        15.74
+      ],
+      "framesChecked": 178,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "play",
+      "window": [
+        9.79,
+        15.74
+      ],
+      "framesChecked": 178,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "I used to",
+      "window": [
+        19.78,
+        27.5
+      ],
+      "framesChecked": 232,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Cómo completarías",
+      "window": [
+        22.98,
+        27.5
+      ],
+      "framesChecked": 135,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "GRUPO",
+      "window": [
+        28.75,
+        35.57
+      ],
+      "framesChecked": 205,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/nunca|never|ya no puedes|imposible|can'?t|cannot|Halloween|get used|be used|precio|gratis|seguir|follow|guarda|link|https?:|www\\.|\\.com/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/\\bplay\\b|soccer|fútbol|USED TO|EJEMPLO|REGLA|ANTES/",
+      "fromSeconds": 18.98,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "GRUPO",
+    "enteredAt": 27.85,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 40,
+  "captionGlyphBounds": {
+    "xMin": 106,
+    "xMax": 854,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
+  "captionClearsMouth": true,
+  "pass": true
+}

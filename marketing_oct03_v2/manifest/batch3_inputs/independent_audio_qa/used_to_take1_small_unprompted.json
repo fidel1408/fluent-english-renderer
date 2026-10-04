@@ -1,0 +1,1115 @@
+{
+  "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch3/audio/used_to_take1.mp3",
+  "sha256": "e85115775640d7d6e4a5129e5094a76d9e439cfc83ccd0070f39847cddb2357d",
+  "model": "small",
+  "implementation": "faster-whisper 1.2.1",
+  "parameters": {
+    "language": null,
+    "task": "transcribe",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "multilingual": true,
+    "initial_prompt": null,
+    "prefix": null,
+    "hotwords": null,
+    "condition_on_previous_text": false,
+    "vad_filter": false
+  },
+  "info": {
+    "language": "es",
+    "language_probability": 0.9806955456733704,
+    "duration": 21.4726875,
+    "duration_after_vad": 21.4726875,
+    "all_language_probs": [
+      [
+        "es",
+        0.9806955456733704
+      ],
+      [
+        "en",
+        0.017976563423871994
+      ],
+      [
+        "la",
+        0.00023263288312591612
+      ],
+      [
+        "ja",
+        0.00017742459021974355
+      ],
+      [
+        "pt",
+        0.0001085855983546935
+      ],
+      [
+        "nn",
+        0.00010637980449246243
+      ],
+      [
+        "it",
+        9.183849761029705e-05
+      ],
+      [
+        "gl",
+        8.426417480222881e-05
+      ],
+      [
+        "ko",
+        8.385053661186248e-05
+      ],
+      [
+        "haw",
+        5.2118230087216944e-05
+      ],
+      [
+        "cy",
+        4.61027302662842e-05
+      ],
+      [
+        "pl",
+        3.786749221035279e-05
+      ],
+      [
+        "hi",
+        3.4446140489308164e-05
+      ],
+      [
+        "fr",
+        3.269572334829718e-05
+      ],
+      [
+        "zh",
+        2.4717148335184902e-05
+      ],
+      [
+        "id",
+        2.3339543986367062e-05
+      ],
+      [
+        "tl",
+        2.3299111489905044e-05
+      ],
+      [
+        "jw",
+        1.7279393432545476e-05
+      ],
+      [
+        "vi",
+        1.2801021512132138e-05
+      ],
+      [
+        "ar",
+        1.188863370771287e-05
+      ],
+      [
+        "km",
+        1.0714663403632585e-05
+      ],
+      [
+        "el",
+        1.0642114830261562e-05
+      ],
+      [
+        "sn",
+        1.014101508189924e-05
+      ],
+      [
+        "sa",
+        9.426538781553973e-06
+      ],
+      [
+        "de",
+        8.84439123183256e-06
+      ],
+      [
+        "th",
+        8.220436939154752e-06
+      ],
+      [
+        "ms",
+        7.551802809757646e-06
+      ],
+      [
+        "ml",
+        6.776963346055709e-06
+      ],
+      [
+        "ru",
+        6.280686648096889e-06
+      ],
+      [
+        "eu",
+        5.963051080470905e-06
+      ],
+      [
+        "tr",
+        5.717250587622402e-06
+      ],
+      [
+        "mi",
+        5.062653144705109e-06
+      ],
+      [
+        "te",
+        4.083137810084736e-06
+      ],
+      [
+        "ta",
+        3.6213737075740937e-06
+      ],
+      [
+        "oc",
+        3.4271472486580024e-06
+      ],
+      [
+        "ur",
+        2.7918952127947705e-06
+      ],
+      [
+        "ro",
+        1.946708835021127e-06
+      ],
+      [
+        "si",
+        1.6733162055970752e-06
+      ],
+      [
+        "fi",
+        1.5287430414900882e-06
+      ],
+      [
+        "yo",
+        1.3330703723113402e-06
+      ],
+      [
+        "br",
+        1.2819205039704684e-06
+      ],
+      [
+        "bn",
+        1.260623207599565e-06
+      ],
+      [
+        "ca",
+        1.1040091294489685e-06
+      ],
+      [
+        "cs",
+        9.912926088873064e-07
+      ],
+      [
+        "nl",
+        9.77242848421156e-07
+      ],
+      [
+        "sw",
+        8.942848808146664e-07
+      ],
+      [
+        "sv",
+        7.547098448412726e-07
+      ],
+      [
+        "hu",
+        6.536154728564725e-07
+      ],
+      [
+        "sl",
+        3.309993701350322e-07
+      ],
+      [
+        "ht",
+        3.216982520370948e-07
+      ],
+      [
+        "my",
+        3.130932384465268e-07
+      ],
+      [
+        "he",
+        2.175005278104436e-07
+      ],
+      [
+        "mn",
+        1.501786641711078e-07
+      ],
+      [
+        "sk",
+        1.4436564299558086e-07
+      ],
+      [
+        "fa",
+        1.0555420004720872e-07
+      ],
+      [
+        "as",
+        1.0497376479179366e-07
+      ],
+      [
+        "sd",
+        9.563495240172415e-08
+      ],
+      [
+        "lo",
+        9.316920568380738e-08
+      ],
+      [
+        "ne",
+        8.989077571186499e-08
+      ],
+      [
+        "uk",
+        8.853260879959635e-08
+      ],
+      [
+        "bg",
+        7.632365850440692e-08
+      ],
+      [
+        "mr",
+        6.719884027006628e-08
+      ],
+      [
+        "af",
+        6.401673147138354e-08
+      ],
+      [
+        "da",
+        6.352969705858413e-08
+      ],
+      [
+        "hr",
+        5.874304065400793e-08
+      ],
+      [
+        "bo",
+        4.024882471753699e-08
+      ],
+      [
+        "be",
+        3.831197403769693e-08
+      ],
+      [
+        "fo",
+        3.0936696759908955e-08
+      ],
+      [
+        "bs",
+        2.6246068429713887e-08
+      ],
+      [
+        "kn",
+        2.3348901478925654e-08
+      ],
+      [
+        "yi",
+        2.308854440968844e-08
+      ],
+      [
+        "mk",
+        2.1599435129360245e-08
+      ],
+      [
+        "is",
+        2.1384963133641577e-08
+      ],
+      [
+        "no",
+        1.9867425038455622e-08
+      ],
+      [
+        "pa",
+        1.3491983530400375e-08
+      ],
+      [
+        "hy",
+        1.2938143889584808e-08
+      ],
+      [
+        "et",
+        1.202636834563009e-08
+      ],
+      [
+        "ps",
+        1.045558839507521e-08
+      ],
+      [
+        "ln",
+        7.595649442748709e-09
+      ],
+      [
+        "mt",
+        7.417997771597129e-09
+      ],
+      [
+        "az",
+        4.713152090829453e-09
+      ],
+      [
+        "lv",
+        4.421621735417602e-09
+      ],
+      [
+        "sr",
+        3.7740437441868835e-09
+      ],
+      [
+        "kk",
+        2.067070514755187e-09
+      ],
+      [
+        "sq",
+        1.882987099577349e-09
+      ],
+      [
+        "lt",
+        1.371105895486835e-09
+      ],
+      [
+        "gu",
+        9.584960602992965e-10
+      ],
+      [
+        "so",
+        6.462590462774642e-10
+      ],
+      [
+        "ka",
+        3.9824282760392293e-10
+      ],
+      [
+        "am",
+        3.8963091086863244e-10
+      ],
+      [
+        "su",
+        9.025467873069459e-11
+      ],
+      [
+        "tg",
+        3.434173084793102e-11
+      ],
+      [
+        "ba",
+        2.6859826862679625e-11
+      ],
+      [
+        "tk",
+        2.4559456898720633e-11
+      ],
+      [
+        "ha",
+        1.35528055791867e-11
+      ],
+      [
+        "lb",
+        1.2884191977202697e-11
+      ],
+      [
+        "tt",
+        1.0060358796026847e-11
+      ],
+      [
+        "mg",
+        6.673822952607544e-12
+      ],
+      [
+        "uz",
+        1.189476035029502e-12
+      ]
+    ],
+    "transcription_options": {
+      "beam_size": 5,
+      "best_of": 5,
+      "patience": 1,
+      "length_penalty": 1,
+      "repetition_penalty": 1,
+      "no_repeat_ngram_size": 0,
+      "log_prob_threshold": -1.0,
+      "no_speech_threshold": 0.6,
+      "compression_ratio_threshold": 2.4,
+      "condition_on_previous_text": false,
+      "prompt_reset_on_temperature": 0.5,
+      "temperatures": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "initial_prompt": null,
+      "prefix": null,
+      "suppress_blank": true,
+      "suppress_tokens": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        90,
+        91,
+        92,
+        93,
+        359,
+        503,
+        522,
+        542,
+        873,
+        893,
+        902,
+        918,
+        922,
+        931,
+        1350,
+        1853,
+        1982,
+        2460,
+        2627,
+        3246,
+        3253,
+        3268,
+        3536,
+        3846,
+        3961,
+        4183,
+        4667,
+        6585,
+        6647,
+        7273,
+        9061,
+        9383,
+        10428,
+        10929,
+        11938,
+        12033,
+        12331,
+        12562,
+        13793,
+        14157,
+        14635,
+        15265,
+        15618,
+        16553,
+        16604,
+        18362,
+        18956,
+        20075,
+        21675,
+        22520,
+        26130,
+        26161,
+        26435,
+        28279,
+        29464,
+        31650,
+        32302,
+        32470,
+        36865,
+        42863,
+        47425,
+        49870,
+        50254,
+        50258,
+        50358,
+        50359,
+        50360,
+        50361,
+        50362
+      ],
+      "without_timestamps": false,
+      "max_initial_timestamp": 1.0,
+      "word_timestamps": true,
+      "prepend_punctuations": "\"'“¿([{-",
+      "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+      "multilingual": true,
+      "max_new_tokens": null,
+      "clip_timestamps": [
+        0.0
+      ],
+      "hallucination_silence_threshold": null,
+      "hotwords": null
+    },
+    "vad_options": null
+  },
+  "segments": [
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.7,
+      "text": " Piensa en algo que hacías antes.",
+      "tokens": [
+        50364,
+        17741,
+        23364,
+        465,
+        8655,
+        631,
+        46093,
+        10025,
+        11014,
+        13,
+        50477
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.42,
+          "word": " Piensa",
+          "probability": 0.9514951109886169
+        },
+        {
+          "start": 0.42,
+          "end": 0.58,
+          "word": " en",
+          "probability": 0.9981813430786133
+        },
+        {
+          "start": 0.58,
+          "end": 0.8,
+          "word": " algo",
+          "probability": 0.9992094039916992
+        },
+        {
+          "start": 0.8,
+          "end": 1.0,
+          "word": " que",
+          "probability": 0.9983707070350647
+        },
+        {
+          "start": 1.0,
+          "end": 1.32,
+          "word": " hacías",
+          "probability": 0.9375323355197906
+        },
+        {
+          "start": 1.32,
+          "end": 1.7,
+          "word": " antes.",
+          "probability": 0.9959850311279297
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 2.36,
+      "end": 4.04,
+      "text": " I used to play soccer after school.",
+      "tokens": [
+        50477,
+        286,
+        1143,
+        281,
+        862,
+        15469,
+        934,
+        1395,
+        13,
+        50593
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 2.36,
+          "end": 2.44,
+          "word": " I",
+          "probability": 0.2155553698539734
+        },
+        {
+          "start": 2.44,
+          "end": 2.64,
+          "word": " used",
+          "probability": 0.9817190766334534
+        },
+        {
+          "start": 2.64,
+          "end": 2.78,
+          "word": " to",
+          "probability": 0.9974669218063354
+        },
+        {
+          "start": 2.78,
+          "end": 2.94,
+          "word": " play",
+          "probability": 0.9984424710273743
+        },
+        {
+          "start": 2.94,
+          "end": 3.3,
+          "word": " soccer",
+          "probability": 0.9944455027580261
+        },
+        {
+          "start": 3.3,
+          "end": 3.66,
+          "word": " after",
+          "probability": 0.9919988512992859
+        },
+        {
+          "start": 3.66,
+          "end": 4.04,
+          "word": " school.",
+          "probability": 0.9924073815345764
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 4.52,
+      "end": 6.68,
+      "text": " Antes jugaba fútbol después de la escuela.",
+      "tokens": [
+        50593,
+        39325,
+        9568,
+        5509,
+        283,
+        32852,
+        17460,
+        15283,
+        368,
+        635,
+        47817,
+        13,
+        50736
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 4.52,
+          "end": 4.92,
+          "word": " Antes",
+          "probability": 0.9794923067092896
+        },
+        {
+          "start": 4.92,
+          "end": 5.36,
+          "word": " jugaba",
+          "probability": 0.9829531311988831
+        },
+        {
+          "start": 5.36,
+          "end": 5.84,
+          "word": " fútbol",
+          "probability": 0.8757783571879069
+        },
+        {
+          "start": 5.84,
+          "end": 6.12,
+          "word": " después",
+          "probability": 0.9698764681816101
+        },
+        {
+          "start": 6.12,
+          "end": 6.36,
+          "word": " de",
+          "probability": 0.9987506866455078
+        },
+        {
+          "start": 6.36,
+          "end": 6.44,
+          "word": " la",
+          "probability": 0.9903630614280701
+        },
+        {
+          "start": 6.44,
+          "end": 6.68,
+          "word": " escuela.",
+          "probability": 0.9985774755477905
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 7.52,
+      "end": 9.56,
+      "text": " Para un hábito de antes que ya cambió,",
+      "tokens": [
+        50736,
+        11107,
+        517,
+        16448,
+        65,
+        3528,
+        368,
+        11014,
+        631,
+        2478,
+        19569,
+        812,
+        11,
+        50855
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 7.52,
+          "end": 7.7,
+          "word": " Para",
+          "probability": 0.979794442653656
+        },
+        {
+          "start": 7.7,
+          "end": 7.88,
+          "word": " un",
+          "probability": 0.9952495098114014
+        },
+        {
+          "start": 7.88,
+          "end": 8.18,
+          "word": " hábito",
+          "probability": 0.945333739121755
+        },
+        {
+          "start": 8.18,
+          "end": 8.34,
+          "word": " de",
+          "probability": 0.9789051413536072
+        },
+        {
+          "start": 8.34,
+          "end": 8.64,
+          "word": " antes",
+          "probability": 0.9821169972419739
+        },
+        {
+          "start": 8.64,
+          "end": 8.88,
+          "word": " que",
+          "probability": 0.945046067237854
+        },
+        {
+          "start": 8.88,
+          "end": 9.06,
+          "word": " ya",
+          "probability": 0.9951627254486084
+        },
+        {
+          "start": 9.06,
+          "end": 9.56,
+          "word": " cambió,",
+          "probability": 0.9730100929737091
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 9.94,
+      "end": 12.86,
+      "text": " usa use to más verbo base, play.",
+      "tokens": [
+        50855,
+        29909,
+        764,
+        281,
+        3573,
+        1306,
+        1763,
+        3096,
+        11,
+        862,
+        13,
+        51038
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 9.94,
+          "end": 10.2,
+          "word": " usa",
+          "probability": 0.9294974207878113
+        },
+        {
+          "start": 10.2,
+          "end": 10.68,
+          "word": " use",
+          "probability": 0.14804401993751526
+        },
+        {
+          "start": 10.68,
+          "end": 11.02,
+          "word": " to",
+          "probability": 0.7420145273208618
+        },
+        {
+          "start": 11.02,
+          "end": 11.44,
+          "word": " más",
+          "probability": 0.3654015064239502
+        },
+        {
+          "start": 11.44,
+          "end": 11.82,
+          "word": " verbo",
+          "probability": 0.892365962266922
+        },
+        {
+          "start": 11.82,
+          "end": 12.08,
+          "word": " base,",
+          "probability": 0.8828657269477844
+        },
+        {
+          "start": 12.54,
+          "end": 12.86,
+          "word": " play.",
+          "probability": 0.9133921265602112
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 13.56,
+      "end": 14.08,
+      "text": " Ahora tú.",
+      "tokens": [
+        51038,
+        18840,
+        15056,
+        13,
+        51092
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 13.56,
+          "end": 13.76,
+          "word": " Ahora",
+          "probability": 0.9693244099617004
+        },
+        {
+          "start": 13.76,
+          "end": 14.08,
+          "word": " tú.",
+          "probability": 0.9128735661506653
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 14.66,
+      "end": 16.24,
+      "text": " I used to...",
+      "tokens": [
+        51092,
+        286,
+        1143,
+        281,
+        485,
+        51175
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 14.66,
+          "end": 14.84,
+          "word": " I",
+          "probability": 0.8035007119178772
+        },
+        {
+          "start": 14.84,
+          "end": 15.18,
+          "word": " used",
+          "probability": 0.711796224117279
+        },
+        {
+          "start": 15.18,
+          "end": 16.24,
+          "word": " to...",
+          "probability": 0.725753054022789
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 16.24,
+      "end": 17.44,
+      "text": " ¿Cómo completarías la frase?",
+      "tokens": [
+        51175,
+        3841,
+        28342,
+        1557,
+        289,
+        10025,
+        635,
+        38406,
+        30,
+        51272
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 16.24,
+          "end": 16.46,
+          "word": " ¿Cómo",
+          "probability": 0.7839393615722656
+        },
+        {
+          "start": 16.46,
+          "end": 17.1,
+          "word": " completarías",
+          "probability": 0.9775418639183044
+        },
+        {
+          "start": 17.1,
+          "end": 17.24,
+          "word": " la",
+          "probability": 0.9983540773391724
+        },
+        {
+          "start": 17.24,
+          "end": 17.44,
+          "word": " frase?",
+          "probability": 0.995978832244873
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 9,
+      "seek": 0,
+      "start": 18.2,
+      "end": 18.98,
+      "text": " Clases en línea.",
+      "tokens": [
+        51272,
+        2033,
+        1957,
+        465,
+        37452,
+        13,
+        51330
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 18.2,
+          "end": 18.56,
+          "word": " Clases",
+          "probability": 0.827453076839447
+        },
+        {
+          "start": 18.56,
+          "end": 18.72,
+          "word": " en",
+          "probability": 0.98356032371521
+        },
+        {
+          "start": 18.72,
+          "end": 18.98,
+          "word": " línea.",
+          "probability": 0.9905681014060974
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 10,
+      "seek": 0,
+      "start": 19.44,
+      "end": 21.22,
+      "text": " Manda grupo por mensaje privado.",
+      "tokens": [
+        51330,
+        376,
+        5575,
+        20190,
+        1515,
+        10923,
+        11153,
+        2915,
+        1573,
+        13,
+        51434
+      ],
+      "avg_logprob": -0.25000624269247057,
+      "compression_ratio": 1.3515981735159817,
+      "no_speech_prob": 0.011983069591224194,
+      "words": [
+        {
+          "start": 19.44,
+          "end": 19.72,
+          "word": " Manda",
+          "probability": 0.8978942632675171
+        },
+        {
+          "start": 19.72,
+          "end": 19.96,
+          "word": " grupo",
+          "probability": 0.9699313044548035
+        },
+        {
+          "start": 19.96,
+          "end": 20.3,
+          "word": " por",
+          "probability": 0.994247317314148
+        },
+        {
+          "start": 20.3,
+          "end": 20.74,
+          "word": " mensaje",
+          "probability": 0.9983084797859192
+        },
+        {
+          "start": 20.74,
+          "end": 21.22,
+          "word": " privado.",
+          "probability": 0.9981503486633301
+        }
+      ],
+      "temperature": 0.0
+    }
+  ],
+  "seconds_elapsed": 8.428269149000698,
+  "transcript": "Piensa en algo que hacías antes. I used to play soccer after school. Antes jugaba fútbol después de la escuela. Para un hábito de antes que ya cambió, usa use to más verbo base, play. Ahora tú. I used to... ¿Cómo completarías la frase? Clases en línea. Manda grupo por mensaje privado.",
+  "limitations": "Automated recognition, not human listening. Word timestamps and probabilities are model estimates, not calibrated quality scores."
+}

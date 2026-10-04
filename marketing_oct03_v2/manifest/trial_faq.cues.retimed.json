@@ -1,0 +1,297 @@
+{
+  "video": "trial_faq",
+  "contentId": "FE261030-TRIALFAQ",
+  "title": "TRIAL FAQ",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    40
+  ],
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "mixGainDb": -1.3,
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take choice (since_for take1, used_to take2, trial_faq take2) is a provisional editorial choice from independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Qué pasa después de la semana de prueba?",
+      "est": 2.126,
+      "gap": 0,
+      "file": "audio/cues/trial_faq_c01.wav",
+      "start": 0.6,
+      "end": 2.726,
+      "audio": "audio/cues/trial_faq_c01.wav",
+      "audioSeconds": 2.126,
+      "padHead": 0,
+      "padTail": 0.275,
+      "cs": 0.6,
+      "ce": 2.451,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0,
+          "e": 1.851
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.",
+      "est": 4.834,
+      "gap": 0.75,
+      "file": "audio/cues/trial_faq_c02.wav",
+      "start": 3.476,
+      "end": 8.31,
+      "audio": "audio/cues/trial_faq_c02.wav",
+      "audioSeconds": 4.834,
+      "padHead": 0.275,
+      "padTail": 0.236,
+      "cs": 3.751,
+      "ce": 8.074,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.275,
+          "e": 4.598
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Si no continúas, no pagas.",
+      "est": 2.16,
+      "gap": 0.1,
+      "file": "audio/cues/trial_faq_c03.wav",
+      "start": 8.41,
+      "end": 10.57,
+      "audio": "audio/cues/trial_faq_c03.wav",
+      "audioSeconds": 2.16,
+      "padHead": 0.236,
+      "padTail": 0.2,
+      "cs": 8.646,
+      "ce": 10.37,
+      "marks": {
+        "noPayStart": 1.335
+      },
+      "islands": [
+        {
+          "s": 0.236,
+          "e": 1.171
+        },
+        {
+          "s": 1.335,
+          "e": 1.96
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Si continúas, el pago cubre las cuatro semanas completas, incluida la primera.",
+      "est": 5.409,
+      "gap": 0.9,
+      "file": "audio/cues/trial_faq_c04.wav",
+      "start": 11.47,
+      "end": 16.879,
+      "audio": "audio/cues/trial_faq_c04.wav",
+      "audioSeconds": 5.409,
+      "padHead": 0.2,
+      "padTail": 0.266,
+      "cs": 11.67,
+      "ce": 16.613,
+      "marks": {
+        "fourWeeks": 2.081,
+        "week1": 3.881
+      },
+      "islands": [
+        {
+          "s": 0.2,
+          "e": 5.143
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Consulta los precios en la descripción.",
+      "est": 2.099,
+      "gap": 2.7,
+      "file": "audio/cues/trial_faq_c05.wav",
+      "start": 19.579,
+      "end": 21.678,
+      "audio": "audio/cues/trial_faq_c05.wav",
+      "audioSeconds": 2.099,
+      "padHead": 0.266,
+      "padTail": 0.201,
+      "cs": 19.845,
+      "ce": 21.477,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.266,
+          "e": 1.898
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Manda GRUPO o CLUB por privado.",
+      "est": 2.521,
+      "gap": 3.45,
+      "file": "audio/cues/trial_faq_c06.wav",
+      "start": 25.128,
+      "end": 27.649,
+      "audio": "audio/cues/trial_faq_c06.wav",
+      "audioSeconds": 2.521,
+      "padHead": 0.201,
+      "padTail": 0.292,
+      "cs": 25.329,
+      "ce": 27.357,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.201,
+          "e": 1.509
+        },
+        {
+          "s": 1.643,
+          "e": 2.229
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "anchors": {
+      "fourWeeks": 11.2,
+      "week1": 13
+    },
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 844416,
+    "partitions": [
+      [
+        0,
+        93735
+      ],
+      [
+        93735,
+        306895
+      ],
+      [
+        306895,
+        402133
+      ],
+      [
+        402133,
+        640678
+      ],
+      [
+        640678,
+        733229
+      ],
+      [
+        733229,
+        844416
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        1.851
+      ],
+      [
+        2.401,
+        6.723
+      ],
+      [
+        7.195,
+        8.13
+      ],
+      [
+        8.294,
+        8.919
+      ],
+      [
+        9.319,
+        14.262
+      ],
+      [
+        14.794,
+        16.426
+      ],
+      [
+        16.827,
+        18.136
+      ],
+      [
+        18.27,
+        18.855
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "marks": {
+      "noPayStart": [
+        "c03",
+        1
+      ]
+    }
+  },
+  "duration": 31.2,
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/trial_faq.cues.json",
+  "alignmentSource": {
+    "file": "manifest/trial_faq.alignment.json",
+    "master": "audio/originals/trial_faq_take2.mp3",
+    "masterSha256": "7c489dd1eba4e25ef29a51f727b867d1425875d7821a9d83e77cc404088a90d7",
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch3_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    }
+  },
+  "warnings": []
+}

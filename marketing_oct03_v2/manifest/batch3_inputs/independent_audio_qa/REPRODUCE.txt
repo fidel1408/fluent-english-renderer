@@ -1,0 +1,14 @@
+All analysis is offline. Original MP3s are in ../audio; do not edit them.
+Run from the existing workspace with official model caches already at /tmp/fluent-asr/models.
+
+python inspect_technical.py
+PYTHONPATH=/tmp/fluent-asr/site-packages python run_asr.py --model small --files since_for_take1 since_for_take2 used_to_take1 used_to_take2 trial_faq_take1 trial_faq_take2
+PYTHONPATH=/tmp/fluent-asr/site-packages python run_asr.py --model medium --files since_for_take1 since_for_take2 used_to_take2 trial_faq_take2
+python build_comparison.py
+python build_timing_handoff.py
+MPLCONFIGDIR=/tmp/fluent-batch3-mpl python build_anchor_evidence.py
+
+No decoder receives expected script text. Reference text enters only the post-recognition comparison and phrase indexing. JSON transcripts retain full raw segments/words, parameters, and source hashes.
+The UCX VFS socket diagnostic in ASR logs did not prevent inference; each requested file produced a completed transcript/evidence JSON.
+Annotations and thresholds are measurement aids; they do not establish human listening, pronunciation quality, or sample-exact phonetic boundaries.
+The evidence archive omits originals, which are preserved separately. SHA256SUMS.txt hashes every evidence file except itself. The archive hash lives beside the ZIP to avoid a self-referential archive hash.

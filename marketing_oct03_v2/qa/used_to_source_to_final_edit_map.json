@@ -1,0 +1,240 @@
+{
+  "video": "used_to",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/used_to_take2.mp3",
+  "masterSha256": "898c618a8cc2dc945bc1f70e509a451d5852effc7aea27215e9edb88302857c7",
+  "sampleRate": 44100,
+  "fullMasterSamples": 1028736,
+  "fullMasterSeconds": 23.327346939,
+  "retainedCueSamples": 1028736,
+  "retainedCueSeconds": 23.327346939,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 35.9,
+  "addedSilenceSeconds": 12.572653,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Piensa en algo que hacías antes.",
+      "caption": "Piensa en algo que hacías antes.",
+      "cueFile": "audio/cues/used_to_c01.wav",
+      "cueWavSamples": 94186,
+      "sourceSampleRange": [
+        0,
+        94186
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.135737,
+      "finalStart": 0.6,
+      "finalEnd": 2.736,
+      "offsetSeconds": 0.6,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.744,
+        2.435
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "I used to play soccer after school.",
+      "caption": "I used to play soccer after school.",
+      "cueFile": "audio/cues/used_to_c02.wav",
+      "cueWavSamples": 109236,
+      "sourceSampleRange": [
+        94186,
+        203422
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.135737,
+      "sourceEndSeconds": 4.612744,
+      "finalStart": 3.436,
+      "finalEnd": 5.913,
+      "offsetSeconds": 1.300263,
+      "gapBeforeAdded": 0.7,
+      "speechActivityFinal": [
+        3.737,
+        5.518
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Antes jugaba fútbol después de la escuela.",
+      "caption": "Antes jugaba fútbol después de la escuela.",
+      "cueFile": "audio/cues/used_to_c03.wav",
+      "cueWavSamples": 133601,
+      "sourceSampleRange": [
+        203422,
+        337023
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 4.612744,
+      "sourceEndSeconds": 7.642245,
+      "finalStart": 6.013,
+      "finalEnd": 9.043,
+      "offsetSeconds": 1.400256,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        6.408,
+        8.589
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Para un hábito de antes que ya cambió,",
+      "caption": "Para un hábito de antes que ya cambió,",
+      "cueFile": "audio/cues/used_to_c04.wav",
+      "cueWavSamples": 120618,
+      "sourceSampleRange": [
+        337023,
+        457641
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 7.642245,
+      "sourceEndSeconds": 10.377347,
+      "finalStart": 9.433,
+      "finalEnd": 12.168,
+      "offsetSeconds": 1.790755,
+      "gapBeforeAdded": 0.39,
+      "speechActivityFinal": [
+        9.886,
+        12.016
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "usa used to más verbo base: play.",
+      "caption": "usa used to más verbo base: play.",
+      "cueFile": "audio/cues/used_to_c05.wav",
+      "cueWavSamples": 169472,
+      "sourceSampleRange": [
+        457641,
+        627113
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 10.377347,
+      "sourceEndSeconds": 14.220249,
+      "finalStart": 12.268,
+      "finalEnd": 16.111,
+      "offsetSeconds": 1.890653,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        12.42,
+        15.739
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Ahora tú:",
+      "caption": "Ahora tú:",
+      "cueFile": "audio/cues/used_to_c06.wav",
+      "cueWavSamples": 53610,
+      "sourceSampleRange": [
+        627113,
+        680723
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 14.220249,
+      "sourceEndSeconds": 15.435896,
+      "finalStart": 19.511,
+      "finalEnd": 20.727,
+      "offsetSeconds": 5.290751,
+      "gapBeforeAdded": 3.4,
+      "speechActivityFinal": [
+        19.883,
+        20.357
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "I used to…",
+      "caption": "I used to…",
+      "cueFile": "audio/cues/used_to_c07.wav",
+      "cueWavSamples": 81737,
+      "sourceSampleRange": [
+        680723,
+        762460
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 15.435896,
+      "sourceEndSeconds": 17.289342,
+      "finalStart": 20.827,
+      "finalEnd": 22.68,
+      "offsetSeconds": 5.391104,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        21.197,
+        22.376
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "¿Cómo completarías la frase?",
+      "caption": "¿Cómo completarías la frase?",
+      "cueFile": "audio/cues/used_to_c08.wav",
+      "cueWavSamples": 93517,
+      "sourceSampleRange": [
+        762460,
+        855977
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 17.289342,
+      "sourceEndSeconds": 19.409909,
+      "finalStart": 22.78,
+      "finalEnd": 24.901,
+      "offsetSeconds": 5.490658,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        23.085,
+        24.355
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea:",
+      "caption": "Clases en línea:",
+      "cueFile": "audio/cues/used_to_c09.wav",
+      "cueWavSamples": 67768,
+      "sourceSampleRange": [
+        855977,
+        923745
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 19.409909,
+      "sourceEndSeconds": 20.946599,
+      "finalStart": 28.201,
+      "finalEnd": 29.738,
+      "offsetSeconds": 8.791091,
+      "gapBeforeAdded": 3.3,
+      "speechActivityFinal": [
+        28.747,
+        29.556
+      ]
+    },
+    {
+      "id": "c10",
+      "text": "manda GRUPO por mensaje privado.",
+      "caption": "manda GRUPO por mensaje privado.",
+      "cueFile": "audio/cues/used_to_c10.wav",
+      "cueWavSamples": 104991,
+      "sourceSampleRange": [
+        923745,
+        1028736
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 20.946599,
+      "sourceEndSeconds": 23.327347,
+      "finalStart": 29.938,
+      "finalEnd": 32.319,
+      "offsetSeconds": 8.991401,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        30.119,
+        32.067
+      ]
+    }
+  ]
+}

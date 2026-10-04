@@ -1,0 +1,176 @@
+{
+  "file": "FE261026-SINCEFOR_batch3_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Esto empezó antes y sigue ahora.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "I’ve lived here for two years.",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "For indica duración:",
+      "correlation": 0.995,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "two years.",
+      "correlation": 0.986,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c05",
+      "text": "I’ve lived here since twenty twenty-four.",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "Since señala cuándo empezó:",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "twenty twenty-four.",
+      "correlation": 0.997,
+      "lagMs": 5
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú:",
+      "correlation": 0.991,
+      "lagMs": 5
+    },
+    {
+      "id": "c09",
+      "text": "I’ve studied English… six months.",
+      "correlation": 0.985,
+      "lagMs": 5
+    },
+    {
+      "id": "c10",
+      "text": "¿Since o for?",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c11",
+      "text": "Clases en línea:",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c12",
+      "text": "manda GRUPO por mensaje privado.",
+      "correlation": 1,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.76,
+      "expect": "ON c01",
+      "creamPixels": 6171
+    },
+    {
+      "at": 5.11,
+      "expect": "ON c02",
+      "creamPixels": 6022
+    },
+    {
+      "at": 7.38,
+      "expect": "ON c03",
+      "creamPixels": 5722
+    },
+    {
+      "at": 9.11,
+      "expect": "ON c04",
+      "creamPixels": 5786
+    },
+    {
+      "at": 12.07,
+      "expect": "ON c05",
+      "creamPixels": 5874
+    },
+    {
+      "at": 14.87,
+      "expect": "ON c06",
+      "creamPixels": 5704
+    },
+    {
+      "at": 17.18,
+      "expect": "ON c07",
+      "creamPixels": 5925
+    },
+    {
+      "at": 19.2,
+      "expect": "ON c08",
+      "creamPixels": 5708
+    },
+    {
+      "at": 21.47,
+      "expect": "ON c09",
+      "creamPixels": 5999
+    },
+    {
+      "at": 23.98,
+      "expect": "ON c10",
+      "creamPixels": 6003
+    },
+    {
+      "at": 29.46,
+      "expect": "ON c11",
+      "creamPixels": 5799
+    },
+    {
+      "at": 31.26,
+      "expect": "ON c12",
+      "creamPixels": 5957
+    },
+    {
+      "at": 3.58,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 10.27,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    },
+    {
+      "at": 18.32,
+      "expect": "OFF (gap c07-c08)",
+      "creamPixels": 0
+    },
+    {
+      "at": 19.82,
+      "expect": "OFF (gap c08-c09)",
+      "creamPixels": 0
+    },
+    {
+      "at": 26.85,
+      "expect": "OFF (gap c10-c11)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.9,
+    "loudnessRangeLU": 7.7,
+    "truePeakdBTP": -4
+  },
+  "finalHold": {
+    "from": 32.36,
+    "to": 35.8,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.44
+  },
+  "pass": true
+}

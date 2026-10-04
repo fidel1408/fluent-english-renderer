@@ -1,0 +1,165 @@
+{
+  "video": "trial_faq",
+  "frames": 936,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "Qué pasa después",
+      "window": [
+        0.6,
+        2.5
+      ],
+      "framesChecked": 57,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Primera semana",
+      "window": [
+        3.65,
+        10.37
+      ],
+      "framesChecked": 201,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "sin pago adelantado",
+      "window": [
+        3.65,
+        10.37
+      ],
+      "framesChecked": 201,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "no pagas",
+      "window": [
+        8.55,
+        10.37
+      ],
+      "framesChecked": 55,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Si continúas, el pago cubre",
+      "window": [
+        11.57,
+        16.61
+      ],
+      "framesChecked": 151,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "las cuatro semanas",
+      "window": [
+        11.57,
+        16.61
+      ],
+      "framesChecked": 151,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "completas,",
+      "window": [
+        11.57,
+        16.61
+      ],
+      "framesChecked": 151,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "incluida la primera",
+      "window": [
+        11.57,
+        16.61
+      ],
+      "framesChecked": 151,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Precios y condiciones",
+      "window": [
+        19.74,
+        21.48
+      ],
+      "framesChecked": 52,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Club: intermedios",
+      "window": [
+        19.74,
+        21.48
+      ],
+      "framesChecked": 52,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Grupos: máx. 10",
+      "window": [
+        19.74,
+        21.48
+      ],
+      "framesChecked": 52,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "GRUPO",
+      "window": [
+        25.33,
+        30.86
+      ],
+      "framesChecked": 166,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "CLUB",
+      "window": [
+        25.33,
+        30.86
+      ],
+      "framesChecked": 166,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/\\$|MXN|\\bIVA\\b|gratis|quinta|quinto|5 semanas|reserv|apertura|noviembre|privad[oa]s? .*prueba|empresa|asignad|maestro|cupo|enlace de pago|seguir|follow|guarda|link|https?:|www\\.|\\.com/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "GRUPO",
+    "enteredAt": 24.43,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 43,
+  "captionGlyphBounds": {
+    "xMin": 110.5,
+    "xMax": 849.5,
+    "yBottomMax": 1399,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1225.2,
+  "captionClearsMouth": true,
+  "pass": true
+}

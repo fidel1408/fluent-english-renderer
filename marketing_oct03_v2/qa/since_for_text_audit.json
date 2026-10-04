@@ -1,0 +1,151 @@
+{
+  "video": "since_for",
+  "frames": 1074,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "Empezó antes",
+      "window": [
+        0.6,
+        2.98
+      ],
+      "framesChecked": 71,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "I’ve lived here",
+      "window": [
+        4.13,
+        6
+      ],
+      "framesChecked": 56,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "for two years.",
+      "window": [
+        4.13,
+        9.46
+      ],
+      "framesChecked": 160,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "FOR + duración",
+      "window": [
+        4.13,
+        9.46
+      ],
+      "framesChecked": 160,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Vivo aquí desde",
+      "window": [
+        4.13,
+        9.46
+      ],
+      "framesChecked": 160,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "since 2024.",
+      "window": [
+        10.99,
+        17.67
+      ],
+      "framesChecked": 200,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "SINCE + inicio",
+      "window": [
+        10.99,
+        17.67
+      ],
+      "framesChecked": 200,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "desde 2024.",
+      "window": [
+        10.99,
+        17.67
+      ],
+      "framesChecked": 200,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "six months.",
+      "window": [
+        18.87,
+        27.8
+      ],
+      "framesChecked": 268,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Since o for?",
+      "window": [
+        23.21,
+        27.8
+      ],
+      "framesChecked": 138,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "GRUPO",
+      "window": [
+        29.05,
+        35.61
+      ],
+      "framesChecked": 196,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/2025|2026|octubre|october|noviembre|garantiz|precio|gratis|seguir|follow|guarda|link|https?:|www\\.|\\.com/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/for two years|since 2024|Vivo aquí|FOR \\+|SINCE \\+|EJEMPLO|hace dos años|desde 2024/i",
+      "fromSeconds": 18.07,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "GRUPO",
+    "enteredAt": 28.15,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 39,
+  "captionGlyphBounds": {
+    "xMin": 111.5,
+    "xMax": 848.5,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
+  "captionClearsMouth": true,
+  "pass": true
+}

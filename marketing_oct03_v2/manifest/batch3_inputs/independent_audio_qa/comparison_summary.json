@@ -1,0 +1,257 @@
+[
+  {
+    "content_id": "FE261026-SINCEFOR",
+    "file": "since_for_take1.mp3",
+    "evidence_file": "since_for_take1_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "Esto empezó antes y sigue ahora. I've lived here for two years. For indica duración, two years. I've lived here since 2024. Since señala cuándo empezó, 2024. Ahora tú. I've studied English six months. Since o for? Clases en línea. Manda grupo por mensaje privado.",
+    "normalized_script_words": 49,
+    "normalized_hypothesis_words": 49,
+    "aligned_exact_words": 49,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261026-SINCEFOR",
+    "file": "since_for_take1.mp3",
+    "evidence_file": "since_for_take1_small_unprompted.json",
+    "model": "small",
+    "transcript": "Esto empezó antes y sigue ahora. I've lived here for two years. For indicaduración. Two years. I've lived here since 2024. Since señala cuando empezó. 2024. Ahora tú. I've studied English six months. Since o for. Clases en línea. Manda grupo por mensaje privado.",
+    "normalized_script_words": 49,
+    "normalized_hypothesis_words": 48,
+    "aligned_exact_words": 46,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "indica duración",
+        "recognized": "indicaduración",
+        "expected_token_span": [
+          13,
+          15
+        ],
+        "recognized_token_span": [
+          13,
+          14
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "cuándo",
+        "recognized": "cuando",
+        "expected_token_span": [
+          26,
+          27
+        ],
+        "recognized_token_span": [
+          25,
+          26
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261026-SINCEFOR",
+    "file": "since_for_take2.mp3",
+    "evidence_file": "since_for_take2_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "Esto empezó antes y sigue ahora. I've lived here for two years. Four indica duración. Two years. I've lived here since 2024. Since señala cuándo empezó. 2024. Ahora tú. I've studied English six months. Since o four? Clases en línea. Manda grupo por mensaje privado.",
+    "normalized_script_words": 49,
+    "normalized_hypothesis_words": 49,
+    "aligned_exact_words": 47,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "for",
+        "recognized": "four",
+        "expected_token_span": [
+          12,
+          13
+        ],
+        "recognized_token_span": [
+          12,
+          13
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "for",
+        "recognized": "four",
+        "expected_token_span": [
+          40,
+          41
+        ],
+        "recognized_token_span": [
+          40,
+          41
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261026-SINCEFOR",
+    "file": "since_for_take2.mp3",
+    "evidence_file": "since_for_take2_small_unprompted.json",
+    "model": "small",
+    "transcript": "Esto empezó antes y sigue ahora. I've lived here for two years. Four indica duración. Two years. I've lived here since 2024. Since señala cuando empezó. 2024. Ahora tú. I've studied English six months. Since or for? Clases en línea. Manda grupo por mensaje privado.",
+    "normalized_script_words": 49,
+    "normalized_hypothesis_words": 49,
+    "aligned_exact_words": 46,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "for",
+        "recognized": "four",
+        "expected_token_span": [
+          12,
+          13
+        ],
+        "recognized_token_span": [
+          12,
+          13
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "cuándo",
+        "recognized": "cuando",
+        "expected_token_span": [
+          26,
+          27
+        ],
+        "recognized_token_span": [
+          26,
+          27
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "o",
+        "recognized": "or",
+        "expected_token_span": [
+          39,
+          40
+        ],
+        "recognized_token_span": [
+          39,
+          40
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261028-USED",
+    "file": "used_to_take1.mp3",
+    "evidence_file": "used_to_take1_small_unprompted.json",
+    "model": "small",
+    "transcript": "Piensa en algo que hacías antes. I used to play soccer after school. Antes jugaba fútbol después de la escuela. Para un hábito de antes que ya cambió, usa use to más verbo base, play. Ahora tú. I used to... ¿Cómo completarías la frase? Clases en línea. Manda grupo por mensaje privado.",
+    "normalized_script_words": 52,
+    "normalized_hypothesis_words": 52,
+    "aligned_exact_words": 51,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "used",
+        "recognized": "use",
+        "expected_token_span": [
+          29,
+          30
+        ],
+        "recognized_token_span": [
+          29,
+          30
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261028-USED",
+    "file": "used_to_take2.mp3",
+    "evidence_file": "used_to_take2_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "Piensa en algo que hacías antes. I used to play soccer after school. Antes jugaba fútbol después de la escuela. Para un hábito de antes que ya cambió, usa used to más verbo base, play. Ahora tú. I used to... ¿Cómo completarías la frase? Clases en línea. Manda grupo por mensaje privado.",
+    "normalized_script_words": 52,
+    "normalized_hypothesis_words": 52,
+    "aligned_exact_words": 52,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261028-USED",
+    "file": "used_to_take2.mp3",
+    "evidence_file": "used_to_take2_small_unprompted.json",
+    "model": "small",
+    "transcript": "Piensa en algo que hacías antes. I used to play soccer after school. Antes jugaba fútbol después de la escuela. Para un hábito de antes que ya cambió, usa used to más verbo base, play. Ahora tú. I used to... ¿Cómo completarías la frase? Clases en línea. Manda grupo por mensaje privado.",
+    "normalized_script_words": 52,
+    "normalized_hypothesis_words": 52,
+    "aligned_exact_words": 52,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261030-TRIALFAQ",
+    "file": "trial_faq_take1.mp3",
+    "evidence_file": "trial_faq_take1_small_unprompted.json",
+    "model": "small",
+    "transcript": "¿Qué pasa después de la semana de prueba? En grupos y speaking club pruebas la primera semana sin pagar por adelantado. Si no continúas, no pagas. Si continúas, el pago cubre las cuatro semanas completas incluida la primera. Consulta los precios en la descripción, manda grupo o club por privado.",
+    "normalized_script_words": 50,
+    "normalized_hypothesis_words": 50,
+    "aligned_exact_words": 50,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261030-TRIALFAQ",
+    "file": "trial_faq_take2.mp3",
+    "evidence_file": "trial_faq_take2_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "¿Qué pasa después de la semana de prueba? En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado. Si no continúas, no pagas. Si continúas, el pago cubre las cuatro semanas completas incluida la primera. Consulta los precios en la descripción. Manda grupo o club por privado.",
+    "normalized_script_words": 50,
+    "normalized_hypothesis_words": 50,
+    "aligned_exact_words": 50,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261030-TRIALFAQ",
+    "file": "trial_faq_take2.mp3",
+    "evidence_file": "trial_faq_take2_small_unprompted.json",
+    "model": "small",
+    "transcript": "¿Qué pasa después de la semana de prueba? En grupos y speaking club pruebas la primera semana sin pagar por adelantado, si no continuas no pagas, si continuas el pago cubre las cuatro semanas completas incluida la primera. Consulta los precios en la descripción, manda grupo o club por privado.",
+    "normalized_script_words": 50,
+    "normalized_hypothesis_words": 50,
+    "aligned_exact_words": 48,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "continúas",
+        "recognized": "continuas",
+        "expected_token_span": [
+          23,
+          24
+        ],
+        "recognized_token_span": [
+          23,
+          24
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "continúas",
+        "recognized": "continuas",
+        "expected_token_span": [
+          27,
+          28
+        ],
+        "recognized_token_span": [
+          27,
+          28
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; 2024 expanded to twenty twenty four; all other numbers retained. This is an ASR-script comparison, not an intelligibility or listening grade."
+  }
+]

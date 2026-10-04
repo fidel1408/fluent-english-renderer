@@ -1,0 +1,619 @@
+{
+  "time_basis": "Original decoded-source seconds, before inserted silence. ASR estimates, not sample-exact audio boundaries. Min/max is model spread, not a confidence interval. True errors can be larger.",
+  "index_normalization": "Only for finding already-recognized words: apostrophe/case/punctuation, accent folding, 2024 to twenty twenty four, and joined indicaduración split. This does not alter raw ASR or the strict comparison.",
+  "chosen_takes": {
+    "since_for": "take1",
+    "used_to": "take2",
+    "trial_faq": "take2"
+  },
+  "phrases": [
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "hook",
+      "indexed_phrase": "Esto empezó antes y sigue ahora",
+      "start_min": 0.0,
+      "start_max": 0.0,
+      "end_min": 2.2,
+      "end_max": 2.5,
+      "estimates": {
+        "small": {
+          "start": 0.0,
+          "end": 2.2
+        },
+        "medium": {
+          "start": 0.0,
+          "end": 2.5
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "duration_example",
+      "indexed_phrase": "I've lived here for two years",
+      "start_min": 2.94,
+      "start_max": 3.0,
+      "end_min": 4.5,
+      "end_max": 4.82,
+      "estimates": {
+        "small": {
+          "start": 2.94,
+          "end": 4.5
+        },
+        "medium": {
+          "start": 3.0,
+          "end": 4.82
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "duration_rule",
+      "indexed_phrase": "For indica duración",
+      "start_min": 5.2,
+      "start_max": 5.44,
+      "end_min": 6.56,
+      "end_max": 6.86,
+      "estimates": {
+        "small": {
+          "start": 5.2,
+          "end": 6.56
+        },
+        "medium": {
+          "start": 5.44,
+          "end": 6.86
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "duration_repeat",
+      "indexed_phrase": "two years",
+      "start_min": 7.24,
+      "start_max": 7.32,
+      "end_min": 7.7,
+      "end_max": 7.9,
+      "estimates": {
+        "small": {
+          "start": 7.24,
+          "end": 7.7
+        },
+        "medium": {
+          "start": 7.32,
+          "end": 7.9
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "start_example",
+      "indexed_phrase": "I've lived here since 2024",
+      "start_min": 8.6,
+      "start_max": 8.62,
+      "end_min": 10.28,
+      "end_max": 10.44,
+      "estimates": {
+        "small": {
+          "start": 8.6,
+          "end": 10.28
+        },
+        "medium": {
+          "start": 8.62,
+          "end": 10.44
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "start_rule",
+      "indexed_phrase": "Since señala cuándo empezó",
+      "start_min": 11.2,
+      "start_max": 11.5,
+      "end_min": 13.36,
+      "end_max": 13.82,
+      "estimates": {
+        "small": {
+          "start": 11.2,
+          "end": 13.36
+        },
+        "medium": {
+          "start": 11.5,
+          "end": 13.82
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "start_repeat",
+      "indexed_phrase": "2024",
+      "start_min": 13.96,
+      "start_max": 14.2,
+      "end_min": 14.5,
+      "end_max": 14.94,
+      "estimates": {
+        "small": {
+          "start": 13.96,
+          "end": 14.5
+        },
+        "medium": {
+          "start": 14.2,
+          "end": 14.94
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "practice_lead",
+      "indexed_phrase": "Ahora tú",
+      "start_min": 15.6,
+      "start_max": 15.7,
+      "end_min": 16.0,
+      "end_max": 16.14,
+      "estimates": {
+        "small": {
+          "start": 15.6,
+          "end": 16.0
+        },
+        "medium": {
+          "start": 15.7,
+          "end": 16.14
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "practice_prefix",
+      "indexed_phrase": "I've studied English",
+      "start_min": 16.74,
+      "start_max": 16.74,
+      "end_min": 17.74,
+      "end_max": 17.86,
+      "estimates": {
+        "small": {
+          "start": 16.74,
+          "end": 17.74
+        },
+        "medium": {
+          "start": 16.74,
+          "end": 17.86
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "practice_duration",
+      "indexed_phrase": "six months",
+      "start_min": 17.74,
+      "start_max": 17.86,
+      "end_min": 18.94,
+      "end_max": 19.14,
+      "estimates": {
+        "small": {
+          "start": 17.74,
+          "end": 18.94
+        },
+        "medium": {
+          "start": 17.86,
+          "end": 19.14
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "practice_question",
+      "indexed_phrase": "Since o for",
+      "start_min": 19.64,
+      "start_max": 19.9,
+      "end_min": 20.92,
+      "end_max": 21.16,
+      "estimates": {
+        "small": {
+          "start": 19.64,
+          "end": 20.92
+        },
+        "medium": {
+          "start": 19.9,
+          "end": 21.16
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "cta_offer",
+      "indexed_phrase": "Clases en línea",
+      "start_min": 21.9,
+      "start_max": 22.02,
+      "end_min": 22.64,
+      "end_max": 22.8,
+      "estimates": {
+        "small": {
+          "start": 21.9,
+          "end": 22.64
+        },
+        "medium": {
+          "start": 22.02,
+          "end": 22.8
+        }
+      }
+    },
+    {
+      "source_file": "since_for_take1.mp3",
+      "phrase_id": "cta_action",
+      "indexed_phrase": "Manda grupo por mensaje privado",
+      "start_min": 23.14,
+      "start_max": 23.22,
+      "end_min": 24.76,
+      "end_max": 24.88,
+      "estimates": {
+        "small": {
+          "start": 23.14,
+          "end": 24.76
+        },
+        "medium": {
+          "start": 23.22,
+          "end": 24.88
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "hook",
+      "indexed_phrase": "Piensa en algo que hacías antes",
+      "start_min": 0.0,
+      "start_max": 0.0,
+      "end_min": 1.62,
+      "end_max": 2.0,
+      "estimates": {
+        "small": {
+          "start": 0.0,
+          "end": 1.62
+        },
+        "medium": {
+          "start": 0.0,
+          "end": 2.0
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "example",
+      "indexed_phrase": "I used to play soccer after school",
+      "start_min": 2.36,
+      "start_max": 2.54,
+      "end_min": 4.14,
+      "end_max": 4.3,
+      "estimates": {
+        "small": {
+          "start": 2.36,
+          "end": 4.14
+        },
+        "medium": {
+          "start": 2.54,
+          "end": 4.3
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "translation",
+      "indexed_phrase": "Antes jugaba fútbol después de la escuela",
+      "start_min": 4.8,
+      "start_max": 5.08,
+      "end_min": 7.04,
+      "end_max": 7.2,
+      "estimates": {
+        "small": {
+          "start": 4.8,
+          "end": 7.04
+        },
+        "medium": {
+          "start": 5.08,
+          "end": 7.2
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "changed_habit",
+      "indexed_phrase": "Para un hábito de antes que ya cambió",
+      "start_min": 8.1,
+      "start_max": 8.28,
+      "end_min": 10.28,
+      "end_max": 10.52,
+      "estimates": {
+        "small": {
+          "start": 8.1,
+          "end": 10.28
+        },
+        "medium": {
+          "start": 8.28,
+          "end": 10.52
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "structure",
+      "indexed_phrase": "usa used to más verbo base",
+      "start_min": 10.58,
+      "start_max": 10.82,
+      "end_min": 12.88,
+      "end_max": 13.04,
+      "estimates": {
+        "small": {
+          "start": 10.58,
+          "end": 12.88
+        },
+        "medium": {
+          "start": 10.82,
+          "end": 13.04
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "base_word",
+      "indexed_phrase": "play",
+      "start_min": 13.34,
+      "start_max": 13.52,
+      "end_min": 13.74,
+      "end_max": 13.94,
+      "estimates": {
+        "small": {
+          "start": 13.34,
+          "end": 13.74
+        },
+        "medium": {
+          "start": 13.52,
+          "end": 13.94
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "practice_lead",
+      "indexed_phrase": "Ahora tú",
+      "start_min": 14.56,
+      "start_max": 14.7,
+      "end_min": 15.04,
+      "end_max": 15.28,
+      "estimates": {
+        "small": {
+          "start": 14.56,
+          "end": 15.04
+        },
+        "medium": {
+          "start": 14.7,
+          "end": 15.28
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "practice_fragment",
+      "indexed_phrase": "I used to",
+      "start_min": 15.8,
+      "start_max": 15.86,
+      "end_min": 17.48,
+      "end_max": 17.6,
+      "estimates": {
+        "small": {
+          "start": 15.8,
+          "end": 17.48
+        },
+        "medium": {
+          "start": 15.86,
+          "end": 17.6
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "practice_question",
+      "indexed_phrase": "Cómo completarías la frase",
+      "start_min": 17.48,
+      "start_max": 17.6,
+      "end_min": 18.68,
+      "end_max": 18.84,
+      "estimates": {
+        "small": {
+          "start": 17.48,
+          "end": 18.68
+        },
+        "medium": {
+          "start": 17.6,
+          "end": 18.84
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "cta_offer",
+      "indexed_phrase": "Clases en línea",
+      "start_min": 19.78,
+      "start_max": 19.98,
+      "end_min": 20.66,
+      "end_max": 20.84,
+      "estimates": {
+        "small": {
+          "start": 19.78,
+          "end": 20.66
+        },
+        "medium": {
+          "start": 19.98,
+          "end": 20.84
+        }
+      }
+    },
+    {
+      "source_file": "used_to_take2.mp3",
+      "phrase_id": "cta_action",
+      "indexed_phrase": "Manda grupo por mensaje privado",
+      "start_min": 21.14,
+      "start_max": 21.22,
+      "end_min": 23.06,
+      "end_max": 23.16,
+      "estimates": {
+        "small": {
+          "start": 21.14,
+          "end": 23.06
+        },
+        "medium": {
+          "start": 21.22,
+          "end": 23.16
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "hook",
+      "indexed_phrase": "Qué pasa después de la semana de prueba",
+      "start_min": 0.0,
+      "start_max": 0.0,
+      "end_min": 1.68,
+      "end_max": 1.82,
+      "estimates": {
+        "small": {
+          "start": 0.0,
+          "end": 1.68
+        },
+        "medium": {
+          "start": 0.0,
+          "end": 1.82
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "trial",
+      "indexed_phrase": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado",
+      "start_min": 2.36,
+      "start_max": 2.4,
+      "end_min": 6.74,
+      "end_max": 6.88,
+      "estimates": {
+        "small": {
+          "start": 2.36,
+          "end": 6.74
+        },
+        "medium": {
+          "start": 2.4,
+          "end": 6.88
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "stop_condition",
+      "indexed_phrase": "Si no continúas no pagas",
+      "start_min": 7.16,
+      "start_max": 7.3,
+      "end_min": 8.9,
+      "end_max": 9.04,
+      "estimates": {
+        "small": {
+          "start": 7.16,
+          "end": 8.9
+        },
+        "medium": {
+          "start": 7.3,
+          "end": 9.04
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "continue_condition",
+      "indexed_phrase": "Si continúas el pago cubre las cuatro semanas completas incluida la primera",
+      "start_min": 9.28,
+      "start_max": 9.36,
+      "end_min": 14.14,
+      "end_max": 14.28,
+      "estimates": {
+        "small": {
+          "start": 9.28,
+          "end": 14.14
+        },
+        "medium": {
+          "start": 9.36,
+          "end": 14.28
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "four_weeks",
+      "indexed_phrase": "las cuatro semanas completas",
+      "start_min": 11.2,
+      "start_max": 11.28,
+      "end_min": 13.0,
+      "end_max": 13.18,
+      "estimates": {
+        "small": {
+          "start": 11.2,
+          "end": 13.0
+        },
+        "medium": {
+          "start": 11.28,
+          "end": 13.18
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "week1_included",
+      "indexed_phrase": "incluida la primera",
+      "start_min": 13.0,
+      "start_max": 13.18,
+      "end_min": 14.14,
+      "end_max": 14.28,
+      "estimates": {
+        "small": {
+          "start": 13.0,
+          "end": 14.14
+        },
+        "medium": {
+          "start": 13.18,
+          "end": 14.28
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "details",
+      "indexed_phrase": "Consulta los precios en la descripción",
+      "start_min": 14.72,
+      "start_max": 14.8,
+      "end_min": 16.48,
+      "end_max": 16.64,
+      "estimates": {
+        "small": {
+          "start": 14.72,
+          "end": 16.48
+        },
+        "medium": {
+          "start": 14.8,
+          "end": 16.64
+        }
+      }
+    },
+    {
+      "source_file": "trial_faq_take2.mp3",
+      "phrase_id": "cta",
+      "indexed_phrase": "Manda grupo o club por privado",
+      "start_min": 16.82,
+      "start_max": 16.9,
+      "end_min": 18.84,
+      "end_max": 18.9,
+      "estimates": {
+        "small": {
+          "start": 16.82,
+          "end": 18.84
+        },
+        "medium": {
+          "start": 16.9,
+          "end": 18.9
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1032 @@
+{
+  "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch3/audio/trial_faq_take2.mp3",
+  "sha256": "7c489dd1eba4e25ef29a51f727b867d1425875d7821a9d83e77cc404088a90d7",
+  "model": "medium",
+  "implementation": "faster-whisper 1.2.1",
+  "parameters": {
+    "language": null,
+    "task": "transcribe",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "multilingual": true,
+    "initial_prompt": null,
+    "prefix": null,
+    "hotwords": null,
+    "condition_on_previous_text": false,
+    "vad_filter": false
+  },
+  "info": {
+    "language": "es",
+    "language_probability": 0.9977452158927917,
+    "duration": 19.14775,
+    "duration_after_vad": 19.14775,
+    "all_language_probs": [
+      [
+        "es",
+        0.9977452158927917
+      ],
+      [
+        "en",
+        0.0008427941938862205
+      ],
+      [
+        "pt",
+        0.0005632248939946294
+      ],
+      [
+        "it",
+        0.00036945223109796643
+      ],
+      [
+        "nn",
+        0.00011682679178193212
+      ],
+      [
+        "la",
+        5.532186332857236e-05
+      ],
+      [
+        "fr",
+        3.998838292318396e-05
+      ],
+      [
+        "ja",
+        3.5119133826810867e-05
+      ],
+      [
+        "gl",
+        2.3770366169628687e-05
+      ],
+      [
+        "de",
+        2.3228010832099244e-05
+      ],
+      [
+        "ru",
+        2.280155968037434e-05
+      ],
+      [
+        "pl",
+        2.195956403738819e-05
+      ],
+      [
+        "cy",
+        2.0734622012241744e-05
+      ],
+      [
+        "km",
+        1.769775371940341e-05
+      ],
+      [
+        "zh",
+        1.1407104466343299e-05
+      ],
+      [
+        "ko",
+        1.077165961760329e-05
+      ],
+      [
+        "el",
+        9.39913388720015e-06
+      ],
+      [
+        "jw",
+        8.511776286468375e-06
+      ],
+      [
+        "tr",
+        8.230314051616006e-06
+      ],
+      [
+        "ro",
+        6.43018756818492e-06
+      ],
+      [
+        "id",
+        6.2729714045417495e-06
+      ],
+      [
+        "haw",
+        5.839284312969539e-06
+      ],
+      [
+        "nl",
+        4.019574589619879e-06
+      ],
+      [
+        "tl",
+        3.6569474559655646e-06
+      ],
+      [
+        "ar",
+        3.403562914172653e-06
+      ],
+      [
+        "vi",
+        3.3700175663398113e-06
+      ],
+      [
+        "hi",
+        3.0284159038274083e-06
+      ],
+      [
+        "eu",
+        2.419378006379702e-06
+      ],
+      [
+        "ms",
+        2.3818006411602255e-06
+      ],
+      [
+        "th",
+        2.0333684460638324e-06
+      ],
+      [
+        "ca",
+        1.7457596186432056e-06
+      ],
+      [
+        "sn",
+        1.6322658211720409e-06
+      ],
+      [
+        "fi",
+        8.433734137724969e-07
+      ],
+      [
+        "sv",
+        8.254299928012188e-07
+      ],
+      [
+        "te",
+        6.295670686995436e-07
+      ],
+      [
+        "br",
+        5.50955121525476e-07
+      ],
+      [
+        "hu",
+        5.097552957522566e-07
+      ],
+      [
+        "oc",
+        4.720197352980904e-07
+      ],
+      [
+        "mi",
+        4.718685033822112e-07
+      ],
+      [
+        "cs",
+        3.868867395340203e-07
+      ],
+      [
+        "sa",
+        3.6823178106715204e-07
+      ],
+      [
+        "si",
+        3.056722164274106e-07
+      ],
+      [
+        "fa",
+        2.4412605625911965e-07
+      ],
+      [
+        "ur",
+        2.437152488710126e-07
+      ],
+      [
+        "ml",
+        2.0610555395705887e-07
+      ],
+      [
+        "he",
+        1.5841952460959874e-07
+      ],
+      [
+        "bn",
+        1.5578211787214968e-07
+      ],
+      [
+        "yo",
+        1.5459309565812873e-07
+      ],
+      [
+        "ta",
+        1.4436592721267516e-07
+      ],
+      [
+        "uk",
+        8.167269527348253e-08
+      ],
+      [
+        "sw",
+        7.067306029284737e-08
+      ],
+      [
+        "da",
+        7.063775342430745e-08
+      ],
+      [
+        "bg",
+        7.015425040890477e-08
+      ],
+      [
+        "hr",
+        5.855919127384368e-08
+      ],
+      [
+        "my",
+        5.143659009831936e-08
+      ],
+      [
+        "no",
+        4.9929230527823165e-08
+      ],
+      [
+        "sk",
+        4.907552053623476e-08
+      ],
+      [
+        "is",
+        3.568213102767004e-08
+      ],
+      [
+        "sl",
+        3.402741555191824e-08
+      ],
+      [
+        "mn",
+        3.350651667233251e-08
+      ],
+      [
+        "ne",
+        2.093762851984593e-08
+      ],
+      [
+        "be",
+        1.9111876525812477e-08
+      ],
+      [
+        "ht",
+        1.2239745217357267e-08
+      ],
+      [
+        "lt",
+        1.033865704158643e-08
+      ],
+      [
+        "fo",
+        1.0280334805656821e-08
+      ],
+      [
+        "ps",
+        8.034419352043187e-09
+      ],
+      [
+        "bo",
+        7.082902708788197e-09
+      ],
+      [
+        "lo",
+        7.055261708188709e-09
+      ],
+      [
+        "yi",
+        3.6938436753786164e-09
+      ],
+      [
+        "bs",
+        3.648985114068637e-09
+      ],
+      [
+        "af",
+        3.520598479411774e-09
+      ],
+      [
+        "hy",
+        3.1909801467833177e-09
+      ],
+      [
+        "sd",
+        2.8769548965357217e-09
+      ],
+      [
+        "et",
+        2.381833619224949e-09
+      ],
+      [
+        "pa",
+        2.3355686273873744e-09
+      ],
+      [
+        "lv",
+        1.9687125263345706e-09
+      ],
+      [
+        "mr",
+        1.959496787051762e-09
+      ],
+      [
+        "kn",
+        1.650256931107208e-09
+      ],
+      [
+        "as",
+        1.3388986586093665e-09
+      ],
+      [
+        "sq",
+        1.1835408209037723e-09
+      ],
+      [
+        "az",
+        8.777129023584962e-10
+      ],
+      [
+        "ln",
+        7.266551249607289e-10
+      ],
+      [
+        "sr",
+        4.473053871745236e-10
+      ],
+      [
+        "mk",
+        4.3753067835439197e-10
+      ],
+      [
+        "gu",
+        3.382890634284763e-10
+      ],
+      [
+        "kk",
+        2.7191107698776307e-10
+      ],
+      [
+        "am",
+        1.938230270726038e-10
+      ],
+      [
+        "mt",
+        1.3990857083978625e-10
+      ],
+      [
+        "ka",
+        1.3409426347088527e-10
+      ],
+      [
+        "mg",
+        6.803801966270839e-11
+      ],
+      [
+        "ha",
+        4.3713175440496244e-11
+      ],
+      [
+        "tk",
+        4.0435713805075935e-11
+      ],
+      [
+        "su",
+        3.541587509370281e-11
+      ],
+      [
+        "ba",
+        3.275795606993981e-11
+      ],
+      [
+        "so",
+        2.8972661075821193e-11
+      ],
+      [
+        "tg",
+        2.3147666075584716e-11
+      ],
+      [
+        "lb",
+        7.139995625987661e-12
+      ],
+      [
+        "uz",
+        5.079884863451456e-12
+      ],
+      [
+        "tt",
+        1.7207913696401511e-12
+      ]
+    ],
+    "transcription_options": {
+      "beam_size": 5,
+      "best_of": 5,
+      "patience": 1,
+      "length_penalty": 1,
+      "repetition_penalty": 1,
+      "no_repeat_ngram_size": 0,
+      "log_prob_threshold": -1.0,
+      "no_speech_threshold": 0.6,
+      "compression_ratio_threshold": 2.4,
+      "condition_on_previous_text": false,
+      "prompt_reset_on_temperature": 0.5,
+      "temperatures": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "initial_prompt": null,
+      "prefix": null,
+      "suppress_blank": true,
+      "suppress_tokens": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        90,
+        91,
+        92,
+        93,
+        359,
+        503,
+        522,
+        542,
+        873,
+        893,
+        902,
+        918,
+        922,
+        931,
+        1350,
+        1853,
+        1982,
+        2460,
+        2627,
+        3246,
+        3253,
+        3268,
+        3536,
+        3846,
+        3961,
+        4183,
+        4667,
+        6585,
+        6647,
+        7273,
+        9061,
+        9383,
+        10428,
+        10929,
+        11938,
+        12033,
+        12331,
+        12562,
+        13793,
+        14157,
+        14635,
+        15265,
+        15618,
+        16553,
+        16604,
+        18362,
+        18956,
+        20075,
+        21675,
+        22520,
+        26130,
+        26161,
+        26435,
+        28279,
+        29464,
+        31650,
+        32302,
+        32470,
+        36865,
+        42863,
+        47425,
+        49870,
+        50254,
+        50258,
+        50358,
+        50359,
+        50360,
+        50361,
+        50362
+      ],
+      "without_timestamps": false,
+      "max_initial_timestamp": 1.0,
+      "word_timestamps": true,
+      "prepend_punctuations": "\"'“¿([{-",
+      "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+      "multilingual": true,
+      "max_new_tokens": null,
+      "clip_timestamps": [
+        0.0
+      ],
+      "hallucination_silence_threshold": null,
+      "hotwords": null
+    },
+    "vad_options": null
+  },
+  "segments": [
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.82,
+      "text": " ¿Qué pasa después de la semana de prueba?",
+      "tokens": [
+        50364,
+        3841,
+        15137,
+        20260,
+        15283,
+        368,
+        635,
+        20205,
+        368,
+        48241,
+        30,
+        50488
+      ],
+      "avg_logprob": -0.166803826107068,
+      "compression_ratio": 1.5175879396984924,
+      "no_speech_prob": 0.05516287684440613,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.26,
+          "word": " ¿Qué",
+          "probability": 0.8520146310329437
+        },
+        {
+          "start": 0.26,
+          "end": 0.52,
+          "word": " pasa",
+          "probability": 0.9920598268508911
+        },
+        {
+          "start": 0.52,
+          "end": 0.88,
+          "word": " después",
+          "probability": 0.9927918910980225
+        },
+        {
+          "start": 0.88,
+          "end": 1.02,
+          "word": " de",
+          "probability": 0.9981780052185059
+        },
+        {
+          "start": 1.02,
+          "end": 1.14,
+          "word": " la",
+          "probability": 0.9907624125480652
+        },
+        {
+          "start": 1.14,
+          "end": 1.4,
+          "word": " semana",
+          "probability": 0.9256486892700195
+        },
+        {
+          "start": 1.4,
+          "end": 1.64,
+          "word": " de",
+          "probability": 0.9974228143692017
+        },
+        {
+          "start": 1.64,
+          "end": 1.82,
+          "word": " prueba?",
+          "probability": 0.9932103753089905
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 2.4,
+      "end": 6.88,
+      "text": " En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.",
+      "tokens": [
+        50488,
+        2193,
+        33758,
+        288,
+        13069,
+        11288,
+        32820,
+        16342,
+        635,
+        17382,
+        20205,
+        3343,
+        28024,
+        1515,
+        30069,
+        394,
+        1573,
+        13,
+        50720
+      ],
+      "avg_logprob": -0.166803826107068,
+      "compression_ratio": 1.5175879396984924,
+      "no_speech_prob": 0.05516287684440613,
+      "words": [
+        {
+          "start": 2.4,
+          "end": 2.6,
+          "word": " En",
+          "probability": 0.9868371486663818
+        },
+        {
+          "start": 2.6,
+          "end": 2.96,
+          "word": " grupos",
+          "probability": 0.5180269479751587
+        },
+        {
+          "start": 2.96,
+          "end": 3.28,
+          "word": " y",
+          "probability": 0.9668957591056824
+        },
+        {
+          "start": 3.28,
+          "end": 3.56,
+          "word": " Speaking",
+          "probability": 0.5543482899665833
+        },
+        {
+          "start": 3.56,
+          "end": 3.86,
+          "word": " Club",
+          "probability": 0.9652976989746094
+        },
+        {
+          "start": 3.86,
+          "end": 4.32,
+          "word": " pruebas",
+          "probability": 0.8964113891124725
+        },
+        {
+          "start": 4.32,
+          "end": 4.6,
+          "word": " la",
+          "probability": 0.9951216578483582
+        },
+        {
+          "start": 4.6,
+          "end": 4.94,
+          "word": " primera",
+          "probability": 0.9768145680427551
+        },
+        {
+          "start": 4.94,
+          "end": 5.36,
+          "word": " semana",
+          "probability": 0.9962544441223145
+        },
+        {
+          "start": 5.36,
+          "end": 5.68,
+          "word": " sin",
+          "probability": 0.9880225658416748
+        },
+        {
+          "start": 5.68,
+          "end": 5.98,
+          "word": " pagar",
+          "probability": 0.9980654120445251
+        },
+        {
+          "start": 5.98,
+          "end": 6.26,
+          "word": " por",
+          "probability": 0.9982779026031494
+        },
+        {
+          "start": 6.26,
+          "end": 6.88,
+          "word": " adelantado.",
+          "probability": 0.9989507794380188
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.3,
+      "end": 9.04,
+      "text": " Si no continúas, no pagas.",
+      "tokens": [
+        50720,
+        4909,
+        572,
+        1421,
+        2481,
+        296,
+        11,
+        572,
+        11812,
+        296,
+        13,
+        50834
+      ],
+      "avg_logprob": -0.166803826107068,
+      "compression_ratio": 1.5175879396984924,
+      "no_speech_prob": 0.05516287684440613,
+      "words": [
+        {
+          "start": 7.3,
+          "end": 7.4,
+          "word": " Si",
+          "probability": 0.9892129302024841
+        },
+        {
+          "start": 7.4,
+          "end": 7.6,
+          "word": " no",
+          "probability": 0.9985997080802917
+        },
+        {
+          "start": 7.6,
+          "end": 8.22,
+          "word": " continúas,",
+          "probability": 0.9213342070579529
+        },
+        {
+          "start": 8.36,
+          "end": 8.54,
+          "word": " no",
+          "probability": 0.9724526405334473
+        },
+        {
+          "start": 8.54,
+          "end": 9.04,
+          "word": " pagas.",
+          "probability": 0.9905166923999786
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.36,
+      "end": 14.28,
+      "text": " Si continúas, el pago cubre las cuatro semanas completas incluida la primera.",
+      "tokens": [
+        50834,
+        4909,
+        1421,
+        2481,
+        296,
+        11,
+        806,
+        280,
+        6442,
+        10057,
+        265,
+        2439,
+        28795,
+        42507,
+        1557,
+        296,
+        25520,
+        2887,
+        635,
+        17382,
+        13,
+        51100
+      ],
+      "avg_logprob": -0.166803826107068,
+      "compression_ratio": 1.5175879396984924,
+      "no_speech_prob": 0.05516287684440613,
+      "words": [
+        {
+          "start": 9.36,
+          "end": 9.62,
+          "word": " Si",
+          "probability": 0.9918084740638733
+        },
+        {
+          "start": 9.62,
+          "end": 10.34,
+          "word": " continúas,",
+          "probability": 0.9863790273666382
+        },
+        {
+          "start": 10.58,
+          "end": 10.74,
+          "word": " el",
+          "probability": 0.9982847571372986
+        },
+        {
+          "start": 10.74,
+          "end": 10.94,
+          "word": " pago",
+          "probability": 0.9990034997463226
+        },
+        {
+          "start": 10.94,
+          "end": 11.28,
+          "word": " cubre",
+          "probability": 0.994091808795929
+        },
+        {
+          "start": 11.28,
+          "end": 11.58,
+          "word": " las",
+          "probability": 0.9925523996353149
+        },
+        {
+          "start": 11.58,
+          "end": 11.98,
+          "word": " cuatro",
+          "probability": 0.6829351782798767
+        },
+        {
+          "start": 11.98,
+          "end": 12.4,
+          "word": " semanas",
+          "probability": 0.9988112449645996
+        },
+        {
+          "start": 12.4,
+          "end": 13.18,
+          "word": " completas",
+          "probability": 0.9919031858444214
+        },
+        {
+          "start": 13.18,
+          "end": 13.76,
+          "word": " incluida",
+          "probability": 0.8790924549102783
+        },
+        {
+          "start": 13.76,
+          "end": 14.0,
+          "word": " la",
+          "probability": 0.9941166639328003
+        },
+        {
+          "start": 14.0,
+          "end": 14.28,
+          "word": " primera.",
+          "probability": 0.9976709485054016
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.8,
+      "end": 16.64,
+      "text": " Consulta los precios en la descripción.",
+      "tokens": [
+        51100,
+        40057,
+        64,
+        1750,
+        659,
+        23132,
+        465,
+        635,
+        2189,
+        39859,
+        13,
+        51202
+      ],
+      "avg_logprob": -0.166803826107068,
+      "compression_ratio": 1.5175879396984924,
+      "no_speech_prob": 0.05516287684440613,
+      "words": [
+        {
+          "start": 14.8,
+          "end": 15.2,
+          "word": " Consulta",
+          "probability": 0.9766192734241486
+        },
+        {
+          "start": 15.2,
+          "end": 15.44,
+          "word": " los",
+          "probability": 0.9840567111968994
+        },
+        {
+          "start": 15.44,
+          "end": 15.66,
+          "word": " precios",
+          "probability": 0.995365560054779
+        },
+        {
+          "start": 15.66,
+          "end": 15.8,
+          "word": " en",
+          "probability": 0.9971023201942444
+        },
+        {
+          "start": 15.8,
+          "end": 16.04,
+          "word": " la",
+          "probability": 0.998611330986023
+        },
+        {
+          "start": 16.04,
+          "end": 16.64,
+          "word": " descripción.",
+          "probability": 0.998342901468277
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 16.9,
+      "end": 18.9,
+      "text": " Manda grupo o club por privado.",
+      "tokens": [
+        51202,
+        376,
+        5575,
+        20190,
+        277,
+        6482,
+        1515,
+        2915,
+        1573,
+        13,
+        51306
+      ],
+      "avg_logprob": -0.166803826107068,
+      "compression_ratio": 1.5175879396984924,
+      "no_speech_prob": 0.05516287684440613,
+      "words": [
+        {
+          "start": 16.9,
+          "end": 17.18,
+          "word": " Manda",
+          "probability": 0.9745447337627411
+        },
+        {
+          "start": 17.18,
+          "end": 17.56,
+          "word": " grupo",
+          "probability": 0.5758394598960876
+        },
+        {
+          "start": 17.56,
+          "end": 17.88,
+          "word": " o",
+          "probability": 0.9718432426452637
+        },
+        {
+          "start": 17.88,
+          "end": 18.18,
+          "word": " club",
+          "probability": 0.9854576587677002
+        },
+        {
+          "start": 18.18,
+          "end": 18.52,
+          "word": " por",
+          "probability": 0.9893215894699097
+        },
+        {
+          "start": 18.52,
+          "end": 18.9,
+          "word": " privado.",
+          "probability": 0.9940414428710938
+        }
+      ],
+      "temperature": 0.0
+    }
+  ],
+  "seconds_elapsed": 20.103811359000247,
+  "transcript": "¿Qué pasa después de la semana de prueba? En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado. Si no continúas, no pagas. Si continúas, el pago cubre las cuatro semanas completas incluida la primera. Consulta los precios en la descripción. Manda grupo o club por privado.",
+  "limitations": "Automated recognition, not human listening. Word timestamps and probabilities are model estimates, not calibrated quality scores."
+}

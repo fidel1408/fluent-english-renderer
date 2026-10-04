@@ -1,0 +1,105 @@
+{
+  "file": "FE261030-TRIALFAQ_batch3_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Qué pasa después de la semana de prueba?",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "En grupos y Speaking Club pruebas la primera semana sin pagar por adelantado.",
+      "correlation": 0.998,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "Si no continúas, no pagas.",
+      "correlation": 0.998,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Si continúas, el pago cubre las cuatro semanas completas, incluida la primera.",
+      "correlation": 0.993,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "Consulta los precios en la descripción.",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "Manda GRUPO o CLUB por privado.",
+      "correlation": 1,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.53,
+      "expect": "ON c01",
+      "creamPixels": 5720
+    },
+    {
+      "at": 5.91,
+      "expect": "ON c02",
+      "creamPixels": 5612
+    },
+    {
+      "at": 9.51,
+      "expect": "ON c03",
+      "creamPixels": 5706
+    },
+    {
+      "at": 14.14,
+      "expect": "ON c04",
+      "creamPixels": 5574
+    },
+    {
+      "at": 20.66,
+      "expect": "ON c05",
+      "creamPixels": 5637
+    },
+    {
+      "at": 26.34,
+      "expect": "ON c06",
+      "creamPixels": 5955
+    },
+    {
+      "at": 3.1,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 11.02,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 18.23,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    },
+    {
+      "at": 23.4,
+      "expect": "OFF (gap c05-c06)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.5,
+    "loudnessRangeLU": 13.1,
+    "truePeakdBTP": -4.9
+  },
+  "finalHold": {
+    "from": 27.61,
+    "to": 31.2,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.59
+  },
+  "pass": true
+}

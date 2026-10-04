@@ -1,0 +1,35 @@
+{
+  "prepared_utc": "2026-10-04T01:59:00Z",
+  "scope": "Offline automated analysis of six originals; no genuine listening",
+  "selected_takes": {
+    "clarify_deadline_take1.mp3": {
+      "sha256": "71b48ddaf4925317155c959ddbef206e7759f493e9b3b315d121ce3c3f3dcc21",
+      "decoded_frames_44100hz": 957312,
+      "decoded_duration_seconds": 21.707755102040817,
+      "status": "PROVISIONAL_EXACT_SCRIPT_BLOCKER",
+      "no_fullscale_clipping_observed": true,
+      "source_bytes_unchanged_on_recheck": true
+    },
+    "private_company_take1.mp3": {
+      "sha256": "c71f2d26df7b889bf3dc37dc73c685423530ed98ff6bde4e30b1aa5a933bbef7",
+      "decoded_frames_44100hz": 767232,
+      "decoded_duration_seconds": 17.397551020408162,
+      "status": "AUTOMATED_CONTENT_AGREEMENT_ONLY",
+      "no_fullscale_clipping_observed": true,
+      "source_bytes_unchanged_on_recheck": true
+    },
+    "tell_me_more_take1.mp3": {
+      "sha256": "7eec96c982d2a6a51c1f32ff803d69ed52c2ab7a5cbb3593df843391f813a4ed",
+      "decoded_frames_44100hz": 1035648,
+      "decoded_duration_seconds": 23.484081632653062,
+      "status": "AUTOMATED_CONTENT_AGREEMENT_ONLY",
+      "no_fullscale_clipping_observed": true,
+      "source_bytes_unchanged_on_recheck": true
+    }
+  },
+  "remaining_gates": [
+    "Genuine auditory evaluation unrun for all three",
+    "Clarify por/for exact-script and caption agreement unresolved",
+    "Final source-to-video sync, encoding and target-app playback not assessed"
+  ]
+}

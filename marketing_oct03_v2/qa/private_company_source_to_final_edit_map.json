@@ -1,0 +1,130 @@
+{
+  "video": "private_company",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/private_company_take1.mp3",
+  "masterSha256": "c71f2d26df7b889bf3dc37dc73c685423530ed98ff6bde4e30b1aa5a933bbef7",
+  "sampleRate": 44100,
+  "fullMasterSamples": 767232,
+  "fullMasterSeconds": 17.39755102,
+  "retainedCueSamples": 767232,
+  "retainedCueSeconds": 17.39755102,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 29,
+  "addedSilenceSeconds": 11.602449,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Buscas una clase privada o clases para tu equipo?",
+      "caption": "¿Buscas una clase privada o clases para tu equipo?",
+      "cueFile": "audio/cues/private_company_c01.wav",
+      "cueWavSamples": 129974,
+      "sourceSampleRange": [
+        0,
+        129974
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.947256,
+      "finalStart": 0.6,
+      "finalEnd": 3.547,
+      "offsetSeconds": 0.6,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.6,
+        3.33
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Las privadas pueden ser para una, dos o tres personas.",
+      "caption": "Las privadas pueden ser para una, dos o tres personas.",
+      "cueFile": "audio/cues/private_company_c02.wav",
+      "cueWavSamples": 169395,
+      "sourceSampleRange": [
+        129974,
+        299369
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.947256,
+      "sourceEndSeconds": 6.788413,
+      "finalStart": 4.447,
+      "finalEnd": 8.288,
+      "offsetSeconds": 1.499744,
+      "gapBeforeAdded": 0.9,
+      "speechActivityFinal": [
+        4.664,
+        8.116
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Las clases para empresas son en línea, para un máximo de diez por clase.",
+      "caption": "Las clases para empresas son en línea, para un máximo de diez por clase.",
+      "cueFile": "audio/cues/private_company_c03.wav",
+      "cueWavSamples": 195307,
+      "sourceSampleRange": [
+        299369,
+        494676
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 6.788413,
+      "sourceEndSeconds": 11.217143,
+      "finalStart": 11.458,
+      "finalEnd": 15.887,
+      "offsetSeconds": 4.669587,
+      "gapBeforeAdded": 3.17,
+      "speechActivityFinal": [
+        11.63,
+        15.62
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Cuéntanos qué necesitan practicar.",
+      "caption": "Cuéntanos qué necesitan practicar.",
+      "cueFile": "audio/cues/private_company_c04.wav",
+      "cueWavSamples": 99613,
+      "sourceSampleRange": [
+        494676,
+        594289
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 11.217143,
+      "sourceEndSeconds": 13.475941,
+      "finalStart": 19.007,
+      "finalEnd": 21.266,
+      "offsetSeconds": 7.789857,
+      "gapBeforeAdded": 3.12,
+      "speechActivityFinal": [
+        19.273,
+        21.029
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Manda PRIVADO o EMPRESA por mensaje privado.",
+      "caption": "Manda PRIVADO o EMPRESA por mensaje privado.",
+      "cueFile": "audio/cues/private_company_c05.wav",
+      "cueWavSamples": 172943,
+      "sourceSampleRange": [
+        594289,
+        767232
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 13.475941,
+      "sourceEndSeconds": 17.397551,
+      "finalStart": 21.566,
+      "finalEnd": 25.488,
+      "offsetSeconds": 8.090059,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        21.803,
+        25.31
+      ]
+    }
+  ]
+}

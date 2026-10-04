@@ -4,6 +4,9 @@ Isolated output folder. The 30 s `video/` project and the published artifact are
 Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via supplied files, never for long lessons) are in `/CLAUDE.md` and `/.claude/skills/video-production/SKILL.md`.
 
 
+## October batch 2 (CLARIFY / MORE / PRIVATE) - QA-pending
+`out/FE261019-CLARIFY|FE261021-MORE|FE261023-PRIVATE_batch2_single-host_narrated_QA-pending.mp4`; take 1 provisionally for all three (not an audition); CLARIFY subtitle por/for exactness PROVISIONAL; PRIVATE is TikTok-only. Pipeline: `build/batch2_manifests.js` -> `partition_split.js` -> `retime.js` -> `build/render_batch2.sh`; evidence `qa/batch2_verification_report.md`, `build/verify_batch2_source.js`.
+
 ## October batch 1 (CANHAVE / BORROW / SCHEDULE) - REV2 QA-pending
 Current files are `out/FE26*_batch1_REV2_single-host_narrated_QA-pending.mp4` (evidence: `qa/batch1_REV2_verification_report.md`; the first batch-1 MP4s are kept unchanged). REV2: corrected Spanish role forms (YO RECIBO/TÚ PRESTAS, YO PRESTO/TÚ RECIBES), badge clearance, caption reserve x100-860/y180-1420, no stray underline dot, Schedule weekend title readable at the ASR sábado range, Schedule mix -3 dB, corrected provenance (waveform-derived cuts; take 2 = provisional longer alternative; ASR = corroboration only, not listening).
 

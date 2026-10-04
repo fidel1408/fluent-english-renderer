@@ -1,0 +1,968 @@
+{
+  "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/private_company_take1.mp3",
+  "sha256": "c71f2d26df7b889bf3dc37dc73c685423530ed98ff6bde4e30b1aa5a933bbef7",
+  "model": "small",
+  "implementation": "faster-whisper 1.2.1",
+  "parameters": {
+    "language": null,
+    "task": "transcribe",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "multilingual": true,
+    "initial_prompt": null,
+    "prefix": null,
+    "hotwords": null,
+    "condition_on_previous_text": false,
+    "vad_filter": false
+  },
+  "info": {
+    "language": "es",
+    "language_probability": 0.9997833371162415,
+    "duration": 17.3975625,
+    "duration_after_vad": 17.3975625,
+    "all_language_probs": [
+      [
+        "es",
+        0.9997833371162415
+      ],
+      [
+        "en",
+        9.949456580216065e-05
+      ],
+      [
+        "pt",
+        3.8615940866293386e-05
+      ],
+      [
+        "gl",
+        1.5256588994816411e-05
+      ],
+      [
+        "ko",
+        8.432626600551885e-06
+      ],
+      [
+        "ja",
+        6.862178906885674e-06
+      ],
+      [
+        "la",
+        5.690443686034996e-06
+      ],
+      [
+        "cy",
+        5.155823146196781e-06
+      ],
+      [
+        "it",
+        4.265767529432196e-06
+      ],
+      [
+        "nn",
+        3.5379905511945253e-06
+      ],
+      [
+        "zh",
+        2.9430555059661856e-06
+      ],
+      [
+        "fr",
+        2.5961526262108237e-06
+      ],
+      [
+        "hi",
+        2.3756797418172937e-06
+      ],
+      [
+        "el",
+        2.043694848907762e-06
+      ],
+      [
+        "de",
+        1.9439723928371677e-06
+      ],
+      [
+        "ru",
+        1.905692670334247e-06
+      ],
+      [
+        "sn",
+        1.4754841686226428e-06
+      ],
+      [
+        "jw",
+        1.44132661716867e-06
+      ],
+      [
+        "km",
+        1.273668090107094e-06
+      ],
+      [
+        "sa",
+        1.1749502846214455e-06
+      ],
+      [
+        "id",
+        1.1655532716758898e-06
+      ],
+      [
+        "haw",
+        9.553955351293553e-07
+      ],
+      [
+        "ar",
+        8.011899694793101e-07
+      ],
+      [
+        "te",
+        7.791570624249289e-07
+      ],
+      [
+        "pl",
+        6.554693641191989e-07
+      ],
+      [
+        "vi",
+        5.419344120127789e-07
+      ],
+      [
+        "eu",
+        5.393471838033292e-07
+      ],
+      [
+        "ms",
+        4.904006800643401e-07
+      ],
+      [
+        "ta",
+        4.849981110055523e-07
+      ],
+      [
+        "ml",
+        4.6948397880441917e-07
+      ],
+      [
+        "tr",
+        4.55786533848368e-07
+      ],
+      [
+        "tl",
+        4.2540489175735274e-07
+      ],
+      [
+        "nl",
+        3.758863726943673e-07
+      ],
+      [
+        "oc",
+        3.1644657383367303e-07
+      ],
+      [
+        "ca",
+        3.0835235520498827e-07
+      ],
+      [
+        "si",
+        1.8529807732647896e-07
+      ],
+      [
+        "ur",
+        1.6251786405518942e-07
+      ],
+      [
+        "th",
+        1.3173968227420119e-07
+      ],
+      [
+        "mi",
+        1.0532985328381983e-07
+      ],
+      [
+        "bn",
+        1.0045737752761852e-07
+      ],
+      [
+        "fi",
+        9.156069324944838e-08
+      ],
+      [
+        "br",
+        6.81175720274041e-08
+      ],
+      [
+        "yo",
+        6.768681970470425e-08
+      ],
+      [
+        "ro",
+        5.379127188120947e-08
+      ],
+      [
+        "sv",
+        4.104966677687116e-08
+      ],
+      [
+        "sw",
+        3.164313255865636e-08
+      ],
+      [
+        "cs",
+        1.3268994791815203e-08
+      ],
+      [
+        "hu",
+        1.309700881080289e-08
+      ],
+      [
+        "mn",
+        1.1350719475444748e-08
+      ],
+      [
+        "my",
+        8.461888967303821e-09
+      ],
+      [
+        "sl",
+        6.217309334033416e-09
+      ],
+      [
+        "be",
+        5.813469705628904e-09
+      ],
+      [
+        "as",
+        5.381895373801626e-09
+      ],
+      [
+        "ht",
+        5.19179454983032e-09
+      ],
+      [
+        "he",
+        4.7820112314411745e-09
+      ],
+      [
+        "bg",
+        4.375666939893108e-09
+      ],
+      [
+        "ne",
+        3.823599215024842e-09
+      ],
+      [
+        "af",
+        3.77748943236611e-09
+      ],
+      [
+        "uk",
+        3.766747802558257e-09
+      ],
+      [
+        "sd",
+        3.501545275952367e-09
+      ],
+      [
+        "mr",
+        3.1712721337839866e-09
+      ],
+      [
+        "kn",
+        3.0929803163104452e-09
+      ],
+      [
+        "fa",
+        2.981408231406135e-09
+      ],
+      [
+        "bo",
+        2.6475852621388185e-09
+      ],
+      [
+        "sk",
+        2.3133781557049815e-09
+      ],
+      [
+        "hr",
+        2.247336761129759e-09
+      ],
+      [
+        "lo",
+        2.156145262333098e-09
+      ],
+      [
+        "da",
+        1.7056838164108967e-09
+      ],
+      [
+        "mk",
+        1.0243978998403236e-09
+      ],
+      [
+        "fo",
+        7.622282804931046e-10
+      ],
+      [
+        "ps",
+        6.00552718665881e-10
+      ],
+      [
+        "is",
+        5.699882787979504e-10
+      ],
+      [
+        "bs",
+        5.554808280017198e-10
+      ],
+      [
+        "pa",
+        5.308984918350745e-10
+      ],
+      [
+        "et",
+        5.137749670147684e-10
+      ],
+      [
+        "yi",
+        4.672677800243719e-10
+      ],
+      [
+        "ln",
+        3.1912456011085055e-10
+      ],
+      [
+        "sr",
+        2.052476383296309e-10
+      ],
+      [
+        "hy",
+        2.0393024768861068e-10
+      ],
+      [
+        "az",
+        1.9689740116124455e-10
+      ],
+      [
+        "no",
+        1.1897255403070517e-10
+      ],
+      [
+        "kk",
+        6.14794118392048e-11
+      ],
+      [
+        "lv",
+        5.872261010786417e-11
+      ],
+      [
+        "mt",
+        3.7941004504826736e-11
+      ],
+      [
+        "lt",
+        3.078386850985382e-11
+      ],
+      [
+        "gu",
+        2.8947467686779582e-11
+      ],
+      [
+        "sq",
+        2.7087609932863188e-11
+      ],
+      [
+        "so",
+        9.795673820700568e-12
+      ],
+      [
+        "ka",
+        6.181495853380126e-12
+      ],
+      [
+        "am",
+        4.206731317457635e-12
+      ],
+      [
+        "tk",
+        7.316172949585475e-13
+      ],
+      [
+        "ba",
+        7.034271169020778e-13
+      ],
+      [
+        "su",
+        4.902551888757989e-13
+      ],
+      [
+        "tg",
+        4.1869171974948105e-13
+      ],
+      [
+        "tt",
+        1.871937527946413e-13
+      ],
+      [
+        "ha",
+        1.4097821217709527e-13
+      ],
+      [
+        "mg",
+        1.0266041353601194e-13
+      ],
+      [
+        "lb",
+        4.881033457190126e-14
+      ],
+      [
+        "uz",
+        2.8149966014331777e-14
+      ]
+    ],
+    "transcription_options": {
+      "beam_size": 5,
+      "best_of": 5,
+      "patience": 1,
+      "length_penalty": 1,
+      "repetition_penalty": 1,
+      "no_repeat_ngram_size": 0,
+      "log_prob_threshold": -1.0,
+      "no_speech_threshold": 0.6,
+      "compression_ratio_threshold": 2.4,
+      "condition_on_previous_text": false,
+      "prompt_reset_on_temperature": 0.5,
+      "temperatures": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "initial_prompt": null,
+      "prefix": null,
+      "suppress_blank": true,
+      "suppress_tokens": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        90,
+        91,
+        92,
+        93,
+        359,
+        503,
+        522,
+        542,
+        873,
+        893,
+        902,
+        918,
+        922,
+        931,
+        1350,
+        1853,
+        1982,
+        2460,
+        2627,
+        3246,
+        3253,
+        3268,
+        3536,
+        3846,
+        3961,
+        4183,
+        4667,
+        6585,
+        6647,
+        7273,
+        9061,
+        9383,
+        10428,
+        10929,
+        11938,
+        12033,
+        12331,
+        12562,
+        13793,
+        14157,
+        14635,
+        15265,
+        15618,
+        16553,
+        16604,
+        18362,
+        18956,
+        20075,
+        21675,
+        22520,
+        26130,
+        26161,
+        26435,
+        28279,
+        29464,
+        31650,
+        32302,
+        32470,
+        36865,
+        42863,
+        47425,
+        49870,
+        50254,
+        50258,
+        50358,
+        50359,
+        50360,
+        50361,
+        50362
+      ],
+      "without_timestamps": false,
+      "max_initial_timestamp": 1.0,
+      "word_timestamps": true,
+      "prepend_punctuations": "\"'“¿([{-",
+      "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+      "multilingual": true,
+      "max_new_tokens": null,
+      "clip_timestamps": [
+        0.0
+      ],
+      "hallucination_silence_threshold": null,
+      "hotwords": null
+    },
+    "vad_options": null
+  },
+  "segments": [
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.6,
+      "text": " ¿Buscas una clase privada o clases para tu equipo?",
+      "tokens": [
+        50364,
+        3841,
+        33,
+        301,
+        16369,
+        2002,
+        44578,
+        2915,
+        1538,
+        277,
+        596,
+        1957,
+        1690,
+        2604,
+        30048,
+        30,
+        50533
+      ],
+      "avg_logprob": -0.17756810411810875,
+      "compression_ratio": 1.5028901734104045,
+      "no_speech_prob": 0.0005716815358027816,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.36,
+          "word": " ¿Buscas",
+          "probability": 0.8621352463960648
+        },
+        {
+          "start": 0.36,
+          "end": 0.58,
+          "word": " una",
+          "probability": 0.9940717816352844
+        },
+        {
+          "start": 0.58,
+          "end": 0.8,
+          "word": " clase",
+          "probability": 0.9968236684799194
+        },
+        {
+          "start": 0.8,
+          "end": 1.4,
+          "word": " privada",
+          "probability": 0.9981092810630798
+        },
+        {
+          "start": 1.4,
+          "end": 1.58,
+          "word": " o",
+          "probability": 0.9376640319824219
+        },
+        {
+          "start": 1.58,
+          "end": 1.96,
+          "word": " clases",
+          "probability": 0.9855127036571503
+        },
+        {
+          "start": 1.96,
+          "end": 2.2,
+          "word": " para",
+          "probability": 0.9955185651779175
+        },
+        {
+          "start": 2.2,
+          "end": 2.34,
+          "word": " tu",
+          "probability": 0.985493004322052
+        },
+        {
+          "start": 2.34,
+          "end": 2.6,
+          "word": " equipo?",
+          "probability": 0.9968235492706299
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 3.24,
+      "end": 6.46,
+      "text": " Las privadas pueden ser para una, dos o tres personas.",
+      "tokens": [
+        50533,
+        10663,
+        2915,
+        6872,
+        14714,
+        816,
+        1690,
+        2002,
+        11,
+        4491,
+        277,
+        15890,
+        12019,
+        13,
+        50725
+      ],
+      "avg_logprob": -0.17756810411810875,
+      "compression_ratio": 1.5028901734104045,
+      "no_speech_prob": 0.0005716815358027816,
+      "words": [
+        {
+          "start": 3.24,
+          "end": 3.38,
+          "word": " Las",
+          "probability": 0.9749959707260132
+        },
+        {
+          "start": 3.38,
+          "end": 3.8,
+          "word": " privadas",
+          "probability": 0.9960068166255951
+        },
+        {
+          "start": 3.8,
+          "end": 4.04,
+          "word": " pueden",
+          "probability": 0.9948644042015076
+        },
+        {
+          "start": 4.04,
+          "end": 4.3,
+          "word": " ser",
+          "probability": 0.9933106899261475
+        },
+        {
+          "start": 4.3,
+          "end": 4.5,
+          "word": " para",
+          "probability": 0.9693647027015686
+        },
+        {
+          "start": 4.5,
+          "end": 4.86,
+          "word": " una,",
+          "probability": 0.7295422554016113
+        },
+        {
+          "start": 5.12,
+          "end": 5.36,
+          "word": " dos",
+          "probability": 0.985107958316803
+        },
+        {
+          "start": 5.36,
+          "end": 5.72,
+          "word": " o",
+          "probability": 0.8480191230773926
+        },
+        {
+          "start": 5.72,
+          "end": 5.98,
+          "word": " tres",
+          "probability": 0.9881938695907593
+        },
+        {
+          "start": 5.98,
+          "end": 6.46,
+          "word": " personas.",
+          "probability": 0.9933111667633057
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.1,
+      "end": 10.86,
+      "text": " Las clases para empresas son en línea para un máximo de 10 por clase.",
+      "tokens": [
+        50725,
+        10663,
+        596,
+        1957,
+        1690,
+        26433,
+        1872,
+        465,
+        37452,
+        1690,
+        517,
+        38876,
+        368,
+        1266,
+        1515,
+        44578,
+        13,
+        50939
+      ],
+      "avg_logprob": -0.17756810411810875,
+      "compression_ratio": 1.5028901734104045,
+      "no_speech_prob": 0.0005716815358027816,
+      "words": [
+        {
+          "start": 7.1,
+          "end": 7.2,
+          "word": " Las",
+          "probability": 0.9899809956550598
+        },
+        {
+          "start": 7.2,
+          "end": 7.56,
+          "word": " clases",
+          "probability": 0.9957150518894196
+        },
+        {
+          "start": 7.56,
+          "end": 7.74,
+          "word": " para",
+          "probability": 0.9889045357704163
+        },
+        {
+          "start": 7.74,
+          "end": 8.1,
+          "word": " empresas",
+          "probability": 0.6060386300086975
+        },
+        {
+          "start": 8.1,
+          "end": 8.42,
+          "word": " son",
+          "probability": 0.9706143140792847
+        },
+        {
+          "start": 8.42,
+          "end": 8.56,
+          "word": " en",
+          "probability": 0.9944018721580505
+        },
+        {
+          "start": 8.56,
+          "end": 8.86,
+          "word": " línea",
+          "probability": 0.9933377504348755
+        },
+        {
+          "start": 8.86,
+          "end": 9.36,
+          "word": " para",
+          "probability": 0.6306506991386414
+        },
+        {
+          "start": 9.36,
+          "end": 9.46,
+          "word": " un",
+          "probability": 0.9954349398612976
+        },
+        {
+          "start": 9.46,
+          "end": 9.78,
+          "word": " máximo",
+          "probability": 0.9931562542915344
+        },
+        {
+          "start": 9.78,
+          "end": 10.04,
+          "word": " de",
+          "probability": 0.993294894695282
+        },
+        {
+          "start": 10.04,
+          "end": 10.26,
+          "word": " 10",
+          "probability": 0.616170346736908
+        },
+        {
+          "start": 10.26,
+          "end": 10.52,
+          "word": " por",
+          "probability": 0.9245167374610901
+        },
+        {
+          "start": 10.52,
+          "end": 10.86,
+          "word": " clase.",
+          "probability": 0.9936681389808655
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.42,
+      "end": 13.14,
+      "text": " Cuéntanos qué necesitan practicar.",
+      "tokens": [
+        50939,
+        13205,
+        37239,
+        31035,
+        8057,
+        11909,
+        9670,
+        1927,
+        7953,
+        13,
+        51047
+      ],
+      "avg_logprob": -0.17756810411810875,
+      "compression_ratio": 1.5028901734104045,
+      "no_speech_prob": 0.0005716815358027816,
+      "words": [
+        {
+          "start": 11.42,
+          "end": 11.78,
+          "word": " Cuéntanos",
+          "probability": 0.95879065990448
+        },
+        {
+          "start": 11.78,
+          "end": 12.12,
+          "word": " qué",
+          "probability": 0.7598205208778381
+        },
+        {
+          "start": 12.12,
+          "end": 12.64,
+          "word": " necesitan",
+          "probability": 0.9445376992225647
+        },
+        {
+          "start": 12.64,
+          "end": 13.14,
+          "word": " practicar.",
+          "probability": 0.9811556935310364
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 13.62,
+      "end": 17.2,
+      "text": " Manda privado o empresa por mensaje privado.",
+      "tokens": [
+        51047,
+        376,
+        5575,
+        2915,
+        1573,
+        277,
+        22682,
+        1515,
+        10923,
+        11153,
+        2915,
+        1573,
+        13,
+        51223
+      ],
+      "avg_logprob": -0.17756810411810875,
+      "compression_ratio": 1.5028901734104045,
+      "no_speech_prob": 0.0005716815358027816,
+      "words": [
+        {
+          "start": 13.62,
+          "end": 14.02,
+          "word": " Manda",
+          "probability": 0.9350615739822388
+        },
+        {
+          "start": 14.02,
+          "end": 14.9,
+          "word": " privado",
+          "probability": 0.8507711291313171
+        },
+        {
+          "start": 14.9,
+          "end": 15.1,
+          "word": " o",
+          "probability": 0.9750639796257019
+        },
+        {
+          "start": 15.1,
+          "end": 15.74,
+          "word": " empresa",
+          "probability": 0.9862372875213623
+        },
+        {
+          "start": 15.74,
+          "end": 16.26,
+          "word": " por",
+          "probability": 0.9721169471740723
+        },
+        {
+          "start": 16.26,
+          "end": 16.74,
+          "word": " mensaje",
+          "probability": 0.9950170814990997
+        },
+        {
+          "start": 16.74,
+          "end": 17.2,
+          "word": " privado.",
+          "probability": 0.9988084137439728
+        }
+      ],
+      "temperature": 0.0
+    }
+  ],
+  "seconds_elapsed": 8.797958236998966,
+  "transcript": "¿Buscas una clase privada o clases para tu equipo? Las privadas pueden ser para una, dos o tres personas. Las clases para empresas son en línea para un máximo de 10 por clase. Cuéntanos qué necesitan practicar. Manda privado o empresa por mensaje privado.",
+  "limitations": "Automated recognition, not human listening. Word timestamps and probabilities are model estimates, not calibrated quality scores."
+}

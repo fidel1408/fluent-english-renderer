@@ -1,0 +1,1052 @@
+{
+  "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take1.mp3",
+  "sha256": "71b48ddaf4925317155c959ddbef206e7759f493e9b3b315d121ce3c3f3dcc21",
+  "model": "medium",
+  "implementation": "faster-whisper 1.2.1",
+  "parameters": {
+    "language": null,
+    "task": "transcribe",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "multilingual": true,
+    "initial_prompt": null,
+    "prefix": null,
+    "hotwords": null,
+    "condition_on_previous_text": false,
+    "vad_filter": false
+  },
+  "info": {
+    "language": "es",
+    "language_probability": 0.9955918192863464,
+    "duration": 21.70775,
+    "duration_after_vad": 21.70775,
+    "all_language_probs": [
+      [
+        "es",
+        0.9955918192863464
+      ],
+      [
+        "en",
+        0.003652716288343072
+      ],
+      [
+        "pt",
+        0.00019395645358599722
+      ],
+      [
+        "it",
+        0.00017377723997924477
+      ],
+      [
+        "la",
+        7.26708531146869e-05
+      ],
+      [
+        "nn",
+        6.470177322626114e-05
+      ],
+      [
+        "de",
+        5.042594420956448e-05
+      ],
+      [
+        "fr",
+        4.6969169488875195e-05
+      ],
+      [
+        "gl",
+        2.2149033611640334e-05
+      ],
+      [
+        "cy",
+        2.0998899344704114e-05
+      ],
+      [
+        "ja",
+        2.082444007101003e-05
+      ],
+      [
+        "km",
+        1.0053882760985289e-05
+      ],
+      [
+        "ru",
+        9.994840183935594e-06
+      ],
+      [
+        "haw",
+        8.418971447099466e-06
+      ],
+      [
+        "ko",
+        8.037699444685131e-06
+      ],
+      [
+        "pl",
+        6.190958174556727e-06
+      ],
+      [
+        "jw",
+        5.32604826730676e-06
+      ],
+      [
+        "nl",
+        5.0859912334999535e-06
+      ],
+      [
+        "zh",
+        4.430507942743134e-06
+      ],
+      [
+        "id",
+        3.302045797681785e-06
+      ],
+      [
+        "el",
+        3.1927945656207157e-06
+      ],
+      [
+        "ms",
+        3.1211363875627285e-06
+      ],
+      [
+        "ar",
+        2.170608468077262e-06
+      ],
+      [
+        "ca",
+        2.0570007563947e-06
+      ],
+      [
+        "ro",
+        2.0274014786991756e-06
+      ],
+      [
+        "eu",
+        1.935718955792254e-06
+      ],
+      [
+        "tr",
+        1.7422808014089242e-06
+      ],
+      [
+        "tl",
+        1.4451813967752969e-06
+      ],
+      [
+        "hi",
+        1.2237335340614663e-06
+      ],
+      [
+        "sn",
+        1.1563204225240042e-06
+      ],
+      [
+        "mi",
+        1.105169531001593e-06
+      ],
+      [
+        "vi",
+        1.031546958074614e-06
+      ],
+      [
+        "oc",
+        1.0126586857950315e-06
+      ],
+      [
+        "sv",
+        7.717711127952498e-07
+      ],
+      [
+        "fi",
+        7.054491675262398e-07
+      ],
+      [
+        "th",
+        6.082082677494327e-07
+      ],
+      [
+        "br",
+        5.906200044591969e-07
+      ],
+      [
+        "sa",
+        2.4209424509535893e-07
+      ],
+      [
+        "te",
+        1.9453895561127865e-07
+      ],
+      [
+        "yo",
+        1.6990561846341734e-07
+      ],
+      [
+        "da",
+        1.5612873482950818e-07
+      ],
+      [
+        "fa",
+        1.2488879974625888e-07
+      ],
+      [
+        "hu",
+        1.2421674000506755e-07
+      ],
+      [
+        "ur",
+        1.1698877244725736e-07
+      ],
+      [
+        "si",
+        1.0780779291508225e-07
+      ],
+      [
+        "he",
+        1.0547285000939155e-07
+      ],
+      [
+        "bn",
+        1.0029012287304795e-07
+      ],
+      [
+        "cs",
+        9.934750977436124e-08
+      ],
+      [
+        "sw",
+        7.649326505543286e-08
+      ],
+      [
+        "my",
+        7.299929194459764e-08
+      ],
+      [
+        "no",
+        6.204297164913442e-08
+      ],
+      [
+        "is",
+        5.813698322754135e-08
+      ],
+      [
+        "mn",
+        5.687566329015681e-08
+      ],
+      [
+        "ml",
+        5.346776532633157e-08
+      ],
+      [
+        "uk",
+        5.320154272681066e-08
+      ],
+      [
+        "ta",
+        5.2376826431554946e-08
+      ],
+      [
+        "sl",
+        4.4806000687458436e-08
+      ],
+      [
+        "bg",
+        3.8248366251991683e-08
+      ],
+      [
+        "hr",
+        3.4141066862503067e-08
+      ],
+      [
+        "ht",
+        3.3422914214042976e-08
+      ],
+      [
+        "sk",
+        2.4834344358737326e-08
+      ],
+      [
+        "bo",
+        2.2120415721360587e-08
+      ],
+      [
+        "fo",
+        2.0381236254252144e-08
+      ],
+      [
+        "ne",
+        1.4396391634363681e-08
+      ],
+      [
+        "be",
+        1.317727438276961e-08
+      ],
+      [
+        "af",
+        1.200830190839497e-08
+      ],
+      [
+        "yi",
+        1.0552330564905787e-08
+      ],
+      [
+        "lo",
+        6.674517827320869e-09
+      ],
+      [
+        "ps",
+        6.011207087652792e-09
+      ],
+      [
+        "bs",
+        5.022292359768699e-09
+      ],
+      [
+        "lt",
+        4.61183669031584e-09
+      ],
+      [
+        "sd",
+        3.8616252417966734e-09
+      ],
+      [
+        "as",
+        3.7116496542921595e-09
+      ],
+      [
+        "ln",
+        2.5486426302734344e-09
+      ],
+      [
+        "et",
+        2.1336783451175734e-09
+      ],
+      [
+        "lv",
+        2.0942141354396426e-09
+      ],
+      [
+        "pa",
+        2.0887211960030072e-09
+      ],
+      [
+        "mr",
+        1.7196103430094922e-09
+      ],
+      [
+        "hy",
+        1.0032388253478075e-09
+      ],
+      [
+        "kn",
+        9.552397761680709e-10
+      ],
+      [
+        "sq",
+        6.97180146946863e-10
+      ],
+      [
+        "az",
+        6.482612224800732e-10
+      ],
+      [
+        "sr",
+        5.542418746173894e-10
+      ],
+      [
+        "mk",
+        5.39247924091768e-10
+      ],
+      [
+        "am",
+        4.907970696521602e-10
+      ],
+      [
+        "kk",
+        4.0472863949148064e-10
+      ],
+      [
+        "mt",
+        3.9136918705828805e-10
+      ],
+      [
+        "mg",
+        2.9240276866460135e-10
+      ],
+      [
+        "gu",
+        2.714401758918683e-10
+      ],
+      [
+        "ha",
+        1.9273926898932814e-10
+      ],
+      [
+        "su",
+        1.5449448664828225e-10
+      ],
+      [
+        "ka",
+        1.447382630415106e-10
+      ],
+      [
+        "tk",
+        1.0724445637100288e-10
+      ],
+      [
+        "ba",
+        1.030876078944587e-10
+      ],
+      [
+        "so",
+        9.750202728531221e-11
+      ],
+      [
+        "lb",
+        6.16093981387067e-11
+      ],
+      [
+        "tg",
+        5.686938767124339e-11
+      ],
+      [
+        "uz",
+        1.1951411214849994e-11
+      ],
+      [
+        "tt",
+        7.469678521554446e-12
+      ]
+    ],
+    "transcription_options": {
+      "beam_size": 5,
+      "best_of": 5,
+      "patience": 1,
+      "length_penalty": 1,
+      "repetition_penalty": 1,
+      "no_repeat_ngram_size": 0,
+      "log_prob_threshold": -1.0,
+      "no_speech_threshold": 0.6,
+      "compression_ratio_threshold": 2.4,
+      "condition_on_previous_text": false,
+      "prompt_reset_on_temperature": 0.5,
+      "temperatures": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "initial_prompt": null,
+      "prefix": null,
+      "suppress_blank": true,
+      "suppress_tokens": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        90,
+        91,
+        92,
+        93,
+        359,
+        503,
+        522,
+        542,
+        873,
+        893,
+        902,
+        918,
+        922,
+        931,
+        1350,
+        1853,
+        1982,
+        2460,
+        2627,
+        3246,
+        3253,
+        3268,
+        3536,
+        3846,
+        3961,
+        4183,
+        4667,
+        6585,
+        6647,
+        7273,
+        9061,
+        9383,
+        10428,
+        10929,
+        11938,
+        12033,
+        12331,
+        12562,
+        13793,
+        14157,
+        14635,
+        15265,
+        15618,
+        16553,
+        16604,
+        18362,
+        18956,
+        20075,
+        21675,
+        22520,
+        26130,
+        26161,
+        26435,
+        28279,
+        29464,
+        31650,
+        32302,
+        32470,
+        36865,
+        42863,
+        47425,
+        49870,
+        50254,
+        50258,
+        50358,
+        50359,
+        50360,
+        50361,
+        50362
+      ],
+      "without_timestamps": false,
+      "max_initial_timestamp": 1.0,
+      "word_timestamps": true,
+      "prepend_punctuations": "\"'“¿([{-",
+      "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+      "multilingual": true,
+      "max_new_tokens": null,
+      "clip_timestamps": [
+        0.0
+      ],
+      "hallucination_silence_threshold": null,
+      "hotwords": null
+    },
+    "vad_options": null
+  },
+  "segments": [
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.8,
+      "text": " ¿Necesitas que te aclaren una fecha?",
+      "tokens": [
+        50364,
+        3841,
+        15496,
+        887,
+        14182,
+        631,
+        535,
+        696,
+        75,
+        4484,
+        2002,
+        579,
+        4413,
+        30,
+        50480
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.64,
+          "word": " ¿Necesitas",
+          "probability": 0.8216836303472519
+        },
+        {
+          "start": 0.64,
+          "end": 0.76,
+          "word": " que",
+          "probability": 0.9990515112876892
+        },
+        {
+          "start": 0.76,
+          "end": 0.94,
+          "word": " te",
+          "probability": 0.991768479347229
+        },
+        {
+          "start": 0.94,
+          "end": 1.18,
+          "word": " aclaren",
+          "probability": 0.8809115290641785
+        },
+        {
+          "start": 1.18,
+          "end": 1.48,
+          "word": " una",
+          "probability": 0.995923638343811
+        },
+        {
+          "start": 1.48,
+          "end": 1.8,
+          "word": " fecha?",
+          "probability": 0.9985692799091339
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 2.4,
+      "end": 3.8,
+      "text": " Could you clarify the deadline?",
+      "tokens": [
+        50480,
+        7497,
+        291,
+        17594,
+        264,
+        20615,
+        30,
+        50582
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 2.4,
+          "end": 2.48,
+          "word": " Could",
+          "probability": 0.1316714733839035
+        },
+        {
+          "start": 2.48,
+          "end": 2.76,
+          "word": " you",
+          "probability": 0.9929897785186768
+        },
+        {
+          "start": 2.76,
+          "end": 3.22,
+          "word": " clarify",
+          "probability": 0.9866018891334534
+        },
+        {
+          "start": 3.22,
+          "end": 3.44,
+          "word": " the",
+          "probability": 0.9915671944618225
+        },
+        {
+          "start": 3.44,
+          "end": 3.8,
+          "word": " deadline?",
+          "probability": 0.9916320443153381
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 4.4,
+      "end": 6.22,
+      "text": " ¿Podrías aclarar la fecha límite?",
+      "tokens": [
+        50582,
+        3841,
+        40742,
+        81,
+        10025,
+        696,
+        2200,
+        289,
+        635,
+        579,
+        4413,
+        287,
+        14569,
+        642,
+        30,
+        50716
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 4.4,
+          "end": 4.88,
+          "word": " ¿Podrías",
+          "probability": 0.985789105296135
+        },
+        {
+          "start": 4.88,
+          "end": 5.34,
+          "word": " aclarar",
+          "probability": 0.9989252686500549
+        },
+        {
+          "start": 5.34,
+          "end": 5.5,
+          "word": " la",
+          "probability": 0.9971501231193542
+        },
+        {
+          "start": 5.5,
+          "end": 5.72,
+          "word": " fecha",
+          "probability": 0.993866503238678
+        },
+        {
+          "start": 5.72,
+          "end": 6.22,
+          "word": " límite?",
+          "probability": 0.9023039738337199
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 7.06,
+      "end": 9.64,
+      "text": " Para confirmar, do you mean this Friday?",
+      "tokens": [
+        50716,
+        11107,
+        9064,
+        289,
+        11,
+        360,
+        291,
+        914,
+        341,
+        6984,
+        30,
+        50874
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 7.06,
+          "end": 7.32,
+          "word": " Para",
+          "probability": 0.963513970375061
+        },
+        {
+          "start": 7.32,
+          "end": 8.12,
+          "word": " confirmar,",
+          "probability": 0.9934919774532318
+        },
+        {
+          "start": 8.54,
+          "end": 8.58,
+          "word": " do",
+          "probability": 0.23387686908245087
+        },
+        {
+          "start": 8.58,
+          "end": 8.76,
+          "word": " you",
+          "probability": 0.9955989122390747
+        },
+        {
+          "start": 8.76,
+          "end": 8.98,
+          "word": " mean",
+          "probability": 0.9975307583808899
+        },
+        {
+          "start": 8.98,
+          "end": 9.26,
+          "word": " this",
+          "probability": 0.9294974207878113
+        },
+        {
+          "start": 9.26,
+          "end": 9.64,
+          "word": " Friday?",
+          "probability": 0.9434489011764526
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 10.2,
+      "end": 11.6,
+      "text": " ¿Te refieres a este viernes?",
+      "tokens": [
+        50874,
+        3841,
+        14233,
+        1895,
+        811,
+        279,
+        257,
+        4065,
+        17634,
+        4081,
+        30,
+        50992
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 10.2,
+          "end": 10.48,
+          "word": " ¿Te",
+          "probability": 0.9530030190944672
+        },
+        {
+          "start": 10.48,
+          "end": 10.84,
+          "word": " refieres",
+          "probability": 0.9934427340825399
+        },
+        {
+          "start": 10.84,
+          "end": 11.02,
+          "word": " a",
+          "probability": 0.9959463477134705
+        },
+        {
+          "start": 11.02,
+          "end": 11.14,
+          "word": " este",
+          "probability": 0.9942945837974548
+        },
+        {
+          "start": 11.14,
+          "end": 11.6,
+          "word": " viernes?",
+          "probability": 0.9769883751869202
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 12.62,
+      "end": 16.46,
+      "text": " Ahora cambia the deadline for the next step.",
+      "tokens": [
+        50992,
+        18840,
+        18751,
+        654,
+        264,
+        20615,
+        337,
+        264,
+        958,
+        1823,
+        13,
+        51224
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 12.62,
+          "end": 13.04,
+          "word": " Ahora",
+          "probability": 0.9666142463684082
+        },
+        {
+          "start": 13.04,
+          "end": 13.58,
+          "word": " cambia",
+          "probability": 0.8015013039112091
+        },
+        {
+          "start": 13.58,
+          "end": 13.94,
+          "word": " the",
+          "probability": 0.6008040904998779
+        },
+        {
+          "start": 13.94,
+          "end": 14.54,
+          "word": " deadline",
+          "probability": 0.9850360155105591
+        },
+        {
+          "start": 14.54,
+          "end": 15.12,
+          "word": " for",
+          "probability": 0.9566765427589417
+        },
+        {
+          "start": 15.12,
+          "end": 15.56,
+          "word": " the",
+          "probability": 0.9385365843772888
+        },
+        {
+          "start": 15.56,
+          "end": 15.92,
+          "word": " next",
+          "probability": 0.9858406782150269
+        },
+        {
+          "start": 15.92,
+          "end": 16.46,
+          "word": " step.",
+          "probability": 0.996336817741394
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 17.3,
+      "end": 18.8,
+      "text": " Clases en línea para tu equipo.",
+      "tokens": [
+        51224,
+        2033,
+        1957,
+        465,
+        37452,
+        1690,
+        2604,
+        30048,
+        13,
+        51322
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 17.3,
+          "end": 17.58,
+          "word": " Clases",
+          "probability": 0.9579858183860779
+        },
+        {
+          "start": 17.58,
+          "end": 17.82,
+          "word": " en",
+          "probability": 0.9987439513206482
+        },
+        {
+          "start": 17.82,
+          "end": 18.0,
+          "word": " línea",
+          "probability": 0.9825569987297058
+        },
+        {
+          "start": 18.0,
+          "end": 18.26,
+          "word": " para",
+          "probability": 0.9983217120170593
+        },
+        {
+          "start": 18.26,
+          "end": 18.4,
+          "word": " tu",
+          "probability": 0.9878394603729248
+        },
+        {
+          "start": 18.4,
+          "end": 18.8,
+          "word": " equipo.",
+          "probability": 0.9988732933998108
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 19.34,
+      "end": 21.58,
+      "text": " Manda empresa por mensaje privado.",
+      "tokens": [
+        51322,
+        376,
+        5575,
+        22682,
+        1515,
+        10923,
+        11153,
+        2915,
+        1573,
+        13,
+        51444
+      ],
+      "avg_logprob": -0.170379638671875,
+      "compression_ratio": 1.4146341463414633,
+      "no_speech_prob": 0.0028196822386235,
+      "words": [
+        {
+          "start": 19.34,
+          "end": 19.7,
+          "word": " Manda",
+          "probability": 0.9770824015140533
+        },
+        {
+          "start": 19.7,
+          "end": 20.38,
+          "word": " empresa",
+          "probability": 0.14062263071537018
+        },
+        {
+          "start": 20.38,
+          "end": 20.72,
+          "word": " por",
+          "probability": 0.9841982126235962
+        },
+        {
+          "start": 20.72,
+          "end": 21.16,
+          "word": " mensaje",
+          "probability": 0.997707188129425
+        },
+        {
+          "start": 21.16,
+          "end": 21.58,
+          "word": " privado.",
+          "probability": 0.9986136853694916
+        }
+      ],
+      "temperature": 0.0
+    }
+  ],
+  "seconds_elapsed": 24.288633688998743,
+  "transcript": "¿Necesitas que te aclaren una fecha? Could you clarify the deadline? ¿Podrías aclarar la fecha límite? Para confirmar, do you mean this Friday? ¿Te refieres a este viernes? Ahora cambia the deadline for the next step. Clases en línea para tu equipo. Manda empresa por mensaje privado.",
+  "limitations": "Automated recognition, not human listening. Word timestamps and probabilities are model estimates, not calibrated quality scores."
+}

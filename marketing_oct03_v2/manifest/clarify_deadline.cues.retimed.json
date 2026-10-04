@@ -1,0 +1,414 @@
+{
+  "video": "clarify_deadline",
+  "contentId": "FE261019-CLARIFY",
+  "title": "CLARIFY THE DEADLINE",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    35
+  ],
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "mixGainDb": -0.4,
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take 1 is a provisional editorial choice based on independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Necesitas que te aclaren una fecha?",
+      "est": 2.084,
+      "gap": 0,
+      "file": "audio/cues/clarify_deadline_c01.wav",
+      "start": 0.6,
+      "end": 2.684,
+      "audio": "audio/cues/clarify_deadline_c01.wav",
+      "audioSeconds": 2.084,
+      "padHead": 0,
+      "padTail": 0.274,
+      "cs": 0.6,
+      "ce": 2.41,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0,
+          "e": 1.81
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Could you clarify the deadline?",
+      "est": 2.036,
+      "gap": 0.75,
+      "file": "audio/cues/clarify_deadline_c02.wav",
+      "start": 3.434,
+      "end": 5.47,
+      "audio": "audio/cues/clarify_deadline_c02.wav",
+      "audioSeconds": 2.036,
+      "padHead": 0.274,
+      "padTail": 0.29,
+      "cs": 3.708,
+      "ce": 5.18,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.274,
+          "e": 1.746
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Podrías aclarar la fecha límite?",
+      "est": 2.49,
+      "gap": 0.1,
+      "file": "audio/cues/clarify_deadline_c03.wav",
+      "start": 5.57,
+      "end": 8.06,
+      "audio": "audio/cues/clarify_deadline_c03.wav",
+      "audioSeconds": 2.49,
+      "padHead": 0.29,
+      "padTail": 0.483,
+      "cs": 5.86,
+      "ce": 7.577,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.29,
+          "e": 2.007
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Para confirmar:",
+      "est": 1.538,
+      "gap": 0.35,
+      "file": "audio/cues/clarify_deadline_c04.wav",
+      "start": 8.41,
+      "end": 9.948,
+      "audio": "audio/cues/clarify_deadline_c04.wav",
+      "audioSeconds": 1.538,
+      "padHead": 0.483,
+      "padTail": 0.316,
+      "cs": 8.893,
+      "ce": 9.632,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.483,
+          "e": 1.222
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Do you mean this Friday?",
+      "est": 1.831,
+      "gap": 0.1,
+      "file": "audio/cues/clarify_deadline_c05.wav",
+      "start": 10.048,
+      "end": 11.879,
+      "audio": "audio/cues/clarify_deadline_c05.wav",
+      "audioSeconds": 1.831,
+      "padHead": 0.316,
+      "padTail": 0.281,
+      "cs": 10.364,
+      "ce": 11.598,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.316,
+          "e": 1.55
+        }
+      ]
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Te refieres a este viernes?",
+      "est": 2.137,
+      "gap": 0.1,
+      "file": "audio/cues/clarify_deadline_c06.wav",
+      "start": 11.979,
+      "end": 14.116,
+      "audio": "audio/cues/clarify_deadline_c06.wav",
+      "audioSeconds": 2.137,
+      "padHead": 0.281,
+      "padTail": 0.485,
+      "cs": 12.26,
+      "ce": 13.631,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.281,
+          "e": 1.652
+        }
+      ]
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "captionStatus": "PROVISIONAL: the intended Spanish copy says \"por\"; independent ASR (small+medium full-file take1, medium es-constrained spans) writes \"for\" around source 14.2-15.2 s. Not established as a spoken defect (code-switch recognition is possible) and not cleared by listening. Caption keeps the script word until a human listens.",
+      "text": "Ahora cambia the deadline por the next step.",
+      "est": 4.716,
+      "gap": 0.35,
+      "file": "audio/cues/clarify_deadline_c07.wav",
+      "start": 14.466,
+      "end": 19.182,
+      "audio": "audio/cues/clarify_deadline_c07.wav",
+      "audioSeconds": 4.716,
+      "padHead": 0.485,
+      "padTail": 0.416,
+      "cs": 14.951,
+      "ce": 18.766,
+      "marks": {
+        "porStart": 2.578,
+        "nextStart": 3.093
+      },
+      "islands": [
+        {
+          "s": 0.485,
+          "e": 2.346
+        },
+        {
+          "s": 2.578,
+          "e": 2.909
+        },
+        {
+          "s": 3.093,
+          "e": 4.3
+        }
+      ]
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Clases en línea para tu equipo:",
+      "est": 2.143,
+      "gap": 3.9,
+      "file": "audio/cues/clarify_deadline_c08.wav",
+      "start": 23.082,
+      "end": 25.225,
+      "audio": "audio/cues/clarify_deadline_c08.wav",
+      "audioSeconds": 2.143,
+      "padHead": 0.415,
+      "padTail": 0.233,
+      "cs": 23.497,
+      "ce": 24.992,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.415,
+          "e": 1.91
+        }
+      ]
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "manda EMPRESA por mensaje privado.",
+      "est": 2.733,
+      "gap": 0.2,
+      "file": "audio/cues/clarify_deadline_c09.wav",
+      "start": 25.425,
+      "end": 28.158,
+      "audio": "audio/cues/clarify_deadline_c09.wav",
+      "audioSeconds": 2.733,
+      "padHead": 0.233,
+      "padTail": 0.17,
+      "cs": 25.658,
+      "ce": 27.988,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.233,
+          "e": 0.651
+        },
+        {
+          "s": 0.788,
+          "e": 2.563
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "anchors": {},
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 957312,
+    "partitions": [
+      [
+        0,
+        91896
+      ],
+      [
+        91896,
+        181695
+      ],
+      [
+        181695,
+        291523
+      ],
+      [
+        291523,
+        359338
+      ],
+      [
+        359338,
+        440073
+      ],
+      [
+        440073,
+        534294
+      ],
+      [
+        534294,
+        742260
+      ],
+      [
+        742260,
+        836786
+      ],
+      [
+        836786,
+        957312
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        1.81
+      ],
+      [
+        2.358,
+        3.83
+      ],
+      [
+        4.41,
+        6.127
+      ],
+      [
+        7.094,
+        7.833
+      ],
+      [
+        8.464,
+        9.698
+      ],
+      [
+        10.26,
+        11.631
+      ],
+      [
+        12.6,
+        14.462
+      ],
+      [
+        14.694,
+        15.025
+      ],
+      [
+        15.208,
+        16.416
+      ],
+      [
+        17.247,
+        18.741
+      ],
+      [
+        19.208,
+        19.625
+      ],
+      [
+        19.762,
+        21.538
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "marks": {
+      "porStart": [
+        "c07",
+        1
+      ],
+      "nextStart": [
+        "c07",
+        2
+      ]
+    }
+  },
+  "duration": 31.7,
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/clarify_deadline.cues.json",
+  "alignmentSource": {
+    "file": "manifest/clarify_deadline.alignment.json",
+    "master": "audio/originals/clarify_deadline_take1.mp3",
+    "masterSha256": "71b48ddaf4925317155c959ddbef206e7759f493e9b3b315d121ce3c3f3dcc21",
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    }
+  },
+  "warnings": []
+}

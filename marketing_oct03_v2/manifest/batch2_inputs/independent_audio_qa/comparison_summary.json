@@ -1,0 +1,217 @@
+[
+  {
+    "content_id": "FE261019-CLARIFY",
+    "file": "clarify_deadline_take1.mp3",
+    "evidence_file": "clarify_deadline_take1_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "¿Necesitas que te aclaren una fecha? Could you clarify the deadline? ¿Podrías aclarar la fecha límite? Para confirmar, do you mean this Friday? ¿Te refieres a este viernes? Ahora cambia the deadline for the next step. Clases en línea para tu equipo. Manda empresa por mensaje privado.",
+    "normalized_script_words": 47,
+    "normalized_hypothesis_words": 47,
+    "aligned_exact_words": 46,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "por",
+        "recognized": "for",
+        "expected_token_span": [
+          32,
+          33
+        ],
+        "recognized_token_span": [
+          32,
+          33
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261019-CLARIFY",
+    "file": "clarify_deadline_take1.mp3",
+    "evidence_file": "clarify_deadline_take1_small_unprompted.json",
+    "model": "small",
+    "transcript": "¿Necesitas que te aclaren una fecha? ¿Could you clarify the deadline? ¿Podrías aclarar la fecha límite? ¿Para confirmar? ¿Do you mean this Friday? ¿Te refieres a este viernes? Ahora cambia the deadline for the next step. Clases en línea para tu equipo. Manda empresa por mensaje privado.",
+    "normalized_script_words": 47,
+    "normalized_hypothesis_words": 47,
+    "aligned_exact_words": 46,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "por",
+        "recognized": "for",
+        "expected_token_span": [
+          32,
+          33
+        ],
+        "recognized_token_span": [
+          32,
+          33
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261019-CLARIFY",
+    "file": "clarify_deadline_take2.mp3",
+    "evidence_file": "clarify_deadline_take2_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "¿Necesitas que te aclaren una fecha? ¿Podrías aclarar la fecha límite? ¿Podrías aclarar la fecha límite? Para confirmar. ¿Te refieres a este viernes? ¿Te refieres a este viernes? Ahora cambia the deadline for the next step. Clases en línea para tu equipo. Manda empresa por mensaje privado.",
+    "normalized_script_words": 47,
+    "normalized_hypothesis_words": 47,
+    "aligned_exact_words": 36,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "could you clarify the deadline",
+        "recognized": "podrías aclarar la fecha límite",
+        "expected_token_span": [
+          6,
+          11
+        ],
+        "recognized_token_span": [
+          6,
+          11
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "do you mean this friday",
+        "recognized": "te refieres a este viernes",
+        "expected_token_span": [
+          18,
+          23
+        ],
+        "recognized_token_span": [
+          18,
+          23
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "por",
+        "recognized": "for",
+        "expected_token_span": [
+          32,
+          33
+        ],
+        "recognized_token_span": [
+          32,
+          33
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261019-CLARIFY",
+    "file": "clarify_deadline_take2.mp3",
+    "evidence_file": "clarify_deadline_take2_small_unprompted.json",
+    "model": "small",
+    "transcript": "¿Necesitas que te aclaren una fecha? ¿Puedes aclarar la deadline? ¿Podrías aclarar la fecha límite? ¿Para confirmar? ¿Puedes decir Friday? ¿Te refieres a este viernes? Ahora cambia the deadline por the next step Clases en línea para tu equipo Manda empresa por mensaje privado",
+    "normalized_script_words": 47,
+    "normalized_hypothesis_words": 44,
+    "aligned_exact_words": 39,
+    "differences": [
+      {
+        "type": "replace",
+        "expected": "could you clarify the",
+        "recognized": "puedes aclarar la",
+        "expected_token_span": [
+          6,
+          10
+        ],
+        "recognized_token_span": [
+          6,
+          9
+        ]
+      },
+      {
+        "type": "replace",
+        "expected": "do you mean this",
+        "recognized": "puedes decir",
+        "expected_token_span": [
+          18,
+          22
+        ],
+        "recognized_token_span": [
+          17,
+          19
+        ]
+      }
+    ],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261021-MORE",
+    "file": "tell_me_more_take1.mp3",
+    "evidence_file": "tell_me_more_take1_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "Y después de That's nice, I tried a new restaurant. Oh nice, what was it like? ¿Cómo estuvo? También puedes decir Tell me more about it. Cuéntame más. Ahora tú. I watched a movie last night. ¿Qué preguntarías después? Speaking Club para intermedios y avanzados. Manda Club por mensaje privado.",
+    "normalized_script_words": 50,
+    "normalized_hypothesis_words": 50,
+    "aligned_exact_words": 50,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261021-MORE",
+    "file": "tell_me_more_take1.mp3",
+    "evidence_file": "tell_me_more_take1_small_unprompted.json",
+    "model": "small",
+    "transcript": "Y después de, that's nice, I tried a new restaurant. Oh, nice, what was it like? ¿Cómo estuvo? También puedes decir, tell me more about it. Cuéntame más. Ahora tú. I watched a movie last night. ¿Qué preguntarías después? Speaking Club para Intermedios y Avanzados. Manda club por mensaje privado.",
+    "normalized_script_words": 50,
+    "normalized_hypothesis_words": 50,
+    "aligned_exact_words": 50,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261021-MORE",
+    "file": "tell_me_more_take2.mp3",
+    "evidence_file": "tell_me_more_take2_small_unprompted.json",
+    "model": "small",
+    "transcript": "Y después de, that's nice, I tried a new restaurant. Oh, nice, what was it like? ¿Cómo estuvo? También puedes decir, tell me more about it. Cuéntame más. Ahora tú, I watched a movie last night. ¿Qué preguntarías después? Speaking Club para intermedios y avanzados. Manda club por mensaje privado.",
+    "normalized_script_words": 50,
+    "normalized_hypothesis_words": 50,
+    "aligned_exact_words": 50,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261023-PRIVATE",
+    "file": "private_company_take1.mp3",
+    "evidence_file": "private_company_take1_medium_unprompted.json",
+    "model": "medium",
+    "transcript": "¿Buscas una clase privada o clases para tu equipo? Las privadas pueden ser para una, dos o tres personas. Las clases para empresas son en línea, para un máximo de 10 por clase. Cuéntanos qué necesitan practicar. Manda Privado o Empresa por mensaje privado.",
+    "normalized_script_words": 44,
+    "normalized_hypothesis_words": 44,
+    "aligned_exact_words": 44,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261023-PRIVATE",
+    "file": "private_company_take1.mp3",
+    "evidence_file": "private_company_take1_small_unprompted.json",
+    "model": "small",
+    "transcript": "¿Buscas una clase privada o clases para tu equipo? Las privadas pueden ser para una, dos o tres personas. Las clases para empresas son en línea para un máximo de 10 por clase. Cuéntanos qué necesitan practicar. Manda privado o empresa por mensaje privado.",
+    "normalized_script_words": 44,
+    "normalized_hypothesis_words": 44,
+    "aligned_exact_words": 44,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  },
+  {
+    "content_id": "FE261023-PRIVATE",
+    "file": "private_company_take2.mp3",
+    "evidence_file": "private_company_take2_small_unprompted.json",
+    "model": "small",
+    "transcript": "¿Buscas una clase privada o clases para tu equipo? Las privadas pueden ser para una, dos o tres personas. Las clases para empresas son en línea para un máximo de diez por clase. Cuéntanos qué necesitan practicar. Manda privado o empresa por mensaje privado.",
+    "normalized_script_words": 44,
+    "normalized_hypothesis_words": 44,
+    "aligned_exact_words": 44,
+    "differences": [],
+    "normalization": "Lowercase, punctuation removed except internal apostrophes; curly apostrophe normalized; number 10 expanded to diez. This is an ASR-script comparison, not an intelligibility or listening grade."
+  }
+]

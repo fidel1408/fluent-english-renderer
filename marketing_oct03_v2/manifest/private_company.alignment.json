@@ -1,0 +1,209 @@
+{
+  "video": "private_company",
+  "master": "audio/originals/private_company_take1.mp3",
+  "masterSha256": "c71f2d26df7b889bf3dc37dc73c685423530ed98ff6bde4e30b1aa5a933bbef7",
+  "totalSamples": 767232,
+  "sampleRate": 44100,
+  "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Buscas una clase privada o clases para tu equipo?",
+      "file": "audio/cues/private_company_c01.wav",
+      "sourceSampleRange": [
+        0,
+        129974
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.947256,
+      "seconds": 2.947256,
+      "padHead": 0,
+      "padTail": 0.217,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 2.73
+        }
+      ],
+      "activityInCue": [
+        0,
+        2.73
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Las privadas pueden ser para una, dos o tres personas.",
+      "file": "audio/cues/private_company_c02.wav",
+      "sourceSampleRange": [
+        129974,
+        299369
+      ],
+      "sourceStart": 2.947256,
+      "sourceEnd": 6.788413,
+      "seconds": 3.841156,
+      "padHead": 0.217,
+      "padTail": 0.172,
+      "islandsInCue": [
+        {
+          "s": 0.217,
+          "e": 3.669
+        }
+      ],
+      "activityInCue": [
+        0.217,
+        3.669
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        7,
+        7
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Las clases para empresas son en línea, para un máximo de diez por clase.",
+      "file": "audio/cues/private_company_c03.wav",
+      "sourceSampleRange": [
+        299369,
+        494676
+      ],
+      "sourceStart": 6.788413,
+      "sourceEnd": 11.217143,
+      "seconds": 4.42873,
+      "padHead": 0.172,
+      "padTail": 0.267,
+      "islandsInCue": [
+        {
+          "s": 0.172,
+          "e": 2.141
+        },
+        {
+          "s": 2.358,
+          "e": 4.162
+        }
+      ],
+      "activityInCue": [
+        0.172,
+        4.162
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        31,
+        23
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Cuéntanos qué necesitan practicar.",
+      "file": "audio/cues/private_company_c04.wav",
+      "sourceSampleRange": [
+        494676,
+        594289
+      ],
+      "sourceStart": 11.217143,
+      "sourceEnd": 13.475941,
+      "seconds": 2.258798,
+      "padHead": 0.266,
+      "padTail": 0.237,
+      "islandsInCue": [
+        {
+          "s": 0.266,
+          "e": 0.69
+        },
+        {
+          "s": 0.816,
+          "e": 2.022
+        }
+      ],
+      "activityInCue": [
+        0.266,
+        2.022
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        17,
+        43
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Manda PRIVADO o EMPRESA por mensaje privado.",
+      "file": "audio/cues/private_company_c05.wav",
+      "sourceSampleRange": [
+        594289,
+        767232
+      ],
+      "sourceStart": 13.475941,
+      "sourceEnd": 17.397551,
+      "seconds": 3.92161,
+      "padHead": 0.237,
+      "padTail": 0.178,
+      "islandsInCue": [
+        {
+          "s": 0.237,
+          "e": 0.616
+        },
+        {
+          "s": 0.821,
+          "e": 1.355
+        },
+        {
+          "s": 1.491,
+          "e": 1.663
+        },
+        {
+          "s": 1.806,
+          "e": 2.421
+        },
+        {
+          "s": 2.69,
+          "e": 3.744
+        }
+      ],
+      "activityInCue": [
+        0.237,
+        3.744
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        42,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c02": {
+      "una": 1.633,
+      "dos": 2.233,
+      "tres": 2.833,
+      "privateActivity": 0.143
+    },
+    "c03": {
+      "maxStart": 2.572,
+      "diezEnd": 3.372
+    }
+  },
+  "coverage": {
+    "partitionSamples": 767232,
+    "totalSamples": 767232,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 43
+  },
+  "confidence": {
+    "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+    "content": "pronunciation/naturalness NOT verified (no listening)"
+  }
+}

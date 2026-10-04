@@ -1,0 +1,412 @@
+{
+  "campaign_id": "FE-ORG-2026-10",
+  "prepared_utc": "2026-10-04T01:53:30Z",
+  "source_manifest_library_id": "libfile_327365883ee88191aed255e2f6a81621",
+  "already_produced": [
+    {
+      "id": "FE261003-AGREE",
+      "revision": "REV3",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING",
+      "reschedule_required": true
+    },
+    {
+      "id": "FE261005-ACTUALLY",
+      "revision": "REV4",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING"
+    },
+    {
+      "id": "FE261007-FORWARD",
+      "revision": "REV4",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING"
+    }
+  ],
+  "remaining_counts": {
+    "main_teaching": 2,
+    "tiktok_only_adaptations": 1
+  },
+  "shared_production_contract": {
+    "creator": "Claude Code only",
+    "project": "fluent-english-renderer / existing session_01XZseF1db4UWZjECgbkDe4T",
+    "model": "Sonnet5.5",
+    "effort": "Medium routine setup; High complex integration and final QA",
+    "fast": false,
+    "base": "Reuse the current single adult male host and corrected batch1 REV2 caption reserve system once its job has finished. Preserve the first three completed media and all historical batch1 media byte-for-byte.",
+    "casting": "One adult male teacher, same Luis voice, adult facial proportions/visible torso/collared shirt/subtle stubble. Sole speaking mouth; all example text is labelled quoted demonstration. No second face, child narrator, caricature beard or alternating speaker assignment.",
+    "design": "Navy #101E34, cream #FFF7EB, mint #72D8C6, teal #0D625F, coral #F47558; original logo. One distinct meaningful mini-illustration per topic. Retain purposeful gestures/reacting movement; no lifeless slideshow.",
+    "format": "1080x1920,30fps,H264yuv420p,AAC48kstereo,faststart. Target25–35s but true audio/reading holds govern. Never time-stretch narration.",
+    "safe_zone": "Essential x100–860,y180–1420 conservative reserve; verify actual target-app overlays and covers later.",
+    "typography": "Actual270x480 legibility. At least≈13px effective role labels and secondaryCTA, larger teaching text; do not trust sourcefont alone.",
+    "timing": "Actual generated audio drives cue timings. Caption text = actual speech. Rule/example/translation switch as a coherent unit, sequential and non-overlapping; cards expand before wrapping text enters. Every solved bilingual example >=2.5s full-opacity settled hold; unansweredpractice>=3s; CTA>=3s after entry. Add silence/readhold rather than speeding.",
+    "audio": "Luis Guillermo Warm and Engaging, existing paid stock voice and current Elevenv4 standard settings. Do not generate until current UIcost and included balance checked. No purchases/extra credits/cloning/keys. One full narration per video; sample-exact sourcecuepartitions; only silence gaps added. NoEleven forlonglessons.",
+    "cta": "One marketing action at end, native DM, no external link, no extra Follow/Like/Save. Learning prompt can precede but should not demand public contact information. No fake clickable UI.",
+    "inventory": "The exact three reviewed narrations were absent from the current campaign Eleven history before generation. Before authoring, inspect the repository by these three content IDs/themes; reuse any matching source but never replace finished media or silently reuse unrelated narration.",
+    "qa": "Actual downloaded MP4/sourceZIP required. Independent visual+technical+source/sync QA; explicitly retain unrun real-listening and target-app playback gates. Never count the creator self-evaluation as release.",
+    "disclosure": "At scheduling, inspect required native realistic-AI-audio disclosure and TikTok own-brand promotional disclosure; no paid partnership/ads. Parent owns scheduling.",
+    "source_precedence": "Current narration, scenes, captions and shared contract in this manifest override older campaign storyboards and marketing CTAs. Answer references are internal and must not leak into unanswered practice."
+  },
+  "videos": [
+    {
+      "content_id": "FE261019-CLARIFY",
+      "date": "2026-10-19",
+      "title": "Pedir una aclaración",
+      "format": "Video corto",
+      "audience": "Adultos que usan inglés en el trabajo",
+      "goal": "Práctica profesional y consultas de empresas",
+      "hook": "¿Necesitas que te aclaren una fecha?",
+      "caption_fb_ig": "Dos preguntas útiles en el trabajo:\n\n“Could you clarify the deadline?” = “¿Podrías aclarar la fecha límite?”\n\nPara confirmar: “Do you mean this Friday?” = “¿Te refieres a este viernes?”\n\nPractica las frases. Puedes cambiar the deadline por the next step.\n\nPara clases en línea para tu equipo, manda “EMPRESA” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #InglésEnLínea",
+      "caption_tiktok": "Dos preguntas útiles en el trabajo:\n\n“Could you clarify the deadline?” = “¿Podrías aclarar la fecha límite?”\n\nPara confirmar: “Do you mean this Friday?” = “¿Te refieres a este viernes?”\n\nPractica las frases. Puedes cambiar the deadline por the next step.\n\nPara clases en línea para tu equipo, manda “EMPRESA” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #EnglishTips",
+      "cta": "Para clases en línea para tu equipo, manda “EMPRESA” por mensaje privado.",
+      "offer_reference": "B0",
+      "narration": "¿Necesitas que te aclaren una fecha? Could you clarify the deadline? ¿Podrías aclarar la fecha límite? Para confirmar: Do you mean this Friday? ¿Te refieres a este viernes? Ahora cambia the deadline por the next step. Clases en línea para tu equipo: manda EMPRESA por mensaje privado.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Fictional work desk and calendar marked FRIDAY with no real class date.",
+          "on_screen": "¿Necesitas aclarar una fecha?"
+        },
+        {
+          "id": "clarify",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Teacher demonstrates a standalone useful question.",
+          "on_screen": "PEDIR UNA ACLARACIÓN\nCould you clarify the deadline?\n¿Podrías aclarar la fecha límite?"
+        },
+        {
+          "id": "confirm",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Full sequential replacement: this is another question, not a reply to the first one.",
+          "on_screen": "PARA CONFIRMAR\nDo you mean this Friday?\n¿Te refieres a este viernes?"
+        },
+        {
+          "id": "practice",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Swap suggestion appears, then a blank phrase for oral completion. At least3s settled.",
+          "on_screen": "the deadline → the next step\nCould you clarify ___?"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Desk recedes and host clears card.",
+          "on_screen": "Clases en línea para tu equipo\nManda EMPRESA\npor mensaje privado."
+        }
+      ],
+      "answer_reference": "Could you clarify the next step?",
+      "content_qa": "No prometer resultados laborales, contratación ni ascensos. No mostrar información real de empresas.",
+      "reuse_requirement": "Inventory existing repository/session artifacts by content ID and theme, then reuse appropriate source with the current single-host system. Do not assume old media passes.",
+      "status": "NARRATION_RECOVERED_ASR_AND_INTEGRATION_PENDING",
+      "slug": "clarify_deadline",
+      "batch": "teaching",
+      "narration_cues": [
+        "¿Necesitas que te aclaren una fecha?",
+        "Could you clarify the deadline? ¿Podrías aclarar la fecha límite?",
+        "Para confirmar: Do you mean this Friday? ¿Te refieres a este viernes?",
+        "Ahora cambia the deadline por the next step.",
+        "Clases en línea para tu equipo: manda EMPRESA por mensaje privado."
+      ],
+      "narration_character_count": 284,
+      "primary_cta": {
+        "destination": "native private message on viewing platform",
+        "keyword": "EMPRESA",
+        "no_other_marketing_cta": true
+      },
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "Fictional work desk and calendar marked FRIDAY with no real class date.",
+          "on_screen": "¿Necesitas aclarar una fecha?"
+        },
+        {
+          "id": "clarify",
+          "visual": "Teacher demonstrates a standalone useful question.",
+          "on_screen": "PEDIR UNA ACLARACIÓN\nCould you clarify the deadline?\n¿Podrías aclarar la fecha límite?"
+        },
+        {
+          "id": "confirm",
+          "visual": "Full sequential replacement: this is another question, not a reply to the first one.",
+          "on_screen": "PARA CONFIRMAR\nDo you mean this Friday?\n¿Te refieres a este viernes?"
+        },
+        {
+          "id": "practice",
+          "visual": "Swap suggestion appears, then a blank phrase for oral completion. At least3s settled.",
+          "on_screen": "the deadline → the next step\nCould you clarify ___?"
+        },
+        {
+          "id": "cta",
+          "visual": "Desk recedes and host clears card.",
+          "on_screen": "Clases en línea para tu equipo\nManda EMPRESA\npor mensaje privado."
+        }
+      ],
+      "qa_requirements": [
+        "No claim of actual company records; calendar is illustrative.",
+        "Two question models must never be staged as question–answer.",
+        "Omit Yes,thisFriday; single teacher models questions.",
+        "No promises of promotion, hiring or business results."
+      ],
+      "production_delta": "Standalone context and clear example roles; one native-DM marketing CTA; same adult male educator.",
+      "narration_sha256": "ab4e5551257674b5a39c138ce03565d0dc413c19c2f1038605bbc3c6f5f0a0b8",
+      "teaching_verification": {
+        "status": "PASS_WITH_APPLIED_REVISIONS",
+        "reviewed_utc": "2026-10-03T23:26:44Z",
+        "primary_sources": [
+          "https://dictionary.cambridge.org/dictionary/english/clarify",
+          "https://dictionary.cambridge.org/dictionary/english/deadline?topic=schedules-and-agendas"
+        ]
+      },
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "tts_input": "[warmly] ¿Necesitas que te aclaren una fecha? Could you clarify the deadline? ¿Podrías aclarar la fecha límite? Para confirmar: Do you mean this Friday? ¿Te refieres a este viernes? Ahora cambia the deadline por the next step. Clases en línea para tu equipo: manda EMPRESA por mensaje privado.",
+      "tts_input_character_count": 293
+    },
+    {
+      "content_id": "FE261021-MORE",
+      "date": "2026-10-21",
+      "title": "Mantener una conversación",
+      "format": "Video corto",
+      "audience": "Intermedios y avanzados interesados en conversación",
+      "goal": "Práctica y consultas de Speaking Club",
+      "hook": "¿Y después de “That’s nice”?",
+      "caption_fb_ig": "Para darle espacio a otra persona para contar más:\n\n“I tried a new restaurant.”\n“Oh, nice! What was it like?”\n\nOtra opción: “Tell me more about it.” = “Cuéntame más.”\n\nAhora tú: “I watched a movie last night.” ¿Qué preguntarías después?\n\nSpeaking Club: máximo 6 personas por grupo, periodos de cuatro semanas, sin niveles.\n\nSi tienes nivel intermedio o avanzado y buscas conversación en línea, manda “CLUB” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #InglésEnLínea",
+      "caption_tiktok": "Para darle espacio a otra persona para contar más:\n\n“I tried a new restaurant.”\n“Oh, nice! What was it like?”\n\nOtra opción: “Tell me more about it.” = “Cuéntame más.”\n\nAhora tú: “I watched a movie last night.” ¿Qué preguntarías después?\n\nSpeaking Club: máximo 6 personas por grupo, periodos de cuatro semanas, sin niveles.\n\nSi tienes nivel intermedio o avanzado y buscas conversación en línea, manda “CLUB” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #EnglishTips",
+      "cta": "Si tienes nivel intermedio o avanzado y buscas conversación en línea, manda “CLUB” por mensaje privado.",
+      "offer_reference": "C0",
+      "narration": "¿Y después de That’s nice? I tried a new restaurant. Oh, nice! What was it like? ¿Cómo estuvo? También puedes decir: Tell me more about it. Cuéntame más. Ahora tú: I watched a movie last night. ¿Qué preguntarías después? Speaking Club para intermedios y avanzados: manda CLUB por mensaje privado.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Original restaurant menu illustration; host thoughtful but warm.",
+          "on_screen": "¿Y después de “That’s nice”?"
+        },
+        {
+          "id": "setup",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Teacher reads a quoted sample statement; on-screen label EJEMPLO.",
+          "on_screen": "I tried a new restaurant."
+        },
+        {
+          "id": "question",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Label RESPUESTA POSIBLE; host is still the only speaker, quoting a reply.",
+          "on_screen": "Oh, nice! What was it like?\n¿Cómo estuvo?"
+        },
+        {
+          "id": "alternative",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Prior text exits before option appears; restaurant context persists.",
+          "on_screen": "OTRA OPCIÓN\nTell me more about it.\nCuéntame más."
+        },
+        {
+          "id": "practice",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Movie ticket replaces menu; no suggested answer on final prompt. At least3s settled.",
+          "on_screen": "I watched a movie last night.\n¿Qué preguntarías después?"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Explicit eligibility with sufficient hold; one DM action.",
+          "on_screen": "Speaking Club\nIntermedios y avanzados\nManda CLUB por mensaje privado."
+        }
+      ],
+      "answer_reference": "What was it like? / What did you watch? / Did you like it? Admitir otras preguntas naturales.",
+      "content_qa": "No presentar Club como curso para principiantes ni como programa de 18 niveles.",
+      "reuse_requirement": "Inventory existing repository/session artifacts by content ID and theme, then reuse appropriate source with the current single-host system. Do not assume old media passes.",
+      "status": "NARRATION_RECOVERED_ASR_AND_INTEGRATION_PENDING",
+      "slug": "tell_me_more",
+      "batch": "teaching",
+      "narration_cues": [
+        "¿Y después de That’s nice?",
+        "I tried a new restaurant.",
+        "Oh, nice! What was it like? ¿Cómo estuvo?",
+        "También puedes decir: Tell me more about it. Cuéntame más.",
+        "Ahora tú: I watched a movie last night. ¿Qué preguntarías después?",
+        "Speaking Club para intermedios y avanzados: manda CLUB por mensaje privado."
+      ],
+      "narration_character_count": 296,
+      "primary_cta": {
+        "destination": "native private message on viewing platform",
+        "keyword": "CLUB",
+        "no_other_marketing_cta": true
+      },
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "Original restaurant menu illustration; host thoughtful but warm.",
+          "on_screen": "¿Y después de “That’s nice”?"
+        },
+        {
+          "id": "setup",
+          "visual": "Teacher reads a quoted sample statement; on-screen label EJEMPLO.",
+          "on_screen": "I tried a new restaurant."
+        },
+        {
+          "id": "question",
+          "visual": "Label RESPUESTA POSIBLE; host is still the only speaker, quoting a reply.",
+          "on_screen": "Oh, nice! What was it like?\n¿Cómo estuvo?"
+        },
+        {
+          "id": "alternative",
+          "visual": "Prior text exits before option appears; restaurant context persists.",
+          "on_screen": "OTRA OPCIÓN\nTell me more about it.\nCuéntame más."
+        },
+        {
+          "id": "practice",
+          "visual": "Movie ticket replaces menu; no suggested answer on final prompt. At least3s settled.",
+          "on_screen": "I watched a movie last night.\n¿Qué preguntarías después?"
+        },
+        {
+          "id": "cta",
+          "visual": "Explicit eligibility with sufficient hold; one DM action.",
+          "on_screen": "Speaking Club\nIntermedios y avanzados\nManda CLUB por mensaje privado."
+        }
+      ],
+      "qa_requirements": [
+        "That’s nice is valid; show ways to invite more detail rather than marking it wrong.",
+        "Tell me more is an invitation, not an interrogative sentence.",
+        "Club is intermediate/advanced, maximum6, no levels; no beginner promise.",
+        "No second avatar or implied voice swap for dialogue example."
+      ],
+      "production_delta": "Standalone context and clear example roles; one native-DM marketing CTA; same adult male educator.",
+      "narration_sha256": "fe6eaaac3ce78d62f8225ff747175e664dc2977a924dd72bc14abcf029e4db1f",
+      "teaching_verification": {
+        "status": "PASS_WITH_APPLIED_REVISIONS",
+        "reviewed_utc": "2026-10-03T23:26:44Z",
+        "primary_sources": [
+          "https://dictionary.cambridge.org/grammar/british-grammar/like-verb",
+          "https://learnenglish.britishcouncil.org/sites/podcasts/files/LearnEnglish-Speaking-B1-Keeping-a-conversation-going.pdf"
+        ]
+      },
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "tts_input": "[warmly] ¿Y después de That’s nice? I tried a new restaurant. Oh, nice! What was it like? ¿Cómo estuvo? También puedes decir: Tell me more about it. Cuéntame más. Ahora tú: I watched a movie last night. ¿Qué preguntarías después? Speaking Club para intermedios y avanzados: manda CLUB por mensaje privado.",
+      "tts_input_character_count": 305
+    },
+    {
+      "content_id": "FE261023-PRIVATE",
+      "date": "2026-10-23",
+      "title": "Privadas o clases para empresas",
+      "format": "Carrusel 4 tarjetas + adaptación TikTok",
+      "audience": "Adultos con objetivo propio; responsables de equipos",
+      "goal": "Consultas de servicio apropiado",
+      "hook": "¿Estudias por tu cuenta o con tu equipo?",
+      "caption_fb_ig": "¿Buscas una clase privada o clases para tu equipo de trabajo?\n\nPrivadas: de 1 a 3 estudiantes por clase. El precio total es el mismo si asisten una, dos o tres personas.\n\nEmpresas: de 1 a 10 personas por clase, en línea. El precio total no cambia según el número de participantes dentro de ese límite.\n\nCuéntanos qué inglés necesitan usar y qué horario prefieren. Escríbenos “PRIVADO” o “EMPRESA” por mensaje privado para revisar la modalidad.\n\n#FluentEnglish #InglésEnLínea #InglésParaElTrabajo",
+      "caption_tiktok": "Privadas: de 1 a 3 estudiantes. Empresas: de 1 a 10 personas por clase, en línea. ¿Qué necesitan practicar? Manda PRIVADO o EMPRESA por privado.\n\n#FluentEnglish #InglésEnLínea #InglésParaElTrabajo",
+      "cta": "PRIVADO o EMPRESA por mensaje privado",
+      "offer_reference": "P0+B0",
+      "narration": "¿Buscas una clase privada o clases para tu equipo? Las privadas pueden ser para una, dos o tres personas. Las clases para empresas son en línea, para un máximo de diez por clase. Cuéntanos qué necesitan practicar. Manda PRIVADO o EMPRESA por mensaje privado.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Adult teacher with personal-goal notebook and small team-work dashboard.",
+          "on_screen": "¿Clases privadas o para tu equipo?"
+        },
+        {
+          "id": "private",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Count1,2,3 with simple shoulder silhouettes without speaking mouths.",
+          "on_screen": "PRIVADAS\n1–3 estudiantes\nMismo precio total dentro de este límite"
+        },
+        {
+          "id": "company",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Count to10 in compact two-row icon array, teacher remains only speaking face.",
+          "on_screen": "EMPRESAS\nEn línea · 1–10 por clase\nMismo precio total dentro de este límite"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "One message action with service alternatives; avoid fake buttons.",
+          "on_screen": "Manda PRIVADO o EMPRESA\npor mensaje privado.\n¿Qué necesitan practicar?"
+        }
+      ],
+      "answer_reference": "",
+      "content_qa": "No ofrecer semana de prueba gratis en privadas o empresas. No anunciar presencial. Omitir precio empresarial mientras el total con IVA siga sin confirmar.",
+      "reuse_requirement": "Una sola familia de diseño; carrusel en FB/IG y video en TikTok.",
+      "status": "NARRATION_RECOVERED_ASR_AND_INTEGRATION_PENDING",
+      "slug": "private_company",
+      "batch": "tiktok_adaptation",
+      "platforms": [
+        "TikTok only"
+      ],
+      "narration_character_count": 258,
+      "primary_cta": {
+        "destination": "native TikTok private message",
+        "keyword": "PRIVADO o EMPRESA",
+        "no_other_marketing_cta": true
+      },
+      "qa_requirements": [
+        "Private1–3, company1–10 online; no second narrator among icon figures.",
+        "Same total within each format, not the same price between formats.",
+        "Avoid wording that suggests billing per attended class. No new amounts.",
+        "One DM action with two service keywords; no free week/private/company claim."
+      ],
+      "narration_sha256": "6cadd422e8638b47ccf1668a741f3443aa42cf7b2f38b94ff390420faba1e649",
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "Adult teacher with personal-goal notebook and small team-work dashboard.",
+          "on_screen": "¿Clases privadas o para tu equipo?"
+        },
+        {
+          "id": "private",
+          "visual": "Count1,2,3 with simple shoulder silhouettes without speaking mouths.",
+          "on_screen": "PRIVADAS\n1–3 estudiantes\nMismo precio total dentro de este límite"
+        },
+        {
+          "id": "company",
+          "visual": "Count to10 in compact two-row icon array, teacher remains only speaking face.",
+          "on_screen": "EMPRESAS\nEn línea · 1–10 por clase\nMismo precio total dentro de este límite"
+        },
+        {
+          "id": "cta",
+          "visual": "One message action with service alternatives; avoid fake buttons.",
+          "on_screen": "Manda PRIVADO o EMPRESA\npor mensaje privado.\n¿Qué necesitan practicar?"
+        }
+      ],
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "caption_fb_ig_usage": "Historical source-family context only. No new Facebook or Instagram video placement; existing carousels remain owned by scheduler.",
+      "tts_input": "[warmly] ¿Buscas una clase privada o clases para tu equipo? Las privadas pueden ser para una, dos o tres personas. Las clases para empresas son en línea, para un máximo de diez por clase. Cuéntanos qué necesitan practicar. Manda PRIVADO o EMPRESA por mensaje privado.",
+      "tts_input_character_count": 267
+    }
+  ],
+  "grammar_verification": "Independent six-topic review PASS after applied used-to meaning, continuing-now context, and clarification-role fixes.",
+  "current_browser": "Batch2 narration recovered; Claude integration waits for batch1 REV2 completion.",
+  "audio_planning": {
+    "generation_status": "GENERATED_ONCE_PER_SCRIPT_TWO_TAKES_EACH",
+    "last_verified_credit_balance": 37413,
+    "balance_as_of": "2026-10-04T01:52:19Z",
+    "must_recheck_live_cost": true
+  },
+  "release_gates": [
+    "Actual narrated MP4 generated in Claude Code",
+    "Independent decode/format/source cue identity and sync checks",
+    "Independent full-duration visual review with dense transition checks",
+    "Genuine auditory listening/subjective full AV check, or owner direction addressing unresolved gate",
+    "Actual target-app cover/overlay/audio playback checks",
+    "Required native AI/own-brand disclosures",
+    "No duplicate published/scheduled items; verified native schedule receipt"
+  ],
+  "production_batches": [
+    {
+      "batch": 2,
+      "ids": [
+        "FE261019-CLARIFY",
+        "FE261021-MORE",
+        "FE261023-PRIVATE"
+      ]
+    }
+  ],
+  "final_consistency_review": {
+    "status": "PASS_AFTER_BILLING_UNIT_FIX",
+    "reviewed_utc": "2026-10-03T23:30:54Z",
+    "scope": "All nine CTAs, storyboards versus scenes, and business-claim wording; six revised teaching narrations and captions.",
+    "correction": "Removed per-class billing wording from private/company reference caption. No scheduled post changed."
+  },
+  "active_scope": "Batch2 only",
+  "chosen_sources": {
+    "clarify_deadline": "clarify_deadline_take1.mp3",
+    "tell_me_more": "tell_me_more_take1.mp3",
+    "private_company": "private_company_take1.mp3"
+  },
+  "source_selection_basis": "Provisional independent unprompted ASR plus measured pause spacing; no subjective audition.",
+  "specific_open_issue": "CLARIFY por/for at source14.2–15.2s: exact speech/caption match unresolved. Render QA-pending only; intended Spanish teaching copy por remains provisional subtitle, flag explicitly."
+}

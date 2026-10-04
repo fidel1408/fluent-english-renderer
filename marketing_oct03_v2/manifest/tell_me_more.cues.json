@@ -1,0 +1,302 @@
+{
+  "video": "tell_me_more",
+  "contentId": "FE261021-MORE",
+  "title": "TELL ME MORE",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    36
+  ],
+  "status": "PLANNED",
+  "mixGainDb": -1.5,
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take 1 is a provisional editorial choice based on independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Y después de That’s nice?",
+      "est": 1.948,
+      "gap": 0,
+      "file": "audio/cues/tell_me_more_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I tried a new restaurant.",
+      "est": 1.577,
+      "gap": 0.9,
+      "file": "audio/cues/tell_me_more_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Oh, nice! What was it like?",
+      "est": 2.572,
+      "gap": 2.05,
+      "file": "audio/cues/tell_me_more_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Cómo estuvo?",
+      "est": 1.307,
+      "gap": 0.1,
+      "file": "audio/cues/tell_me_more_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "También puedes decir:",
+      "est": 1.63,
+      "gap": 0.55,
+      "file": "audio/cues/tell_me_more_c05.wav"
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Tell me more about it.",
+      "est": 1.581,
+      "gap": 0.1,
+      "file": "audio/cues/tell_me_more_c06.wav"
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Cuéntame más.",
+      "est": 1.485,
+      "gap": 0.1,
+      "file": "audio/cues/tell_me_more_c07.wav"
+    },
+    {
+      "id": "c08",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Ahora tú:",
+      "est": 1.317,
+      "gap": 0.5,
+      "file": "audio/cues/tell_me_more_c08.wav"
+    },
+    {
+      "id": "c09",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "I watched a movie last night.",
+      "est": 2.141,
+      "gap": 0.1,
+      "file": "audio/cues/tell_me_more_c09.wav"
+    },
+    {
+      "id": "c10",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Qué preguntarías después?",
+      "est": 2.022,
+      "gap": 0.1,
+      "file": "audio/cues/tell_me_more_c10.wav"
+    },
+    {
+      "id": "c11",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Speaking Club para intermedios y avanzados:",
+      "est": 3.25,
+      "gap": 3.4,
+      "file": "audio/cues/tell_me_more_c11.wav"
+    },
+    {
+      "id": "c12",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "manda CLUB por mensaje privado.",
+      "est": 2.656,
+      "gap": 0.2,
+      "file": "audio/cues/tell_me_more_c12.wav"
+    }
+  ],
+  "alignment": {
+    "anchors": {},
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 1035648,
+    "partitions": [
+      [
+        0,
+        85903
+      ],
+      [
+        85903,
+        155455
+      ],
+      [
+        155455,
+        268860
+      ],
+      [
+        268860,
+        326479
+      ],
+      [
+        326479,
+        398343
+      ],
+      [
+        398343,
+        468077
+      ],
+      [
+        468077,
+        533546
+      ],
+      [
+        533546,
+        591610
+      ],
+      [
+        591610,
+        686048
+      ],
+      [
+        686048,
+        775205
+      ],
+      [
+        775205,
+        918510
+      ],
+      [
+        918510,
+        1035648
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        0.819
+      ],
+      [
+        0.97,
+        1.799
+      ],
+      [
+        2.097,
+        3.32
+      ],
+      [
+        3.73,
+        5.862
+      ],
+      [
+        6.331,
+        7.023
+      ],
+      [
+        7.783,
+        8.772
+      ],
+      [
+        9.294,
+        10.394
+      ],
+      [
+        10.834,
+        11.683
+      ],
+      [
+        12.514,
+        13.056
+      ],
+      [
+        13.774,
+        15.274
+      ],
+      [
+        15.839,
+        17.105
+      ],
+      [
+        18.052,
+        20.582
+      ],
+      [
+        21.073,
+        21.492
+      ],
+      [
+        21.615,
+        22.011
+      ],
+      [
+        22.187,
+        23.257
+      ]
+    ],
+    "islandGroups": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ],
+      [
+        6
+      ],
+      [
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ],
+      [
+        12,
+        13,
+        14
+      ]
+    ],
+    "marks": {}
+  }
+}

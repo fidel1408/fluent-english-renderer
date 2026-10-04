@@ -28,6 +28,7 @@ P.forEach(([a, b], i) => {
     activityInCue: act, handoffActivitySource: hs || null, activityVsHandoffMs: hs ? [Math.round((a0 + act[0] - hs[0]) * 1000), Math.round((a0 + act[1] - hs[1]) * 1000)] : null, edgeSampleAbs: [Math.abs(seg[0]), Math.abs(seg[seg.length - 1])] });
 });
 if (spec.marks) Object.entries(spec.marks).forEach(([k, [cid, idx]]) => { const c = rep.cues.find(x => x.id === cid); rep.marks[cid] = rep.marks[cid] || {}; rep.marks[cid][k] = c.islandsInCue[idx].s; });
+if (spec.anchors) Object.entries(spec.anchors).forEach(([k, srcS]) => { const c = rep.cues.find(x => srcS >= x.sourceStart && srcS < x.sourceEnd); if (c) { rep.marks[c.id] = rep.marks[c.id] || {}; rep.marks[c.id][k] = +(srcS - c.sourceStart).toFixed(3); } });   // approximate source-relative anchors (independent ASR / handoff), cue-relative; NOT cut points
 let diff = 0; for (let i = 0; i < N; i++) if (recon[i] !== pcm[i]) diff++;
 rep.coverage = { partitionSamples: P.reduce((s, [a, b]) => s + (b - a), 0), totalSamples: N, reconstructedDifferingSamples: diff, allSamplesRetainedOnce: diff === 0 && P.reduce((s, [a, b]) => s + (b - a), 0) === N, maxAbsSampleAtAnyCut: maxEdge };
 rep.confidence = spec.confidence || { phraseBoundaries: 'authoritative sample cuts from handoff (silence midpoints)', islands: 'measured from waveform (-38 dB); not a linguistic detector', wordLevel: 'not measured', content: 'pronunciation/content NOT verified (no listening)' };

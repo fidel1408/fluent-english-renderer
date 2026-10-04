@@ -1,0 +1,284 @@
+{
+  "video": "tell_me_more",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/tell_me_more_take1.mp3",
+  "masterSha256": "7eec96c982d2a6a51c1f32ff803d69ed52c2ab7a5cbb3593df843391f813a4ed",
+  "sampleRate": 44100,
+  "fullMasterSamples": 1035648,
+  "fullMasterSeconds": 23.484081633,
+  "retainedCueSamples": 1035648,
+  "retainedCueSeconds": 23.484081633,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 35.7,
+  "addedSilenceSeconds": 12.215918,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Y después de That’s nice?",
+      "caption": "¿Y después de That’s nice?",
+      "cueFile": "audio/cues/tell_me_more_c01.wav",
+      "cueWavSamples": 85903,
+      "sourceSampleRange": [
+        0,
+        85903
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 1.947914,
+      "finalStart": 0.6,
+      "finalEnd": 2.548,
+      "offsetSeconds": 0.6,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.6,
+        2.399
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "I tried a new restaurant.",
+      "caption": "I tried a new restaurant.",
+      "cueFile": "audio/cues/tell_me_more_c02.wav",
+      "cueWavSamples": 69552,
+      "sourceSampleRange": [
+        85903,
+        155455
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 1.947914,
+      "sourceEndSeconds": 3.525057,
+      "finalStart": 3.448,
+      "finalEnd": 5.025,
+      "offsetSeconds": 1.500086,
+      "gapBeforeAdded": 0.9,
+      "speechActivityFinal": [
+        3.597,
+        4.82
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Oh, nice! What was it like?",
+      "caption": "Oh, nice! What was it like?",
+      "cueFile": "audio/cues/tell_me_more_c03.wav",
+      "cueWavSamples": 113405,
+      "sourceSampleRange": [
+        155455,
+        268860
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 3.525057,
+      "sourceEndSeconds": 6.096599,
+      "finalStart": 7.075,
+      "finalEnd": 9.647,
+      "offsetSeconds": 3.549943,
+      "gapBeforeAdded": 2.05,
+      "speechActivityFinal": [
+        7.28,
+        9.412
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "¿Cómo estuvo?",
+      "caption": "¿Cómo estuvo?",
+      "cueFile": "audio/cues/tell_me_more_c04.wav",
+      "cueWavSamples": 57619,
+      "sourceSampleRange": [
+        268860,
+        326479
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 6.096599,
+      "sourceEndSeconds": 7.403152,
+      "finalStart": 9.747,
+      "finalEnd": 11.054,
+      "offsetSeconds": 3.650401,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        9.982,
+        10.674
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "También puedes decir:",
+      "caption": "También puedes decir:",
+      "cueFile": "audio/cues/tell_me_more_c05.wav",
+      "cueWavSamples": 71864,
+      "sourceSampleRange": [
+        326479,
+        398343
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 7.403152,
+      "sourceEndSeconds": 9.032721,
+      "finalStart": 11.604,
+      "finalEnd": 13.234,
+      "offsetSeconds": 4.200848,
+      "gapBeforeAdded": 0.55,
+      "speechActivityFinal": [
+        11.984,
+        12.972
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Tell me more about it.",
+      "caption": "Tell me more about it.",
+      "cueFile": "audio/cues/tell_me_more_c06.wav",
+      "cueWavSamples": 69734,
+      "sourceSampleRange": [
+        398343,
+        468077
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 9.032721,
+      "sourceEndSeconds": 10.613991,
+      "finalStart": 13.334,
+      "finalEnd": 14.915,
+      "offsetSeconds": 4.301279,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        13.595,
+        14.695
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Cuéntame más.",
+      "caption": "Cuéntame más.",
+      "cueFile": "audio/cues/tell_me_more_c07.wav",
+      "cueWavSamples": 65469,
+      "sourceSampleRange": [
+        468077,
+        533546
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 10.613991,
+      "sourceEndSeconds": 12.098549,
+      "finalStart": 15.015,
+      "finalEnd": 16.5,
+      "offsetSeconds": 4.401009,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        15.235,
+        16.084
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú:",
+      "caption": "Ahora tú:",
+      "cueFile": "audio/cues/tell_me_more_c08.wav",
+      "cueWavSamples": 58064,
+      "sourceSampleRange": [
+        533546,
+        591610
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 12.098549,
+      "sourceEndSeconds": 13.415193,
+      "finalStart": 17,
+      "finalEnd": 18.317,
+      "offsetSeconds": 4.901451,
+      "gapBeforeAdded": 0.5,
+      "speechActivityFinal": [
+        17.416,
+        17.958
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "I watched a movie last night.",
+      "caption": "I watched a movie last night.",
+      "cueFile": "audio/cues/tell_me_more_c09.wav",
+      "cueWavSamples": 94438,
+      "sourceSampleRange": [
+        591610,
+        686048
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 13.415193,
+      "sourceEndSeconds": 15.556644,
+      "finalStart": 18.417,
+      "finalEnd": 20.558,
+      "offsetSeconds": 5.001807,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        18.776,
+        20.276
+      ]
+    },
+    {
+      "id": "c10",
+      "text": "¿Qué preguntarías después?",
+      "caption": "¿Qué preguntarías después?",
+      "cueFile": "audio/cues/tell_me_more_c10.wav",
+      "cueWavSamples": 89157,
+      "sourceSampleRange": [
+        686048,
+        775205
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 15.556644,
+      "sourceEndSeconds": 17.578345,
+      "finalStart": 20.658,
+      "finalEnd": 22.68,
+      "offsetSeconds": 5.101356,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        20.94,
+        22.206
+      ]
+    },
+    {
+      "id": "c11",
+      "text": "Speaking Club para intermedios y avanzados:",
+      "caption": "Speaking Club para intermedios y avanzados:",
+      "cueFile": "audio/cues/tell_me_more_c11.wav",
+      "cueWavSamples": 143305,
+      "sourceSampleRange": [
+        775205,
+        918510
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 17.578345,
+      "sourceEndSeconds": 20.827891,
+      "finalStart": 26.08,
+      "finalEnd": 29.33,
+      "offsetSeconds": 8.501655,
+      "gapBeforeAdded": 3.4,
+      "speechActivityFinal": [
+        26.554,
+        29.084
+      ]
+    },
+    {
+      "id": "c12",
+      "text": "manda CLUB por mensaje privado.",
+      "caption": "manda CLUB por mensaje privado.",
+      "cueFile": "audio/cues/tell_me_more_c12.wav",
+      "cueWavSamples": 117138,
+      "sourceSampleRange": [
+        918510,
+        1035648
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 20.827891,
+      "sourceEndSeconds": 23.484082,
+      "finalStart": 29.53,
+      "finalEnd": 32.186,
+      "offsetSeconds": 8.702109,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        29.776,
+        31.96
+      ]
+    }
+  ]
+}

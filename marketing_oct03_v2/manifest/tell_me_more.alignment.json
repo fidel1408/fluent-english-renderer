@@ -1,0 +1,396 @@
+{
+  "video": "tell_me_more",
+  "master": "audio/originals/tell_me_more_take1.mp3",
+  "masterSha256": "7eec96c982d2a6a51c1f32ff803d69ed52c2ab7a5cbb3593df843391f813a4ed",
+  "totalSamples": 1035648,
+  "sampleRate": 44100,
+  "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Y después de That’s nice?",
+      "file": "audio/cues/tell_me_more_c01.wav",
+      "sourceSampleRange": [
+        0,
+        85903
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 1.947914,
+      "seconds": 1.947914,
+      "padHead": 0,
+      "padTail": 0.149,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 0.819
+        },
+        {
+          "s": 0.97,
+          "e": 1.799
+        }
+      ],
+      "activityInCue": [
+        0,
+        1.799
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        16
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "I tried a new restaurant.",
+      "file": "audio/cues/tell_me_more_c02.wav",
+      "sourceSampleRange": [
+        85903,
+        155455
+      ],
+      "sourceStart": 1.947914,
+      "sourceEnd": 3.525057,
+      "seconds": 1.577143,
+      "padHead": 0.149,
+      "padTail": 0.205,
+      "islandsInCue": [
+        {
+          "s": 0.149,
+          "e": 1.372
+        }
+      ],
+      "activityInCue": [
+        0.149,
+        1.372
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        10,
+        27
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Oh, nice! What was it like?",
+      "file": "audio/cues/tell_me_more_c03.wav",
+      "sourceSampleRange": [
+        155455,
+        268860
+      ],
+      "sourceStart": 3.525057,
+      "sourceEnd": 6.096599,
+      "seconds": 2.571542,
+      "padHead": 0.205,
+      "padTail": 0.235,
+      "islandsInCue": [
+        {
+          "s": 0.205,
+          "e": 2.337
+        }
+      ],
+      "activityInCue": [
+        0.205,
+        2.337
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        28,
+        6
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "¿Cómo estuvo?",
+      "file": "audio/cues/tell_me_more_c04.wav",
+      "sourceSampleRange": [
+        268860,
+        326479
+      ],
+      "sourceStart": 6.096599,
+      "sourceEnd": 7.403152,
+      "seconds": 1.306553,
+      "padHead": 0.235,
+      "padTail": 0.38,
+      "islandsInCue": [
+        {
+          "s": 0.235,
+          "e": 0.927
+        }
+      ],
+      "activityInCue": [
+        0.235,
+        0.927
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        4,
+        8
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "También puedes decir:",
+      "file": "audio/cues/tell_me_more_c05.wav",
+      "sourceSampleRange": [
+        326479,
+        398343
+      ],
+      "sourceStart": 7.403152,
+      "sourceEnd": 9.032721,
+      "seconds": 1.629569,
+      "padHead": 0.38,
+      "padTail": 0.262,
+      "islandsInCue": [
+        {
+          "s": 0.38,
+          "e": 1.368
+        }
+      ],
+      "activityInCue": [
+        0.38,
+        1.368
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        9,
+        7
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Tell me more about it.",
+      "file": "audio/cues/tell_me_more_c06.wav",
+      "sourceSampleRange": [
+        398343,
+        468077
+      ],
+      "sourceStart": 9.032721,
+      "sourceEnd": 10.613991,
+      "seconds": 1.58127,
+      "padHead": 0.261,
+      "padTail": 0.22,
+      "islandsInCue": [
+        {
+          "s": 0.261,
+          "e": 1.361
+        }
+      ],
+      "activityInCue": [
+        0.261,
+        1.361
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Cuéntame más.",
+      "file": "audio/cues/tell_me_more_c07.wav",
+      "sourceSampleRange": [
+        468077,
+        533546
+      ],
+      "sourceStart": 10.613991,
+      "sourceEnd": 12.098549,
+      "seconds": 1.484558,
+      "padHead": 0.22,
+      "padTail": 0.416,
+      "islandsInCue": [
+        {
+          "s": 0.22,
+          "e": 1.069
+        }
+      ],
+      "activityInCue": [
+        0.22,
+        1.069
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        2,
+        17
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú:",
+      "file": "audio/cues/tell_me_more_c08.wav",
+      "sourceSampleRange": [
+        533546,
+        591610
+      ],
+      "sourceStart": 12.098549,
+      "sourceEnd": 13.415193,
+      "seconds": 1.316644,
+      "padHead": 0.416,
+      "padTail": 0.359,
+      "islandsInCue": [
+        {
+          "s": 0.416,
+          "e": 0.958
+        }
+      ],
+      "activityInCue": [
+        0.416,
+        0.958
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        17,
+        10
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "I watched a movie last night.",
+      "file": "audio/cues/tell_me_more_c09.wav",
+      "sourceSampleRange": [
+        591610,
+        686048
+      ],
+      "sourceStart": 13.415193,
+      "sourceEnd": 15.556644,
+      "seconds": 2.141451,
+      "padHead": 0.359,
+      "padTail": 0.282,
+      "islandsInCue": [
+        {
+          "s": 0.359,
+          "e": 1.859
+        }
+      ],
+      "activityInCue": [
+        0.359,
+        1.859
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        10,
+        20
+      ]
+    },
+    {
+      "id": "c10",
+      "text": "¿Qué preguntarías después?",
+      "file": "audio/cues/tell_me_more_c10.wav",
+      "sourceSampleRange": [
+        686048,
+        775205
+      ],
+      "sourceStart": 15.556644,
+      "sourceEnd": 17.578345,
+      "seconds": 2.021701,
+      "padHead": 0.282,
+      "padTail": 0.474,
+      "islandsInCue": [
+        {
+          "s": 0.282,
+          "e": 1.548
+        }
+      ],
+      "activityInCue": [
+        0.282,
+        1.548
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        20,
+        8
+      ]
+    },
+    {
+      "id": "c11",
+      "text": "Speaking Club para intermedios y avanzados:",
+      "file": "audio/cues/tell_me_more_c11.wav",
+      "sourceSampleRange": [
+        775205,
+        918510
+      ],
+      "sourceStart": 17.578345,
+      "sourceEnd": 20.827891,
+      "seconds": 3.249546,
+      "padHead": 0.474,
+      "padTail": 0.246,
+      "islandsInCue": [
+        {
+          "s": 0.474,
+          "e": 3.004
+        }
+      ],
+      "activityInCue": [
+        0.474,
+        3.004
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        10,
+        25
+      ]
+    },
+    {
+      "id": "c12",
+      "text": "manda CLUB por mensaje privado.",
+      "file": "audio/cues/tell_me_more_c12.wav",
+      "sourceSampleRange": [
+        918510,
+        1035648
+      ],
+      "sourceStart": 20.827891,
+      "sourceEnd": 23.484082,
+      "seconds": 2.65619,
+      "padHead": 0.246,
+      "padTail": 0.226,
+      "islandsInCue": [
+        {
+          "s": 0.246,
+          "e": 0.664
+        },
+        {
+          "s": 0.787,
+          "e": 1.183
+        },
+        {
+          "s": 1.359,
+          "e": 2.43
+        }
+      ],
+      "activityInCue": [
+        0.246,
+        2.43
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        24,
+        0
+      ]
+    }
+  ],
+  "marks": {},
+  "coverage": {
+    "partitionSamples": 1035648,
+    "totalSamples": 1035648,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 28
+  },
+  "confidence": {
+    "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+    "content": "pronunciation/naturalness NOT verified (no listening)"
+  }
+}

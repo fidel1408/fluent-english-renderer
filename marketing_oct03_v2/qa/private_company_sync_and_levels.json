@@ -1,0 +1,94 @@
+{
+  "file": "FE261023-PRIVATE_batch2_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Buscas una clase privada o clases para tu equipo?",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "Las privadas pueden ser para una, dos o tres personas.",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "Las clases para empresas son en línea, para un máximo de diez por clase.",
+      "correlation": 0.993,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Cuéntanos qué necesitan practicar.",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "Manda PRIVADO o EMPRESA por mensaje privado.",
+      "correlation": 1,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.97,
+      "expect": "ON c01",
+      "creamPixels": 5752
+    },
+    {
+      "at": 6.39,
+      "expect": "ON c02",
+      "creamPixels": 5685
+    },
+    {
+      "at": 13.63,
+      "expect": "ON c03",
+      "creamPixels": 5481
+    },
+    {
+      "at": 20.15,
+      "expect": "ON c04",
+      "creamPixels": 5894
+    },
+    {
+      "at": 23.56,
+      "expect": "ON c05",
+      "creamPixels": 5565
+    },
+    {
+      "at": 4,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 9.87,
+      "expect": "OFF (gap c02-c03)",
+      "creamPixels": 0
+    },
+    {
+      "at": 17.45,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 21.42,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.5,
+    "loudnessRangeLU": 16.6,
+    "truePeakdBTP": -4.4
+  },
+  "finalHold": {
+    "from": 25.56,
+    "to": 29,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.44
+  },
+  "pass": true
+}

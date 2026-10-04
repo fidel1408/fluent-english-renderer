@@ -1,0 +1,177 @@
+{
+  "video": "private_company",
+  "contentId": "FE261023-PRIVATE",
+  "title": "PRIVATE / COMPANY",
+  "fps": 30,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "targetSeconds": [
+    25,
+    35
+  ],
+  "status": "PLANNED",
+  "mixGainDb": -0.5,
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences in this build; mapping to script phrases is structural, corroborated by independent ASR evidence, and unverified by ear. Take 1 is a provisional editorial choice based on independent ASR/pause measurements (not an audition). ASR word times are NOT used as cut instructions.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Buscas una clase privada o clases para tu equipo?",
+      "est": 2.947,
+      "gap": 0,
+      "file": "audio/cues/private_company_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Las privadas pueden ser para una, dos o tres personas.",
+      "est": 3.841,
+      "gap": 0.9,
+      "file": "audio/cues/private_company_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Las clases para empresas son en línea, para un máximo de diez por clase.",
+      "est": 4.429,
+      "gap": 3.17,
+      "file": "audio/cues/private_company_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Cuéntanos qué necesitan practicar.",
+      "est": 2.259,
+      "gap": 3.12,
+      "file": "audio/cues/private_company_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Manda PRIVADO o EMPRESA por mensaje privado.",
+      "est": 3.922,
+      "gap": 0.3,
+      "file": "audio/cues/private_company_c05.wav"
+    }
+  ],
+  "alignment": {
+    "anchors": {
+      "una": 4.58,
+      "dos": 5.18,
+      "tres": 5.78,
+      "maxStart": 9.36,
+      "diezEnd": 10.16,
+      "privateActivity": 3.09
+    },
+    "method": "cut positions derived by this build from the waveform: integer sample midpoints of measured silences (silencedetect -38 dB, >= 120 ms) between declared groups of speech islands; NOT an externally supplied sample-cut handoff",
+    "confidence": {
+      "phraseBoundaries": "waveform-derived cuts from this build (silence midpoints); mapping island group -> script phrase is structural. Independent faster-whisper small/medium ASR (supplied with batch 2, see manifest/batch2_inputs) corroborates the broad phrase assignment; ASR is not listening and does not prove pronunciation or naturalness",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured by this build; ASR word estimates carry model uncertainty (por/for code-switch disagreement in medium CanHave)",
+      "content": "pronunciation/naturalness NOT verified (no listening)"
+    },
+    "totalSamples": 767232,
+    "partitions": [
+      [
+        0,
+        129974
+      ],
+      [
+        129974,
+        299369
+      ],
+      [
+        299369,
+        494676
+      ],
+      [
+        494676,
+        594289
+      ],
+      [
+        594289,
+        767232
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        2.73
+      ],
+      [
+        3.165,
+        6.616
+      ],
+      [
+        6.961,
+        8.93
+      ],
+      [
+        9.146,
+        10.951
+      ],
+      [
+        11.483,
+        11.907
+      ],
+      [
+        12.033,
+        13.239
+      ],
+      [
+        13.713,
+        14.092
+      ],
+      [
+        14.297,
+        14.831
+      ],
+      [
+        14.966,
+        15.139
+      ],
+      [
+        15.282,
+        15.897
+      ],
+      [
+        16.166,
+        17.22
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "marks": {}
+  }
+}

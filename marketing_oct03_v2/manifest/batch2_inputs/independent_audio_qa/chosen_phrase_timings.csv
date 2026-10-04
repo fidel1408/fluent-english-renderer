@@ -1,0 +1,33 @@
+source_file,phrase_id,recognized_phrase,start_min,start_max,end_min,end_max
+clarify_deadline_take1.mp3,hook,Necesitas que te aclaren una fecha,0.0,0.0,1.72,1.8
+clarify_deadline_take1.mp3,clarify_english,Could you clarify the deadline,2.28,2.4,3.64,3.8
+clarify_deadline_take1.mp3,clarify_spanish,Podrías aclarar la fecha límite,4.4,4.4,6.06,6.22
+clarify_deadline_take1.mp3,confirm_lead,Para confirmar,6.94,7.06,7.78,8.12
+clarify_deadline_take1.mp3,confirm_english,Do you mean this Friday,8.4,8.54,9.5,9.64
+clarify_deadline_take1.mp3,confirm_spanish,Te refieres a este viernes,10.2,10.24,11.42,11.6
+clarify_deadline_take1.mp3,practice,Ahora cambia the deadline for the next step,12.54,12.62,16.28,16.46
+clarify_deadline_take1.mp3,practice_deadline,the deadline,13.46,13.58,14.26,14.54
+clarify_deadline_take1.mp3,practice_connector_disputed,for,14.26,14.54,14.84,15.12
+clarify_deadline_take1.mp3,practice_next_step,the next step,14.84,15.12,16.28,16.46
+clarify_deadline_take1.mp3,cta_offer,Clases en línea para tu equipo,16.8,17.3,18.62,18.8
+clarify_deadline_take1.mp3,cta_action,Manda empresa por mensaje privado,19.14,19.34,21.5,21.58
+tell_me_more_take1.mp3,hook,Y después de that's nice,0.0,0.0,1.52,1.74
+tell_me_more_take1.mp3,setup,I tried a new restaurant,2.06,2.1,3.1,3.28
+tell_me_more_take1.mp3,question_english,Oh nice what was it like,3.76,3.84,5.64,5.88
+tell_me_more_take1.mp3,question_spanish,Cómo estuvo,6.4,6.4,6.86,7.04
+tell_me_more_take1.mp3,alternative_lead,También puedes decir,7.72,7.76,8.68,9.04
+tell_me_more_take1.mp3,alternative_english,Tell me more about it,9.04,9.22,10.38,10.64
+tell_me_more_take1.mp3,alternative_spanish,Cuéntame más,10.86,10.9,11.56,11.74
+tell_me_more_take1.mp3,practice_lead,Ahora tú,12.52,12.62,13.0,13.14
+tell_me_more_take1.mp3,practice_english,I watched a movie last night,13.76,13.82,15.2,15.3
+tell_me_more_take1.mp3,practice_question,Qué preguntarías después,15.82,15.84,16.78,17.08
+tell_me_more_take1.mp3,cta_offer,Speaking Club para intermedios y avanzados,17.98,18.24,20.44,20.84
+tell_me_more_take1.mp3,cta_action,Manda club por mensaje privado,20.9,21.2,23.2,23.32
+private_company_take1.mp3,hook,Buscas una clase privada o clases para tu equipo,0.0,0.0,2.6,2.68
+private_company_take1.mp3,private,Las privadas pueden ser para una dos o tres personas,3.24,3.3,6.46,6.58
+private_company_take1.mp3,private_counts,una dos o tres,4.5,4.66,5.98,6.12
+private_company_take1.mp3,company,Las clases para empresas son en línea para un máximo de diez por clase,7.1,7.18,10.86,11.0
+private_company_take1.mp3,company_online,en línea,8.42,8.5,8.86,8.96
+private_company_take1.mp3,company_capacity,un máximo de diez por clase,9.36,9.46,10.86,11.0
+private_company_take1.mp3,cta_question,Cuéntanos qué necesitan practicar,11.42,11.6,13.14,13.56
+private_company_take1.mp3,cta_action,Manda privado o empresa por mensaje privado,13.62,13.84,17.2,17.26

@@ -1,0 +1,143 @@
+{
+  "file": "FE261019-CLARIFY_batch2_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Necesitas que te aclaren una fecha?",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "Could you clarify the deadline?",
+      "correlation": 0.997,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "¿Podrías aclarar la fecha límite?",
+      "correlation": 0.998,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Para confirmar:",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "Do you mean this Friday?",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "¿Te refieres a este viernes?",
+      "correlation": 0.992,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "Ahora cambia the deadline por the next step.",
+      "correlation": 0.989,
+      "lagMs": 5
+    },
+    {
+      "id": "c08",
+      "text": "Clases en línea para tu equipo:",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c09",
+      "text": "manda EMPRESA por mensaje privado.",
+      "correlation": 0.984,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.51,
+      "expect": "ON c01",
+      "creamPixels": 5933
+    },
+    {
+      "at": 4.44,
+      "expect": "ON c02",
+      "creamPixels": 5840
+    },
+    {
+      "at": 6.72,
+      "expect": "ON c03",
+      "creamPixels": 6184
+    },
+    {
+      "at": 9.26,
+      "expect": "ON c04",
+      "creamPixels": 5917
+    },
+    {
+      "at": 10.98,
+      "expect": "ON c05",
+      "creamPixels": 5858
+    },
+    {
+      "at": 12.95,
+      "expect": "ON c06",
+      "creamPixels": 5848
+    },
+    {
+      "at": 16.86,
+      "expect": "ON c07",
+      "creamPixels": 5858
+    },
+    {
+      "at": 24.24,
+      "expect": "ON c08",
+      "creamPixels": 5754
+    },
+    {
+      "at": 26.82,
+      "expect": "ON c09",
+      "creamPixels": 5586
+    },
+    {
+      "at": 3.06,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 8.23,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 10,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    },
+    {
+      "at": 14.29,
+      "expect": "OFF (gap c06-c07)",
+      "creamPixels": 0
+    },
+    {
+      "at": 21.13,
+      "expect": "OFF (gap c07-c08)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.5,
+    "loudnessRangeLU": 8.4,
+    "truePeakdBTP": -4.2
+  },
+  "finalHold": {
+    "from": 28.24,
+    "to": 31.7,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.46
+  },
+  "pass": true
+}

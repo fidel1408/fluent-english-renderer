@@ -1,0 +1,78 @@
+{
+  "file": "FE261023-PRIVATE_batch2_single-host_narrated_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "private_info",
+      "plannedWindow": [
+        7.73,
+        10.38
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 2.67,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            379,
+            680,
+            538
+          ],
+          "frames": 80,
+          "longestStationaryRunSeconds": 2.67,
+          "maxMeanAbsDiffToPrevious": 0.22,
+          "maxMeanAbsDiffToFirst": 0.22
+        }
+      ]
+    },
+    {
+      "id": "company_info",
+      "plannedWindow": [
+        15.33,
+        18.02
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 2.7,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            379,
+            680,
+            538
+          ],
+          "frames": 81,
+          "longestStationaryRunSeconds": 2.7,
+          "maxMeanAbsDiffToPrevious": 0.28,
+          "maxMeanAbsDiffToFirst": 0.28
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "plannedWindow": [
+        19.32,
+        29
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 9.67,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            405,
+            680,
+            353
+          ],
+          "frames": 290,
+          "longestStationaryRunSeconds": 9.67,
+          "maxMeanAbsDiffToPrevious": 0.32,
+          "maxMeanAbsDiffToFirst": 0.46
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

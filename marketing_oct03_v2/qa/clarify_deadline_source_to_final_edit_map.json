@@ -1,0 +1,218 @@
+{
+  "video": "clarify_deadline",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/clarify_deadline_take1.mp3",
+  "masterSha256": "71b48ddaf4925317155c959ddbef206e7759f493e9b3b315d121ce3c3f3dcc21",
+  "sampleRate": 44100,
+  "fullMasterSamples": 957312,
+  "fullMasterSeconds": 21.707755102,
+  "retainedCueSamples": 957312,
+  "retainedCueSeconds": 21.707755102,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 31.7,
+  "addedSilenceSeconds": 9.992245,
+  "lead": 0.6,
+  "endHold": 3.5,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Necesitas que te aclaren una fecha?",
+      "caption": "¿Necesitas que te aclaren una fecha?",
+      "cueFile": "audio/cues/clarify_deadline_c01.wav",
+      "cueWavSamples": 91896,
+      "sourceSampleRange": [
+        0,
+        91896
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.08381,
+      "finalStart": 0.6,
+      "finalEnd": 2.684,
+      "offsetSeconds": 0.6,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.6,
+        2.41
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Could you clarify the deadline?",
+      "caption": "Could you clarify the deadline?",
+      "cueFile": "audio/cues/clarify_deadline_c02.wav",
+      "cueWavSamples": 89799,
+      "sourceSampleRange": [
+        91896,
+        181695
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.08381,
+      "sourceEndSeconds": 4.120068,
+      "finalStart": 3.434,
+      "finalEnd": 5.47,
+      "offsetSeconds": 1.35019,
+      "gapBeforeAdded": 0.75,
+      "speechActivityFinal": [
+        3.708,
+        5.18
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "¿Podrías aclarar la fecha límite?",
+      "caption": "¿Podrías aclarar la fecha límite?",
+      "cueFile": "audio/cues/clarify_deadline_c03.wav",
+      "cueWavSamples": 109828,
+      "sourceSampleRange": [
+        181695,
+        291523
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 4.120068,
+      "sourceEndSeconds": 6.610499,
+      "finalStart": 5.57,
+      "finalEnd": 8.06,
+      "offsetSeconds": 1.449932,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        5.86,
+        7.577
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Para confirmar:",
+      "caption": "Para confirmar:",
+      "cueFile": "audio/cues/clarify_deadline_c04.wav",
+      "cueWavSamples": 67815,
+      "sourceSampleRange": [
+        291523,
+        359338
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 6.610499,
+      "sourceEndSeconds": 8.148254,
+      "finalStart": 8.41,
+      "finalEnd": 9.948,
+      "offsetSeconds": 1.799501,
+      "gapBeforeAdded": 0.35,
+      "speechActivityFinal": [
+        8.893,
+        9.632
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Do you mean this Friday?",
+      "caption": "Do you mean this Friday?",
+      "cueFile": "audio/cues/clarify_deadline_c05.wav",
+      "cueWavSamples": 80735,
+      "sourceSampleRange": [
+        359338,
+        440073
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 8.148254,
+      "sourceEndSeconds": 9.97898,
+      "finalStart": 10.048,
+      "finalEnd": 11.879,
+      "offsetSeconds": 1.899746,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        10.364,
+        11.598
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "¿Te refieres a este viernes?",
+      "caption": "¿Te refieres a este viernes?",
+      "cueFile": "audio/cues/clarify_deadline_c06.wav",
+      "cueWavSamples": 94221,
+      "sourceSampleRange": [
+        440073,
+        534294
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 9.97898,
+      "sourceEndSeconds": 12.11551,
+      "finalStart": 11.979,
+      "finalEnd": 14.116,
+      "offsetSeconds": 2.00002,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        12.26,
+        13.631
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Ahora cambia the deadline por the next step.",
+      "caption": "Ahora cambia the deadline por the next step.",
+      "cueFile": "audio/cues/clarify_deadline_c07.wav",
+      "cueWavSamples": 207966,
+      "sourceSampleRange": [
+        534294,
+        742260
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 12.11551,
+      "sourceEndSeconds": 16.831293,
+      "finalStart": 14.466,
+      "finalEnd": 19.182,
+      "offsetSeconds": 2.35049,
+      "gapBeforeAdded": 0.35,
+      "speechActivityFinal": [
+        14.951,
+        18.766
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Clases en línea para tu equipo:",
+      "caption": "Clases en línea para tu equipo:",
+      "cueFile": "audio/cues/clarify_deadline_c08.wav",
+      "cueWavSamples": 94526,
+      "sourceSampleRange": [
+        742260,
+        836786
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 16.831293,
+      "sourceEndSeconds": 18.974739,
+      "finalStart": 23.082,
+      "finalEnd": 25.225,
+      "offsetSeconds": 6.250707,
+      "gapBeforeAdded": 3.9,
+      "speechActivityFinal": [
+        23.497,
+        24.992
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "manda EMPRESA por mensaje privado.",
+      "caption": "manda EMPRESA por mensaje privado.",
+      "cueFile": "audio/cues/clarify_deadline_c09.wav",
+      "cueWavSamples": 120526,
+      "sourceSampleRange": [
+        836786,
+        957312
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 18.974739,
+      "sourceEndSeconds": 21.707755,
+      "finalStart": 25.425,
+      "finalEnd": 28.158,
+      "offsetSeconds": 6.450261,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        25.658,
+        27.988
+      ]
+    }
+  ]
+}

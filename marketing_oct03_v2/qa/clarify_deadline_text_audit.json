@@ -1,0 +1,137 @@
+{
+  "video": "clarify_deadline",
+  "frames": 951,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "Could you clarify",
+      "window": [
+        3.61,
+        5.18
+      ],
+      "framesChecked": 47,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Podrías aclarar",
+      "window": [
+        5.76,
+        7.58
+      ],
+      "framesChecked": 54,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "PEDIR UNA ACLARACIÓN",
+      "window": [
+        3.61,
+        7.58
+      ],
+      "framesChecked": 119,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "PARA CONFIRMAR",
+      "window": [
+        8.79,
+        13.63
+      ],
+      "framesChecked": 145,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Do you mean",
+      "window": [
+        10.26,
+        11.6
+      ],
+      "framesChecked": 40,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Te refieres a",
+      "window": [
+        12.16,
+        13.63
+      ],
+      "framesChecked": 44,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "the deadline",
+      "window": [
+        14.85,
+        22.25
+      ],
+      "framesChecked": 221,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "the next step",
+      "window": [
+        17.51,
+        22.25
+      ],
+      "framesChecked": 142,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "EMPRESA",
+      "window": [
+        23.5,
+        31.49
+      ],
+      "framesChecked": 240,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/Yes, this Friday/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/seguir|follow|like|guarda|link|https?:|www\\.|\\.com|precio|gratis|garantiz|ascenso|contrataci|resultados/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/clarify the next step|next step\\?/i",
+      "fromSeconds": 14.05,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "EMPRESA",
+    "enteredAt": 22.6,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 37,
+  "captionGlyphBounds": {
+    "xMin": 122.5,
+    "xMax": 837.5,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
+  "captionClearsMouth": true,
+  "pass": true
+}

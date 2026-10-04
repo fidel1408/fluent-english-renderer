@@ -1,0 +1,3371 @@
+[
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take1.mp3",
+    "sha256": "71b48ddaf4925317155c959ddbef206e7759f493e9b3b315d121ce3c3f3dcc21",
+    "label": "practice",
+    "source_start_seconds": 12.0,
+    "source_end_seconds": 16.8,
+    "model": "medium",
+    "parameters": {
+      "language": null,
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": true,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "en",
+      "language_probability": 0.45586347579956055,
+      "duration": 4.8,
+      "duration_after_vad": 4.8,
+      "all_language_probs": [
+        [
+          "en",
+          0.45586347579956055
+        ],
+        [
+          "de",
+          0.2462700605392456
+        ],
+        [
+          "es",
+          0.18063749372959137
+        ],
+        [
+          "pl",
+          0.027189236134290695
+        ],
+        [
+          "it",
+          0.024863215163350105
+        ],
+        [
+          "pt",
+          0.01634948141872883
+        ],
+        [
+          "nn",
+          0.010245205834507942
+        ],
+        [
+          "fr",
+          0.007759077474474907
+        ],
+        [
+          "la",
+          0.005988892633467913
+        ],
+        [
+          "ru",
+          0.004987318068742752
+        ],
+        [
+          "cy",
+          0.003290260210633278
+        ],
+        [
+          "sv",
+          0.0025838951114565134
+        ],
+        [
+          "nl",
+          0.0021587025839835405
+        ],
+        [
+          "ko",
+          0.0015255233738571405
+        ],
+        [
+          "ja",
+          0.001456950674764812
+        ],
+        [
+          "km",
+          0.0008204255136661232
+        ],
+        [
+          "ar",
+          0.0007294510141946375
+        ],
+        [
+          "haw",
+          0.0006187724648043513
+        ],
+        [
+          "cs",
+          0.0006094163400121033
+        ],
+        [
+          "id",
+          0.0006074227276258171
+        ],
+        [
+          "hi",
+          0.0005744121735915542
+        ],
+        [
+          "jw",
+          0.0005641180905513465
+        ],
+        [
+          "ms",
+          0.0004998352960683405
+        ],
+        [
+          "ro",
+          0.00047498251660726964
+        ],
+        [
+          "el",
+          0.0002900930412579328
+        ],
+        [
+          "vi",
+          0.0002823775867000222
+        ],
+        [
+          "zh",
+          0.00026497035287320614
+        ],
+        [
+          "fi",
+          0.00026282158796675503
+        ],
+        [
+          "th",
+          0.00019210109894629568
+        ],
+        [
+          "uk",
+          0.0001658676628721878
+        ],
+        [
+          "sn",
+          0.00016578288341406733
+        ],
+        [
+          "tr",
+          0.00015789453755132854
+        ],
+        [
+          "mi",
+          0.00014862271200399846
+        ],
+        [
+          "tl",
+          0.00014764454681426287
+        ],
+        [
+          "ur",
+          0.00013910428970120847
+        ],
+        [
+          "hu",
+          0.00012536885333247483
+        ],
+        [
+          "da",
+          0.00010415271390229464
+        ],
+        [
+          "sl",
+          8.394788164878264e-05
+        ],
+        [
+          "si",
+          7.869360706536099e-05
+        ],
+        [
+          "gl",
+          7.821759209036827e-05
+        ],
+        [
+          "he",
+          7.760860171401873e-05
+        ],
+        [
+          "sw",
+          6.0619790019700304e-05
+        ],
+        [
+          "sk",
+          5.543539009522647e-05
+        ],
+        [
+          "no",
+          5.227008296060376e-05
+        ],
+        [
+          "sa",
+          5.079484617454e-05
+        ],
+        [
+          "br",
+          4.782476753462106e-05
+        ],
+        [
+          "bn",
+          4.1047842387342826e-05
+        ],
+        [
+          "ca",
+          2.848441363312304e-05
+        ],
+        [
+          "hr",
+          2.475387191225309e-05
+        ],
+        [
+          "ml",
+          2.448354644002393e-05
+        ],
+        [
+          "fa",
+          2.4032304281718098e-05
+        ],
+        [
+          "te",
+          1.922729097714182e-05
+        ],
+        [
+          "oc",
+          1.7274494894081727e-05
+        ],
+        [
+          "eu",
+          1.3934455637354404e-05
+        ],
+        [
+          "bg",
+          1.2163402061560191e-05
+        ],
+        [
+          "yo",
+          1.2122453881602269e-05
+        ],
+        [
+          "ht",
+          9.638850315241143e-06
+        ],
+        [
+          "ta",
+          7.991954589670058e-06
+        ],
+        [
+          "is",
+          7.591914254589938e-06
+        ],
+        [
+          "mn",
+          7.3626461016829126e-06
+        ],
+        [
+          "yi",
+          6.833560291852336e-06
+        ],
+        [
+          "af",
+          6.716858479194343e-06
+        ],
+        [
+          "fo",
+          4.755213922180701e-06
+        ],
+        [
+          "bs",
+          3.976640073233284e-06
+        ],
+        [
+          "my",
+          3.743139814105234e-06
+        ],
+        [
+          "lv",
+          3.4186625725851627e-06
+        ],
+        [
+          "lt",
+          3.2542741337238112e-06
+        ],
+        [
+          "be",
+          2.9146819997549755e-06
+        ],
+        [
+          "bo",
+          2.906349664044683e-06
+        ],
+        [
+          "pa",
+          1.5777334283484379e-06
+        ],
+        [
+          "lo",
+          1.5198345408862224e-06
+        ],
+        [
+          "hy",
+          1.385932932862488e-06
+        ],
+        [
+          "et",
+          1.1920789120267727e-06
+        ],
+        [
+          "ps",
+          9.678306014393456e-07
+        ],
+        [
+          "sd",
+          7.781648605487135e-07
+        ],
+        [
+          "ne",
+          7.311953140742844e-07
+        ],
+        [
+          "sq",
+          7.075872190398513e-07
+        ],
+        [
+          "mr",
+          4.6029177269701904e-07
+        ],
+        [
+          "sr",
+          3.426050056987151e-07
+        ],
+        [
+          "mt",
+          3.3623484796407865e-07
+        ],
+        [
+          "as",
+          3.127559295990068e-07
+        ],
+        [
+          "ln",
+          2.560724965405825e-07
+        ],
+        [
+          "kn",
+          1.9715339760750794e-07
+        ],
+        [
+          "az",
+          1.5534796204974555e-07
+        ],
+        [
+          "mk",
+          1.5196874869616295e-07
+        ],
+        [
+          "am",
+          1.209642306321257e-07
+        ],
+        [
+          "kk",
+          1.0314993659221727e-07
+        ],
+        [
+          "ka",
+          9.458315020083319e-08
+        ],
+        [
+          "gu",
+          5.883715914478671e-08
+        ],
+        [
+          "ha",
+          3.91955694567514e-08
+        ],
+        [
+          "lb",
+          3.8781582389901814e-08
+        ],
+        [
+          "so",
+          3.385242663966892e-08
+        ],
+        [
+          "su",
+          3.248770141794921e-08
+        ],
+        [
+          "mg",
+          2.960347167402233e-08
+        ],
+        [
+          "tg",
+          1.8708389504240586e-08
+        ],
+        [
+          "ba",
+          1.1423085588546655e-08
+        ],
+        [
+          "tk",
+          1.0395958760511803e-08
+        ],
+        [
+          "tt",
+          3.6647960222069287e-09
+        ],
+        [
+          "uz",
+          1.0764855673528473e-09
+        ]
+      ],
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": true,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.28,
+        "text": " Now I change the deadline for the next step.",
+        "tokens": [
+          50364,
+          823,
+          286,
+          1319,
+          264,
+          20615,
+          337,
+          264,
+          958,
+          1823,
+          13,
+          50614
+        ],
+        "avg_logprob": -0.4173455605140099,
+        "compression_ratio": 0.8979591836734694,
+        "no_speech_prob": 0.2980678975582123,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 1.06,
+            "word": " Now",
+            "probability": 0.5119344592094421
+          },
+          {
+            "start": 1.06,
+            "end": 1.5,
+            "word": " I",
+            "probability": 0.6880292296409607
+          },
+          {
+            "start": 1.5,
+            "end": 1.56,
+            "word": " change",
+            "probability": 0.7678525447845459
+          },
+          {
+            "start": 1.56,
+            "end": 1.94,
+            "word": " the",
+            "probability": 0.7399192452430725
+          },
+          {
+            "start": 1.94,
+            "end": 2.44,
+            "word": " deadline",
+            "probability": 0.8332500457763672
+          },
+          {
+            "start": 2.44,
+            "end": 3.22,
+            "word": " for",
+            "probability": 0.9314491748809814
+          },
+          {
+            "start": 3.22,
+            "end": 3.52,
+            "word": " the",
+            "probability": 0.9024842381477356
+          },
+          {
+            "start": 3.52,
+            "end": 3.94,
+            "word": " next",
+            "probability": 0.9885242581367493
+          },
+          {
+            "start": 3.94,
+            "end": 4.28,
+            "word": " step.",
+            "probability": 0.996195912361145
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Now I change the deadline for the next step.",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  },
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take1.mp3",
+    "sha256": "71b48ddaf4925317155c959ddbef206e7759f493e9b3b315d121ce3c3f3dcc21",
+    "label": "practice",
+    "source_start_seconds": 12.0,
+    "source_end_seconds": 16.8,
+    "model": "medium",
+    "parameters": {
+      "language": "es",
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": false,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "es",
+      "language_probability": 1,
+      "duration": 4.8,
+      "duration_after_vad": 4.8,
+      "all_language_probs": null,
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": false,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 4.28,
+        "text": " Ahora cambia the deadline for the next step.",
+        "tokens": [
+          50364,
+          18840,
+          18751,
+          654,
+          264,
+          20615,
+          337,
+          264,
+          958,
+          1823,
+          13,
+          50584
+        ],
+        "avg_logprob": -0.39354435297159046,
+        "compression_ratio": 0.8979591836734694,
+        "no_speech_prob": 0.2980678975582123,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 1.06,
+            "word": " Ahora",
+            "probability": 0.7719174027442932
+          },
+          {
+            "start": 1.06,
+            "end": 1.58,
+            "word": " cambia",
+            "probability": 0.9273675978183746
+          },
+          {
+            "start": 1.58,
+            "end": 1.92,
+            "word": " the",
+            "probability": 0.5080222487449646
+          },
+          {
+            "start": 1.92,
+            "end": 2.46,
+            "word": " deadline",
+            "probability": 0.8079940676689148
+          },
+          {
+            "start": 2.46,
+            "end": 3.2,
+            "word": " for",
+            "probability": 0.8874289989471436
+          },
+          {
+            "start": 3.2,
+            "end": 3.56,
+            "word": " the",
+            "probability": 0.921084463596344
+          },
+          {
+            "start": 3.56,
+            "end": 3.92,
+            "word": " next",
+            "probability": 0.9840811491012573
+          },
+          {
+            "start": 3.92,
+            "end": 4.28,
+            "word": " step.",
+            "probability": 0.9955922961235046
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Ahora cambia the deadline for the next step.",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  },
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take2.mp3",
+    "sha256": "f7a47e714aab861952e39bfb3ccaced59adb401c98bc457850c9bbdca4485154",
+    "label": "english_question_1",
+    "source_start_seconds": 2.1,
+    "source_end_seconds": 4.1,
+    "model": "medium",
+    "parameters": {
+      "language": null,
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": true,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "en",
+      "language_probability": 0.9745374917984009,
+      "duration": 2.0,
+      "duration_after_vad": 2.0,
+      "all_language_probs": [
+        [
+          "en",
+          0.9745374917984009
+        ],
+        [
+          "cy",
+          0.012034217827022076
+        ],
+        [
+          "nn",
+          0.004879683721810579
+        ],
+        [
+          "ja",
+          0.0018452043877914548
+        ],
+        [
+          "zh",
+          0.0009444103925488889
+        ],
+        [
+          "la",
+          0.0009138031164184213
+        ],
+        [
+          "ko",
+          0.0004454625304788351
+        ],
+        [
+          "mi",
+          0.0004153315967414528
+        ],
+        [
+          "de",
+          0.0003923073236364871
+        ],
+        [
+          "fr",
+          0.000274614809313789
+        ],
+        [
+          "ar",
+          0.0002496093511581421
+        ],
+        [
+          "sv",
+          0.0002337165060453117
+        ],
+        [
+          "ru",
+          0.00023096718359738588
+        ],
+        [
+          "ms",
+          0.00021866157476324588
+        ],
+        [
+          "nl",
+          0.0002067645691568032
+        ],
+        [
+          "es",
+          0.00018671072029974312
+        ],
+        [
+          "haw",
+          0.00016817793948575854
+        ],
+        [
+          "km",
+          0.00016619164671283215
+        ],
+        [
+          "pt",
+          0.00015661740326322615
+        ],
+        [
+          "pl",
+          0.0001446875394321978
+        ],
+        [
+          "fi",
+          0.0001374055864289403
+        ],
+        [
+          "th",
+          0.00011179286957485601
+        ],
+        [
+          "tr",
+          0.00010358236613683403
+        ],
+        [
+          "id",
+          0.00010201908298768103
+        ],
+        [
+          "ml",
+          0.00010126436245627701
+        ],
+        [
+          "hi",
+          9.96016533463262e-05
+        ],
+        [
+          "jw",
+          8.392180461669341e-05
+        ],
+        [
+          "vi",
+          7.52644773456268e-05
+        ],
+        [
+          "el",
+          6.693561590509489e-05
+        ],
+        [
+          "ur",
+          5.903048804611899e-05
+        ],
+        [
+          "it",
+          5.182901077205315e-05
+        ],
+        [
+          "sn",
+          5.048904495197348e-05
+        ],
+        [
+          "tl",
+          4.881493441644125e-05
+        ],
+        [
+          "da",
+          3.978843233198859e-05
+        ],
+        [
+          "bn",
+          2.7646565285976976e-05
+        ],
+        [
+          "cs",
+          2.6117741072084755e-05
+        ],
+        [
+          "si",
+          2.391424641245976e-05
+        ],
+        [
+          "no",
+          2.0469338778639212e-05
+        ],
+        [
+          "uk",
+          1.648045508773066e-05
+        ],
+        [
+          "sw",
+          1.5104405974852853e-05
+        ],
+        [
+          "ta",
+          1.3932251931692008e-05
+        ],
+        [
+          "br",
+          1.0979962098645046e-05
+        ],
+        [
+          "te",
+          7.076214387780055e-06
+        ],
+        [
+          "is",
+          6.653132913925219e-06
+        ],
+        [
+          "ro",
+          6.093554020480951e-06
+        ],
+        [
+          "sa",
+          5.61242495678016e-06
+        ],
+        [
+          "yo",
+          5.601110842690105e-06
+        ],
+        [
+          "sl",
+          4.777150934387464e-06
+        ],
+        [
+          "he",
+          4.455844191397773e-06
+        ],
+        [
+          "af",
+          4.401756996230688e-06
+        ],
+        [
+          "bg",
+          3.244129629820236e-06
+        ],
+        [
+          "mn",
+          2.7700232294591842e-06
+        ],
+        [
+          "sk",
+          2.007655666602659e-06
+        ],
+        [
+          "my",
+          1.966849822565564e-06
+        ],
+        [
+          "bo",
+          1.9648100533231627e-06
+        ],
+        [
+          "fa",
+          1.2421909332260839e-06
+        ],
+        [
+          "ht",
+          1.1228297580601065e-06
+        ],
+        [
+          "gl",
+          1.0882071137530147e-06
+        ],
+        [
+          "hu",
+          9.991759952754364e-07
+        ],
+        [
+          "lv",
+          8.539496434423199e-07
+        ],
+        [
+          "ca",
+          8.439460543741006e-07
+        ],
+        [
+          "hr",
+          8.268401074928988e-07
+        ],
+        [
+          "fo",
+          8.237076940531551e-07
+        ],
+        [
+          "lo",
+          5.581090931627841e-07
+        ],
+        [
+          "pa",
+          5.273719807519228e-07
+        ],
+        [
+          "bs",
+          4.677919491768989e-07
+        ],
+        [
+          "eu",
+          3.10940379222302e-07
+        ],
+        [
+          "ne",
+          3.1044910997479747e-07
+        ],
+        [
+          "ps",
+          3.068468856781692e-07
+        ],
+        [
+          "yi",
+          2.9917961796854797e-07
+        ],
+        [
+          "lt",
+          2.463017665377265e-07
+        ],
+        [
+          "oc",
+          2.4446893576168804e-07
+        ],
+        [
+          "mr",
+          1.938447269367316e-07
+        ],
+        [
+          "sq",
+          1.6456033335998654e-07
+        ],
+        [
+          "hy",
+          1.5709406397945713e-07
+        ],
+        [
+          "be",
+          1.3503485263299808e-07
+        ],
+        [
+          "et",
+          1.3150257416327804e-07
+        ],
+        [
+          "sd",
+          1.1537416355622554e-07
+        ],
+        [
+          "mt",
+          7.555591707841813e-08
+        ],
+        [
+          "as",
+          7.525962075760617e-08
+        ],
+        [
+          "kn",
+          6.451284662034595e-08
+        ],
+        [
+          "az",
+          3.655938840552153e-08
+        ],
+        [
+          "kk",
+          2.9734366080447217e-08
+        ],
+        [
+          "am",
+          2.35552661820293e-08
+        ],
+        [
+          "sr",
+          1.6848902717470082e-08
+        ],
+        [
+          "ha",
+          1.4691418748213891e-08
+        ],
+        [
+          "su",
+          1.4378764845446312e-08
+        ],
+        [
+          "mk",
+          1.4112627511053688e-08
+        ],
+        [
+          "gu",
+          1.2207172161993185e-08
+        ],
+        [
+          "ka",
+          1.1046282111237815e-08
+        ],
+        [
+          "so",
+          9.823454938384657e-09
+        ],
+        [
+          "ln",
+          9.682895374396594e-09
+        ],
+        [
+          "mg",
+          4.747269244376184e-09
+        ],
+        [
+          "tg",
+          2.7828130910734217e-09
+        ],
+        [
+          "lb",
+          2.7417919046257566e-09
+        ],
+        [
+          "ba",
+          1.6376047184962772e-09
+        ],
+        [
+          "tt",
+          1.631142554359144e-09
+        ],
+        [
+          "tk",
+          1.442707953103195e-09
+        ],
+        [
+          "uz",
+          1.4163580031034684e-10
+        ]
+      ],
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": true,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 1.66,
+        "text": " Could you clarify the deadline?",
+        "tokens": [
+          50364,
+          7497,
+          291,
+          17594,
+          264,
+          20615,
+          30,
+          50464
+        ],
+        "avg_logprob": -0.23767195807562935,
+        "compression_ratio": 0.7948717948717948,
+        "no_speech_prob": 0.08406529575586319,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 0.44,
+            "word": " Could",
+            "probability": 0.9353445768356323
+          },
+          {
+            "start": 0.44,
+            "end": 0.7,
+            "word": " you",
+            "probability": 0.9982777833938599
+          },
+          {
+            "start": 0.7,
+            "end": 1.16,
+            "word": " clarify",
+            "probability": 0.9949296712875366
+          },
+          {
+            "start": 1.16,
+            "end": 1.4,
+            "word": " the",
+            "probability": 0.9978785514831543
+          },
+          {
+            "start": 1.4,
+            "end": 1.66,
+            "word": " deadline?",
+            "probability": 0.9880565404891968
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Could you clarify the deadline?",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  },
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take2.mp3",
+    "sha256": "f7a47e714aab861952e39bfb3ccaced59adb401c98bc457850c9bbdca4485154",
+    "label": "english_question_1",
+    "source_start_seconds": 2.1,
+    "source_end_seconds": 4.1,
+    "model": "medium",
+    "parameters": {
+      "language": "en",
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": false,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "en",
+      "language_probability": 1,
+      "duration": 2.0,
+      "duration_after_vad": 2.0,
+      "all_language_probs": null,
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": false,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 1.66,
+        "text": " Could you clarify the deadline?",
+        "tokens": [
+          50364,
+          7497,
+          291,
+          17594,
+          264,
+          20615,
+          30,
+          50464
+        ],
+        "avg_logprob": -0.23767195807562935,
+        "compression_ratio": 0.7948717948717948,
+        "no_speech_prob": 0.08406529575586319,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 0.44,
+            "word": " Could",
+            "probability": 0.9353445768356323
+          },
+          {
+            "start": 0.44,
+            "end": 0.7,
+            "word": " you",
+            "probability": 0.9982777833938599
+          },
+          {
+            "start": 0.7,
+            "end": 1.16,
+            "word": " clarify",
+            "probability": 0.9949296712875366
+          },
+          {
+            "start": 1.16,
+            "end": 1.4,
+            "word": " the",
+            "probability": 0.9978785514831543
+          },
+          {
+            "start": 1.4,
+            "end": 1.66,
+            "word": " deadline?",
+            "probability": 0.9880565404891968
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Could you clarify the deadline?",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  },
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take2.mp3",
+    "sha256": "f7a47e714aab861952e39bfb3ccaced59adb401c98bc457850c9bbdca4485154",
+    "label": "english_question_2",
+    "source_start_seconds": 7.7,
+    "source_end_seconds": 9.2,
+    "model": "medium",
+    "parameters": {
+      "language": null,
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": true,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "en",
+      "language_probability": 0.9789415597915649,
+      "duration": 1.5,
+      "duration_after_vad": 1.5,
+      "all_language_probs": [
+        [
+          "en",
+          0.9789415597915649
+        ],
+        [
+          "cy",
+          0.007413316983729601
+        ],
+        [
+          "nn",
+          0.0038714061956852674
+        ],
+        [
+          "ja",
+          0.0009215130703523755
+        ],
+        [
+          "la",
+          0.0009081698954105377
+        ],
+        [
+          "ko",
+          0.0008780201897025108
+        ],
+        [
+          "fr",
+          0.0008374468307010829
+        ],
+        [
+          "zh",
+          0.0008099075057543814
+        ],
+        [
+          "es",
+          0.0006709888111799955
+        ],
+        [
+          "ru",
+          0.0004908085102215409
+        ],
+        [
+          "de",
+          0.00044431356946006417
+        ],
+        [
+          "hi",
+          0.00031229719752445817
+        ],
+        [
+          "ms",
+          0.00029128571623004973
+        ],
+        [
+          "tr",
+          0.0002900609979405999
+        ],
+        [
+          "pt",
+          0.0002831586170941591
+        ],
+        [
+          "km",
+          0.0002708961837925017
+        ],
+        [
+          "ar",
+          0.00024167740775737911
+        ],
+        [
+          "sv",
+          0.00019071673159487545
+        ],
+        [
+          "haw",
+          0.00018816110969055444
+        ],
+        [
+          "it",
+          0.00018693164747674018
+        ],
+        [
+          "nl",
+          0.0001867050159489736
+        ],
+        [
+          "mi",
+          0.0001847633539000526
+        ],
+        [
+          "th",
+          0.00017302964988630265
+        ],
+        [
+          "pl",
+          0.00010799291339935735
+        ],
+        [
+          "jw",
+          0.0001004008372547105
+        ],
+        [
+          "sn",
+          8.715674630366266e-05
+        ],
+        [
+          "vi",
+          6.689847214147449e-05
+        ],
+        [
+          "id",
+          6.070796735002659e-05
+        ],
+        [
+          "tl",
+          5.175175829208456e-05
+        ],
+        [
+          "el",
+          5.1724720833590254e-05
+        ],
+        [
+          "fi",
+          4.8553913075011224e-05
+        ],
+        [
+          "ur",
+          4.761615855386481e-05
+        ],
+        [
+          "cs",
+          4.2567236960167065e-05
+        ],
+        [
+          "bn",
+          3.957620356231928e-05
+        ],
+        [
+          "da",
+          3.830666173598729e-05
+        ],
+        [
+          "ml",
+          3.5798886528937146e-05
+        ],
+        [
+          "br",
+          2.8292792194406502e-05
+        ],
+        [
+          "si",
+          2.402456448180601e-05
+        ],
+        [
+          "no",
+          2.140843753295485e-05
+        ],
+        [
+          "sw",
+          1.7912105249706656e-05
+        ],
+        [
+          "te",
+          1.4660453416581731e-05
+        ],
+        [
+          "ro",
+          1.2848560800193809e-05
+        ],
+        [
+          "yo",
+          1.2431702998583205e-05
+        ],
+        [
+          "uk",
+          1.199565394927049e-05
+        ],
+        [
+          "ta",
+          9.644755664339755e-06
+        ],
+        [
+          "sa",
+          9.107692676479928e-06
+        ],
+        [
+          "fa",
+          7.060090410959674e-06
+        ],
+        [
+          "he",
+          6.980752914387267e-06
+        ],
+        [
+          "sl",
+          6.873903203086229e-06
+        ],
+        [
+          "hu",
+          5.370480721467175e-06
+        ],
+        [
+          "bg",
+          5.286372015689267e-06
+        ],
+        [
+          "ht",
+          4.187651029496919e-06
+        ],
+        [
+          "my",
+          3.6720718981086975e-06
+        ],
+        [
+          "is",
+          3.6584956433216576e-06
+        ],
+        [
+          "sk",
+          3.6584397093974985e-06
+        ],
+        [
+          "af",
+          2.6753059501061216e-06
+        ],
+        [
+          "mn",
+          2.631699999255943e-06
+        ],
+        [
+          "bo",
+          2.4833691441017436e-06
+        ],
+        [
+          "ca",
+          2.3049121864460176e-06
+        ],
+        [
+          "gl",
+          2.0916052108077565e-06
+        ],
+        [
+          "hr",
+          1.5910211459413404e-06
+        ],
+        [
+          "lo",
+          1.5426178379129851e-06
+        ],
+        [
+          "oc",
+          9.392496735927125e-07
+        ],
+        [
+          "eu",
+          7.953934186843981e-07
+        ],
+        [
+          "pa",
+          7.920068583189277e-07
+        ],
+        [
+          "fo",
+          7.752376518510573e-07
+        ],
+        [
+          "lv",
+          7.115269795576751e-07
+        ],
+        [
+          "bs",
+          6.863418775537866e-07
+        ],
+        [
+          "ps",
+          6.202451459103031e-07
+        ],
+        [
+          "yi",
+          5.91538423577731e-07
+        ],
+        [
+          "ne",
+          5.742953135268181e-07
+        ],
+        [
+          "hy",
+          4.3757799517152307e-07
+        ],
+        [
+          "be",
+          4.067022985054791e-07
+        ],
+        [
+          "mr",
+          2.9457385153364157e-07
+        ],
+        [
+          "sq",
+          2.80406936781219e-07
+        ],
+        [
+          "sd",
+          2.6951610720971075e-07
+        ],
+        [
+          "as",
+          2.311431046564394e-07
+        ],
+        [
+          "lt",
+          2.267437508862713e-07
+        ],
+        [
+          "et",
+          1.742986910358013e-07
+        ],
+        [
+          "mt",
+          1.5775825090713624e-07
+        ],
+        [
+          "am",
+          8.358270520147926e-08
+        ],
+        [
+          "az",
+          8.33585360737743e-08
+        ],
+        [
+          "kn",
+          6.911812278076468e-08
+        ],
+        [
+          "kk",
+          5.661554070002239e-08
+        ],
+        [
+          "gu",
+          5.534086966463292e-08
+        ],
+        [
+          "ln",
+          3.8675810998256566e-08
+        ],
+        [
+          "mk",
+          3.54966047666494e-08
+        ],
+        [
+          "ha",
+          3.52747555609767e-08
+        ],
+        [
+          "su",
+          2.8994259437808978e-08
+        ],
+        [
+          "sr",
+          2.8105898053354395e-08
+        ],
+        [
+          "ka",
+          2.6990180757024973e-08
+        ],
+        [
+          "so",
+          1.7235439742080416e-08
+        ],
+        [
+          "mg",
+          1.586652764729024e-08
+        ],
+        [
+          "tg",
+          8.77380124109095e-09
+        ],
+        [
+          "lb",
+          7.4466965926944795e-09
+        ],
+        [
+          "ba",
+          5.202659636438511e-09
+        ],
+        [
+          "tk",
+          4.767813255313058e-09
+        ],
+        [
+          "tt",
+          3.396877001904386e-09
+        ],
+        [
+          "uz",
+          5.151732929142838e-10
+        ]
+      ],
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": true,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 1.26,
+        "text": " Do you mean this Friday?",
+        "tokens": [
+          50364,
+          1144,
+          291,
+          914,
+          341,
+          6984,
+          30,
+          50436
+        ],
+        "avg_logprob": -0.3606617185804579,
+        "compression_ratio": 0.75,
+        "no_speech_prob": 0.051761262118816376,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 0.4,
+            "word": " Do",
+            "probability": 0.8105980157852173
+          },
+          {
+            "start": 0.4,
+            "end": 0.56,
+            "word": " you",
+            "probability": 0.9950661659240723
+          },
+          {
+            "start": 0.56,
+            "end": 0.72,
+            "word": " mean",
+            "probability": 0.9982041120529175
+          },
+          {
+            "start": 0.72,
+            "end": 0.98,
+            "word": " this",
+            "probability": 0.9305152297019958
+          },
+          {
+            "start": 0.98,
+            "end": 1.26,
+            "word": " Friday?",
+            "probability": 0.9159508943557739
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Do you mean this Friday?",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  },
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take2.mp3",
+    "sha256": "f7a47e714aab861952e39bfb3ccaced59adb401c98bc457850c9bbdca4485154",
+    "label": "english_question_2",
+    "source_start_seconds": 7.7,
+    "source_end_seconds": 9.2,
+    "model": "medium",
+    "parameters": {
+      "language": "en",
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": false,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "en",
+      "language_probability": 1,
+      "duration": 1.5,
+      "duration_after_vad": 1.5,
+      "all_language_probs": null,
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": false,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 1.26,
+        "text": " Do you mean this Friday?",
+        "tokens": [
+          50364,
+          1144,
+          291,
+          914,
+          341,
+          6984,
+          30,
+          50436
+        ],
+        "avg_logprob": -0.3606617185804579,
+        "compression_ratio": 0.75,
+        "no_speech_prob": 0.051761262118816376,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 0.4,
+            "word": " Do",
+            "probability": 0.8105980157852173
+          },
+          {
+            "start": 0.4,
+            "end": 0.56,
+            "word": " you",
+            "probability": 0.9950661659240723
+          },
+          {
+            "start": 0.56,
+            "end": 0.72,
+            "word": " mean",
+            "probability": 0.9982041120529175
+          },
+          {
+            "start": 0.72,
+            "end": 0.98,
+            "word": " this",
+            "probability": 0.9305152297019958
+          },
+          {
+            "start": 0.98,
+            "end": 1.26,
+            "word": " Friday?",
+            "probability": 0.9159508943557739
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Do you mean this Friday?",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  },
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take2.mp3",
+    "sha256": "f7a47e714aab861952e39bfb3ccaced59adb401c98bc457850c9bbdca4485154",
+    "label": "practice",
+    "source_start_seconds": 11.0,
+    "source_end_seconds": 14.9,
+    "model": "medium",
+    "parameters": {
+      "language": null,
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": true,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "en",
+      "language_probability": 0.741838812828064,
+      "duration": 3.9,
+      "duration_after_vad": 3.9,
+      "all_language_probs": [
+        [
+          "en",
+          0.741838812828064
+        ],
+        [
+          "es",
+          0.1491961032152176
+        ],
+        [
+          "de",
+          0.02599913999438286
+        ],
+        [
+          "it",
+          0.013772846199572086
+        ],
+        [
+          "la",
+          0.013082742691040039
+        ],
+        [
+          "nn",
+          0.010238369926810265
+        ],
+        [
+          "pt",
+          0.007896870374679565
+        ],
+        [
+          "pl",
+          0.007625363767147064
+        ],
+        [
+          "ru",
+          0.00618315115571022
+        ],
+        [
+          "cy",
+          0.0045513068325817585
+        ],
+        [
+          "fr",
+          0.002739526331424713
+        ],
+        [
+          "ja",
+          0.0022505950182676315
+        ],
+        [
+          "sv",
+          0.0020519003737717867
+        ],
+        [
+          "nl",
+          0.001550543587654829
+        ],
+        [
+          "cs",
+          0.001271854154765606
+        ],
+        [
+          "fi",
+          0.0012341231340542436
+        ],
+        [
+          "ko",
+          0.000961548590566963
+        ],
+        [
+          "km",
+          0.000711914908606559
+        ],
+        [
+          "ar",
+          0.0006373025244101882
+        ],
+        [
+          "hi",
+          0.0006050523370504379
+        ],
+        [
+          "ro",
+          0.0005194630939513445
+        ],
+        [
+          "haw",
+          0.00045185568160377443
+        ],
+        [
+          "ms",
+          0.00043043322511948645
+        ],
+        [
+          "id",
+          0.0004215230292174965
+        ],
+        [
+          "mi",
+          0.00041910912841558456
+        ],
+        [
+          "el",
+          0.000288767070742324
+        ],
+        [
+          "zh",
+          0.0002424798731226474
+        ],
+        [
+          "sn",
+          0.00023976049851626158
+        ],
+        [
+          "jw",
+          0.00023805219097994268
+        ],
+        [
+          "uk",
+          0.00022347198682837188
+        ],
+        [
+          "sw",
+          0.00020927326113451272
+        ],
+        [
+          "vi",
+          0.00017837822088040411
+        ],
+        [
+          "tr",
+          0.00015702718519605696
+        ],
+        [
+          "tl",
+          0.00015478064597118646
+        ],
+        [
+          "sl",
+          0.00013714113447349519
+        ],
+        [
+          "th",
+          0.00013611775648314506
+        ],
+        [
+          "ur",
+          0.00013385366764850914
+        ],
+        [
+          "sk",
+          0.00013046224194113165
+        ],
+        [
+          "da",
+          8.046748553169891e-05
+        ],
+        [
+          "no",
+          7.221373380161822e-05
+        ],
+        [
+          "bn",
+          7.028077379800379e-05
+        ],
+        [
+          "si",
+          6.8682711571455e-05
+        ],
+        [
+          "gl",
+          6.153402500785887e-05
+        ],
+        [
+          "he",
+          5.466919901664369e-05
+        ],
+        [
+          "ml",
+          4.461586649995297e-05
+        ],
+        [
+          "hr",
+          4.191664629615843e-05
+        ],
+        [
+          "hu",
+          4.150201493757777e-05
+        ],
+        [
+          "bg",
+          3.976271182182245e-05
+        ],
+        [
+          "te",
+          3.8149457395775244e-05
+        ],
+        [
+          "ca",
+          3.518772064126097e-05
+        ],
+        [
+          "sa",
+          3.070754974032752e-05
+        ],
+        [
+          "br",
+          2.2430716853705235e-05
+        ],
+        [
+          "af",
+          1.8482704035704955e-05
+        ],
+        [
+          "is",
+          1.8176106095779687e-05
+        ],
+        [
+          "eu",
+          1.800238896976225e-05
+        ],
+        [
+          "lv",
+          1.517211421742104e-05
+        ],
+        [
+          "mn",
+          1.3177110304241069e-05
+        ],
+        [
+          "ta",
+          1.2509362932178192e-05
+        ],
+        [
+          "yo",
+          1.2258569768164307e-05
+        ],
+        [
+          "fa",
+          1.15020084194839e-05
+        ],
+        [
+          "oc",
+          1.0859184840228409e-05
+        ],
+        [
+          "ht",
+          8.171405170287471e-06
+        ],
+        [
+          "bs",
+          5.498644895851612e-06
+        ],
+        [
+          "lt",
+          5.446673640108202e-06
+        ],
+        [
+          "bo",
+          4.753772827825742e-06
+        ],
+        [
+          "fo",
+          4.036183327116305e-06
+        ],
+        [
+          "yi",
+          4.0151371649699286e-06
+        ],
+        [
+          "my",
+          3.5527934869605815e-06
+        ],
+        [
+          "et",
+          3.54711914951622e-06
+        ],
+        [
+          "be",
+          2.333167458345997e-06
+        ],
+        [
+          "lo",
+          2.0606944417522755e-06
+        ],
+        [
+          "hy",
+          1.8479593109077541e-06
+        ],
+        [
+          "pa",
+          1.5331082749980851e-06
+        ],
+        [
+          "sq",
+          1.4322693004942266e-06
+        ],
+        [
+          "ps",
+          1.2516396736828028e-06
+        ],
+        [
+          "mr",
+          1.1412231515350868e-06
+        ],
+        [
+          "ne",
+          1.031398710438225e-06
+        ],
+        [
+          "sd",
+          7.034144573481171e-07
+        ],
+        [
+          "mt",
+          6.682698767690454e-07
+        ],
+        [
+          "as",
+          5.188602472117054e-07
+        ],
+        [
+          "sr",
+          5.090323611511849e-07
+        ],
+        [
+          "mk",
+          4.6194003289201646e-07
+        ],
+        [
+          "kn",
+          4.4506097651719756e-07
+        ],
+        [
+          "ka",
+          2.963897145491501e-07
+        ],
+        [
+          "ln",
+          2.726608272496378e-07
+        ],
+        [
+          "kk",
+          2.726161199007038e-07
+        ],
+        [
+          "am",
+          2.176687985411263e-07
+        ],
+        [
+          "az",
+          2.0166389447240363e-07
+        ],
+        [
+          "gu",
+          1.0780238568486311e-07
+        ],
+        [
+          "ha",
+          1.0366828462338162e-07
+        ],
+        [
+          "so",
+          6.814460107307241e-08
+        ],
+        [
+          "su",
+          6.76429365853437e-08
+        ],
+        [
+          "mg",
+          5.327024865664498e-08
+        ],
+        [
+          "lb",
+          3.87900982445899e-08
+        ],
+        [
+          "tg",
+          3.322116270965125e-08
+        ],
+        [
+          "ba",
+          1.6434505312190595e-08
+        ],
+        [
+          "tk",
+          1.535881288816654e-08
+        ],
+        [
+          "tt",
+          1.3320268443806071e-08
+        ],
+        [
+          "uz",
+          1.3920613550766348e-09
+        ]
+      ],
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": true,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.5,
+        "text": " Now change the deadline for the next step.",
+        "tokens": [
+          50364,
+          823,
+          1319,
+          264,
+          20615,
+          337,
+          264,
+          958,
+          1823,
+          13,
+          50564
+        ],
+        "avg_logprob": -0.38872285683949787,
+        "compression_ratio": 0.8936170212765957,
+        "no_speech_prob": 0.18847528100013733,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 0.82,
+            "word": " Now",
+            "probability": 0.582850992679596
+          },
+          {
+            "start": 0.82,
+            "end": 1.2,
+            "word": " change",
+            "probability": 0.6035130620002747
+          },
+          {
+            "start": 1.2,
+            "end": 1.58,
+            "word": " the",
+            "probability": 0.967709481716156
+          },
+          {
+            "start": 1.58,
+            "end": 2.08,
+            "word": " deadline",
+            "probability": 0.7989100813865662
+          },
+          {
+            "start": 2.08,
+            "end": 2.66,
+            "word": " for",
+            "probability": 0.934341311454773
+          },
+          {
+            "start": 2.66,
+            "end": 2.94,
+            "word": " the",
+            "probability": 0.9767957925796509
+          },
+          {
+            "start": 2.94,
+            "end": 3.2,
+            "word": " next",
+            "probability": 0.9959871172904968
+          },
+          {
+            "start": 3.2,
+            "end": 3.5,
+            "word": " step.",
+            "probability": 0.9944615960121155
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Now change the deadline for the next step.",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  },
+  {
+    "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/clarify_deadline_take2.mp3",
+    "sha256": "f7a47e714aab861952e39bfb3ccaced59adb401c98bc457850c9bbdca4485154",
+    "label": "practice",
+    "source_start_seconds": 11.0,
+    "source_end_seconds": 14.9,
+    "model": "medium",
+    "parameters": {
+      "language": "es",
+      "task": "transcribe",
+      "beam_size": 5,
+      "word_timestamps": true,
+      "multilingual": false,
+      "initial_prompt": null,
+      "prefix": null,
+      "hotwords": null,
+      "condition_on_previous_text": false,
+      "vad_filter": false
+    },
+    "info": {
+      "language": "es",
+      "language_probability": 1,
+      "duration": 3.9,
+      "duration_after_vad": 3.9,
+      "all_language_probs": null,
+      "transcription_options": {
+        "beam_size": 5,
+        "best_of": 5,
+        "patience": 1,
+        "length_penalty": 1,
+        "repetition_penalty": 1,
+        "no_repeat_ngram_size": 0,
+        "log_prob_threshold": -1.0,
+        "no_speech_threshold": 0.6,
+        "compression_ratio_threshold": 2.4,
+        "condition_on_previous_text": false,
+        "prompt_reset_on_temperature": 0.5,
+        "temperatures": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ],
+        "initial_prompt": null,
+        "prefix": null,
+        "suppress_blank": true,
+        "suppress_tokens": [
+          1,
+          2,
+          7,
+          8,
+          9,
+          10,
+          14,
+          25,
+          26,
+          27,
+          28,
+          29,
+          31,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          90,
+          91,
+          92,
+          93,
+          359,
+          503,
+          522,
+          542,
+          873,
+          893,
+          902,
+          918,
+          922,
+          931,
+          1350,
+          1853,
+          1982,
+          2460,
+          2627,
+          3246,
+          3253,
+          3268,
+          3536,
+          3846,
+          3961,
+          4183,
+          4667,
+          6585,
+          6647,
+          7273,
+          9061,
+          9383,
+          10428,
+          10929,
+          11938,
+          12033,
+          12331,
+          12562,
+          13793,
+          14157,
+          14635,
+          15265,
+          15618,
+          16553,
+          16604,
+          18362,
+          18956,
+          20075,
+          21675,
+          22520,
+          26130,
+          26161,
+          26435,
+          28279,
+          29464,
+          31650,
+          32302,
+          32470,
+          36865,
+          42863,
+          47425,
+          49870,
+          50254,
+          50258,
+          50358,
+          50359,
+          50360,
+          50361,
+          50362
+        ],
+        "without_timestamps": false,
+        "max_initial_timestamp": 1.0,
+        "word_timestamps": true,
+        "prepend_punctuations": "\"'“¿([{-",
+        "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+        "multilingual": false,
+        "max_new_tokens": null,
+        "clip_timestamps": [
+          0.0
+        ],
+        "hallucination_silence_threshold": null,
+        "hotwords": null
+      },
+      "vad_options": null
+    },
+    "segments": [
+      {
+        "id": 1,
+        "seek": 0,
+        "start": 0.0,
+        "end": 3.5,
+        "text": " Ahora cambia the deadline for the next step.",
+        "tokens": [
+          50364,
+          18840,
+          18751,
+          654,
+          264,
+          20615,
+          337,
+          264,
+          958,
+          1823,
+          13,
+          50556
+        ],
+        "avg_logprob": -0.32544562449822056,
+        "compression_ratio": 0.8979591836734694,
+        "no_speech_prob": 0.18847528100013733,
+        "words": [
+          {
+            "start": 0.0,
+            "end": 0.78,
+            "word": " Ahora",
+            "probability": 0.7829504013061523
+          },
+          {
+            "start": 0.78,
+            "end": 1.28,
+            "word": " cambia",
+            "probability": 0.9907794296741486
+          },
+          {
+            "start": 1.28,
+            "end": 1.56,
+            "word": " the",
+            "probability": 0.807043194770813
+          },
+          {
+            "start": 1.56,
+            "end": 2.1,
+            "word": " deadline",
+            "probability": 0.820893406867981
+          },
+          {
+            "start": 2.1,
+            "end": 2.68,
+            "word": " for",
+            "probability": 0.960027813911438
+          },
+          {
+            "start": 2.68,
+            "end": 2.94,
+            "word": " the",
+            "probability": 0.9697736501693726
+          },
+          {
+            "start": 2.94,
+            "end": 3.2,
+            "word": " next",
+            "probability": 0.991485059261322
+          },
+          {
+            "start": 3.2,
+            "end": 3.5,
+            "word": " step.",
+            "probability": 0.9949788451194763
+          }
+        ],
+        "temperature": 0.0
+      }
+    ],
+    "transcript": "Ahora cambia the deadline for the next step.",
+    "limitations": "Timestamps are relative to span; add source_start_seconds. Language-only constrained evidence is supplementary, not a listening test. No lexical prompt or expected script is provided."
+  }
+]

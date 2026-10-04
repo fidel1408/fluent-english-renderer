@@ -1,0 +1,125 @@
+{
+  "video": "private_company",
+  "frames": 870,
+  "minEffectivePx270x480": 13.33,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "PRIVADAS",
+      "window": [
+        4.49,
+        8.12
+      ],
+      "framesChecked": 108,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "1–3",
+      "window": [
+        4.49,
+        8.12
+      ],
+      "framesChecked": 108,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "EMPRESAS",
+      "window": [
+        11.53,
+        15.62
+      ],
+      "framesChecked": 123,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "1–10 por clase",
+      "window": [
+        11.53,
+        15.62
+      ],
+      "framesChecked": 123,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Mismo precio total",
+      "window": [
+        4.49,
+        8.12
+      ],
+      "framesChecked": 108,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Mismo precio total",
+      "window": [
+        11.53,
+        15.62
+      ],
+      "framesChecked": 123,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "PRIVADO",
+      "window": [
+        19.27,
+        28.81
+      ],
+      "framesChecked": 286,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "EMPRESA",
+      "window": [
+        19.27,
+        28.81
+      ],
+      "framesChecked": 286,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Qué necesitan practicar?",
+      "window": [
+        19.27,
+        28.81
+      ],
+      "framesChecked": 286,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/\\$|\\bpesos\\b|MXN|\\bIVA\\b|gratis|prueba|presencial|asistid|garantiz|asignad|maestro|profesor|cupo|inicio|seguir|follow|like|guarda|link|https?:|www\\.|\\.com/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "PRIVADO",
+    "enteredAt": 18.37,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 24,
+  "captionGlyphBounds": {
+    "xMin": 105,
+    "xMax": 855,
+    "yBottomMax": 1399,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1225.2,
+  "captionClearsMouth": true,
+  "pass": true
+}

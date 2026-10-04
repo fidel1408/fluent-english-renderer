@@ -1,0 +1,62 @@
+[
+  {
+    "filename": "clarify_deadline_take1.mp3",
+    "sha256": "71b48ddaf4925317155c959ddbef206e7759f493e9b3b315d121ce3c3f3dcc21",
+    "bytes": 364262,
+    "duration_s": 21.70775,
+    "sample_rate": "44100",
+    "channels": 1,
+    "codec": "mp3",
+    "decode": "PASS"
+  },
+  {
+    "filename": "clarify_deadline_take2.mp3",
+    "sha256": "f7a47e714aab861952e39bfb3ccaced59adb401c98bc457850c9bbdca4485154",
+    "bytes": 327481,
+    "duration_s": 19.408938,
+    "sample_rate": "44100",
+    "channels": 1,
+    "codec": "mp3",
+    "decode": "PASS"
+  },
+  {
+    "filename": "private_company_take1.mp3",
+    "sha256": "c71f2d26df7b889bf3dc37dc73c685423530ed98ff6bde4e30b1aa5a933bbef7",
+    "bytes": 295298,
+    "duration_s": 17.3975,
+    "sample_rate": "44100",
+    "channels": 1,
+    "codec": "mp3",
+    "decode": "PASS"
+  },
+  {
+    "filename": "private_company_take2.mp3",
+    "sha256": "c0839aed8436de97b3565945fe022203fb20854f9cb1dda63971c9b66c9a9437",
+    "bytes": 278580,
+    "duration_s": 16.352625,
+    "sample_rate": "44100",
+    "channels": 1,
+    "codec": "mp3",
+    "decode": "PASS"
+  },
+  {
+    "filename": "tell_me_more_take1.mp3",
+    "sha256": "7eec96c982d2a6a51c1f32ff803d69ed52c2ab7a5cbb3593df843391f813a4ed",
+    "bytes": 392683,
+    "duration_s": 23.484063,
+    "sample_rate": "44100",
+    "channels": 1,
+    "codec": "mp3",
+    "decode": "PASS"
+  },
+  {
+    "filename": "tell_me_more_take2.mp3",
+    "sha256": "aaece8ccc49e3e57cfd96112ca08ef854051b13a5c219b47f85386c8cf40f13a",
+    "bytes": 357992,
+    "duration_s": 21.315875,
+    "sample_rate": "44100",
+    "channels": 1,
+    "codec": "mp3",
+    "decode": "PASS"
+  }
+]

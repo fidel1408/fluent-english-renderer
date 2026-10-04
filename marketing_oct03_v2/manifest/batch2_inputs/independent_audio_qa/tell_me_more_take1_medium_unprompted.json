@@ -1,0 +1,1100 @@
+{
+  "source": "/workspace/scratch/4a8aa2237e04/outputs/fluent_october_video_prep/batch2/audio/tell_me_more_take1.mp3",
+  "sha256": "7eec96c982d2a6a51c1f32ff803d69ed52c2ab7a5cbb3593df843391f813a4ed",
+  "model": "medium",
+  "implementation": "faster-whisper 1.2.1",
+  "parameters": {
+    "language": null,
+    "task": "transcribe",
+    "beam_size": 5,
+    "word_timestamps": true,
+    "multilingual": true,
+    "initial_prompt": null,
+    "prefix": null,
+    "hotwords": null,
+    "condition_on_previous_text": false,
+    "vad_filter": false
+  },
+  "info": {
+    "language": "es",
+    "language_probability": 0.9821694493293762,
+    "duration": 23.4840625,
+    "duration_after_vad": 23.4840625,
+    "all_language_probs": [
+      [
+        "es",
+        0.9821694493293762
+      ],
+      [
+        "en",
+        0.015499820932745934
+      ],
+      [
+        "pt",
+        0.0011924399295821786
+      ],
+      [
+        "it",
+        0.0002615199482534081
+      ],
+      [
+        "de",
+        0.00022388194338418543
+      ],
+      [
+        "fr",
+        0.0001304291217820719
+      ],
+      [
+        "nn",
+        0.0001133574842242524
+      ],
+      [
+        "la",
+        6.2399405578617e-05
+      ],
+      [
+        "ja",
+        6.197123002493754e-05
+      ],
+      [
+        "ru",
+        5.292214700602926e-05
+      ],
+      [
+        "pl",
+        2.882666558434721e-05
+      ],
+      [
+        "ko",
+        2.391218913544435e-05
+      ],
+      [
+        "haw",
+        1.9419050659053028e-05
+      ],
+      [
+        "gl",
+        1.820611760194879e-05
+      ],
+      [
+        "zh",
+        1.684243579802569e-05
+      ],
+      [
+        "km",
+        1.563069235999137e-05
+      ],
+      [
+        "cy",
+        1.3199018212617375e-05
+      ],
+      [
+        "nl",
+        1.0939072126348037e-05
+      ],
+      [
+        "tr",
+        8.760401215113234e-06
+      ],
+      [
+        "jw",
+        8.551560313208029e-06
+      ],
+      [
+        "id",
+        7.882049430918414e-06
+      ],
+      [
+        "ar",
+        7.469723641406745e-06
+      ],
+      [
+        "tl",
+        5.887842235097196e-06
+      ],
+      [
+        "ms",
+        5.244931799097685e-06
+      ],
+      [
+        "el",
+        4.946234184899367e-06
+      ],
+      [
+        "ro",
+        4.819579316972522e-06
+      ],
+      [
+        "hi",
+        4.520896254689433e-06
+      ],
+      [
+        "vi",
+        4.404603259899886e-06
+      ],
+      [
+        "th",
+        3.548492259142222e-06
+      ],
+      [
+        "sv",
+        2.678052169358125e-06
+      ],
+      [
+        "sn",
+        1.7527220279589528e-06
+      ],
+      [
+        "eu",
+        1.647095359658124e-06
+      ],
+      [
+        "fi",
+        1.4815187796557439e-06
+      ],
+      [
+        "mi",
+        1.4220830735212076e-06
+      ],
+      [
+        "ca",
+        1.3990960496812477e-06
+      ],
+      [
+        "br",
+        1.03890511127247e-06
+      ],
+      [
+        "hu",
+        9.983471045416081e-07
+      ],
+      [
+        "oc",
+        8.860416755851475e-07
+      ],
+      [
+        "ur",
+        5.191433274376323e-07
+      ],
+      [
+        "sa",
+        5.123596338307834e-07
+      ],
+      [
+        "he",
+        4.32859593502144e-07
+      ],
+      [
+        "te",
+        3.887550974468468e-07
+      ],
+      [
+        "cs",
+        3.805065205142455e-07
+      ],
+      [
+        "fa",
+        3.221903455141728e-07
+      ],
+      [
+        "da",
+        2.9401303436316084e-07
+      ],
+      [
+        "si",
+        2.496855699973821e-07
+      ],
+      [
+        "yo",
+        2.401926622042083e-07
+      ],
+      [
+        "ml",
+        2.393831266545021e-07
+      ],
+      [
+        "bn",
+        1.954626753786215e-07
+      ],
+      [
+        "uk",
+        1.638687194827071e-07
+      ],
+      [
+        "no",
+        1.4998082065176277e-07
+      ],
+      [
+        "sw",
+        1.35343725560233e-07
+      ],
+      [
+        "my",
+        1.319638585073335e-07
+      ],
+      [
+        "ta",
+        1.232603068501703e-07
+      ],
+      [
+        "sk",
+        9.737367179241119e-08
+      ],
+      [
+        "hr",
+        9.713197357541503e-08
+      ],
+      [
+        "mn",
+        9.524183042231016e-08
+      ],
+      [
+        "sl",
+        8.450069799437188e-08
+      ],
+      [
+        "ht",
+        7.41785086688651e-08
+      ],
+      [
+        "bg",
+        7.163852444591612e-08
+      ],
+      [
+        "is",
+        6.07677534958384e-08
+      ],
+      [
+        "fo",
+        4.300170886040178e-08
+      ],
+      [
+        "be",
+        3.4187113584494e-08
+      ],
+      [
+        "bo",
+        3.154279681893968e-08
+      ],
+      [
+        "yi",
+        3.040287666067343e-08
+      ],
+      [
+        "ne",
+        2.6317872325876124e-08
+      ],
+      [
+        "lo",
+        1.44404088686656e-08
+      ],
+      [
+        "lt",
+        1.4084497124144946e-08
+      ],
+      [
+        "af",
+        1.3151552735735095e-08
+      ],
+      [
+        "bs",
+        1.203241151159773e-08
+      ],
+      [
+        "sd",
+        9.384803156819999e-09
+      ],
+      [
+        "ps",
+        8.210745860992574e-09
+      ],
+      [
+        "pa",
+        6.57653842495165e-09
+      ],
+      [
+        "as",
+        6.155901566273769e-09
+      ],
+      [
+        "hy",
+        5.754261511725645e-09
+      ],
+      [
+        "lv",
+        4.302514788889766e-09
+      ],
+      [
+        "mr",
+        3.9148253527798715e-09
+      ],
+      [
+        "et",
+        3.54855456130565e-09
+      ],
+      [
+        "ln",
+        2.760498274412271e-09
+      ],
+      [
+        "kn",
+        2.015775102393036e-09
+      ],
+      [
+        "sq",
+        1.6576097161546954e-09
+      ],
+      [
+        "az",
+        1.489023682132995e-09
+      ],
+      [
+        "sr",
+        1.1834387914078093e-09
+      ],
+      [
+        "kk",
+        8.898407566348965e-10
+      ],
+      [
+        "am",
+        8.733689882411966e-10
+      ],
+      [
+        "mk",
+        8.297456055572638e-10
+      ],
+      [
+        "mt",
+        6.441858713124304e-10
+      ],
+      [
+        "gu",
+        4.782793050495115e-10
+      ],
+      [
+        "mg",
+        4.546543974637274e-10
+      ],
+      [
+        "ka",
+        3.458505148934421e-10
+      ],
+      [
+        "ha",
+        2.4153976041496605e-10
+      ],
+      [
+        "tk",
+        2.2132488897153024e-10
+      ],
+      [
+        "ba",
+        2.0766581509956694e-10
+      ],
+      [
+        "so",
+        2.01981917302696e-10
+      ],
+      [
+        "su",
+        1.4978619733430065e-10
+      ],
+      [
+        "tg",
+        8.225315567544911e-11
+      ],
+      [
+        "lb",
+        7.759193981771162e-11
+      ],
+      [
+        "uz",
+        2.3626229445072866e-11
+      ],
+      [
+        "tt",
+        9.11355366173261e-12
+      ]
+    ],
+    "transcription_options": {
+      "beam_size": 5,
+      "best_of": 5,
+      "patience": 1,
+      "length_penalty": 1,
+      "repetition_penalty": 1,
+      "no_repeat_ngram_size": 0,
+      "log_prob_threshold": -1.0,
+      "no_speech_threshold": 0.6,
+      "compression_ratio_threshold": 2.4,
+      "condition_on_previous_text": false,
+      "prompt_reset_on_temperature": 0.5,
+      "temperatures": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "initial_prompt": null,
+      "prefix": null,
+      "suppress_blank": true,
+      "suppress_tokens": [
+        1,
+        2,
+        7,
+        8,
+        9,
+        10,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        90,
+        91,
+        92,
+        93,
+        359,
+        503,
+        522,
+        542,
+        873,
+        893,
+        902,
+        918,
+        922,
+        931,
+        1350,
+        1853,
+        1982,
+        2460,
+        2627,
+        3246,
+        3253,
+        3268,
+        3536,
+        3846,
+        3961,
+        4183,
+        4667,
+        6585,
+        6647,
+        7273,
+        9061,
+        9383,
+        10428,
+        10929,
+        11938,
+        12033,
+        12331,
+        12562,
+        13793,
+        14157,
+        14635,
+        15265,
+        15618,
+        16553,
+        16604,
+        18362,
+        18956,
+        20075,
+        21675,
+        22520,
+        26130,
+        26161,
+        26435,
+        28279,
+        29464,
+        31650,
+        32302,
+        32470,
+        36865,
+        42863,
+        47425,
+        49870,
+        50254,
+        50258,
+        50358,
+        50359,
+        50360,
+        50361,
+        50362
+      ],
+      "without_timestamps": false,
+      "max_initial_timestamp": 1.0,
+      "word_timestamps": true,
+      "prepend_punctuations": "\"'“¿([{-",
+      "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+      "multilingual": true,
+      "max_new_tokens": null,
+      "clip_timestamps": [
+        0.0
+      ],
+      "hallucination_silence_threshold": null,
+      "hotwords": null
+    },
+    "vad_options": null
+  },
+  "segments": [
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.28,
+      "text": " Y después de That's nice, I tried a new restaurant.",
+      "tokens": [
+        50364,
+        398,
+        15283,
+        368,
+        663,
+        311,
+        1481,
+        11,
+        286,
+        3031,
+        257,
+        777,
+        6383,
+        13,
+        50550
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.24,
+          "word": " Y",
+          "probability": 0.7639775276184082
+        },
+        {
+          "start": 0.24,
+          "end": 0.54,
+          "word": " después",
+          "probability": 0.9775329232215881
+        },
+        {
+          "start": 0.54,
+          "end": 0.88,
+          "word": " de",
+          "probability": 0.9949373006820679
+        },
+        {
+          "start": 0.88,
+          "end": 1.42,
+          "word": " That's",
+          "probability": 0.5228830501437187
+        },
+        {
+          "start": 1.42,
+          "end": 1.74,
+          "word": " nice,",
+          "probability": 0.8387835621833801
+        },
+        {
+          "start": 2.1,
+          "end": 2.26,
+          "word": " I",
+          "probability": 0.9588789939880371
+        },
+        {
+          "start": 2.26,
+          "end": 2.46,
+          "word": " tried",
+          "probability": 0.9685077667236328
+        },
+        {
+          "start": 2.46,
+          "end": 2.62,
+          "word": " a",
+          "probability": 0.9895761013031006
+        },
+        {
+          "start": 2.62,
+          "end": 2.72,
+          "word": " new",
+          "probability": 0.9904711246490479
+        },
+        {
+          "start": 2.72,
+          "end": 3.28,
+          "word": " restaurant.",
+          "probability": 0.9778707027435303
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 3.84,
+      "end": 5.88,
+      "text": " Oh nice, what was it like?",
+      "tokens": [
+        50550,
+        876,
+        1481,
+        11,
+        437,
+        390,
+        309,
+        411,
+        30,
+        50682
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 3.84,
+          "end": 4.22,
+          "word": " Oh",
+          "probability": 0.8531940579414368
+        },
+        {
+          "start": 4.22,
+          "end": 4.8,
+          "word": " nice,",
+          "probability": 0.4391650855541229
+        },
+        {
+          "start": 5.06,
+          "end": 5.2,
+          "word": " what",
+          "probability": 0.9367311000823975
+        },
+        {
+          "start": 5.2,
+          "end": 5.38,
+          "word": " was",
+          "probability": 0.9978172779083252
+        },
+        {
+          "start": 5.38,
+          "end": 5.56,
+          "word": " it",
+          "probability": 0.9923496246337891
+        },
+        {
+          "start": 5.56,
+          "end": 5.88,
+          "word": " like?",
+          "probability": 0.9971639513969421
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 6.4,
+      "end": 7.04,
+      "text": " ¿Cómo estuvo?",
+      "tokens": [
+        50682,
+        3841,
+        28342,
+        871,
+        43744,
+        30,
+        50752
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 6.4,
+          "end": 6.58,
+          "word": " ¿Cómo",
+          "probability": 0.8953613042831421
+        },
+        {
+          "start": 6.58,
+          "end": 7.04,
+          "word": " estuvo?",
+          "probability": 0.9960679411888123
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 7.76,
+      "end": 10.64,
+      "text": " También puedes decir Tell me more about it.",
+      "tokens": [
+        50752,
+        25682,
+        19010,
+        10235,
+        5115,
+        385,
+        544,
+        466,
+        309,
+        13,
+        50904
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 7.76,
+          "end": 8.12,
+          "word": " También",
+          "probability": 0.985832929611206
+        },
+        {
+          "start": 8.12,
+          "end": 8.4,
+          "word": " puedes",
+          "probability": 0.9931938052177429
+        },
+        {
+          "start": 8.4,
+          "end": 9.04,
+          "word": " decir",
+          "probability": 0.9977097511291504
+        },
+        {
+          "start": 9.04,
+          "end": 9.48,
+          "word": " Tell",
+          "probability": 0.9287819266319275
+        },
+        {
+          "start": 9.48,
+          "end": 9.66,
+          "word": " me",
+          "probability": 0.9983727931976318
+        },
+        {
+          "start": 9.66,
+          "end": 9.9,
+          "word": " more",
+          "probability": 0.996752142906189
+        },
+        {
+          "start": 9.9,
+          "end": 10.18,
+          "word": " about",
+          "probability": 0.9868133068084717
+        },
+        {
+          "start": 10.18,
+          "end": 10.64,
+          "word": " it.",
+          "probability": 0.9971422553062439
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 10.9,
+      "end": 11.74,
+      "text": " Cuéntame más.",
+      "tokens": [
+        50904,
+        13205,
+        37239,
+        529,
+        3573,
+        13,
+        50988
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 10.9,
+          "end": 11.26,
+          "word": " Cuéntame",
+          "probability": 0.945908804734548
+        },
+        {
+          "start": 11.26,
+          "end": 11.74,
+          "word": " más.",
+          "probability": 0.9719576835632324
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 12.62,
+      "end": 13.14,
+      "text": " Ahora tú.",
+      "tokens": [
+        50988,
+        18840,
+        15056,
+        13,
+        51052
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 12.62,
+          "end": 12.84,
+          "word": " Ahora",
+          "probability": 0.8988133668899536
+        },
+        {
+          "start": 12.84,
+          "end": 13.14,
+          "word": " tú.",
+          "probability": 0.9052897095680237
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 13.82,
+      "end": 15.3,
+      "text": " I watched a movie last night.",
+      "tokens": [
+        51052,
+        286,
+        6337,
+        257,
+        3169,
+        1036,
+        1818,
+        13,
+        51154
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 13.82,
+          "end": 13.98,
+          "word": " I",
+          "probability": 0.9916673302650452
+        },
+        {
+          "start": 13.98,
+          "end": 14.24,
+          "word": " watched",
+          "probability": 0.9933509230613708
+        },
+        {
+          "start": 14.24,
+          "end": 14.44,
+          "word": " a",
+          "probability": 0.9946893453598022
+        },
+        {
+          "start": 14.44,
+          "end": 14.62,
+          "word": " movie",
+          "probability": 0.9980588555335999
+        },
+        {
+          "start": 14.62,
+          "end": 14.94,
+          "word": " last",
+          "probability": 0.9966985583305359
+        },
+        {
+          "start": 14.94,
+          "end": 15.3,
+          "word": " night.",
+          "probability": 0.9994351267814636
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 15.84,
+      "end": 17.08,
+      "text": " ¿Qué preguntarías después?",
+      "tokens": [
+        51154,
+        3841,
+        15137,
+        19860,
+        289,
+        10025,
+        15283,
+        30,
+        51266
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 15.84,
+          "end": 16.04,
+          "word": " ¿Qué",
+          "probability": 0.9835492670536041
+        },
+        {
+          "start": 16.04,
+          "end": 16.6,
+          "word": " preguntarías",
+          "probability": 0.9918878277142843
+        },
+        {
+          "start": 16.6,
+          "end": 17.08,
+          "word": " después?",
+          "probability": 0.9948064684867859
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 9,
+      "seek": 0,
+      "start": 18.24,
+      "end": 20.84,
+      "text": " Speaking Club para intermedios y avanzados.",
+      "tokens": [
+        51266,
+        13069,
+        11288,
+        1690,
+        728,
+        1912,
+        2717,
+        288,
+        42444,
+        4181,
+        13,
+        51416
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 18.24,
+          "end": 18.58,
+          "word": " Speaking",
+          "probability": 0.9349738955497742
+        },
+        {
+          "start": 18.58,
+          "end": 18.9,
+          "word": " Club",
+          "probability": 0.8338152766227722
+        },
+        {
+          "start": 18.9,
+          "end": 19.24,
+          "word": " para",
+          "probability": 0.9675731062889099
+        },
+        {
+          "start": 19.24,
+          "end": 19.84,
+          "word": " intermedios",
+          "probability": 0.8786561290423075
+        },
+        {
+          "start": 19.84,
+          "end": 20.02,
+          "word": " y",
+          "probability": 0.9971338510513306
+        },
+        {
+          "start": 20.02,
+          "end": 20.84,
+          "word": " avanzados.",
+          "probability": 0.9958320260047913
+        }
+      ],
+      "temperature": 0.0
+    },
+    {
+      "id": 10,
+      "seek": 0,
+      "start": 21.2,
+      "end": 23.32,
+      "text": " Manda Club por mensaje privado.",
+      "tokens": [
+        51416,
+        376,
+        5575,
+        11288,
+        1515,
+        10923,
+        11153,
+        2915,
+        1573,
+        13,
+        51530
+      ],
+      "avg_logprob": -0.21597969900701464,
+      "compression_ratio": 1.3275109170305677,
+      "no_speech_prob": 0.010099543258547783,
+      "words": [
+        {
+          "start": 21.2,
+          "end": 21.56,
+          "word": " Manda",
+          "probability": 0.9871865808963776
+        },
+        {
+          "start": 21.56,
+          "end": 21.98,
+          "word": " Club",
+          "probability": 0.37743768095970154
+        },
+        {
+          "start": 21.98,
+          "end": 22.36,
+          "word": " por",
+          "probability": 0.964572012424469
+        },
+        {
+          "start": 22.36,
+          "end": 22.82,
+          "word": " mensaje",
+          "probability": 0.989964097738266
+        },
+        {
+          "start": 22.82,
+          "end": 23.32,
+          "word": " privado.",
+          "probability": 0.9981958866119385
+        }
+      ],
+      "temperature": 0.0
+    }
+  ],
+  "seconds_elapsed": 23.171580575999542,
+  "transcript": "Y después de That's nice, I tried a new restaurant. Oh nice, what was it like? ¿Cómo estuvo? También puedes decir Tell me more about it. Cuéntame más. Ahora tú. I watched a movie last night. ¿Qué preguntarías después? Speaking Club para intermedios y avanzados. Manda Club por mensaje privado.",
+  "limitations": "Automated recognition, not human listening. Word timestamps and probabilities are model estimates, not calibrated quality scores."
+}

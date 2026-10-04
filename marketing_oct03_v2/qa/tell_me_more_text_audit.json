@@ -1,0 +1,163 @@
+{
+  "video": "tell_me_more",
+  "frames": 1071,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "I tried a new",
+      "window": [
+        3.5,
+        4.82
+      ],
+      "framesChecked": 40,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "EJEMPLO",
+      "window": [
+        3.5,
+        4.82
+      ],
+      "framesChecked": 40,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Oh, nice!",
+      "window": [
+        7.18,
+        10.67
+      ],
+      "framesChecked": 105,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Cómo estuvo?",
+      "window": [
+        7.18,
+        10.67
+      ],
+      "framesChecked": 105,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "RESPUESTA POSIBLE",
+      "window": [
+        7.18,
+        10.67
+      ],
+      "framesChecked": 105,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "OTRA OPCIÓN",
+      "window": [
+        11.88,
+        16.08
+      ],
+      "framesChecked": 126,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Tell me more",
+      "window": [
+        13.5,
+        16.08
+      ],
+      "framesChecked": 78,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Cuéntame más.",
+      "window": [
+        13.5,
+        16.08
+      ],
+      "framesChecked": 78,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "I watched a movie",
+      "window": [
+        17.62,
+        25.3
+      ],
+      "framesChecked": 231,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Qué preguntarías después?",
+      "window": [
+        20.84,
+        25.3
+      ],
+      "framesChecked": 134,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "CLUB",
+      "window": [
+        26.55,
+        35.46
+      ],
+      "framesChecked": 267,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/wrong|incorrect|error|\\bmal\\b|✗|✕/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/What did you watch|Did you like it/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/principiante|beginner|18 niveles|nivel(es)? \\d|gratis|precio|seguir|follow|guarda|link|https?:|www\\.|\\.com/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/What was it like|Tell me more|What did you|Did you/i",
+      "fromSeconds": 16.52,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "CLUB",
+    "enteredAt": 25.65,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 37,
+  "captionGlyphBounds": {
+    "xMin": 109,
+    "xMax": 851,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
+  "captionClearsMouth": true,
+  "pass": true
+}

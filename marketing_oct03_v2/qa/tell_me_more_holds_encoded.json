@@ -1,0 +1,150 @@
+{
+  "file": "FE261021-MORE_batch2_single-host_narrated_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "setup_example",
+      "plannedWindow": [
+        3.45,
+        6.03
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 2.6,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            599,
+            680,
+            159
+          ],
+          "frames": 79,
+          "longestStationaryRunSeconds": 2.6,
+          "maxMeanAbsDiffToPrevious": 2.66,
+          "maxMeanAbsDiffToFirst": 2.69
+        }
+      ]
+    },
+    {
+      "id": "question_bilingual",
+      "plannedWindow": [
+        7.13,
+        10.73
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 3.63,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            599,
+            680,
+            318
+          ],
+          "frames": 109,
+          "longestStationaryRunSeconds": 3.63,
+          "maxMeanAbsDiffToPrevious": 0.27,
+          "maxMeanAbsDiffToFirst": 0.28
+        }
+      ]
+    },
+    {
+      "id": "alternative_bilingual",
+      "plannedWindow": [
+        11.83,
+        16.17
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 4.37,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            599,
+            680,
+            318
+          ],
+          "frames": 131,
+          "longestStationaryRunSeconds": 4.37,
+          "maxMeanAbsDiffToPrevious": 0.6,
+          "maxMeanAbsDiffToFirst": 0.63
+        }
+      ]
+    },
+    {
+      "id": "practice_unanswered",
+      "plannedWindow": [
+        20.99,
+        25.3
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 4.33,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            418,
+            680,
+            340
+          ],
+          "frames": 130,
+          "longestStationaryRunSeconds": 4.33,
+          "maxMeanAbsDiffToPrevious": 0.28,
+          "maxMeanAbsDiffToFirst": 0.45
+        }
+      ]
+    },
+    {
+      "id": "practice_after_question",
+      "plannedWindow": [
+        22.21,
+        25.3
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 3.13,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            418,
+            680,
+            340
+          ],
+          "frames": 94,
+          "longestStationaryRunSeconds": 3.13,
+          "maxMeanAbsDiffToPrevious": 0.28,
+          "maxMeanAbsDiffToFirst": 0.43
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "plannedWindow": [
+        26.6,
+        35.7
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 9.1,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            405,
+            680,
+            335
+          ],
+          "frames": 273,
+          "longestStationaryRunSeconds": 9.1,
+          "maxMeanAbsDiffToPrevious": 0.3,
+          "maxMeanAbsDiffToFirst": 0.43
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,3 @@
+FE261019-CLARIFY caption status: PROVISIONAL (subtitle exactness NOT cleared)
+Cue c07 caption/on-screen copy keeps the intended Spanish script word: "Ahora cambia the deadline por the next step."
+Independent faster-whisper runs (small + medium full-file take1, medium es-constrained spans for both takes) transcribe "for" where the script says "por" around source 14.2-15.2 s (final video about 17 s). This may be code-switch recognition bias, not an established spoken defect; only a human listening pass can decide. The original audio was not replaced or regenerated. Actual speech/caption agreement for this phrase is UNCONFIRMED.

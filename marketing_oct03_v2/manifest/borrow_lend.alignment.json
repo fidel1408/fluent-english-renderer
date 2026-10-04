@@ -1,0 +1,337 @@
+{
+  "video": "borrow_lend",
+  "master": "audio/originals/borrow_lend_take2.mp3",
+  "masterSha256": "6ec2a46e11a2472fadc0b77ae16a9f26f8c6ce197d595727cb31fb6a7bf4e24d",
+  "totalSamples": 1059840,
+  "sampleRate": 44100,
+  "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Te presto o me prestas?",
+      "file": "audio/cues/borrow_lend_c01.wav",
+      "sourceSampleRange": [
+        0,
+        91035
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.064286,
+      "seconds": 2.064286,
+      "padHead": 0.18,
+      "padTail": 0.271,
+      "islandsInCue": [
+        {
+          "s": 0.18,
+          "e": 0.77
+        },
+        {
+          "s": 0.956,
+          "e": 1.793
+        }
+      ],
+      "activityInCue": [
+        0.18,
+        1.793
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Can I borrow your pen?",
+      "file": "audio/cues/borrow_lend_c02.wav",
+      "sourceSampleRange": [
+        91035,
+        165361
+      ],
+      "sourceStart": 2.064286,
+      "sourceEnd": 3.749683,
+      "seconds": 1.685397,
+      "padHead": 0.271,
+      "padTail": 0.242,
+      "islandsInCue": [
+        {
+          "s": 0.271,
+          "e": 1.443
+        }
+      ],
+      "activityInCue": [
+        0.271,
+        1.443
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        2,
+        13
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "¿Me prestas tu pluma?",
+      "file": "audio/cues/borrow_lend_c03.wav",
+      "sourceSampleRange": [
+        165361,
+        233743
+      ],
+      "sourceStart": 3.749683,
+      "sourceEnd": 5.300295,
+      "seconds": 1.550612,
+      "padHead": 0.243,
+      "padTail": 0.341,
+      "islandsInCue": [
+        {
+          "s": 0.243,
+          "e": 1.21
+        }
+      ],
+      "activityInCue": [
+        0.243,
+        1.21
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        13,
+        36
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Borrow: recibir algo prestado.",
+      "file": "audio/cues/borrow_lend_c04.wav",
+      "sourceSampleRange": [
+        233743,
+        365451
+      ],
+      "sourceStart": 5.300295,
+      "sourceEnd": 8.286871,
+      "seconds": 2.986576,
+      "padHead": 0.341,
+      "padTail": 0.39,
+      "islandsInCue": [
+        {
+          "s": 0.341,
+          "e": 0.909
+        },
+        {
+          "s": 1.313,
+          "e": 2.597
+        }
+      ],
+      "activityInCue": [
+        0.341,
+        2.597
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        35,
+        0
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "I can lend you my pen.",
+      "file": "audio/cues/borrow_lend_c05.wav",
+      "sourceSampleRange": [
+        365451,
+        448319
+      ],
+      "sourceStart": 8.286871,
+      "sourceEnd": 10.165964,
+      "seconds": 1.879093,
+      "padHead": 0.39,
+      "padTail": 0.207,
+      "islandsInCue": [
+        {
+          "s": 0.39,
+          "e": 1.672
+        }
+      ],
+      "activityInCue": [
+        0.39,
+        1.672
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        2,
+        25
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Te puedo prestar mi pluma.",
+      "file": "audio/cues/borrow_lend_c06.wav",
+      "sourceSampleRange": [
+        448319,
+        527354
+      ],
+      "sourceStart": 10.165964,
+      "sourceEnd": 11.958141,
+      "seconds": 1.792177,
+      "padHead": 0.207,
+      "padTail": 0.375,
+      "islandsInCue": [
+        {
+          "s": 0.207,
+          "e": 1.417
+        }
+      ],
+      "activityInCue": [
+        0.207,
+        1.417
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        22,
+        3
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Lend: prestar a otra persona.",
+      "file": "audio/cues/borrow_lend_c07.wav",
+      "sourceSampleRange": [
+        527354,
+        665888
+      ],
+      "sourceStart": 11.958141,
+      "sourceEnd": 15.099501,
+      "seconds": 3.141361,
+      "padHead": 0.375,
+      "padTail": 0.355,
+      "islandsInCue": [
+        {
+          "s": 0.375,
+          "e": 0.916
+        },
+        {
+          "s": 1.369,
+          "e": 2.786
+        }
+      ],
+      "activityInCue": [
+        0.375,
+        2.786
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        6,
+        10
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú: Can I... your charger? ¿Qué palabra falta?",
+      "file": "audio/cues/borrow_lend_c08.wav",
+      "sourceSampleRange": [
+        665888,
+        902407
+      ],
+      "sourceStart": 15.099501,
+      "sourceEnd": 20.462744,
+      "seconds": 5.363243,
+      "padHead": 0.355,
+      "padTail": 0.45,
+      "islandsInCue": [
+        {
+          "s": 0.355,
+          "e": 0.841
+        },
+        {
+          "s": 1.467,
+          "e": 2.231
+        },
+        {
+          "s": 2.646,
+          "e": 3.402
+        },
+        {
+          "s": 4.052,
+          "e": 4.913
+        }
+      ],
+      "activityInCue": [
+        0.355,
+        4.913
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        11,
+        3
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea: manda GRUPO por mensaje privado.",
+      "file": "audio/cues/borrow_lend_c09.wav",
+      "sourceSampleRange": [
+        902407,
+        1059840
+      ],
+      "sourceStart": 20.462744,
+      "sourceEnd": 24.032653,
+      "seconds": 3.569909,
+      "padHead": 0.451,
+      "padTail": 0.237,
+      "islandsInCue": [
+        {
+          "s": 0.451,
+          "e": 1.279
+        },
+        {
+          "s": 1.666,
+          "e": 3.333
+        }
+      ],
+      "activityInCue": [
+        0.451,
+        3.333
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        2,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c04": {
+      "recibirStart": 1.313
+    },
+    "c07": {
+      "prestarStart": 1.369
+    },
+    "c08": {
+      "canIStart": 1.467,
+      "yourChargerStart": 2.646,
+      "queStart": 4.052
+    },
+    "c09": {
+      "mandaStart": 1.666
+    }
+  },
+  "coverage": {
+    "partitionSamples": 1059840,
+    "totalSamples": 1059840,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 36
+  },
+  "confidence": {
+    "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured",
+    "content": "pronunciation/content NOT verified (no listening)"
+  }
+}

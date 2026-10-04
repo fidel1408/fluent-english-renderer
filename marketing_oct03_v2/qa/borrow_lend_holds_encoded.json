@@ -1,0 +1,174 @@
+{
+  "file": "FE261014-BORROW_batch1_single-host_narrated_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "borrow_complete_state",
+      "plannedWindow": [
+        7.64,
+        10.38
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 2.77,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            148,
+            384,
+            353,
+            98
+          ],
+          "frames": 84,
+          "longestStationaryRunSeconds": 2.77,
+          "maxMeanAbsDiffToPrevious": 6.37,
+          "maxMeanAbsDiffToFirst": 6.37
+        },
+        {
+          "rect": [
+            522,
+            384,
+            344,
+            98
+          ],
+          "frames": 84,
+          "longestStationaryRunSeconds": 2.77,
+          "maxMeanAbsDiffToPrevious": 5.2,
+          "maxMeanAbsDiffToFirst": 5.19
+        },
+        {
+          "rect": [
+            148,
+            502,
+            718,
+            144
+          ],
+          "frames": 84,
+          "longestStationaryRunSeconds": 2.77,
+          "maxMeanAbsDiffToPrevious": 4.1,
+          "maxMeanAbsDiffToFirst": 4.12
+        },
+        {
+          "rect": [
+            165,
+            715,
+            680,
+            197
+          ],
+          "frames": 84,
+          "longestStationaryRunSeconds": 2.77,
+          "maxMeanAbsDiffToPrevious": 12,
+          "maxMeanAbsDiffToFirst": 11.92
+        }
+      ]
+    },
+    {
+      "id": "lend_complete_state",
+      "plannedWindow": [
+        16.23,
+        18.9
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 2.7,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            148,
+            384,
+            353,
+            98
+          ],
+          "frames": 81,
+          "longestStationaryRunSeconds": 2.7,
+          "maxMeanAbsDiffToPrevious": 0.29,
+          "maxMeanAbsDiffToFirst": 0.59
+        },
+        {
+          "rect": [
+            522,
+            384,
+            344,
+            98
+          ],
+          "frames": 81,
+          "longestStationaryRunSeconds": 2.7,
+          "maxMeanAbsDiffToPrevious": 0.29,
+          "maxMeanAbsDiffToFirst": 0.32
+        },
+        {
+          "rect": [
+            148,
+            502,
+            718,
+            144
+          ],
+          "frames": 81,
+          "longestStationaryRunSeconds": 2.7,
+          "maxMeanAbsDiffToPrevious": 0.15,
+          "maxMeanAbsDiffToFirst": 0.15
+        },
+        {
+          "rect": [
+            165,
+            715,
+            680,
+            197
+          ],
+          "frames": 81,
+          "longestStationaryRunSeconds": 2.7,
+          "maxMeanAbsDiffToPrevious": 0.35,
+          "maxMeanAbsDiffToFirst": 0.35
+        }
+      ]
+    },
+    {
+      "id": "practice_unanswered_after_question",
+      "plannedWindow": [
+        24.31,
+        27.36
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 3.07,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            422,
+            680,
+            327
+          ],
+          "frames": 93,
+          "longestStationaryRunSeconds": 3.07,
+          "maxMeanAbsDiffToPrevious": 2.58,
+          "maxMeanAbsDiffToFirst": 2.64
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "plannedWindow": [
+        28.71,
+        34.9
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 6.2,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            405,
+            680,
+            284
+          ],
+          "frames": 186,
+          "longestStationaryRunSeconds": 6.2,
+          "maxMeanAbsDiffToPrevious": 0.28,
+          "maxMeanAbsDiffToFirst": 0.38
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

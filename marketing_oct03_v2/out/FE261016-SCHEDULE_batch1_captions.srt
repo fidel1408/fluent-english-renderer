@@ -1,0 +1,19 @@
+1
+00:00:00,400 --> 00:00:03,086
+¿Una hora entre semana o un bloque de fin de semana?
+
+2
+00:00:04,054 --> 00:00:08,964
+Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.
+
+3
+00:00:12,751 --> 00:00:14,343
+Todos los horarios son de Monterrey.
+
+4
+00:00:15,271 --> 00:00:17,908
+Speaking Club es para intermedios y avanzados.
+
+5
+00:00:19,202 --> 00:00:22,466
+Manda HORARIO por privado y cuéntanos qué opción prefieres.

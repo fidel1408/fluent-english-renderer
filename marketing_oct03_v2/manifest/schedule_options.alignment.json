@@ -1,0 +1,182 @@
+{
+  "video": "schedule_options",
+  "master": "audio/originals/schedule_options_take2.mp3",
+  "masterSha256": "d3fe80fb45faea05e6db191619fce56c2003bec892d2362b435e09950b405565",
+  "totalSamples": 774144,
+  "sampleRate": 44100,
+  "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Una hora entre semana o un bloque de fin de semana?",
+      "file": "audio/cues/schedule_options_c01.wav",
+      "sourceSampleRange": [
+        0,
+        130988
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.970249,
+      "seconds": 2.970249,
+      "padHead": 0,
+      "padTail": 0.284,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 2.686
+        }
+      ],
+      "activityInCue": [
+        0,
+        2.686
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        3
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.",
+      "file": "audio/cues/schedule_options_c02.wav",
+      "sourceSampleRange": [
+        130988,
+        372993
+      ],
+      "sourceStart": 2.970249,
+      "sourceEnd": 8.457891,
+      "seconds": 5.487642,
+      "padHead": 0.284,
+      "padTail": 0.294,
+      "islandsInCue": [
+        {
+          "s": 0.284,
+          "e": 4.472
+        },
+        {
+          "s": 4.593,
+          "e": 5.194
+        }
+      ],
+      "activityInCue": [
+        0.284,
+        5.194
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        2,
+        6
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Todos los horarios son de Monterrey.",
+      "file": "audio/cues/schedule_options_c03.wav",
+      "sourceSampleRange": [
+        372993,
+        469967
+      ],
+      "sourceStart": 8.457891,
+      "sourceEnd": 10.656848,
+      "seconds": 2.198957,
+      "padHead": 0.293,
+      "padTail": 0.314,
+      "islandsInCue": [
+        {
+          "s": 0.293,
+          "e": 1.885
+        }
+      ],
+      "activityInCue": [
+        0.293,
+        1.885
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Speaking Club es para intermedios y avanzados.",
+      "file": "audio/cues/schedule_options_c04.wav",
+      "sourceSampleRange": [
+        469967,
+        611003
+      ],
+      "sourceStart": 10.656848,
+      "sourceEnd": 13.854943,
+      "seconds": 3.198095,
+      "padHead": 0.314,
+      "padTail": 0.247,
+      "islandsInCue": [
+        {
+          "s": 0.314,
+          "e": 2.951
+        }
+      ],
+      "activityInCue": [
+        0.314,
+        2.951
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        5,
+        4
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "file": "audio/cues/schedule_options_c05.wav",
+      "sourceSampleRange": [
+        611003,
+        774144
+      ],
+      "sourceStart": 13.854943,
+      "sourceEnd": 17.554286,
+      "seconds": 3.699342,
+      "padHead": 0.247,
+      "padTail": 0.188,
+      "islandsInCue": [
+        {
+          "s": 0.247,
+          "e": 3.511
+        }
+      ],
+      "activityInCue": [
+        0.247,
+        3.511
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        6,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c02": {
+      "afterPause": 4.593
+    }
+  },
+  "coverage": {
+    "partitionSamples": 774144,
+    "totalSamples": 774144,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 6
+  },
+  "confidence": {
+    "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured",
+    "content": "pronunciation/content NOT verified (no listening)"
+  }
+}

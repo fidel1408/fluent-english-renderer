@@ -1,0 +1,137 @@
+{
+  "video": "schedule_options",
+  "frames": 783,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "LUNES A VIERNES",
+      "window": [
+        5.05,
+        8.01
+      ],
+      "framesChecked": 88,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Una hora al día",
+      "window": [
+        5.05,
+        8.01
+      ],
+      "framesChecked": 88,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "7 a. m. a 9 p. m.",
+      "window": [
+        5.05,
+        8.01
+      ],
+      "framesChecked": 88,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Hora de Monterrey",
+      "window": [
+        5.05,
+        8.01
+      ],
+      "framesChecked": 88,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "SÁBADO O DOMINGO",
+      "window": [
+        9.31,
+        11.9
+      ],
+      "framesChecked": 78,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "7 a. m.–12 p. m.",
+      "window": [
+        9.31,
+        11.9
+      ],
+      "framesChecked": 78,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "1–6 p. m.",
+      "window": [
+        9.31,
+        11.9
+      ],
+      "framesChecked": 78,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Hora de Monterrey",
+      "window": [
+        9.31,
+        11.9
+      ],
+      "framesChecked": 78,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Monterrey",
+      "window": [
+        15.57,
+        18.35
+      ],
+      "framesChecked": 84,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "intermedios",
+      "window": [
+        15.57,
+        18.35
+      ],
+      "framesChecked": 84,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "HORARIO",
+      "window": [
+        19.7,
+        26.1
+      ],
+      "framesChecked": 192,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/seguir|follow|like|guarda|link|https?:|www\\.|\\.com|precio|gratis|cupo|garant|asignad|maestro|profesor|inscrip|empieza|comienza|iniciamos el/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "HORARIO",
+    "enteredAt": 18.7,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 42,
+  "captionTextTopMinY": 1211.8,
+  "captionClearsMouth": true,
+  "pass": true
+}

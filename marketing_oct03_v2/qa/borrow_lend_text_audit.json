@@ -1,0 +1,99 @@
+{
+  "video": "borrow_lend",
+  "frames": 1047,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "BORROW = recibir prestado",
+      "window": [
+        7.74,
+        10.38
+      ],
+      "framesChecked": 79,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "LEND = prestar",
+      "window": [
+        16.33,
+        18.9
+      ],
+      "framesChecked": 77,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "tu pluma",
+      "window": [
+        7.74,
+        10.38
+      ],
+      "framesChecked": 79,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "mi pluma",
+      "window": [
+        16.33,
+        18.9
+      ],
+      "framesChecked": 77,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "your charger?",
+      "window": [
+        22.35,
+        27.36
+      ],
+      "framesChecked": 151,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "GRUPO",
+      "window": [
+        28.76,
+        34.9
+      ],
+      "framesChecked": 184,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/seguir|follow|like|guarda|link|https?:|www\\.|\\.com|precio|gratis/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/Can I borrow your charger/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/borrow|lend|recibir|prestar|prestado/i",
+      "fromSeconds": 19.25,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "GRUPO",
+    "enteredAt": 27.76,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 35,
+  "captionTextTopMinY": 1211.8,
+  "captionClearsMouth": true,
+  "pass": true
+}

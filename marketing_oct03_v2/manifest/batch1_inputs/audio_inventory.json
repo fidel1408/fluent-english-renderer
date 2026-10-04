@@ -1,0 +1,56 @@
+[
+  {
+    "file": "borrow_lend_take1.mp3",
+    "sha256": "67bd6288da7c240d74e2efd5f6f5bcf0fade5ead37ce434a418d7906bca13cee",
+    "bytes": 374711,
+    "duration": 22.360813,
+    "sample_rate": "44100",
+    "full_decode_exit": 0,
+    "decode_errors": ""
+  },
+  {
+    "file": "borrow_lend_take2.mp3",
+    "sha256": "6ec2a46e11a2472fadc0b77ae16a9f26f8c6ce197d595727cb31fb6a7bf4e24d",
+    "bytes": 401460,
+    "duration": 24.032625,
+    "sample_rate": "44100",
+    "full_decode_exit": 0,
+    "decode_errors": ""
+  },
+  {
+    "file": "can_have_take2.mp3",
+    "sha256": "894d781de770c73a4b10ff0b8cf2997af69fff777dfd7af944c8599540a51421",
+    "bytes": 282342,
+    "duration": 16.58775,
+    "sample_rate": "44100",
+    "full_decode_exit": 0,
+    "decode_errors": ""
+  },
+  {
+    "file": "can_have_take1.mp3",
+    "sha256": "3ea7c4ab7190385de059747e125364b9c5f7281b3f69740d6bbca30bf5d6f072",
+    "bytes": 250577,
+    "duration": 14.602438,
+    "sample_rate": "44100",
+    "full_decode_exit": 0,
+    "decode_errors": ""
+  },
+  {
+    "file": "schedule_options_take1.mp3",
+    "sha256": "de827547c22a67f69f878bae15bd2f206527392a3a3617c22d15f967faca0558",
+    "bytes": 271057,
+    "duration": 15.882438,
+    "sample_rate": "44100",
+    "full_decode_exit": 0,
+    "decode_errors": ""
+  },
+  {
+    "file": "schedule_options_take2.mp3",
+    "sha256": "d3fe80fb45faea05e6db191619fce56c2003bec892d2362b435e09950b405565",
+    "bytes": 297806,
+    "duration": 17.55425,
+    "sample_rate": "44100",
+    "full_decode_exit": 0,
+    "decode_errors": ""
+  }
+]

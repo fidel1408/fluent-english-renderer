@@ -1,0 +1,237 @@
+{
+  "video": "schedule_options",
+  "contentId": "FE261016-SCHEDULE",
+  "title": "SCHEDULE OPTIONS",
+  "fps": 30,
+  "lead": 0.4,
+  "endHold": 3.4,
+  "targetSeconds": [
+    25,
+    35
+  ],
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences; semantic mapping to script phrases is structural (no ASR offline) and unverified by ear.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Una hora entre semana o un bloque de fin de semana?",
+      "est": 2.97,
+      "gap": 0,
+      "file": "audio/cues/schedule_options_c01.wav",
+      "start": 0.4,
+      "end": 3.37,
+      "audio": "audio/cues/schedule_options_c01.wav",
+      "audioSeconds": 2.97,
+      "padHead": 0,
+      "padTail": 0.284,
+      "cs": 0.4,
+      "ce": 3.086,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0,
+          "e": 2.686
+        }
+      ]
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.",
+      "est": 5.488,
+      "gap": 0.4,
+      "file": "audio/cues/schedule_options_c02.wav",
+      "start": 3.77,
+      "end": 9.258,
+      "audio": "audio/cues/schedule_options_c02.wav",
+      "audioSeconds": 5.488,
+      "padHead": 0.284,
+      "padTail": 0.294,
+      "cs": 4.054,
+      "ce": 8.964,
+      "marks": {
+        "afterPause": 4.593
+      },
+      "islands": [
+        {
+          "s": 0.284,
+          "e": 4.472
+        },
+        {
+          "s": 4.593,
+          "e": 5.194
+        }
+      ]
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Todos los horarios son de Monterrey.",
+      "est": 2.199,
+      "gap": 3.2,
+      "file": "audio/cues/schedule_options_c03.wav",
+      "start": 12.458,
+      "end": 14.657,
+      "audio": "audio/cues/schedule_options_c03.wav",
+      "audioSeconds": 2.199,
+      "padHead": 0.293,
+      "padTail": 0.314,
+      "cs": 12.751,
+      "ce": 14.343,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.293,
+          "e": 1.885
+        }
+      ]
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Speaking Club es para intermedios y avanzados.",
+      "est": 3.198,
+      "gap": 0.3,
+      "file": "audio/cues/schedule_options_c04.wav",
+      "start": 14.957,
+      "end": 18.155,
+      "audio": "audio/cues/schedule_options_c04.wav",
+      "audioSeconds": 3.198,
+      "padHead": 0.314,
+      "padTail": 0.247,
+      "cs": 15.271,
+      "ce": 17.908,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.314,
+          "e": 2.951
+        }
+      ]
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "est": 3.699,
+      "gap": 0.8,
+      "file": "audio/cues/schedule_options_c05.wav",
+      "start": 18.955,
+      "end": 22.654,
+      "audio": "audio/cues/schedule_options_c05.wav",
+      "audioSeconds": 3.699,
+      "padHead": 0.247,
+      "padTail": 0.188,
+      "cs": 19.202,
+      "ce": 22.466,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.247,
+          "e": 3.511
+        }
+      ]
+    }
+  ],
+  "alignment": {
+    "totalSamples": 774144,
+    "partitions": [
+      [
+        0,
+        130988
+      ],
+      [
+        130988,
+        372993
+      ],
+      [
+        372993,
+        469967
+      ],
+      [
+        469967,
+        611003
+      ],
+      [
+        611003,
+        774144
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        2.686
+      ],
+      [
+        3.254,
+        7.442
+      ],
+      [
+        7.563,
+        8.165
+      ],
+      [
+        8.751,
+        10.343
+      ],
+      [
+        10.971,
+        13.607
+      ],
+      [
+        14.102,
+        17.366
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "marks": {
+      "afterPause": [
+        "c02",
+        1
+      ]
+    }
+  },
+  "duration": 26.1,
+  "_file": "/home/user/fluent-english-renderer/marketing_oct03_v2/manifest/schedule_options.cues.json",
+  "alignmentSource": {
+    "file": "manifest/schedule_options.alignment.json",
+    "master": "audio/originals/schedule_options_take2.mp3",
+    "masterSha256": "d3fe80fb45faea05e6db191619fce56c2003bec892d2362b435e09950b405565",
+    "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+    "confidence": {
+      "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+      "islands": "measured from waveform (-38 dB); not a linguistic detector",
+      "wordLevel": "not measured",
+      "content": "pronunciation/content NOT verified (no listening)"
+    }
+  },
+  "warnings": []
+}

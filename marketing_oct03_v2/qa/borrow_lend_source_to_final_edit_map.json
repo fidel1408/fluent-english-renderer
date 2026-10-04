@@ -1,0 +1,218 @@
+{
+  "video": "borrow_lend",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/borrow_lend_take2.mp3",
+  "masterSha256": "6ec2a46e11a2472fadc0b77ae16a9f26f8c6ce197d595727cb31fb6a7bf4e24d",
+  "sampleRate": 44100,
+  "fullMasterSamples": 1059840,
+  "fullMasterSeconds": 24.032653061,
+  "retainedCueSamples": 1059840,
+  "retainedCueSeconds": 24.032653061,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 34.9,
+  "addedSilenceSeconds": 10.867347,
+  "lead": 0.4,
+  "endHold": 3.6,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Te presto o me prestas?",
+      "caption": "¿Te presto o me prestas?",
+      "cueFile": "audio/cues/borrow_lend_c01.wav",
+      "cueWavSamples": 91035,
+      "sourceSampleRange": [
+        0,
+        91035
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.064286,
+      "finalStart": 0.4,
+      "finalEnd": 2.464,
+      "offsetSeconds": 0.4,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.58,
+        2.193
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Can I borrow your pen?",
+      "caption": "Can I borrow your pen?",
+      "cueFile": "audio/cues/borrow_lend_c02.wav",
+      "cueWavSamples": 74326,
+      "sourceSampleRange": [
+        91035,
+        165361
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.064286,
+      "sourceEndSeconds": 3.749683,
+      "finalStart": 2.664,
+      "finalEnd": 4.349,
+      "offsetSeconds": 0.599714,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        2.935,
+        4.107
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "¿Me prestas tu pluma?",
+      "caption": "¿Me prestas tu pluma?",
+      "cueFile": "audio/cues/borrow_lend_c03.wav",
+      "cueWavSamples": 68382,
+      "sourceSampleRange": [
+        165361,
+        233743
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 3.749683,
+      "sourceEndSeconds": 5.300295,
+      "finalStart": 4.549,
+      "finalEnd": 6.1,
+      "offsetSeconds": 0.799317,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        4.792,
+        5.759
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Borrow: recibir algo prestado.",
+      "caption": "Borrow: recibir algo prestado.",
+      "cueFile": "audio/cues/borrow_lend_c04.wav",
+      "cueWavSamples": 131708,
+      "sourceSampleRange": [
+        233743,
+        365451
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 5.300295,
+      "sourceEndSeconds": 8.286871,
+      "finalStart": 6.3,
+      "finalEnd": 9.287,
+      "offsetSeconds": 0.999705,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        6.641,
+        8.897
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "I can lend you my pen.",
+      "caption": "I can lend you my pen.",
+      "cueFile": "audio/cues/borrow_lend_c05.wav",
+      "cueWavSamples": 82868,
+      "sourceSampleRange": [
+        365451,
+        448319
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 8.286871,
+      "sourceEndSeconds": 10.165964,
+      "finalStart": 10.787,
+      "finalEnd": 12.666,
+      "offsetSeconds": 2.500129,
+      "gapBeforeAdded": 1.5,
+      "speechActivityFinal": [
+        11.177,
+        12.459
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Te puedo prestar mi pluma.",
+      "caption": "Te puedo prestar mi pluma.",
+      "cueFile": "audio/cues/borrow_lend_c06.wav",
+      "cueWavSamples": 79035,
+      "sourceSampleRange": [
+        448319,
+        527354
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 10.165964,
+      "sourceEndSeconds": 11.958141,
+      "finalStart": 12.866,
+      "finalEnd": 14.658,
+      "offsetSeconds": 2.700036,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        13.073,
+        14.283
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Lend: prestar a otra persona.",
+      "caption": "Lend: prestar a otra persona.",
+      "cueFile": "audio/cues/borrow_lend_c07.wav",
+      "cueWavSamples": 138534,
+      "sourceSampleRange": [
+        527354,
+        665888
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 11.958141,
+      "sourceEndSeconds": 15.099501,
+      "finalStart": 14.858,
+      "finalEnd": 17.999,
+      "offsetSeconds": 2.899859,
+      "gapBeforeAdded": 0.2,
+      "speechActivityFinal": [
+        15.233,
+        17.644
+      ]
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú: Can I... your charger? ¿Qué palabra falta?",
+      "caption": "Ahora tú: Can I… your charger? ¿Qué palabra falta?",
+      "cueFile": "audio/cues/borrow_lend_c08.wav",
+      "cueWavSamples": 236519,
+      "sourceSampleRange": [
+        665888,
+        902407
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 15.099501,
+      "sourceEndSeconds": 20.462744,
+      "finalStart": 19.399,
+      "finalEnd": 24.762,
+      "offsetSeconds": 4.299499,
+      "gapBeforeAdded": 1.4,
+      "speechActivityFinal": [
+        19.754,
+        24.312
+      ]
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea: manda GRUPO por mensaje privado.",
+      "caption": "Clases en línea: manda GRUPO por mensaje privado.",
+      "cueFile": "audio/cues/borrow_lend_c09.wav",
+      "cueWavSamples": 157433,
+      "sourceSampleRange": [
+        902407,
+        1059840
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 20.462744,
+      "sourceEndSeconds": 24.032653,
+      "finalStart": 27.662,
+      "finalEnd": 31.232,
+      "offsetSeconds": 7.199256,
+      "gapBeforeAdded": 2.9,
+      "speechActivityFinal": [
+        28.113,
+        30.995
+      ]
+    }
+  ]
+}

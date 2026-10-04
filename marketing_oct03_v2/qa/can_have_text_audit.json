@@ -1,0 +1,111 @@
+{
+  "video": "can_have",
+  "frames": 765,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "Can I have some",
+      "window": [
+        3.74,
+        7.59
+      ],
+      "framesChecked": 116,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Aquí tienes.",
+      "window": [
+        8.94,
+        11.32
+      ],
+      "framesChecked": 72,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "RESPUESTA DE EJEMPLO",
+      "window": [
+        8.94,
+        11.32
+      ],
+      "framesChecked": 72,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "EJEMPLO: PEDIR",
+      "window": [
+        3.74,
+        7.59
+      ],
+      "framesChecked": 116,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "juice",
+      "window": [
+        14.94,
+        17.88
+      ],
+      "framesChecked": 88,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "NIÑOS",
+      "window": [
+        19.23,
+        25.5
+      ],
+      "framesChecked": 188,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/some juice/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/juice, please/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/edad|nombre|foto|tel[eé]fono|whatsapp|correo|direcci[oó]n/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/seguir|follow|like|guarda|link|https?:|www\\.|\\.com|precio|gratis/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/Can I have some juice/i",
+      "fromSeconds": 11.67,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "NIÑOS",
+    "enteredAt": 18.23,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 29,
+  "captionTextTopMinY": 1291.8,
+  "captionClearsMouth": true,
+  "pass": true
+}

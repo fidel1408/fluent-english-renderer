@@ -1,0 +1,114 @@
+{
+  "file": "FE261012-CANHAVE_batch1_single-host_narrated_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "request_bilingual",
+      "plannedWindow": [
+        3.49,
+        7.59
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 4.1,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            624,
+            680,
+            284
+          ],
+          "frames": 123,
+          "longestStationaryRunSeconds": 4.1,
+          "maxMeanAbsDiffToPrevious": 0.02,
+          "maxMeanAbsDiffToFirst": 0.05
+        }
+      ]
+    },
+    {
+      "id": "response_bilingual",
+      "plannedWindow": [
+        8.69,
+        11.32
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 2.63,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            624,
+            680,
+            241
+          ],
+          "frames": 79,
+          "longestStationaryRunSeconds": 2.63,
+          "maxMeanAbsDiffToPrevious": 0.02,
+          "maxMeanAbsDiffToFirst": 0.03
+        }
+      ]
+    },
+    {
+      "id": "practice_unanswered_after_juice",
+      "plannedWindow": [
+        14.74,
+        17.88
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 3.17,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            556,
+            680,
+            202
+          ],
+          "frames": 96,
+          "longestStationaryRunSeconds": 3.17,
+          "maxMeanAbsDiffToPrevious": 12.25,
+          "maxMeanAbsDiffToFirst": 12.22
+        },
+        {
+          "rect": [
+            165,
+            796,
+            680,
+            112
+          ],
+          "frames": 96,
+          "longestStationaryRunSeconds": 3.17,
+          "maxMeanAbsDiffToPrevious": 12.13,
+          "maxMeanAbsDiffToFirst": 12.13
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "plannedWindow": [
+        19.18,
+        25.5
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 6.33,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            405,
+            680,
+            310
+          ],
+          "frames": 190,
+          "longestStationaryRunSeconds": 6.33,
+          "maxMeanAbsDiffToPrevious": 0.32,
+          "maxMeanAbsDiffToFirst": 0.46
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

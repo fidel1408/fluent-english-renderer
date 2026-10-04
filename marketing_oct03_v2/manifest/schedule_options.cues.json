@@ -1,0 +1,141 @@
+{
+  "video": "schedule_options",
+  "contentId": "FE261016-SCHEDULE",
+  "title": "SCHEDULE OPTIONS",
+  "fps": 30,
+  "lead": 0.4,
+  "endHold": 3.4,
+  "targetSeconds": [
+    25,
+    35
+  ],
+  "status": "PLANNED",
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences; semantic mapping to script phrases is structural (no ASR offline) and unverified by ear.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Una hora entre semana o un bloque de fin de semana?",
+      "est": 2.97,
+      "gap": 0,
+      "file": "audio/cues/schedule_options_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.",
+      "est": 5.488,
+      "gap": 0.4,
+      "file": "audio/cues/schedule_options_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Todos los horarios son de Monterrey.",
+      "est": 2.199,
+      "gap": 3.2,
+      "file": "audio/cues/schedule_options_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Speaking Club es para intermedios y avanzados.",
+      "est": 3.198,
+      "gap": 0.3,
+      "file": "audio/cues/schedule_options_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "est": 3.699,
+      "gap": 0.8,
+      "file": "audio/cues/schedule_options_c05.wav"
+    }
+  ],
+  "alignment": {
+    "totalSamples": 774144,
+    "partitions": [
+      [
+        0,
+        130988
+      ],
+      [
+        130988,
+        372993
+      ],
+      [
+        372993,
+        469967
+      ],
+      [
+        469967,
+        611003
+      ],
+      [
+        611003,
+        774144
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        2.686
+      ],
+      [
+        3.254,
+        7.442
+      ],
+      [
+        7.563,
+        8.165
+      ],
+      [
+        8.751,
+        10.343
+      ],
+      [
+        10.971,
+        13.607
+      ],
+      [
+        14.102,
+        17.366
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "marks": {
+      "afterPause": [
+        "c02",
+        1
+      ]
+    }
+  }
+}

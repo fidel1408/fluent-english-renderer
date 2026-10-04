@@ -1,0 +1,201 @@
+{
+  "video": "can_have",
+  "contentId": "FE261012-CANHAVE",
+  "title": "CAN I HAVE",
+  "fps": 30,
+  "lead": 0.4,
+  "endHold": 3.4,
+  "targetSeconds": [
+    25,
+    35
+  ],
+  "status": "PLANNED",
+  "note": "Cue times are COMPUTED from sample partitions of the supplied take-2 master + added silence (gap). Only silence is ever added; speech is never sped up, trimmed or cut. Phrase boundaries come from measured silences; semantic mapping to script phrases is structural (no ASR offline) and unverified by ear.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Una frase para practicar en casa.",
+      "est": 2.198,
+      "gap": 0,
+      "file": "audio/cues/can_have_c01.wav"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Can I have some water, please?",
+      "est": 2.14,
+      "gap": 0.3,
+      "file": "audio/cues/can_have_c02.wav"
+    },
+    {
+      "id": "c03",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "¿Me das un poco de agua, por favor?",
+      "est": 2.404,
+      "gap": 0.3,
+      "file": "audio/cues/can_have_c03.wav"
+    },
+    {
+      "id": "c04",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Here you go.",
+      "est": 1.303,
+      "gap": 0.3,
+      "file": "audio/cues/can_have_c04.wav"
+    },
+    {
+      "id": "c05",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Aquí tienes.",
+      "est": 1.322,
+      "gap": 0.1,
+      "file": "audio/cues/can_have_c05.wav"
+    },
+    {
+      "id": "c06",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Ahora cambia water por juice.",
+      "est": 3.265,
+      "gap": 1.2,
+      "file": "audio/cues/can_have_c06.wav"
+    },
+    {
+      "id": "c07",
+      "who": "narrator",
+      "lang": "es+en",
+      "capFit": true,
+      "text": "Mamás y papás: manden NIÑOS por mensaje privado.",
+      "est": 3.955,
+      "gap": 2.9,
+      "file": "audio/cues/can_have_c07.wav"
+    }
+  ],
+  "alignment": {
+    "totalSamples": 731520,
+    "partitions": [
+      [
+        0,
+        96913
+      ],
+      [
+        96913,
+        191290
+      ],
+      [
+        191290,
+        297322
+      ],
+      [
+        297322,
+        354781
+      ],
+      [
+        354781,
+        413090
+      ],
+      [
+        413090,
+        557093
+      ],
+      [
+        557093,
+        731520
+      ]
+    ],
+    "islandsMeasured": [
+      [
+        0,
+        1.801
+      ],
+      [
+        2.594,
+        3.947
+      ],
+      [
+        4.728,
+        6.34
+      ],
+      [
+        7.144,
+        7.721
+      ],
+      [
+        8.368,
+        9.111
+      ],
+      [
+        9.623,
+        11.01
+      ],
+      [
+        11.265,
+        11.512
+      ],
+      [
+        11.639,
+        12.132
+      ],
+      [
+        13.133,
+        13.971
+      ],
+      [
+        14.512,
+        16.403
+      ]
+    ],
+    "islandGroups": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ],
+      [
+        5,
+        6,
+        7
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "marks": {
+      "porStart": [
+        "c06",
+        1
+      ],
+      "juiceStart": [
+        "c06",
+        2
+      ],
+      "mandenStart": [
+        "c07",
+        1
+      ]
+    }
+  }
+}

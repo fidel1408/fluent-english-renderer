@@ -1,0 +1,174 @@
+{
+  "video": "can_have",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/can_have_take2.mp3",
+  "masterSha256": "894d781de770c73a4b10ff0b8cf2997af69fff777dfd7af944c8599540a51421",
+  "sampleRate": 44100,
+  "fullMasterSamples": 731520,
+  "fullMasterSeconds": 16.587755102,
+  "retainedCueSamples": 731520,
+  "retainedCueSeconds": 16.587755102,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 25.5,
+  "addedSilenceSeconds": 8.912245,
+  "lead": 0.4,
+  "endHold": 3.4,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Una frase para practicar en casa.",
+      "caption": "Una frase para practicar en casa.",
+      "cueFile": "audio/cues/can_have_c01.wav",
+      "cueWavSamples": 96913,
+      "sourceSampleRange": [
+        0,
+        96913
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.197574,
+      "finalStart": 0.4,
+      "finalEnd": 2.598,
+      "offsetSeconds": 0.4,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.4,
+        2.201
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Can I have some water, please?",
+      "caption": "Can I have some water, please?",
+      "cueFile": "audio/cues/can_have_c02.wav",
+      "cueWavSamples": 94377,
+      "sourceSampleRange": [
+        96913,
+        191290
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.197574,
+      "sourceEndSeconds": 4.337642,
+      "finalStart": 2.898,
+      "finalEnd": 5.038,
+      "offsetSeconds": 0.700426,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        3.294,
+        4.648
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "¿Me das un poco de agua, por favor?",
+      "caption": "¿Me das un poco de agua, por favor?",
+      "cueFile": "audio/cues/can_have_c03.wav",
+      "cueWavSamples": 106032,
+      "sourceSampleRange": [
+        191290,
+        297322
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 4.337642,
+      "sourceEndSeconds": 6.741995,
+      "finalStart": 5.338,
+      "finalEnd": 7.742,
+      "offsetSeconds": 1.000358,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        5.729,
+        7.34
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Here you go.",
+      "caption": "Here you go.",
+      "cueFile": "audio/cues/can_have_c04.wav",
+      "cueWavSamples": 57459,
+      "sourceSampleRange": [
+        297322,
+        354781
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 6.741995,
+      "sourceEndSeconds": 8.044921,
+      "finalStart": 8.042,
+      "finalEnd": 9.345,
+      "offsetSeconds": 1.300005,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        8.444,
+        9.021
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Aquí tienes.",
+      "caption": "Aquí tienes.",
+      "cueFile": "audio/cues/can_have_c05.wav",
+      "cueWavSamples": 58309,
+      "sourceSampleRange": [
+        354781,
+        413090
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 8.044921,
+      "sourceEndSeconds": 9.36712,
+      "finalStart": 9.445,
+      "finalEnd": 10.767,
+      "offsetSeconds": 1.400079,
+      "gapBeforeAdded": 0.1,
+      "speechActivityFinal": [
+        9.769,
+        10.511
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Ahora cambia water por juice.",
+      "caption": "Ahora cambia water por juice.",
+      "cueFile": "audio/cues/can_have_c06.wav",
+      "cueWavSamples": 144003,
+      "sourceSampleRange": [
+        413090,
+        557093
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 9.36712,
+      "sourceEndSeconds": 12.632494,
+      "finalStart": 11.967,
+      "finalEnd": 15.232,
+      "offsetSeconds": 2.59988,
+      "gapBeforeAdded": 1.2,
+      "speechActivityFinal": [
+        12.223,
+        14.731
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Mamás y papás: manden NIÑOS por mensaje privado.",
+      "caption": "Mamás y papás: manden NIÑOS por mensaje privado.",
+      "cueFile": "audio/cues/can_have_c07.wav",
+      "cueWavSamples": 174427,
+      "sourceSampleRange": [
+        557093,
+        731520
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 12.632494,
+      "sourceEndSeconds": 16.587755,
+      "finalStart": 18.132,
+      "finalEnd": 22.087,
+      "offsetSeconds": 5.499506,
+      "gapBeforeAdded": 2.9,
+      "speechActivityFinal": [
+        18.633,
+        21.903
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "file": "FE261016-SCHEDULE_batch1_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Una hora entre semana o un bloque de fin de semana?",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "Todos los horarios son de Monterrey.",
+      "correlation": 0.993,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Speaking Club es para intermedios y avanzados.",
+      "correlation": 0.998,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "correlation": 0.997,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.74,
+      "expect": "ON c01",
+      "creamPixels": 16887
+    },
+    {
+      "at": 6.51,
+      "expect": "ON c02",
+      "creamPixels": 17711
+    },
+    {
+      "at": 13.55,
+      "expect": "ON c03",
+      "creamPixels": 16891
+    },
+    {
+      "at": 16.59,
+      "expect": "ON c04",
+      "creamPixels": 17493
+    },
+    {
+      "at": 20.83,
+      "expect": "ON c05",
+      "creamPixels": 16742
+    },
+    {
+      "at": 3.57,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 10.86,
+      "expect": "OFF (gap c02-c03)",
+      "creamPixels": 0
+    },
+    {
+      "at": 14.81,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 18.55,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -14.5,
+    "loudnessRangeLU": 7.4,
+    "truePeakdBTP": -3.9
+  },
+  "finalHold": {
+    "from": 22.72,
+    "to": 26.1,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.38
+  },
+  "pass": true
+}

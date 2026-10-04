@@ -3,6 +3,19 @@
 Isolated output folder. The 30 s `video/` project and the published artifact are untouched.
 Standing rules (Sonnet 5.5 only, ElevenLabs only for short social videos via supplied files, never for long lessons) are in `/CLAUDE.md` and `/.claude/skills/video-production/SKILL.md`.
 
+
+## October batch 1 (CANHAVE / BORROW / SCHEDULE) - QA-pending
+Three new narrated tips built from the owner-supplied Luis take-2 masters (SHA256 verified against `manifest/batch1_inputs/production_manifest.json`; all six originals preserved in `audio/originals/`). Same single adult male host, `src/engine.js`/`kit.js`/`host.js` unchanged; new `src/props.js` (glass, pitcher, hand, pen, charger, trays, arrow, clock, pin, level bars) and `src/kit_b1.js` (keyword CTA). Previous media untouched.
+
+| Content ID | Length | File |
+|---|---|---|
+| FE261012-CANHAVE | see QA report | `out/FE261012-CANHAVE_batch1_single-host_narrated_QA-pending.mp4` |
+| FE261014-BORROW | see QA report | `out/FE261014-BORROW_batch1_single-host_narrated_QA-pending.mp4` |
+| FE261016-SCHEDULE (TikTok-only) | see QA report | `out/FE261016-SCHEDULE_batch1_single-host_narrated_QA-pending.mp4` |
+
+Pipeline: `node build/batch1_manifests.js` (measures speech islands in each master, declares cue groups, writes cut points as integer sample midpoints of silences) -> `node build/partition_split.js <video> <master>` -> `node build/retime.js <video>` -> `./build/render_batch1.sh`. Verifiers: `verify_batch1_source.js`, `holds_plan.js`, `verify_text_audit.js`, `verify_holds.js`, `transition_sheets.js` plus the existing `verify.js`, `verify_sync.js`, `verify_mouth.js`. Evidence and the list of checks NOT done: `qa/batch1_verification_report.md`.
+No speech-recognition model exists offline, so phrase mapping rests on measured silence structure (island counts match the script's pause structure exactly) and is unverified by ear. Nobody has listened.
+
 ## Status (truthful)
 
 | Tip | Length | File | Status |

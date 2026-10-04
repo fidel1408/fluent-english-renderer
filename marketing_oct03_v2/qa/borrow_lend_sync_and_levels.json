@@ -1,0 +1,148 @@
+{
+  "file": "FE261014-BORROW_batch1_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Te presto o me prestas?",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "Can I borrow your pen?",
+      "correlation": 0.986,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c03",
+      "text": "¿Me prestas tu pluma?",
+      "correlation": 0.995,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Borrow: recibir algo prestado.",
+      "correlation": 0.99,
+      "lagMs": 4.9
+    },
+    {
+      "id": "c05",
+      "text": "I can lend you my pen.",
+      "correlation": 0.994,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "Te puedo prestar mi pluma.",
+      "correlation": 0.994,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "Lend: prestar a otra persona.",
+      "correlation": 0.989,
+      "lagMs": 5
+    },
+    {
+      "id": "c08",
+      "text": "Ahora tú: Can I... your charger? ¿Qué palabra falta?",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c09",
+      "text": "Clases en línea: manda GRUPO por mensaje privado.",
+      "correlation": 0.99,
+      "lagMs": 4.9
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.39,
+      "expect": "ON c01",
+      "creamPixels": 17723
+    },
+    {
+      "at": 3.52,
+      "expect": "ON c02",
+      "creamPixels": 17678
+    },
+    {
+      "at": 5.28,
+      "expect": "ON c03",
+      "creamPixels": 17274
+    },
+    {
+      "at": 7.77,
+      "expect": "ON c04",
+      "creamPixels": 16707
+    },
+    {
+      "at": 11.82,
+      "expect": "ON c05",
+      "creamPixels": 17549
+    },
+    {
+      "at": 13.68,
+      "expect": "ON c06",
+      "creamPixels": 17461
+    },
+    {
+      "at": 16.44,
+      "expect": "ON c07",
+      "creamPixels": 17151
+    },
+    {
+      "at": 22.03,
+      "expect": "ON c08",
+      "creamPixels": 18321
+    },
+    {
+      "at": 29.55,
+      "expect": "ON c09",
+      "creamPixels": 17329
+    },
+    {
+      "at": 2.56,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 6.2,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 10.04,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    },
+    {
+      "at": 14.76,
+      "expect": "OFF (gap c06-c07)",
+      "creamPixels": 0
+    },
+    {
+      "at": 18.7,
+      "expect": "OFF (gap c07-c08)",
+      "creamPixels": 0
+    },
+    {
+      "at": 26.21,
+      "expect": "OFF (gap c08-c09)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.4,
+    "loudnessRangeLU": 8,
+    "truePeakdBTP": -3.8
+  },
+  "finalHold": {
+    "from": 31.25,
+    "to": 34.9,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.65
+  },
+  "pass": true
+}

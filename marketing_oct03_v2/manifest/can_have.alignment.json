@@ -1,0 +1,254 @@
+{
+  "video": "can_have",
+  "master": "audio/originals/can_have_take2.mp3",
+  "masterSha256": "894d781de770c73a4b10ff0b8cf2997af69fff777dfd7af944c8599540a51421",
+  "totalSamples": 731520,
+  "sampleRate": 44100,
+  "method": "explicit sample partitions from independent timing handoff; islands from silencedetect -38 dB / 120 ms; no fades, no resampling, no time-stretch",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Una frase para practicar en casa.",
+      "file": "audio/cues/can_have_c01.wav",
+      "sourceSampleRange": [
+        0,
+        96913
+      ],
+      "sourceStart": 0,
+      "sourceEnd": 2.197574,
+      "seconds": 2.197574,
+      "padHead": 0,
+      "padTail": 0.397,
+      "islandsInCue": [
+        {
+          "s": 0,
+          "e": 1.801
+        }
+      ],
+      "activityInCue": [
+        0,
+        1.801
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        13
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Can I have some water, please?",
+      "file": "audio/cues/can_have_c02.wav",
+      "sourceSampleRange": [
+        96913,
+        191290
+      ],
+      "sourceStart": 2.197574,
+      "sourceEnd": 4.337642,
+      "seconds": 2.140068,
+      "padHead": 0.396,
+      "padTail": 0.39,
+      "islandsInCue": [
+        {
+          "s": 0.396,
+          "e": 1.75
+        }
+      ],
+      "activityInCue": [
+        0.396,
+        1.75
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        15,
+        20
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "¿Me das un poco de agua, por favor?",
+      "file": "audio/cues/can_have_c03.wav",
+      "sourceSampleRange": [
+        191290,
+        297322
+      ],
+      "sourceStart": 4.337642,
+      "sourceEnd": 6.741995,
+      "seconds": 2.404354,
+      "padHead": 0.391,
+      "padTail": 0.402,
+      "islandsInCue": [
+        {
+          "s": 0.391,
+          "e": 2.002
+        }
+      ],
+      "activityInCue": [
+        0.391,
+        2.002
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        24,
+        33
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Here you go.",
+      "file": "audio/cues/can_have_c04.wav",
+      "sourceSampleRange": [
+        297322,
+        354781
+      ],
+      "sourceStart": 6.741995,
+      "sourceEnd": 8.044921,
+      "seconds": 1.302925,
+      "padHead": 0.402,
+      "padTail": 0.324,
+      "islandsInCue": [
+        {
+          "s": 0.402,
+          "e": 0.979
+        }
+      ],
+      "activityInCue": [
+        0.402,
+        0.979
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        31,
+        20
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Aquí tienes.",
+      "file": "audio/cues/can_have_c05.wav",
+      "sourceSampleRange": [
+        354781,
+        413090
+      ],
+      "sourceStart": 8.044921,
+      "sourceEnd": 9.36712,
+      "seconds": 1.3222,
+      "padHead": 0.324,
+      "padTail": 0.256,
+      "islandsInCue": [
+        {
+          "s": 0.324,
+          "e": 1.066
+        }
+      ],
+      "activityInCue": [
+        0.324,
+        1.066
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        21,
+        2
+      ]
+    },
+    {
+      "id": "c06",
+      "text": "Ahora cambia water por juice.",
+      "file": "audio/cues/can_have_c06.wav",
+      "sourceSampleRange": [
+        413090,
+        557093
+      ],
+      "sourceStart": 9.36712,
+      "sourceEnd": 12.632494,
+      "seconds": 3.265374,
+      "padHead": 0.256,
+      "padTail": 0.501,
+      "islandsInCue": [
+        {
+          "s": 0.256,
+          "e": 1.642
+        },
+        {
+          "s": 1.898,
+          "e": 2.145
+        },
+        {
+          "s": 2.272,
+          "e": 2.764
+        }
+      ],
+      "activityInCue": [
+        0.256,
+        2.764
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        0,
+        10
+      ]
+    },
+    {
+      "id": "c07",
+      "text": "Mamás y papás: manden NIÑOS por mensaje privado.",
+      "file": "audio/cues/can_have_c07.wav",
+      "sourceSampleRange": [
+        557093,
+        731520
+      ],
+      "sourceStart": 12.632494,
+      "sourceEnd": 16.587755,
+      "seconds": 3.955261,
+      "padHead": 0.501,
+      "padTail": 0.184,
+      "islandsInCue": [
+        {
+          "s": 0.501,
+          "e": 1.338
+        },
+        {
+          "s": 1.88,
+          "e": 3.771
+        }
+      ],
+      "activityInCue": [
+        0.501,
+        3.771
+      ],
+      "handoffActivitySource": null,
+      "activityVsHandoffMs": null,
+      "edgeSampleAbs": [
+        13,
+        0
+      ]
+    }
+  ],
+  "marks": {
+    "c06": {
+      "porStart": 1.898,
+      "juiceStart": 2.272
+    },
+    "c07": {
+      "mandenStart": 1.88
+    }
+  },
+  "coverage": {
+    "partitionSamples": 731520,
+    "totalSamples": 731520,
+    "reconstructedDifferingSamples": 0,
+    "allSamplesRetainedOnce": true,
+    "maxAbsSampleAtAnyCut": 33
+  },
+  "confidence": {
+    "phraseBoundaries": "authoritative sample cuts from handoff (silence midpoints)",
+    "islands": "measured from waveform (-38 dB); not a linguistic detector",
+    "wordLevel": "not measured",
+    "content": "pronunciation/content NOT verified (no listening)"
+  }
+}

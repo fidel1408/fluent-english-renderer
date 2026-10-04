@@ -1,0 +1,52 @@
+{
+  "file": "FE261012-CANHAVE_batch1_single-host_narrated_QA-pending.mp4",
+  "manifestStatus": "TIMED_FROM_SUPPLIED_AUDIO",
+  "checks": {
+    "h264_high_yuv420p": {
+      "ok": true,
+      "info": "h264/High/yuv420p"
+    },
+    "1080x1920": {
+      "ok": true,
+      "info": "1080x1920"
+    },
+    "30fps": {
+      "ok": true,
+      "info": "30/1"
+    },
+    "duration": {
+      "ok": true,
+      "info": "25.500000"
+    },
+    "frames": {
+      "ok": true,
+      "info": "765"
+    },
+    "aac_audio": {
+      "ok": true,
+      "info": "aac 48000 Hz 2ch"
+    },
+    "faststart": {
+      "ok": true,
+      "info": "moov@36"
+    },
+    "full_decode_no_errors": {
+      "ok": true,
+      "info": "clean"
+    },
+    "no_clipping": {
+      "ok": true,
+      "info": "peak -3.9 dBFS"
+    },
+    "narration_audible_in_every_cue_window (>=10 dB above SFX-only mix)": {
+      "ok": true,
+      "info": "all 7 windows"
+    },
+    "narration_not_cut_off": {
+      "ok": true,
+      "info": "last cue ends 22.087"
+    }
+  },
+  "label": "NARRATED CANDIDATE – QA-pending, NOT final: technical checks only; auditory approval still required before publishing",
+  "pass": true
+}

@@ -1,0 +1,126 @@
+{
+  "file": "FE261012-CANHAVE_batch1_single-host_narrated_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "Una frase para practicar en casa.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "Can I have some water, please?",
+      "correlation": 0.995,
+      "lagMs": 5
+    },
+    {
+      "id": "c03",
+      "text": "¿Me das un poco de agua, por favor?",
+      "correlation": 0.994,
+      "lagMs": 5
+    },
+    {
+      "id": "c04",
+      "text": "Here you go.",
+      "correlation": 1,
+      "lagMs": 5
+    },
+    {
+      "id": "c05",
+      "text": "Aquí tienes.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c06",
+      "text": "Ahora cambia water por juice.",
+      "correlation": 0.999,
+      "lagMs": 5
+    },
+    {
+      "id": "c07",
+      "text": "Mamás y papás: manden NIÑOS por mensaje privado.",
+      "correlation": 0.998,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.3,
+      "expect": "ON c01",
+      "creamPixels": 19420
+    },
+    {
+      "at": 3.97,
+      "expect": "ON c02",
+      "creamPixels": 17315
+    },
+    {
+      "at": 6.53,
+      "expect": "ON c03",
+      "creamPixels": 17615
+    },
+    {
+      "at": 8.73,
+      "expect": "ON c04",
+      "creamPixels": 17432
+    },
+    {
+      "at": 10.14,
+      "expect": "ON c05",
+      "creamPixels": 16844
+    },
+    {
+      "at": 13.48,
+      "expect": "ON c06",
+      "creamPixels": 19138
+    },
+    {
+      "at": 20.27,
+      "expect": "ON c07",
+      "creamPixels": 17084
+    },
+    {
+      "at": 2.75,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    },
+    {
+      "at": 5.19,
+      "expect": "OFF (gap c02-c03)",
+      "creamPixels": 0
+    },
+    {
+      "at": 7.89,
+      "expect": "OFF (gap c03-c04)",
+      "creamPixels": 0
+    },
+    {
+      "at": 9.39,
+      "expect": "OFF (gap c04-c05)",
+      "creamPixels": 0
+    },
+    {
+      "at": 11.37,
+      "expect": "OFF (gap c05-c06)",
+      "creamPixels": 0
+    },
+    {
+      "at": 16.68,
+      "expect": "OFF (gap c06-c07)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.6,
+    "loudnessRangeLU": 9.3,
+    "truePeakdBTP": -3.9
+  },
+  "finalHold": {
+    "from": 22.15,
+    "to": 25.5,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 3.35
+  },
+  "pass": true
+}

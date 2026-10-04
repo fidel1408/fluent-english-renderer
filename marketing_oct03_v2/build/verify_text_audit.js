@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+// node build/verify_text_audit.js <video> [--step 1]  -> instrumented render of EVERY frame (30 fps) from the same deterministic scene code:
+//  1) effective type size at a 270x480 phone preview (font px x group scale x 0.25) for each distinct string drawn at alpha >= 0.5; minimum reported (limit ~12.9 px = 60 px source type under the 0.86 content group)
+//  2) text-vs-text overlap: any two strings drawn together at alpha >= 0.3 whose boxes intersect by > 8 % of the smaller box (both are real, visible texts in the same frame)
+//  3) content rules per video: required strings inside their windows, forbidden strings (answer reveal, extra CTAs, contact/child data requests, assigned class/start claims) anywhere or in practice windows, exactly one CTA
+const fs = require('fs'), path = require('path'); const L = require('./lib'); const { chromium } = require(process.env.PLAYWRIGHT_PATH || '/opt/node-tools/node_modules/playwright');
+const name = process.argv[2], m = L.loadManifest(name), { K } = L.plan(name, m.cues), FPS = 30, N = Math.round(m.duration * FPS);
+const RULES = {
+  can_have: { required: [['Can I have some', K.reqIn + 1, K.reqOut], ['Aquí tienes.', K.respIn + 1, K.respOut], ['RESPUESTA DE EJEMPLO', K.respIn + 1, K.respOut], ['EJEMPLO: PEDIR', K.reqIn + 1, K.reqOut], ['juice', K.juiceIn + .8, K.pracOut], ['NIÑOS', K.cta + 1, m.duration]],
+    forbiddenAnywhere: [/some juice/i, /juice, please/i, /edad|nombre|foto|tel[eé]fono|whatsapp|correo|direcci[oó]n/i, /seguir|follow|like|guarda|link|https?:|www\.|\.com|precio|gratis/i], forbiddenFrom: [[K.pracIn, /Can I have some juice/i]], cta: [K.cta, 'NIÑOS'] },
+  borrow_lend: { required: [['BORROW = recibir prestado', K.bArrowE + .2, K.bOut], ['LEND = prestar', K.lArrowE + .2, K.lOut], ['tu pluma', K.bArrowE + .2, K.bOut], ['mi pluma', K.lArrowE + .2, K.lOut], ['your charger?', K.charger + .3, K.pracOut], ['GRUPO', K.cta + 1, m.duration]],
+    forbiddenAnywhere: [/seguir|follow|like|guarda|link|https?:|www\.|\.com|precio|gratis/i, /Can I borrow your charger/i], forbiddenFrom: [[K.pracIn, /borrow|lend|recibir|prestar|prestado/i]], cta: [K.cta, 'GRUPO'] },
+  schedule_options: { required: [['LUNES A VIERNES', K.wdIn + 1.5, K.wdOut], ['Una hora al día', K.wdIn + 1.5, K.wdOut], ['7 a. m. a 9 p. m.', K.wdIn + 1.5, K.wdOut], ['Hora de Monterrey', K.wdIn + 1.5, K.wdOut], ['SÁBADO O DOMINGO', K.wkIn + 1, K.wkOut], ['7 a. m.–12 p. m.', K.wkIn + 1, K.wkOut], ['1–6 p. m.', K.wkIn + 1, K.wkOut], ['Hora de Monterrey', K.wkIn + 1, K.wkOut], ['Monterrey', K.clubIn + .8, K.ctxOut], ['intermedios', K.clubIn + .8, K.ctxOut], ['HORARIO', K.cta + 1, m.duration]],
+    forbiddenAnywhere: [/seguir|follow|like|guarda|link|https?:|www\.|\.com|precio|gratis|cupo|garant|asignad|maestro|profesor|inscrip|empieza|comienza|iniciamos el/i], forbiddenFrom: [], cta: [K.cta, 'HORARIO'] },
+}[name];
+(async () => {
+  const S = await L.serve(), b = await chromium.launch(), p = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  await p.goto(S.url + '/src/index.html?video=' + name); await p.evaluate(() => window.ready); await p.evaluate(c => window.setCues(c), m.cues);
+  await p.evaluate(() => { window.__T = []; const f = CanvasRenderingContext2D.prototype.fillText; CanvasRenderingContext2D.prototype.fillText = function (s, x, y, mw) { try { const mt = this.getTransform(), fs = parseFloat(/(\d+(?:\.\d+)?)px/.exec(this.font)[1]), sc = Math.hypot(mt.a, mt.b), w = this.measureText(s).width, al = this.textAlign, x0 = al === 'center' ? x - w / 2 : al === 'right' ? x - w : x;
+      const pts = [[x0, y - fs * .8], [x0 + w, y - fs * .8], [x0, y + fs * .2], [x0 + w, y + fs * .2]].map(([px, py]) => [mt.a * px + mt.c * py + mt.e, mt.b * px + mt.d * py + mt.f]); const xs = pts.map(q => q[0]), ys = pts.map(q => q[1]);
+      window.__T.push({ s, eff: fs * sc * .25, a: this.globalAlpha, b: [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)] }); } catch (e) { } return f.call(this, s, x, y, mw); }; });
+  let capTop = 1e9; const minEff = {}, over = [], seen = {}, R = { video: name, frames: N, minEffectivePx270x480: null, belowThreshold: [], overlaps: [], required: [], forbidden: [], cta: null };
+  const frames = [];
+  for (let n = 0; n < N; n++) { const t = n / FPS, items = await p.evaluate(t => { window.__T.length = 0; window.renderFrame(t); return window.__T.slice(); }, t); frames.push(items.filter(i => i.a > 0.02));
+    items.filter(i => i.a >= .5 && i.b[1] > 1100).forEach(i => { capTop = Math.min(capTop, i.b[1]); });   // burned-caption text must stay below the host's mouth (~y 1190)
+    const vis = items.filter(i => i.a >= .98 && i.s.trim()); vis.forEach(i => { seen[i.s] = (seen[i.s] || 0) + 1; (minEff[i.s] = minEff[i.s] || []).push(i.eff); });
+    const v3 = items.filter(i => i.a >= .3 && i.s.trim()); for (let i = 0; i < v3.length; i++) for (let j = i + 1; j < v3.length; j++) { const A = v3[i].b, B = v3[j].b, ix = Math.min(A[2], B[2]) - Math.max(A[0], B[0]), iy = Math.min(A[3], B[3]) - Math.max(A[1], B[1]); if (ix > 0 && iy > 0) { const ar = Math.min((A[2] - A[0]) * (A[3] - A[1]), (B[2] - B[0]) * (B[3] - B[1])); if (ix * iy / ar > .08) over.push({ t: +t.toFixed(2), a: v3[i].s, b: v3[j].s, frac: +(ix * iy / ar).toFixed(2) }); } } }
+  const med = a => { a = a.slice().sort((x, y) => x - y); return a[Math.floor(a.length / 2)]; }; Object.keys(minEff).forEach(s => minEff[s] = med(minEff[s]));   // SETTLED size: median over frames drawn at full opacity (entrance pops scale below 1 for a few frames)
+  Object.entries(minEff).filter(([s]) => seen[s] >= 5).forEach(([s, e]) => { if (e < 12.85) R.belowThreshold.push({ text: s, effectivePx: +e.toFixed(2), frames: seen[s] }); });
+  R.minEffectivePx270x480 = +Math.min(...Object.entries(minEff).filter(([s]) => seen[s] >= 5).map(([, e]) => e)).toFixed(2);
+  R.distinctStringsMeasured = Object.keys(seen).filter(s => seen[s] >= 5).length;
+  const uniq = []; over.forEach(o => { const l = uniq[uniq.length - 1]; if (!l || l.a !== o.a || l.b !== o.b || o.t - l.last > .1) uniq.push({ ...o, first: o.t, last: o.t }); else l.last = o.t; }); R.overlaps = uniq.map(o => `${o.first}-${o.last}s "${o.a}" x "${o.b}" (${o.frac})`);
+  RULES.required.forEach(([s, a, e]) => { let miss = 0, n = 0; for (let f = Math.round(a * FPS); f < Math.round(e * FPS); f++) { n++; if (!frames[f].some(i => i.a >= .95 && i.s.includes(s))) miss++; } R.required.push({ text: s, window: [+a.toFixed(2), +e.toFixed(2)], framesChecked: n, framesMissingAtFullOpacity: miss, ok: miss === 0 }); });
+  const all = frames.flatMap((fr, f) => fr.filter(i => i.a > .1).map(i => ({ f, s: i.s })));
+  RULES.forbiddenAnywhere.forEach(rx => { const hit = all.find(i => rx.test(i.s)); R.forbidden.push({ rule: String(rx), anywhere: true, firstHit: hit ? `${(hit.f / FPS).toFixed(2)}s "${hit.s}"` : null, ok: !hit }); });
+  RULES.forbiddenFrom.forEach(([from, rx]) => { const hit = all.find(i => i.f / FPS >= from && rx.test(i.s)); R.forbidden.push({ rule: String(rx), fromSeconds: +from.toFixed(2), firstHit: hit ? `${(hit.f / FPS).toFixed(2)}s "${hit.s}"` : null, ok: !hit }); });
+  const ctaFrames = frames.map((fr, f) => ({ f, n: fr.filter(i => i.a > .5 && /mensaje privado/i.test(i.s) && f / FPS >= RULES.cta[0] + 1).length, cap: 0 }));
+  const withCta = frames.reduce((a, fr, f) => a + (fr.some(i => i.a > .5 && /mensaje privado/.test(i.s) && f / FPS < RULES.cta[0]) ? 1 : 0), 0);
+  R.cta = { keyword: RULES.cta[1], enteredAt: +RULES.cta[0].toFixed(2), framesShowingCtaTextBeforeEntry: withCta, ok: withCta === 0 };
+  R.captionTextTopMinY = +capTop.toFixed(1); R.captionClearsMouth = capTop >= 1200;
+  R.pass = R.captionClearsMouth && !R.belowThreshold.length && !R.overlaps.length && R.required.every(x => x.ok) && R.forbidden.every(x => x.ok) && R.cta.ok;
+  fs.writeFileSync(path.join(L.ROOT, 'qa', `${name}_text_audit.json`), JSON.stringify(R, null, 2)); console.log(JSON.stringify(R, null, 1)); await b.close(); S.srv.close(); process.exit(R.pass ? 0 : 1);
+})();

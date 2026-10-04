@@ -1,0 +1,492 @@
+{
+  "campaign_id": "FE-ORG-2026-10",
+  "prepared_utc": "2026-10-03T23:24:00Z",
+  "source_manifest_library_id": "libfile_327365883ee88191aed255e2f6a81621",
+  "already_produced": [
+    {
+      "id": "FE261003-AGREE",
+      "revision": "REV3",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING",
+      "reschedule_required": true
+    },
+    {
+      "id": "FE261005-ACTUALLY",
+      "revision": "REV4",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING"
+    },
+    {
+      "id": "FE261007-FORWARD",
+      "revision": "REV4",
+      "status": "VISUAL_TECHNICAL_PASS_AUDITION_PENDING"
+    }
+  ],
+  "remaining_counts": {
+    "main_teaching": 2,
+    "tiktok_only_adaptations": 1
+  },
+  "shared_production_contract": {
+    "creator": "Claude Code only",
+    "project": "fluent-english-renderer / existing session_01XZseF1db4UWZjECgbkDe4T",
+    "model": "Sonnet5.5",
+    "effort": "Medium routine setup; High complex integration and final QA",
+    "fast": false,
+    "base": "Reuse current REV4 kit and exact single adult male host. Do not re-render or modify the three completed videos.",
+    "casting": "One adult male teacher, same Luis voice, adult facial proportions/visible torso/collared shirt/subtle stubble. Sole speaking mouth; all example text is labelled quoted demonstration. No second face, child narrator, caricature beard or alternating speaker assignment.",
+    "design": "Navy #101E34, cream #FFF7EB, mint #72D8C6, teal #0D625F, coral #F47558; original logo. One distinct meaningful mini-illustration per topic. Retain purposeful gestures/reacting movement; no lifeless slideshow.",
+    "format": "1080x1920,30fps,H264yuv420p,AAC48kstereo,faststart. Target25–35s but true audio/reading holds govern. Never time-stretch narration.",
+    "safe_zone": "Essential x100–860,y180–1420 conservative reserve; verify actual target-app overlays and covers later.",
+    "typography": "Actual270x480 legibility. At least≈13px effective role labels and secondaryCTA, larger teaching text; do not trust sourcefont alone.",
+    "timing": "Actual generated audio drives cue timings. Caption text = actual speech. Rule/example/translation switch as a coherent unit, sequential and non-overlapping; cards expand before wrapping text enters. Every solved bilingual example >=2.5s full-opacity settled hold; unansweredpractice>=3s; CTA>=3s after entry. Add silence/readhold rather than speeding.",
+    "audio": "Luis Guillermo Warm and Engaging, existing paid stock voice and current Elevenv4 standard settings. Do not generate until current UIcost and included balance checked. No purchases/extra credits/cloning/keys. One full narration per video; sample-exact sourcecuepartitions; only silence gaps added. NoEleven forlonglessons.",
+    "cta": "One marketing action at end, native DM, no external link, no extra Follow/Like/Save. Learning prompt can precede but should not demand public contact information. No fake clickable UI.",
+    "inventory": "Before authoring, inventory existing repository/assets/session outputs by theme/contentID and reuse. Earlier Borrow/Lend and ordering-food session titles existed, but their current assets have not been inspected; do not assume final or regenerate blindly.",
+    "qa": "Actual downloaded MP4/sourceZIP required. Independent visual+technical+source/sync QA; explicitly retain unrun real-listening and target-app playback gates. Never count the creator self-evaluation as release.",
+    "disclosure": "At scheduling, inspect required native realistic-AI-audio disclosure and TikTok own-brand promotional disclosure; no paid partnership/ads. Parent owns scheduling.",
+    "source_precedence": "Current narration, scenes, captions and shared contract in this manifest override older campaign storyboards and marketing CTAs. Answer references are internal and must not leak into unanswered practice."
+  },
+  "videos": [
+    {
+      "content_id": "FE261012-CANHAVE",
+      "date": "2026-10-12",
+      "title": "Pedir algo con please",
+      "format": "Video corto",
+      "audience": "Madres y padres de niños 6–12; práctica familiar",
+      "goal": "Contenido útil para familias",
+      "hook": "Una frase para practicar en casa",
+      "caption_fb_ig": "Una frase para practicar en casa: “Can I have some water, please?” = “¿Me das un poco de agua, por favor?”\n\n“Here you go.” = “Aquí tienes.”\n\nAhora cambien water por juice. Los niños de 6 a 12 años estudian en grupos separados de adolescentes y adultos.\n\nMadres y padres: si buscan clases en línea para niños de 6 a 12 años, manden “NIÑOS” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #InglésEnLínea",
+      "caption_tiktok": "Una frase para practicar en casa: “Can I have some water, please?” = “¿Me das un poco de agua, por favor?”\n\n“Here you go.” = “Aquí tienes.”\n\nAhora cambien water por juice. Los niños de 6 a 12 años estudian en grupos separados de adolescentes y adultos.\n\nMadres y padres: si buscan clases en línea para niños de 6 a 12 años, manden “NIÑOS” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #EnglishTips",
+      "cta": "Madres y padres: si buscan clases en línea para niños de 6 a 12 años, manden “NIÑOS” por mensaje privado.",
+      "offer_reference": "K0",
+      "narration": "Una frase para practicar en casa. Can I have some water, please? ¿Me das un poco de agua, por favor? Here you go. Aquí tienes. Ahora cambia water por juice. Mamás y papás: manden NIÑOS por mensaje privado.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Water glass and pitcher on a bright tabletop; same adult male host.",
+          "on_screen": "Una frase para practicar en casa"
+        },
+        {
+          "id": "request",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Single teacher models quoted example. Water glass highlight.",
+          "on_screen": "Can I have some water, please?\n¿Me das un poco de agua, por favor?"
+        },
+        {
+          "id": "response",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "A hand passes the glass; no second face or speaking character. Mark as example response.",
+          "on_screen": "RESPUESTA DE EJEMPLO\nHere you go.\nAquí tienes."
+        },
+        {
+          "id": "practice",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Water word exits, juice card enters. Do not show or speak the complete answer. Hold at least3s.",
+          "on_screen": "Ahora cambia water por juice.\nCan I have some ___, please?"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Teacher clears text area; glass becomes a small corner icon.",
+          "on_screen": "Clases en línea para niños\nMamás y papás: manden NIÑOS\npor mensaje privado."
+        }
+      ],
+      "answer_reference": "Can I have some juice, please?",
+      "content_qa": "No pedir edad, nombre, foto ni datos de niños en comentarios. CTA de inscripción dirigido a madres/padres. Usar ilustraciones originales, no supuestos alumnos.",
+      "reuse_requirement": "Inventory existing repository/session artifacts by content ID and theme, then reuse appropriate source with the current single-host system. Do not assume old media passes.",
+      "status": "PREPARED_NOT_GENERATED",
+      "slug": "can_have",
+      "batch": "teaching",
+      "narration_cues": [
+        "Una frase para practicar en casa.",
+        "Can I have some water, please?",
+        "¿Me das un poco de agua, por favor?",
+        "Here you go. Aquí tienes.",
+        "Ahora cambia water por juice.",
+        "Mamás y papás: manden NIÑOS por mensaje privado."
+      ],
+      "narration_character_count": 205,
+      "primary_cta": {
+        "destination": "native private message on viewing platform",
+        "keyword": "NIÑOS",
+        "no_other_marketing_cta": true
+      },
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "Water glass and pitcher on a bright tabletop; same adult male host.",
+          "on_screen": "Una frase para practicar en casa"
+        },
+        {
+          "id": "request",
+          "visual": "Single teacher models quoted example. Water glass highlight.",
+          "on_screen": "Can I have some water, please?\n¿Me das un poco de agua, por favor?"
+        },
+        {
+          "id": "response",
+          "visual": "A hand passes the glass; no second face or speaking character. Mark as example response.",
+          "on_screen": "RESPUESTA DE EJEMPLO\nHere you go.\nAquí tienes."
+        },
+        {
+          "id": "practice",
+          "visual": "Water word exits, juice card enters. Do not show or speak the complete answer. Hold at least3s.",
+          "on_screen": "Ahora cambia water por juice.\nCan I have some ___, please?"
+        },
+        {
+          "id": "cta",
+          "visual": "Teacher clears text area; glass becomes a small corner icon.",
+          "on_screen": "Clases en línea para niños\nMamás y papás: manden NIÑOS\npor mensaje privado."
+        }
+      ],
+      "qa_requirements": [
+        "Keep the adult educator; no invented child voice or student likeness.",
+        "CTA addresses parents, not children; no request for age/contact details.",
+        "Please stays in the request. Here you go is a natural response.",
+        "Retain classroom-model framing; no fake testimonial."
+      ],
+      "production_delta": "Standalone context and clear example roles; one native-DM marketing CTA; same adult male educator.",
+      "narration_sha256": "895923708a6236b3d0bf1d8f803896dc75c7ce093331bbfb16f46d4b94dd11d8",
+      "teaching_verification": {
+        "status": "PASS_WITH_APPLIED_REVISIONS",
+        "reviewed_utc": "2026-10-03T23:26:44Z",
+        "primary_sources": [
+          "https://dictionary.cambridge.org/uk/grammar/british-grammar/requests",
+          "https://dictionary.cambridge.org/us/dictionary/english/here-you-go"
+        ]
+      },
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "preferred_audio": "audio/can_have_take2.mp3",
+      "alternate_audio": "audio/can_have_take1.mp3",
+      "preferred_audio_sha256": "894d781de770c73a4b10ff0b8cf2997af69fff777dfd7af944c8599540a51421",
+      "audio_selection_basis": "The longer of the same Generate click’s two outputs, to favor an unhurried teaching pace. Technical decode and exact input verified; not an audition or ASR pass.",
+      "tts_input": "[warmly] Una frase para practicar en casa. Can I have some water, please? ¿Me das un poco de agua, por favor? Here you go. Aquí tienes. Ahora cambia water por juice. Mamás y papás: manden NIÑOS por mensaje privado.",
+      "tts_input_characters": 214
+    },
+    {
+      "content_id": "FE261014-BORROW",
+      "date": "2026-10-14",
+      "title": "Borrow y lend",
+      "format": "Video corto",
+      "audience": "Adolescentes 13+ y adultos principiantes/intermedios",
+      "goal": "Práctica contextual",
+      "hook": "¿Te presto o me prestas?",
+      "caption_fb_ig": "¿Borrow o lend? Piensa en quién recibe el objeto.\n\n“Can I borrow your pen?” = “¿Me prestas tu pluma?”\n“I can lend you my pen.” = “Te puedo prestar mi pluma.”\n\nBorrow: recibir algo prestado. Lend: prestar a otra persona.\n\nAhora tú: “Can I ___ your charger?”\n\nPara conocer las clases en línea, manda “GRUPO” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #InglésEnLínea",
+      "caption_tiktok": "¿Borrow o lend? Piensa en quién recibe el objeto.\n\n“Can I borrow your pen?” = “¿Me prestas tu pluma?”\n“I can lend you my pen.” = “Te puedo prestar mi pluma.”\n\nBorrow: recibir algo prestado. Lend: prestar a otra persona.\n\nAhora tú: “Can I ___ your charger?”\n\nPara conocer las clases en línea, manda “GRUPO” por mensaje privado.\n\n#FluentEnglish #AprenderInglés #EnglishTips",
+      "cta": "Para conocer las clases en línea, manda “GRUPO” por mensaje privado.",
+      "offer_reference": "EDU",
+      "narration": "¿Te presto o me prestas? Can I borrow your pen? ¿Me prestas tu pluma? Borrow: recibir algo prestado. I can lend you my pen. Te puedo prestar mi pluma. Lend: prestar a otra persona. Ahora tú: Can I... your charger? ¿Qué palabra falta? Clases en línea: manda GRUPO por mensaje privado.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "One pen between labelled receiver/lender zones; no second speaking person.",
+          "on_screen": "¿Te presto o me prestas?"
+        },
+        {
+          "id": "borrow",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Teacher models receiver viewpoint. Arrow goes toward receiver. Do not reverse the object direction.",
+          "on_screen": "Can I borrow your pen?\n¿Me prestas tu pluma?\nBORROW = recibir prestado"
+        },
+        {
+          "id": "lend",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Reset visual viewpoint completely before next line; arrow moves from lender to receiver.",
+          "on_screen": "I can lend you my pen.\nTe puedo prestar mi pluma.\nLEND = prestar"
+        },
+        {
+          "id": "practice",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Charger replaces pen; neutral blank. No answer/arrow that reveals answer. At least3s settled.",
+          "on_screen": "Can I ___ your charger?\n¿Qué palabra falta?"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Three-line native-DM CTA after practice exits.",
+          "on_screen": "Clases en línea\nManda GRUPO\npor mensaje privado."
+        }
+      ],
+      "answer_reference": "borrow",
+      "content_qa": "Los dos verbos se enseñan con direcciones claras. No traducir ambos como prestar sin explicar roles.",
+      "reuse_requirement": "Inventory existing repository/session artifacts by content ID and theme, then reuse appropriate source with the current single-host system. Do not assume old media passes.",
+      "status": "PREPARED_NOT_GENERATED",
+      "slug": "borrow_lend",
+      "batch": "teaching",
+      "narration_cues": [
+        "¿Te presto o me prestas?",
+        "Can I borrow your pen? ¿Me prestas tu pluma?",
+        "Borrow: recibir algo prestado.",
+        "I can lend you my pen. Te puedo prestar mi pluma.",
+        "Lend: prestar a otra persona.",
+        "Ahora tú: Can I... your charger? ¿Qué palabra falta?",
+        "Clases en línea: manda GRUPO por mensaje privado."
+      ],
+      "narration_character_count": 283,
+      "primary_cta": {
+        "destination": "native private message on viewing platform",
+        "keyword": "GRUPO",
+        "no_other_marketing_cta": true
+      },
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "One pen between labelled receiver/lender zones; no second speaking person.",
+          "on_screen": "¿Te presto o me prestas?"
+        },
+        {
+          "id": "borrow",
+          "visual": "Teacher models receiver viewpoint. Arrow goes toward receiver. Do not reverse the object direction.",
+          "on_screen": "Can I borrow your pen?\n¿Me prestas tu pluma?\nBORROW = recibir prestado"
+        },
+        {
+          "id": "lend",
+          "visual": "Reset visual viewpoint completely before next line; arrow moves from lender to receiver.",
+          "on_screen": "I can lend you my pen.\nTe puedo prestar mi pluma.\nLEND = prestar"
+        },
+        {
+          "id": "practice",
+          "visual": "Charger replaces pen; neutral blank. No answer/arrow that reveals answer. At least3s settled.",
+          "on_screen": "Can I ___ your charger?\n¿Qué palabra falta?"
+        },
+        {
+          "id": "cta",
+          "visual": "Three-line native-DM CTA after practice exits.",
+          "on_screen": "Clases en línea\nManda GRUPO\npor mensaje privado."
+        }
+      ],
+      "qa_requirements": [
+        "Borrow and lend describe opposite roles in the same temporary transaction, not permanent giving.",
+        "Do not animate role labels/arrow before their corresponding example is ready.",
+        "Answer key borrow is internal only.",
+        "An earlier Borrow/Lend Claude session was visible; inventory current repo before a new implementation."
+      ],
+      "production_delta": "Standalone context and clear example roles; one native-DM marketing CTA; same adult male educator.",
+      "narration_sha256": "bb3f5c38c1f2c4a3babcafe0bb05c94ec11307d79df652e8ea2933d8059dcc03",
+      "teaching_verification": {
+        "status": "PASS_WITH_APPLIED_REVISIONS",
+        "reviewed_utc": "2026-10-03T23:26:44Z",
+        "primary_sources": [
+          "https://dictionary.cambridge.org/us/grammar/british-grammar/lend-or-borrow"
+        ]
+      },
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "preferred_audio": "audio/borrow_lend_take2.mp3",
+      "alternate_audio": "audio/borrow_lend_take1.mp3",
+      "preferred_audio_sha256": "6ec2a46e11a2472fadc0b77ae16a9f26f8c6ce197d595727cb31fb6a7bf4e24d",
+      "audio_selection_basis": "The longer of the same Generate click’s two outputs, to favor an unhurried teaching pace. Technical decode and exact input verified; not an audition or ASR pass.",
+      "tts_input": "[warmly] ¿Te presto o me prestas? Can I borrow your pen? ¿Me prestas tu pluma? Borrow: recibir algo prestado. I can lend you my pen. Te puedo prestar mi pluma. Lend: prestar a otra persona. Ahora tú: Can I... your charger? ¿Qué palabra falta? Clases en línea: manda GRUPO por mensaje privado.",
+      "tts_input_characters": 292
+    },
+    {
+      "content_id": "FE261016-SCHEDULE",
+      "date": "2026-10-16",
+      "title": "Un horario para tu semana",
+      "format": "Carrusel 5 tarjetas + adaptación TikTok",
+      "audience": "Madres/padres, adolescentes 13+ y adultos con rutinas distintas",
+      "goal": "Consultas calificadas sobre horario",
+      "hook": "¿Entre semana o en fin de semana?",
+      "caption_fb_ig": "¿Qué te acomoda mejor para estudiar inglés: una hora entre semana o un bloque de fin de semana?\n\nPara clases grupales y Speaking Club ofrecemos estas opciones, en hora de Monterrey:\n• Lunes a viernes: una hora al día. Inicio de clases en punto desde las 7:00 a. m.; última clase de 9:00 a 10:00 p. m.\n• Sábado o domingo: de 7:00 a. m. a 12:00 p. m. o de 1:00 a 6:00 p. m.\n\nNiños de 6 a 12 años en grupos separados. Adolescentes de 13 años en adelante pueden estudiar con adultos. Speaking Club es para intermedios y avanzados.\n\nEscríbenos “HORARIO” por privado con la modalidad y opción que prefieres. Te orientamos sobre el siguiente paso.\n\n#FluentEnglish #InglésEnLínea #AprenderInglés",
+      "caption_tiktok": "¿Una hora de lunes a viernes o un bloque de sábado o domingo? Tenemos opciones para grupos y Speaking Club, en hora de Monterrey. Manda HORARIO por privado para conocerlas.\n\n#FluentEnglish #InglésEnLínea #AprenderInglés",
+      "cta": "HORARIO por privado: modalidad y opción preferida",
+      "offer_reference": "S0+K0+C0",
+      "narration": "¿Una hora entre semana o un bloque de fin de semana? Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo. Todos los horarios son de Monterrey. Speaking Club es para intermedios y avanzados. Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "storyboard": [
+        {
+          "id": "hook",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Adult teacher with an original weekly calendar.",
+          "on_screen": "¿Entre semana o en fin de semana?\nGrupos y Speaking Club"
+        },
+        {
+          "id": "weekday",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Five weekday blocks with one clock each; no actual enrolment calendar.",
+          "on_screen": "LUNES A VIERNES\nUna hora al día\nInicios en punto: 7 a. m. a 9 p. m."
+        },
+        {
+          "id": "weekend",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Alternative SATURDAY / SUNDAY panels; never imply both required.",
+          "on_screen": "SÁBADO O DOMINGO\n7 a. m.–12 p. m.\no 1–6 p. m."
+        },
+        {
+          "id": "context",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "Stationary text with simple clock/location graphic; no teacher assignment.",
+          "on_screen": "Hora de Monterrey\nClub: intermedios y avanzados"
+        },
+        {
+          "id": "cta",
+          "timing": "Anchor to actual narration, not fixed nominal seconds.",
+          "visual": "One native-DM action, clean three-line layout.",
+          "on_screen": "Clases en línea\nManda HORARIO\npor mensaje privado."
+        }
+      ],
+      "answer_reference": "",
+      "content_qa": "Ofrecer todas las opciones publicadas. No limitar al calendario actual del propietario. Horario ofrecido no demuestra maestro, grupo, cupo ni fecha asignados.",
+      "reuse_requirement": "Video de TikTok deriva del mismo diseño del carrusel. No una tercera pieza principal de video en Facebook/Instagram.",
+      "status": "PREPARED_NOT_GENERATED",
+      "slug": "schedule_options",
+      "batch": "tiktok_adaptation",
+      "platforms": [
+        "TikTok only"
+      ],
+      "narration_character_count": 275,
+      "primary_cta": {
+        "destination": "native TikTok private message",
+        "keyword": "HORARIO",
+        "no_other_marketing_cta": true
+      },
+      "qa_requirements": [
+        "Weekday option means one hour each Monday–Friday, not one weekly hour.",
+        "Weekend means Saturday OR Sunday five-hour block. Show both morning and afternoon options.",
+        "Every displayed time is Monterrey time. Offering an option is not a confirmed assigned class.",
+        "Club eligibility intermediate/advanced must be stated. No specific start/teacher/capacity claim."
+      ],
+      "narration_sha256": "e7389aa8c7e0d408d4b3bf482672c3dcf21c389d95eff5d6b49d0a4cb658aa61",
+      "scenes": [
+        {
+          "id": "hook",
+          "visual": "Adult teacher with an original weekly calendar.",
+          "on_screen": "¿Entre semana o en fin de semana?\nGrupos y Speaking Club"
+        },
+        {
+          "id": "weekday",
+          "visual": "Five weekday blocks with one clock each; no actual enrolment calendar.",
+          "on_screen": "LUNES A VIERNES\nUna hora al día\nInicios en punto: 7 a. m. a 9 p. m."
+        },
+        {
+          "id": "weekend",
+          "visual": "Alternative SATURDAY / SUNDAY panels; never imply both required.",
+          "on_screen": "SÁBADO O DOMINGO\n7 a. m.–12 p. m.\no 1–6 p. m."
+        },
+        {
+          "id": "context",
+          "visual": "Stationary text with simple clock/location graphic; no teacher assignment.",
+          "on_screen": "Hora de Monterrey\nClub: intermedios y avanzados"
+        },
+        {
+          "id": "cta",
+          "visual": "One native-DM action, clean three-line layout.",
+          "on_screen": "Clases en línea\nManda HORARIO\npor mensaje privado."
+        }
+      ],
+      "answer_reference_visibility": "Internal teaching QA key only; do not reveal final practice answer in the finished video.",
+      "caption_fb_ig_usage": "Historical source-family context only. No new Facebook or Instagram video placement; existing carousels remain owned by scheduler.",
+      "preferred_audio": "audio/schedule_options_take2.mp3",
+      "alternate_audio": "audio/schedule_options_take1.mp3",
+      "preferred_audio_sha256": "d3fe80fb45faea05e6db191619fce56c2003bec892d2362b435e09950b405565",
+      "audio_selection_basis": "The longer of the same Generate click’s two outputs, to favor an unhurried teaching pace. Technical decode and exact input verified; not an audition or ASR pass.",
+      "tts_input": "[warmly] ¿Una hora entre semana o un bloque de fin de semana? Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo. Todos los horarios son de Monterrey. Speaking Club es para intermedios y avanzados. Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "tts_input_characters": 284
+    }
+  ],
+  "grammar_verification": "Independent six-topic review PASS after applied used-to meaning, continuing-now context, and clarification-role fixes.",
+  "current_browser": "Narration downloaded through supported UI; ready for integration in existing Claude Code session.",
+  "audio_planning": {
+    "status": "THREE_GENERATIONS_COMPLETE",
+    "initial_balance": 39068,
+    "charges": [
+      214,
+      292,
+      284
+    ],
+    "final_balance": 38278,
+    "total_credits_used": 790,
+    "extra_purchases": false,
+    "voice": "Luis Guillermo - Warm and Engaging",
+    "locale": "Mexican Spanish stock voice",
+    "model": "Elevenv4",
+    "settings": {
+      "stability": 0.5,
+      "similarity": 0.75,
+      "language_override": false,
+      "audio_effects": false,
+      "format": "MP344.1k128kbps"
+    },
+    "audition": "UNRUN",
+    "ASR": "UNRUN"
+  },
+  "release_gates": [
+    "Actual narrated MP4 generated in Claude Code",
+    "Independent decode/format/source cue identity and sync checks",
+    "Independent full-duration visual review with dense transition checks",
+    "Genuine auditory listening/subjective full AV check, or owner direction addressing unresolved gate",
+    "Actual target-app cover/overlay/audio playback checks",
+    "Required native AI/own-brand disclosures",
+    "No duplicate published/scheduled items; verified native schedule receipt"
+  ],
+  "production_batches": [
+    {
+      "batch": 1,
+      "ids": [
+        "FE261012-CANHAVE",
+        "FE261014-BORROW",
+        "FE261016-SCHEDULE"
+      ]
+    }
+  ],
+  "final_consistency_review": {
+    "status": "PASS_AFTER_BILLING_UNIT_FIX",
+    "reviewed_utc": "2026-10-03T23:30:54Z",
+    "scope": "All nine CTAs, storyboards versus scenes, and business-claim wording; six revised teaching narrations and captions.",
+    "correction": "Removed per-class billing wording from private/company reference caption. No scheduled post changed."
+  },
+  "active_scope": "Batch1 only: Oct12,14,16",
+  "audio_files": [
+    {
+      "file": "borrow_lend_take1.mp3",
+      "sha256": "67bd6288da7c240d74e2efd5f6f5bcf0fade5ead37ce434a418d7906bca13cee",
+      "bytes": 374711,
+      "duration": 22.360813,
+      "sample_rate": "44100",
+      "full_decode_exit": 0,
+      "decode_errors": ""
+    },
+    {
+      "file": "borrow_lend_take2.mp3",
+      "sha256": "6ec2a46e11a2472fadc0b77ae16a9f26f8c6ce197d595727cb31fb6a7bf4e24d",
+      "bytes": 401460,
+      "duration": 24.032625,
+      "sample_rate": "44100",
+      "full_decode_exit": 0,
+      "decode_errors": ""
+    },
+    {
+      "file": "can_have_take2.mp3",
+      "sha256": "894d781de770c73a4b10ff0b8cf2997af69fff777dfd7af944c8599540a51421",
+      "bytes": 282342,
+      "duration": 16.58775,
+      "sample_rate": "44100",
+      "full_decode_exit": 0,
+      "decode_errors": ""
+    },
+    {
+      "file": "can_have_take1.mp3",
+      "sha256": "3ea7c4ab7190385de059747e125364b9c5f7281b3f69740d6bbca30bf5d6f072",
+      "bytes": 250577,
+      "duration": 14.602438,
+      "sample_rate": "44100",
+      "full_decode_exit": 0,
+      "decode_errors": ""
+    },
+    {
+      "file": "schedule_options_take1.mp3",
+      "sha256": "de827547c22a67f69f878bae15bd2f206527392a3a3617c22d15f967faca0558",
+      "bytes": 271057,
+      "duration": 15.882438,
+      "sample_rate": "44100",
+      "full_decode_exit": 0,
+      "decode_errors": ""
+    },
+    {
+      "file": "schedule_options_take2.mp3",
+      "sha256": "d3fe80fb45faea05e6db191619fce56c2003bec892d2362b435e09950b405565",
+      "bytes": 297806,
+      "duration": 17.55425,
+      "sample_rate": "44100",
+      "full_decode_exit": 0,
+      "decode_errors": ""
+    }
+  ]
+}

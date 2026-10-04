@@ -1,0 +1,130 @@
+{
+  "video": "schedule_options",
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "masterFile": "audio/originals/schedule_options_take2.mp3",
+  "masterSha256": "d3fe80fb45faea05e6db191619fce56c2003bec892d2362b435e09950b405565",
+  "sampleRate": 44100,
+  "fullMasterSamples": 774144,
+  "fullMasterSeconds": 17.554285714,
+  "retainedCueSamples": 774144,
+  "retainedCueSeconds": 17.554285714,
+  "masterSamplesNotInAnyCue": 0,
+  "finalDurationSeconds": 26.1,
+  "addedSilenceSeconds": 8.545714,
+  "lead": 0.4,
+  "endHold": 3.4,
+  "cutEndpoints": "EXACT integer sample partitions (contiguous; every source sample retained exactly once)",
+  "note": "Speech is never sped up, trimmed or cut. Only silence is added (lead, per-cue gaps, end hold).",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "¿Una hora entre semana o un bloque de fin de semana?",
+      "caption": "¿Una hora entre semana o un bloque de fin de semana?",
+      "cueFile": "audio/cues/schedule_options_c01.wav",
+      "cueWavSamples": 130988,
+      "sourceSampleRange": [
+        0,
+        130988
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 0,
+      "sourceEndSeconds": 2.970249,
+      "finalStart": 0.4,
+      "finalEnd": 3.37,
+      "offsetSeconds": 0.4,
+      "gapBeforeAdded": 0,
+      "speechActivityFinal": [
+        0.4,
+        3.086
+      ]
+    },
+    {
+      "id": "c02",
+      "text": "Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.",
+      "caption": "Para grupos y Speaking Club hay opciones de lunes a viernes, sábado o domingo.",
+      "cueFile": "audio/cues/schedule_options_c02.wav",
+      "cueWavSamples": 242005,
+      "sourceSampleRange": [
+        130988,
+        372993
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 2.970249,
+      "sourceEndSeconds": 8.457891,
+      "finalStart": 3.77,
+      "finalEnd": 9.258,
+      "offsetSeconds": 0.799751,
+      "gapBeforeAdded": 0.4,
+      "speechActivityFinal": [
+        4.054,
+        8.964
+      ]
+    },
+    {
+      "id": "c03",
+      "text": "Todos los horarios son de Monterrey.",
+      "caption": "Todos los horarios son de Monterrey.",
+      "cueFile": "audio/cues/schedule_options_c03.wav",
+      "cueWavSamples": 96974,
+      "sourceSampleRange": [
+        372993,
+        469967
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 8.457891,
+      "sourceEndSeconds": 10.656848,
+      "finalStart": 12.458,
+      "finalEnd": 14.657,
+      "offsetSeconds": 4.000109,
+      "gapBeforeAdded": 3.2,
+      "speechActivityFinal": [
+        12.751,
+        14.343
+      ]
+    },
+    {
+      "id": "c04",
+      "text": "Speaking Club es para intermedios y avanzados.",
+      "caption": "Speaking Club es para intermedios y avanzados.",
+      "cueFile": "audio/cues/schedule_options_c04.wav",
+      "cueWavSamples": 141036,
+      "sourceSampleRange": [
+        469967,
+        611003
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 10.656848,
+      "sourceEndSeconds": 13.854943,
+      "finalStart": 14.957,
+      "finalEnd": 18.155,
+      "offsetSeconds": 4.300152,
+      "gapBeforeAdded": 0.3,
+      "speechActivityFinal": [
+        15.271,
+        17.908
+      ]
+    },
+    {
+      "id": "c05",
+      "text": "Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "caption": "Manda HORARIO por privado y cuéntanos qué opción prefieres.",
+      "cueFile": "audio/cues/schedule_options_c05.wav",
+      "cueWavSamples": 163141,
+      "sourceSampleRange": [
+        611003,
+        774144
+      ],
+      "rangeLengthMinusWavSamples": 0,
+      "sourceStartSeconds": 13.854943,
+      "sourceEndSeconds": 17.554286,
+      "finalStart": 18.955,
+      "finalEnd": 22.654,
+      "offsetSeconds": 5.100057,
+      "gapBeforeAdded": 0.8,
+      "speechActivityFinal": [
+        19.202,
+        22.466
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ const inside = t => isl.some(([a, b]) => t >= a && t <= b);
 const R = { islands: isl.length, manOpenInIsland: 0, manFramesInIsland: 0, manOpenOutsideIsland: 0, womanOpenFrames: 0, perIslandOpenFraction: [] };
 const per = isl.map(() => ({ n: 0, o: 0 }));
 for (let f = 0; f < N; f++) { const t = f / FPS; /* avatars are settled between entrance (0.7 s) and exit */ if (t < 0.8) continue; if (t > K.avOut - .05) break; const om = open(man, f), ow = false; if (ow) R.womanOpenFrames++;
-  const k = isl.findIndex(([a, b]) => t >= a && t <= b); if (k >= 0) { R.manFramesInIsland++; per[k].n++; if (om) { R.manOpenInIsland++; per[k].o++; } } else if (om) R.manOpenOutsideIsland++; }
+  const k = isl.findIndex(([a, b]) => t >= a && t <= b); if (k >= 0) { R.manFramesInIsland++; per[k].n++; if (om) { R.manOpenInIsland++; per[k].o++; } } else if (om) { R.manOpenOutsideIsland++; (R.outsideTimes = R.outsideTimes || []).push(+t.toFixed(3)); } }
 R.perIslandOpenFraction = per.map((p, i) => `${isl[i][0].toFixed(2)}-${isl[i][1].toFixed(2)}s:${p.n ? (p.o / p.n).toFixed(2) : 'n/a'}`);
 R.pass = R.manOpenOutsideIsland === 0 && R.womanOpenFrames === 0 && per.every(p => p.n === 0 || p.o / p.n > .3);
 fs.writeFileSync(path.join(L.ROOT, 'qa', `${name}_mouth_casting.json`), JSON.stringify(R, null, 2)); console.log(JSON.stringify(R, null, 1)); process.exit(R.pass ? 0 : 1);

@@ -35,3 +35,8 @@ ElevenLabs only for short marketing/social videos via supplied files, never for 
 
 6. Casting rule: one narrator voice = one on-screen presenter (the right male character for the Luis Guillermo recording); the other character is a silent listener. Mouth movement follows measured speech islands only.
 7. Presenter rule: one adult male host (src/host.js) for the Luis voice; scene content is drawn through `KIT.content` (scaled group) so the host's head/shoulders/torso stay visible above the caption bar. Frames, not labels, decide whether the casting reads correctly.
+
+## October batch 1 additions (additive)
+- `node build/batch1_manifests.js` -> measured speech islands + declared cue groups + integer sample partitions (fails if the island count differs); then `partition_split.js`, `retime.js`, `./build/render_batch1.sh`.
+- Extra gates: `verify_batch1_source.js` (hashes + bit-identical partitions), `holds_plan.js` (hold minima + sequential scenes), `verify_text_audit.js` (270x480 effective size, text overlaps, answer-leak/forbidden strings, caption clearance of the mouth), `verify_holds.js` (encoded stationary windows), `transition_sheets.js` (phone-size contact sheets).
+- Captions that would exceed 3 lines must auto-fit (`capFit`) so the bar never covers the host's mouth. Keep settled elements static (no idle bobbing/rotation) during reading holds.

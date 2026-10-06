@@ -1,0 +1,46 @@
+{
+  "file": "looking_forward_to_oct06_SHORT_v2_QA-pending.mp4",
+  "cues": [
+    {
+      "id": "c01",
+      "text": "I’m looking forward to seeing you.",
+      "correlation": 0.995,
+      "lagMs": 5
+    },
+    {
+      "id": "c02",
+      "text": "I’m looking forward to seeing you.",
+      "correlation": 0.999,
+      "lagMs": 5
+    }
+  ],
+  "captions": [
+    {
+      "at": 1.21,
+      "expect": "ON c01",
+      "creamPixels": 6375
+    },
+    {
+      "at": 5.31,
+      "expect": "ON c02",
+      "creamPixels": 6371
+    },
+    {
+      "at": 3.26,
+      "expect": "OFF (gap c01-c02)",
+      "creamPixels": 0
+    }
+  ],
+  "loudness": {
+    "integratedLUFS": -17.6,
+    "loudnessRangeLU": 15.6,
+    "truePeakdBTP": -5.2
+  },
+  "finalHold": {
+    "from": 6.29,
+    "to": 11,
+    "noCueActiveInLastSeconds": true,
+    "staticSecondsAfterLastSpeech": 4.71
+  },
+  "pass": true
+}

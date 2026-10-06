@@ -1,0 +1,78 @@
+{
+  "file": "looking_forward_to_oct06_SHORT_v2_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "lesson_card_settled",
+      "plannedWindow": [
+        2.5,
+        6.59
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 4.1,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            711,
+            680,
+            206
+          ],
+          "frames": 123,
+          "longestStationaryRunSeconds": 4.1,
+          "maxMeanAbsDiffToPrevious": 0,
+          "maxMeanAbsDiffToFirst": 0.01
+        }
+      ]
+    },
+    {
+      "id": "offer_card_phase1",
+      "plannedWindow": [
+        1.8,
+        6.59
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 4.8,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            396,
+            680,
+            276
+          ],
+          "frames": 144,
+          "longestStationaryRunSeconds": 4.8,
+          "maxMeanAbsDiffToPrevious": 0,
+          "maxMeanAbsDiffToFirst": 0.01
+        }
+      ]
+    },
+    {
+      "id": "closing_offer_cta",
+      "plannedWindow": [
+        7.69,
+        11
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 3.3,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            396,
+            680,
+            504
+          ],
+          "frames": 99,
+          "longestStationaryRunSeconds": 3.3,
+          "maxMeanAbsDiffToPrevious": 0.26,
+          "maxMeanAbsDiffToFirst": 0.26
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

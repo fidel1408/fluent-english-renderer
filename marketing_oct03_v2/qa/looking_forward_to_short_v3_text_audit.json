@@ -1,0 +1,151 @@
+{
+  "video": "looking_forward_to_short_v3",
+  "frames": 330,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "Tu primera semana",
+      "window": [
+        0,
+        10.94
+      ],
+      "framesChecked": 328,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "de inglés",
+      "window": [
+        0,
+        10.94
+      ],
+      "framesChecked": 328,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "GRATIS",
+      "window": [
+        0,
+        10.94
+      ],
+      "framesChecked": 328,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Solo pagas si decides",
+      "window": [
+        1.8,
+        10.94
+      ],
+      "framesChecked": 274,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "continuar.",
+      "window": [
+        1.8,
+        10.94
+      ],
+      "framesChecked": 274,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "looking forward",
+      "window": [
+        0.05,
+        6.59
+      ],
+      "framesChecked": 196,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "to seeing you.",
+      "window": [
+        0.05,
+        6.59
+      ],
+      "framesChecked": 196,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Tengo muchas ganas",
+      "window": [
+        2.4,
+        6.59
+      ],
+      "framesChecked": 126,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "de verte.",
+      "window": [
+        2.4,
+        6.59
+      ],
+      "framesChecked": 126,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Escríbenos",
+      "window": [
+        7.84,
+        10.94
+      ],
+      "framesChecked": 93,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "SEMANA GRATIS",
+      "window": [
+        7.84,
+        10.94
+      ],
+      "framesChecked": 93,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/GRUPO|Manda|mensaje privado/",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/\\$|MXN|precio|zoom|\\[|quinta|5 semanas|cuatro semanas|semana extra|extra|inicio|empieza|comienza|garant|resultado|días|IVA/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "SEMANA GRATIS",
+    "enteredAt": 7.54,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 13,
+  "captionGlyphBounds": {
+    "xMin": 104.5,
+    "xMax": 855.5,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
+  "captionClearsMouth": true,
+  "pass": true
+}

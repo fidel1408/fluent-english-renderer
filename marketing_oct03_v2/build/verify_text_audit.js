@@ -20,6 +20,7 @@ const RULES = {
   trial_faq: { required: K.required, forbiddenAnywhere: [/\$|MXN|\bIVA\b|gratis|quinta|quinto|5 semanas|reserv|apertura|noviembre|privad[oa]s? .*prueba|empresa|asignad|maestro|cupo|enlace de pago|seguir|follow|guarda|link|https?:|www\.|\.com/i], forbiddenFrom: [], cta: [K.cta, 'GRUPO'] },
   looking_forward_to_short: { required: K.required, forbiddenAnywhere: [/\$|MXN|precio|gratis|zoom|\[|\/ ?[a-z]+ ?\/|inicio|empieza|comienza|garant|resultado|aprende en|días/i], forbiddenFrom: [], cta: [K.ctaEarly, 'GRUPO'] },
   looking_forward_to_short_v2: { required: K.required, forbiddenAnywhere: [/GRUPO|Manda|mensaje privado/, /\$|MXN|precio|zoom|\[|quinta|5 semanas|cuatro semanas|semana extra|extra|inicio|empieza|comienza|garant|resultado|días|IVA/i], forbiddenFrom: [], cta: [K.morphE, 'SEMANA GRATIS'] },
+  looking_forward_to_short_v3: { required: K.required, forbiddenAnywhere: [/GRUPO|Manda|mensaje privado/, /\$|MXN|precio|zoom|\[|quinta|5 semanas|cuatro semanas|semana extra|extra|inicio|empieza|comienza|garant|resultado|días|IVA/i], forbiddenFrom: [], cta: [K.morphE, 'SEMANA GRATIS'] },
 }[name];
 (async () => {
   const S = await L.serve(), b = await chromium.launch(), p = await b.newPage({ viewport: { width: 1080, height: 1920 } });

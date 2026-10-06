@@ -1,0 +1,762 @@
+[
+{
+"t": 6.7,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1149,
+"coralBelowCard": 0,
+"runs": [
+[
+680,
+687
+],
+[
+1085,
+1136
+],
+[
+1139,
+1149
+]
+]
+},
+{
+"t": 6.733,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1149,
+"coralBelowCard": 0,
+"runs": [
+[
+680,
+687
+],
+[
+1085,
+1137
+],
+[
+1139,
+1149
+]
+]
+},
+{
+"t": 6.767,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1149,
+"coralBelowCard": 0,
+"runs": [
+[
+680,
+687
+],
+[
+1086,
+1137
+],
+[
+1139,
+1149
+]
+]
+},
+{
+"t": 6.8,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1149,
+"coralBelowCard": 0,
+"runs": [
+[
+680,
+687
+],
+[
+1086,
+1137
+],
+[
+1141,
+1149
+]
+]
+},
+{
+"t": 6.833,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1137,
+1137
+],
+[
+1141,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 6.867,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1137,
+1137
+],
+[
+1141,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 6.9,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1086,
+1135
+],
+[
+1141,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 6.933,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1137,
+1137
+],
+[
+1141,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 6.967,
+"cardBottom": 687,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1137,
+1137
+],
+[
+1141,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 7.0,
+"cardBottom": 689,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1137,
+1137
+],
+[
+1141,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 7.033,
+"cardBottom": 691,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1086,
+1135
+],
+[
+1141,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 7.067,
+"cardBottom": 695,
+"lastCoralRunEnd_x540": 1161,
+"coralBelowCard": 0,
+"runs": [
+[
+1062,
+1062
+],
+[
+1086,
+1149
+],
+[
+1161,
+1161
+]
+]
+},
+{
+"t": 7.1,
+"cardBottom": 703,
+"lastCoralRunEnd_x540": 1149,
+"coralBelowCard": 0,
+"runs": [
+[
+696,
+703
+],
+[
+1062,
+1062
+],
+[
+1086,
+1149
+]
+]
+},
+{
+"t": 7.133,
+"cardBottom": 715,
+"lastCoralRunEnd_x540": 1149,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+708,
+715
+],
+[
+1086,
+1149
+]
+]
+},
+{
+"t": 7.167,
+"cardBottom": 733,
+"lastCoralRunEnd_x540": 1149,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+726,
+733
+],
+[
+1086,
+1149
+]
+]
+},
+{
+"t": 7.2,
+"cardBottom": 757,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+749,
+757
+],
+[
+1086,
+1150
+]
+]
+},
+{
+"t": 7.233,
+"cardBottom": 787,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+780,
+787
+],
+[
+1061,
+1061
+],
+[
+1086,
+1150
+]
+]
+},
+{
+"t": 7.267,
+"cardBottom": 821,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+813,
+821
+],
+[
+1061,
+1061
+],
+[
+1086,
+1150
+]
+]
+},
+{
+"t": 7.3,
+"cardBottom": 847,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+840,
+847
+],
+[
+1086,
+1150
+]
+]
+},
+{
+"t": 7.333,
+"cardBottom": 867,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+861,
+867
+],
+[
+1087,
+1150
+]
+]
+},
+{
+"t": 7.367,
+"cardBottom": 883,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+875,
+883
+],
+[
+1063,
+1063
+],
+[
+1087,
+1150
+]
+]
+},
+{
+"t": 7.4,
+"cardBottom": 893,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+886,
+893
+],
+[
+1087,
+1150
+]
+]
+},
+{
+"t": 7.433,
+"cardBottom": 899,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+892,
+899
+],
+[
+1087,
+1150
+]
+]
+},
+{
+"t": 7.467,
+"cardBottom": 903,
+"lastCoralRunEnd_x540": 1150,
+"coralBelowCard": 0,
+"runs": [
+[
+480,
+560
+],
+[
+896,
+903
+],
+[
+1087,
+1150
+]
+]
+},
+{
+"t": 7.5,
+"cardBottom": 904,
+"lastCoralRunEnd_x540": 1241,
+"coralBelowCard": 0,
+"runs": [
+[
+1078,
+1078
+],
+[
+1080,
+1151
+],
+[
+1241,
+1241
+]
+]
+},
+{
+"t": 7.533,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1241,
+"coralBelowCard": 0,
+"runs": [
+[
+1071,
+1071
+],
+[
+1078,
+1151
+],
+[
+1241,
+1241
+]
+]
+},
+{
+"t": 7.567,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1241,
+"coralBelowCard": 0,
+"runs": [
+[
+1071,
+1071
+],
+[
+1078,
+1151
+],
+[
+1241,
+1241
+]
+]
+},
+{
+"t": 7.6,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1151,
+"coralBelowCard": 0,
+"runs": [
+[
+813,
+813
+],
+[
+897,
+905
+],
+[
+1087,
+1151
+]
+]
+},
+{
+"t": 7.633,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1151,
+"coralBelowCard": 0,
+"runs": [
+[
+838,
+866
+],
+[
+897,
+905
+],
+[
+1087,
+1151
+]
+]
+},
+{
+"t": 7.667,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1151,
+"coralBelowCard": 0,
+"runs": [
+[
+897,
+905
+],
+[
+1054,
+1054
+],
+[
+1087,
+1151
+]
+]
+},
+{
+"t": 7.7,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1151,
+"coralBelowCard": 0,
+"runs": [
+[
+897,
+905
+],
+[
+1054,
+1054
+],
+[
+1087,
+1151
+]
+]
+},
+{
+"t": 7.733,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1152,
+"coralBelowCard": 0,
+"runs": [
+[
+897,
+905
+],
+[
+1054,
+1054
+],
+[
+1087,
+1152
+]
+]
+},
+{
+"t": 7.767,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1152,
+"coralBelowCard": 0,
+"runs": [
+[
+897,
+905
+],
+[
+1054,
+1054
+],
+[
+1087,
+1152
+]
+]
+},
+{
+"t": 7.8,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1152,
+"coralBelowCard": 0,
+"runs": [
+[
+897,
+905
+],
+[
+1054,
+1054
+],
+[
+1087,
+1152
+]
+]
+},
+{
+"t": 7.833,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1151,
+"coralBelowCard": 0,
+"runs": [
+[
+897,
+905
+],
+[
+1054,
+1054
+],
+[
+1087,
+1151
+]
+]
+},
+{
+"t": 7.867,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1151,
+"coralBelowCard": 0,
+"runs": [
+[
+838,
+867
+],
+[
+897,
+905
+],
+[
+1088,
+1151
+]
+]
+},
+{
+"t": 7.9,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1152,
+"coralBelowCard": 0,
+"runs": [
+[
+838,
+867
+],
+[
+897,
+905
+],
+[
+1088,
+1152
+]
+]
+},
+{
+"t": 7.933,
+"cardBottom": 905,
+"lastCoralRunEnd_x540": 1152,
+"coralBelowCard": 0,
+"runs": [
+[
+838,
+867
+],
+[
+897,
+905
+],
+[
+1088,
+1152
+]
+]
+}
+]

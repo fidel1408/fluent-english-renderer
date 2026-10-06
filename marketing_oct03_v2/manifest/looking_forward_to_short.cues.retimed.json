@@ -1,0 +1,77 @@
+{
+  "video": "looking_forward_to_short",
+  "title": "LOOKING FORWARD TO - SHORT (10-15 s)",
+  "fps": 30,
+  "lead": 0.35,
+  "endHold": 4.6,
+  "targetSeconds": [
+    10,
+    15
+  ],
+  "status": "TIMED_FROM_SUPPLIED_AUDIO",
+  "mixGainDb": 1.3,
+  "note": "Built from the EXISTING licensed ElevenLabs master only; no new speech, no speed/pitch change, no fades. Only silence is added.",
+  "cues": [
+    {
+      "id": "c01",
+      "who": "narrator",
+      "lang": "en",
+      "capFit": true,
+      "text": "I’m looking forward to seeing you.",
+      "est": 1.9,
+      "gap": 0,
+      "file": "audio/cues/looking_forward_to_short_c01.wav",
+      "start": 0.35,
+      "end": 2.25,
+      "audio": "audio/cues/looking_forward_to_short_c01.wav",
+      "audioSeconds": 1.9,
+      "padHead": 0.119,
+      "padTail": 0.308,
+      "cs": 0.469,
+      "ce": 1.942,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.119,
+          "e": 1.592
+        }
+      ],
+      "sourceSampleRange": [
+        206847,
+        290619
+      ],
+      "sourceNote": "existing cue c03"
+    },
+    {
+      "id": "c02",
+      "who": "narrator",
+      "lang": "en",
+      "capFit": true,
+      "text": "I’m looking forward to seeing you.",
+      "est": 1.9,
+      "gap": 2.2,
+      "file": "audio/cues/looking_forward_to_short_c02.wav",
+      "start": 4.45,
+      "end": 6.35,
+      "audio": "audio/cues/looking_forward_to_short_c02.wav",
+      "audioSeconds": 1.9,
+      "padHead": 0.119,
+      "padTail": 0.308,
+      "cs": 4.569,
+      "ce": 6.042,
+      "marks": {},
+      "islands": [
+        {
+          "s": 0.119,
+          "e": 1.592
+        }
+      ],
+      "sourceSampleRange": [
+        206847,
+        290619
+      ],
+      "sourceNote": "repeat of the same existing cue c03 samples (listen-again)"
+    }
+  ],
+  "duration": 11
+}

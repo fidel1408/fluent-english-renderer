@@ -1,0 +1,12 @@
+{
+  "islands": 2,
+  "manOpenInIsland": 79,
+  "manFramesInIsland": 79,
+  "manOpenOutsideIsland": 0,
+  "womanOpenFrames": 0,
+  "perIslandOpenFraction": [
+    "0.47-1.94s:1.00",
+    "4.57-6.04s:1.00"
+  ],
+  "pass": true
+}

@@ -1,0 +1,105 @@
+{
+  "video": "looking_forward_to_short",
+  "frames": 330,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "looking forward",
+      "window": [
+        0.6,
+        6.59
+      ],
+      "framesChecked": 180,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "to seeing you.",
+      "window": [
+        0.6,
+        6.59
+      ],
+      "framesChecked": 180,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Tengo muchas ganas",
+      "window": [
+        2.4,
+        6.59
+      ],
+      "framesChecked": 126,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "de verte.",
+      "window": [
+        2.4,
+        6.59
+      ],
+      "framesChecked": 126,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Clases en línea.",
+      "window": [
+        1.9,
+        10.94
+      ],
+      "framesChecked": 271,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "GRUPO",
+      "window": [
+        1.9,
+        10.94
+      ],
+      "framesChecked": 271,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "por mensaje privado.",
+      "window": [
+        1.9,
+        10.94
+      ],
+      "framesChecked": 271,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/\\$|MXN|precio|gratis|zoom|\\[|\\/ ?[a-z]+ ?\\/|inicio|empieza|comienza|garant|resultado|aprende en|días/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "GRUPO",
+    "enteredAt": 1.3,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 11,
+  "captionGlyphBounds": {
+    "xMin": 104.5,
+    "xMax": 855.5,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
+  "captionClearsMouth": true,
+  "pass": true
+}

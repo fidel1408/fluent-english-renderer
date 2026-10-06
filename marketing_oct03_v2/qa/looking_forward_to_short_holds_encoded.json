@@ -1,0 +1,54 @@
+{
+  "file": "looking_forward_to_oct06_SHORT_v1_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "lesson_card_settled",
+      "plannedWindow": [
+        2.5,
+        6.59
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 4.1,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            431,
+            680,
+            249
+          ],
+          "frames": 123,
+          "longestStationaryRunSeconds": 4.1,
+          "maxMeanAbsDiffToPrevious": 0,
+          "maxMeanAbsDiffToFirst": 0.01
+        }
+      ]
+    },
+    {
+      "id": "closing_cta",
+      "plannedWindow": [
+        7.69,
+        11
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 3.3,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            405,
+            680,
+            292
+          ],
+          "frames": 99,
+          "longestStationaryRunSeconds": 3.3,
+          "maxMeanAbsDiffToPrevious": 0.3,
+          "maxMeanAbsDiffToFirst": 0.42
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

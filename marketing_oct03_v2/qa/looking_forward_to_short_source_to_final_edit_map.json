@@ -1,0 +1,86 @@
+{
+  "video": "looking_forward_to_short",
+  "masterFile": "audio/originals/elevenlabs_looking_forward_to_oOm8KSHv1UWea0AWeoR2.mp3",
+  "masterSha256": "0ff9f2a771e642162ea868476c9d4ed7699297ca41676caba3d63ce582f4feb2",
+  "sampleRate": 44100,
+  "formula": "video_time(source_time) = cue.finalStart + source_time - cue.sourceStart",
+  "finalDurationSeconds": 11,
+  "lead": 0.35,
+  "endHold": 4.6,
+  "cues": [
+    {
+      "id": "c01",
+      "text": "I’m looking forward to seeing you.",
+      "source": "existing cue c03",
+      "sourceSampleRange": [
+        206847,
+        290619
+      ],
+      "sourceStartSeconds": 4.690408,
+      "sourceEndSeconds": 6.59,
+      "cueWavSamples": 83772,
+      "finalStart": 0.35,
+      "finalEnd": 2.25,
+      "speechActivityFinal": [
+        0.469,
+        1.942
+      ],
+      "gapBeforeAdded": 0
+    },
+    {
+      "id": "c02",
+      "text": "I’m looking forward to seeing you.",
+      "source": "repeat of the same existing cue c03 samples (listen-again)",
+      "sourceSampleRange": [
+        206847,
+        290619
+      ],
+      "sourceStartSeconds": 4.690408,
+      "sourceEndSeconds": 6.59,
+      "cueWavSamples": 83772,
+      "finalStart": 4.45,
+      "finalEnd": 6.35,
+      "speechActivityFinal": [
+        4.569,
+        6.042
+      ],
+      "gapBeforeAdded": 2.2
+    }
+  ],
+  "cutChecks": {
+    "identicalToExistingCueWavSamples": {
+      "c01": true,
+      "c02_repeat_of_c01": true,
+      "unusedSpanishTail_vs_existing_c01_tail": true
+    },
+    "edgeSampleAbs": {
+      "c01_and_c02": [
+        11,
+        1
+      ]
+    },
+    "unusedSpanishTail": {
+      "note": "Existing Spanish tail \"tengo muchas ganas de verte\" (existing cue c01 after its inner 0.285 s silence, from sample 48004) was NOT used: its measured final F0 contour rises (~97 Hz -> ~235 Hz over the last 0.15 s), i.e. question-like intonation inherited from \"¿Cómo dices: ...?\", which would contradict a statement caption. The Spanish meaning is on-screen text only. A statement-intonation spoken Spanish line would be a missing line (not generated).",
+      "sampleRange": [
+        48004,
+        141360
+      ]
+    },
+    "cutRms20msDbfsAroundEdges": {
+      "c01_start": [
+        -61.1,
+        -63.8
+      ],
+      "c01_end": [
+        -87.3,
+        -87
+      ]
+    },
+    "innerSilenceSeconds": [
+      0.934444,
+      1.24259
+    ],
+    "cutSample": 48004,
+    "note": "RMS windows are 20 ms before/after each cut; low values mean the cut sits in silence. Not a listening check."
+  }
+}

@@ -18,6 +18,7 @@ const RULES = {
   since_for: { required: K.required, forbiddenAnywhere: [/2025|2026|octubre|october|noviembre|garantiz|precio|gratis|seguir|follow|guarda|link|https?:|www\.|\.com/i], forbiddenFrom: [[K.prIn, /for two years|since 2024|Vivo aquí|FOR \+|SINCE \+|EJEMPLO|hace dos años|desde 2024/i]], cta: [K.cta, 'GRUPO'] },
   used_to: { required: K.required, forbiddenAnywhere: [/nunca|never|ya no puedes|imposible|can'?t|cannot|Halloween|get used|be used|precio|gratis|seguir|follow|guarda|link|https?:|www\.|\.com/i], forbiddenFrom: [[K.prIn, /\bplay\b|soccer|fútbol|USED TO|EJEMPLO|REGLA|ANTES/]], cta: [K.cta, 'GRUPO'] },
   trial_faq: { required: K.required, forbiddenAnywhere: [/\$|MXN|\bIVA\b|gratis|quinta|quinto|5 semanas|reserv|apertura|noviembre|privad[oa]s? .*prueba|empresa|asignad|maestro|cupo|enlace de pago|seguir|follow|guarda|link|https?:|www\.|\.com/i], forbiddenFrom: [], cta: [K.cta, 'GRUPO'] },
+  looking_forward_to_short: { required: K.required, forbiddenAnywhere: [/\$|MXN|precio|gratis|zoom|\[|\/ ?[a-z]+ ?\/|inicio|empieza|comienza|garant|resultado|aprende en|días/i], forbiddenFrom: [], cta: [K.ctaEarly, 'GRUPO'] },
 }[name];
 (async () => {
   const S = await L.serve(), b = await chromium.launch(), p = await b.newPage({ viewport: { width: 1080, height: 1920 } });

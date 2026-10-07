@@ -1,0 +1,211 @@
+{
+  "video": "FE261007_FORWARD_HAIKU_offer_v1",
+  "frames": 873,
+  "minEffectivePx270x480": 12.9,
+  "belowThreshold": [],
+  "overlaps": [],
+  "required": [
+    {
+      "text": "Tu primera semana",
+      "window": [
+        0,
+        29.1
+      ],
+      "framesChecked": 873,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "de inglés",
+      "window": [
+        0,
+        29.1
+      ],
+      "framesChecked": 873,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "GRATIS",
+      "window": [
+        0,
+        29.1
+      ],
+      "framesChecked": 873,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Solo pagas si decides",
+      "window": [
+        0,
+        29.1
+      ],
+      "framesChecked": 873,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "continuar.",
+      "window": [
+        0,
+        29.1
+      ],
+      "framesChecked": 873,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "I’m looking forward",
+      "window": [
+        0,
+        8.95
+      ],
+      "framesChecked": 268,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "to seeing you.",
+      "window": [
+        0,
+        8.95
+      ],
+      "framesChecked": 268,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Tengo muchas ganas",
+      "window": [
+        0,
+        8.95
+      ],
+      "framesChecked": 268,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "de verte.",
+      "window": [
+        0,
+        8.95
+      ],
+      "framesChecked": 268,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "look forward to",
+      "window": [
+        9.55,
+        16.22
+      ],
+      "framesChecked": 201,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "+ verbo en -ing",
+      "window": [
+        9.55,
+        16.22
+      ],
+      "framesChecked": 201,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "seeing you.",
+      "window": [
+        9.55,
+        16.22
+      ],
+      "framesChecked": 201,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "+ sustantivo",
+      "window": [
+        16.82,
+        19.72
+      ],
+      "framesChecked": 87,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "the weekend.",
+      "window": [
+        16.82,
+        19.72
+      ],
+      "framesChecked": 87,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "¿Cómo la completas?",
+      "window": [
+        20.75,
+        24.76
+      ],
+      "framesChecked": 120,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "Escríbenos",
+      "window": [
+        25.56,
+        29.1
+      ],
+      "framesChecked": 106,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    },
+    {
+      "text": "SEMANA GRATIS",
+      "window": [
+        25.56,
+        29.1
+      ],
+      "framesChecked": 106,
+      "framesMissingAtFullOpacity": 0,
+      "ok": true
+    }
+  ],
+  "forbidden": [
+    {
+      "rule": "/GRUPO|Manda|mensaje privado|Clases en l[ií]nea|CLUB/",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    },
+    {
+      "rule": "/\\$|MXN|precio|zoom|\\[|quinta|5 semanas|cuatro semanas|semana extra|extra|inicio|empieza|comienza|garant|resultado|días|IVA/i",
+      "anywhere": true,
+      "firstHit": null,
+      "ok": true
+    }
+  ],
+  "cta": {
+    "keyword": "SEMANA GRATIS",
+    "enteredAt": 25.06,
+    "framesShowingCtaTextBeforeEntry": 0,
+    "ok": true
+  },
+  "distinctStringsMeasured": 30,
+  "captionGlyphBounds": {
+    "xMin": 102,
+    "xMax": 858,
+    "yBottomMax": 1398.8,
+    "reserve": "x100-860, y180-1420",
+    "ok": true
+  },
+  "badgeClearance": null,
+  "captionTextTopMinY": 1276.4,
+  "captionClearsMouth": true,
+  "pass": true
+}

@@ -1,0 +1,78 @@
+{
+  "file": "FE261007_FORWARD_HAIKU_offer_v1_QA-pending.mp4",
+  "holds": [
+    {
+      "id": "offer_card_frame0_to_end",
+      "plannedWindow": [
+        0,
+        29.1
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 29.1,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            386,
+            680,
+            303
+          ],
+          "frames": 873,
+          "longestStationaryRunSeconds": 29.1,
+          "maxMeanAbsDiffToPrevious": 0.28,
+          "maxMeanAbsDiffToFirst": 0.32
+        }
+      ]
+    },
+    {
+      "id": "lesson_example_settled",
+      "plannedWindow": [
+        0.5,
+        8.95
+      ],
+      "requirementSeconds": 2.5,
+      "measuredStationarySeconds": 8.47,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            699,
+            680,
+            231
+          ],
+          "frames": 254,
+          "longestStationaryRunSeconds": 8.47,
+          "maxMeanAbsDiffToPrevious": 0.24,
+          "maxMeanAbsDiffToFirst": 0.24
+        }
+      ]
+    },
+    {
+      "id": "closing_cta_hold",
+      "plannedWindow": [
+        25.56,
+        29.1
+      ],
+      "requirementSeconds": 3,
+      "measuredStationarySeconds": 3.53,
+      "ok": true,
+      "rects": [
+        {
+          "rect": [
+            165,
+            386,
+            680,
+            544
+          ],
+          "frames": 106,
+          "longestStationaryRunSeconds": 3.53,
+          "maxMeanAbsDiffToPrevious": 0.01,
+          "maxMeanAbsDiffToFirst": 0.05
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

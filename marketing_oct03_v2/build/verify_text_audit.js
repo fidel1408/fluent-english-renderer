@@ -21,6 +21,7 @@ const RULES = {
   looking_forward_to_short: { required: K.required, forbiddenAnywhere: [/\$|MXN|precio|gratis|zoom|\[|\/ ?[a-z]+ ?\/|inicio|empieza|comienza|garant|resultado|aprende en|días/i], forbiddenFrom: [], cta: [K.ctaEarly, 'GRUPO'] },
   looking_forward_to_short_v2: { required: K.required, forbiddenAnywhere: [/GRUPO|Manda|mensaje privado/, /\$|MXN|precio|zoom|\[|quinta|5 semanas|cuatro semanas|semana extra|extra|inicio|empieza|comienza|garant|resultado|días|IVA/i], forbiddenFrom: [], cta: [K.morphE, 'SEMANA GRATIS'] },
   looking_forward_to_short_v3: { required: K.required, forbiddenAnywhere: [/GRUPO|Manda|mensaje privado/, /\$|MXN|precio|zoom|\[|quinta|5 semanas|cuatro semanas|semana extra|extra|inicio|empieza|comienza|garant|resultado|días|IVA/i], forbiddenFrom: [], cta: [K.morphE, 'SEMANA GRATIS'] },
+  FE261007_FORWARD_HAIKU_offer_v1: { required: K.required, forbiddenAnywhere: [/GRUPO|Manda|mensaje privado|Clases en l[ií]nea|CLUB/, /\$|MXN|precio|zoom|\[|quinta|5 semanas|cuatro semanas|semana extra|extra|inicio|empieza|comienza|garant|resultado|días|IVA/i], forbiddenFrom: [], cta: [K.cta, 'SEMANA GRATIS'] },
 }[name];
 (async () => {
   const S = await L.serve(), b = await chromium.launch(), p = await b.newPage({ viewport: { width: 1080, height: 1920 } });

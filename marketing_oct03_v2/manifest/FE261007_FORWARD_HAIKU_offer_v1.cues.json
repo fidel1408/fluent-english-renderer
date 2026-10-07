@@ -1,0 +1,178 @@
+{
+ "video": "FE261007_FORWARD_HAIKU_offer_v1",
+ "title": "LOOKING FORWARD TO – FE261007_FORWARD_HAIKU_offer_v1 (REV4 audio/cues/timing; visuals revised)",
+ "fps": 30,
+ "lead": 0.35,
+ "endHold": 4.1,
+ "targetSeconds": [
+  28,
+  34
+ ],
+ "note": "Copied from looking_forward_to REV4 manifest. Only the video name/title changed. Cue audio files, cue times, SFX and mix are unchanged. capFit=true on every cue so burned captions stay in the x100-860 / y180-1420 reserve (visual only; cue times and audio unchanged).",
+ "cues": [
+  {
+   "id": "c01",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "¿Cómo dices: tengo muchas ganas de verte?",
+   "est": 2.0,
+   "gap": 0,
+   "file": "audio/cues/looking_forward_to_c01.wav",
+   "capFit": true
+  },
+  {
+   "id": "c02",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "See you on Saturday!",
+   "est": 2.0,
+   "gap": 0.9,
+   "file": "audio/cues/looking_forward_to_c02.wav",
+   "capFit": true
+  },
+  {
+   "id": "c03",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "I'm looking forward to seeing you.",
+   "est": 2.0,
+   "gap": 0.5,
+   "file": "audio/cues/looking_forward_to_c03.wav",
+   "capFit": true
+  },
+  {
+   "id": "c04",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "Después de look forward to, usa un verbo en ing.",
+   "est": 2.0,
+   "gap": 1.1,
+   "file": "audio/cues/looking_forward_to_c04.wav",
+   "caption": "Después de look forward to, usa un verbo en -ing.",
+   "capFit": true
+  },
+  {
+   "id": "c05",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "Como seeing.",
+   "est": 2.0,
+   "gap": 0.4,
+   "file": "audio/cues/looking_forward_to_c05.wav",
+   "capFit": true
+  },
+  {
+   "id": "c06",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "O un sustantivo: I'm looking forward to the weekend.",
+   "est": 2.0,
+   "gap": 1.0,
+   "file": "audio/cues/looking_forward_to_c06.wav",
+   "capFit": true
+  },
+  {
+   "id": "c07",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "Ahora tú: I'm looking forward to...",
+   "est": 2.0,
+   "gap": 1.5,
+   "file": "audio/cues/looking_forward_to_c07.wav",
+   "caption": "Ahora tú: I'm looking forward to…",
+   "capFit": true
+  },
+  {
+   "id": "c08",
+   "who": "narrator",
+   "lang": "es+en",
+   "text": "¿Cómo la completas?",
+   "est": 2.0,
+   "gap": 0.2,
+   "file": "audio/cues/looking_forward_to_c08.wav",
+   "capFit": true
+  }
+ ],
+ "alignment": {
+  "totalSamples": 837504,
+  "partitions": [
+   [
+    0,
+    141360
+   ],
+   [
+    141360,
+    206847
+   ],
+   [
+    206847,
+    290619
+   ],
+   [
+    290619,
+    452446
+   ],
+   [
+    452446,
+    508230
+   ],
+   [
+    508230,
+    655182
+   ],
+   [
+    655182,
+    780330
+   ],
+   [
+    780330,
+    837504
+   ]
+  ],
+  "handoffActivity": [
+   [
+    0.125283,
+    2.988844
+   ],
+   [
+    3.422063,
+    4.571315
+   ],
+   [
+    4.809501,
+    6.282676
+   ],
+   [
+    6.897324,
+    10.079909
+   ],
+   [
+    10.439184,
+    11.323991
+   ],
+   [
+    11.724989,
+    14.609456
+   ],
+   [
+    15.103991,
+    17.475011
+   ],
+   [
+    17.914127,
+    18.861859
+   ]
+  ],
+  "marks": {
+   "ingStart": [
+    "c04",
+    1
+   ],
+   "nounStart": [
+    "c06",
+    1
+   ]
+  }
+ },
+ "_file": null
+}
